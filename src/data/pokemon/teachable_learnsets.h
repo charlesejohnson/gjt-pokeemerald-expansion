@@ -35838,3 +35838,8 @@ static const u16 sPecharuntTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_PECHARUNT
+
+static const u16 sDeathknightTeachableLearnset[] = {
+    MOVE_PROTECT,
+    MOVE_UNAVAILABLE,
+}
