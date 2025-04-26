@@ -35842,4 +35842,4 @@ static const u16 sPecharuntTeachableLearnset[] = {
 static const u16 sDeathknightTeachableLearnset[] = {
     MOVE_PROTECT,
     MOVE_UNAVAILABLE,
-}
+};

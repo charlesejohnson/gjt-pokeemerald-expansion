@@ -22317,6 +22317,7 @@ static const struct LevelUpMove sPecharuntLevelUpLearnset[] = {
 static const struct LevelUpMove sDeathknightLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_CONFUSION),
     LEVEL_UP_MOVE( 1, MOVE_DISABLE),
+    LEVEL_UP_MOVE( 1, MOVE_SCOURGE_STRIKE),
     LEVEL_UP_MOVE(11, MOVE_BARRIER),
     LEVEL_UP_MOVE(22, MOVE_SWIFT),
     LEVEL_UP_MOVE(33, MOVE_PSYCH_UP),
