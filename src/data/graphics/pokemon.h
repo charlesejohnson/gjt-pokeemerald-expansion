@@ -26736,9 +26736,9 @@ const u32 gMonFrontPic_Egg[] = INCBIN_U32("graphics/pokemon/egg/anim_front.4bpp.
 const u32 gMonPalette_Egg[] = INCBIN_U32("graphics/pokemon/egg/normal.gbapal.lz");
 const u8 gMonIcon_Egg[] = INCBIN_U8("graphics/pokemon/egg/icon.4bpp");
 
-const u32 gMonFrontPic_Deathknight[] = INCBIN_U32("graphics/pokemon/deathknight/front.4bpp.lz");
-const u32 gMonPalette_Deathknight[] = INCBIN_U32("graphics/pokemon/deathknight/normal.gbapal.lz");
-const u32 gMonBackPic_Deathknight[] = INCBIN_U32("graphics/pokemon/deathknight/back.4bpp.lz");
-const u32 gMonShinyPalette_Deathknight[] = INCBIN_U32("graphics/pokemon/deathknight/shiny.gbapal.lz");
-const u8 gMonIcon_Deathknight[] = INCBIN_U8("graphics/pokemon/deathknight/icon.4bpp");
+u32 gMonFrontPic_Deathknight[] = INCBIN_U32("graphics/pokemon/pawniard/anim_front.4bpp.lz");
+const u32 gMonPalette_Deathknight[] = INCBIN_U32("graphics/pokemon/pawniard/normal.gbapal.lz");
+const u32 gMonBackPic_Deathknight[] = INCBIN_U32("graphics/pokemon/pawniard/back.4bpp.lz");
+const u32 gMonShinyPalette_Deathknight[] = INCBIN_U32("graphics/pokemon/pawniard/shiny.gbapal.lz");
+const u8 gMonIcon_Deathknight[] = INCBIN_U8("graphics/pokemon/pawniard/icon.4bpp");
 const u8 gMonFootprint_Deathknight[] = INCBIN_U8("graphics/pokemon/deathknight/footprint.1bpp");
