@@ -22566,6 +22566,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_POISON,
             .chance = 50,
+        },{
+            .moveEffect = MOVE_EFFECT_STOCKPILE,
+            .chance = 100,
         }),
         .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
@@ -22608,14 +22611,17 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Cleaves into the target,\n"
             "draining their life force."),
-        .effect = EFFECT_ABSORB,
-        .power = 50,
+        .effect = EFFECT_DEATH_STRIKE,
+        .power = 35,
         .type = TYPE_DARK,
         .accuracy = 100,
         .pp = 15,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
+        .argument = { .absorbPercentage = 50 },
+        .makesContact = TRUE,
+        .healingMove = B_HEAL_BLOCKING >= GEN_6,
         .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
         .contestComboStarterId = 0,
@@ -22626,7 +22632,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_ICEBOUND_FORTITUDE] =
     {
-        .name = COMPOUND_STRING("Icebound"),
+        .name = COMPOUND_STRING("Icebound Fortitude"),
         .description = COMPOUND_STRING(
             "Hardens the body's surface\n"
             "to ice, raising Defense."),

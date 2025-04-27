@@ -3173,6 +3173,7 @@ void SetMoveEffect(bool32 primary, bool32 certain)
         return;
     case MOVE_EFFECT_STEALTH_ROCK:
     case MOVE_EFFECT_SPIKES:
+    case MOVE_EFFECT_STOCKPILE:
     case MOVE_EFFECT_PAYDAY:
     case MOVE_EFFECT_STEAL_ITEM:
     case MOVE_EFFECT_BUG_BITE:
@@ -4015,6 +4016,13 @@ void SetMoveEffect(bool32 primary, bool32 certain)
                     BattleScriptPush(gBattlescriptCurrInstr + 1);
                     gBattlescriptCurrInstr = BattleScript_StealthRockActivates;
                 }
+                break;
+            case MOVE_EFFECT_STOCKPILE:
+
+                gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_POINTEDSTONESFLOAT;
+                BattleScriptPush(gBattlescriptCurrInstr + 1);
+                gBattlescriptCurrInstr = BattleScript_EffectStockpile;
+            
                 break;
             case MOVE_EFFECT_SPIKES:
                 if (gSideTimers[GetBattlerSide(gEffectBattler)].spikesAmount < 3)
@@ -12239,6 +12247,33 @@ static void Cmd_stockpile(void)
             gDisableStructs[gBattlerAttacker].stockpileDef += gBattleMons[gBattlerAttacker].statStages[STAT_DEF] - gDisableStructs[gBattlerAttacker].stockpileBeforeDef;
             gDisableStructs[gBattlerAttacker].stockpileSpDef += gBattleMons[gBattlerAttacker].statStages[STAT_SPDEF] - gDisableStructs[gBattlerAttacker].stockpileBeforeSpDef;
         }
+        break;
+    }
+
+    gBattlescriptCurrInstr = cmd->nextInstr;
+}
+
+static void Cmd_runicpower(void)
+{
+    CMD_ARGS(u8 id);
+
+    switch (cmd->id)
+    {
+    case 0:
+        if (gDisableStructs[gBattlerAttacker].stockpileCounter >= 3)
+        {
+            gBattleStruct->moveResultFlags[gBattlerTarget] |= MOVE_RESULT_MISSED;
+            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_CANT_STOCKPILE;
+        }
+        else
+        {
+            gDisableStructs[gBattlerAttacker].stockpileCounter++;
+            PREPARE_BYTE_NUMBER_BUFFER(gBattleTextBuff1, 1, gDisableStructs[gBattlerAttacker].stockpileCounter);
+            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_STOCKPILED;
+        }
+        break;
+    case 1: // Save def/sp def stats., not needed for runic power since no defense
+        if (!(gBattleStruct->moveResultFlags[gBattlerTarget] & MOVE_RESULT_NO_EFFECT))
         break;
     }
 

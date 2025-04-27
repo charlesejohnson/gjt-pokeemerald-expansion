@@ -4761,6 +4761,16 @@ BattleScript_EffectSpitUp::
 	adjustdamage
 	stockpiletobasedamage BattleScript_SpitUpFail
 	goto BattleScript_HitFromAtkAnimation
+BattleScript_EffectDeathStrike::
+	attackcanceler
+	jumpifbyte CMP_EQUAL, cMISS_TYPE, B_MSG_PROTECTED, BattleScript_SpitUpFailProtect
+	attackstring
+	ppreduce
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	damagecalc
+	adjustdamage
+	stockpiletobasedamage BattleScript_SpitUpFail
+	goto BattleScript_HitFromAtkAnimation
 BattleScript_SpitUpFail::
 	checkparentalbondcounter 2, BattleScript_SpitUpEnd
 	pause B_WAIT_TIME_SHORT
