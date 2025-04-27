@@ -22609,7 +22609,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Cleaves into the target,\n"
             "draining their life force."),
         .effect = EFFECT_ABSORB,
-        .power = 75,
+        .power = 50,
         .type = TYPE_DARK,
         .accuracy = 100,
         .pp = 15,
@@ -22737,4 +22737,155 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .validApprenticeMove = TRUE,
     },
 
+    [MOVE_OBLITERATE] =
+    {
+        .name = COMPOUND_STRING("Obliterate"),
+        .description = COMPOUND_STRING(
+            "Unga Bunga go BRRR"),
+        .effect = EFFECT_HIT,
+        .power = 90,
+        .type = TYPE_ICE,
+        .accuracy = 85,
+        .pp = 15,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .criticalHitStage = 1,
+        .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_HAIL},
+        .battleAnimScript = gBattleAnimMove_StoneAxe,
+        .validApprenticeMove = TRUE,
+    },
+    [MOVE_REMORSELESS_WINTER] =
+    {
+        .name = COMPOUND_STRING("Remorseless Wtr"),
+        .description = COMPOUND_STRING(
+            "Engulfs everything in\n"
+            "an intense icy storm."),
+        .effect = EFFECT_MULTI_HIT,
+        .power = 45,
+        .type = TYPE_ICE,
+        .accuracy = 85,
+        .pp = 5,
+        .target = MOVE_TARGET_FOES_AND_ALLY,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_FREEZE_OR_FROSTBITE,
+            .chance = 10,
+        },{
+            .moveEffect = MOVE_EFFECT_FLINCH,
+            .chance = 10,
+        }),
+        .contestEffect = CONTEST_EFFECT_STARTLE_MON_WITH_JUDGES_ATTENTION,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_HORN_ATTACK, COMBO_STARTER_PECK},
+        .battleAnimScript = gBattleAnimMove_Blizzard,
+    },
+    [MOVE_CONSUMPTION] =
+    {
+        .name = COMPOUND_STRING("Death Strike"),
+        .description = COMPOUND_STRING(
+            "Cleaves through the targets,\n"
+            "draining their life force."),
+        .effect = EFFECT_ABSORB,
+        .power = 75,
+        .type = TYPE_DARK,
+        .accuracy = 100,
+        .pp = 15,
+        .target = MOVE_TARGET_BOTH,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_SUNNY_DAY},
+        .battleAnimScript = gBattleAnimMove_CrossPoison,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_DANCING_RUNE_WEAPON] =
+    {
+        .name = COMPOUND_STRING("Dncing Rne Wep"),
+        .description = COMPOUND_STRING(
+            "Summons a rune weapon,\n"
+            "raising attack and evasion."),
+        .effect = EFFECT_HIT,
+        .power = 0,
+        .type = TYPE_DARK,
+        .accuracy = 0,
+        .pp = 2,
+        .target = MOVE_TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .zMove = { .effect = Z_EFFECT_RESET_STATS },
+        .snatchAffected = TRUE,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_EVS_PLUS_1,
+            .self = TRUE,
+            .chance = 100,
+        },{
+            .moveEffect = MOVE_EFFECT_ATK_PLUS_1,
+            .self = TRUE,
+            .chance = 100,
+        }),
+        .contestEffect = CONTEST_EFFECT_AVOID_STARTLE,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_SwordsDance,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_ARMY_OF_THE_DEAD] =
+    {
+        .name = COMPOUND_STRING("Army of the Dead"),
+        .description = COMPOUND_STRING(
+            "Summons an army of\n"
+            "undead to swarm the foe."),
+        .effect = EFFECT_POPULATION_BOMB,
+        .power = 25,
+        .type = TYPE_GHOST,
+        .accuracy = 90,
+        .pp = 5,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .contestEffect = CONTEST_EFFECT_STARTLE_MON_WITH_JUDGES_ATTENTION,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_HORN_ATTACK, COMBO_STARTER_PECK},
+        .battleAnimScript = gBattleAnimMove_PopulationBomb,
+    },
+
+    [MOVE_DARK_TRANSFORMATION] =
+    {
+        .name = COMPOUND_STRING("Dark Trnsformation"),
+        .description = COMPOUND_STRING(
+            "Enhances the ally to a\n"
+            "monstrous form of themelves."),
+        .effect = B_UPDATED_MOVE_DATA >= GEN_8 ? EFFECT_ATTACK_UP_USER_ALLY : EFFECT_ATTACK_UP,
+        .type = TYPE_NORMAL,
+        .accuracy = 0,
+        .pp = 40,
+        .target = MOVE_TARGET_USER, // Targeting is handled through the script
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .zMove = { .effect = Z_EFFECT_ATK_UP_1 },
+        .snatchAffected = TRUE,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .soundMove = B_UPDATED_MOVE_FLAGS >= GEN_8,
+        .contestEffect = CONTEST_EFFECT_IMPROVE_CONDITION_PREVENT_NERVOUSNESS,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Howl,
+        .validApprenticeMove = TRUE,
+    },
 };
