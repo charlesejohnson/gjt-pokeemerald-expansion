@@ -683,6 +683,7 @@ extern const u8 BattleScript_EffectSoftboiled[];
 extern const u8 BattleScript_EffectFirstTurnOnly[];
 extern const u8 BattleScript_EffectUproar[];
 extern const u8 BattleScript_EffectStockpile[];
+extern const u8 BattleScript_EffectRunicPower[];
 extern const u8 BattleScript_EffectSpitUp[];
 extern const u8 BattleScript_EffectSwallow[];
 extern const u8 BattleScript_EffectDeathStrike[];

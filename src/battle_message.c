@@ -280,6 +280,8 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_PKMNCANTSLEEPINUPROAR]                = COMPOUND_STRING("But {B_DEF_NAME_WITH_PREFIX2} can't sleep in an uproar!"),
     [STRINGID_PKMNSTOCKPILED]                       = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} stockpiled {B_BUFF1}!"),
     [STRINGID_PKMNCANTSTOCKPILE]                    = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} can't stockpile any more!"), //I think this was replaced with just "But it failed!"
+    [STRINGID_PKMNRUNICPOWERED]                     = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} generated to {B_BUFF1} Runic Power!"),
+    [STRINGID_PKMNCANTRUNICPOWER]                   = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} can't generate more Runic Power!"), //I think this was replaced with just "But it failed!"
     [STRINGID_PKMNCANTSLEEPINUPROAR2]               = COMPOUND_STRING("But {B_DEF_NAME_WITH_PREFIX2} can't sleep in an uproar!"),
     [STRINGID_UPROARKEPTPKMNAWAKE]                  = COMPOUND_STRING("But the uproar kept {B_DEF_NAME_WITH_PREFIX2} awake!"),
     [STRINGID_PKMNSTAYEDAWAKEUSING]                 = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX} stayed awake using its {B_DEF_ABILITY}!"), //not in gen 5+, ability popup
@@ -1093,6 +1095,12 @@ const u16 gStockpileUsedStringIds[] =
 {
     [B_MSG_STOCKPILED]     = STRINGID_PKMNSTOCKPILED,
     [B_MSG_CANT_STOCKPILE] = STRINGID_PKMNCANTSTOCKPILE,
+};
+
+const u16 gRunicPowerUsedStringIds[] =
+{
+    [B_MSG_RUNIC_POWERED]       = STRINGID_PKMNRUNICPOWERED,
+    [B_MSG_CANT_RUNIC_POWER]    = STRINGID_PKMNCANTRUNICPOWER,
 };
 
 const u16 gWokeUpStringIds[] =

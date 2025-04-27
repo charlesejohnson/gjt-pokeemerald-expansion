@@ -4021,7 +4021,7 @@ void SetMoveEffect(bool32 primary, bool32 certain)
 
                 gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_POINTEDSTONESFLOAT;
                 BattleScriptPush(gBattlescriptCurrInstr + 1);
-                gBattlescriptCurrInstr = BattleScript_EffectStockpile;
+                gBattlescriptCurrInstr = BattleScript_EffectRunicPower;
             
                 break;
             case MOVE_EFFECT_SPIKES:
@@ -12253,32 +12253,7 @@ static void Cmd_stockpile(void)
     gBattlescriptCurrInstr = cmd->nextInstr;
 }
 
-static void Cmd_runicpower(void)
-{
-    CMD_ARGS(u8 id);
 
-    switch (cmd->id)
-    {
-    case 0:
-        if (gDisableStructs[gBattlerAttacker].stockpileCounter >= 3)
-        {
-            gBattleStruct->moveResultFlags[gBattlerTarget] |= MOVE_RESULT_MISSED;
-            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_CANT_STOCKPILE;
-        }
-        else
-        {
-            gDisableStructs[gBattlerAttacker].stockpileCounter++;
-            PREPARE_BYTE_NUMBER_BUFFER(gBattleTextBuff1, 1, gDisableStructs[gBattlerAttacker].stockpileCounter);
-            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_STOCKPILED;
-        }
-        break;
-    case 1: // Save def/sp def stats., not needed for runic power since no defense
-        if (!(gBattleStruct->moveResultFlags[gBattlerTarget] & MOVE_RESULT_NO_EFFECT))
-        break;
-    }
-
-    gBattlescriptCurrInstr = cmd->nextInstr;
-}
 
 static void Cmd_stockpiletobasedamage(void)
 {
@@ -16904,6 +16879,39 @@ void BS_DoStockpileStatChangesWearOff(void)
     {
         gBattlescriptCurrInstr = cmd->nextInstr;
     }
+}
+
+void BS_RunicPower(void)
+{
+    CMD_ARGS(u8 id);
+
+    switch (cmd->id)
+    {
+    case 0:
+        if (gDisableStructs[gBattlerAttacker].stockpileCounter >= 3)
+        {
+            gBattleStruct->moveResultFlags[gBattlerTarget] |= MOVE_RESULT_MISSED;
+            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_CANT_RUNIC_POWER;
+        }
+        else
+        {
+            gDisableStructs[gBattlerAttacker].stockpileCounter++;
+            gDisableStructs[gBattlerAttacker].stockpileBeforeDef = gBattleMons[gBattlerAttacker].statStages[STAT_DEF];
+            gDisableStructs[gBattlerAttacker].stockpileBeforeSpDef = gBattleMons[gBattlerAttacker].statStages[STAT_SPDEF];
+            PREPARE_BYTE_NUMBER_BUFFER(gBattleTextBuff1, 1, gDisableStructs[gBattlerAttacker].stockpileCounter);
+            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_RUNIC_POWERED;
+        }
+        break;
+    case 1: // Save def/sp def stats.
+        if (!(gBattleStruct->moveResultFlags[gBattlerTarget] & MOVE_RESULT_NO_EFFECT))
+        {
+            gDisableStructs[gBattlerAttacker].stockpileDef += gBattleMons[gBattlerAttacker].statStages[STAT_DEF] - gDisableStructs[gBattlerAttacker].stockpileBeforeDef;
+            gDisableStructs[gBattlerAttacker].stockpileSpDef += gBattleMons[gBattlerAttacker].statStages[STAT_SPDEF] - gDisableStructs[gBattlerAttacker].stockpileBeforeSpDef;
+        }
+        break;
+    }
+
+    gBattlescriptCurrInstr = cmd->nextInstr;
 }
 
 static bool32 CriticalCapture(u32 odds)

@@ -759,6 +759,11 @@
 	.4byte \failInstr
 	.endm
 
+	.macro runicpower id:req
+	callnative BS_RunicPower
+	.byte \id
+	.endm
+
 	.macro stockpiletohpheal failInstr:req
 	.byte 0x87
 	.4byte \failInstr

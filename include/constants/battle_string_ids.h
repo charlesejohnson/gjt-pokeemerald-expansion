@@ -729,8 +729,10 @@
 #define STRINGID_ITDOESNTAFFECTTWOFOES                727
 #define STRINGID_SENDCAUGHTMONPARTYORBOX              728
 #define STRINGID_PKMNSENTTOPCAFTERCATCH               729
+#define STRINGID_PKMNRUNICPOWERED                     730
+#define STRINGID_PKMNCANTRUNICPOWER                   731
 
-#define BATTLESTRINGS_COUNT                           730
+#define BATTLESTRINGS_COUNT                           732
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,
@@ -848,6 +850,10 @@
 // gStockpileUsedStringIds
 #define B_MSG_STOCKPILED     0
 #define B_MSG_CANT_STOCKPILE 1
+
+// gRunicPowerUsedStringIds
+#define B_MSG_RUNIC_POWERED     0
+#define B_MSG_CANT_RUNIC_POWER  1
 
 // gSwallowFailStringIds
 #define B_MSG_SWALLOW_FAILED  0
