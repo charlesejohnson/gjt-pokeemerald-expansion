@@ -22558,8 +22558,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .effect = EFFECT_HIT,
         .power = 40,
         .type = TYPE_GHOST,
-        .accuracy = 90,
-        .pp = 10,
+        .accuracy = 100,
+        .pp = 25,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
@@ -22574,4 +22574,167 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_SecretSword,
         .validApprenticeMove = TRUE,
     },
+
+    [MOVE_MARROWREND] =
+    {
+        .name = COMPOUND_STRING("Marrowrend"),
+        .description = COMPOUND_STRING(
+            "Rips bones from the target\n"
+            "... repurposing them."),
+        .effect = EFFECT_HIT,
+        .power = 60,
+        .type = TYPE_GROUND,
+        .accuracy = 100,
+        .pp = 10,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_DEF_PLUS_1,
+            .self = TRUE,
+            .chance = 70,
+        }),
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_SUNNY_DAY},
+        .battleAnimScript = gBattleAnimMove_Bonemerang,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_DEATH_STRIKE] =
+    {
+        .name = COMPOUND_STRING("Death Strike"),
+        .description = COMPOUND_STRING(
+            "Cleaves into the target,\n"
+            "draining their life force."),
+        .effect = EFFECT_ABSORB,
+        .power = 75,
+        .type = TYPE_DARK,
+        .accuracy = 100,
+        .pp = 15,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_SUNNY_DAY},
+        .battleAnimScript = gBattleAnimMove_DrainPunch,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_ICEBOUND_FORTITUDE] =
+    {
+        .name = COMPOUND_STRING("Icebound"),
+        .description = COMPOUND_STRING(
+            "Hardens the body's surface\n"
+            "to ice, raising Defense."),
+        .effect = EFFECT_HIT,
+        .power = 0,
+        .type = TYPE_ICE,
+        .accuracy = 0,
+        .pp = 15,
+        .target = MOVE_TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .zMove = { .effect = Z_EFFECT_RESET_STATS },
+        .snatchAffected = TRUE,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_SPD_MINUS_1,
+            .self = TRUE,
+            .chance = 100,
+        },{
+            .moveEffect = MOVE_EFFECT_DEF_PLUS_2,
+            .self = TRUE,
+            .chance = 100,
+        }),
+        .contestEffect = CONTEST_EFFECT_AVOID_STARTLE,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_IronDefense,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_AMS] =
+    {
+        .name = COMPOUND_STRING("AMS"),
+        .description = COMPOUND_STRING(
+            "A mystical force prevents\n"
+            "all status problems."),
+        .effect = EFFECT_SAFEGUARD,
+        .power = 0,
+        .type = TYPE_GHOST,
+        .accuracy = 0,
+        .pp = 15,
+        .target = MOVE_TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .zMove = { .effect = Z_EFFECT_SPD_UP_1 },
+        .snatchAffected = TRUE,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_AVOID_STARTLE,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Safeguard,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_BLOOD_BOIL] =
+    {
+        .name = COMPOUND_STRING("Blood Boil"),
+        .description = COMPOUND_STRING(
+            "Boils the foe's blood,\n"
+            "leaving it plagued."),
+        .effect = EFFECT_HIT,
+        .power = 35,
+        .type = TYPE_DARK,
+        .accuracy = 100,
+        .pp = 15,
+        .target = MOVE_TARGET_BOTH,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .mirrorMoveBanned = B_UPDATED_MOVE_FLAGS < GEN_8,
+        .magicCoatAffected = TRUE,
+        .metronomeBanned = TRUE,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_LEECH_SEED,
+            .chance = 100,
+            .sheerForceBoost = SHEER_FORCE_NO_BOOST,
+        }),
+        .battleAnimScript = gBattleAnimMove_Absorb,
+    },
+
+    [MOVE_HOWLING_BLAST] =
+    {
+        .name = COMPOUND_STRING("Howl Blst"),
+        .description = COMPOUND_STRING(
+            "A chilling attack that\n"
+            "leaves enemies frostbitten"),
+        .effect = EFFECT_HIT,
+        .power = 50,
+        .type = TYPE_ICE,
+        .accuracy = 95,
+        .pp = 15,
+        .target = MOVE_TARGET_BOTH,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .windMove = TRUE,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_FREEZE_OR_FROSTBITE,
+            .chance = 50,
+        }),
+        .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_HAIL},
+        .battleAnimScript = gBattleAnimMove_IcyWind,
+        .validApprenticeMove = TRUE,
+    },
+
 };

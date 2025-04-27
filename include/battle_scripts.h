@@ -722,6 +722,7 @@ extern const u8 BattleScript_EffectPlaceholder[];
 extern const u8 BattleScript_EffectWaterSport[];
 extern const u8 BattleScript_EffectCalmMind[];
 extern const u8 BattleScript_EffectDragonDance[];
+extern const u8 BattleScript_EffectIcebound[];
 extern const u8 BattleScript_EffectCamouflage[];
 extern const u8 BattleScript_EffectPledge[];
 extern const u8 BattleScript_EffectFling[];
