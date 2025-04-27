@@ -1638,10 +1638,14 @@
 #define SPECIES_MIMIKYU_BUSTED_TOTEM                    1523
 #define SPECIES_MIMIKYU_TOTEM_BUSTED                    SPECIES_MIMIKYU_BUSTED_TOTEM
 #define SPECIES_DEATHKNIGHT                             1524
+#define SPECIES_DEATHKNIGHT_FROST                       1525
+#define SPECIES_DEATHKNIGHT_BLOOD                       1526
+#define SPECIES_DEATHKNIGHT_UNHOLY                      1527
 
 
 
-#define SPECIES_EGG                                     (SPECIES_DEATHKNIGHT + 1)
+
+#define SPECIES_EGG                                     (SPECIES_DEATHKNIGHT_UNHOLY + 1)
 
 #define NUM_SPECIES SPECIES_EGG
 
