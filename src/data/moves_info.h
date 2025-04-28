@@ -22779,7 +22779,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .additionalEffects = ADDITIONAL_EFFECTS({
-            .moveEffect = MOVE_EFFECT_FREEZE_OR_FROSTBITE,
+            .moveEffect = MOVE_EFFECT_FREEZE,
             .chance = 10,
         },{
             .moveEffect = MOVE_EFFECT_FLINCH,
@@ -22876,7 +22876,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Enhances the ally to a\n"
             "monstrous form of themelves."),
         .effect = B_UPDATED_MOVE_DATA >= GEN_8 ? EFFECT_ATTACK_UP_USER_ALLY : EFFECT_ATTACK_UP,
-        .type = TYPE_NORMAL,
+        .type = TYPE_DARK,
         .accuracy = 0,
         .pp = 40,
         .target = MOVE_TARGET_USER, // Targeting is handled through the script
@@ -22893,5 +22893,27 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .contestComboMoves = {0},
         .battleAnimScript = gBattleAnimMove_Howl,
         .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_SUMMON_GARGOYLE] =
+    {
+        .name = COMPOUND_STRING("Summon Gargoyle"),
+        .description = COMPOUND_STRING(
+            "Summons a Gargoyle to drop\n"
+            "3 poisonous bombs on the foe."),
+        .effect = EFFECT_HIT,
+        .power = 35,
+        .type = TYPE_POISON,
+        .accuracy = 100,
+        .pp = 5,
+        .strikes = 3,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .contestEffect = CONTEST_EFFECT_STARTLE_MON_WITH_JUDGES_ATTENTION,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_HORN_ATTACK, COMBO_STARTER_PECK},
+        .battleAnimScript = gBattleAnimMove_Sludge,
     },
 };
