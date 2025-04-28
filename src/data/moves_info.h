@@ -19087,7 +19087,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .mirrorMoveBanned = TRUE,
         .metronomeBanned = TRUE,
         .battleAnimScript = gBattleAnimMove_PowerShift,
-},
+    },
 
     [MOVE_STONE_AXE] =
     {
@@ -22906,7 +22906,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .type = TYPE_POISON,
         .accuracy = 100,
         .pp = 5,
-        .strikes = 3,
+        .strikeCount = 3,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
