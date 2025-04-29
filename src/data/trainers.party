@@ -231,9 +231,27 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
-Poochyena
-Level: 9
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Seel @ Chesto Berry
+Level: 12
+Nature: Modest
+IVs: 12 HP / 12 Atk / 31 Def / 12 SpA / 12 SpD / 31 Spe
+- Water Pulse
+- Icy Wind
+- Rest
+
+Magby @ Oran Berry
+Level: 13
+Nature: Adamant
+IVs: 12 HP / 31 Atk / 12 Def / 12 SpA / 12 SpD / 31 Spe
+- Incinerate
+- Fire Punch
+- Low Kick
+
+Unown @ Choice Specs
+Level: 15
+Nature: Modest
+IVs: 31 HP / 2 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Hidden Power
 
 === TRAINER_MARCEL ===
 Name: MARCEL
@@ -5979,35 +5997,60 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Geodude
-Level: 10
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Tackle
+Sliggoo @ Lum Berry
+Level: 13
+IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
+Nature: Gentle
+Ability: Gooey
+- Bubble
+- Protect
+- Dragon Breath
+
+
+Chansey @ Iron Ball
+Level: 14 
+IVs: 31 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
+Nature: Lax
+Ability: Serene Grace
+- Soft-Boiled
+- Ally Switch
+- Doubleslap
+- Fling
 
 === TRAINER_TOMMY ===
-Name: TOMMY
+Name: VEK'NILASH
 Class: Youngster
 Pic: Youngster
 Gender: Male
 Music: Male
-Double Battle: No
 AI: Check Bad Move
 
-Geodude
-Level: 8
+Ferroseed @ Rocky Helmet
+Level: 13
 IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
+Nature: Lax
+Ability: Iron Barbs
+- Curse
+- Metal Claw
+- Rollout
+- Grass Knot
 
-Geodude
-Level: 8
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+Lairon @ Metal Coat
+Level: 14
+IVs: 31 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+Nature: Lax
+Ability: Sturdy
+- Metal Claw
+- Rock Tomb
+- Protect
+- Harden
 
 === TRAINER_JOEY ===
-Name: JOEY
+Name: VEK'LOR
 Class: Youngster
 Pic: Youngster
 Gender: Male
 Music: Male
-Double Battle: No
 AI: Check Bad Move
 
 Machop
@@ -6208,8 +6251,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ALLEN ===
 Name: ALLEN
-Class: Youngster
-Pic: Youngster
+Class: Hiker
+Pic: Hiker
 Gender: Male
 Music: Male
 Double Battle: No
@@ -10553,20 +10596,38 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_MARC ===
 Name: MARC
-Class: Hiker
-Pic: Hiker
-Gender: Male
+Class: Battle Girl
+Pic: Battle Girl
+Gender: Female
 Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Geodude
-Level: 8
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+Beedrill @ Scope Lens
+Level: 13
+IVs: 13 HP / 2 Atk / 13 Def / 13 SpA / 13 SpD / 31 Spe
+Nature: Jolly
+Ability: Sniper
+- Twineedle
+- Cross Poison
+- Focus Energy
 
-Geodude
-Level: 8
-IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+Vespiquen @ Charti Berry
+Level: 14
+IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 20 Spe
+Nature: Docile
+Ability: Unnerve
+- Gust
+- Pursuit
+- Bug Bite
+
+
+Whirlipede @ Eviolite
+Level: 14
+IVs: 31 HP / 2 Atk / 20 Def / 13 SpA / 20 SpD / 31 Spe
+Nature: Adamant
+Ability: Speed Boost
+- Rollout
 
 === TRAINER_BRENDEN ===
 Name: BRENDEN

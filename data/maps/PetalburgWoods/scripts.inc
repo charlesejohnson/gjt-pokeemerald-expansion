@@ -328,9 +328,10 @@ PetalburgWoods_Text_HaveYouSeenShroomish:
 	.string "I really love that POKéMON.$"
 
 PetalburgWoods_Text_IWasGoingToAmbushYou:
-	.string "I was going to ambush you, but you\n"
-	.string "had to dawdle in PETALBURG WOODS\l"
-	.string "forever, didn't you?\p"
+	.string "Oh shit! You're here too?\n"
+	.string "It's me! Vel! from the guild!\p"
+	.string "Long story short, I am here\n"
+	.string "to ambush that guy for his papers.\p"
 	.string "I got sick of waiting, so here I am!$"
 
 PetalburgWoods_Text_HandOverThosePapers:
@@ -343,24 +344,23 @@ PetalburgWoods_Text_YouHaveToHelpMe:
 	.string "You've got to help me, please!$"
 
 PetalburgWoods_Text_NoOneCrossesTeamAqua:
-	.string "Hunh? What do you think you're doing?\n"
-	.string "What, you're going to protect him?\p"
-	.string "No one who crosses TEAM AQUA\n"
-	.string "gets any mercy, not even a kid!\p"
+	.string "Alright, I kind of wanted to battle\n"
+	.string "you anyways. It's not like there\p"
+	.string "are any police here to stop us,\n"
+	.string "so this is much more interesting.\p"
 	.string "Come on and battle me!$"
 
 PetalburgWoods_Text_YoureKiddingMe:
 	.string "You're kidding me! You're tough!$"
 
 PetalburgWoods_Text_YouveGotSomeNerve:
-	.string "Grrr… You've got some nerve\n"
-	.string "meddling with TEAM AQUA!\l"
-	.string "Come on and battle me again!\p"
-	.string "I wish I could say that, but I'm out of\n"
-	.string "POKéMON…\p"
-	.string "And, hey, we of TEAM AQUA are also\n"
-	.string "after something in RUSTBORO.\p"
-	.string "I'll let you go today!$"
+	.string "Damn, I'm trolling.\p"
+	.string "Some of the other guys formed\n"
+	.string "these two rival teams.\p"
+	.string "Somethin about rain and sun?\n"
+	.string "I dunno, but they asked me to\p"
+	.string "also get something from Rustboro,\n"
+	.string "so I guess I'll let you go today!$"
 
 PetalburgWoods_Text_ThatWasAwfullyClose:
 	.string "Whew…\n"
@@ -371,7 +371,7 @@ PetalburgWoods_Text_ThatWasAwfullyClose:
 	.string "my thanks!$"
 
 PetalburgWoods_Text_TeamAquaAfterSomethingInRustboro:
-	.string "Didn't that TEAM AQUA thug say\n"
+	.string "Didn't that TEAM AQUA idiot say\n"
 	.string "they were after something in\l"
 	.string "RUSTBORO, too?$"
 
