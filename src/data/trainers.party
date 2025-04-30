@@ -4807,37 +4807,53 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Crunch
 
 === TRAINER_ROXANNE_1 ===
-Name: ROXANNE
+Name: C'THUN
 Class: Leader
 Pic: Leader Roxanne
 Gender: Female
 Music: Female
 Items: Potion / Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Ace Pokemon / Omniscient / Smart Mon Choices
 
-Geodude
+Pupitar @ Eviolite
 Level: 12
+Ability: Shed Skin
+Nature: Adamant
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Tackle
-- Defense Curl
-- Rock Throw
-- Rock Tomb
+- Bulldoze
+- Stealth Rock
+- Rock Slide
+- Sandstorm
 
-Geodude
-Level: 12
+Lileep @ Leftovers
+Level: 13
+Ability: Storm Drain
+Nature: Bold
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Tackle
-- Defense Curl
-- Rock Throw
-- Rock Tomb
+- Ingrain
+- Confuse Ray
+- Ancient Power
+- Mega Drain
 
-Nosepass @ Oran Berry
+Wormadam-Sandy
+Ability: Overcoat
+Nature: Adamant
+Level: 14
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Sucker Punch
+- Bug Bite
+- Mud Shot
+- Detect
+
+Minior @ Oran Berry
+Ability: Shields down
+Nature: Modest
 Level: 15
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Block
-- Harden
-- Tackle
+- Confuse Ray
+- Ancient Power
+- Confusion
 - Rock Tomb
 
 === TRAINER_BRAWLY_1 ===
@@ -6023,7 +6039,7 @@ Class: Youngster
 Pic: Youngster
 Gender: Male
 Music: Male
-AI: Check Bad Move
+AI: Basic Trainer
 
 Ferroseed @ Rocky Helmet
 Level: 13
@@ -6051,7 +6067,7 @@ Class: Youngster
 Pic: Youngster
 Gender: Male
 Music: Male
-AI: Check Bad Move
+AI: Basic Trainer
 
 Machop
 Level: 9
@@ -6250,21 +6266,42 @@ Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ALLEN ===
-Name: ALLEN
+Name: OSSIRIAN
 Class: Hiker
 Pic: Hiker
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Zigzagoon
-Level: 4
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Baltoy @ Twistedspoon
+Ability: Levitate
+Nature: Modest
+Level: 12
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Confusion
+- Heal Block
+- Mud Shot
 
-Taillow
-Level: 3
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Naclstack 
+Nature: Sassy
+Level: 13
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Salt Cure
+- Harden
+- Recover
+- Tackle
+
+Xatu 
+Ability: Synchronize
+Nature: Adamant
+Level: 15
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Night Shade
+- Wish
+- Confusion
+- Ominous Wind
+
 
 === TRAINER_TIMMY ===
 Name: TIMMY
@@ -10595,13 +10632,13 @@ Level: 22
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_MARC ===
-Name: MARC
+Name: HUHURAN
 Class: Battle Girl
 Pic: Battle Girl
 Gender: Female
 Music: Hiker
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
 Beedrill @ Scope Lens
 Level: 13
