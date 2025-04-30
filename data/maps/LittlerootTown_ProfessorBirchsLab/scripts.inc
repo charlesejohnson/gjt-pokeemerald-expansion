@@ -139,6 +139,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_AgreeToSeeRival::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_GetRivalToTeachYou, MSGBOX_DEFAULT
 	clearflag FLAG_HIDE_ROUTE_101_BOY
 	setvar VAR_BIRCH_LAB_STATE, 3
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveDEATHKNIGHT
 	releaseall
 	end
 
@@ -935,6 +936,60 @@ LittlerootTown_ProfessorBirchsLab_Text_PickedFinePokemon:
 LittlerootTown_ProfessorBirchsLab_Text_ReceivedJohtoStarter:
 	.string "{PLAYER} received the {STR_VAR_1}\n"
 	.string "from PROF. BIRCH!$"
+
+LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveDEATHKNIGHT::
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_DEATHKNIGHT
+	givemon SPECIES_DEATHKNIGHT, 5
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveDEATHKNIGHTParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveDEATHKNIGHTPC
+	goto Common_EventScript_NoMoreRoomForPokemon
+	end
+LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveDEATHKNIGHTParty::
+	call LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedDEATHKNIGHTFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_FinishReceivingDEATHKNIGHT
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_FinishReceivingDEATHKNIGHT
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveDEATHKNIGHTPC::
+	call LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedDEATHKNIGHTFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_TransferDEATHKNIGHTToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_TransferDEATHKNIGHTToPC
+	end
+
+
+LittlerootTown_ProfessorBirchsLab_EventScript_TransferDEATHKNIGHTToPC::
+	call Common_EventScript_TransferredToPC
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_FinishReceivingDEATHKNIGHT
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedDEATHKNIGHTFanfare::
+	bufferspeciesname STR_VAR_2, SPECIES_DEATHKNIGHT
+	playfanfare MUS_OBTAIN_ITEM
+	message LittlerootTown_ProfessorBirchsLab_Text_ReceivedMonFromResearcher
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_DEATHKNIGHT
+	return
+
+LittlerootTown_ProfessorBirchsLab_EventScript_FinishReceivingDEATHKNIGHT::
+	setvar VAR_FOSSIL_RESURRECTION_STATE, 0
+	setflag FLAG_RECEIVED_REVIVED_FOSSIL_MON
+	release
+	end
+
+
+LittlerootTown_ProfessorBirchsLab_Text_ReceivedMonFromResearcher:
+	.string "{PLAYER} received {STR_VAR_2} from\n"
+	.string "the DEVON RESEARCHER.$"
+
+
+
+
 
 @ Unused
 LittlerootTown_ProfessorBirchsLab_Text_NicknameJohtoStarter:

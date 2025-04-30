@@ -22567,7 +22567,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             .moveEffect = MOVE_EFFECT_POISON,
             .chance = 50,
         },{
-            .moveEffect = MOVE_EFFECT_STOCKPILE,
+            .moveEffect = MOVE_EFFECT_RUNICPOWER,
             .chance = 100,
         }),
         .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,

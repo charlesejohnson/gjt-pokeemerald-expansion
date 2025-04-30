@@ -4735,19 +4735,11 @@ BattleScript_EffectStockpileEnd:
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectRunicPower::
-	attackcanceler
-	attackstring
-	ppreduce
 	stockpile 0
-	waitanimation
 	printfromtable gRunicPowerUsedStringIds
 	waitmessage B_WAIT_TIME_LONG
-	.if B_STOCKPILE_RAISES_DEFS < GEN_4
+	tryfaintmon BS_TARGET
 	goto BattleScript_EffectStockpileEnd
-	.endif
-	jumpifmovehadnoeffect BattleScript_EffectStockpileEnd
-	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_DEF, MAX_STAT_STAGE, BattleScript_EffectStockpileDef
-	jumpifstat BS_ATTACKER, CMP_EQUAL, STAT_SPDEF, MAX_STAT_STAGE, BattleScript_EffectStockpileEnd
 	
 	
 

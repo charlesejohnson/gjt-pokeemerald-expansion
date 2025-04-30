@@ -3173,7 +3173,7 @@ void SetMoveEffect(bool32 primary, bool32 certain)
         return;
     case MOVE_EFFECT_STEALTH_ROCK:
     case MOVE_EFFECT_SPIKES:
-    case MOVE_EFFECT_STOCKPILE:
+    case MOVE_EFFECT_RUNICPOWER:
     case MOVE_EFFECT_PAYDAY:
     case MOVE_EFFECT_STEAL_ITEM:
     case MOVE_EFFECT_BUG_BITE:
@@ -4017,7 +4017,7 @@ void SetMoveEffect(bool32 primary, bool32 certain)
                     gBattlescriptCurrInstr = BattleScript_StealthRockActivates;
                 }
                 break;
-            case MOVE_EFFECT_STOCKPILE:
+            case MOVE_EFFECT_RUNICPOWER:
 
                 gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_POINTEDSTONESFLOAT;
                 BattleScriptPush(gBattlescriptCurrInstr + 1);

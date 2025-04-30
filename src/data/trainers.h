@@ -14881,7 +14881,7 @@ F_TRAINER_FEMALE |
     [DIFFICULTY_NORMAL][TRAINER_JOSH] =
     {
 #line 6008
-        .trainerName = _("JOSH"),
+        .trainerName = _("VEK'LOR"),
 #line 6009
         .trainerClass = TRAINER_CLASS_YOUNGSTER,
 #line 6010
@@ -15012,7 +15012,7 @@ F_TRAINER_FEMALE |
     [DIFFICULTY_NORMAL][TRAINER_JOEY] =
     {
 #line 6065
-        .trainerName = _("VEK'LOR"),
+        .trainerName = _("JOEY"),
 #line 6066
         .trainerClass = TRAINER_CLASS_YOUNGSTER,
 #line 6067

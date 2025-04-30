@@ -225,7 +225,9 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .shinyPalette = gMonShinyPalette_Deathknight,
                 .iconSprite = gMonIcon_Deathknight,
                 .iconPalIndex = 2,
-        .evolutions = EVOLUTION({EVO_LEVEL, 10, SPECIES_DEATHKNIGHT_FROST}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_LEAF_STONE, SPECIES_DEATHKNIGHT_BLOOD},
+            {EVO_ITEM, ITEM_FIRE_STONE, SPECIES_DEATHKNIGHT_FROST},
+            {EVO_ITEM, ITEM_WATER_STONE, SPECIES_DEATHKNIGHT_UNHOLY}),
         FOOTPRINT(Deathknight)
 
     },
@@ -282,7 +284,10 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .shinyPalette = gMonShinyPalette_Bisharp,
                 .iconSprite = gMonIcon_Bisharp,
                 .iconPalIndex = 2,
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_LEAF_STONE, SPECIES_DEATHKNIGHT_BLOOD},
+            {EVO_ITEM, ITEM_WATER_STONE, SPECIES_DEATHKNIGHT_UNHOLY}),
         FOOTPRINT(Deathknight)
+        
 
     },
 
@@ -339,7 +344,11 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .shinyPalette = gMonShinyPalette_Bisharp,
                 .iconSprite = gMonIcon_Bisharp,
                 .iconPalIndex = 2,
+        .evolutions = EVOLUTION(
+            {EVO_ITEM, ITEM_FIRE_STONE, SPECIES_DEATHKNIGHT_FROST},
+            {EVO_ITEM, ITEM_WATER_STONE, SPECIES_DEATHKNIGHT_UNHOLY}),
         FOOTPRINT(Deathknight)
+    
 
     },
     [SPECIES_DEATHKNIGHT_UNHOLY] =
@@ -395,6 +404,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .shinyPalette = gMonShinyPalette_Bisharp,
                 .iconSprite = gMonIcon_Bisharp,
                 .iconPalIndex = 2,
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_LEAF_STONE, SPECIES_DEATHKNIGHT_BLOOD},
+            {EVO_ITEM, ITEM_FIRE_STONE, SPECIES_DEATHKNIGHT_FROST}),
         FOOTPRINT(Deathknight)
 
     },
