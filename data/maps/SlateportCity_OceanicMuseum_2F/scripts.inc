@@ -282,77 +282,72 @@ SlateportCity_OceanicMuseum_2F_Text_ThankYouForTheParts:
 	.string "We can prepare for our expedition now.$"
 
 SlateportCity_OceanicMuseum_2F_Text_WellTakeThoseParts:
-	.string "Hehehe, hold it!\n"
-	.string "We'll take those parts!$"
+	.string "ALMS: Hi.\n"
+	.string "We've come to take those parts.$"
 
 SlateportCity_OceanicMuseum_2F_Text_SternWhoAreYou:
 	.string "CAPT. STERN: Wh-what?\n"
 	.string "Who are you people?$"
 
 SlateportCity_OceanicMuseum_2F_Text_WereTeamAqua:
-	.string "We're TEAM AQUA!\p"
-	.string "Our BOSS wants those parts!\n"
-	.string "Shut your yap and fork them over!$"
+	.string "ALMS: Well, I'm ALMS and she's DIV.\p"
+	.string "We don't particularly want to fight,\n"
+	.string "but STEVE told us to get those parts.$"
 
 SlateportCity_OceanicMuseum_2F_Text_Grunt1Defeat:
-	.string "Awaaaah!\n"
-	.string "A kid beat me!$"
+	.string "It's my first day.$"
 
 SlateportCity_OceanicMuseum_2F_Text_BossGoingToBeFurious:
 	.string "Oh, man, what a disaster…\n"
-	.string "The BOSS is going to be furious…$"
+	.string "STEVE's gonna be mad…$"
 
 SlateportCity_OceanicMuseum_2F_Text_LetMeTakeCareOfThis:
-	.string "Humph, sniveling wimp!\n"
-	.string "Let me take care of this!$"
+	.string "Dang it!\n"
+	.string "Div can you handle this?$"
 
 SlateportCity_OceanicMuseum_2F_Text_Grunt2Defeat:
-	.string "What?!\n"
-	.string "I lost, too!$"
+	.string "...$"
 
 SlateportCity_OceanicMuseum_2F_Text_MeddlingKid:
-	.string "Now what? If we don't get the parts,\n"
-	.string "we're in for it!\p"
-	.string "Arrgh, I didn't count on being meddled\n"
-	.string "with by some meddling kid!$"
+	.string "Yeah, DIV, I liked it better\n"
+	.string "in Azeroth too. Guess it's time\p"
+	.string "to head out. Are summons a thing?$"
 
 SlateportCity_OceanicMuseum_2F_Text_CameToSeeWhatsTakingSoLong:
 	.string "I came to see what was taking so\n"
-	.string "long to snatch some parts, and you\l"
-	.string "simps are held up by a mere child?$"
+	.string "long to grab some parts, and you dumb-\l"
+	.string "asses are held up by some random kid?$"
 
 SlateportCity_OceanicMuseum_2F_Text_ArchieWarning:
-	.string "We are TEAM AQUA,\n"
-	.string "and we love the sea!\p"
-	.string "And I am TEAM AQUA's leader,\n"
-	.string "ARCHIE!\p"
-	.string "What makes you interfere with us?\p"
-	.string "…No! You can't be!\n"
-	.string "You're not one of TEAM MAGMA?\p"
-	.string "Wait, that can't be right.\n"
-	.string "You're not dressed for the part.\p"
-	.string "… … … … … …\n"
-	.string "… … … … … …\p"
-	.string "POKéMON, people… All life depends on\n"
-	.string "the sea.\p"
-	.string "So, TEAM AQUA is dedicated to\n"
-	.string "the expansion of the sea.\p"
-	.string "Don't you agree? What we are doing\n"
-	.string "is a magnificent undertaking.\p"
-	.string "Ah, fine…\n"
-	.string "You're still too young to understand\l"
-	.string "our noble objective.\p"
-	.string "But, I warn you, don't even consider\n"
-	.string "interfering with our plans again.\p"
-	.string "The consequences will cost you\n"
-	.string "dearly!\p"
-	.string "And don't you forget it!$"
+	.string "STEVE: So yeah, I guess we're\n"
+	.string "“TEAM AQUA”, or whatever.\p"
+	.string "Don't look at me, I didn't come\n"
+	.string "up with the name!\p"
+	.string "We're mostly here in to fuck with\p"
+	.string "TEAM MAGMA, but also just cause it's\n"
+	.string "FUN ...hehehe\p"
+	.string "You can hold onto those parts with\n"
+	.string "those dirty little mitts of yours,\p"
+	.string "but we won't let anyone get in the way\n"
+	.string "of our goals.\p"
+	.string "Oh god, I sound like I'm kind of\n"
+	.string "enjoying this.\p"
+	.string "Ah, shoot…\n"
+	.string "We've been here too long and\l"
+	.string "those chimpos back at base will\p"
+	.string "absolutely wreck the place if\n"
+	.string "I'm not back soon.\p"
+	.string "Consider this a warning --\p"
+	.string "Fuck around and find out.$"
 
 SlateportCity_OceanicMuseum_2F_Text_SternThankYouForSavingUs:
 	.string "CAPT. STERN: You're…\n"
 	.string "Ah, okay, you're {PLAYER}{KUN}…\p"
 	.string "Anyway, that was a tense situation!\n"
 	.string "Thank you for saving us!\p"
+	.string "Did those crooks seem a little...\n"
+	.string "weird... to you?\p"
+	.string "And what is that Azeroth they spoke of?\p"
 	.string "Oh, yes, I almost forgot that you\n"
 	.string "even brought the parts from DEVON!$"
 

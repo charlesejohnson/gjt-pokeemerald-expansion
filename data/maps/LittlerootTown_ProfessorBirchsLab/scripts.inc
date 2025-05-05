@@ -136,13 +136,17 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GoSeeRival::
 	end
 
 LittlerootTown_ProfessorBirchsLab_EventScript_AgreeToSeeRival::
-	msgbox LittlerootTown_ProfessorBirchsLab_Text_GetRivalToTeachYou, MSGBOX_DEFAULT
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_ClassExplanation, MSGBOX_DEFAULT
 	clearflag FLAG_HIDE_ROUTE_101_BOY
 	setvar VAR_BIRCH_LAB_STATE, 3
 	@muiltichoice grid for which wow class to take
+	@format call, columns, rows, table, options, false
 	multichoicegrid 1, 1, MULTI_CLASS_SELECT, 1, FALSE
 	switch VAR_RESULT
 	case 0, LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveDEATHKNIGHT
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_GoMeetKid, MSGBOX_DEFAULT
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_ClassExplanation, MSGBOX_DEFAULT
+
 	end
 	releaseall
 	end
@@ -695,10 +699,10 @@ LittlerootTown_ProfessorBirchsLab_Text_BirchEnjoysRivalsHelpToo:
 	.string "There's a lot of love there.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_LikeYouToHavePokemon:
-	.string "KHADGAR: So, {PLAYER}{KUN}.\p"
-	.string "You've finally arrived.\n"
-	.string "Many other powerful souls from\p"
-	.string "Azeroth have already gone ahead.\n"
+	.string "KHADGAR: So, {PLAYER}{KUN}.\n"
+	.string "You've finally arrived.\p"
+	.string "Many other powerful souls from\n"
+	.string "Azeroth have already gone ahead.\p"
 	.string "I was worried that you didn't have\n"
 	.string "your own POKéMON yet,\p"
 	.string "but the way you battled earlier,\n"
@@ -713,19 +717,26 @@ LittlerootTown_ProfessorBirchsLab_Text_WhyNotGiveNicknameToMon:
 	.string "give a nickname to that {STR_VAR_1}?$"
 
 LittlerootTown_ProfessorBirchsLab_Text_MightBeGoodIdeaToGoSeeRival:
-	.string "KHADGAR: In addition to POKéMON, I'm able\n"
-	.string "to occasionally draw out some Azerothian\l"
-	.string "an extremely good TRAINER.\p"
-	.string "My kid, {RIVAL}, is also studying\n"
-	.string "POKéMON while helping me out.\p"
+	.string "KHADGAR: My host's kid, {RIVAL}, is also\n"
+	.string "studying POKéMON while helping me out.\p"
 	.string "{PLAYER}{KUN}, don't you think it might be\n"
 	.string "a good idea to go see {RIVAL}?$"
 
-LittlerootTown_ProfessorBirchsLab_Text_GetRivalToTeachYou:
-	.string "KHADGAR: Great!\n"
-	.string "{RIVAL} should be happy, too.\p"
-	.string "Get {RIVAL} to teach you what it\n"
-	.string "means to be a TRAINER.$"
+LittlerootTown_ProfessorBirchsLab_Text_ClassExplanation:
+	.string "KHADGAR: Great! In addition, I'm\n"
+	.string "able to occasionally draw out some\p"
+	.string "Azerothian energy from you and fuse it\n"
+	.string "with a host in this world.\p"
+	.string "As you gain more experience in Hoenn,\n"
+	.string "your connection will grow, meaning\p"
+	.string "more hosts for your energies, but for now,\n"
+	.string "you will have to choose just one.\p"
+	.string "Which class do you most associate with?$"
+
+LittlerootTown_ProfessorBirchsLab_Text_GoMeetKid:
+	.string "KHADGAR: Excellent!.\n"
+	.string "Now head north and go meet “my” kid.$"
+
 
 LittlerootTown_ProfessorBirchsLab_Text_DontBeThatWay:
 	.string "KHADGAR: Oh, don't be that way.\n"

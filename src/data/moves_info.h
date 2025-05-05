@@ -22632,7 +22632,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_ICEBOUND_FORTITUDE] =
     {
-        .name = COMPOUND_STRING("Icebound Fortitude"),
+        .name = COMPOUND_STRING("Icebound Fort."),
         .description = COMPOUND_STRING(
             "Hardens the body's surface\n"
             "to ice, raising Defense."),
@@ -22900,7 +22900,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Summon Gargoyle"),
         .description = COMPOUND_STRING(
             "Summons a Gargoyle to drop\n"
-            "3 poisonous bombs on the foe."),
+            "3 poisonous bombs on the foe"),
         .effect = EFFECT_HIT,
         .power = 35,
         .type = TYPE_POISON,
