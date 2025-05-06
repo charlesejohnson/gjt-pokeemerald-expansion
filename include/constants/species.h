@@ -1641,11 +1641,17 @@
 #define SPECIES_DEATHKNIGHT_FROST                       1525
 #define SPECIES_DEATHKNIGHT_BLOOD                       1526
 #define SPECIES_DEATHKNIGHT_UNHOLY                      1527
+#define SPECIES_MAGE                                    1528
+#define SPECIES_MAGE_FROST                              1529
+#define SPECIES_MAGE_FIRE                               1530
+#define SPECIES_MAGE_ARCANE                             1531
 
 
 
 
-#define SPECIES_EGG                                     (SPECIES_DEATHKNIGHT_UNHOLY + 1)
+
+
+#define SPECIES_EGG                                     (SPECIES_MAGE_ARCANE + 1)
 
 #define NUM_SPECIES SPECIES_EGG
 

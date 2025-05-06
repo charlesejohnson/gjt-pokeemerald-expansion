@@ -2408,4 +2408,11 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeSwapped = TRUE,
         .cantBeTraced = TRUE,
     },
+
+    [ABILITY_FROST_ARMOR] =
+    {
+        .name = _("Frost Armor"),
+        .description = COMPOUND_STRING("Freezes on contact."),
+        .aiRating = 8,
+    },
 };

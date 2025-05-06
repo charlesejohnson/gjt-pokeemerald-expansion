@@ -781,6 +781,7 @@ static const struct MenuAction MultichoiceList_BerryPlot[] =
 static const struct MenuAction MultichoiceList_ClassSelect[] =
 {
     {COMPOUND_STRING("DEATH KNIGHT")},
+    {COMPOUND_STRING("MAGE")},
     {gText_Exit},
 };
 

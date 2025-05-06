@@ -141,9 +141,10 @@ LittlerootTown_ProfessorBirchsLab_EventScript_AgreeToSeeRival::
 	setvar VAR_BIRCH_LAB_STATE, 3
 	@muiltichoice grid for which wow class to take
 	@format call, columns, rows, table, options, false
-	multichoicegrid 1, 1, MULTI_CLASS_SELECT, 1, FALSE
+	multichoicegrid 1, 2, MULTI_CLASS_SELECT, 2, FALSE
 	switch VAR_RESULT
 	case 0, LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveDEATHKNIGHT
+	case 1, LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveMAGE
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_GoMeetKid, MSGBOX_DEFAULT
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_ClassExplanation, MSGBOX_DEFAULT
 
@@ -992,6 +993,52 @@ LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedDEATHKNIGHTFanfare::
 	return
 
 LittlerootTown_ProfessorBirchsLab_EventScript_FinishReceivingDEATHKNIGHT::
+	setvar VAR_FOSSIL_RESURRECTION_STATE, 0
+	setflag FLAG_RECEIVED_REVIVED_FOSSIL_MON
+	release
+	end
+
+
+LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveMAGE::
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_MAGE
+	givemon SPECIES_MAGE, 5
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveMAGEParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveMAGEPC
+	goto Common_EventScript_NoMoreRoomForPokemon
+	end
+LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveMAGEParty::
+	call LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedMAGEFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_FinishReceivingMAGE
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_FinishReceivingMAGE
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveMAGEPC::
+	call LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedMAGEFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_TransferMAGEToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_TransferMAGEToPC
+	end
+
+
+LittlerootTown_ProfessorBirchsLab_EventScript_TransferMAGEToPC::
+	call Common_EventScript_TransferredToPC
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_FinishReceivingMAGE
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedMAGEFanfare::
+	bufferspeciesname STR_VAR_2, SPECIES_MAGE
+	playfanfare MUS_OBTAIN_ITEM
+	message LittlerootTown_ProfessorBirchsLab_Text_ReceivedMonFromResearcher
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_MAGE
+	return
+
+LittlerootTown_ProfessorBirchsLab_EventScript_FinishReceivingMAGE::
 	setvar VAR_FOSSIL_RESURRECTION_STATE, 0
 	setflag FLAG_RECEIVED_REVIVED_FOSSIL_MON
 	release

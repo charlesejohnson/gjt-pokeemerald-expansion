@@ -297,9 +297,9 @@ DewfordTown_Gym_Text_GymGuideAdvice:
 
 DewfordTown_Gym_Text_GymGuidePostVictory:
 	.string "Khadgar entrusted me with some very\p"
-	.string "special stones for ye!"
-	.string "He said each corresponds tae a"
-	.string "specialization for yer class!"
+	.string "special stones for ye!\n"
+	.string "He said each corresponds tae \p"
+	.string "specialization for yer class \n!"
 	.string "Use 'em wisely!$"
 
 DewfordTown_Gym_Text_TakaoIntro:
