@@ -272,34 +272,35 @@ MauvilleCity_Gym_Text_GymGuidePostVictory:
 	.string "You've powered the door open!$"
 
 MauvilleCity_Gym_Text_KirkIntro:
-	.string "My electric soul, it'll shatter your\n"
-	.string "dreams whole, whoa-yeahah!$"
+	.string "Da Thunder King give me power!\n"
+	.string "Come, I show you!$"
 
 MauvilleCity_Gym_Text_KirkDefeat:
-	.string "That was plugged in, amped up,\n"
-	.string "over-driven electric, man!$"
+	.string "How you beat me?$"
 
 MauvilleCity_Gym_Text_KirkPostBattle:
-	.string "POKéMON and rock, it's all about heart,\n"
-	.string "whoa-yeah!$"
+	.string "How you beat me?$"
 
 MauvilleCity_Gym_Text_ShawnIntro:
-	.string "I trained under WATTSON!\n"
-	.string "There ain't no way I'll lose easily!$"
+	.string "This twisted world is beyond redemption,\n"
+	.string "beyond the reach of deluded heroes.\p"
+	.string "The only answer to corruption\n"
+	.string "is destruction. And that begins…\p"
+	.string "now.$"
 
 MauvilleCity_Gym_Text_ShawnDefeat:
-	.string "Unplugged and turned off…$"
+	.string "You still think victory possible?\p"
+	.string "Fools!$"
 
 MauvilleCity_Gym_Text_ShawnPostBattle:
-	.string "WATTSON, our GYM LEADER, has been\n"
-	.string "around for a long, long time.\p"
-	.string "He was battling even before your\n"
-	.string "daddy was born, that tough coot.$"
+	.string "LEI SHEN will...\n"
+	.string "crush... you....$"
 
 MauvilleCity_Gym_Text_BenIntro:
-	.string "This GYM's got puzzles!\n"
-	.string "Isn't it fun?$"
-
+	.string "WATTSON changed... and then all\n"
+	.string "The GYM trainers!\p"
+	.string "They told me I was a sacrifice\n"
+	.string "And stuffed me in this corner!\p"
 MauvilleCity_Gym_Text_BenDefeat:
 	.string "It's no fun to lose…$"
 
@@ -322,40 +323,45 @@ MauvilleCity_Gym_Text_VivianPostBattle:
 	.string "He must know all sorts of things!$"
 
 MauvilleCity_Gym_Text_AngeloIntro:
-	.string "I love shiny things!$"
+	.string "ROAAARRRRRR$"
 
 MauvilleCity_Gym_Text_AngeloDefeat:
-	.string "Oh…\n"
-	.string "My eyes are frazzled…$"
+	.string "…$"
 
 MauvilleCity_Gym_Text_AngeloPostBattle:
-	.string "MAUVILLE GYM's WATTSON has a shiny\n"
-	.string "forehead. It makes me happy!$"
+	.string "The man lays almost motionless,\p"
+	.string "but still breathing$"
 
 MauvilleCity_Gym_Text_WattsonIntro:
-	.string "I've given up on my plans to convert\n"
-	.string "the city, I have.\p"
-	.string "And so, I put my time into making\n"
-	.string "door traps in my GYM.\p"
-	.string "Oh? Now, what are you doing here?\p"
-	.string "What's that? You say you've gotten\n"
-	.string "past all my rigged doors?\p"
-	.string "Wahahahah!\n"
-	.string "Now, that is amusing!\p"
-	.string "Then, I, WATTSON, the LEADER of\n"
-	.string "MAUVILLE GYM, shall electrify you!$"
+	.string "LEI SHEN: This is not my first\n"
+	.string "reincarnation, but I could not.\p"
+	.string "have asked for a world more ripe\n"
+	.string "for conquering.\p"
+	.string "You would challenge me?\p"
+	.string "In my youth I conquered Xuen,\n"
+	.string "the White Tiger.\p"
+	.string "In this world, I command\n"
+	.string "another!\p"
+	.string "Let us see how you fare\n"
+	.string "against LIGHTNING!$"
 
 MauvilleCity_Gym_Text_WattsonDefeat:
-	.string "Wahahahah!\n"
-	.string "Fine, I lost!\p"
-	.string "You ended up giving me a thrill!\n"
-	.string "Take this BADGE!$"
+	.string "I sought only to finish…\n"
+	.string "The work of the Gods…$"
 
 MauvilleCity_Gym_Text_ReceivedDynamoBadge:
 	.string "{PLAYER} received the DYNAMO BADGE\n"
 	.string "from WATTSON.$"
 
 MauvilleCity_Gym_Text_ExplainDynamoBadgeTakeThis:
+	.string "WATTSON seems to quickly regain control.\p"
+	.string "WATTSON: Thank you, kind child.\p"
+	.string "Whatever came over me, I watched as it\n"
+	.string "took over the GYM.\p"
+	.string "I can't imagine what would happen\n"
+	.string "if his influence spread.\p"
+	.string "I'll stay here and help the TRAINERS\n"
+	.string "In the GYM.\n"
 	.string "With the DYNAMO BADGE, POKéMON can\n"
 	.string "use ROCK SMASH out of battle.\p"
 	.string "And, it will make your POKéMON a little\n"
@@ -382,11 +388,11 @@ MauvilleCity_Gym_Text_WattsonGoForthAndEndeavor:
 	.string "Go forth and endeavor, youngster!$"
 
 MauvilleCity_Gym_Text_GymStatue:
-	.string "MAUVILLE CITY POKéMON GYM$"
+	.string "THE THRONE OF THUNDER$"
 
 MauvilleCity_Gym_Text_GymStatueCertified:
-	.string "MAUVILLE CITY POKéMON GYM\p"
-	.string "WATTSON'S CERTIFIED TRAINERS:\n"
+	.string "THE THRONE OF THUNDER\p"
+	.string "HALL OF FAME:\n"
 	.string "{PLAYER}$"
 
 MauvilleCity_Gym_Text_WattsonPreRematch:

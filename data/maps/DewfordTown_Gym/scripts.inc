@@ -256,6 +256,9 @@ DewfordTown_Gym_EventScript_GymGuide::
 	end
 
 DewfordTown_Gym_EventScript_GymGuidePostVictory::
+	giveitem ITEM_FIRE_STONE
+	giveitem ITEM_WATER_STONE
+	giveitem ITEM_LEAF_STONE
 	msgbox DewfordTown_Gym_Text_GymGuidePostVictory, MSGBOX_DEFAULT
 	release
 	end
@@ -283,24 +286,21 @@ DewfordTown_Gym_EventScript_GymStatue::
 	end
 
 DewfordTown_Gym_Text_GymGuideAdvice:
-	.string "Hey, how's it going, CHAMPION-\n"
-	.string "bound {PLAYER}?\p"
-	.string "DEWFORD's GYM LEADER BRAWLY commands\n"
-	.string "FIGHTING-type POKéMON.\p"
-	.string "Going against him with NORMAL-type\n"
-	.string "POKéMON is asking for trouble.\p"
-	.string "FIGHTING POKéMON will lay a serious\n"
-	.string "smack down on NORMAL POKéMON,\l"
-	.string "so be careful!\p"
-	.string "What's worse, the GYM is as dark as\n"
-	.string "the ocean floor.\p"
-	.string "But it will get brighter after defeating\n"
-	.string "the TRAINERS in your way.\p"
-	.string "Hey, okay, go for it!$"
+	.string "Laddie!\p"
+	.string "Good tae see ya again.\p"
+	.string "This GYM has been taken over by\n"
+	.string "the remnants of the IRON HORDE.\p"
+	.string "Led by none other than\n"
+	.string "GARROSH HELLSCREAM himself!\p"
+	.string "But I know 'ye can do it,\n"
+	.string "especially when there's loot!$"
 
 DewfordTown_Gym_Text_GymGuidePostVictory:
-	.string "Whoah! It's turned too bright in here!\p"
-	.string "Your future is bright, too!$"
+	.string "Khadgar entrusted me with some very\p"
+	.string "special stones for ye!"
+	.string "He said each corresponds tae a"
+	.string "specialization for yer class!"
+	.string "Use 'em wisely!$"
 
 DewfordTown_Gym_Text_TakaoIntro:
 	.string "Might is right!\n"
@@ -344,62 +344,63 @@ DewfordTown_Gym_Text_LauraPostBattle:
 	.string "see BRAWLY's face…$"
 
 DewfordTown_Gym_Text_LilithIntro:
-	.string "Ufufu…\n"
-	.string "Are you stumbling around in the dark?$"
+	.string "Fools!\p"
+	.string "These docks are under\n"
+	.string "DRAGONMAW control!$"
 
 DewfordTown_Gym_Text_LilithDefeat:
-	.string "Oh, you…\n"
-	.string "I don't want to know you!$"
+	.string "Defeated...$"
 
 DewfordTown_Gym_Text_LilithPostBattle:
-	.string "You deserve to stay lost and end up\n"
-	.string "back at the entrance again!$"
+	.string "Defeated...$"
 
 DewfordTown_Gym_Text_BrendenIntro:
-	.string "I'll show you the gumption of\n"
-	.string "a sailing man!$"
+	.string "Time to mix business\n"
+	.string "with pleasure!$"
 
 DewfordTown_Gym_Text_BrendenDefeat:
-	.string "How'd this happen?\n"
-	.string "It's not like me to lose this way!$"
+	.string "Don't... think you've won...$"
 
 DewfordTown_Gym_Text_BrendenPostBattle:
-	.string "Oh, aye! You're worthy of seeing\n"
-	.string "our GYM LEADER.$"
+	.string "Don't... think you've won...$"
 
 DewfordTown_Gym_Text_CristianIntro:
-	.string "If you mean to pass, it has to be\n"
-	.string "through me!$"
+	.string "I am NAZGRIM!\p"
+	.string "Fist of the WARCHIEF and GENERAL\n"
+	.string "of the HORDE army!\p"
+	.string "If I must die today,\n"
+	.string "I will die with honor in battle\p"
+	.string "FOR THE HORDE!$"
 
 DewfordTown_Gym_Text_CristianDefeat:
-	.string "Grrrrr!\n"
-	.string "Vastly overpowered!$"
+	.string "Lok'tar Ogar...$"
 
 DewfordTown_Gym_Text_CristianPostBattle:
-	.string "You win!\n"
-	.string "Go after that BADGE!$"
+	.string "An honorable battle.$"
 
 DewfordTown_Gym_Text_BrawlyIntro:
-	.string "I'm BRAWLY!\n"
-	.string "DEWFORD's GYM LEADER!\p"
-	.string "I've been churned in the rough waves\n"
-	.string "of these parts, and I've grown tough\l"
-	.string "in the pitch-black cave!\p"
-	.string "So you wanted to challenge me?\n"
-	.string "Let me see what you're made of!$"
+	.string "GARROSH: Welcome, little one!\p"
+	.string "To the birthplace of my new HORDE!\p"
+	.string "Here, we shall command the power of\n"
+	.string "these 'POKéMON' and stage an all-\p"
+	.string "out offensive on this new world!\p"
+	.string "You wish to challenge me?\n"
+	.string "Then it shall be your destruction!$"
 
 DewfordTown_Gym_Text_BrawlyDefeat:
-	.string "Whoah, wow! You made a much bigger\n"
-	.string "splash than I expected!\p"
-	.string "You swamped me!\p"
-	.string "Okay, you've got me.\n"
-	.string "Take this GYM BADGE!$"
+	.string "Puny.... child...$"
 
 DewfordTown_Gym_Text_ReceivedKnuckleBadge:
 	.string "{PLAYER} received the KNUCKLE BADGE\n"
 	.string "from BRAWLY.$"
 
 DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis:
+	.string "The WARCHIEF kneels in silence.\p"
+	.string "There is no evidence of BRAWLY\n"
+	.string "returning to his senses.\p"
+	.string "You pick up a small note and badge\n"
+	.string "from the floor. It seems to be BRAWLY's\n"
+	.string "script for handing out the badge:\n"
 	.string "The KNUCKLE BADGE makes all POKéMON\n"
 	.string "up to Level 30, even those you get in\l"
 	.string "trades, obey without question.\p"
@@ -412,23 +413,20 @@ DewfordTown_Gym_Text_ExplainBulkUp:
 	.string "That TM08 contains BULK UP.\p"
 	.string "It's a move that raises both ATTACK\n"
 	.string "and DEFENSE stats.\p"
-	.string "… … … … … …$"
 
 DewfordTown_Gym_Text_RegisteredBrawly:
 	.string "Registered GYM LEADER BRAWLY\n"
 	.string "in the POKéNAV.$"
 
 DewfordTown_Gym_Text_BrawlyPostBattle:
-	.string "I can see your talent becoming a giant\n"
-	.string "wave to cause a storm of astonishment\l"
-	.string "among TRAINERS one day!$"
+	.string "Leave me to my dishonor.$"
 
 DewfordTown_Gym_Text_GymStatue:
-	.string "DEWFORD TOWN POKéMON GYM$"
+	.string "NEW ORGRIMMAR$"
 
 DewfordTown_Gym_Text_GymStatueCertified:
-	.string "DEWFORD TOWN POKéMON GYM\p"
-	.string "BRAWLY'S CERTIFIED TRAINERS:\n"
+	.string "SEIGE OF ORGRIMMAR\p"
+	.string "HALLF OF FAME:\n"
 	.string "{PLAYER}$"
 
 DewfordTown_Gym_Text_BrawlyPreRematch:

@@ -9105,6 +9105,9 @@ static inline u32 CalcMoveBasePower(struct DamageCalculationData *damageCalcData
     case EFFECT_DEATH_STRIKE:
         basePower = 35 * gDisableStructs[battlerAtk].stockpileCounter;
         break;
+    case EFFECT_FROST_STRIKE:
+        basePower = 55 * gDisableStructs[battlerAtk].stockpileCounter;
+        break;
     case EFFECT_REVENGE:
         if ((gProtectStructs[battlerAtk].physicalDmg
                 && gProtectStructs[battlerAtk].physicalBattlerId == battlerDef)

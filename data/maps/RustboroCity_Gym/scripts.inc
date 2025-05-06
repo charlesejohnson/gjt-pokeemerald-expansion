@@ -67,6 +67,12 @@ RustboroCity_Gym_EventScript_GymGuide::
 	end
 
 RustboroCity_Gym_EventScript_GymGuidePostVictory::
+	giveitem ITEM_PROTEIN 5
+	giveitem ITEM_CALCIUM 5
+	giveitem ITEM_HP_UP 5
+	giveitem ITEM_ZINC 5
+	giveitem ITEM_IRON 5
+	giveitem ITEM_CARBOS 5
 	msgbox RustboroCity_Gym_Text_GymGuidePostVictory, MSGBOX_DEFAULT
 	release
 	end
@@ -109,38 +115,37 @@ RustboroCity_Gym_EventScript_RegisterRoxanne::
 	end
 
 RustboroCity_Gym_Text_GymGuideAdvice:
-	.string "Yo, how's it going?\p"
-	.string "Listen, my friend!\n"
-	.string "Would you like to become the CHAMPION?\p"
-	.string "I'm no TRAINER, not me, but I can\n"
-	.string "sure give you winning advice.\p"
-	.string "That's settled, then! We'll aim for the\n"
-	.string "POKéMON CHAMPIONSHIP together!\p"
-	.string "It's your job as a TRAINER to collect\n"
-	.string "GYM BADGES, am I right?\p"
-	.string "But GYM LEADERS aren't pushovers!\p"
-	.string "And that's where I come in!\n"
-	.string "I'm here to provide expert advice!\p"
-	.string "ROXANNE, the GYM LEADER, is a user\n"
-	.string "of ROCK-type POKéMON.\p"
-	.string "The ROCK type is very durable, but\n"
-	.string "it can't stand WATER-type and\l"
-	.string "GRASS-type moves.\p"
-	.string "Come see me afterwards, if you beat\n"
-	.string "the GYM LEADER.\p"
-	.string "Well, go for it!$"
+	.string "CHAMPION in the making!\p"
+	.string "I'm MAGNI, KHADGAR sent\n"
+	.string "me to aid Azerothian souls\p"
+	.string "attemptin' to navigate this world.\p"
+	.string "It seems like most of us new arrivals\p"
+	.string "have gravitated towards the centers\n"
+	.string "o' strength here: POKéMON GYMS.\p"
+	.string "Usually, a TRAINER would collect eight\n"
+	.string "GYM BADGES to challenge the ELITE FOUR\p"
+	.string "an' become CHAMPION!\p"
+	.string "It seems fitting for you, CHAMPION\n"
+	.string "to attempt to gain that title here also!\p"
+	.string "Due to the ties in our worlds, I also\n"
+	.string "think it will bring us closer to finding\p"
+	.string "our damsel in distress, AZEROTH, aye?\p"
+	.string "First up right here is the RUSTBORO GYM,\p"
+	.string "which seems to 'ave been taken over\n"
+	.string "by the ancients of AHN'QUIRAJ.\n"
+	.string "Should you emerge victorious,.\p"
+	.string "return to me for some LOOT!!$"
 
 RustboroCity_Gym_Text_GymGuidePostVictory:
-	.string "Whoa! What a breathtaking victory!\n"
+	.string "Aye, I knew ye could do it lad!\n"
 	.string "My cheering must've worked!\p"
 	.string "Great!\n"
 	.string "Check your TRAINER CARD.\p"
 	.string "The STONE BADGE you got should be\n"
 	.string "properly recorded on it.\p"
-	.string "In other words…\p"
-	.string "You've climbed the first step on\n"
-	.string "the stairs to the CHAMPIONSHIP!\p"
-	.string "That's got to feel awesome!$"
+	.string "Additionally, I picked this loot off\n"
+	.string "the bosses you defeated. \p"
+	.string "Use them to raise your stats!$"
 
 RustboroCity_Gym_Text_JoshIntro:
 	.string "I'm VEK'NILASH,\n"
@@ -211,11 +216,11 @@ RustboroCity_Gym_Text_RoxannePostBattle:
 	.string "shocked from the ordeal$"
 
 RustboroCity_Gym_Text_GymStatue:
-	.string "RUSTBORO CITY POKéMON GYM$"
+	.string "AHN'QUIRAJ$"
 
 RustboroCity_Gym_Text_GymStatueCertified:
-	.string "RUSTBORO CITY POKéMON GYM\p"
-	.string "ROXANNE'S CERTIFIED TRAINERS:\n"
+	.string "AHN'QUIRAJ\p"
+	.string "HALL OF FAME:\n"
 	.string "{PLAYER}$"
 
 RustboroCity_Gym_Text_RoxanneRegisterCall:

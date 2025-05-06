@@ -22764,6 +22764,29 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_StoneAxe,
         .validApprenticeMove = TRUE,
     },
+
+    [MOVE_FROST_STRIKE] =
+    {
+        .name = COMPOUND_STRING("Frost Strike"),
+        .description = COMPOUND_STRING(
+            "Converts runic power\n"
+            "to an Icy Strike"),
+        .effect = EFFECT_DEATH_STRIKE,
+        .power = 55,
+        .type = TYPE_ICE,
+        .accuracy = 100,
+        .pp = 15,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .criticalHitStage = 1,
+        .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_HAIL},
+        .battleAnimScript = gBattleAnimMove_IceHammer,
+        .validApprenticeMove = TRUE,
+    },
     [MOVE_REMORSELESS_WINTER] =
     {
         .name = COMPOUND_STRING("Remorseless Wtr"),

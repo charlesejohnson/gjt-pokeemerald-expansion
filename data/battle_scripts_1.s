@@ -4770,7 +4770,7 @@ BattleScript_EffectSpitUp::
 	adjustdamage
 	stockpiletobasedamage BattleScript_SpitUpFail
 	goto BattleScript_HitFromAtkAnimation
-BattleScript_EffectDeathStrike::
+BattleScript_EffectSpender::
 	attackcanceler
 	jumpifbyte CMP_EQUAL, cMISS_TYPE, B_MSG_PROTECTED, BattleScript_SpitUpFailProtect
 	attackstring

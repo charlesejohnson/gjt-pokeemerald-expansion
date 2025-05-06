@@ -229,10 +229,11 @@ Pic: Aqua Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer / Omniscient / Smart Mon Choices
 
 Seel @ Chesto Berry
 Level: 12
+Ability: Thick Fat
 Nature: Modest
 IVs: 12 HP / 12 Atk / 31 Def / 12 SpA / 12 SpD / 31 Spe
 - Water Pulse
@@ -240,8 +241,9 @@ IVs: 12 HP / 12 Atk / 31 Def / 12 SpA / 12 SpD / 31 Spe
 - Rest
 
 Magby @ Oran Berry
-Level: 13
+Level: 12
 Nature: Adamant
+Ability: Flame Body
 IVs: 12 HP / 31 Atk / 12 Def / 12 SpA / 12 SpD / 31 Spe
 - Incinerate
 - Fire Punch
@@ -249,6 +251,7 @@ IVs: 12 HP / 31 Atk / 12 Def / 12 SpA / 12 SpD / 31 Spe
 
 Unown @ Choice Specs
 Level: 15
+Ability: Levitate
 Nature: Modest
 IVs: 31 HP / 2 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Hidden Power
@@ -332,17 +335,50 @@ Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_RUSTURF_TUNNEL ===
-Name: GRUNT
+Name: POLERODEO
 Class: Team Aqua
 Pic: Aqua Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer / Omniscient / Smart Mon Choices
 
-Poochyena
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Abra @ Focus Sash
+Level: 15
+Nature: Timid
+Ability: Synchronize
+IVs: 12 HP / 0 Atk / 0 Def / 12 SpA / 0 SpD / 31 Spe
+- Confusion
+- Hidden Power
+- Fire Punch
+
+Sobble @ Salac Berry
+Level: 15
+Nature: Mild
+Ability: Torrent
+IVs: 12 HP / 0 Atk / 0 Def / 12 SpA / 0 SpD / 12 Spe
+- Water Pulse
+- Growl
+- Pound
+
+Archibald (Torracat) @ Oran Berry
+Level: 16
+Nature: Adamant
+Ability: Intimidate
+IVs: 12 HP / 12 Atk / 0 Def / 12 SpA / 0 SpD / 12 Spe
+- Fake Out
+- U-Turn
+- Flame Wheel
+- Bite
+
+Abra @ Focus Sash
+Level: 15
+Nature: Timid
+Ability: Synchronize
+IVs: 12 HP / 0 Atk / 0 Def / 12 SpA / 0 SpD / 31 Spe
+- Confusion
+- Hidden Power
+- Fire Punch
 
 === TRAINER_GRUNT_WEATHER_INST_1 ===
 Name: GRUNT
@@ -400,7 +436,7 @@ Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MUSEUM_1 ===
-Name: Alms
+Name: ALMS
 Class: Team Aqua
 Pic: Aqua Grunt M
 Gender: Male
@@ -4881,7 +4917,6 @@ Class: Leader
 Pic: Leader Roxanne
 Gender: Female
 Music: Female
-Items: Potion / Potion
 Double Battle: No
 AI: Basic Trainer / Ace Pokemon / Omniscient / Smart Mon Choices
 
@@ -4917,47 +4952,60 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
 Minior @ Oran Berry
 Ability: Shields down
-Nature: Modest
+Nature: Docile
 Level: 15
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+IVs: 24 HP / 24 Atk / 24 Def / 0 SpA / 24 SpD / 0 Spe
 - Confuse Ray
 - Ancient Power
 - Confusion
 - Rock Tomb
 
 === TRAINER_BRAWLY_1 ===
-Name: BRAWLY
+Name: GARROSH
 Class: Leader
 Pic: Leader Brawly
 Gender: Male
 Music: Male
-Items: Super Potion / Super Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Ace Pokemon / Omniscient / Smart Mon Choices
+
+Makuhita @ Flame Orb
+Level: 18
+Ability: Guts
+Nature: Adamant
+IVs: 31 HP / 12 Atk / 31 Def / 12 SpA / 31 SpD / 12 Spe
+- Fake Out
+- Force Palm
+- Knock Off
 
 Machop
-Level: 16
+Level: 17
+Ability: No Guard
+Nature: Jolly
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Karate Chop
+- Dynamic Punch
+- Low Sweep
 - Low Kick
-- Seismic Toss
-- Bulk Up
+- Thunder Punch
 
-Meditite
-Level: 16
+Pignite @ Salac Berry
+Level: 18
+Ability: Blaze
+Nature: Adamant
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Focus Punch
-- Light Screen
-- Reflect
-- Bulk Up
+- Ember
+- Endure
+- Flame Wheel
 
-Makuhita @ Sitrus Berry
+Granbull @ Leftovers
 Level: 19
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Arm Thrust
-- Vital Throw
-- Reversal
-- Bulk Up
+Ability: Intimidate
+Nature: Jolly
+IVs: 12 HP / 0 Atk / 12 Def / 0 SpA / 12 SpD / 12 Spe
+- Thunder Fang
+- Roar
+- Tackle
+- Low Kick
 
 === TRAINER_WATTSON_1 ===
 Name: LEI SHEN
@@ -4997,9 +5045,9 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Discharge
 - Endure
 
-Thundurus-Therian
+Raikou
 Level: 24
-Nature: Adamant
+Nature: Docile
 Ability: Volt Absorb
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 12 Spe
 - Snarl
@@ -6086,7 +6134,7 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer / Omniscient / Smart Mon Choices
 
 Sliggoo @ Lum Berry
 Level: 13
@@ -6114,7 +6162,7 @@ Class: Youngster
 Pic: Youngster
 Gender: Male
 Music: Male
-AI: Basic Trainer
+AI: Basic Trainer / Omniscient / Smart Mon Choices
 
 Ferroseed @ Rocky Helmet
 Level: 13
@@ -6347,7 +6395,7 @@ Pic: Hiker
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Omniscient / Smart Mon Choices
 
 Baltoy @ Twistedspoon
 Ability: Levitate
@@ -9679,15 +9727,15 @@ Double Battle: No
 AI: Basic Trainer
 
 Slugma
-Level: 18
+Level: 22
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 Wingull
-Level: 18
+Level: 22
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 Grovyle
-Level: 20
+Level: 24
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_BRENDAN_ROUTE_119_MUDKIP ===
@@ -9734,15 +9782,15 @@ Double Battle: No
 AI: Basic Trainer
 
 Wingull
-Level: 18
+Level: 22
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 Lombre
-Level: 18
+Level: 22
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 Combusken
-Level: 20
+Level: 24
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_BRENDAN_ROUTE_119_TREECKO ===
@@ -9789,15 +9837,15 @@ Double Battle: No
 AI: Basic Trainer
 
 Lombre
-Level: 18
+Level: 22
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 Slugma
-Level: 18
+Level: 22
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 Marshtomp
-Level: 20
+Level: 24
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_BRENDAN_ROUTE_119_TORCHIC ===
@@ -9844,15 +9892,15 @@ Double Battle: No
 AI: Basic Trainer
 
 Wingull
-Level: 18
+Level: 22
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 Slugma
-Level: 18
+Level: 22
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 Grovyle
-Level: 20
+Level: 24
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_MAY_ROUTE_119_MUDKIP ===
@@ -9899,15 +9947,15 @@ Double Battle: No
 AI: Basic Trainer
 
 Wingull
-Level: 18
+Level: 22
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 Lombre
-Level: 18
+Level: 22
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 Combusken
-Level: 20
+Level: 24
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_MAY_ROUTE_119_TREECKO ===
@@ -9954,15 +10002,15 @@ Double Battle: No
 AI: Basic Trainer
 
 Lombre
-Level: 18
+Level: 22
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 Slugma
-Level: 18
+Level: 22
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 Marshtomp
-Level: 20
+Level: 24
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_MAY_ROUTE_119_TORCHIC ===
@@ -10713,7 +10761,7 @@ Pic: Battle Girl
 Gender: Female
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Omniscient / Smart Mon Choices
 
 Beedrill @ Scope Lens
 Level: 13
@@ -10742,43 +10790,127 @@ Ability: Speed Boost
 - Rollout
 
 === TRAINER_BRENDEN ===
-Name: BRENDEN
+Name: BLACKFUSE
 Class: Sailor
 Pic: Sailor
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer / Omniscient / Smart Mon Choices
 
-Machop
-Level: 13
+Varoom @ Air Balloon
+Level: 17
+Nature: Brave
+Ability: Overcoat
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Smog
+- Assurance
+- Gyro Ball
+
+Grimer
+Level: 18
+Nature: Brave
+Ability: Poison Touch
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Poison Gas
+- Disable
+- Harden
+- Pound
+
+Magnemite @ Metal Coat
+Level: 18
+Nature: Modest
+Ability: Toxic Debris
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Thunder Shock
+- Supersonic
+- Metal Sound
+
+Koffing
+Level: 17
+Nature: Gentle
+Ability: Levitate
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Sludge
+- Venoshock
+- Selfdestruct
 
 === TRAINER_LILITH ===
-Name: LILITH
+Name: ZAELA
 Class: Battle Girl
 Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer / Omniscient / Smart Mon Choices
 
-Meditite
-Level: 13
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+Noibat @ Oran Berry
+Level: 18
+Nature: Docile
+Ability: Infiltrator
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Taunt
+- Air Slash
+- Bite
+- Acrobatics
+
+Zweilous @ Oran Berry
+Level: 16
+Nature: Docile
+Ability: Hustle
+IVs: 12 HP / 0 Atk / 12 Def / 0 SpA / 12 SpD / 12 Spe
+- Double Hit
+- Dragon Breath
+- Bite
+
+Hakamo-o @ Coba Berry
+Level: 17
+Nature: Adamant
+Ability: Speed Boost
+IVs: 12 HP / 0 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Low Kick
+- Headbutt
+- Iron Defense
+- Dragon Tail
 
 === TRAINER_CRISTIAN ===
-Name: CRISTIAN
+Name: NAZGRIM
 Class: Black Belt
 Pic: Black Belt
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer / Omniscient / Smart Mon Choices
 
-Makuhita
-Level: 13
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+Falinks
+Level: 18
+Nature: Jolly
+Ability: Battle Armor
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- No Retreat
+- Knock Off
+- Endure
+- Reversal
+
+Charcadet @ Oran Berry
+Level: 17
+Nature: Docile
+Ability: Flash Fire
+IVs: 12 HP / 31 Atk / 12 Def / 31 SpA / 12 SpD / 12 Spe
+- Fire Spin
+- Astonish
+- Leer
+- Clear Smog
+
+Clobbopus @ Focus Sash
+Level: 18
+Nature: Adamant
+Ability: Technician
+IVs: 31 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Rock Smash
+- Feint
+- Bind
+- Detect
 
 === TRAINER_SYLVIA ===
 Name: SYLVIA
@@ -11723,7 +11855,11 @@ Double Battle: No
 AI: Check Bad Move
 
 Geodude
-Level: 8
+Level: 14
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Geodude
+Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ERIC ===
@@ -14032,12 +14168,16 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Geodude
-Level: 8
+Sandshrew
+Level: 12
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Geodude
-Level: 8
+Sneasel
+Level: 13
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Swinub
+Level: 13
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JOHNSON ===
@@ -14050,12 +14190,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Shroomish
-Level: 8
+Level: 13
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Lotad
-Level: 8
+Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 
 === TRAINER_MELINA ===
 Name: MELINA
@@ -14532,7 +14673,6 @@ Class: Leader
 Pic: Leader Brawly
 Gender: Male
 Music: Male
-Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
 

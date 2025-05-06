@@ -686,7 +686,7 @@ extern const u8 BattleScript_EffectStockpile[];
 extern const u8 BattleScript_EffectRunicPower[];
 extern const u8 BattleScript_EffectSpitUp[];
 extern const u8 BattleScript_EffectSwallow[];
-extern const u8 BattleScript_EffectDeathStrike[];
+extern const u8 BattleScript_EffectSpender[];
 extern const u8 BattleScript_EffectWorrySeed[];
 extern const u8 BattleScript_EffectHail[];
 extern const u8 BattleScript_EffectTorment[];

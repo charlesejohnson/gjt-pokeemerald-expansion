@@ -35,7 +35,7 @@ Route102_Text_CalvinRematchPostBattle:
 	.string "I'll get stronger, too.$"
 
 Route102_Text_AllenIntro:
-	.string "Sands of the desert\n,"
+	.string "Sands of the desert,\n"
 	.string "rise and block out the sun!!$"
 
 Route102_Text_AllenDefeated:

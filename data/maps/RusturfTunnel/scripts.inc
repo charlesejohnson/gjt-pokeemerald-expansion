@@ -426,31 +426,32 @@ RusturfTunnel_EventScript_Mike::
 
 RusturfTunnel_Text_ComeAndGetSome:
 	.string "What, are you coming?\n"
-	.string "Come and get some, then!$"
+	.string "Let's get it!$"
 
 RusturfTunnel_Text_Peeko:
 	.string "PEEKO: Pii pihyoh!$"
 
 RusturfTunnel_Text_GruntIntro:
-	.string "Grah, keelhaul it all!\p"
-	.string "That hostage POKéMON turned out to\n"
-	.string "be worthless!\p"
+	.string "Damn!\p"
+	.string "VELITHE gave me these parts\n"
+	.string "and bird, and told me to run.\p"
 	.string "And to think I made a getaway…\n"
 	.string "In this tunnel to nowhere!\p"
 	.string "Hey! You!\n"
 	.string "So you want to battle me?$"
 
 RusturfTunnel_Text_GruntDefeat:
-	.string "Urrrggh! My career in crime comes to\n"
-	.string "a dead end!$"
+	.string "That's alright, I was planning on\n"
+	.string "ubsubbing anyways.$"
 
 RusturfTunnel_Text_GruntTakePackage:
 	.string "This is plain not right…\p"
-	.string "The BOSS told me this would be a\n"
+	.string "STEVE told me this would be a\n"
 	.string "slick-and-easy job to pull.\p"
-	.string "All I had to do was steal some package\n"
+	.string "All we had to do was steal some package\n"
 	.string "from DEVON.\p"
-	.string "Tch!\n"
+	.string "Honestly I don't even know how I\n"
+	.string "got here. I barely played WoW.\p"
 	.string "You want it back that badly, take it!$"
 
 RusturfTunnel_Text_PeekoGladToSeeYouSafe:

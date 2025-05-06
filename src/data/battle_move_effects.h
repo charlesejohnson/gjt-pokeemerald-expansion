@@ -867,7 +867,13 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
     },
     [EFFECT_DEATH_STRIKE] =
     {
-        .battleScript = BattleScript_EffectDeathStrike,
+        .battleScript = BattleScript_EffectSpender,
+        .battleTvScore = 3,
+        .encourageEncore = TRUE,
+    },
+    [EFFECT_FROST_STRIKE] =
+    {
+        .battleScript = BattleScript_EffectSpender,
         .battleTvScore = 3,
         .encourageEncore = TRUE,
     },

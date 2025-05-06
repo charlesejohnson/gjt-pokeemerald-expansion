@@ -898,6 +898,7 @@ LittlerootTown_EventScript_SetReceivedRunningShoes::
 	end
 
 LittlerootTown_EventScript_GiveRunningShoes::
+	giveitem ITEM_EXP_SHARE
 	msgbox LittlerootTown_Text_WearTheseRunningShoes, MSGBOX_DEFAULT
 	playfanfare MUS_OBTAIN_ITEM
 	message LittlerootTown_Text_SwitchShoesWithRunningShoes
