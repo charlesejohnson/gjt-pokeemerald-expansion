@@ -9441,6 +9441,19 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct DamageCalculationData *
         if (IsBattleMoveRecoil(move))
            modifier = uq4_12_multiply(modifier, UQ_4_12(1.2));
         break;
+    case ABILITY_MANA_BARRIER:
+            if (IsBattlerAlive(gBattlerAttacker)
+                && (IsBattlerTurnDamaged(gBattlerTarget) || gBattleStruct->moveDamage[gBattlerTarget]) // Needs the second check in case of Substitute
+                && !(TestIfSheerForceAffected(gBattlerAttacker, gCurrentMove))
+                && GetBattlerAbility(gBattlerAttacker) != ABILITY_MAGIC_GUARD
+                && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
+                && !IsFutureSightAttackerInParty(gBattlerAttacker, gBattlerTarget))
+            {
+                moveEffect = ITEM_HP_CHANGE;
+                BattleScriptPushCursor();
+                gBattlescriptCurrInstr = BattleScript_ItemHurtRet;
+            }
+            break;
     case ABILITY_IRON_FIST:
         if (IsPunchingMove(move))
            modifier = uq4_12_multiply(modifier, UQ_4_12(1.2));

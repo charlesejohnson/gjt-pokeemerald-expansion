@@ -2415,4 +2415,11 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("Freezes on contact."),
         .aiRating = 8,
     },
+
+    [ABILITY_MANA_BARRIER] =
+    {
+        .name = _("Mana Barrier"),
+        .description = COMPOUND_STRING("Uses Mana for Health."),
+        .aiRating = 8,
+    },
 };
