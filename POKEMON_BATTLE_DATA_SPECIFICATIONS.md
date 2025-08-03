@@ -395,3 +395,232 @@ BattleScript_EffectRunicPower::
     stockpile 0    // Properly registered command
     printfromtable gRunicPowerUsedStringIds
 ```
+
+## Unit Testing Battle Systems
+
+### Test Infrastructure
+
+**Location:** `test/battle/move_effect/` directory contains all move effect tests
+
+**Key Files:**
+- `test/battle.h` - Main test framework header
+- `test/battle/move_effect/*.c` - Individual move effect test files
+- `Makefile` - Test build configuration
+
+### Test Execution
+
+**Correct Commands:**
+```bash
+# Run all tests
+make check
+
+# Run specific test files
+make check TEST_FILTER=fire_mage_moves
+make check TEST_FILTER=scourge_strike
+
+# Run tests with specific patterns
+make check TEST_FILTER=blast_wave
+```
+
+**❌ Incorrect:** `make test` (doesn't exist)
+**✅ Correct:** `make check` (proper test target)
+
+### Test File Structure
+
+**Required Header:**
+```c
+#include "test/battle.h"  // ✅ Correct
+// #include "test/battle/test.h"  // ❌ Incorrect
+```
+
+**Test Structure:**
+```c
+ASSUMPTIONS {
+    ASSUME(gMovesInfo[MOVE_MOVE_NAME].effect == EFFECT_HIT);
+    ASSUME(gMovesInfo[MOVE_MOVE_NAME].power == 50);
+    ASSUME(gMovesInfo[MOVE_MOVE_NAME].type == TYPE_FIRE);
+}
+
+SINGLE_BATTLE_TEST("Test description") {
+    GIVEN {
+        PLAYER(SPECIES_WOBBUFFET);
+        OPPONENT(SPECIES_WOBBUFFET);
+    } WHEN {
+        TURN { MOVE(player, MOVE_MOVE_NAME); }
+    } SCENE {
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_MOVE_NAME, player);
+        HP_BAR(opponent);
+        // Additional scene expectations
+    } THEN {
+        // State verification
+        EXPECT_EQ(opponent->statStages[STAT_SPEED], DEFAULT_STAT_STAGE - 1);
+    }
+}
+```
+
+### Test Categories
+
+#### 1. **Basic Move Testing**
+```c
+SINGLE_BATTLE_TEST("Move deals damage and applies effect") {
+    GIVEN { PLAYER(SPECIES_WOBBUFFET); OPPONENT(SPECIES_WOBBUFFET); }
+    WHEN { TURN { MOVE(player, MOVE_BLAST_WAVE); } }
+    SCENE {
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_BLAST_WAVE, player);
+        HP_BAR(opponent);
+        ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_STATS_CHANGE, opponent);
+        MESSAGE("Foe Wobbuffet's Speed fell!");
+    } THEN {
+        EXPECT_EQ(opponent->statStages[STAT_SPEED], DEFAULT_STAT_STAGE - 1);
+    }
+}
+```
+
+#### 2. **Two-Turn Move Testing**
+```c
+SINGLE_BATTLE_TEST("Two-turn move charges then attacks") {
+    GIVEN { PLAYER(SPECIES_WOBBUFFET); OPPONENT(SPECIES_WOBBUFFET); }
+    WHEN {
+        TURN { MOVE(player, MOVE_PYROBLAST); }
+        TURN { SKIP_TURN(player); }
+    } SCENE {
+        MESSAGE("Wobbuffet is charging a massive fireball!");
+        NOT MESSAGE("Wobbuffet used Pyroblast!");
+        NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_PYROBLAST, player);
+        NOT HP_BAR(opponent);
+    } THEN {
+        EXPECT_EQ(player->status2, STATUS2_CHARGING);
+    }
+}
+```
+
+#### 3. **Double Battle Testing**
+```c
+SINGLE_BATTLE_TEST("Move hits both targets in double battle") {
+    GIVEN {
+        PLAYER(SPECIES_WOBBUFFET); PLAYER(SPECIES_WYNAUT);
+        OPPONENT(SPECIES_WOBBUFFET); OPPONENT(SPECIES_WYNAUT);
+    } WHEN {
+        TURN { MOVE(playerLeft, MOVE_BLAST_WAVE); }
+    } SCENE {
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_BLAST_WAVE, playerLeft);
+        HP_BAR(opponentLeft); HP_BAR(opponentRight);
+        ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_STATS_CHANGE, opponentLeft);
+        ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_STATS_CHANGE, opponentRight);
+        MESSAGE("Foe Wobbuffet's Speed fell!");
+        MESSAGE("Foe Wynaut's Speed fell!");
+    } THEN {
+        EXPECT_EQ(opponentLeft->statStages[STAT_SPEED], DEFAULT_STAT_STAGE - 1);
+        EXPECT_EQ(opponentRight->statStages[STAT_SPEED], DEFAULT_STAT_STAGE - 1);
+    }
+}
+```
+
+#### 4. **Status Effect Testing**
+```c
+SINGLE_BATTLE_TEST("Move increases critical hit stage") {
+    GIVEN { PLAYER(SPECIES_WOBBUFFET); OPPONENT(SPECIES_WOBBUFFET); }
+    WHEN { TURN { MOVE(player, MOVE_PHOENIX_FLAMES); } }
+    SCENE {
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_PHOENIX_FLAMES, player);
+        HP_BAR(opponent);
+    } THEN {
+        EXPECT_EQ(player->status2 & STATUS2_FOCUS_ENERGY, STATUS2_FOCUS_ENERGY);
+    }
+}
+```
+
+### Test Best Practices
+
+#### 1. **ASSUMPTIONS Section**
+- Verify move data matches implementation
+- Check power, type, accuracy, effects
+- Ensure critical hit stages are set correctly
+
+#### 2. **GIVEN/WHEN/SCENE/THEN Structure**
+- **GIVEN:** Set up battle conditions and Pokémon
+- **WHEN:** Execute the move(s) being tested
+- **SCENE:** Verify animations, messages, and visual effects
+- **THEN:** Check final state (stat stages, status flags, etc.)
+
+#### 3. **Message and Animation Testing**
+```c
+SCENE {
+    ANIMATION(ANIM_TYPE_MOVE, MOVE_MOVE_NAME, player);  // Move animation
+    HP_BAR(opponent);                                   // Damage dealt
+    ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_STATS_CHANGE, opponent);  // Stat change
+    MESSAGE("Foe Wobbuffet's Speed fell!");            // Status message
+}
+```
+
+#### 4. **State Verification**
+```c
+THEN {
+    EXPECT_EQ(opponent->statStages[STAT_SPEED], DEFAULT_STAT_STAGE - 1);
+    EXPECT_TRUE(gMovesInfo[MOVE_MOVE_NAME].windMove);
+    EXPECT_EQ(gMovesInfo[MOVE_MOVE_NAME].battleAnimScript, gBattleAnimMove_SolarBeam);
+}
+```
+
+### Common Test Patterns
+
+#### **Accuracy Testing**
+```c
+SINGLE_BATTLE_TEST("Move has correct accuracy") {
+    GIVEN { PLAYER(SPECIES_WOBBUFFET); OPPONENT(SPECIES_WOBBUFFET); }
+    WHEN { TURN { MOVE(player, MOVE_MOVE_NAME); } }
+    SCENE {
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_MOVE_NAME, player);
+        HP_BAR(opponent);
+    } THEN {
+        // Test will pass if hit, fail if miss (based on accuracy)
+    }
+}
+```
+
+#### **Property Verification**
+```c
+SINGLE_BATTLE_TEST("Move has correct properties") {
+    GIVEN { PLAYER(SPECIES_WOBBUFFET); OPPONENT(SPECIES_WOBBUFFET); }
+    WHEN { TURN { MOVE(player, MOVE_MOVE_NAME); } }
+    SCENE {
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_MOVE_NAME, player);
+        HP_BAR(opponent);
+    } THEN {
+        EXPECT_TRUE(gMovesInfo[MOVE_MOVE_NAME].validApprenticeMove);
+        EXPECT_EQ(gMovesInfo[MOVE_MOVE_NAME].contestCategory, CONTEST_CATEGORY_COOL);
+        EXPECT_EQ(gMovesInfo[MOVE_MOVE_NAME].contestEffect, CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS);
+    }
+}
+```
+
+### Debugging Test Issues
+
+#### **"Nothing to be done for 'test'" Error**
+- **Cause:** Using `make test` instead of `make check`
+- **Solution:** Use `make check` or `make check TEST_FILTER=pattern`
+
+#### **Test File Not Found**
+- **Cause:** Incorrect include path (`#include "test/battle/test.h"`)
+- **Solution:** Use `#include "test/battle.h"`
+
+#### **Compilation Errors**
+- **Check:** Move constants are defined in `include/constants/moves.h`
+- **Check:** Effect constants are defined in `include/constants/battle.h`
+- **Check:** Animation scripts are properly referenced
+
+### Test Coverage Guidelines
+
+#### **Essential Tests for New Moves:**
+1. **Basic Functionality:** Damage, accuracy, targeting
+2. **Special Effects:** Status changes, stat modifications
+3. **Two-Turn Mechanics:** Charging, execution
+4. **Double Battle:** Multi-target behavior
+5. **Edge Cases:** Zero resources, invalid states
+6. **Properties:** Contest data, apprentice moves, animations
+
+#### **Regression Prevention:**
+- Test move data integrity (power, type, accuracy)
+- Verify effect implementations
+- Check animation and message systems
+- Validate contest and apprentice move properties

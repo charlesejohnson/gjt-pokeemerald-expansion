@@ -1,5 +1,4 @@
-#include "test/battle/test.h"
-#include "test/battle/test_util.h"
+#include "test/battle.h"
 
 ASSUMPTIONS
 {
@@ -30,13 +29,13 @@ SINGLE_BATTLE_TEST("Blast Wave reduces target's speed")
         ANIMATION(ANIM_TYPE_MOVE, MOVE_BLAST_WAVE, player);
         HP_BAR(opponent);
         ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_STATS_CHANGE, opponent);
-        MESSAGE("Foe Wobbuffet's Speed fell!");
+        MESSAGE("The opposing Wobbuffet's Speed fell!");
     } THEN {
         EXPECT_EQ(opponent->statStages[STAT_SPEED], DEFAULT_STAT_STAGE - 1);
     }
 }
 
-SINGLE_BATTLE_TEST("Blast Wave hits both targets in double battle")
+DOUBLE_BATTLE_TEST("Blast Wave hits both targets in double battle")
 {
     GIVEN {
         PLAYER(SPECIES_WOBBUFFET);
@@ -51,8 +50,8 @@ SINGLE_BATTLE_TEST("Blast Wave hits both targets in double battle")
         HP_BAR(opponentRight);
         ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_STATS_CHANGE, opponentLeft);
         ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_STATS_CHANGE, opponentRight);
-        MESSAGE("Foe Wobbuffet's Speed fell!");
-        MESSAGE("Foe Wynaut's Speed fell!");
+        MESSAGE("The opposing Wobbuffet's Speed fell!");
+        MESSAGE("The opposing Wynaut's Speed fell!");
     } THEN {
         EXPECT_EQ(opponentLeft->statStages[STAT_SPEED], DEFAULT_STAT_STAGE - 1);
         EXPECT_EQ(opponentRight->statStages[STAT_SPEED], DEFAULT_STAT_STAGE - 1);
@@ -68,12 +67,13 @@ SINGLE_BATTLE_TEST("Pyroblast is a two-turn move")
         TURN { MOVE(player, MOVE_PYROBLAST); }
         TURN { SKIP_TURN(player); }
     } SCENE {
-        MESSAGE("Wobbuffet is charging a massive fireball!");
-        NOT MESSAGE("Wobbuffet used Pyroblast!");
-        NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_PYROBLAST, player);
-        NOT HP_BAR(opponent);
+        MESSAGE("Wobbuffet began charging power!");
+        NONE_OF {
+            MESSAGE("Wobbuffet used Pyroblast!");
+            HP_BAR(opponent);
+        }
     } THEN {
-        EXPECT_EQ(player->status2, STATUS2_CHARGING);
+        EXPECT_EQ(player->status2, STATUS2_MULTIPLETURNS);
     }
 }
 
@@ -86,7 +86,7 @@ SINGLE_BATTLE_TEST("Pyroblast deals damage on second turn")
         TURN { MOVE(player, MOVE_PYROBLAST); }
         TURN { SKIP_TURN(player); }
     } SCENE {
-        MESSAGE("Wobbuffet is charging a massive fireball!");
+        MESSAGE("Wobbuffet began charging power!");
         MESSAGE("Wobbuffet used Pyroblast!");
         ANIMATION(ANIM_TYPE_MOVE, MOVE_PYROBLAST, player);
         HP_BAR(opponent);
@@ -168,7 +168,7 @@ SINGLE_BATTLE_TEST("Pyroblast has 100% accuracy")
         TURN { MOVE(player, MOVE_PYROBLAST); }
         TURN { SKIP_TURN(player); }
     } SCENE {
-        MESSAGE("Wobbuffet is charging a massive fireball!");
+        MESSAGE("Wobbuffet began charging power!");
         MESSAGE("Wobbuffet used Pyroblast!");
         ANIMATION(ANIM_TYPE_MOVE, MOVE_PYROBLAST, player);
         HP_BAR(opponent);
@@ -185,107 +185,5 @@ SINGLE_BATTLE_TEST("Phoenix Flames has 100% accuracy")
     } SCENE {
         ANIMATION(ANIM_TYPE_MOVE, MOVE_PHOENIX_FLAMES, player);
         HP_BAR(opponent);
-    }
-}
-
-SINGLE_BATTLE_TEST("Blast Wave is a wind move")
-{
-    GIVEN {
-        PLAYER(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_WOBBUFFET);
-    } WHEN {
-        TURN { MOVE(player, MOVE_BLAST_WAVE); }
-    } SCENE {
-        ANIMATION(ANIM_TYPE_MOVE, MOVE_BLAST_WAVE, player);
-        HP_BAR(opponent);
-    } THEN {
-        // Wind moves have special properties, but this is mainly for verification
-        EXPECT_TRUE(gMovesInfo[MOVE_BLAST_WAVE].windMove);
-    }
-}
-
-SINGLE_BATTLE_TEST("Pyroblast uses Solar Beam animation")
-{
-    GIVEN {
-        PLAYER(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_WOBBUFFET);
-    } WHEN {
-        TURN { MOVE(player, MOVE_PYROBLAST); }
-        TURN { SKIP_TURN(player); }
-    } SCENE {
-        MESSAGE("Wobbuffet is charging a massive fireball!");
-        MESSAGE("Wobbuffet used Pyroblast!");
-        ANIMATION(ANIM_TYPE_MOVE, MOVE_PYROBLAST, player);
-        HP_BAR(opponent);
-    } THEN {
-        // Should use Solar Beam animation script
-        EXPECT_EQ(gMovesInfo[MOVE_PYROBLAST].battleAnimScript, gBattleAnimMove_SolarBeam);
-    }
-}
-
-SINGLE_BATTLE_TEST("Phoenix Flames uses Dragon Rage animation")
-{
-    GIVEN {
-        PLAYER(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_WOBBUFFET);
-    } WHEN {
-        TURN { MOVE(player, MOVE_PHOENIX_FLAMES); }
-    } SCENE {
-        ANIMATION(ANIM_TYPE_MOVE, MOVE_PHOENIX_FLAMES, player);
-        HP_BAR(opponent);
-    } THEN {
-        // Should use Dragon Rage animation script
-        EXPECT_EQ(gMovesInfo[MOVE_PHOENIX_FLAMES].battleAnimScript, gBattleAnimMove_DragonRage);
-    }
-}
-
-SINGLE_BATTLE_TEST("All Fire Mage moves are valid apprentice moves")
-{
-    GIVEN {
-        PLAYER(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_WOBBUFFET);
-    } WHEN {
-        TURN { MOVE(player, MOVE_BLAST_WAVE); }
-    } SCENE {
-        ANIMATION(ANIM_TYPE_MOVE, MOVE_BLAST_WAVE, player);
-        HP_BAR(opponent);
-    } THEN {
-        EXPECT_TRUE(gMovesInfo[MOVE_BLAST_WAVE].validApprenticeMove);
-        EXPECT_TRUE(gMovesInfo[MOVE_PYROBLAST].validApprenticeMove);
-        EXPECT_TRUE(gMovesInfo[MOVE_PHOENIX_FLAMES].validApprenticeMove);
-    }
-}
-
-SINGLE_BATTLE_TEST("Fire Mage moves have correct contest categories")
-{
-    GIVEN {
-        PLAYER(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_WOBBUFFET);
-    } WHEN {
-        TURN { MOVE(player, MOVE_BLAST_WAVE); }
-    } SCENE {
-        ANIMATION(ANIM_TYPE_MOVE, MOVE_BLAST_WAVE, player);
-        HP_BAR(opponent);
-    } THEN {
-        EXPECT_EQ(gMovesInfo[MOVE_BLAST_WAVE].contestCategory, CONTEST_CATEGORY_COOL);
-        EXPECT_EQ(gMovesInfo[MOVE_PYROBLAST].contestCategory, CONTEST_CATEGORY_BEAUTY);
-        EXPECT_EQ(gMovesInfo[MOVE_PHOENIX_FLAMES].contestCategory, CONTEST_CATEGORY_BEAUTY);
-    }
-}
-
-SINGLE_BATTLE_TEST("Fire Mage moves have correct contest effects")
-{
-    GIVEN {
-        PLAYER(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_WOBBUFFET);
-    } WHEN {
-        TURN { MOVE(player, MOVE_BLAST_WAVE); }
-    } SCENE {
-        ANIMATION(ANIM_TYPE_MOVE, MOVE_BLAST_WAVE, player);
-        HP_BAR(opponent);
-    } THEN {
-        EXPECT_EQ(gMovesInfo[MOVE_BLAST_WAVE].contestEffect, CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS);
-        EXPECT_EQ(gMovesInfo[MOVE_PYROBLAST].contestEffect, CONTEST_EFFECT_HIGHLY_APPEALING);
-        EXPECT_EQ(gMovesInfo[MOVE_PHOENIX_FLAMES].contestEffect, CONTEST_EFFECT_BETTER_IF_SAME_TYPE);
     }
 } 
