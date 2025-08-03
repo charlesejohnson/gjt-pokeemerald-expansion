@@ -4,6 +4,38 @@
 
 This document outlines the comprehensive data architecture and connections between files that specify data about Pokémon species, moves, abilities, and their effects in battle through scripting documents in the Pokeemerald Expansion project.
 
+**⚠️ Important Note: Always reference the codebase for authoritative information about Pokémon moves, types, and effects. External sources (websites, wikis, etc.) may be outdated or incorrect. The codebase contains the definitive, current implementation.**
+
+## Authoritative Data Sources
+
+**Always use the codebase as the definitive source for Pokémon data:**
+
+- **Move Information:** `src/data/moves_info.h` contains the complete, current move definitions
+- **Type Information:** Move types are defined in the `MoveInfo` structure, not external sources
+- **Effect Information:** Battle effects are implemented in `src/data/battle_move_effects.h`
+- **Species Data:** All species information is in `src/data/pokemon/species_info.h`
+- **Ability Data:** Complete ability definitions are in `src/data/abilities.h`
+
+**Why the codebase is authoritative:**
+- External sources (wikis, websites) may be outdated or incorrect
+- The codebase contains the actual implementation that runs in the game
+- Custom modifications and expansions are only reflected in the code
+- Type changes, effect modifications, and balance adjustments are in the code
+
+**Example of code-first approach:**
+```c
+// ✅ Correct: Check the actual move definition
+[MOVE_FIRE_BLAST] = {
+    .type = TYPE_FIRE,           // Actual type in code
+    .power = 110,                // Actual power in code
+    .accuracy = 85,              // Actual accuracy in code
+    .effect = EFFECT_BURN,       // Actual effect in code
+}
+
+// ❌ Incorrect: Relying on external sources
+// "Fire Blast is Fire-type with 110 power" (may be outdated)
+```
+
 ## Core Data Structures
 
 ### 1. Pokémon Species Data (`SpeciesInfo`)
@@ -320,73 +352,6 @@ static void Cmd_stockpiletobasedamage(void)
 }
 ```
 
-#### **Key Design Principles**
-
-**1. Leverage Existing Systems:**
-- **Stockpile mechanics** for resource storage and scaling
-- **Additional effects** for resource generation
-- **Battle script commands** for custom logic
-- **String system** for user feedback
-
-**2. Proper Validation:**
-- **Resource limits** (max 3 runic power)
-- **Consumption validation** (fails gracefully when empty)
-- **State tracking** (stat changes, battle history)
-
-**3. Extensible Design:**
-- **Multiple generation sources** (different moves can generate runic power)
-- **Multiple consumption patterns** (damage, healing, status effects)
-- **Configurable limits** (can be adjusted per Pokémon or form)
-
-**4. Clear Naming Convention:**
-- **Generic effects:** `EFFECT_RUNIC_CONSUME` for all runic power consumption
-- **Descriptive messages:** Different messages for generation vs consumption
-- **Consistent naming:** All runic power moves use the same effect system
-
-#### **Integration Points**
-
-**1. Move System Integration:**
-```c
-// Generation moves
-[MOVE_SCOURGE_STRIKE] = {
-    .additionalEffects = ADDITIONAL_EFFECTS({
-        .moveEffect = MOVE_EFFECT_RUNICPOWER,
-        .chance = 100,
-    }),
-}
-
-// Consumption moves - ALL use the same generic effect
-[MOVE_DEATH_STRIKE] = {
-    .effect = EFFECT_RUNIC_CONSUME,  // Generic consumption
-    .argument = { .absorbPercentage = 50 },
-},
-[MOVE_FROST_STRIKE] = {
-    .effect = EFFECT_RUNIC_CONSUME,  // Generic consumption
-    .criticalHitStage = 1,
-},
-```
-
-**2. Battle Script Integration:**
-```c
-// Effect-to-script mapping - single entry for all runic consumption
-[EFFECT_RUNIC_CONSUME] = {
-    .battleScript = BattleScript_EffectSpender,
-    .battleTvScore = 3,
-    .encourageEncore = TRUE,
-},
-```
-
-**3. String System Integration:**
-```c
-// Battle messages with clear naming
-const u16 gRunicPowerUsedStringIds[] = {
-    [B_MSG_RUNIC_POWERED]       = STRINGID_PKMNRUNICPOWERED,
-    [B_MSG_CANT_RUNIC_POWER]    = STRINGID_PKMNCANTRUNICPOWER,
-    [B_MSG_USED_RUNIC_POWER]    = STRINGID_PKMNUSEDRUNICPOWER,
-    [B_MSG_FAILED_RUNIC_POWER]  = STRINGID_PKMNFAILEDTORUNICPOWER,
-};
-```
-
 #### **Best Practices for Custom Resource Systems**
 
 **1. Reuse Existing Infrastructure:**
@@ -410,303 +375,23 @@ const u16 gRunicPowerUsedStringIds[] = {
 - **Strategic depth:** Multiple ways to generate and consume resources
 - **Thematic integration:** Resource mechanics should fit the Pokémon's theme
 
-## Battle Scripting System
+**5. Battle Script Command System:**
+- **Use existing commands:** Leverage built-in battle script commands like `stockpile`
+- **Command registration:** Custom commands must be properly registered in the command table
+- **Function call chain:** Battle script → Command table → C function
+- **Parameter validation:** Ensure command parameters match expected function signatures
 
-### Battle Script Commands
+#### **Debugging Battle Script Systems**
 
-**Location:** `data/battle_scripts_1.s` and `data/battle_scripts_2.s`
-
-Battle scripts are assembly-level implementations of move effects and battle mechanics. Each script is referenced by the `BattleMoveEffect` structure.
-
-**Key Script Patterns:**
-```assembly
-BattleScript_EffectHit::
-    attackcanceler
-    accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
-    attackstring
-    ppreduce
-    typecalc
-    damagecalc
-    damagevariation
-    checkhitresult
-    moveend
-```
-
-### Battle Script Command Implementation
-
-**Location:** `src/battle_script_commands.c`
-
-This file contains the C implementations of all battle script commands, providing the runtime execution logic for battle mechanics.
-
-## Data Flow Architecture
-
-### 1. Species → Move Learning
-
-**Flow:** `SpeciesInfo.levelUpLearnset` → `LevelUpMove` arrays → Move IDs
-
+**1. Command Registration Issues:**
 ```c
-// In pokemon.c
-const struct LevelUpMove *GetSpeciesLevelUpLearnset(u16 species) {
-    return gSpeciesInfo[SanitizeSpeciesId(species)].levelUpLearnset;
-}
+// ❌ Problem: Undefined command causes freeze
+BattleScript_EffectRunicPower::
+    runicpower 0  // Not registered in command table
+    printfromtable gRunicPowerUsedStringIds
+
+// ✅ Solution: Use existing registered command
+BattleScript_EffectRunicPower::
+    stockpile 0    // Properly registered command
+    printfromtable gRunicPowerUsedStringIds
 ```
-
-### 2. Move → Effect → Battle Script
-
-**Flow:** `MoveInfo.effect` → `BattleMoveEffect` → Battle Script
-
-```c
-// In battle_util.c
-const struct BattleMoveEffect *GetBattleMoveEffect(u16 effect) {
-    return &gBattleMoveEffects[effect];
-}
-```
-
-### 3. Ability → Battle Effects
-
-**Flow:** `Ability` data → Battle script commands → Runtime effects
-
-Abilities are implemented through battle script commands that check ability flags and apply effects.
-
-### 4. Form Changes and Evolution
-
-**Flow:** `SpeciesInfo.formChangeTable` → `FormChange` → Target species
-
-```c
-// In pokemon.c
-const struct FormChange *GetSpeciesFormChanges(u16 species) {
-    return gSpeciesInfo[SanitizeSpeciesId(species)].formChangeTable;
-}
-```
-
-## File Organization
-
-### Data Definition Files
-
-1. **Species Data:**
-   - `src/data/pokemon/species_info.h` - Main species table
-   - `src/data/pokemon/species_info/gen_*.h` - Generation-specific data
-   - `src/data/pokemon/level_up_learnsets/` - Level-up moves by generation
-   - `src/data/pokemon/teachable_learnsets.h` - TM/HM learnable moves
-   - `src/data/pokemon/egg_moves.h` - Egg move data
-   - `src/data/pokemon/form_change_tables.h` - Form change data
-
-2. **Move Data:**
-   - `src/data/moves_info.h` - Complete move definitions
-   - `src/data/battle_move_effects.h` - Move effect to script mapping
-
-3. **Ability Data:**
-   - `src/data/abilities.h` - Complete ability definitions
-
-### Script Implementation Files
-
-1. **Battle Scripts:**
-   - `data/battle_scripts_1.s` - Primary battle script implementations
-   - `data/battle_scripts_2.s` - Additional battle scripts
-   - `data/battle_anim_scripts.s` - Animation scripts
-
-2. **Runtime Implementation:**
-   - `src/battle_script_commands.c` - C implementations of script commands
-   - `src/battle_util.c` - Battle utility functions
-   - `src/pokemon.c` - Pokémon data access functions
-
-### Header Files
-
-1. **Structure Definitions:**
-   - `include/pokemon.h` - Pokémon and ability structures
-   - `include/move.h` - Move and effect structures
-   - `include/battle.h` - Battle system structures
-
-2. **Constants:**
-   - `include/constants/species.h` - Species IDs
-   - `include/constants/moves.h` - Move IDs
-   - `include/constants/abilities.h` - Ability IDs
-   - `include/constants/battle_move_effects.h` - Effect IDs
-
-## Data Relationships
-
-### 1. Species-to-Move Relationships
-
-- **Level-up Moves:** `SpeciesInfo.levelUpLearnset` → `LevelUpMove` arrays
-- **Teachable Moves:** `SpeciesInfo.teachableLearnset` → Move ID arrays
-- **Egg Moves:** `SpeciesInfo.eggMoveLearnset` → Move ID arrays
-
-### 2. Move-to-Effect Relationships
-
-- **Primary Effect:** `MoveInfo.effect` → `BattleMoveEffect.battleScript`
-- **Additional Effects:** `MoveInfo.additionalEffects` → `AdditionalEffect` arrays
-- **Animation:** `MoveInfo.battleAnimScript` → Animation script
-
-### 3. Ability-to-Battle Relationships
-
-- **Ability Data:** `Ability` structure → Battle script commands
-- **Ability Effects:** Implemented through conditional battle script commands
-- **Ability Interactions:** Handled in battle script command implementations
-
-### 4. Form Change Relationships
-
-- **Form Data:** `SpeciesInfo.formChangeTable` → `FormChange` structures
-- **Form Triggers:** Method-based form changes (item, move, etc.)
-- **Form Effects:** Implemented through battle script commands
-
-## Runtime Data Access
-
-### 1. Species Data Access
-
-```c
-// Get species information
-const struct SpeciesInfo *GetSpeciesInfo(u16 species);
-
-// Get move learnsets
-const struct LevelUpMove *GetSpeciesLevelUpLearnset(u16 species);
-const u16 *GetSpeciesTeachableLearnset(u16 species);
-const u16 *GetSpeciesEggMoves(u16 species);
-
-// Get evolution data
-const struct Evolution *GetSpeciesEvolutions(u16 species);
-
-// Get form change data
-const struct FormChange *GetSpeciesFormChanges(u16 species);
-```
-
-### 2. Move Data Access
-
-```c
-// Get move information
-const struct MoveInfo *GetMoveInfo(u16 move);
-
-// Get move properties
-u32 GetMoveType(u16 move);
-u32 GetMovePower(u16 move);
-u32 GetMoveAccuracy(u16 move);
-u32 GetMovePP(u16 move);
-
-// Get move effects
-const struct BattleMoveEffect *GetBattleMoveEffect(u16 effect);
-```
-
-### 3. Ability Data Access
-
-```c
-// Get ability information
-const struct Ability *GetAbilityInfo(u16 ability);
-
-// Get species abilities
-u16 GetAbilityBySpecies(u16 species, u8 abilityNum);
-```
-
-## Battle Script Integration
-
-### 1. Script Command System
-
-Battle scripts use a command-based system where each command is implemented in `src/battle_script_commands.c`:
-
-```c
-// Example: accuracycheck command
-void Cmd_accuracycheck(void) {
-    CMD_ARGS(const u8 *failInstr, u16 move);
-    // Implementation checks accuracy and branches to failInstr if missed
-}
-```
-
-### 2. Effect-to-Script Mapping
-
-The `gBattleMoveEffects` table maps effect IDs to their script implementations:
-
-```c
-const struct BattleMoveEffect gBattleMoveEffects[] = {
-    [EFFECT_HIT] = {
-        .battleScript = BattleScript_EffectHit,
-        .battleTvScore = 1,
-    },
-    [EFFECT_SLEEP] = {
-        .battleScript = BattleScript_EffectSleep,
-        .battleTvScore = 1,
-    },
-    // ... additional effects
-};
-```
-
-### 3. Move Effect Execution
-
-When a move is used in battle:
-
-1. **Move Selection:** `MoveInfo.effect` is retrieved
-2. **Effect Lookup:** `gBattleMoveEffects[effect]` is found
-3. **Script Execution:** `BattleMoveEffect.battleScript` is executed
-4. **Command Processing:** Individual script commands are processed by `battle_script_commands.c`
-
-## Data Validation and Constraints
-
-### 1. Species Constraints
-
-- Species IDs must be within valid range (0 to MAX_SPECIES)
-- Form species IDs must reference valid base species
-- Evolution chains must be acyclic
-- Level-up moves must be in ascending level order
-
-### 2. Move Constraints
-
-- Move IDs must be within valid range (0 to MOVES_COUNT_ALL)
-- Effect IDs must reference valid battle scripts
-- Additional effects must have valid effect IDs
-- Contest data must be consistent
-
-### 3. Ability Constraints
-
-- Ability IDs must be within valid range (0 to ABILITIES_COUNT)
-- AI ratings should be reasonable values
-- Flag combinations must be logical
-
-## Extension Points
-
-### 1. Adding New Species
-
-1. Add species data to `src/data/pokemon/species_info.h`
-2. Add level-up moves to appropriate generation file
-3. Add teachable moves to `src/data/pokemon/teachable_learnsets.h`
-4. Add egg moves to `src/data/pokemon/egg_moves.h`
-5. Add form data if applicable
-
-### 2. Adding New Moves
-
-1. Add move data to `src/data/moves_info.h`
-2. Add effect to `src/data/battle_move_effects.h`
-3. Implement battle script in `data/battle_scripts_*.s`
-4. Add animation script to `data/battle_anim_scripts.s`
-
-### 3. Adding New Abilities
-
-1. Add ability data to `src/data/abilities.h`
-2. Implement ability effects in battle script commands
-3. Add ability checks to relevant battle mechanics
-
-### 4. Adding New Effects
-
-1. Add effect ID to constants
-2. Add effect data to `src/data/battle_move_effects.h`
-3. Implement battle script in `data/battle_scripts_*.s`
-4. Add command implementations to `src/battle_script_commands.c`
-
-### 5. Adding Custom Resource Systems
-
-1. **Identify existing infrastructure** that can be repurposed
-2. **Create custom battle script commands** for resource logic
-3. **Implement native C functions** for complex resource management
-4. **Add appropriate validation** and error handling
-5. **Integrate with existing systems** (string, AI, animations)
-6. **Document the resource system** and its interactions
-
-## Conclusion
-
-This data architecture provides a comprehensive and extensible system for managing Pokémon battle data. The separation between data definition, script implementation, and runtime execution allows for modular development and easy maintenance. The strong typing and structured relationships ensure data consistency and enable powerful battle mechanics.
-
-The system supports:
-- Complex move effects through battle scripts
-- Flexible ability implementations
-- Dynamic form changes and evolutions
-- Custom resource systems (like runic power)
-- Extensible data structures for future generations
-- Comprehensive validation and error handling
-
-The runic power case study demonstrates how to properly extend the battle system by leveraging existing infrastructure while maintaining code clarity and system integrity. 
