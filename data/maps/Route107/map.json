@@ -16,11 +16,6 @@
     {
       "map": "MAP_DEWFORD_TOWN",
       "offset": 0,
-      "direction": "left"
-    },
-    {
-      "map": "MAP_ROUTE108",
-      "offset": 0,
       "direction": "right"
     }
   ],
@@ -117,7 +112,13 @@
       "flag": "0"
     }
   ],
-  "warp_events": [],
-  "coord_events": [],
-  "bg_events": []
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
 }
