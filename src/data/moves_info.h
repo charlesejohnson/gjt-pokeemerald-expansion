@@ -22965,4 +22965,82 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .contestComboMoves = {COMBO_STARTER_TOXIC},
         .battleAnimScript = gBattleAnimMove_Venoshock,
     },
+
+    [MOVE_BLAST_WAVE] =
+    {
+        .name = COMPOUND_STRING("Blast Wave"),
+        .description = COMPOUND_STRING(
+            "A powerful explosion that\n"
+            "reduces the foe's speed."),
+        .effect = EFFECT_HIT,
+        .power = 55,
+        .type = TYPE_FIRE,
+        .accuracy = 95,
+        .pp = 15,
+        .target = MOVE_TARGET_BOTH,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .windMove = TRUE,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_SPD_MINUS_1,
+            .chance = 100,
+        }),
+        .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_FIRE_PUNCH},
+        .battleAnimScript = gBattleAnimMove_HeatWave,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_PYROBLAST] =
+    {
+        .name = COMPOUND_STRING("Pyroblast"),
+        .description = COMPOUND_STRING(
+            "A devastating fire attack\n"
+            "that takes time to charge."),
+        .effect = EFFECT_SOLAR_BEAM,
+        .power = 120,
+        .type = TYPE_FIRE,
+        .accuracy = 100,
+        .pp = 10,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .argument = { .twoTurnAttack = { .stringId = STRINGID_PKMNCHARGINGPOWER, .status = 0 } },
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_SUNNY_DAY},
+        .battleAnimScript = gBattleAnimMove_SolarBeam,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_PHOENIX_FLAMES] =
+    {
+        .name = COMPOUND_STRING("Phoenix Flames"),
+        .description = COMPOUND_STRING(
+            "Sacred flames that may\n"
+            "increase critical hits."),
+        .effect = EFFECT_HIT,
+        .power = 50,
+        .type = TYPE_DRAGON,
+        .accuracy = 100,
+        .pp = 15,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .criticalHitStage = 1,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_CRIT_UP_1,
+            .self = TRUE,
+            .chance = 50,
+        }),
+        .contestEffect = CONTEST_EFFECT_BETTER_IF_SAME_TYPE,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_DRAGON_RAGE},
+        .battleAnimScript = gBattleAnimMove_DragonRage,
+        .validApprenticeMove = TRUE,
+    },
 };

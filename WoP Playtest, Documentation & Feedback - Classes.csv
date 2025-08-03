@@ -1,28 +1,9 @@
 Wow Class,Type 1,Type 2,HP,Attack,Defense,Sp. Atk,Sp. Def,Speed,Total,Ability ideas,ability,hidden ability,Moves etc.,,,
-Blood DK,Ghost,Dark,170,110,105,90,100,20,575,Will of the Necropolis (reduced damage below 50% HP),Cursed Body,Dark Aura,"Marrowrend (phys dmg, (ground? dark) +1 def","Death Strike (ghost type, maybe dark, heals 100% of damage dealt)","AMS (+2 spdef, safeguard)",Blood boil
-Unholy DK,Ghost,Poison,130,90,90,135,110,20,575,,Poison Touch,Parental Bond,,,,
-Frost DK,Ghost,Ice,130,150,110,75,90,20,575,,Snow Warning,Sniper,,,,
-Unevolved DK,Ghost,,80,80,75,65,75,20,395,,Hyper Cutter,,,,,
-,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,Drizzle,,,,
-Mage,Fire,,55,15,30,95,90,90,375,,frost armor,,,,,
-Frost Mage,Fire,Ice,100,20,65,128,125,116,554,,frost armor,,,,,
-Fire Mage,Fire,Dragon,95,20,45,158,110,126,554,,Hot Streak,,,,,
-Arcane Mage,Fire,Psychic,80,20,45,164,110,136,555,,mirror armor,,,,,
-,,,,,,,,,,,,Solar power,,,,
-,,,,,,,,,,,,Parental Bond,,,,
-,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,Hot Streak (scoring a crit increases spatk by 1),,,,
+Death Knight,Ghost,,80,85,70,65,75,20,395,Hyper Cutter,Hyper Cutter,,Scourge Strike (Ghost, 40 power, generates runic power),Death Strike (Dark, 35 power, consumes runic power),AMS (Ghost, +2 SpDef, Safeguard),Icebound Fortitude (Ice, +2 Def)
+Blood DK,Ghost,Dark,170,110,105,90,100,20,575,Cursed Body,Dark Aura,Cursed Body,Dark Aura,Marrowrend (Ground, 60 power, +1 Def),Death Strike (Dark, 35 power, consumes runic power),Dancing Rune Weapon (Dark, +1 Atk, +1 Evasion),Consumption (Dark, 75 power, both targets)
+Frost DK,Ghost,Ice,130,150,110,75,90,20,575,Snow Warning,Sniper,Snow Warning,Sniper,Frost Strike (Ice, 55 power, consumes runic power),Blizzard (Ice, 110 power),Obliterate (Ice, 120 power),Remorseless Winter (Ice, 45 power, multi-hit)
+Unholy DK,Ghost,Poison,130,90,90,135,110,20,575,Poison Touch,Parental Bond,Poison Touch,Parental Bond,Summon Gargoyle (Ghost, status move),Dark Transformation (Dark, status move),Army of the Dead (Ghost, status move),Death Strike (Dark, 35 power, consumes runic power)
+Mage,Fire,,55,15,30,95,90,90,375,Mana Barrier,Mana Barrier,,Ember (Fire, 40 power),Powder Snow (Ice, 40 power),Teleport (Psychic, status),Fire Spin (Fire, 35 power)
+Frost Mage,Fire,Ice,100,20,65,128,125,116,554,Frost Armor,Frost Armor,,Ice Lance (Ice, special move),Hail (Ice, status),Blizzard (Ice, 110 power),Teleport (Psychic, status)
+Fire Mage,Fire,Dragon,95,20,45,158,110,126,554,Hot Streak,Hot Streak,,Fire Blast (Fire, 110 power),Dragon Pulse (Dragon, 85 power),Flamethrower (Fire, 90 power),Ember (Fire, 40 power)
+Arcane Mage,Fire,Psychic,80,20,45,164,110,136,555,Mirror Armor,Mirror Armor,,Psychic (Psychic, 90 power),Fire Blast (Fire, 110 power),Teleport (Psychic, status),Confusion (Psychic, 50 power)

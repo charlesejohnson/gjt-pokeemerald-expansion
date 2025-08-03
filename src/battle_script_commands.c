@@ -4024,6 +4024,16 @@ void SetMoveEffect(bool32 primary, bool32 certain)
                 gBattlescriptCurrInstr = BattleScript_EffectRunicPower;
             
                 break;
+            case MOVE_EFFECT_CRIT_UP_1:
+                if (!(gBattleMons[gEffectBattler].status2 & STATUS2_FOCUS_ENERGY_ANY))
+                {
+                    if (GetGenConfig(GEN_CONFIG_FOCUS_ENERGY_CRIT_RATIO) >= GEN_3)
+                        gBattleMons[gEffectBattler].status2 |= STATUS2_FOCUS_ENERGY;
+                    else
+                        gBattleMons[gEffectBattler].status2 |= STATUS2_DRAGON_CHEER;
+                    gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_GETTING_PUMPED;
+                }
+                break;
             case MOVE_EFFECT_SPIKES:
                 if (gSideTimers[GetBattlerSide(gEffectBattler)].spikesAmount < 3)
                 {
