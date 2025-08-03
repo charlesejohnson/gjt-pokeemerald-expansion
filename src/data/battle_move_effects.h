@@ -877,6 +877,12 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
         .battleTvScore = 3,
         .encourageEncore = TRUE,
     },
+    [EFFECT_RUNIC_CONSUME] =
+    {
+        .battleScript = BattleScript_EffectSpender,
+        .battleTvScore = 3,
+        .encourageEncore = TRUE,
+    },
     [EFFECT_WORRY_SEED] =
     {
         .battleScript = BattleScript_EffectWorrySeed,

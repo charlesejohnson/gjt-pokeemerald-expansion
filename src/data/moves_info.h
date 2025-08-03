@@ -22611,7 +22611,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Cleaves into the target,\n"
             "draining their life force."),
-        .effect = EFFECT_DEATH_STRIKE,
+        .effect = EFFECT_RUNIC_CONSUME,
         .power = 35,
         .type = TYPE_DARK,
         .accuracy = 100,
@@ -22771,7 +22771,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Converts runic power\n"
             "to an Icy Strike"),
-        .effect = EFFECT_DEATH_STRIKE,
+        .effect = EFFECT_RUNIC_CONSUME,
         .power = 55,
         .type = TYPE_ICE,
         .accuracy = 100,

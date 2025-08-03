@@ -282,6 +282,8 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_PKMNCANTSTOCKPILE]                    = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} can't stockpile any more!"), //I think this was replaced with just "But it failed!"
     [STRINGID_PKMNRUNICPOWERED]                     = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} generated {B_BUFF1} Runic Power!"),
     [STRINGID_PKMNCANTRUNICPOWER]                   = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} can't generate more Runic Power!"),
+    [STRINGID_PKMNUSEDRUNICPOWER]                   = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} used {B_BUFF1} Runic Power!"),
+    [STRINGID_PKMNFAILEDTORUNICPOWER]               = COMPOUND_STRING("But it failed!"),
 
     [STRINGID_PKMNCANTSLEEPINUPROAR2]               = COMPOUND_STRING("But {B_DEF_NAME_WITH_PREFIX2} can't sleep in an uproar!"),
     [STRINGID_UPROARKEPTPKMNAWAKE]                  = COMPOUND_STRING("But the uproar kept {B_DEF_NAME_WITH_PREFIX2} awake!"),
@@ -1102,7 +1104,8 @@ const u16 gRunicPowerUsedStringIds[] =
 {
     [B_MSG_RUNIC_POWERED]       = STRINGID_PKMNRUNICPOWERED,
     [B_MSG_CANT_RUNIC_POWER]    = STRINGID_PKMNCANTRUNICPOWER,
-
+    [B_MSG_USED_RUNIC_POWER]    = STRINGID_PKMNUSEDRUNICPOWER,
+    [B_MSG_FAILED_RUNIC_POWER]  = STRINGID_PKMNFAILEDTORUNICPOWER,
 };
 
 const u16 gWokeUpStringIds[] =

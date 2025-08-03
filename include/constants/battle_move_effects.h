@@ -136,6 +136,7 @@ enum {
     EFFECT_SWALLOW,
     EFFECT_DEATH_STRIKE,
     EFFECT_FROST_STRIKE,
+    EFFECT_RUNIC_CONSUME,  // Generic runic power consumption effect
     EFFECT_WORRY_SEED,
     EFFECT_HAIL,
     EFFECT_TORMENT,
