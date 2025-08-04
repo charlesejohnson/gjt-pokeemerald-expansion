@@ -804,7 +804,9 @@
 	2:
 	.endm
 
-	.macro unused_0x8d
+	.macro substituteandsleep failInstr:req
+	.byte 0x8d
+	.4byte \failInstr
 	.endm
 
 	.macro initmultihitstring
@@ -1039,28 +1041,34 @@
 	.4byte \failInstr
 	.endm
 
+
+
 	.macro setstickyweb failInstr:req
 	.byte 0xc1
 	.4byte \failInstr
 	.endm
 
-	.macro selectfirstvalidtarget
+	.macro unused_0xC2
 	.byte 0xc2
 	.endm
 
-	.macro trysetfutureattack failInstr:req
+	.macro selectfirstvalidtarget
 	.byte 0xc3
+	.endm
+
+	.macro trysetfutureattack failInstr:req
+	.byte 0xc4
 	.4byte \failInstr
 	.endm
 
 	.macro trydobeatup endInstr, failInstr
-	.byte 0xc4
+	.byte 0xc5
 	.4byte \endInstr
 	.4byte \failInstr
 	.endm
 
 	.macro setsemiinvulnerablebit clear=FALSE
-	.byte 0xc5
+	.byte 0xc6
 	.byte \clear
 	.endm
 
@@ -1069,7 +1077,7 @@
 	.endm
 
 	.macro tryfiretwoturnmovenowbyeffect battler:req, checkChargeTurnEffects:req, jumpInstr:req
-	.byte 0xc6
+	.byte 0xc7
 	.byte \battler
 	.byte \checkChargeTurnEffects
 	.4byte \jumpInstr
@@ -1084,250 +1092,247 @@
 	.endm
 
 	.macro setminimize
-	.byte 0xc7
-	.endm
-
-	.macro unused_c8
 	.byte 0xc8
 	.endm
 
-	.macro trymemento failInstr:req
+	.macro unused_c8
 	.byte 0xc9
+	.endm
+
+	.macro trymemento failInstr:req
+	.byte 0xca
 	.4byte \failInstr
 	.endm
 
 	.macro setforcedtarget
-	.byte 0xca
+	.byte 0xcb
 	.endm
 
 	.macro setcharge battler:req
-	.byte 0xcb
+	.byte 0xcc
 	.byte \battler
 	.endm
 
 	.macro callterrainattack
-	.byte 0xcc
+	.byte 0xcd
 	.endm
 
 	.macro curestatuswithmove failInstr:req
-	.byte 0xcd
-	.4byte \failInstr
-	.endm
-
-	.macro settorment failInstr:req
 	.byte 0xce
 	.4byte \failInstr
 	.endm
 
-	.macro jumpifnodamage jumpInstr:req
+	.macro settorment failInstr:req
 	.byte 0xcf
+	.4byte \failInstr
+	.endm
+
+	.macro jumpifnodamage jumpInstr:req
+	.byte 0xd0
 	.4byte \jumpInstr
 	.endm
 
 	.macro settaunt failInstr:req
-	.byte 0xd0
-	.4byte \failInstr
-	.endm
-
-	.macro trysethelpinghand failInstr:req
 	.byte 0xd1
 	.4byte \failInstr
 	.endm
 
-	.macro tryswapitems failInstr:req
+	.macro trysethelpinghand failInstr:req
 	.byte 0xd2
 	.4byte \failInstr
 	.endm
 
-	.macro trycopyability battler:req, failInstr:req
+	.macro tryswapitems failInstr:req
 	.byte 0xd3
+	.4byte \failInstr
+	.endm
+
+	.macro trycopyability battler:req, failInstr:req
+	.byte 0xd4
 	.byte \battler
 	.4byte \failInstr
 	.endm
 
 	.macro trywish turnNumber:req, failInstr:req
-	.byte 0xd4
+	.byte 0xd5
 	.byte \turnNumber
 	.4byte \failInstr
 	.endm
 
 	.macro settoxicspikes failInstr:req
-	.byte 0xd5
-	.4byte \failInstr
-	.endm
-
-	.macro setgastroacid failInstr:req
 	.byte 0xd6
 	.4byte \failInstr
 	.endm
 
-	.macro setyawn failInstr:req
+	.macro setgastroacid failInstr:req
 	.byte 0xd7
 	.4byte \failInstr
 	.endm
 
-	.macro setdamagetohealthdifference failInstr:req
+	.macro setyawn failInstr:req
 	.byte 0xd8
 	.4byte \failInstr
 	.endm
 
-	.macro setroom
+	.macro setdamagetohealthdifference failInstr:req
 	.byte 0xd9
-	.endm
-
-	.macro tryswapabilities failInstr:req
-	.byte 0xda
 	.4byte \failInstr
 	.endm
 
-	.macro tryimprison failInstr:req
+	.macro setroom
+	.byte 0xda
+	.endm
+
+	.macro tryswapabilities failInstr:req
 	.byte 0xdb
 	.4byte \failInstr
 	.endm
 
-	.macro setstealthrock failInstr:req
+	.macro tryimprison failInstr:req
 	.byte 0xdc
 	.4byte \failInstr
 	.endm
 
-	.macro setuserstatus3 flags:req, failInstr:req
+	.macro setstealthrock failInstr:req
 	.byte 0xdd
+	.4byte \failInstr
+	.endm
+
+	.macro setuserstatus3 flags:req, failInstr:req
+	.byte 0xde
 	.4byte \flags
 	.4byte \failInstr
 	.endm
 
 	.macro assistattackselect failInstr:req
-	.byte 0xde
-	.4byte \failInstr
-	.endm
-
-	.macro trysetmagiccoat failInstr:req
 	.byte 0xdf
 	.4byte \failInstr
 	.endm
 
-	.macro trysetsnatch failInstr:req
+	.macro trysetmagiccoat failInstr:req
 	.byte 0xe0
 	.4byte \failInstr
 	.endm
 
-	.macro unused2 ptr:req
+	.macro trysetsnatch failInstr:req
 	.byte 0xe1
+	.4byte \failInstr
+	.endm
+
+	.macro unused2 ptr:req
+	.byte 0xe2
 	.4byte \ptr
 	.endm
 
 	.macro switchoutabilities battler:req
-	.byte 0xe2
+	.byte 0xe3
 	.byte \battler
 	.endm
 
 	.macro jumpifhasnohp battler:req, jumpInstr:req
-	.byte 0xe3
+	.byte 0xe4
 	.byte \battler
 	.4byte \jumpInstr
 	.endm
 
 	.macro jumpifnotcurrentmoveargtype battler:req, failInstr:req
-	.byte 0xe4
+	.byte 0xe5
 	.byte \battler
 	.4byte \failInstr
 	.endm
 
 	.macro pickup
-	.byte 0xe5
-	.endm
-
-	.macro unused_0xE6
 	.byte 0xe6
 	.endm
 
-	.macro unused_0xE7
+	.macro recoverbasedonhail failInstr:req
 	.byte 0xe7
+	.4byte \failInstr
 	.endm
 
 	.macro settypebasedhalvers failInstr:req
-	.byte 0xe8
+	.byte 0xe9
 	.4byte \failInstr
 	.endm
 
 	.macro jumpifsubstituteblocks jumpInstr:req
-	.byte 0xe9
+	.byte 0xea
 	.4byte \jumpInstr
 	.endm
 
 	.macro tryrecycleitem failInstr:req
-	.byte 0xea
-	.4byte \failInstr
-	.endm
-
-	.macro settypetoterrain failInstr:req
 	.byte 0xeb
 	.4byte \failInstr
 	.endm
 
-	.macro pursuitdoubles failInstr:req
+	.macro settypetoterrain failInstr:req
 	.byte 0xec
 	.4byte \failInstr
 	.endm
 
-	.macro snatchsetbattlers
+	.macro pursuitdoubles failInstr:req
 	.byte 0xed
+	.4byte \failInstr
 	.endm
 
-	.macro removescreens
+	.macro snatchsetbattlers
 	.byte 0xee
 	.endm
 
-	.macro handleballthrow
+	.macro removescreens
 	.byte 0xef
 	.endm
 
-	.macro givecaughtmon passInstr:req
+	.macro handleballthrow
 	.byte 0xf0
+	.endm
+
+	.macro givecaughtmon passInstr:req
+	.byte 0xf1
 	.4byte \passInstr
 	.endm
 
 	.macro trysetcaughtmondexflags failInstr:req
-	.byte 0xf1
+	.byte 0xf2
 	.4byte \failInstr
 	.endm
 
 	.macro displaydexinfo
-	.byte 0xf2
-	.endm
-
-	.macro trygivecaughtmonnick
 	.byte 0xf3
 	.endm
 
-	.macro subattackerhpbydmg
+	.macro trygivecaughtmonnick
 	.byte 0xf4
 	.endm
 
-	.macro removeattackerstatus1
+	.macro subattackerhpbydmg
 	.byte 0xf5
 	.endm
 
-	.macro finishaction
+	.macro removeattackerstatus1
 	.byte 0xf6
 	.endm
 
-	.macro finishturn
+	.macro finishaction
 	.byte 0xf7
 	.endm
 
-	.macro trainerslideout position:req
+	.macro finishturn
 	.byte 0xf8
+	.endm
+
+	.macro trainerslideout position:req
+	.byte 0xf9
 	.byte \position
 	.endm
 
 	.macro settelekinesis failInstr:req
-	.byte 0xf9
+	.byte 0xfa
 	.4byte \failInstr
 	.endm
 
 	.macro swapstatstages stat:req
-	.byte 0xfa
+	.byte 0xfb
 	.byte \stat
 	.endm
 
@@ -1337,22 +1342,22 @@
 	.endm
 
 	.macro jumpifcaptivateaffected jumpInstr:req
-	.byte 0xfc
+	.byte 0xfd
 	.4byte \jumpInstr
 	.endm
 
 	.macro unused ptr:req
-	.byte 0xfd
+	.byte 0xfe
 	.4byte \ptr
 	.endm
 
 	.macro tryworryseed failInstr:req
-	.byte 0xfe
+	.byte 0xff
 	.4byte \failInstr
 	.endm
 
 	.macro callnative func:req
-	.byte 0xff
+	.byte 0xe8
 	.4byte \func
 	.endm
 

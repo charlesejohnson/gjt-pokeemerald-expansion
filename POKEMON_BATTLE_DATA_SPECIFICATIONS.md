@@ -381,6 +381,58 @@ static void Cmd_stockpiletobasedamage(void)
 - **Function call chain:** Battle script → Command table → C function
 - **Parameter validation:** Ensure command parameters match expected function signatures
 
+#### **Learnset Management Best Practices**
+
+**1. Preserve Existing Moves:**
+- **Never remove existing moves** when adding new moves to learnsets
+- **When level conflicts occur:** Keep both moves at the same level or move existing moves to different levels
+- **Multiple moves per level:** Pokémon can learn multiple moves at the same level
+- **Documentation:** Update CSV files to reflect all moves, not just new ones
+
+**2. Learnset Update Guidelines:**
+```c
+// ✅ Correct: Preserve existing moves
+static const struct LevelUpMove sMageLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_MOVE( 1, MOVE_CONFUSION),
+    LEVEL_UP_MOVE( 6, MOVE_EMBER),
+    LEVEL_UP_MOVE( 9, MOVE_POWDER_SNOW),
+    LEVEL_UP_MOVE( 10, MOVE_TELEPORT),        // Existing move preserved
+    LEVEL_UP_MOVE( 10, MOVE_ARCANE_MISSILES), // New move added
+    LEVEL_UP_MOVE( 12, MOVE_DOUBLE_TEAM),
+    LEVEL_UP_MOVE( 14, MOVE_FIRE_SPIN),
+    LEVEL_UP_MOVE( 18, MOVE_ICY_WIND),        // Existing move preserved
+    LEVEL_UP_MOVE( 18, MOVE_ARCANE_INTELLECT), // New move added
+    LEVEL_UP_MOVE( 22, MOVE_PSYBEAM),
+    LEVEL_UP_END
+};
+
+// ❌ Incorrect: Removing existing moves
+static const struct LevelUpMove sMageLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_MOVE( 1, MOVE_CONFUSION),
+    LEVEL_UP_MOVE( 6, MOVE_EMBER),
+    LEVEL_UP_MOVE( 9, MOVE_POWDER_SNOW),
+    LEVEL_UP_MOVE( 10, MOVE_ARCANE_MISSILES), // Only new move, removed TELEPORT
+    LEVEL_UP_MOVE( 12, MOVE_DOUBLE_TEAM),
+    LEVEL_UP_MOVE( 14, MOVE_FIRE_SPIN),
+    LEVEL_UP_MOVE( 18, MOVE_ARCANE_INTELLECT), // Only new move, removed ICY_WIND
+    LEVEL_UP_MOVE( 22, MOVE_PSYBEAM),
+    LEVEL_UP_END
+};
+```
+
+**3. Level Conflict Resolution:**
+- **Option 1:** Keep both moves at the same level (recommended)
+- **Option 2:** Move existing move to a different level (if thematic progression requires it)
+- **Option 3:** Add new move at a different level to avoid conflict
+
+**4. Documentation Updates:**
+- **CSV Files:** Update all move entries, not just new ones
+- **PP Values:** Include PP capacity for all moves
+- **Implementation Status:** Mark moves as implemented (x) or script needed (s)
+- **Level Learned:** Document the exact level each move is learned
+
 #### **Debugging Battle Script Systems**
 
 **1. Command Registration Issues:**
@@ -608,6 +660,30 @@ SINGLE_BATTLE_TEST("Move has correct properties") {
 - **Check:** Move constants are defined in `include/constants/moves.h`
 - **Check:** Effect constants are defined in `include/constants/battle.h`
 - **Check:** Animation scripts are properly referenced
+
+#### **Message Pattern Mismatches**
+- **Issue:** Tests fail with "Unmatched MESSAGE" errors
+- **Solution:** Check actual message strings in `src/battle_message.c`
+- **Example:** `STRINGID_PKMNCHARGINGPOWER` maps to "{B_ATK_NAME_WITH_PREFIX} began charging power!"
+- **Best Practice:** Use existing test files as reference for correct message patterns
+
+#### **Animation Testing Issues**
+- **Issue:** Tests expect no animation but animation plays
+- **Solution:** For two-turn moves, allow animations on first turn (charging animations)
+- **Pattern:** Use `NONE_OF` for messages/effects that shouldn't appear, but don't block animations
+- **Example:** 
+```c
+NONE_OF {
+    MESSAGE("Wobbuffet used Pyroblast!");
+    HP_BAR(opponent);
+    // Don't include ANIMATION here - charging animations are normal
+}
+```
+
+#### **Double Battle Message Patterns**
+- **Issue:** "Foe" vs "The opposing" message patterns
+- **Solution:** Use "The opposing [Pokémon]'s [stat] fell!" format
+- **Reference:** Check existing double battle tests for correct patterns
 
 ### Test Coverage Guidelines
 

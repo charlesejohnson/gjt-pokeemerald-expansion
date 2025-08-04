@@ -1,109 +1,116 @@
-Move Name,Type,Damage,Targets,Effects,accuracy,implemented?,remaining work,Level Learned
-Death Knight Custom Moves,--,--,--,--,--,,,
-Scourge Strike,Ghost,40,targeted enemy,"50% chance to poison, +1 runic power",100,x,NEED TO LOOK AT SAPPY SEED FOR BONUS EVENTS TRIGGERING ON KILL,5
-Death Strike,Dark,35,targeted enemy,"heal for 50% of damage dealt, consumes runic power",100,x,NEED TO LOOK AT SAPPY SEED FOR BONUS EVENTS TRIGGERING ON KILL,10
-Howling Blast,Ice,50,both enemies,50% chance to freeze/frostbite,95,x,,12
-Icebound Fortitude,Ice,,,"2 stage def up, -1 speed",,s,need to write new script to avoid 1 point of self-dmg,16
-AMS,Ghost,--,self,safeguard,,s,", applies safeguard but does not give spd. Needs script rewrite.",18
-,,,,,,,,
-Death Knight Standard Moves,--,--,--,--,--,,,
-Scratch,Normal,40,targeted enemy,,100,x,,1
-Leer,Normal,--,both enemies,-1 Defense,100,x,,1
-Fury Cutter,Bug,40,targeted enemy,power doubles on consecutive hits,95,x,,7
-Night Slash,Dark,70,targeted enemy,high crit chance,100,x,,40
-Shadow Claw,Ghost,70,targeted enemy,high crit chance,100,x,,45
-,,,,,,,,
-Frost DK Custom Moves,--,--,--,--,--,,,
-Frost Strike,Ice,55,targeted enemy,"consumes runic power, high crit chance",100,x,,24
-Remorseless Winter,Ice,45 (2-5),all,"10% flinch, 10% freeze",85,x,,55
-Obliterate,Ice,90,targeted enemy,high crit chance,85,x,,36
-,,,,,,,,
-Frost DK Standard Moves,--,--,--,--,--,,,
-Scratch,Normal,40,targeted enemy,,100,x,,1
-Leer,Normal,--,both enemies,-1 Defense,100,x,,1
-Fury Cutter,Bug,40,targeted enemy,power doubles on consecutive hits,95,x,,7
-Blizzard,Ice,110,both enemies,10% chance to freeze,70,x,,32
-Night Slash,Dark,70,targeted enemy,high crit chance,100,x,,40
-Shadow Claw,Ghost,70,targeted enemy,high crit chance,100,x,,45
-,,,,,,,,
-Blood DK Custom Moves,--,--,--,--,--,,,
-Marrowrend,Ground,60,targeted enemy,1 stage def up,100,x,,24
-Dancing Rune Weapon,Dark,--,self,"1 stage atk up, 1 stage evasion up",,s,need to write new script to avoid 1 point of self dmg,32
-Consumption,Dark,75,both enemies,heal for 50% of damage dealt,100,x,,36
-,,,,,,,,
-Blood DK Standard Moves,--,--,--,--,--,,,
-Scratch,Normal,40,targeted enemy,,100,x,,1
-Leer,Normal,--,both enemies,-1 Defense,100,x,,1
-Fury Cutter,Bug,40,targeted enemy,power doubles on consecutive hits,95,x,,7
-Night Slash,Dark,70,targeted enemy,high crit chance,100,x,,40
-Shadow Claw,Ghost,70,targeted enemy,high crit chance,100,x,,45
-,,,,,,,,
-Unholy DK Custom Moves,--,--,--,--,--,,,
-Summon Gargoyle,Poison,35,targeted enemy,3 hits,100,x,,24
-Dark Transformation,Dark,--,all allies,,,"s, should only be ally and bigger buff. Need to rewrite script",32,
-Army of the Dead,Ghost,25,targeted enemy,population bomb effect,90,x,,36
-,,,,,,,,
-Unholy DK Standard Moves,--,--,--,--,--,,,
-Scratch,Normal,40,targeted enemy,,100,x,,1
-Leer,Normal,--,both enemies,-1 Defense,100,x,,1
-Fury Cutter,Bug,40,targeted enemy,power doubles on consecutive hits,95,x,,7
-Night Slash,Dark,70,targeted enemy,high crit chance,100,x,,40
-Shadow Claw,Ghost,70,targeted enemy,high crit chance,100,x,,45
-,,,,,,,,
-Mage Custom Moves,--,--,--,--,--,,,
-,,,,,,,,
-Mage Standard Moves,--,--,--,--,--,,,
-Pound,Normal,40,targeted enemy,,100,x,,1
-Confusion,Psychic,50,targeted enemy,10% chance to confuse,100,x,,1
-Ember,Fire,40,targeted enemy,10% chance to burn,100,x,,6
-Powder Snow,Ice,40,both enemies,10% chance to freeze,100,x,,9
-Teleport,Psychic,--,self,switch out,,x,,10
-Double Team,Normal,--,self,+1 Evasion,,x,,12
-Fire Spin,Fire,35,targeted enemy,traps foe for 2-5 turns,85,x,,14
-Icy Wind,Ice,55,both enemies,-1 Speed,95,x,,18
-Psybeam,Psychic,65,targeted enemy,10% chance to confuse,100,x,,22
-,,,,,,,,
-Frost Mage Custom Moves,--,--,--,--,--,,,
-Ice Lance,Ice,40,targeted enemy,"50% chance to freeze, double damage if foe frozen",100,x,,24
-,,,,,,,,
-Frost Mage Standard Moves,--,--,--,--,--,,,
-Pound,Normal,40,targeted enemy,,100,x,,1
-Confusion,Psychic,50,targeted enemy,10% chance to confuse,100,x,,1
-Ember,Fire,40,targeted enemy,10% chance to burn,100,x,,6
-Powder Snow,Ice,40,both enemies,10% chance to freeze,100,x,,9
-Teleport,Psychic,--,self,switch out,,x,,10
-Double Team,Normal,--,self,+1 Evasion,,x,,12
-Fire Spin,Fire,35,targeted enemy,traps foe for 2-5 turns,85,x,,14
-Icy Wind,Ice,55,both enemies,-1 Speed,95,x,,18
-Psybeam,Psychic,65,targeted enemy,10% chance to confuse,100,x,,22
-Hail,Ice,--,field,creates hail for 5 turns,,x,,28
-Blizzard,Ice,110,both enemies,10% chance to freeze,70,x,,32
-,,,,,,,,
-Fire Mage Custom Moves,--,--,--,--,--,,,
-Blast Wave,Fire,55,both enemies,-1 speed,95,x,,24
-Pyroblast,Fire,120,targeted enemy,takes one turn to charge up (use solar beam for reference),100,x,,28
-Phoenix Flames,Dragon,50,targeted enemy,50% chance to increase critical hit stage by 1,100,x,,32
-,,,,,,,,
-Fire Mage Standard Moves,--,--,--,--,--,,,
-Pound,Normal,40,targeted enemy,,100,x,,1
-Confusion,Psychic,50,targeted enemy,10% chance to confuse,100,x,,1
-Ember,Fire,40,targeted enemy,10% chance to burn,100,x,,6
-Powder Snow,Ice,40,both enemies,10% chance to freeze,100,x,,9
-Teleport,Psychic,--,self,switch out,,x,,10
-Double Team,Normal,--,self,+1 Evasion,,x,,12
-Fire Spin,Fire,35,targeted enemy,traps foe for 2-5 turns,85,x,,14
-Icy Wind,Ice,55,both enemies,-1 Speed,95,x,,18
-Psybeam,Psychic,65,targeted enemy,10% chance to confuse,100,x,,22
-,,,,,,,,
-Arcane Mage Custom Moves,--,--,--,--,--,,,
-,,,,,,,,
-Arcane Mage Standard Moves,--,--,--,--,--,,,
-Pound,Normal,40,targeted enemy,,100,x,,1
-Confusion,Psychic,50,targeted enemy,10% chance to confuse,100,x,,1
-Ember,Fire,40,targeted enemy,10% chance to burn,100,x,,6
-Powder Snow,Ice,40,both enemies,10% chance to freeze,100,x,,9
-Teleport,Psychic,--,self,switch out,,x,,10
-Double Team,Normal,--,self,+1 Evasion,,x,,12
-Fire Spin,Fire,35,targeted enemy,traps foe for 2-5 turns,85,x,,14
-Icy Wind,Ice,55,both enemies,-1 Speed,95,x,,18
-Psybeam,Psychic,65,targeted enemy,10% chance to confuse,100,x,,22
+Move Name,Type,Damage,Targets,Effects,accuracy,PP,implemented?,remaining work,Level Learned
+Death Knight Custom Moves,--,--,--,--,--,,,,
+Scourge Strike,Ghost,40,targeted enemy,"50% chance to poison, +1 runic power",100,25,x,NEED TO LOOK AT SAPPY SEED FOR BONUS EVENTS TRIGGERING ON KILL,5
+Death Strike,Dark,35,targeted enemy,"heal for 50% of damage dealt, consumes runic power",100,15,x,NEED TO LOOK AT SAPPY SEED FOR BONUS EVENTS TRIGGERING ON KILL,10
+Howling Blast,Ice,50,both enemies,50% chance to freeze/frostbite,95,15,x,,12
+Icebound Fortitude,Ice,,,"2 stage def up, -1 speed",,15,s,need to write new script to avoid 1 point of self-dmg,16
+AMS,Ghost,--,self,safeguard,,15,s,", applies safeguard but does not give spd. Needs script rewrite.",18
+,,,,,,,,,
+Death Knight Standard Moves,--,--,--,--,--,,,,
+Scratch,Normal,40,targeted enemy,,100,35,x,,1
+Leer,Normal,--,both enemies,-1 Defense,100,30,x,,1
+Fury Cutter,Bug,40,targeted enemy,power doubles on consecutive hits,95,20,x,,7
+Night Slash,Dark,70,targeted enemy,high crit chance,100,15,x,,40
+Shadow Claw,Ghost,70,targeted enemy,high crit chance,100,15,x,,45
+,,,,,,,,,
+Frost DK Custom Moves,--,--,--,--,--,,,,
+Frost Strike,Ice,55,targeted enemy,"consumes runic power, high crit chance",100,15,x,,24
+Remorseless Winter,Ice,45 (2-5),all,"10% flinch, 10% freeze",85,10,x,,55
+Obliterate,Ice,90,targeted enemy,high crit chance,85,10,x,,36
+,,,,,,,,,
+Frost DK Standard Moves,--,--,--,--,--,,,,
+Scratch,Normal,40,targeted enemy,,100,35,x,,1
+Leer,Normal,--,both enemies,-1 Defense,100,30,x,,1
+Fury Cutter,Bug,40,targeted enemy,power doubles on consecutive hits,95,20,x,,7
+Blizzard,Ice,110,both enemies,10% chance to freeze,70,5,x,,32
+Night Slash,Dark,70,targeted enemy,high crit chance,100,15,x,,40
+Shadow Claw,Ghost,70,targeted enemy,high crit chance,100,15,x,,45
+,,,,,,,,,
+Blood DK Custom Moves,--,--,--,--,--,,,,
+Marrowrend,Ground,60,targeted enemy,1 stage def up,100,10,x,,24
+Dancing Rune Weapon,Dark,--,self,"1 stage atk up, 1 stage evasion up",,15,s,need to write new script to avoid 1 point of self dmg,32
+Consumption,Dark,75,both enemies,heal for 50% of damage dealt,100,10,x,,36
+,,,,,,,,,
+Blood DK Standard Moves,--,--,--,--,--,,,,
+Scratch,Normal,40,targeted enemy,,100,35,x,,1
+Leer,Normal,--,both enemies,-1 Defense,100,30,x,,1
+Fury Cutter,Bug,40,targeted enemy,power doubles on consecutive hits,95,20,x,,7
+Night Slash,Dark,70,targeted enemy,high crit chance,100,15,x,,40
+Shadow Claw,Ghost,70,targeted enemy,high crit chance,100,15,x,,45
+,,,,,,,,,
+Unholy DK Custom Moves,--,--,--,--,--,,,,
+Summon Gargoyle,Poison,35,targeted enemy,3 hits,100,15,x,,24
+Dark Transformation,Dark,--,all allies,,,15,s,should only be ally and bigger buff. Need to rewrite script,32
+Army of the Dead,Ghost,25,targeted enemy,population bomb effect,90,10,x,,36
+,,,,,,,,,
+Unholy DK Standard Moves,--,--,--,--,--,,,,
+Scratch,Normal,40,targeted enemy,,100,35,x,,1
+Leer,Normal,--,both enemies,-1 Defense,100,30,x,,1
+Fury Cutter,Bug,40,targeted enemy,power doubles on consecutive hits,95,20,x,,7
+Night Slash,Dark,70,targeted enemy,high crit chance,100,15,x,,40
+Shadow Claw,Ghost,70,targeted enemy,high crit chance,100,15,x,,45
+,,,,,,,,,
+Mage Custom Moves,--,--,--,--,--,,,,
+Arcane Missiles,Psychic,25,targeted enemy,hits 2-5 times,90,25,,,10
+Arcane Intellect,Psychic,0,all allies, +1 Special Atack,,1,,,18
+,,,,,,,,,
+Mage Standard Moves,--,--,--,--,--,,,,
+Pound,Normal,40,targeted enemy,,100,35,x,,1
+Confusion,Psychic,50,targeted enemy,10% chance to confuse,100,25,x,,1
+Ember,Fire,40,targeted enemy,10% chance to burn,100,25,x,,6
+Powder Snow,Ice,40,both enemies,10% chance to freeze,100,25,x,,9
+Teleport,Psychic,--,self,switch out,,20,x,,10
+Double Team,Normal,--,self,+1 Evasion,,15,x,,12
+Fire Spin,Fire,35,targeted enemy,traps foe for 2-5 turns,85,15,x,,14
+Icy Wind,Ice,55,both enemies,-1 Speed,95,15,x,,18
+Psybeam,Psychic,65,targeted enemy,10% chance to confuse,100,20,x,,22
+,,,,,,,,,
+Frost Mage Custom Moves,--,--,--,--,--,,,,
+Ice Lance,Ice,40,targeted enemy,"50% chance to freeze, double damage if foe frozen",100,10,x,,24
+Frost Nova,Ice,--,both enemies and ally,inflicts frostbite and -1 speed to all targets,100,10,,,28
+Ice Block,Ice,--,self,"protect and heals for 25%, 50% in hail",100,1,,,41
+,,,,,,,,,
+Frost Mage Standard Moves,--,--,--,--,--,,,,
+Pound,Normal,40,targeted enemy,,100,35,x,,1
+Confusion,Psychic,50,targeted enemy,10% chance to confuse,100,25,x,,1
+Ember,Fire,40,targeted enemy,10% chance to burn,100,25,x,,6
+Powder Snow,Ice,40,both enemies,10% chance to freeze,100,25,x,,9
+Teleport,Psychic,--,self,switch out,,20,x,,10
+Double Team,Normal,--,self,+1 Evasion,,15,x,,12
+Fire Spin,Fire,35,targeted enemy,traps foe for 2-5 turns,85,15,x,,14
+Icy Wind,Ice,55,both enemies,-1 Speed,95,15,x,,18
+Psybeam,Psychic,65,targeted enemy,10% chance to confuse,100,20,x,,22
+Hail,Ice,--,field,creates hail for 5 turns,,10,x,,28
+Blizzard,Ice,110,both enemies,10% chance to freeze,70,5,x,,32
+,,,,,,,,,
+Fire Mage Custom Moves,--,--,--,--,--,,,,
+Blast Wave,Fire,55,both enemies,-1 Speed,95,15,x,,24
+Pyroblast,Fire,120,targeted enemy,"two-turn move, charges first turn",100,10,x,,28
+Phoenix Flames,Dragon,50,targeted enemy,"+1 crit stage, 50% chance to increase crit stage",100,15,x,,32
+,,,,,,,,,
+Fire Mage Standard Moves,--,--,--,--,--,,,,
+Pound,Normal,40,targeted enemy,,100,35,x,,1
+Confusion,Psychic,50,targeted enemy,10% chance to confuse,100,25,x,,1
+Ember,Fire,40,targeted enemy,10% chance to burn,100,25,x,,6
+Powder Snow,Ice,40,both enemies,10% chance to freeze,100,25,x,,9
+Teleport,Psychic,--,self,switch out,,20,x,,10
+Double Team,Normal,--,self,+1 Evasion,,15,x,,12
+Fire Spin,Fire,35,targeted enemy,traps foe for 2-5 turns,85,15,x,,14
+Icy Wind,Ice,55,both enemies,-1 Speed,95,15,x,,18
+Psybeam,Psychic,65,targeted enemy,10% chance to confuse,100,20,x,,22
+,,,,,,,,,
+Arcane Mage Custom Moves,--,--,--,--,--,,,,
+Arcane Blast,Psychic,20,targeted enemy,power doubles on consecutive hits,95,15,,,24
+Polymorph,Psychic,--,targeted enemy,inflicts sleep and applies a substitute to the target,,,,,30
+Arcane Orb,Psychic,95,both enemies,,100,10,,,36
+,,,,,,,,,
+Arcane Mage Standard Moves,--,--,--,--,--,,,,
+Pound,Normal,40,targeted enemy,,100,35,x,,1
+Confusion,Psychic,50,targeted enemy,10% chance to confuse,100,25,x,,1
+Ember,Fire,40,targeted enemy,10% chance to burn,100,25,x,,6
+Powder Snow,Ice,40,both enemies,10% chance to freeze,100,25,x,,9
+Teleport,Psychic,--,self,switch out,,20,x,,10
+Double Team,Normal,--,self,+1 Evasion,,15,x,,12
+Fire Spin,Fire,35,targeted enemy,traps foe for 2-5 turns,85,15,x,,14
+Icy Wind,Ice,55,both enemies,-1 Speed,95,15,x,,18
+Psybeam,Psychic,65,targeted enemy,10% chance to confuse,100,20,x,,22

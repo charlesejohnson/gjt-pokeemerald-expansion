@@ -541,6 +541,7 @@ static void Cmd_rapidspinfree(void);
 static void Cmd_setdefensecurlbit(void);
 static void Cmd_recoverbasedonsunlight(void);
 static void Cmd_setstickyweb(void);
+static void Cmd_unused_0xC2(void);
 static void Cmd_selectfirstvalidtarget(void);
 static void Cmd_trysetfutureattack(void);
 static void Cmd_trydobeatup(void);
@@ -576,9 +577,9 @@ static void Cmd_unused2(void);
 static void Cmd_switchoutabilities(void);
 static void Cmd_jumpifhasnohp(void);
 static void Cmd_jumpifnotcurrentmoveargtype(void);
+
 static void Cmd_pickup(void);
-static void Cmd_unused_0xE6(void);
-static void Cmd_unused_0xE7(void);
+static void Cmd_recoverbasedonhail(void);
 static void Cmd_settypebasedhalvers(void);
 static void Cmd_jumpifsubstituteblocks(void);
 static void Cmd_tryrecycleitem(void);
@@ -800,68 +801,68 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     Cmd_setdefensecurlbit,                       //0xBF
     Cmd_recoverbasedonsunlight,                  //0xC0
     Cmd_setstickyweb,                            //0xC1
-    Cmd_selectfirstvalidtarget,                  //0xC2
-    Cmd_trysetfutureattack,                      //0xC3
-    Cmd_trydobeatup,                             //0xC4
-    Cmd_setsemiinvulnerablebit,                  //0xC5
-    Cmd_tryfiretwoturnmovenowbyeffect,           //0xC6
-    Cmd_setminimize,                             //0xC7
-    Cmd_unused_c8,                               //0xC8
-    Cmd_trymemento,                              //0xC9
-    Cmd_setforcedtarget,                         //0xCA
-    Cmd_setcharge,                               //0xCB
-    Cmd_callterrainattack,                       //0xCC
-    Cmd_curestatuswithmove,                      //0xCD
-    Cmd_settorment,                              //0xCE
-    Cmd_jumpifnodamage,                          //0xCF
-    Cmd_settaunt,                                //0xD0
-    Cmd_trysethelpinghand,                       //0xD1
-    Cmd_tryswapitems,                            //0xD2
-    Cmd_trycopyability,                          //0xD3
-    Cmd_trywish,                                 //0xD4
-    Cmd_settoxicspikes,                          //0xD5
-    Cmd_setgastroacid,                           //0xD6
-    Cmd_setyawn,                                 //0xD7
-    Cmd_setdamagetohealthdifference,             //0xD8
-    Cmd_setroom,                                 //0xD9
-    Cmd_tryswapabilities,                        //0xDA
-    Cmd_tryimprison,                             //0xDB
-    Cmd_setstealthrock,                          //0xDC
-    Cmd_setuserstatus3,                          //0xDD
-    Cmd_assistattackselect,                      //0xDE
-    Cmd_trysetmagiccoat,                         //0xDF
-    Cmd_trysetsnatch,                            //0xE0
-    Cmd_unused2,                                 //0xE1
-    Cmd_switchoutabilities,                      //0xE2
-    Cmd_jumpifhasnohp,                           //0xE3
-    Cmd_jumpifnotcurrentmoveargtype,             //0xE4
-    Cmd_pickup,                                  //0xE5
-    Cmd_unused_0xE6,                             //0xE6
-    Cmd_unused_0xE7,                             //0xE7
-    Cmd_settypebasedhalvers,                     //0xE8
-    Cmd_jumpifsubstituteblocks,                  //0xE9
-    Cmd_tryrecycleitem,                          //0xEA
-    Cmd_settypetoterrain,                        //0xEB
-    Cmd_pursuitdoubles,                          //0xEC
-    Cmd_snatchsetbattlers,                       //0xED
-    Cmd_removescreens,                           //0xEE
-    Cmd_handleballthrow,                         //0xEF
-    Cmd_givecaughtmon,                           //0xF0
-    Cmd_trysetcaughtmondexflags,                 //0xF1
-    Cmd_displaydexinfo,                          //0xF2
-    Cmd_trygivecaughtmonnick,                    //0xF3
-    Cmd_subattackerhpbydmg,                      //0xF4
-    Cmd_removeattackerstatus1,                   //0xF5
-    Cmd_finishaction,                            //0xF6
-    Cmd_finishturn,                              //0xF7
-    Cmd_trainerslideout,                         //0xF8
-    Cmd_settelekinesis,                          //0xF9
-    Cmd_swapstatstages,                          //0xFA
-    Cmd_averagestats,                            //0xFB
-    Cmd_jumpifcaptivateaffected,                 //0xFC
-    Cmd_unused,                                  //0xFD
-    Cmd_tryworryseed,                            //0xFE
-    Cmd_callnative,                              //0xFF
+    Cmd_unused_0xC2,                             //0xC2
+    Cmd_selectfirstvalidtarget,                  //0xC3
+    Cmd_trysetfutureattack,                      //0xC4
+    Cmd_trydobeatup,                             //0xC5
+    Cmd_setsemiinvulnerablebit,                  //0xC6
+    Cmd_tryfiretwoturnmovenowbyeffect,           //0xC7
+    Cmd_setminimize,                             //0xC8
+    Cmd_unused_c8,                               //0xC9
+    Cmd_trymemento,                              //0xCA
+    Cmd_setforcedtarget,                         //0xCB
+    Cmd_setcharge,                               //0xCC
+    Cmd_callterrainattack,                       //0xCD
+    Cmd_curestatuswithmove,                      //0xCE
+    Cmd_settorment,                              //0xCF
+    Cmd_jumpifnodamage,                          //0xD0
+    Cmd_settaunt,                                //0xD1
+    Cmd_trysethelpinghand,                       //0xD2
+    Cmd_tryswapitems,                            //0xD3
+    Cmd_trycopyability,                          //0xD4
+    Cmd_trywish,                                 //0xD5
+    Cmd_settoxicspikes,                          //0xD6
+    Cmd_setgastroacid,                           //0xD7
+    Cmd_setyawn,                                 //0xD8
+    Cmd_setdamagetohealthdifference,             //0xD9
+    Cmd_setroom,                                 //0xDA
+    Cmd_tryswapabilities,                        //0xDB
+    Cmd_tryimprison,                             //0xDC
+    Cmd_setstealthrock,                          //0xDD
+    Cmd_setuserstatus3,                          //0xDE
+    Cmd_assistattackselect,                      //0xDF
+    Cmd_trysetmagiccoat,                         //0xE0
+    Cmd_trysetsnatch,                            //0xE1
+    Cmd_unused2,                                 //0xE2
+    Cmd_switchoutabilities,                      //0xE3
+    Cmd_jumpifhasnohp,                           //0xE4
+    Cmd_jumpifnotcurrentmoveargtype,             //0xE5
+    Cmd_pickup,                                  //0xE6
+    Cmd_recoverbasedonhail,                      //0xE7
+    Cmd_callnative,                              //0xE8
+    Cmd_settypebasedhalvers,                     //0xE9
+    Cmd_jumpifsubstituteblocks,                  //0xEA
+    Cmd_tryrecycleitem,                          //0xEB
+    Cmd_settypetoterrain,                        //0xEC
+    Cmd_pursuitdoubles,                          //0xED
+    Cmd_snatchsetbattlers,                       //0xEE
+    Cmd_removescreens,                           //0xEF
+    Cmd_handleballthrow,                         //0xF0
+    Cmd_givecaughtmon,                           //0xF1
+    Cmd_trysetcaughtmondexflags,                 //0xF2
+    Cmd_displaydexinfo,                          //0xF3
+    Cmd_trygivecaughtmonnick,                    //0xF4
+    Cmd_subattackerhpbydmg,                      //0xF5
+    Cmd_removeattackerstatus1,                   //0xF6
+    Cmd_finishaction,                            //0xF7
+    Cmd_finishturn,                              //0xF8
+    Cmd_trainerslideout,                         //0xF9
+    Cmd_settelekinesis,                          //0xFA
+    Cmd_swapstatstages,                          //0xFB
+    Cmd_averagestats,                            //0xFC
+    Cmd_jumpifcaptivateaffected,                 //0xFD
+    Cmd_unused,                                  //0xFE
+    Cmd_tryworryseed,                            //0xFF
 };
 
 const struct StatFractions gAccuracyStageRatios[] =
@@ -14620,6 +14621,8 @@ static void Cmd_recoverbasedonsunlight(void)
     }
 }
 
+
+
 static void Cmd_setstickyweb(void)
 {
     CMD_ARGS(const u8 *failInstr);
@@ -14638,6 +14641,10 @@ static void Cmd_setstickyweb(void)
         gSideTimers[targetSide].stickyWebAmount = 1;
         gBattlescriptCurrInstr = cmd->nextInstr;
     }
+}
+
+static void Cmd_unused_0xC2(void)
+{
 }
 
 static void Cmd_selectfirstvalidtarget(void)
@@ -15630,13 +15637,33 @@ static void Cmd_pickup(void)
     gBattlescriptCurrInstr = cmd->nextInstr;
 }
 
-static void Cmd_unused_0xE6(void)
+static void Cmd_recoverbasedonhail(void)
 {
+    CMD_ARGS(const u8 *failInstr);
+
+    gBattlerTarget = gBattlerAttacker;
+    if (gBattleMons[gBattlerAttacker].hp != gBattleMons[gBattlerAttacker].maxHP)
+    {
+        if (!(gBattleWeather & B_WEATHER_ANY) || !HasWeatherEffect() || GetBattlerHoldEffect(gBattlerAttacker, TRUE) == HOLD_EFFECT_UTILITY_UMBRELLA)
+            gBattleStruct->moveDamage[gBattlerAttacker] = GetNonDynamaxMaxHP(gBattlerAttacker) / 2; // 50%
+        else if (gBattleWeather & B_WEATHER_HAIL)
+            gBattleStruct->moveDamage[gBattlerAttacker] = 20 * GetNonDynamaxMaxHP(gBattlerAttacker) / 30; // ~66.7%
+        else // not hail weather
+            gBattleStruct->moveDamage[gBattlerAttacker] = GetNonDynamaxMaxHP(gBattlerAttacker) / 4; // 25%
+
+        if (gBattleStruct->moveDamage[gBattlerAttacker] == 0)
+            gBattleStruct->moveDamage[gBattlerAttacker] = 1;
+        gBattleStruct->moveDamage[gBattlerAttacker] *= -1; // Make it a heal
+
+        gBattlescriptCurrInstr = cmd->nextInstr;
+    }
+    else
+    {
+        gBattlescriptCurrInstr = cmd->failInstr;
+    }
 }
 
-static void Cmd_unused_0xE7(void)
-{
-}
+
 
 // Water and Mud Sport
 static void Cmd_settypebasedhalvers(void)

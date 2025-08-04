@@ -23043,4 +23043,183 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_DragonRage,
         .validApprenticeMove = TRUE,
     },
+
+    [MOVE_ARCANE_MISSILES] =
+    {
+        .name = COMPOUND_STRING("Arcane Missiles"),
+        .description = COMPOUND_STRING(
+            "Fires multiple magical\n"
+            "missiles at the target."),
+        .effect = EFFECT_MULTI_HIT,
+        .power = 25,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 90,
+        .pp = 25,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .strikeCount = 2,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_PSYCHIC},
+        .battleAnimScript = gBattleAnimMove_Psybeam,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_ARCANE_INTELLECT] =
+    {
+        .name = COMPOUND_STRING("Arcane Intellect"),
+        .description = COMPOUND_STRING(
+            "Enhances the mind to\n"
+            "boost special attack."),
+        .effect = EFFECT_SPECIAL_ATTACK_UP,
+        .power = 0,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 0,
+        .pp = 1,
+        .target = MOVE_TARGET_ALLY,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .zMove = { .effect = Z_EFFECT_SPATK_UP_1 },
+        .snatchAffected = TRUE,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_AVOID_STARTLE,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_CalmMind,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_FROST_NOVA] =
+    {
+        .name = COMPOUND_STRING("Frost Nova"),
+        .description = COMPOUND_STRING(
+            "A burst of freezing energy\n"
+            "that affects all targets."),
+        .effect = EFFECT_HIT,
+        .power = 0,
+        .type = TYPE_ICE,
+        .accuracy = 100,
+        .pp = 10,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .windMove = TRUE,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_FREEZE_OR_FROSTBITE,
+            .chance = 100,
+        },{
+            .moveEffect = MOVE_EFFECT_SPD_MINUS_1,
+            .chance = 100,
+        }),
+        .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_HAIL},
+        .battleAnimScript = gBattleAnimMove_IcyWind,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_ICE_BLOCK] =
+    {
+        .name = COMPOUND_STRING("Ice Block"),
+        .description = COMPOUND_STRING(
+            "Creates a protective barrier\n"
+            "and restores health."),
+        .effect = EFFECT_ICE_BLOCK,
+        .power = 0,
+        .type = TYPE_ICE,
+        .accuracy = 0,
+        .pp = 1,
+        .target = MOVE_TARGET_USER,
+        .priority = 4,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .zMove = { .effect = Z_EFFECT_RESET_STATS },
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .copycatBanned = TRUE,
+        .assistBanned = TRUE,
+        .sleepTalkBanned = TRUE,
+        .instructBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_AVOID_STARTLE,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Protect,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_ARCANE_BLAST] =
+    {
+        .name = COMPOUND_STRING("Arcane Blast"),
+        .description = COMPOUND_STRING(
+            "A powerful arcane attack\n"
+            "that grows stronger."),
+        .effect = EFFECT_FURY_CUTTER,
+        .power = 20,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 95,
+        .pp = 15,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_PSYCHIC},
+        .battleAnimScript = gBattleAnimMove_Psybeam,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_POLYMORPH] =
+    {
+        .name = COMPOUND_STRING("Polymorph"),
+        .description = COMPOUND_STRING(
+            "Transforms the target into\n"
+            "a harmless creature."),
+        .effect = EFFECT_SUBSTITUTE_AND_SLEEP,
+        .power = 0,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 100,
+        .pp = 10,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .zMove = { .effect = Z_EFFECT_SPD_UP_1 },
+        .magicCoatAffected = TRUE,
+        .metronomeBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_MONS_WITH_GOOD_APPEALS,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Hypnosis,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_ARCANE_ORB] =
+    {
+        .name = COMPOUND_STRING("Arcane Orb"),
+        .description = COMPOUND_STRING(
+            "A powerful orb of pure\n"
+            "arcane energy."),
+        .effect = EFFECT_HIT,
+        .power = 95,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 100,
+        .pp = 10,
+        .target = MOVE_TARGET_BOTH,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .windMove = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_PSYCHIC},
+        .battleAnimScript = gBattleAnimMove_FocusBlast,
+        .validApprenticeMove = TRUE,
+    },
 };
