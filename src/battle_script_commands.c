@@ -11859,6 +11859,11 @@ static void Cmd_setprotectlike(void)
                 gProtectStructs[gBattlerAttacker].burningBulwarked = TRUE;
                 gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_PROTECTED_ITSELF;
             }
+            else if (gCurrentMove == MOVE_ICE_BLOCK)
+            {
+                gProtectStructs[gBattlerAttacker].protected = TRUE;
+                gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_PROTECTED_ITSELF;
+            }
 
             gDisableStructs[gBattlerAttacker].protectUses++;
             fail = FALSE;

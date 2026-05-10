@@ -10124,7 +10124,12 @@ BattleScript_EffectIceBlock::
 	printfromtable gProtectLikeUsedStringIds
 	waitmessage B_WAIT_TIME_LONG
 	recoverbasedonhail BattleScript_AlreadyAtFullHp
-	goto BattleScript_PresentHealTarget
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
+	healthbarupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER
+	printstring STRINGID_PKMNREGAINEDHEALTH
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
 
 BattleScript_EffectSubstituteAndSleep::
 	attackcanceler
