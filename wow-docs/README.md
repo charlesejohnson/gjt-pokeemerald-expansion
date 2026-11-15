@@ -26,8 +26,8 @@ Docs here were consolidated on 2026-11-15 from sheets last edited in 2025. Anyth
 ## Status from the code (inferred from commit history, not verified by building)
 
 - Death Knight line: playable through the third gym in the last playtest build. Death Strike, runic power generation and Scourge Strike are working.
-- Mage line: Fire Mage moves implemented with unit tests (`test/battle/move_effect/fire_mage_moves.c`). Per the last commits, all new mage moves work except Ice Block and Polymorph.
-- Mana Barrier: builds, but does not work yet.
+- Mage line: Fire Mage moves implemented with unit tests (`test/battle/move_effect/fire_mage_moves.c`). Ice Block (25% heal, 50% in hail) and Polymorph (sleep plus a free substitute on the target) are fixed and tested (`test/battle/move_effect/ice_block_polymorph.c`).
+- Mana Barrier is implemented for the Arcane Mage (PP-based recoil, tested in `test/battle/ability/mana_barrier.c`). Base Mage has Frost Armor.
 - Shaman, Druid, Monk: design drafts only.
 - Boss teams documented through Mauville. Level caps are planned through the Champion.
 
@@ -55,5 +55,5 @@ Older duplicate copies of "World of Pokemon Stats_Moves" (all Aug 2025): `1zlc7X
 
 - "signs changed?" and "Magni changed?" checklist items are unchecked for Rustboro, and "Magni changed?" for Dewford and Mauville.
 - Boss teams from Lavaridge onward are not documented anywhere I found.
-- Mana Barrier is on the base Mage species in code, but the decision is Arcane Mage only (base Mage gets Frost Armor). See [design/classes.md](design/classes.md). `data/classes.csv` (Aug 2025) still lists Mana Barrier on the base Mage and should be updated when the code is fixed.
+- Mana Barrier / Frost Armor decision is implemented in code and `data/classes.csv`.
 - Druid has four specs in the design draft; the class rule is three specs per base class.

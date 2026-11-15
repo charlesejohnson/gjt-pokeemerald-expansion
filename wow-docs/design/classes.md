@@ -31,9 +31,8 @@ Early Blood DK move ideas: Marrowrend (physical, Ground or Dark, +1 Def), Death 
 | Arcane Mage | Fire/Psychic | 80 / 20 / 45 / 164 / 110 / 136 | 555 | Mirror Armor | Mana Barrier (all moves get recoil, but lots of HP) |
 
 Decisions (confirmed by Charlie, 2026-11-15):
-- Mana Barrier belongs to the **Arcane Mage** only. The base Mage's ability is **Frost Armor**. (The code currently has Mana Barrier on the base Mage species, which is wrong.)
-- Mana Barrier mechanic: every damaging move causes **recoil to the user based on the move's PP**. Lower PP means a higher % of the user's HP is lost. Arcane Mage compensates with a large HP pool. Exact percentages are not defined yet.
-- Mana Barrier does not work in the game yet: it builds, but the effect is a copy of Life Orb-style recoil inside the damage calculation.
+- Mana Barrier belongs to the **Arcane Mage** only. The base Mage's ability is **Frost Armor**. (Implemented.)
+- Mana Barrier mechanic: every damaging move costs the user HP based on the move's PP. Cost = max HP / move PP, capped at 25% of max HP, minimum 1 HP (5 PP = 20%, 10 PP = 10%, 35 PP is about 3%). Status moves cost nothing, Magic Guard negates it, and spread moves charge once. The Arcane Mage compensates with a large HP pool.
 
 Note: an older sheet version described Hot Streak as "a crit raises SpA by 1"; the later sheet says crit ratio +1.
 
