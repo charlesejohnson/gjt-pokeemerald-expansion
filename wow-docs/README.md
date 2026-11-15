@@ -55,4 +55,5 @@ Older duplicate copies of "World of Pokemon Stats_Moves" (all Aug 2025): `1zlc7X
 
 - "signs changed?" and "Magni changed?" checklist items are unchecked for Rustboro, and "Magni changed?" for Dewford and Mauville.
 - Boss teams from Lavaridge onward are not documented anywhere I found.
-- Mage ability conflict: the sheet says Frost Armor, the Aug 2025 CSV says Mana Barrier. Resolve in code, then update [design/classes.md](design/classes.md).
+- Mana Barrier is on the base Mage species in code, but the decision is Arcane Mage only (base Mage gets Frost Armor). See [design/classes.md](design/classes.md). `data/classes.csv` (Aug 2025) still lists Mana Barrier on the base Mage and should be updated when the code is fixed.
+- Druid has four specs in the design draft; the class rule is three specs per base class.

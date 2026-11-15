@@ -25,12 +25,21 @@ Early Blood DK move ideas: Marrowrend (physical, Ground or Dark, +1 Def), Death 
 
 | Form | Types | Stats | BST | Ability | Hidden ability |
 |---|---|---|---|---|---|
-| Mage | Fire | 55 / 15 / 30 / 95 / 90 / 90 | 375 | Frost Armor (sheet); Mana Barrier (CSV) | |
+| Mage | Fire | 55 / 15 / 30 / 95 / 90 / 90 | 375 | Frost Armor | |
 | Frost Mage | Fire/Ice | 100 / 20 / 65 / 128 / 125 / 116 | 554 | Frost Armor | |
 | Fire Mage | Fire/Dragon | 95 / 20 / 45 / 158 / 110 / 126 | 554 | Flash Fire | Hot Streak (a crit raises crit ratio by 1) |
 | Arcane Mage | Fire/Psychic | 80 / 20 / 45 / 164 / 110 / 136 | 555 | Mirror Armor | Mana Barrier (all moves get recoil, but lots of HP) |
 
-Note: an older sheet version described Hot Streak as "a crit raises SpA by 1". Mana Barrier is not functional in the game yet (builds, but does not work).
+Decisions (confirmed by Charlie, 2026-11-15):
+- Mana Barrier belongs to the **Arcane Mage** only. The base Mage's ability is **Frost Armor**. (The code currently has Mana Barrier on the base Mage species, which is wrong.)
+- Mana Barrier mechanic: every damaging move causes **recoil to the user based on the move's PP**. Lower PP means a higher % of the user's HP is lost. Arcane Mage compensates with a large HP pool. Exact percentages are not defined yet.
+- Mana Barrier does not work in the game yet: it builds, but the effect is a copy of Life Orb-style recoil inside the damage calculation.
+
+Note: an older sheet version described Hot Streak as "a crit raises SpA by 1"; the later sheet says crit ratio +1.
+
+## Class structure
+
+Every class has a **base form** that evolves at some point into one of **three WoW specializations**. For example, Mage evolves into Frost, Fire or Arcane, and Death Knight into Blood, Frost or Unholy. The Druid draft below lists four specs (Restoration, Feral, Guardian, Balance), which needs reconciling with this rule.
 
 ## Shaman (design draft, not implemented)
 
