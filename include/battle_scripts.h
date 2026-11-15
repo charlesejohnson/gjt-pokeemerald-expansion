@@ -159,6 +159,7 @@ extern const u8 BattleScript_MoveEffectWrap[];
 extern const u8 BattleScript_MoveEffectConfusion[];
 extern const u8 BattleScript_MoveEffectRecoil[];
 extern const u8 BattleScript_ManaBarrierRecoil[];
+extern const u8 BattleScript_HotStreakActivates[];
 extern const u8 BattleScript_FaintAttackerForExplosion[];
 extern const u8 BattleScript_MaxHp50Recoil[];
 extern const u8 BattleScript_DoRecoil33[];

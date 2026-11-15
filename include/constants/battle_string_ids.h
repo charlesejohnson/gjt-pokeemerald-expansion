@@ -736,7 +736,9 @@
 
 #define STRINGID_PKMNPOLYMORPHED                      734
 
-#define BATTLESTRINGS_COUNT                           735
+#define STRINGID_PKMNHOTSTREAK                        735
+
+#define BATTLESTRINGS_COUNT                           736
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,

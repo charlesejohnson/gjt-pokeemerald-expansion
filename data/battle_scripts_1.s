@@ -7499,6 +7499,13 @@ BattleScript_DoRecoil::
 BattleScript_RecoilEnd::
 	return
 
+BattleScript_HotStreakActivates::
+	copybyte gBattlerAbility, gBattlerAttacker
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_PKMNHOTSTREAK
+	waitmessage B_WAIT_TIME_LONG
+	return
+
 BattleScript_ManaBarrierRecoil::
 	jumpifability BS_ATTACKER, ABILITY_MAGIC_GUARD, BattleScript_RecoilEnd
 	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_PASSIVE_DAMAGE | HITMARKER_IGNORE_DISGUISE

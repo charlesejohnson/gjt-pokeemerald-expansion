@@ -2412,8 +2412,15 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_FROST_ARMOR] =
     {
         .name = _("Frost Armor"),
-        .description = COMPOUND_STRING("Freezes on contact."),
+        .description = COMPOUND_STRING("May frostbite on contact."),
         .aiRating = 8,
+    },
+
+    [ABILITY_HOT_STREAK] =
+    {
+        .name = _("Hot Streak"),
+        .description = COMPOUND_STRING("Crits raise the crit\nstage."),
+        .aiRating = 7,
     },
 
     [ABILITY_MANA_BARRIER] =

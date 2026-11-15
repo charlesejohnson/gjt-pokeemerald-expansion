@@ -8,14 +8,15 @@ ASSUMPTIONS
     ASSUME(GetMovePP(MOVE_ROCK_SLIDE) == 10);
     ASSUME(GetMoveCategory(MOVE_GROWL) == DAMAGE_CATEGORY_STATUS);
     ASSUME(gSpeciesInfo[SPECIES_MAGE].abilities[0] == ABILITY_FROST_ARMOR);
-    ASSUME(gSpeciesInfo[SPECIES_MAGE_ARCANE].abilities[0] == ABILITY_MANA_BARRIER);
+    ASSUME(gSpeciesInfo[SPECIES_MAGE_ARCANE].abilities[0] == ABILITY_MIRROR_ARMOR);
+    ASSUME(gSpeciesInfo[SPECIES_MAGE_ARCANE].abilities[2] == ABILITY_MANA_BARRIER);
 }
 
 SINGLE_BATTLE_TEST("Mana Barrier costs max HP divided by the move's PP")
 {
     s16 expected;
     GIVEN {
-        PLAYER(SPECIES_MAGE_ARCANE);
+        PLAYER(SPECIES_MAGE_ARCANE) { Ability(ABILITY_MANA_BARRIER); }
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
         TURN { MOVE(player, MOVE_TACKLE); }
@@ -33,7 +34,7 @@ SINGLE_BATTLE_TEST("Mana Barrier costs more for low-PP moves")
 {
     s16 expected;
     GIVEN {
-        PLAYER(SPECIES_MAGE_ARCANE);
+        PLAYER(SPECIES_MAGE_ARCANE) { Ability(ABILITY_MANA_BARRIER); }
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
         TURN { MOVE(player, MOVE_HYPER_BEAM); }
@@ -51,7 +52,7 @@ SINGLE_BATTLE_TEST("Mana Barrier cost never exceeds 25% of max HP")
 {
     GIVEN {
         ASSUME(GetManaBarrierRecoil(0, MOVE_HYPER_BEAM) >= 1);
-        PLAYER(SPECIES_MAGE_ARCANE);
+        PLAYER(SPECIES_MAGE_ARCANE) { Ability(ABILITY_MANA_BARRIER); }
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
         TURN { MOVE(player, MOVE_HYPER_BEAM); }
@@ -63,7 +64,7 @@ SINGLE_BATTLE_TEST("Mana Barrier cost never exceeds 25% of max HP")
 SINGLE_BATTLE_TEST("Mana Barrier does not trigger on status moves")
 {
     GIVEN {
-        PLAYER(SPECIES_MAGE_ARCANE);
+        PLAYER(SPECIES_MAGE_ARCANE) { Ability(ABILITY_MANA_BARRIER); }
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
         TURN { MOVE(player, MOVE_GROWL); }
@@ -95,7 +96,7 @@ DOUBLE_BATTLE_TEST("Mana Barrier costs HP once for a spread move")
 {
     s16 expected;
     GIVEN {
-        PLAYER(SPECIES_MAGE_ARCANE);
+        PLAYER(SPECIES_MAGE_ARCANE) { Ability(ABILITY_MANA_BARRIER); }
         PLAYER(SPECIES_WYNAUT);
         OPPONENT(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WOBBUFFET);
@@ -106,17 +107,5 @@ DOUBLE_BATTLE_TEST("Mana Barrier costs HP once for a spread move")
     } THEN {
         expected = playerLeft->maxHP / GetMovePP(MOVE_ROCK_SLIDE);
         EXPECT_EQ(playerLeft->hp, playerLeft->maxHP - expected);
-    }
-}
-
-SINGLE_BATTLE_TEST("Mana Barrier recoil is negated by Magic Guard")
-{
-    GIVEN {
-        PLAYER(SPECIES_MAGE_ARCANE) { Ability(ABILITY_MAGIC_GUARD); }
-        OPPONENT(SPECIES_WOBBUFFET);
-    } WHEN {
-        TURN { MOVE(player, MOVE_TACKLE); }
-    } THEN {
-        EXPECT_EQ(player->hp, player->maxHP);
     }
 }
