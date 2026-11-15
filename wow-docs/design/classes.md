@@ -13,11 +13,13 @@ Stats are HP / Atk / Def / SpA / SpD / Spe (BST).
 | Form | Types | Stats | BST | Ability | Hidden ability |
 |---|---|---|---|---|---|
 | Unevolved DK | Ghost | 80 / 80 / 75 / 65 / 75 / 20 | 395 | Hyper Cutter | |
-| Blood DK | Ghost/Dark | 170 / 110 / 105 / 90 / 100 / 20 | 575 | Cursed Body | Dark Aura |
+| Blood DK | Ghost/Dark | 170 / 110 / 105 / 90 / 100 / 20 | 575 | Will of the Necropolis (shown in game as "Necropolis Will") | Dark Aura |
 | Unholy DK | Ghost/Poison | 130 / 90 / 90 / 135 / 110 / 20 | 575 | Poison Touch | Parental Bond |
 | Frost DK | Ghost/Ice | 130 / 150 / 110 / 75 / 90 / 20 | 575 | Snow Warning | Sniper |
 
-Ability idea (not assigned): *Will of the Necropolis*, reduced damage below 50% HP.
+Decisions (confirmed by Charlie, 2026-11-15):
+- *Will of the Necropolis* belongs to the **Blood DK** (replaces Cursed Body): takes 33% less damage while HP is below 50%. Implemented and tested. The in-game name is shortened to "Necropolis Will" because ability names are capped at 16 characters.
+- Snow Warning, Sniper, Poison Touch, Parental Bond and Dark Aura were audited on the merged build and tested (`test/battle/ability/will_of_the_necropolis.c`).
 
 Early Blood DK move ideas: Marrowrend (physical, Ground or Dark, +1 Def), Death Strike (Ghost or Dark, heals 100% of damage dealt), AMS (+2 SpDef, Safeguard), Blood Boil. See [../tracking/death-knight-moves.md](../tracking/death-knight-moves.md) for current status.
 

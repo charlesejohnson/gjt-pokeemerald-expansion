@@ -2577,4 +2577,11 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("Attacks cost HP. Low-PP\nmoves cost more."),
         .aiRating = 8,
     },
+
+    [ABILITY_WILL_OF_THE_NECROPOLIS] =
+    {
+        .name = _("Necropolis Will"),
+        .description = COMPOUND_STRING("Takes less damage when\nbelow half HP."),
+        .aiRating = 7,
+    },
 };

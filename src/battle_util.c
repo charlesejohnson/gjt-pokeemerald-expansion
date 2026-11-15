@@ -7557,6 +7557,13 @@ static inline uq4_12_t GetDefenderAbilitiesModifier(struct DamageContext *ctx)
             recordAbility = TRUE;
         }
         break;
+    case ABILITY_WILL_OF_THE_NECROPOLIS:
+        if (gBattleMons[ctx->battlerDef].hp * 2 < gBattleMons[ctx->battlerDef].maxHP)
+        {
+            modifier = UQ_4_12(0.67);
+            recordAbility = TRUE;
+        }
+        break;
     case ABILITY_FILTER:
     case ABILITY_SOLID_ROCK:
     case ABILITY_PRISM_ARMOR:
