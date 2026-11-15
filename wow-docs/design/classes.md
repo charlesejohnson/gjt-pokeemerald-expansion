@@ -27,14 +27,16 @@ Early Blood DK move ideas: Marrowrend (physical, Ground or Dark, +1 Def), Death 
 |---|---|---|---|---|---|
 | Mage | Fire | 55 / 15 / 30 / 95 / 90 / 90 | 375 | Frost Armor | |
 | Frost Mage | Fire/Ice | 100 / 20 / 65 / 128 / 125 / 116 | 554 | Frost Armor | |
-| Fire Mage | Fire/Dragon | 95 / 20 / 45 / 158 / 110 / 126 | 554 | Flash Fire | Hot Streak (a crit raises crit ratio by 1) |
+| Fire Mage | Fire/Dragon | 95 / 20 / 45 / 158 / 110 / 126 | 554 | Flash Fire | Hot Streak (each crit landed raises crit stage by 1) |
 | Arcane Mage | Fire/Psychic | 80 / 20 / 45 / 164 / 110 / 136 | 555 | Mirror Armor | Mana Barrier (all moves get recoil, but lots of HP) |
 
 Decisions (confirmed by Charlie, 2026-11-15):
 - Mana Barrier belongs to the **Arcane Mage** only. The base Mage's ability is **Frost Armor**. (Implemented.)
 - Mana Barrier mechanic: every damaging move costs the user HP based on the move's PP. Cost = max HP / move PP, capped at 25% of max HP, minimum 1 HP (5 PP = 20%, 10 PP = 10%, 35 PP is about 3%). Status moves cost nothing, Magic Guard negates it, and spread moves charge once. The Arcane Mage compensates with a large HP pool.
 
-Note: an older sheet version described Hot Streak as "a crit raises SpA by 1"; the later sheet says crit ratio +1.
+- Hot Streak (confirmed 2026-11-15): each critical hit the Fire Mage lands raises its crit stage by 1. Stacks up to +3 and resets on switch-out. Implemented and tested. (An older sheet version said +1 SpA; superseded.)
+- Frost Armor (confirmed 2026-11-15): 30% chance to inflict **frostbite** on an attacker that makes contact. Ice types are immune. Implemented and tested.
+- Arcane Mage keeps Mirror Armor as its normal ability, with Mana Barrier hidden.
 
 ## Class structure
 

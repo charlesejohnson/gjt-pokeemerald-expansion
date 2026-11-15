@@ -27,7 +27,7 @@ Docs here were consolidated on 2026-11-15 from sheets last edited in 2025. Anyth
 
 - Death Knight line: playable through the third gym in the last playtest build. Death Strike, runic power generation and Scourge Strike are working.
 - Mage line: Fire Mage moves implemented with unit tests (`test/battle/move_effect/fire_mage_moves.c`). Ice Block (25% heal, 50% in hail) and Polymorph (sleep plus a free substitute on the target) are fixed and tested (`test/battle/move_effect/ice_block_polymorph.c`).
-- Mana Barrier is implemented for the Arcane Mage (PP-based recoil, tested in `test/battle/ability/mana_barrier.c`). Base Mage has Frost Armor.
+- Mana Barrier is implemented for the Arcane Mage (PP-based recoil, tested in `test/battle/ability/mana_barrier.c`). Base Mage has Frost Armor. Hot Streak and Frost Armor are fixed and tested (`test/battle/ability/hot_streak.c`, `frost_armor.c`).
 - Shaman, Druid, Monk: design drafts only.
 - Boss teams documented through Mauville. Level caps are planned through the Champion.
 
