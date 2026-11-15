@@ -7499,6 +7499,16 @@ BattleScript_DoRecoil::
 BattleScript_RecoilEnd::
 	return
 
+BattleScript_ManaBarrierRecoil::
+	jumpifability BS_ATTACKER, ABILITY_MAGIC_GUARD, BattleScript_RecoilEnd
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_PASSIVE_DAMAGE | HITMARKER_IGNORE_DISGUISE
+	healthbarupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER
+	printstring STRINGID_PKMNHITWITHRECOIL
+	waitmessage B_WAIT_TIME_LONG
+	tryfaintmon BS_ATTACKER
+	return
+
 BattleScript_ItemSteal::
 	playanimation BS_TARGET, B_ANIM_ITEM_STEAL
 	printstring STRINGID_PKMNSTOLEITEM

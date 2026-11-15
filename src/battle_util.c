@@ -9441,19 +9441,6 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct DamageCalculationData *
         if (IsBattleMoveRecoil(move))
            modifier = uq4_12_multiply(modifier, UQ_4_12(1.2));
         break;
-    case ABILITY_MANA_BARRIER:
-            if (IsBattlerAlive(gBattlerAttacker)
-                && (IsBattlerTurnDamaged(gBattlerTarget) || gBattleStruct->moveDamage[gBattlerTarget]) // Needs the second check in case of Substitute
-                && !(TestIfSheerForceAffected(gBattlerAttacker, gCurrentMove))
-                && GetBattlerAbility(gBattlerAttacker) != ABILITY_MAGIC_GUARD
-                && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
-                && !IsFutureSightAttackerInParty(gBattlerAttacker, gBattlerTarget))
-            {
-                moveEffect = ITEM_HP_CHANGE;
-                BattleScriptPushCursor();
-                gBattlescriptCurrInstr = BattleScript_ItemHurtRet;
-            }
-            break;
     case ABILITY_IRON_FIST:
         if (IsPunchingMove(move))
            modifier = uq4_12_multiply(modifier, UQ_4_12(1.2));
@@ -10580,6 +10567,16 @@ static u32 GetWeather(void)
         return B_WEATHER_NONE;
     else
         return gBattleWeather;
+}
+
+// Mana Barrier (Arcane Mage): every damaging move costs the user max HP / move PP.
+// Low-PP moves cost more: 5 PP = 20% of max HP, 10 PP = 10%, 35 PP = ~3%. Capped at 25%, minimum 1 HP.
+u32 GetManaBarrierRecoil(u32 battler, u32 move)
+{
+    u32 maxHP = GetNonDynamaxMaxHP(battler);
+    u32 pp = max(1, GetMovePP(move));
+    u32 cost = min(maxHP / pp, maxHP / 4);
+    return max(1, cost);
 }
 
 bool32 IsFutureSightAttackerInParty(u32 battlerAtk, u32 battlerDef)

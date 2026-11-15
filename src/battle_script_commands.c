@@ -6540,6 +6540,19 @@ static void Cmd_moveend(void)
                 gBattlescriptCurrInstr = BattleScript_MaxHp50Recoil;
                 effect = TRUE;
             }
+            else if (GetBattlerAbility(gBattlerAttacker) == ABILITY_MANA_BARRIER
+                  && !IsBattleMoveStatus(gCurrentMove)
+                  && !(gHitMarker & HITMARKER_UNABLE_TO_USE_MOVE)
+                  && IsBattlerAlive(gBattlerAttacker)
+                  && (IsBattlerTurnDamaged(gBattlerTarget) || gBattleStruct->moveDamage[gBattlerTarget]) // Second check covers Substitute
+                  && !(gBattleStruct->moveResultFlags[gBattlerTarget] & MOVE_RESULT_NO_EFFECT)
+                  && !gProtectStructs[gBattlerAttacker].confusionSelfDmg)
+            {
+                gBattleStruct->moveDamage[gBattlerAttacker] = GetManaBarrierRecoil(gBattlerAttacker, gCurrentMove);
+                BattleScriptPushCursor();
+                gBattlescriptCurrInstr = BattleScript_ManaBarrierRecoil;
+                effect = TRUE;
+            }
             gBattleScripting.moveendState++;
             break;
         }

@@ -2419,7 +2419,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_MANA_BARRIER] =
     {
         .name = _("Mana Barrier"),
-        .description = COMPOUND_STRING("Uses Mana for Health."),
+        .description = COMPOUND_STRING("Attacks cost HP. Low-PP\nmoves cost more."),
         .aiRating = 8,
     },
 };
