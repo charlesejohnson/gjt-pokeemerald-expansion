@@ -49,8 +49,8 @@ DOUBLE_BATTLE_TEST("Blast Wave hits both targets in double battle")
         HP_BAR(opponentLeft);
         HP_BAR(opponentRight);
         ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_STATS_CHANGE, opponentLeft);
-        ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_STATS_CHANGE, opponentRight);
         MESSAGE("The opposing Wobbuffet's Speed fell!");
+        ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_STATS_CHANGE, opponentRight);
         MESSAGE("The opposing Wynaut's Speed fell!");
     } THEN {
         EXPECT_EQ(opponentLeft->statStages[STAT_SPEED], DEFAULT_STAT_STAGE - 1);
@@ -65,7 +65,6 @@ SINGLE_BATTLE_TEST("Pyroblast is a two-turn move")
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
         TURN { MOVE(player, MOVE_PYROBLAST); }
-        TURN { SKIP_TURN(player); }
     } SCENE {
         MESSAGE("Wobbuffet began charging power!");
         NONE_OF {
