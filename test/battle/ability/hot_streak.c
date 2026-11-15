@@ -18,7 +18,7 @@ SINGLE_BATTLE_TEST("Hot Streak raises the user's crit stage after landing a crit
         ABILITY_POPUP(player, ABILITY_HOT_STREAK);
         MESSAGE("Fire Mage is on a hot streak!");
     } THEN {
-        EXPECT_EQ(gBattleStruct->bonusCritStages[0], 1);
+        EXPECT_EQ((u32)gBattleMons[0].volatiles.bonusCritStages, 1);
     }
 }
 
@@ -34,7 +34,7 @@ SINGLE_BATTLE_TEST("Hot Streak stacks with each critical hit up to the cap")
         TURN { MOVE(player, MOVE_TACKLE, criticalHit: TRUE); }
         TURN { MOVE(player, MOVE_TACKLE, criticalHit: TRUE); }
     } THEN {
-        EXPECT_EQ(gBattleStruct->bonusCritStages[0], HOT_STREAK_MAX_STAGES);
+        EXPECT_EQ((u32)gBattleMons[0].volatiles.bonusCritStages, HOT_STREAK_MAX_STAGES);
     }
 }
 
@@ -46,7 +46,7 @@ SINGLE_BATTLE_TEST("Hot Streak does not trigger without a critical hit")
     } WHEN {
         TURN { MOVE(player, MOVE_TACKLE, criticalHit: FALSE); }
     } THEN {
-        EXPECT_EQ(gBattleStruct->bonusCritStages[0], 0);
+        EXPECT_EQ((u32)gBattleMons[0].volatiles.bonusCritStages, 0);
     }
 }
 
@@ -58,7 +58,7 @@ SINGLE_BATTLE_TEST("Hot Streak does not trigger when the opponent is the one cri
     } WHEN {
         TURN { MOVE(opponent, MOVE_TACKLE, criticalHit: TRUE); }
     } THEN {
-        EXPECT_EQ(gBattleStruct->bonusCritStages[0], 0);
+        EXPECT_EQ((u32)gBattleMons[0].volatiles.bonusCritStages, 0);
     }
 }
 
@@ -73,6 +73,6 @@ SINGLE_BATTLE_TEST("Hot Streak bonus resets when the user switches out")
         TURN { SWITCH(player, 1); }
         TURN { SWITCH(player, 0); }
     } THEN {
-        EXPECT_EQ(gBattleStruct->bonusCritStages[0], 0);
+        EXPECT_EQ((u32)gBattleMons[0].volatiles.bonusCritStages, 0);
     }
 }

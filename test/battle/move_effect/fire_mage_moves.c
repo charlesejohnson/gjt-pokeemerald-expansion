@@ -6,7 +6,7 @@ ASSUMPTIONS
     ASSUME(gMovesInfo[MOVE_BLAST_WAVE].power == 55);
     ASSUME(gMovesInfo[MOVE_BLAST_WAVE].type == TYPE_FIRE);
     ASSUME(gMovesInfo[MOVE_BLAST_WAVE].accuracy == 95);
-    ASSUME(gMovesInfo[MOVE_BLAST_WAVE].target == MOVE_TARGET_BOTH);
+    ASSUME(gMovesInfo[MOVE_BLAST_WAVE].target == TARGET_BOTH);
     ASSUME(gMovesInfo[MOVE_PYROBLAST].effect == EFFECT_SOLAR_BEAM);
     ASSUME(gMovesInfo[MOVE_PYROBLAST].power == 120);
     ASSUME(gMovesInfo[MOVE_PYROBLAST].type == TYPE_FIRE);
@@ -72,7 +72,7 @@ SINGLE_BATTLE_TEST("Pyroblast is a two-turn move")
             HP_BAR(opponent);
         }
     } THEN {
-        EXPECT_EQ(player->status2, STATUS2_MULTIPLETURNS);
+        EXPECT_EQ((u32)player->volatiles.multipleTurns, TRUE);
     }
 }
 
@@ -90,7 +90,7 @@ SINGLE_BATTLE_TEST("Pyroblast deals damage on second turn")
         ANIMATION(ANIM_TYPE_MOVE, MOVE_PYROBLAST, player);
         HP_BAR(opponent);
     } THEN {
-        EXPECT_EQ(player->status2, 0);
+        EXPECT_EQ((u32)player->volatiles.multipleTurns, FALSE);
     }
 }
 
@@ -106,7 +106,7 @@ SINGLE_BATTLE_TEST("Phoenix Flames has increased critical hit ratio")
         HP_BAR(opponent);
     } THEN {
         // Critical hit stage should be increased by 1
-        EXPECT_EQ(player->status2 & STATUS2_FOCUS_ENERGY, STATUS2_FOCUS_ENERGY);
+        EXPECT_EQ((u32)player->volatiles.focusEnergy, TRUE);
     }
 }
 

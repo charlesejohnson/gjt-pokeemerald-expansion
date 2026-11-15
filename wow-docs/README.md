@@ -57,3 +57,14 @@ Older duplicate copies of "World of Pokemon Stats_Moves" (all Aug 2025): `1zlc7X
 - Boss teams from Lavaridge onward are not documented anywhere I found.
 - Mana Barrier / Frost Armor decision is implemented in code and `data/classes.csv`.
 - Druid has four specs in the design draft; the class rule is three specs per base class.
+
+## Upstream sync (rh-hideout/pokeemerald-expansion v1.17.3)
+
+The fork was merged with upstream master on branch `upstream-sync`. Notes for future work:
+
+- Custom move IDs (848-873) now sit after `MOVES_COUNT_GEN9`; `MOVES_COUNT` was changed to include them so Z-/Max-move IDs don't collide.
+- `MULTI_CLASS_SELECT` is now part of the `MULTI_*` enum in `include/constants/script_menu.h`.
+- Custom species have no data in `all_learnables.json` upstream; `DEATHKNIGHT` and `MAGE` entries were added by hand (teachables are generated from it).
+- Battle effects now live in C: Runic Power / Crit Up 1 are set-effect handlers in `src/battle_set_effect.c`; Mana Barrier recoil is in `MoveEndMoveBlockRecoil`; spender moves (Death Strike, Frost Strike, Runic Consume) fail without Runic Power and consume it in the move-end stockpile block (`src/battle_move_resolution.c`).
+- Ice Block counts as a protect move (`include/move.h`); Polymorph uses `argument.nonVolatileStatus = MOVE_EFFECT_SLEEP`.
+- Known failing upstream tests, caused by fork config (Gen 3 exp / Stockpile settings) or custom content (move-name widths, missing animations): exp.c, stockpile.c, sheer_force, embargo, text.c, all_anims, AI splash.
