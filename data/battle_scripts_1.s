@@ -10133,7 +10133,7 @@ BattleScript_EffectIceBlock::
 	waitanimation
 	printfromtable gProtectLikeUsedStringIds
 	waitmessage B_WAIT_TIME_LONG
-	recoverbasedonhail BattleScript_AlreadyAtFullHp
+	iceblockheal BattleScript_MoveEnd
 	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
 	healthbarupdate BS_ATTACKER
 	datahpupdate BS_ATTACKER
@@ -10164,16 +10164,8 @@ BattleScript_EffectSubstituteAndSleep::
 	jumpifsafeguard BattleScript_SafeguardProtected
 	attackanimation
 	waitanimation
-	@ Apply sleep effect
 	seteffectprimary MOVE_EFFECT_SLEEP
-	@ Apply substitute effect to target
-	setsubstitute
-	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_SUBSTITUTE_FAILED, BattleScript_SubstituteAndSleepString
-	orword gHitMarker, HITMARKER_PASSIVE_DAMAGE
-	healthbarupdate BS_TARGET
-	datahpupdate BS_TARGET
-BattleScript_SubstituteAndSleepString::
-	pause B_WAIT_TIME_SHORT
-	printfromtable gSubstituteUsedStringIds
+	polymorphsubstitute
+	printstring STRINGID_PKMNPOLYMORPHED
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd

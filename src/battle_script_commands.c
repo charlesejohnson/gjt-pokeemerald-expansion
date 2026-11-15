@@ -16798,6 +16798,39 @@ void SaveBattlerAttacker(u32 battler)
         DebugPrintfLevel(MGBA_LOG_WARN, "Attempting to exceed savedBattlerAttacker array size!");
 }
 
+// Ice Block: heals 25% max HP, or 50% while hail/snow is active. Jumps to failInstr at full HP.
+void BS_IceBlockHeal(void)
+{
+    NATIVE_ARGS(const u8 *failInstr);
+    u32 battler = gBattlerAttacker;
+    gBattlerTarget = battler;
+    if (gBattleMons[battler].hp == gBattleMons[battler].maxHP)
+    {
+        gBattlescriptCurrInstr = cmd->failInstr;
+        return;
+    }
+
+    u32 maxHP = GetNonDynamaxMaxHP(battler);
+    bool32 hail = HasWeatherEffect() && (gBattleWeather & (B_WEATHER_HAIL | B_WEATHER_SNOW))
+               && GetBattlerHoldEffect(battler, TRUE) != HOLD_EFFECT_UTILITY_UMBRELLA;
+    s32 heal = hail ? maxHP / 2 : maxHP / 4;
+    gBattleStruct->moveDamage[battler] = -1 * max(1, heal);
+    gBattlescriptCurrInstr = cmd->nextInstr;
+}
+
+// Polymorph: gives the *target* a free substitute worth 25% of its max HP.
+void BS_PolymorphSubstitute(void)
+{
+    NATIVE_ARGS();
+    u32 battler = gBattlerTarget;
+    u32 hp = max(1, GetNonDynamaxMaxHP(battler) / 4);
+
+    gBattleMons[battler].status2 |= STATUS2_SUBSTITUTE;
+    gBattleMons[battler].status2 &= ~STATUS2_WRAPPED;
+    gDisableStructs[battler].substituteHP = hp;
+    gBattlescriptCurrInstr = cmd->nextInstr;
+}
+
 void BS_SaveTarget(void)
 {
     NATIVE_ARGS();

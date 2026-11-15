@@ -284,6 +284,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_PKMNCANTRUNICPOWER]                   = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} can't generate more Runic Power!"),
     [STRINGID_PKMNUSEDRUNICPOWER]                   = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} used {B_BUFF1} Runic Power!"),
     [STRINGID_PKMNFAILEDTORUNICPOWER]               = COMPOUND_STRING("But it failed!"),
+    [STRINGID_PKMNPOLYMORPHED]                      = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX} was turned into a harmless\ncreature!"),
 
     [STRINGID_PKMNCANTSLEEPINUPROAR2]               = COMPOUND_STRING("But {B_DEF_NAME_WITH_PREFIX2} can't sleep in an uproar!"),
     [STRINGID_UPROARKEPTPKMNAWAKE]                  = COMPOUND_STRING("But the uproar kept {B_DEF_NAME_WITH_PREFIX2} awake!"),

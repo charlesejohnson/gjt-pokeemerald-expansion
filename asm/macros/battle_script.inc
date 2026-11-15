@@ -1361,6 +1361,16 @@
 	.4byte \func
 	.endm
 
+
+	.macro iceblockheal failInstr:req
+	callnative BS_IceBlockHeal
+	.4byte \failInstr
+	.endm
+
+	.macro polymorphsubstitute
+	callnative BS_PolymorphSubstitute
+	.endm
+
 	.macro savetarget
 	callnative BS_SaveTarget
 	.endm
