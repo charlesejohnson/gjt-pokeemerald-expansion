@@ -683,6 +683,14 @@ BattleScript_MoveEffectLeechSeed::
 	restoretarget
 	return
 
+BattleScript_MoveEffectBloodBoil::
+	savetarget
+	copybyte gBattlerTarget, gEffectBattler
+	printstring STRINGID_PKMNBLOODBOILING
+	waitmessage B_WAIT_TIME_LONG
+	restoretarget
+	return
+
 BattleScript_MoveEffectScreens::
 	saveattacker
 	copybyte gBattlerAttacker, gEffectBattler
@@ -6479,6 +6487,17 @@ BattleScript_BelchFails::
 	pause B_WAIT_TIME_SHORT
 	printstring STRINGID_BELCHCANTSELECT
 	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectAntiMagicShell::
+	attackcanceler
+	setsafeguard
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_SIDE_STATUS_FAILED, BattleScript_PrintReflectLightScreenSafeguardString
+	attackanimation
+	waitanimation
+	printfromtable gReflectLightScreenSafeguardStringIds
+	waitmessage B_WAIT_TIME_LONG
+	trymovestatchanges
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectIceBlock::

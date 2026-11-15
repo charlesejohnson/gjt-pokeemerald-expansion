@@ -290,6 +290,7 @@ enum  BattleMoveEffects
     EFFECT_RUNIC_CONSUME,  // Generic runic power consumption effect
     EFFECT_ICE_BLOCK,
     EFFECT_SUBSTITUTE_AND_SLEEP,
+    EFFECT_ANTI_MAGIC_SHELL,
     NUM_BATTLE_MOVE_EFFECTS,
 };
 

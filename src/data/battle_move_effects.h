@@ -1908,6 +1908,13 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
         .usesProtectCounter = TRUE,
     },
 
+    [EFFECT_ANTI_MAGIC_SHELL] =
+    {
+        .battleScript = BattleScript_EffectAntiMagicShell,
+        .battleTvScore = 5,
+        .encourageEncore = TRUE,
+    },
+
     [EFFECT_SUBSTITUTE_AND_SLEEP] =
     {
         .battleScript = BattleScript_EffectSubstituteAndSleep,

@@ -10150,7 +10150,6 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             .moveEffect = MOVE_EFFECT_STAT_MINUS,
             .defense = 1,
             .spDef = 1,
-            .self = TRUE,
         }),
         .contestEffect = CONTEST_EFFECT_USER_MORE_EASILY_STARTLED,
         .contestCategory = C_UPDATED_MOVE_CATEGORIES >= GEN_6 ? CONTEST_CATEGORY_TOUGH : CONTEST_CATEGORY_SMART,
@@ -23913,9 +23912,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("AMS"),
         .description = COMPOUND_STRING(
-            "A mystical force prevents\n"
-            "all status problems."),
-        .effect = EFFECT_SAFEGUARD,
+            "Raises Sp. Def and shields\n"
+            "the party from status."),
+        .effect = EFFECT_ANTI_MAGIC_SHELL,
         .power = 0,
         .type = TYPE_GHOST,
         .accuracy = 0,
@@ -23927,6 +23926,11 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .snatchAffected = TRUE,
         .ignoresProtect = TRUE,
         .mirrorMoveBanned = TRUE,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = STAT_CHANGE_EFFECT_PLUS,
+            .spDef = 1,
+            .self = TRUE,
+        }),
         .contestEffect = CONTEST_EFFECT_AVOID_STARTLE,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
         .contestComboStarterId = 0,
@@ -23953,7 +23957,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .magicCoatAffected = TRUE,
         .metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
-            .moveEffect = MOVE_EFFECT_LEECH_SEED,
+            .moveEffect = MOVE_EFFECT_BLOOD_BOIL,
             .chance = 100,
         }),
         .battleAnimScript = gBattleAnimMove_Absorb,
@@ -24139,23 +24143,24 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_DARK_TRANSFORMATION] =
     {
-        .name = COMPOUND_STRING("Dark Trnsformation"),
+        .name = COMPOUND_STRING("Dark Transform"),
         .description = COMPOUND_STRING(
             "Enhances the ally to a\n"
-            "monstrous form of themelves."),
+            "monstrous form of themselves."),
         .effect = EFFECT_STAT_CHANGE,
         .type = TYPE_DARK,
         .accuracy = 0,
         .pp = 40,
-        .target = TARGET_USER_AND_ALLY,
+        .target = TARGET_ALLY,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
-        .zMove = { .effect = Z_EFFECT_ATK_UP_1 },
+        .zMove = { .effect = Z_EFFECT_ATK_UP_2 },
         .snatchAffected = TRUE,
         .ignoresProtect = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = STAT_CHANGE_EFFECT_PLUS,
-            .attack = 1,
+            .attack = 2,
+            .defense = 1,
         }),
         .mirrorMoveBanned = TRUE,
         .soundMove = B_UPDATED_MOVE_FLAGS >= GEN_8,

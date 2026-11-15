@@ -1079,6 +1079,16 @@ static void HandleSetEffectCritUp1(struct BattleCalcValues *cv, struct SetEffect
     gBattlescriptCurrInstr = BattleScript_EffectCritUp1;
 }
 
+static void HandleSetEffectBloodBoil(struct BattleCalcValues *cv, struct SetEffect *se)
+{
+    if (!IS_BATTLER_OF_TYPE(se->effectBattler, TYPE_GRASS) && !gBattleMons[se->effectBattler].volatiles.leechSeed)
+    {
+        gBattleMons[se->effectBattler].volatiles.leechSeed = LEECHSEEDED_BY(cv->battlerAtk);
+        BattleScriptPush(se->script);
+        gBattlescriptCurrInstr = BattleScript_MoveEffectBloodBoil;
+    }
+}
+
 static void HandleSetEffectPreventEscapeSide(struct BattleCalcValues *cv, struct SetEffect *se)
 {
     BattleScriptPush(se->script);
@@ -1377,6 +1387,7 @@ static void (*const sSetEffectHandlers[])(struct BattleCalcValues *cv, struct Se
     [MOVE_EFFECT_REMOVE_ARG_TYPE] = HandleSetEffectRemoveArgType,
     [MOVE_EFFECT_RUNICPOWER] = HandleSetEffectRunicPower,
     [MOVE_EFFECT_CRIT_UP_1] = HandleSetEffectCritUp1,
+    [MOVE_EFFECT_BLOOD_BOIL] = HandleSetEffectBloodBoil,
     [MOVE_EFFECT_RECHARGE] = HandleSetEffectRecharge,
     [MOVE_EFFECT_RAGE] = HandleSetEffectRage,
     [MOVE_EFFECT_PREVENT_ESCAPE] = HandleSetEffectPreventEscape,

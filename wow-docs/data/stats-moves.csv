@@ -3,8 +3,8 @@ Death Knight Custom Moves,-- ,-- ,-- ,-- ,--,,,,
 Scourge Strike,Ghost,40,targeted enemy,"50% chance to poison, +1 runic power",100,25,x,NEED TO LOOK AT SAPPY SEED FOR BONUS EVENTS TRIGGERING ON KILL,5
 Death Strike,Dark,35,targeted enemy,"heal for 50% of damage dealt, consumes runic power",100,15,x,NEED TO LOOK AT SAPPY SEED FOR BONUS EVENTS TRIGGERING ON KILL,10
 Howling Blast,Ice,50,both enemies,"50% chance to freeze/frostbite",95,15,x,,12
-Icebound Fortitude,Ice,,,"2 stage def up, -1 speed",,15,s,need to write new script to avoid 1 point of self-dmg,16
-AMS,Ghost,--,self,safeguard,,15,s,", applies safeguard but does not give spd. Needs script rewrite.",18
+Icebound Fortitude,Ice,,,"2 stage def up, -1 speed",,15,x,,16
+AMS,Ghost,--,self,"safeguard, +1 sp. def",,15,x,,18
 ,,,,,,,,
 Death Knight Standard Moves,--,--,--,--,--,,,,
 Scratch,Normal,40,targeted enemy,,100,35,x,,1
@@ -28,8 +28,9 @@ Shadow Claw,Ghost,70,targeted enemy,"high crit chance",100,15,x,,45
 ,,,,,,,,
 Blood DK Custom Moves,--,--,--,--,--,,,,
 Marrowrend,Ground,60,targeted enemy,"1 stage def up",100,10,x,,24
-Dancing Rune Weapon,Dark,--,self,"1 stage atk up, 1 stage evasion up",,15,s,need to write new script to avoid 1 point of self dmg,32
+Dancing Rune Weapon,Dark,--,self,"1 stage atk up, 1 stage evasion up",,2,x,"2 PP is intentional (WoW-style cooldown)",32
 Consumption,Dark,75,both enemies,"heal for 50% of damage dealt",100,10,x,,36
+Blood Boil,Dark,35,both enemies,"100% leech seed (shown as 'blood is boiling')",100,15,x,"drain message still says leech seed",
 ,,,,,,,,
 Blood DK Standard Moves,--,--,--,--,--,,,,
 Scratch,Normal,40,targeted enemy,,100,35,x,,1
@@ -40,7 +41,7 @@ Shadow Claw,Ghost,70,targeted enemy,"high crit chance",100,15,x,,45
 ,,,,,,,,
 Unholy DK Custom Moves,--,--,--,--,--,,,,
 Summon Gargoyle,Poison,35,targeted enemy,"3 hits",100,15,x,,24
-Dark Transformation,Dark,--,all allies,,,15,s,should only be ally and bigger buff. Need to rewrite script,32
+Dark Transformation,Dark,--,one ally,"+2 atk, +1 def",,15,x,fails in singles,32
 Army of the Dead,Ghost,25,targeted enemy,"population bomb effect",90,10,x,,36
 ,,,,,,,,
 Unholy DK Standard Moves,--,--,--,--,--,,,,

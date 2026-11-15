@@ -104,6 +104,7 @@ enum __attribute__((packed)) MoveEffect
     MOVE_EFFECT_RUNICPOWER,
     MOVE_EFFECT_CRIT_UP_1,
     MOVE_EFFECT_HEAL,
+    MOVE_EFFECT_BLOOD_BOIL,
 
     // For status stat change moves
     STAT_CHANGE_EFFECT_PLUS,
