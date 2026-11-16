@@ -256,9 +256,12 @@ DewfordTown_Gym_EventScript_GymGuide::
 	end
 
 DewfordTown_Gym_EventScript_GymGuidePostVictory::
+	goto_if_set FLAG_RECEIVED_DEWFORD_GUIDE_LOOT, DewfordTown_Gym_EventScript_GymGuideLootGiven
 	giveitem ITEM_FIRE_STONE
 	giveitem ITEM_WATER_STONE
 	giveitem ITEM_LEAF_STONE
+	setflag FLAG_RECEIVED_DEWFORD_GUIDE_LOOT
+DewfordTown_Gym_EventScript_GymGuideLootGiven::
 	msgbox DewfordTown_Gym_Text_GymGuidePostVictory, MSGBOX_DEFAULT
 	release
 	end

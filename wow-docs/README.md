@@ -77,3 +77,6 @@ Remaining failures are expected for this fork and not regressions:
 - `all_anims.c`: custom WoW moves have no unique animations yet (placeholder anims).
 - `text.c` "?? was turned into a harmless creature": fixed by shortening the Polymorph message; Army of the Dead renamed "Army of Dead" for Contest-screen width.
 - AI Splash test: custom effects (Anti-Magic Shell, Ice Block, Polymorph) are listed as "AI HANDLING" TODOs.
+
+## Testing tools
+- **Gym warp NPC** (`data/scripts/gjt_test_warp.inc`): a man in the player's Littleroot bedroom (both Brendan's and May's 2F) at (7,4). Talk to him and pick Rustboro, Dewford or Mauville Gym to warp to its entrance. It does not set badges, flags or levels. **Remove the two `GJT_TestWarp_EventScript_Guide` objects from `LittlerootTown_BrendansHouse_2F` and `LittlerootTown_MaysHouse_2F` map.json before release.** Add a menu entry in the .inc and a warp line for each new gym.

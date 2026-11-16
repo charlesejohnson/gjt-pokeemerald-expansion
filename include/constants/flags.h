@@ -51,9 +51,9 @@
 
 #else
 
-#define FLAG_UNUSED_0x020    0x20 // Unused Flag
-#define FLAG_UNUSED_0x021    0x21 // Unused Flag
-#define FLAG_UNUSED_0x022    0x22 // Unused Flag
+#define FLAG_RECEIVED_RUSTBORO_GUIDE_LOOT 0x20 // GJT: one-time gym guide loot
+#define FLAG_RECEIVED_DEWFORD_GUIDE_LOOT 0x21 // GJT: one-time gym guide loot
+#define FLAG_RECEIVED_MAUVILLE_GUIDE_LOOT 0x22 // GJT: one-time gym guide loot
 #define FLAG_UNUSED_0x023    0x23 // Unused Flag
 #define FLAG_UNUSED_0x024    0x24 // Unused Flag
 #define FLAG_UNUSED_0x025    0x25 // Unused Flag

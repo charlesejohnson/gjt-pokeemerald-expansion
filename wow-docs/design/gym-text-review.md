@@ -92,5 +92,12 @@ These are proposals, not final text. The Scottish Magni voice, short in-characte
 ## Still open
 
 - **Vivian** is not in the gym (object removed 2025-05-05); her trainer and script remain as a spare slot.
-- **Repeatable loot:** Rustboro's and Mauville's guides give the vitamins every time you talk to them after the gym is beaten (no flag), and Dewford's guide gives the stones every time too. Decide whether that is intended (stat farming) or should be once-only.
 - Rematch lines are still vanilla in all three gyms.
+
+## One-time loot (2026-11-16)
+
+Each gym guide now gives its loot once: Rustboro and Mauville vitamins, Dewford stones. Flags (renamed from unused slots): `FLAG_RECEIVED_RUSTBORO_GUIDE_LOOT` (0x20), `FLAG_RECEIVED_DEWFORD_GUIDE_LOOT` (0x21), `FLAG_RECEIVED_MAUVILLE_GUIDE_LOOT` (0x22). Known limit: if the bag is full the items are lost and the flag is still set.
+
+## Ben (clarified)
+
+"Spared" means Ben keeps his own mind, not that the takeover never touched him. His intro line stays as written.

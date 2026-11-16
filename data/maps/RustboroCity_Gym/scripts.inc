@@ -67,12 +67,15 @@ RustboroCity_Gym_EventScript_GymGuide::
 	end
 
 RustboroCity_Gym_EventScript_GymGuidePostVictory::
+	goto_if_set FLAG_RECEIVED_RUSTBORO_GUIDE_LOOT, RustboroCity_Gym_EventScript_GymGuideLootGiven
 	giveitem ITEM_PROTEIN 5
 	giveitem ITEM_CALCIUM 5
 	giveitem ITEM_HP_UP 5
 	giveitem ITEM_ZINC 5
 	giveitem ITEM_IRON 5
 	giveitem ITEM_CARBOS 5
+	setflag FLAG_RECEIVED_RUSTBORO_GUIDE_LOOT
+RustboroCity_Gym_EventScript_GymGuideLootGiven::
 	msgbox RustboroCity_Gym_Text_GymGuidePostVictory, MSGBOX_DEFAULT
 	release
 	end
