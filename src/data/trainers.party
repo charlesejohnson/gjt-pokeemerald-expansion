@@ -5673,54 +5673,64 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Sludge Bomb
 
 === TRAINER_JUAN_1 ===
-Name: JUAN
+Name: JAINA
 Class: Leader
 Pic: Leader Juan
-Gender: Male
+Gender: Female
 Music: Male
-Items: Hyper Potion / Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+Items: Full Restore / Full Restore / Hyper Potion / Hyper Potion
+AI: Basic Trainer / Ace Pokemon / Omniscient / Smart Mon Choices
 
-Luvdisc
-Level: 41
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Water Pulse
-- Attract
-- Sweet Kiss
-- Flail
+Slowbro
+Level: 44
+Ability: Regenerator
+Nature: Bold
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Scald
+- Psychic
+- Slack Off
+- Thunder Wave
 
-Whiscash
-Level: 41
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Rain Dance
-- Water Pulse
-- Amnesia
-- Earthquake
-
-Sealeo
-Level: 43
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Encore
-- Body Slam
-- Aurora Beam
-- Water Pulse
-
-Crawdaunt
-Level: 43
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Water Pulse
-- Crabhammer
-- Taunt
-- Leer
-
-Kingdra @ Chesto Berry
-Level: 46
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Water Pulse
-- Double Team
+Starmie
+Level: 45
+Ability: Analytic
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Surf
+- Psychic
 - Ice Beam
-- Rest
+- Rapid Spin
+
+Vaporeon @ Leftovers
+Level: 45
+Ability: Water Absorb
+Nature: Bold
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Rain Dance
+- Scald
+- Ice Beam
+- Wish
+
+Ninetales-Alola @ Light Clay
+Level: 45
+Ability: Snow Warning
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Aurora Veil
+- Blizzard
+- Moonblast
+- Freeze-Dry
+
+Lapras @ Sitrus Berry
+Level: 46
+Ability: Water Absorb
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Hydro Pump
+- Freeze-Dry
+- Thunderbolt
+- Ice Shard
 
 === TRAINER_JERRY_1 ===
 Name: JERRY

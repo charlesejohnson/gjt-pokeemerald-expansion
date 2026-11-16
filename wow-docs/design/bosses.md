@@ -244,3 +244,7 @@ Team: Lanturn 42 (Volt Absorb; Scald, Thunderbolt, Ice Beam, Rest), Seadra 43 (S
 ### Daelin Proudmoore (`TRAINER_BRIANNA`, name "DAELIN", Sailor placeholder) — drafted (secret boss, top of B1F)
 Admiral; optional, a step above the lieutenants (IVs 28, 2 Full Restore). Drizzle Pelipper sets rain for Swift Swim Kingdra and Hurricane. "Clawf" is not in the build; Clawitzer used instead.
 Team: Pelipper 44 (Damp Rock, 8-turn rain; Drizzle; Hurricane, Surf, Roost, U-turn), Tentacruel 44 (Black Sludge; Clear Body; Scald, Sludge Bomb, Toxic, Rapid Spin), Kingler 45 (Sitrus; Sheer Force; Crabhammer, X-Scissor, Knock Off, Swords Dance), Clawitzer 45 (Mega Launcher; Water Pulse, Dark Pulse, Aura Sphere, Dragon Pulse), Kingdra 46 ace (Mystic Water; Swift Swim; Waterfall, Outrage, Dragon Dance, Hydro Pump).
+
+### Jaina Proudmoore (`TRAINER_JUAN_1`, name "JAINA", Leader Juan sprite) — drafted
+Water/frost mage, cap 46, IVs 31, conflicted over her father but indifferent to the player. Dual weather team: Alolan Ninetales (Snow Warning, Aurora Veil under hail, Light Clay) vs Vaporeon (Rain Dance). Items: 2 Full Restore, 2 Hyper Potion.
+Team: Slowbro 44 (Regenerator; Scald, Psychic, Slack Off, Thunder Wave), Starmie 45 (Analytic; Surf, Psychic, Ice Beam, Rapid Spin), Vaporeon 45 (Leftovers; Water Absorb; Rain Dance, Scald, Ice Beam, Wish), Ninetales-Alola 45 (Light Clay; Snow Warning; Aurora Veil, Blizzard, Moonblast, Freeze-Dry), Lapras 46 ace (Sitrus; Water Absorb; Hydro Pump, Freeze-Dry, Thunderbolt, Ice Shard).
