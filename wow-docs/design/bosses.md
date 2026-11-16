@@ -225,5 +225,7 @@ Team: Mismagius 41 (Focus Sash; Levitate; Perish Song, Shadow Ball, Mystical Fir
 Items: 2 Full Restore, 2 Hyper Potion. Sprite is still the Tate and Liza placeholder.
 
 ### Mossdeep gym map (v0.1.8)
-Replaced the warp-pad/rotating-tile layout with a straight hall (`LAYOUT_MOSSDEEP_CITY_GYM`, 10x35). The player enters at the bottom door and walks north; lieutenants stand alternately on the left and right wall (sight 7), 4 rows apart, so each triggers on its own. Order south to north: Nathanos (L), Varimathras (R), Arator (L), Turalyon (R), Rhonin (L), Vereesa (R), then the sisters on the pink platform. Gym Guide near the entrance. Overworld sprites are placeholders. Idea for later: chain the pairs back to back (Nathanos+Varimathras, Arator+Turalyon, Rhonin+Vereesa), which may need a small difficulty drop.
+Replaced the warp-pad/rotating-tile layout with a straight hall (`LAYOUT_MOSSDEEP_CITY_GYM`, 10x35). The player enters at the bottom door and walks north; lieutenants stand alternately on the left and right wall (sight 7), 4 rows apart, so each triggers on its own. Order south to north: Nathanos (L), Varimathras (R), Arator (L), Turalyon (R), Rhonin (L), Vereesa (R), then the sisters on the pink platform. Gym Guide near the entrance. Overworld sprites are placeholders.
+
+v0.1.10: hall shortened to 10x31 with side walls, runner and statue pairs. The lieutenants are chained as back-to-back pairs (Nathanos then Varimathras, Arator then Turalyon, Rhonin then Vereesa): the second of each pair stands two rows further north on the opposite wall, so single battles trigger one right after the other. Watch for it being too much and lower levels or items if so.
 Preview tooling (not in repo): a Python tileset renderer was used to draw the map.

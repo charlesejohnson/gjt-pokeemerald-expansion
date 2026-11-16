@@ -69,7 +69,7 @@ GJT_TestWarp_EventScript_Fortree::
 	end
 
 GJT_TestWarp_EventScript_Mossdeep::
-	warp MAP_MOSSDEEP_CITY_GYM, 4, 33
+	warp MAP_MOSSDEEP_CITY_GYM, 4, 29
 	waitstate
 	end
 

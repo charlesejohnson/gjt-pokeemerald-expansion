@@ -2,6 +2,9 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.10 (2026-11-16)
+- Mossdeep gym hall shortened (10x31) and decorated: side walls, center runner, statue pairs. Lieutenants now fight in back-to-back pairs two rows apart (Nathanos then Varimathras, Arator then Turalyon, Rhonin then Vereesa), so each pair feels like one chained encounter. Test NPC Mossdeep warp updated.
+
 ## v0.1.9 (2026-11-16)
 - Mossdeep gym: statue tops added (metatile 516 sits above 524). Map renderer and layout script saved in `wow-docs/tools/`.
 

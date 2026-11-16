@@ -1182,7 +1182,7 @@
       "id": "LAYOUT_MOSSDEEP_CITY_GYM",
       "name": "MossdeepCity_Gym_Layout",
       "width": 10,
-      "height": 35,
+      "height": 31,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_MossdeepGym",
       "border_filepath": "data/layouts/MossdeepCity_Gym/border.bin",
