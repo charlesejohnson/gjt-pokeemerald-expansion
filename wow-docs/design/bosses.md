@@ -184,7 +184,7 @@ Flint and Darius removed. The four remaining trainers keep their positions (entr
 | Anshal, Nature (Humberto) | Jumpluff 29, Cherrim 29, Tropius 31 (Sitrus Berry so Harvest can recycle it). Approved by Charlie: low-mid difficulty, sun/grass kept |
 | Nezir, Frost (Ashley) | Delibird 29 (Hail), Glalie 30 (Hail), Alolan Sandslash 30 (Slush Rush), Swanna 31 ace (Blizzard, Hurricane, Hail, Never-Melt Ice). Hail on three mons; Slush Rush Sandslash abuses it |
 | Rohash, Wind (Jared) | Emolga 28, Castform 29 (Rain Dance + Weather Ball only), Shiftry 30 (Wind Rider, benefits from Drifblim's Tailwind; Razor Wind), Drifblim 31 ace |
-| Faceless One (Edwardo, Hex Maniac sprite, Suspicious music) | Xatu 30, Claydol 30, Banette 31 (confusion/ancient theme) |
+| Faceless One (Edwardo, Hex Maniac sprite, Suspicious music) | Xatu 30 (Confuse Ray), Octillery 30 (Signal Beam, Simple Beam, Octazooka), Claydol 30 (Explosion, Will Suicide AI flag so it actually uses it), Banette 31 (Shadow Sneak/Claw, Will-O-Wisp, Knock Off). No Destiny Bond; one Confuse Ray only. Toned down on request |
 | Prince Thunderaan (Winona) | Manectric 31, Skarmory 32, Altaria 32, Tornadus 33 (ace: Prankster Rain Dance, Hurricane, Thunder, Taunt) |
 
 **Castform rule (Charlie, v0.1.6):** each Conclave lieutenant has a non-lead Castform (Lv 29, Forecast, Focus Sash, Weather Ball + their weather move: Anshal Sunny Day, Nezir Hail, Rohash Rain Dance, with only the weather move and Weather Ball (AI should always pick Weather Ball once weather is up)).

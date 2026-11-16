@@ -7861,7 +7861,7 @@ Pic: Hex Maniac
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer / Omniscient / Smart Mon Choices
+AI: Basic Trainer / Omniscient / Smart Mon Choices / Will Suicide
 
 Xatu
 Level: 30
@@ -7873,15 +7873,25 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Psychic
 - Roost
 
+Octillery
+Level: 30
+Ability: Suction Cups
+Nature: Modest
+IVs: 22 HP / 22 Atk / 22 Def / 22 SpA / 22 SpD / 22 Spe
+- Signal Beam
+- Simple Beam
+- Octazooka
+- Protect
+
 Claydol
 Level: 30
 Ability: Levitate
 Nature: Bold
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Confuse Ray
 - Ancient Power
 - Earth Power
 - Rapid Spin
+- Explosion
 
 Banette
 Level: 31
@@ -7889,9 +7899,9 @@ Ability: Cursed Body
 Nature: Adamant
 IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
 - Shadow Sneak
+- Shadow Claw
 - Will-O-Wisp
-- Destiny Bond
-- Confuse Ray
+- Knock Off
 
 === TRAINER_COLIN ===
 Name: COLIN
