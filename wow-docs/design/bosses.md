@@ -210,3 +210,7 @@ TODO when the gym layout is done: intro/defeat text should play up the immaturit
 ### Turalyon (`TRAINER_NATE`, name "TURALYON") — drafted
 Lightforged Paladin, the holy tank who holds the line. Steel resists Ghost and Dark, so he walls the gym theme. Stealth Rock + Wish stalling. Pairs with Arator in the same cluster.
 Team (IVs 24): Bastiodon 38 (Leftovers; Sturdy; Stealth Rock, Iron Head, Rock Slide, Roar), Blissey 39 (Natural Cure; Wish, Seismic Toss, Toxic, Heal Bell), Aegislash 40 (Stance Change; King's Shield, Sacred Sword, Shadow Ball, Iron Head), Aggron 41 ace (Sitrus; Sturdy; Heavy Slam, Earthquake, Rock Slide, Thunder Wave).
+
+### Rhonin (`TRAINER_NICHOLAS`, name "RHONIN", Kindler sprite) — drafted
+Vereesa's husband, the red-haired fire mage. Mid-difficulty so Vereesa is the real test. Ace is the custom Fire Mage class mon (Fire/Dragon, Hot Streak, Pyroblast + Phoenix Flames). Party species name is `Mage-Fire` in trainers.party.
+Team (IVs 22): Alakazam 38 (Magic Guard; Psychic, Shadow Ball, Focus Blast, Calm Mind), Magmortar 38 (Flame Body; Flamethrower, Thunderbolt, Focus Blast, Psychic), Chandelure 39 (Spell Tag; Flash Fire; Shadow Ball, Flamethrower, Energy Ball, Will-O-Wisp), Mage-Fire 40 ace (Charcoal; Hot Streak; Pyroblast, Phoenix Flames, Flamethrower, Blast Wave).

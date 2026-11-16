@@ -11529,17 +11529,53 @@ Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_NICHOLAS ===
-Name: NICHOLAS
-Class: Psychic
-Pic: Psychic M
+Name: RHONIN
+Class: Kindler
+Pic: Kindler
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer / Ace Pokemon / Omniscient / Smart Mon Choices
 
-Wobbuffet
-Level: 36
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Alakazam
+Level: 38
+Ability: Magic Guard
+Nature: Timid
+IVs: 22 HP / 22 Atk / 22 Def / 22 SpA / 22 SpD / 22 Spe
+- Psychic
+- Shadow Ball
+- Focus Blast
+- Calm Mind
+
+Magmortar
+Level: 38
+Ability: Flame Body
+Nature: Modest
+IVs: 22 HP / 22 Atk / 22 Def / 22 SpA / 22 SpD / 22 Spe
+- Flamethrower
+- Thunderbolt
+- Focus Blast
+- Psychic
+
+Chandelure @ Spell Tag
+Level: 39
+Ability: Flash Fire
+Nature: Modest
+IVs: 22 HP / 22 Atk / 22 Def / 22 SpA / 22 SpD / 22 Spe
+- Shadow Ball
+- Flamethrower
+- Energy Ball
+- Will-O-Wisp
+
+Mage-Fire @ Charcoal
+Level: 40
+Ability: Hot Streak
+Nature: Timid
+IVs: 22 HP / 22 Atk / 22 Def / 22 SpA / 22 SpD / 22 Spe
+- Pyroblast
+- Phoenix Flames
+- Flamethrower
+- Blast Wave
 
 === TRAINER_GRUNT_SPACE_CENTER_3 ===
 Name: GRUNT
