@@ -31,3 +31,12 @@ Story frame: the Windrunners and their lieutenants are a group separate from Kha
 - Intro: "I'd say my husband went easy on you, but he never does. Sylvanas and Alleria are waiting. Show me you're worth their time."
 - Defeat: "Hm. You'd have made a fine ranger. I mean that. Don't let it go to your head."
 - After: "Go on. They're already arguing about who fights you first. Try not to get in the middle."
+
+## Sylvanas + Alleria (double battle; competing with the player for the road to Azeroth, family not friends)
+Framing: this group competes with the player for badges and resources to reach the Elite Four and Azeroth. The player's intent is purer (save the world, return things to normal); the sisters have mixed motives. Sylvanas is cold and amused, Alleria is the tired peacemaker.
+- Intro: Sylvanas notes the player walked through her lieutenants; Alleria asks her to be kind; "I'll be kind after I win." Both want the road to Azeroth, only one takes the badge, "whose reasons are better".
+- Defeat: Alleria says the player's heart was clearer; Sylvanas says do not flatter them, they won; Alleria hands over the badge and TM.
+- Badge: MIND BADGE from Sylvanas and Alleria; Sylvanas: "Take this as well. It is not a gift." TM04 Calm Mind: Sylvanas "Learn calm. You will need it where we're going." Alleria: "...She means good luck."
+- After: "Go. Take your road. We take ours." Alleria: "Be well. Save what can be saved."
+- Need two POKéMON, statue plaque, Pokenav registration and rematch lines also rewritten (rematch lines are short placeholders).
+- Magni (Gym Guide, Scottish): this hall is a straight walk; the Windrunners and their lot want the same road; family, not friends; mostly Ghost/Dark, Fairy and Fighting hurt them. After: "They let ye. Maybe."
