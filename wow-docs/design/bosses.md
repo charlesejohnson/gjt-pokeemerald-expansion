@@ -248,3 +248,6 @@ Team: Pelipper 44 (Damp Rock, 8-turn rain; Drizzle; Hurricane, Surf, Roost, U-tu
 ### Jaina Proudmoore (`TRAINER_JUAN_1`, name "JAINA", Leader Juan sprite) — drafted
 Water/frost mage, cap 46, IVs 31, conflicted over her father but indifferent to the player. Dual weather team: Alolan Ninetales (Snow Warning, Aurora Veil under hail, Light Clay) vs Vaporeon (Rain Dance). Items: 2 Full Restore, 2 Hyper Potion.
 Team: Slowbro 44 (Regenerator; Scald, Psychic, Slack Off, Thunder Wave), Starmie 45 (Analytic; Surf, Psychic, Ice Beam, Rapid Spin), Vaporeon 45 (Leftovers; Hydration, cures status in rain; Rain Dance, Scald, Ice Beam, Wish), Ninetales-Alola 45 (Light Clay; Snow Warning; Aurora Veil, Blizzard, Moonblast, Freeze-Dry), Lapras 46 ace (Sitrus; Water Absorb; Hydro Pump, Freeze-Dry, Thunderbolt, Ice Shard).
+
+### Sootopolis B1F filler (drafted)
+Low-difficulty, no gimmicks, default movesets, IVs 14; the punishment is falling in unprepared. Slots: Tiffany APPRENTICE (Slowpoke 36, Kadabra 37), Bethany ARCANIST (Staryu 36, Girafarig 37), Crissy CONJURER (Slowpoke 36, Mr. Mime 38), Olivia ENCHANTER (Wobbuffet 37, Jynx 38), Bridget DECKHAND (Wingull 36, Tentacool 36, Pelipper 38), Daphne MARINE (Seaking 37, Politoed 38), Annika BOSUN (Wailmer 37, Crawdaunt 38). Dalaran mages and Kul Tiran sailors; sprites are placeholders (female) until a sprite pass.
