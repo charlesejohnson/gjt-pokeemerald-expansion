@@ -2,6 +2,11 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.8 (2026-11-16)
+- Mossdeep gym drafted: six lieutenants (Nathanos, Varimathras, Arator, Turalyon, Rhonin, Vereesa), Hunter's Mark text for opponent Dire Hit, and the Sylvanas + Alleria double battle (see `design/bosses.md`).
+- Mossdeep gym map replaced with a straight hall (10x35): enter at the bottom, trainers alternate left and right walls, sisters at the top. Warp pads and rotating-tile puzzle removed. Trainer and sister texts are still the old vanilla texts.
+- Test NPC: Mossdeep gym warp (entry 11).
+
 ## v0.1.7 (2026-11-16)
 - Test NPC: warps for the Petalburg gym (skips the Wally tutorial by setting the gym ready state) and Fortree gym; supplies now include the Windseeker Binding for testing the Thunderaan seal.
 
