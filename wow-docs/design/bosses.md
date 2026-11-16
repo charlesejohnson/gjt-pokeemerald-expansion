@@ -203,5 +203,6 @@ Gimmick: debuffs. Incineroar leads (Intimidate + U-turn pivots; Smart Switching 
 Team (IVs 20, in order): Incineroar 40 (Sitrus; Flare Blitz, Darkest Lariat, Knock Off, U-turn), Zoroark 41 (Illusion; Double Team, Night Daze, Flamethrower, Sludge Bomb), Crobat 38 (Cross Poison, Air Slash, Will-O-Wisp, Toxic), Skuntank 39 (Aftermath; Poison Jab, Crunch, Will-O-Wisp, Sucker Punch).
 
 ### Arator the Hopeful (`TRAINER_BLAKE`, name "ARATOR", Expert placeholder sprite) — drafted
-Child of void and light: Fairy/Fighting holy mons plus a Spiritomb for the dark half. Retribution gimmick on the ace: Focus Sash + Revenge, and Justified (Dark moves in this gym power him up).
-Team (IVs 20): Togekiss 38 (Serene Grace; Air Slash, Aura Sphere, Nasty Plot, Roost), Gardevoir 39 (Trace; Moonblast, Psychic, Shadow Ball, Calm Mind), Spiritomb 40 (Infiltrator; Foul Play, Shadow Sneak, Sucker Punch, Will-O-Wisp), Lucario 41 ace (Focus Sash, Justified; Close Combat, Extreme Speed, Revenge, Swords Dance).
+Child of void and light. Joke: he is immature, so his first three mons are badly underleveled (33-35, IVs 12) but all carry Counter/Mirror Coat so careless hits get punished. The ace is far stronger: Lucario 42 (cap-level), IVs 31, 252 Atk / 252 Spe, Focus Sash, Justified (Dark moves in this gym power it up), Revenge.
+Team: Togekiss 33 (Serene Grace; Air Slash, Mirror Coat, Nasty Plot, Roost), Gardevoir 34 (Trace; Moonblast, Counter, Calm Mind, Shadow Ball), Spiritomb 35 (Infiltrator; Foul Play, Counter, Will-O-Wisp, Shadow Sneak), Lucario 42 ace (Close Combat, Extreme Speed, Revenge, Swords Dance).
+TODO when the gym layout is done: intro/defeat text should play up the immaturity.

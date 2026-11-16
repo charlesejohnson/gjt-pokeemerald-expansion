@@ -4529,40 +4529,41 @@ Double Battle: No
 AI: Basic Trainer / Ace Pokemon / Omniscient / Smart Mon Choices
 
 Togekiss
-Level: 38
+Level: 33
 Ability: Serene Grace
 Nature: Timid
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Air Slash
-- Aura Sphere
+- Mirror Coat
 - Nasty Plot
 - Roost
 
 Gardevoir
-Level: 39
+Level: 34
 Ability: Trace
 Nature: Modest
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Moonblast
-- Psychic
-- Shadow Ball
+- Counter
 - Calm Mind
+- Shadow Ball
 
 Spiritomb
-Level: 40
+Level: 35
 Ability: Infiltrator
 Nature: Adamant
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Foul Play
-- Shadow Sneak
-- Sucker Punch
+- Counter
 - Will-O-Wisp
+- Shadow Sneak
 
 Lucario @ Focus Sash
-Level: 41
+Level: 42
 Ability: Justified
 Nature: Jolly
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe / 4 HP
 - Close Combat
 - Extreme Speed
 - Revenge
