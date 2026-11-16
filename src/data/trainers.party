@@ -3763,19 +3763,28 @@ Nature: Adamant
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Rock Blast
 - Magnitude
-- Defense Curl
 - Stealth Rock
+- Defense Curl
 
 Magcargo @ Heat Rock
-Level: 27
-Ability: Flame Body
+Level: 26
+Ability: Magma Armor
 Nature: Bold
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Lava Plume
-- Recover
 - Ancient Power
+- Recover
 - Sunny Day
 
+Carkol
+Level: 27
+Ability: Flame Body
+Nature: Adamant
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Rock Slide
+- Flame Charge
+- Smack Down
+- Protect
 
 === TRAINER_KEEGAN ===
 Name: BETH'TILAC
@@ -9445,7 +9454,7 @@ Music: Hiker
 Double Battle: No
 AI: Basic Trainer / Omniscient / Smart Mon Choices
 
-Rhyhorn @ Rocky Helmet
+Rhyhorn @ Eviolite
 Level: 25
 Ability: Lightning Rod
 Nature: Impish
@@ -9455,16 +9464,25 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Scary Face
 - Stealth Rock
 
-Camerupt @ Passho Berry
-Level: 27
-Ability: Magma Armor
-Nature: Adamant
+Torkoal @ Heat Rock
+Level: 26
+Ability: White Smoke
+Nature: Relaxed
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Fire Fang
-- Earth Power
-- Rock Slide
-- Ancient Power
+- Lava Plume
+- Rapid Spin
+- Body Press
+- Sunny Day
 
+Carkol
+Level: 27
+Ability: Steam Engine
+Nature: Modest
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Ancient Power
+- Flamethrower
+- Rock Tomb
+- Rock Polish
 
 === TRAINER_ANNIKA ===
 Name: ANNIKA

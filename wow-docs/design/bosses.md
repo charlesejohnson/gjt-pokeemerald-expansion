@@ -148,8 +148,8 @@ Inspiration: Firelands raid. Teams are my first draft for editing; text style fo
 | Boss (vanilla slot) | Team |
 |---|---|
 | Beth'tilac (Keegan, B1F) | Ariados 24 (lead, Sticky Web/Toxic Spikes), Eviolite Larvesta 24 (Quiver Dance, a DPS check: kill it before it sets up), Galvantula 25 (ace; Electroweb, Bug Buzz, Sticky Web, Thunder Wave). Easiest lieutenant, low damage, speed control. |
-| Ryolith left foot (Jace, B1F) | Graveler 25, Magcargo 27 |
-| Ryolith right foot (Eli, B1F) | Rhyhorn 25, Camerupt 27 (fought as two separate battles, like the Twin Emperors) |
+| Ryolith left foot (Jace, B1F) | Graveler 25 (Eviolite), Magcargo 26, Carkol 27 (ace) |
+| Ryolith right foot (Eli, B1F) | Rhyhorn 25 (Eviolite), Torkoal 26, Carkol 27 (ace). Mirror of the left foot. They stand 6 tiles apart on row 17 facing each other, so walking between them triggers ONE real two-trainer double battle (untested). |
 | Alysrazor (Danielle, 1F) | Fletchinder 24, Flame-Orb Guts Swellow 26 (Atk IV 14, no Facade: Wing Attack), Talonflame 27 (ace, Atk IV 18). All three have Fly to echo the raid's flight phases. |
 | Staghelm (Axle, 1F) | Cat form: Litleo 24, Growlithe 25 (Intimidate; Growl). Druid: Scovillain 26 (Fire/Grass, Chlorophyll). Moonkin form ace: Ninetales 27 (Drought, Solar Beam, Nasty Plot). Sun ties the team together. |
 | Ragnaros (Flannery) | Magmar 26, Heatmor 27, Camerupt 28, Torkoal 29 (ace, Drought, Heat Rock) |

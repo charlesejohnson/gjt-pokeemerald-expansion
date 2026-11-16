@@ -109,12 +109,12 @@ LavaridgeTown_Gym_1F_EventScript_Danielle::
 	end
 
 LavaridgeTown_Gym_B1F_EventScript_Jace::
-	trainerbattle_lavaridge LOCALID_JACE, TRAINER_JACE, LavaridgeTown_Gym_B1F_Text_JaceIntro, LavaridgeTown_Gym_B1F_Text_JaceDefeat, LavaridgeTown_Gym_EventScript_CheckTrainerScript
+	trainerbattle_single TRAINER_JACE, LavaridgeTown_Gym_B1F_Text_JaceIntro, LavaridgeTown_Gym_B1F_Text_JaceDefeat
 	msgbox LavaridgeTown_Gym_B1F_Text_JacePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 LavaridgeTown_Gym_B1F_EventScript_Eli::
-	trainerbattle_lavaridge LOCALID_ELI, TRAINER_ELI, LavaridgeTown_Gym_B1F_Text_EliIntro, LavaridgeTown_Gym_B1F_Text_EliDefeat, LavaridgeTown_Gym_EventScript_CheckTrainerScript
+	trainerbattle_single TRAINER_ELI, LavaridgeTown_Gym_B1F_Text_EliIntro, LavaridgeTown_Gym_B1F_Text_EliDefeat
 	msgbox LavaridgeTown_Gym_B1F_Text_EliPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -213,31 +213,30 @@ LavaridgeTown_Gym_1F_Text_DaniellePostBattle:
 LavaridgeTown_Gym_B1F_Text_JaceIntro:
 	.string "LORD RYOLITH's LEFT FOOT stomps\n"
 	.string "upon the earth!\p"
-	.string "My brother and I are one body.\n"
-	.string "You cannot break one without\l"
-	.string "the other!$"
+	.string "My brother and I move as one.\n"
+	.string "Break one of us, and the other\l"
+	.string "will crush you!$"
 
 LavaridgeTown_Gym_B1F_Text_JaceDefeat:
 	.string "The left foot… has fallen.$"
 
 LavaridgeTown_Gym_B1F_Text_JacePostBattle:
-	.string "Now fight my brother, the RIGHT\n"
-	.string "FOOT.\p"
-	.string "We only fall when we both fall.$"
+	.string "We fall together, as we stood.\p"
+	.string "Go. The Firelord is waiting.$"
 
 LavaridgeTown_Gym_B1F_Text_EliIntro:
-	.string "LORD RYOLITH's RIGHT FOOT shakes\n"
-	.string "the mountain!\p"
-	.string "My brother has fallen, but I\n"
-	.string "stand tall!$"
+	.string "And LORD RYOLITH's RIGHT FOOT\n"
+	.string "shakes the mountain!\p"
+	.string "Together we are the Lord of\n"
+	.string "Rocks, and you stand beneath\l"
+	.string "our weight!$"
 
 LavaridgeTown_Gym_B1F_Text_EliDefeat:
 	.string "The right foot… cracks…$"
 
 LavaridgeTown_Gym_B1F_Text_EliPostBattle:
 	.string "The mountain trembles no more.\p"
-	.string "Hurry. The Firelord's patience\n"
-	.string "wears thin.$"
+	.string "Hurry. His patience wears thin.$"
 
 LavaridgeTown_Gym_1F_Text_FlanneryIntro:
 	.string "Too… soon…\p"
