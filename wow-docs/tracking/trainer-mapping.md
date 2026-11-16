@@ -36,7 +36,7 @@ Original trainer scripts not yet repurposed, available for future bosses.
 | Route104_EventScript_Winston | 104 | |
 | Route104_EventScript_Ivan | 104 | |
 | MauvilleCity_Gym_EventScript_Vivian | Mauville Gym | Object removed from the gym in the 2025-05-05 map redesign; trainer and script remain |
-| MauvilleCity_Gym_EventScript_Ben | Mauville Gym | Still in the gym at (1,9) as a normal Youngster fight; dialogue was rewritten ("sorta", changed from trainer to text) |
+| MauvilleCity_Gym_EventScript_Ben | Mauville Gym | Still in the gym at (1,9); intentionally spared from the WoW takeover and optional (no sight trigger, fights only when spoken to); dialogue was rewritten ("sorta", changed from trainer to text) |
 | DewfordTown_Gym_EventScript_Takao | Dewford Gym | |
 | DewfordTown_Gym_EventScript_Laura | Dewford Gym | |
 | Route116_EventScript_Jose | 116 | |

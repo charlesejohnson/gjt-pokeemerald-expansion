@@ -230,6 +230,12 @@ MauvilleCity_Gym_EventScript_GymGuide::
 	end
 
 MauvilleCity_Gym_EventScript_GymGuidePostVictory::
+	giveitem ITEM_PROTEIN 5
+	giveitem ITEM_CALCIUM 5
+	giveitem ITEM_HP_UP 5
+	giveitem ITEM_ZINC 5
+	giveitem ITEM_IRON 5
+	giveitem ITEM_CARBOS 5
 	msgbox MauvilleCity_Gym_Text_GymGuidePostVictory, MSGBOX_DEFAULT
 	release
 	end
@@ -266,12 +272,16 @@ MauvilleCity_Gym_Text_GymGuideAdvice:
 	.string "The lightnin' will fry 'em!\l"
 	.string "A GROUND-type'd be a fine friend\l"
 	.string "in there.\p"
-	.string "But I know 'ye can do it!$"
+	.string "But I know 'ye can do it,\n"
+	.string "especially when there's loot!$"
 
 MauvilleCity_Gym_Text_GymGuidePostVictory:
 	.string "Aye, ye shocked the THUNDER KING\n"
 	.string "right oot o' WATTSON!\p"
-	.string "KHADGAR'll be proud o' ye, laddie!$"
+	.string "KHADGAR'll be proud o' ye, laddie!\p"
+	.string "I picked this loot off the bosses\n"
+	.string "ye defeated.\l"
+	.string "Use it tae raise yer stats!$"
 
 MauvilleCity_Gym_Text_KirkIntro:
 	.string "Da Thunder King give me power!\n"
@@ -388,12 +398,13 @@ MauvilleCity_Gym_Text_RegisteredWattson:
 	.string "in the POKéNAV.$"
 
 MauvilleCity_Gym_Text_WattsonPostBattle:
-	.string "I swell with optimism, seeing a promising\n"
-	.string "young TRAINER like you!$"
+	.string "WATTSON is still catching his\n"
+	.string "breath, sparks fading from his\l"
+	.string "mustache.$"
 
 MauvilleCity_Gym_Text_WattsonGoForthAndEndeavor:
-	.string "Wahahahah!\n"
-	.string "Go forth and endeavor, youngster!$"
+	.string "WATTSON offers a tired, grateful\n"
+	.string "smile and waves you on.$"
 
 MauvilleCity_Gym_Text_GymStatue:
 	.string "THE THRONE OF THUNDER$"

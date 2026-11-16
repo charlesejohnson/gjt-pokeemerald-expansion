@@ -83,8 +83,14 @@ These are proposals, not final text. The Scottish Magni voice, short in-characte
 - Rustboro raid spelling changed from AHN'QUIRAJ to AHN'QIRAJ (statue and boss line).
 - Rematch lines left vanilla.
 
+## Applied 2026-11-16 (second pass)
+
+- **Wattson post-win lines** now narrated, Roxanne-style: "WATTSON is still catching his breath, sparks fading from his mustache." and (after the New Mauville quest) "WATTSON offers a tired, grateful smile and waves you on."
+- **Mauville loot:** the Gym Guide gives 5 each of Protein, Calcium, HP Up, Zinc, Iron and Carbos after victory, same as Rustboro. Magni's advice line about loot is restored.
+- **Ben** is intentionally spared from the WoW takeover and is no longer a forced fight: his object is now `TRAINER_TYPE_NONE` (no line of sight), so he only battles if the player talks to him.
+
 ## Still open
 
-- **Wattson / Lei Shen post-win lines.** The author wants to compare against Roxanne and Brawly first. Reference: Roxanne wakes up confused and is narrated as "shell-shocked"; Brawly stays corrupted ("Leave me to my dishonor") and the badge scene is narrated. Wattson's badge scene already follows Roxanne (he regains control and thanks you). Only `WattsonPostBattle` and `WattsonGoForthAndEndeavor` still use cheerful vanilla text.
-- **Mauville loot.** Rustboro gives 5 each of six vitamins; Dewford gives Fire/Water/Leaf stones. Decide what Mauville gives (for example Thunder Stone, or more vitamins) and then restore a loot line to Magni's advice.
-- **Vivian** is not in the gym. Her trainer and script still exist; her map object was removed in the 2025-05-05 Mauville map redesign (commit `c84dc2292`). **Ben** is in the gym at (1,9) as a normal Youngster trainer (Zigzagoon and Gulpin, Lv 17), so he is a real fight, not just text.
+- **Vivian** is not in the gym (object removed 2025-05-05); her trainer and script remain as a spare slot.
+- **Repeatable loot:** Rustboro's and Mauville's guides give the vitamins every time you talk to them after the gym is beaten (no flag), and Dewford's guide gives the stones every time too. Decide whether that is intended (stat farming) or should be once-only.
+- Rematch lines are still vanilla in all three gyms.
