@@ -56,7 +56,7 @@
 #define FLAG_RECEIVED_MAUVILLE_GUIDE_LOOT 0x22 // GJT: one-time gym guide loot
 #define FLAG_GJT_HIDE_LAVARIDGE_FLANNERY 0x23 // GJT: set when Ragnaros is beaten; Flannery was carried to the Pokemon Center
 #define FLAG_GJT_HIDE_LAVARIDGE_MAGNI 0x24 // GJT: Magni in the Lavaridge Pokemon Center, shown only during the victory scene
-#define FLAG_UNUSED_0x025    0x25 // Unused Flag
+#define FLAG_RECEIVED_SCOTT_VITAMINS 0x25 // GJT: one-time vitamins from Scott after the Petalburg gym
 #define FLAG_UNUSED_0x026    0x26 // Unused Flag
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
 #define FLAG_UNUSED_0x028    0x28 // Unused Flag

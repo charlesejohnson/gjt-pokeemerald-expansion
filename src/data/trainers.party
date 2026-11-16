@@ -1363,8 +1363,8 @@ IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_RANDALL ===
 Name: RANDALL
-Class: Cooltrainer
-Pic: Cooltrainer M
+Class: Swimmer M
+Pic: Swimmer M
 Gender: Male
 Music: Cool
 Items: Hyper Potion
@@ -1372,16 +1372,29 @@ Double Battle: No
 AI: Basic Trainer
 
 Swellow
-Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Level: 27
+Ability: Guts
+Nature: Jolly
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+- Aerial Ace
 - Quick Attack
+- Facade
+- Endeavor
+
+Fearow
+Level: 27
+Ability: Sniper
+Nature: Adamant
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+- Drill Peck
+- Double-Edge
 - Agility
-- Wing Attack
+- Pursuit
 
 === TRAINER_PARKER ===
 Name: PARKER
-Class: Cooltrainer
-Pic: Cooltrainer M
+Class: Black Belt
+Pic: Black Belt
 Gender: Male
 Music: Cool
 Items: Hyper Potion
@@ -1389,16 +1402,29 @@ Double Battle: No
 AI: Basic Trainer
 
 Spinda
-Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Level: 27
+Ability: Own Tempo
+Nature: Calm
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
 - Teeter Dance
-- Dizzy Punch
-- Focus Punch
+- Psybeam
+- Facade
+- Encore
+
+Loudred
+Level: 27
+Ability: Soundproof
+Nature: Modest
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+- Hyper Voice
+- Uproar
+- Stomp
+- Screech
 
 === TRAINER_GEORGE ===
 Name: GEORGE
-Class: Cooltrainer
-Pic: Cooltrainer M
+Class: Swimmer M
+Pic: Swimmer M
 Gender: Male
 Music: Cool
 Items: Hyper Potion
@@ -1406,16 +1432,29 @@ Double Battle: No
 AI: Basic Trainer
 
 Slakoth @ Sitrus Berry
-Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Level: 27
+Ability: Truant
+Nature: Relaxed
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
 - Slack Off
-- Counter
-- Shadow Ball
+- Facade
+- Yawn
+- Return
+
+Chansey
+Level: 27
+Ability: Natural Cure
+Nature: Bold
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+- Soft-Boiled
+- Seismic Toss
+- Toxic
+- Thunder Wave
 
 === TRAINER_BERKE ===
 Name: BERKE
-Class: Cooltrainer
-Pic: Cooltrainer M
+Class: Black Belt
+Pic: Black Belt
 Gender: Male
 Music: Cool
 Items: Hyper Potion
@@ -1423,10 +1462,24 @@ Double Battle: No
 AI: Basic Trainer
 
 Vigoroth
-Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Focus Energy
+Level: 27
+Ability: Vital Spirit
+Nature: Jolly
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+- Focus Punch
 - Slash
+- Facade
+- Endure
+
+Persian
+Level: 27
+Ability: Technician
+Nature: Jolly
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+- Fury Swipes
+- Slash
+- Taunt
+- Screech
 
 === TRAINER_BRAXTON ===
 Name: BRAXTON
@@ -1754,8 +1807,8 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_MARY ===
 Name: MARY
-Class: Cooltrainer
-Pic: Cooltrainer F
+Class: Beauty
+Pic: Beauty
 Gender: Female
 Music: Cool
 Items: Hyper Potion
@@ -1763,15 +1816,29 @@ Double Battle: No
 AI: Basic Trainer
 
 Delcatty
-Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Feint Attack
-- Shock Wave
+Level: 27
+Ability: Cute Charm
+Nature: Timid
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+- Sing
+- Hypnosis
+- Return
+- Wish
+
+Audino
+Level: 27
+Ability: Regenerator
+Nature: Calm
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+- Helping Hand
+- Disarming Voice
+- Heal Pulse
+- Protect
 
 === TRAINER_ALEXIA ===
 Name: ALEXIA
-Class: Cooltrainer
-Pic: Cooltrainer F
+Class: Beauty
+Pic: Beauty
 Gender: Female
 Music: Cool
 Items: Hyper Potion
@@ -1779,16 +1846,29 @@ Double Battle: No
 AI: Basic Trainer
 
 Wigglytuff
-Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Level: 27
+Ability: Cute Charm
+Nature: Bold
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+- Sing
 - Defense Curl
-- Double Edge
-- Shadow Ball
+- Return
+- Rest
+
+Miltank
+Level: 27
+Ability: Scrappy
+Nature: Impish
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+- Milk Drink
+- Body Slam
+- Stomp
+- Heal Bell
 
 === TRAINER_JODY ===
 Name: JODY
-Class: Cooltrainer
-Pic: Cooltrainer F
+Class: Beauty
+Pic: Beauty
 Gender: Female
 Music: Cool
 Items: Hyper Potion
@@ -1796,10 +1876,24 @@ Double Battle: No
 AI: Check Bad Move / Try To Faint / Force Setup First Turn
 
 Zangoose
-Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Swords Dance
+Level: 27
+Ability: Immunity
+Nature: Jolly
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
 - Slash
+- Swords Dance
+- Facade
+- Crush Claw
+
+Linoone
+Level: 27
+Ability: Pickup
+Nature: Adamant
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+- Slash
+- Belly Drum
+- Facade
+- Fury Swipes
 
 === TRAINER_WENDY ===
 Name: WENDY
@@ -5196,46 +5290,54 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Earth Power
 
 === TRAINER_NORMAN_1 ===
-Name: NORMAN
+Name: SCOTT
 Class: Leader
 Pic: Leader Norman
 Gender: Male
 Music: Male
 Items: Hyper Potion / Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Omniscient / Smart Mon Choices
+
+Ursaring
+Level: 28
+Ability: Quick Feet
+Nature: Adamant
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Facade
+- Swords Dance
+- Crunch
+- Earthquake
+
+Kangaskhan
+Level: 28
+Ability: Early Bird
+Nature: Jolly
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Return
+- Fake Out
+- Sucker Punch
+- Drain Punch
 
 Spinda
 Level: 27
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+Ability: Own Tempo
+Nature: Calm
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+- Encore
 - Teeter Dance
 - Psybeam
 - Facade
-- Encore
-
-Vigoroth
-Level: 27
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Slash
-- Facade
-- Encore
-- Feint Attack
-
-Linoone
-Level: 29
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Slash
-- Belly Drum
-- Facade
-- Headbutt
 
 Slaking @ Sitrus Berry
-Level: 31
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Counter
-- Yawn
+Level: 30
+Ability: Truant
+Nature: Adamant
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Facade
-- Feint Attack
+- Earthquake
+- Hyper Beam
+- Slack Off
 
 === TRAINER_WINONA_1 ===
 Name: WINONA

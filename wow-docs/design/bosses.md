@@ -155,3 +155,20 @@ Inspiration: Firelands raid. Teams are my first draft for editing; text style fo
 | Ragnaros (Flannery) | Magmar 26 (Flame Body), Heatmor 27 (Flash Fire), Camerupt 28 (Solid Rock, Passho Berry), Typhlosion 29 (ace, Blaze, Charcoal; Eruption/Flamethrower/Focus Blast/Earth Power). No weather, no Heat Rock: Sulfuras is flavor in text only. |
 
 **Victory scene (v0.1.3):** the defeat text narrates Sulfuras falling and Flannery barely breathing. The player is warped to the Lavaridge Pokemon Center, Nurse Joy takes Flannery, the screen fades, and Magni (who appears only during the scene, `FLAG_GJT_HIDE_LAVARIDGE_MAGNI`, `VAR_GJT_LAVARIDGE_SCENE`) hands out the Heat Badge, Overheat TM, and flags. Flannery is hidden in the gym afterwards (`FLAG_GJT_HIDE_LAVARIDGE_FLANNERY`), so her rematch is unreachable for now.
+
+## Petalburg Gym (level cap 31) - DRAFT v0.1.4
+
+Scott (a guildmate and friend of Charlie's) woke up in Norman's body and is just chilling as a Normal-type leader. Not adversarial: a comedic cameo. Vanilla room structure kept. Tone: humor, in Charlie's voice. Intro mentions he is only here because CHARLIE promised to PvP with him and that he doesn't play POKeMON. Defeat gives the BALANCE BADGE, TM Facade, and a one-time 5 of each vitamin ("these VITAMINS really work"). Magni is confused ("is that SCOTT in yer faither?") and just wants you to get the badge. Friend's personal details are kept light in text by design.
+
+| Trainer | Class | Team |
+|---|---|---|
+| Scott (Norman slot, Omniscient + Smart Mon Choices AI) | Leader | Ursaring 28, Kangaskhan 28, Spinda 27, Slaking 30 (ace, Truant, Sitrus; Hyper Beam/Slack Off as the "one-button" gag). IVs 16 to 24 for slightly softer power. |
+| Randall | Swimmer M | Swellow 27, Fearow 27 (speed room) |
+| George | Swimmer M | Slakoth 27, Chansey 27 (recovery room) |
+| Parker | Black Belt | Spinda 27, Loudred 27 (confusion room) |
+| Berke | Black Belt | Vigoroth 27, Persian 27 (OHKO room) |
+| Mary | Beauty | Delcatty 27, Audino 27 (accuracy room) |
+| Alexia | Beauty | Wigglytuff 27, Miltank 27 (defense room) |
+| Jody | Beauty | Zangoose 27, Linoone 27 |
+
+All gym trainers have IV 16 and two mons. Rematch lines and the Wally tutorial scene still say "DAD".
