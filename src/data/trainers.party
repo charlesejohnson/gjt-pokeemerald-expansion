@@ -7769,17 +7769,16 @@ Nature: Modest
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 - Rain Dance
 - Weather Ball
-- Thunder
 
-Swoobat
+Shiftry
 Level: 30
-Ability: Unaware
-Nature: Timid
+Ability: Wind Rider
+Nature: Adamant
 IVs: 22 HP / 22 Atk / 22 Def / 22 SpA / 22 SpD / 22 Spe
-- Air Slash
-- Heart Stamp
-- Calm Mind
-- Roost
+- Razor Wind
+- Leaf Blade
+- Sucker Punch
+- Aerial Ace
 
 Drifblim @ Sharp Beak
 Level: 31
@@ -7817,7 +7816,6 @@ Nature: Modest
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 - Sunny Day
 - Weather Ball
-- Solar Beam
 
 Cherrim
 Level: 29
@@ -12679,7 +12677,6 @@ Nature: Modest
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 - Hail
 - Weather Ball
-- Blizzard
 
 Glalie
 Level: 30
