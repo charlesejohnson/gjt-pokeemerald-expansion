@@ -52,15 +52,21 @@ SootopolisCity_Gym_B1F_EventScript_Daphne::
 	end
 
 SootopolisCity_Gym_B1F_Text_AndreaIntro:
-	.string "I'll show you the sublime techniques\n"
-	.string "I learned from our LEADER JUAN!$"
+	.string "MEKKATORQUE: Ah, a visitor!\n"
+	.string "Excellent timing!\p"
+	.string "My latest prototype is fully tested!\n"
+	.string "Ninety percent tested! Okay, forty.$"
 
 SootopolisCity_Gym_B1F_Text_AndreaDefeat:
-	.string "Please forgive me, JUAN…$"
+	.string "MEKKATORQUE: Fascinating! The\n"
+	.string "explosion was supposed to be\l"
+	.string "smaller. I'll note that.$"
 
 SootopolisCity_Gym_B1F_Text_AndreaPostBattle:
-	.string "Watch what happens if you crack all\n"
-	.string "the floor tiles.$"
+	.string "MEKKATORQUE: Taelia's ahead. She's\n"
+	.string "wonderful.\p"
+	.string "Her armor does not have a safety\n"
+	.string "feature either.$"
 
 SootopolisCity_Gym_B1F_Text_CrissyIntro:
 	.string "You came all the way here, but you won't\n"

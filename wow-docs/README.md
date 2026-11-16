@@ -92,7 +92,8 @@ Remaining failures are expected for this fork and not regressions:
 Current dev build version lives in `data/text/gjt_version.inc` and is shown at the start of a new game (Khadgar intro) and by the bedroom test NPC. History: `wow-docs/CHANGELOG.md`. ROMs are sent as `GJT-WoW-vX.Y.Z.gba`.
 
 ## Roadmap (set 2026-11-16)
-1. Finish the gyms in order: Rustboro, Dewford, Mauville, Lavaridge, Petalburg done as drafts; next Fortree (Al'Akir), Mossdeep (Windrunner sisters), Sootopolis (Jaina).
+1. Finish the gyms in order: Rustboro through Mossdeep done as drafts (Fortree boss is Thunderaan, not Al'Akir); Sootopolis (Jaina) in progress: teams and map done, texts underway.
 2. Team Aqua/Magma special encounters: guildies and people met in WoW as set-piece fights.
 3. Pattern doc for building new route encounter tables.
+4. **To-do: mid-fight lines.** Add trainer-slide lines (see the note at the end of `design/bosses.md`) for our harder or more interesting fights: ace sent out, first crit, super-effective hit, low HP, Mega Evolution. Done so far: Mekkatorque. Candidates: Nathanos (Hunter's Mark), Sylvanas and Alleria, Thunderaan, Ragnaros, Scott, Daelin, Jaina.
 Working method: one boss at a time, back and forth with Charlie, draft in the game, then notes in `design/bosses.md` and `CHANGELOG.md`.
