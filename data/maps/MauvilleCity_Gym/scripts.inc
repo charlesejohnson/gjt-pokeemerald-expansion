@@ -298,9 +298,9 @@ MauvilleCity_Gym_Text_ShawnPostBattle:
 
 MauvilleCity_Gym_Text_BenIntro:
 	.string "WATTSON changed... and then all\n"
-	.string "The GYM trainers!\p"
+	.string "the GYM trainers!\p"
 	.string "They told me I was a sacrifice\n"
-	.string "And stuffed me in this corner!$"
+	.string "and stuffed me in this corner!$"
 MauvilleCity_Gym_Text_BenDefeat:
 	.string "It's no fun to lose…$"
 
@@ -334,7 +334,7 @@ MauvilleCity_Gym_Text_AngeloPostBattle:
 
 MauvilleCity_Gym_Text_WattsonIntro:
 	.string "LEI SHEN: This is not my first\n"
-	.string "reincarnation, but I could not.\p"
+	.string "reincarnation, but I could not\n"
 	.string "have asked for a world more ripe\n"
 	.string "for conquering.\p"
 	.string "You would challenge me?\p"

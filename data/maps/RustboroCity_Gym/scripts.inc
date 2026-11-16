@@ -178,7 +178,7 @@ RustboroCity_Gym_Text_MarcPostBattle:
 
 RustboroCity_Gym_Text_RoxanneIntro:
 	.string "You.... Are...\n"
-	.string "Arleady.... Dead....$"
+	.string "Already.... Dead....$"
 
 RustboroCity_Gym_Text_RoxanneDefeat:
 	.string "What…\n"

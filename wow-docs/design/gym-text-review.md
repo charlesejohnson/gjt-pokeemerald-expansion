@@ -35,9 +35,13 @@ Common devices: (1) a Scottish-voiced Magni who frames the gym as a WoW invasion
 
 Three gym strings had no `$` end marker, so the game kept reading whatever came next in memory. **This is the likely cause of the playtest bug "some dialogue writes over itself in gyms"** (needs an in-game check): Rustboro `MarcDefeat`, Dewford `ExplainBulkUp`, Mauville `BenIntro`. All three now end with `$`.
 
-## Small fixes that are obviously typos (not applied)
+## Typos fixed 2026-11-16
 
-- Rustboro: Roxanne intro "Arleady" (should be "Already"); Roxanne post-battle "shell- shocked" has a stray space.
+"Already" (Roxanne), "SIEGE" and "HALL" (Dewford statue), the broken "tae a specialization for yer class!" line, Ben's capitalisation and Wattson's cut sentence. Left alone on purpose: "shell-" line break, and the spelling "AHN'QUIRAJ" (the in-game raid is Ahn'Qiraj; change it if you want the canonical spelling).
+
+## Typos found (history)
+
+- Rustboro: Roxanne post-battle "shell- shocked" has a stray space.
 - Dewford: statue "HALLF OF FAME" and "SEIGE OF ORGRIMMAR"; "Hall of Fame" line also has a stray space in the guide post-victory ("class  !Use").
 - Mauville: Ben intro "All The GYM", "Sacrifice And" (capitalisation), Wattson intro "I could not. / have asked for" (the sentence is cut: "could not" then "have asked").
 - Several Mauville and Rustboro lines use `Defeated…` as defeat and post-battle placeholders.
@@ -66,3 +70,7 @@ Three gym strings had no `$` end marker, so the game kept reading whatever came 
 ## How to hand text back
 
 Reply with the lines in any order; I will drop them into the right `.string` blocks (keeping `\n`, `\l`, `\p` line widths) and build. Keep lines to about 36 characters per line when you write, or I will wrap them for you.
+
+## Draft answers (Claude's guess at the author's voice, for editing)
+
+These are proposals, not final text. The Scottish Magni voice, short in-character boss lines and narrated leader scenes are copied from Rustboro and Dewford. See the chat thread for the full set; replace any with your own wording.

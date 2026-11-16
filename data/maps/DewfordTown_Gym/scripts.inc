@@ -298,8 +298,8 @@ DewfordTown_Gym_Text_GymGuideAdvice:
 DewfordTown_Gym_Text_GymGuidePostVictory:
 	.string "Khadgar entrusted me with some very\p"
 	.string "special stones for ye!\n"
-	.string "He said each corresponds tae \p"
-	.string "specialization for yer class \n!"
+	.string "He said each corresponds tae a\n"
+	.string "specialization for yer class!\p"
 	.string "Use 'em wisely!$"
 
 DewfordTown_Gym_Text_TakaoIntro:
@@ -425,8 +425,8 @@ DewfordTown_Gym_Text_GymStatue:
 	.string "NEW ORGRIMMAR$"
 
 DewfordTown_Gym_Text_GymStatueCertified:
-	.string "SEIGE OF ORGRIMMAR\p"
-	.string "HALLF OF FAME:\n"
+	.string "SIEGE OF ORGRIMMAR\p"
+	.string "HALL OF FAME:\n"
 	.string "{PLAYER}$"
 
 DewfordTown_Gym_Text_BrawlyPreRematch:
