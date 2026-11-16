@@ -236,3 +236,7 @@ Keep the ice-floor slide puzzle. Jaina is conflicted (her father Daelin in the b
 ### Mekkatorque (`TRAINER_ANDREA`, name "MEKKATORQ") — drafted
 Steel/Electric clockwork team, Will Suicide so Bronzong uses Explosion after Trick Room; Magnezone ace has 0 Speed IV for Trick Room.
 Team (IVs 24): Magneton 42 (Thunderbolt, Flash Cannon, Magnet Rise, Thunder Wave), Klang 42 (Gear Grind, Wild Charge, Rock Slide, Shift Gear), Bronzong 43 (Sitrus; Levitate; Trick Room, Gyro Ball, Hypnosis, Explosion), Magnezone 44 ace (Magnet; Discharge, Flash Cannon, Thunder Wave, Volt Switch).
+
+### Taelia Fordragon (`TRAINER_CONNIE`, name "TAELIA", Expert F placeholder) — drafted
+Kul Tiran champion, earnest and warm; last fight before Jaina (5 mons, IVs 26). Bisharp is her "sword" (not Lucario, Arator has it). Seadra is a Sniper crit mon (Focus Energy).
+Team: Lanturn 42 (Volt Absorb; Scald, Thunderbolt, Ice Beam, Rest), Seadra 43 (Sniper; Surf, Dragon Pulse, Ice Beam, Focus Energy), Gyarados 44 (Sitrus; Intimidate; Waterfall, Crunch, Dragon Dance, Ice Fang), Bisharp 44 (Black Glasses; Defiant; Sucker Punch, Iron Head, Night Slash, Swords Dance), Empoleon 45 ace (Leftovers; Torrent; Surf, Flash Cannon, Ice Beam, Roost).

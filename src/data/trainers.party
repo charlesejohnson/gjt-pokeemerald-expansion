@@ -2540,17 +2540,63 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Crunch
 
 === TRAINER_CONNIE ===
-Name: CONNIE
-Class: Beauty
-Pic: Beauty
+Name: TAELIA
+Class: Expert
+Pic: Expert F
 Gender: Female
-Music: Female
+Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer / Ace Pokemon / Omniscient / Smart Mon Choices
 
-Goldeen
-Level: 40
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Lanturn
+Level: 42
+Ability: Volt Absorb
+Nature: Bold
+IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
+- Scald
+- Thunderbolt
+- Ice Beam
+- Rest
+
+Seadra
+Level: 43
+Ability: Sniper
+Nature: Modest
+IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
+- Surf
+- Dragon Pulse
+- Ice Beam
+- Focus Energy
+
+Gyarados @ Sitrus Berry
+Level: 44
+Ability: Intimidate
+Nature: Adamant
+IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
+- Waterfall
+- Crunch
+- Dragon Dance
+- Ice Fang
+
+Bisharp @ Black Glasses
+Level: 44
+Ability: Defiant
+Nature: Adamant
+IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
+- Sucker Punch
+- Iron Head
+- Night Slash
+- Swords Dance
+
+Empoleon @ Leftovers
+Level: 45
+Ability: Torrent
+Nature: Modest
+IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
+- Surf
+- Flash Cannon
+- Ice Beam
+- Roost
 
 === TRAINER_BRIDGET ===
 Name: BRIDGET
