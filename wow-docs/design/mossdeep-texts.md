@@ -23,6 +23,11 @@ Story frame: the Windrunners and their lieutenants are a group separate from Kha
 - After: "Rhonin is ahead. He burns bright, and he knows it. Go. The LIGHT walks with you. I walk behind, with my son."
 
 ## Rhonin (cocky, funny, reckless fire mage)
-- Intro: "Oh good, a challenger. My wife says no fire indoors. Technically, this is a gym."
-- Defeat: "Okay, that one's on me. Big explosion was the whole plan. Usually that's enough."
+- Intro: "Oh good, a challenger. My wife says no fire indoors. But I think I can slip this one by her."
+- Defeat: "I tried to scald you, but now I'm going to end up scolded."
 - After: "Vereesa's next. She's the dangerous one. I'm the funny one. Don't tell her I said that."
+
+## Vereesa (composed, quietly formidable Ranger General)
+- Intro: "I'd say my husband went easy on you, but he never does. Sylvanas and Alleria are waiting. Show me you're worth their time."
+- Defeat: "Hm. You'd have made a fine ranger. I mean that. Don't let it go to your head."
+- After: "Go on. They're already arguing about who fights you first. Try not to get in the middle."

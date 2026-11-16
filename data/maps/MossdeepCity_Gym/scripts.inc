@@ -514,15 +514,20 @@ MossdeepCity_Gym_Text_NatePostBattle:
 	.string "I walk behind, with my son.$"
 
 MossdeepCity_Gym_Text_KathleenIntro:
-	.string "Let me show you a perfectly awful,\n"
-	.string "horrifying time!$"
+	.string "VEREESA: I'd say my husband went\n"
+	.string "easy on you, but he never does.\p"
+	.string "Sylvanas and Alleria are waiting.\n"
+	.string "Show me you're worth their time.$"
 
 MossdeepCity_Gym_Text_KathleenDefeat:
-	.string "N-nooooo!$"
+	.string "VEREESA: Hm. You'd have made a\n"
+	.string "fine ranger. I mean that.\p"
+	.string "Don't let it go to your head.$"
 
 MossdeepCity_Gym_Text_KathleenPostBattle:
-	.string "Your vitality is contagious!\n"
-	.string "Get away from me quickly!$"
+	.string "VEREESA: Go on. They're already\n"
+	.string "arguing about who fights you first.\p"
+	.string "Try not to get in the middle.$"
 
 MossdeepCity_Gym_Text_CliffordIntro:
 	.string "I may be past my prime, but I suggest\n"
@@ -552,12 +557,12 @@ MossdeepCity_Gym_Text_MaceyPostBattle:
 MossdeepCity_Gym_Text_NicholasIntro:
 	.string "RHONIN: Oh good, a challenger. My\n"
 	.string "wife says no fire indoors.\p"
-	.string "Technically, this is a gym.$"
+	.string "But I think I can slip this one\n"
+	.string "by her.$"
 
 MossdeepCity_Gym_Text_NicholasDefeat:
-	.string "RHONIN: Okay, that one's on me.\p"
-	.string "Big explosion was the whole plan.\n"
-	.string "Usually that's enough.$"
+	.string "RHONIN: I tried to scald you, but\n"
+	.string "now I'm going to end up scolded.$"
 
 MossdeepCity_Gym_Text_NicholasPostBattle:
 	.string "RHONIN: Vereesa's next. She's the\n"
