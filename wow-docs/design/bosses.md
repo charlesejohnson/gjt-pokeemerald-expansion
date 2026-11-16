@@ -201,3 +201,7 @@ Team (IVs 20): Houndoom 37 (Crunch, Fire Fang, Sucker Punch, Dark Pulse), Weavil
 ### Varimathras (`TRAINER_VIRGIL`, name "VARIMATH", Psychic placeholder sprite) — drafted
 Gimmick: debuffs. Incineroar leads (Intimidate + U-turn pivots; Smart Switching so the AI can bring it back), Will-O-Wisp/Toxic support, Zoroark second (Illusion copies the LAST party mon, so it must not be last; it poses as Skuntank). No Ace flag, so order is fixed. Holds a Full Restore.
 Team (IVs 20, in order): Incineroar 40 (Sitrus; Flare Blitz, Darkest Lariat, Knock Off, U-turn), Zoroark 41 (Illusion; Double Team, Night Daze, Flamethrower, Sludge Bomb), Crobat 38 (Cross Poison, Air Slash, Will-O-Wisp, Toxic), Skuntank 39 (Aftermath; Poison Jab, Crunch, Will-O-Wisp, Sucker Punch).
+
+### Arator the Hopeful (`TRAINER_BLAKE`, name "ARATOR", Expert placeholder sprite) — drafted
+Child of void and light: Fairy/Fighting holy mons plus a Spiritomb for the dark half. Retribution gimmick on the ace: Focus Sash + Revenge, and Justified (Dark moves in this gym power him up).
+Team (IVs 20): Togekiss 38 (Serene Grace; Air Slash, Aura Sphere, Nasty Plot, Roost), Gardevoir 39 (Trace; Moonblast, Psychic, Shadow Ball, Calm Mind), Spiritomb 40 (Infiltrator; Foul Play, Shadow Sneak, Sucker Punch, Will-O-Wisp), Lucario 41 ace (Focus Sash, Justified; Close Combat, Extreme Speed, Revenge, Swords Dance).

@@ -4520,17 +4520,53 @@ IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 - Sucker Punch
 
 === TRAINER_BLAKE ===
-Name: BLAKE
-Class: Psychic
-Pic: Psychic M
+Name: ARATOR
+Class: Expert
+Pic: Expert M
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer / Ace Pokemon / Omniscient / Smart Mon Choices
 
-Girafarig
-Level: 36
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Togekiss
+Level: 38
+Ability: Serene Grace
+Nature: Timid
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Air Slash
+- Aura Sphere
+- Nasty Plot
+- Roost
+
+Gardevoir
+Level: 39
+Ability: Trace
+Nature: Modest
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Moonblast
+- Psychic
+- Shadow Ball
+- Calm Mind
+
+Spiritomb
+Level: 40
+Ability: Infiltrator
+Nature: Adamant
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Foul Play
+- Shadow Sneak
+- Sucker Punch
+- Will-O-Wisp
+
+Lucario @ Focus Sash
+Level: 41
+Ability: Justified
+Nature: Jolly
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Close Combat
+- Extreme Speed
+- Revenge
+- Swords Dance
 
 === TRAINER_WILLIAM ===
 Name: WILLIAM
