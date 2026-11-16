@@ -3777,36 +3777,35 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer / Omniscient / Smart Mon Choices
 
+Ariados
+Level: 24
+Ability: Sniper
+Nature: Impish
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Sticky Web
+- Toxic Spikes
+- Poison Jab
+- Bug Bite
+
+Larvesta @ Eviolite
+Level: 24
+Ability: Flame Body
+Nature: Timid
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+- Quiver Dance
+- Flame Charge
+- Struggle Bug
+- Protect
+
 Galvantula
 Level: 25
 Ability: Compound Eyes
 Nature: Timid
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-- Thunder
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Electroweb
 - Bug Buzz
 - Sticky Web
-- Electroweb
-
-Parasect
-Level: 26
-Ability: Effect Spore
-Nature: Adamant
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-- Spore
-- Seed Bomb
-- X-Scissor
-- Leech Life
-
-Ariados @ Black Sludge
-Level: 27
-Ability: Sniper
-Nature: Adamant
-IVs: 28 HP / 28 Atk / 28 Def / 28 SpA / 28 SpD / 28 Spe
-- Sticky Web
-- Poison Jab
-- Megahorn
-- Toxic Spikes
-
+- Thunder Wave
 
 === TRAINER_BERNIE_1 ===
 Name: BERNIE

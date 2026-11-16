@@ -147,7 +147,7 @@ Inspiration: Firelands raid. Teams are my first draft for editing; text style fo
 
 | Boss (vanilla slot) | Team |
 |---|---|
-| Beth'tilac (Keegan, B1F) | Galvantula 25, Parasect 26, Ariados 27 |
+| Beth'tilac (Keegan, B1F) | Ariados 24 (lead, Sticky Web/Toxic Spikes), Eviolite Larvesta 24 (Quiver Dance, a DPS check: kill it before it sets up), Galvantula 25 (ace; Electroweb, Bug Buzz, Sticky Web, Thunder Wave). Easiest lieutenant, low damage, speed control. |
 | Ryolith left foot (Jace, B1F) | Graveler 25, Magcargo 27 |
 | Ryolith right foot (Eli, B1F) | Rhyhorn 25, Camerupt 27 (fought as two separate battles, like the Twin Emperors) |
 | Alysrazor (Danielle, 1F) | Combusken 25, Fletchinder 26, Swellow 27 |
