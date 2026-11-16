@@ -79,4 +79,10 @@ Remaining failures are expected for this fork and not regressions:
 - AI Splash test: custom effects (Anti-Magic Shell, Ice Block, Polymorph) are listed as "AI HANDLING" TODOs.
 
 ## Testing tools
-- **Gym warp NPC** (`data/scripts/gjt_test_warp.inc`): a man in the player's Littleroot bedroom (both Brendan's and May's 2F) at (7,4). Talk to him and pick Rustboro, Dewford or Mauville Gym to warp to its entrance. It does not set badges, flags or levels. **Remove the two `GJT_TestWarp_EventScript_Guide` objects from `LittlerootTown_BrendansHouse_2F` and `LittlerootTown_MaysHouse_2F` map.json before release.** Add a menu entry in the .inc and a warp line for each new gym.
+- **Test NPC** (`data/scripts/gjt_test_warp.inc`): a man in the player's Littleroot bedroom (both Brendan's and May's 2F) at (7,4). Talk to him for a menu:
+  - **Rustboro / Dewford / Mauville Gym**: warps to that gym's entrance.
+  - **Supplies**: 10 Master Balls, 99 Rare Candies, 5 each of Fire/Water/Leaf Stone and the six vitamins, and TM39 Rock Tomb, TM08 Bulk Up, TM34 Shock Wave. Repeatable. (Rare Candy is not infinite; just 99 per visit.)
+  - **Class Pokémon**: a level 5 Death Knight and a level 5 Mage. Add new class base forms in `GJT_TestWarp_EventScript_WowMons` as they are implemented.
+  - **Badges 1-3**: sets the first three badge flags. The level cap follows the badges (15 with none, 19, 24, then 29 with three), and Rare Candy and EXP obey it.
+  - It does not set "defeated gym" flags, so the gym guides' one-time loot is not triggered by this menu.
+  - **Remove the two `GJT_TestWarp_EventScript_Guide` objects from `LittlerootTown_BrendansHouse_2F` and `LittlerootTown_MaysHouse_2F` map.json before release.** For each new gym add a menu entry and a warp line.
