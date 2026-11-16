@@ -12319,36 +12319,35 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer / Omniscient / Smart Mon Choices
 
-Combusken @ Charcoal
-Level: 25
-Ability: Speed Boost
-Nature: Jolly
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-- Blaze Kick
-- Double Kick
-- Bulk Up
-- Protect
-
 Fletchinder
-Level: 26
-Ability: Gale Wings
+Level: 24
+Ability: Flame Body
 Nature: Jolly
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-- Acrobatics
+- Fly
 - Flame Charge
+- Will-O-Wisp
 - Roost
-- Quick Attack
 
-Swellow @ Sharp Beak
-Level: 27
+Swellow @ Flame Orb
+Level: 26
 Ability: Guts
 Nature: Adamant
-IVs: 28 HP / 28 Atk / 28 Def / 28 SpA / 28 SpD / 28 Spe
-- Brave Bird
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Fly
 - Facade
 - Quick Attack
-- Sunny Day
+- Protect
 
+Talonflame @ Sharp Beak
+Level: 27
+Ability: Gale Wings
+Nature: Jolly
+IVs: 28 HP / 28 Atk / 28 Def / 28 SpA / 28 SpD / 28 Spe
+- Fly
+- Flare Blitz
+- Brave Bird
+- Tailwind
 
 === TRAINER_HIDEO ===
 Name: HIDEO
