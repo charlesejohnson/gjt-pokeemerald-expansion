@@ -7762,6 +7762,15 @@ IVs: 22 HP / 22 Atk / 22 Def / 22 SpA / 22 SpD / 22 Spe
 - Encore
 - Roost
 
+Castform @ Focus Sash
+Level: 29
+Ability: Forecast
+Nature: Modest
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Rain Dance
+- Weather Ball
+- Thunder
+
 Swoobat
 Level: 30
 Ability: Unaware
@@ -7800,6 +7809,15 @@ IVs: 22 HP / 22 Atk / 22 Def / 22 SpA / 22 SpD / 22 Spe
 - Leech Seed
 - Acrobatics
 - Sunny Day
+
+Castform @ Focus Sash
+Level: 29
+Ability: Forecast
+Nature: Modest
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Sunny Day
+- Weather Ball
+- Solar Beam
 
 Cherrim
 Level: 29
@@ -12653,6 +12671,15 @@ IVs: 22 HP / 22 Atk / 22 Def / 22 SpA / 22 SpD / 22 Spe
 - Ice Beam
 - Aerial Ace
 - Fake Out
+
+Castform @ Focus Sash
+Level: 29
+Ability: Forecast
+Nature: Modest
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Hail
+- Weather Ball
+- Blizzard
 
 Glalie
 Level: 30

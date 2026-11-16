@@ -186,3 +186,5 @@ Flint and Darius removed. The four remaining trainers keep their positions (entr
 | Rohash, Wind (Jared) | Emolga 28, Swoobat 30, Drifblim 31 |
 | Faceless One (Edwardo, Hex Maniac sprite, Suspicious music) | Xatu 30, Claydol 30, Banette 31 (confusion/ancient theme) |
 | Prince Thunderaan (Winona) | Manectric 31, Skarmory 32, Altaria 32, Tornadus 33 (ace: Prankster Rain Dance, Hurricane, Thunder, Taunt) |
+
+**Castform rule (Charlie, v0.1.6):** each Conclave lieutenant has a non-lead Castform (Lv 29, Forecast, Focus Sash, Weather Ball + their weather move: Anshal Sunny Day, Nezir Hail, Rohash Rain Dance, plus Solar Beam/Blizzard/Thunder).
