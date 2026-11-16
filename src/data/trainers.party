@@ -12110,17 +12110,53 @@ Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ANDREA ===
-Name: ANDREA
-Class: Lass
-Pic: Lass
-Gender: Female
-Music: Female
+Name: MEKKATORQ
+Class: Expert
+Pic: Hiker
+Gender: Male
+Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer / Ace Pokemon / Omniscient / Smart Mon Choices / Will Suicide
 
-Luvdisc
-Level: 40
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Magneton
+Level: 42
+Ability: Magnet Pull
+Nature: Modest
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Thunderbolt
+- Flash Cannon
+- Magnet Rise
+- Thunder Wave
+
+Klang
+Level: 42
+Ability: Clear Body
+Nature: Adamant
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Gear Grind
+- Wild Charge
+- Rock Slide
+- Shift Gear
+
+Bronzong @ Sitrus Berry
+Level: 43
+Ability: Levitate
+Nature: Relaxed
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Trick Room
+- Gyro Ball
+- Hypnosis
+- Explosion
+
+Magnezone @ Magnet
+Level: 44
+Ability: Magnet Pull
+Nature: Quiet
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 0 Spe
+- Discharge
+- Flash Cannon
+- Thunder Wave
+- Volt Switch
 
 === TRAINER_CRISSY ===
 Name: CRISSY

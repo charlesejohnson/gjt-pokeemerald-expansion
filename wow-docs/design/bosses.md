@@ -229,3 +229,10 @@ Replaced the warp-pad/rotating-tile layout with a straight hall (`LAYOUT_MOSSDEE
 
 v0.1.10: hall shortened to 10x31 with side walls, runner and statue pairs. The lieutenants are chained as back-to-back pairs (Nathanos then Varimathras, Arator then Turalyon, Rhonin then Vereesa): the second of each pair stands two rows further north on the opposite wall, so single battles trigger one right after the other. Watch for it being too much and lower levels or items if so.
 Preview tooling (not in repo): a Python tileset renderer was used to draw the map.
+
+## Sootopolis Gym — Jaina (Water, cap 46) — IN PROGRESS
+Keep the ice-floor slide puzzle. Jaina is conflicted (her father Daelin in the basement); the group is separately motivated and doesn't care much about the player. Plan: two "real" lieutenants on 1F (Mekkatorque at the entrance corridor, Taelia Fordragon in the corridor right below Jaina), B1F filler (Dalaran mages, Kul Tiran sailors, low difficulty) and a secret boss Daelin Proudmoore at the top of the B1F corridor (reached by falling and walking north). Daelin reward: brainstorm, extra vitamins likely. B1F is one corridor from the stair at (11,22); 1F/B1F trainers reuse the vanilla trainer constants (3 of the 10 B1F constants become Mekkatorque/Taelia/Daelin).
+
+### Mekkatorque (`TRAINER_ANDREA`, name "MEKKATORQ") — drafted
+Steel/Electric clockwork team, Will Suicide so Bronzong uses Explosion after Trick Room; Magnezone ace has 0 Speed IV for Trick Room.
+Team (IVs 24): Magneton 42 (Thunderbolt, Flash Cannon, Magnet Rise, Thunder Wave), Klang 42 (Gear Grind, Wild Charge, Rock Slide, Shift Gear), Bronzong 43 (Sitrus; Levitate; Trick Room, Gyro Ball, Hypnosis, Explosion), Magnezone 44 ace (Magnet; Discharge, Flash Cannon, Thunder Wave, Volt Switch).
