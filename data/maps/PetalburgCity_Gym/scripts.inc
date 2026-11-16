@@ -1330,8 +1330,6 @@ PetalburgCity_Gym_Text_DadNoAmountOfTrainingIsEnough:
 
 PetalburgCity_Gym_Text_GymGuideAdvice:
 	.string "Hmm? CHAMPION?\p"
-	.string "Och, I'm MAGNI. KHADGAR sent me tae\n"
-	.string "guide ye through these GYMS.\p"
 	.string "Now, this one… Is that SCOTT?\n"
 	.string "In yer… faither?\p"
 	.string "I dinnae ken how that works.\n"

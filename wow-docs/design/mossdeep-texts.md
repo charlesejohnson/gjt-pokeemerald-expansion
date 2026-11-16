@@ -39,4 +39,4 @@ Framing: this group competes with the player for badges and resources to reach t
 - Badge: MIND BADGE from Sylvanas and Alleria; Sylvanas: "Take this as well. It is not a gift." TM04 Calm Mind: Sylvanas "Learn calm. You will need it where we're going." Alleria: "...She means good luck."
 - After: "Go. Take your road. We take ours." Alleria: "Be well. Save what can be saved."
 - Need two POKéMON, statue plaque, Pokenav registration and rematch lines also rewritten (rematch lines are short placeholders).
-- Magni (Gym Guide, Scottish): this hall is a straight walk; the Windrunners and their lot want the same road; family, not friends; mostly Ghost/Dark, Fairy and Fighting hurt them. After: "They let ye. Maybe."
+- Magni (Gym Guide, Scottish; no re-introduction, he first appears in Rustboro): this hall is a straight walk; the Windrunners and their lot want the same road; family, not friends; mostly Ghost/Dark, Fairy and Fighting hurt them. After: "They let ye. Maybe."

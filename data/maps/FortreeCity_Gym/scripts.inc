@@ -140,8 +140,6 @@ FortreeCity_Gym_EventScript_GymStatue::
 
 FortreeCity_Gym_Text_GymGuideAdvice:
 	.string "Hmm? CHAMPION!\p"
-	.string "I'm MAGNI. KHADGAR sent me tae guide\n"
-	.string "ye through these GYMS.\p"
 	.string "The FORTREE GYM is a tree-house maze\n"
 	.string "wi' rotatin' doors, aye. Mind yer step.\p"
 	.string "Guardin' it are the CONCLAVE OF THE\n"

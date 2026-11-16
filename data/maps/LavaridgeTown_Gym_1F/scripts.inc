@@ -141,8 +141,7 @@ LavaridgeTown_Gym_1F_EventScript_GymStatue::
 LavaridgeTown_Gym_1F_Text_GymGuideAdvice:
 	.string "CHAMPION! Ye've made it tae the\n"
 	.string "LAVARIDGE GYM, aye!\p"
-	.string "I'm MAGNI. KHADGAR sent me tae guide\n"
-	.string "ye, an' ye'll want me wits here.\p"
+	.string "Ye'll want yer wits aboot ye here.\p"
 	.string "The FIRELANDS 'ave spilled intae this\n"
 	.string "gym, an' RAGNAROS himself has taken\l"
 	.string "poor FLANNERY.\p"

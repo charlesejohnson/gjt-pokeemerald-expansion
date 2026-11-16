@@ -371,8 +371,6 @@ MossdeepCity_Gym_EventScript_RedFloorSwitch::
 
 MossdeepCity_Gym_Text_GymGuideAdvice:
 	.string "Hmm? CHAMPION!\p"
-	.string "I'm MAGNI. KHADGAR sent me tae guide\n"
-	.string "ye through these GYMS.\p"
 	.string "This hall's a straight walk, aye.\n"
 	.string "But the folk in it are no' friendly.\p"
 	.string "The WINDRUNNER SISTERS an' their lot\n"
