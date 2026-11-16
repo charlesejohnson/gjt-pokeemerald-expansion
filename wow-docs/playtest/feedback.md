@@ -19,8 +19,8 @@ Dewford, Slateport and Mauville bosses were not rated in any tab.
 
 ## Known bugs (from the sheet)
 
-- Some dialogue writes over itself in gyms
-- Custom mons sometimes hover (display issue only)
+- Some dialogue writes over itself in gyms — **needs a repro** (which gym/trainer?); a width scan of gym text is inconclusive since vanilla lines are similar
+- Custom mons sometimes hover (display issue only) — **fixed 2026-11-15**: custom forms reusing Bisharp/Ralts/Froslass/Delphox/Nihilego sprites now copy that species' front/back size, Y offset and enemy elevation. Death Knight base form uses its own sprite and still needs checking in-game.
 
 ## Requested general feedback
 
