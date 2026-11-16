@@ -2,6 +2,9 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.13 (2026-11-16)
+- Sootopolis: Taelia moved to the left side of Jaina's room so she no longer blocks access to Jaina.
+
 ## v0.1.12 (2026-11-16)
 - Sootopolis gym drafted: Jaina (dual weather), Mekkatorque (entrance, 1F), Taelia Fordragon (below Jaina, 1F), secret boss Daelin Proudmoore (top of B1F), seven Dalaran mage / Kul Tiran sailor fillers on B1F. Ice-floor puzzle kept. Trainer and Jaina texts are still vanilla. Test NPC: Sootopolis warp (entry 12). Magni no longer reintroduces himself after Rustboro.
 
