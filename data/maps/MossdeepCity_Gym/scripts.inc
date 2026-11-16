@@ -426,15 +426,15 @@ MossdeepCity_Gym_Text_BlakeIntro:
 	.string "By the power of friendship!$"
 
 MossdeepCity_Gym_Text_BlakeDefeat:
+	.string "ARATOR: Ugh... the real treasure...\p"
+	.string "was the cozy friends we made\n"
+	.string "along the way...$"
+
+MossdeepCity_Gym_Text_BlakePostBattle:
 	.string "ARATOR: That's NOT fair! The LIGHT\n"
 	.string "was still warming up!\p"
 	.string "I was going easy! ...Okay, I\n"
 	.string "wasn't. Please don't tell Mom.$"
-
-MossdeepCity_Gym_Text_BlakePostBattle:
-	.string "ARATOR: Ugh... the real treasure...\p"
-	.string "was the cozy friends we made\n"
-	.string "along the way...$"
 
 MossdeepCity_Gym_Text_HannahIntro:
 	.string "When you lose to me, don't be too hard\n"

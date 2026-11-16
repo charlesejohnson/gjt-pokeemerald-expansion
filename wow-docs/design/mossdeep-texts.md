@@ -14,5 +14,5 @@ Story frame: the Windrunners and their lieutenants are a group separate from Kha
 
 ## Arator (immature, over-the-top righteous, whiny; a smidge of parents, mostly the Light)
 - Intro: "HALT, in the name of the LIGHT! The LIGHT sees all! And it says you're going down! By the power of friendship!"
-- Defeat: "That's NOT fair! The LIGHT was still warming up! I was going easy! ...Okay, I wasn't. Please don't tell Mom."
-- After: "Ugh... the real treasure... was the cozy friends we made along the way..."
+- Defeat: "Ugh... the real treasure... was the cozy friends we made along the way..."
+- After: "That's NOT fair! The LIGHT was still warming up! I was going easy! ...Okay, I wasn't. Please don't tell Mom."
