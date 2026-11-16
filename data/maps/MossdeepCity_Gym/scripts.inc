@@ -420,23 +420,22 @@ MossdeepCity_Gym_Text_VirgilPostBattle:
 	.string "we both know better.$"
 
 MossdeepCity_Gym_Text_BlakeIntro:
-	.string "Fufufufu… Watch me levitate a POKé\n"
-	.string "BALL telekinetically!\p"
-	.string "Wrooooooooaaaar!\n"
-	.string "… … … … … … …\p"
-	.string "Sometimes, I'm out of sync…$"
+	.string "ARATOR: HALT, in the name of the\n"
+	.string "LIGHT! The LIGHT sees all!\p"
+	.string "And it says you're going down!\n"
+	.string "Probably! It's been quiet lately.$"
 
 MossdeepCity_Gym_Text_BlakeDefeat:
-	.string "My POKéMON battling skills are out\n"
-	.string "of sync, too!$"
+	.string "ARATOR: That's NOT fair! The LIGHT\n"
+	.string "was still warming up!\p"
+	.string "I was going easy! ...Okay, I\n"
+	.string "wasn't. Please don't tell Mom.$"
 
 MossdeepCity_Gym_Text_BlakePostBattle:
-	.string "A POKé BALL was too heavy to lift\n"
-	.string "psychically. But this dust bunny…\p"
-	.string "Whoooooooooooooooh!\n"
-	.string "… … … … … …\p"
-	.string "No, I'm not cheating!\n"
-	.string "I didn't blow on it! Honestly!$"
+	.string "ARATOR: The LIGHT will avenge me!\n"
+	.string "And Turalyon. He's next.\p"
+	.string "He's very boring. But righteous.\n"
+	.string "So, so righteous.$"
 
 MossdeepCity_Gym_Text_HannahIntro:
 	.string "When you lose to me, don't be too hard\n"

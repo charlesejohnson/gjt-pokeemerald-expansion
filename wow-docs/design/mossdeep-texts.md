@@ -11,3 +11,8 @@ Story frame: the Windrunners and their lieutenants are a group separate from Kha
 - Intro: "A visitor. Do forgive the dark. My lady insists. I have always served the winning side. It is simply not yours."
 - Defeat: "Impressive. Truly. I shall remember this. I am very good at remembering."
 - After: "Do give her my regards. I'd say my loyalty, but I think we both know better."
+
+## Arator (immature, over-the-top righteous, whiny; a smidge of parents, mostly the Light)
+- Intro: "HALT, in the name of the LIGHT! The LIGHT sees all! And it says you're going down! Probably! It's been quiet lately."
+- Defeat: "That's NOT fair! The LIGHT was still warming up! I was going easy! ...Okay, I wasn't. Please don't tell Mom."
+- After: "The LIGHT will avenge me! And Turalyon. He's next. He's very boring. But righteous. So, so righteous."
