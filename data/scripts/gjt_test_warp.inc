@@ -10,17 +10,21 @@ GJT_TestWarp_EventScript_Guide::
 	dynmultipush GJT_TestWarp_Text_Dewford, 1
 	dynmultipush GJT_TestWarp_Text_Mauville, 2
 	dynmultipush GJT_TestWarp_Text_Lavaridge, 7
+	dynmultipush GJT_TestWarp_Text_Petalburg, 8
+	dynmultipush GJT_TestWarp_Text_Fortree, 9
 	dynmultipush GJT_TestWarp_Text_Supplies, 3
 	dynmultipush GJT_TestWarp_Text_WowMons, 4
 	dynmultipush GJT_TestWarp_Text_Badges, 5
 	dynmultipush GJT_TestWarp_Text_NeverMind, 6
-	dynmultistack 0, 0, FALSE, 8, 0, 0, DYN_MULTICHOICE_CB_NONE
+	dynmultistack 0, 0, FALSE, 7, 0, 0, DYN_MULTICHOICE_CB_NONE
 	closemessage
 	switch VAR_RESULT
 	case 0, GJT_TestWarp_EventScript_Rustboro
 	case 1, GJT_TestWarp_EventScript_Dewford
 	case 2, GJT_TestWarp_EventScript_Mauville
 	case 7, GJT_TestWarp_EventScript_Lavaridge
+	case 8, GJT_TestWarp_EventScript_Petalburg
+	case 9, GJT_TestWarp_EventScript_Fortree
 	case 3, GJT_TestWarp_EventScript_Supplies
 	case 4, GJT_TestWarp_EventScript_WowMons
 	case 5, GJT_TestWarp_EventScript_Badges
@@ -47,6 +51,21 @@ GJT_TestWarp_EventScript_Lavaridge::
 	waitstate
 	end
 
+GJT_TestWarp_EventScript_Petalburg::
+	@ Skip the Wally tutorial: put the gym in its "ready for the leader" state
+	goto_if_ge VAR_PETALBURG_GYM_STATE, 6, GJT_TestWarp_EventScript_PetalburgWarp
+	setvar VAR_PETALBURG_GYM_STATE, 6
+	call Common_EventScript_ReadyPetalburgGymForBattle
+GJT_TestWarp_EventScript_PetalburgWarp::
+	warp MAP_PETALBURG_CITY_GYM, 4, 110
+	waitstate
+	end
+
+GJT_TestWarp_EventScript_Fortree::
+	warp MAP_FORTREE_CITY_GYM, 15, 23
+	waitstate
+	end
+
 GJT_TestWarp_EventScript_Supplies::
 	additem ITEM_MASTER_BALL, 10
 	additem ITEM_RARE_CANDY, 99
@@ -59,6 +78,7 @@ GJT_TestWarp_EventScript_Supplies::
 	additem ITEM_ZINC, 5
 	additem ITEM_IRON, 5
 	additem ITEM_CARBOS, 5
+	additem ITEM_PARCEL
 	additem ITEM_TM_ROCK_TOMB
 	additem ITEM_TM_BULK_UP
 	additem ITEM_TM_SHOCK_WAVE
@@ -241,6 +261,12 @@ GJT_TestWarp_Text_Rustboro:
 
 GJT_TestWarp_Text_Dewford:
 	.string "DEWFORD GYM$"
+
+GJT_TestWarp_Text_Petalburg:
+	.string "PETALBURG GYM$"
+
+GJT_TestWarp_Text_Fortree:
+	.string "FORTREE GYM$"
 
 GJT_TestWarp_Text_Lavaridge:
 	.string "LAVARIDGE GYM$"
