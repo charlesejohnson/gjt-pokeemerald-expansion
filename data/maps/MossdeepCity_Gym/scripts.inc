@@ -423,7 +423,7 @@ MossdeepCity_Gym_Text_BlakeIntro:
 	.string "ARATOR: HALT, in the name of the\n"
 	.string "LIGHT! The LIGHT sees all!\p"
 	.string "And it says you're going down!\n"
-	.string "Probably! It's been quiet lately.$"
+	.string "By the power of friendship!$"
 
 MossdeepCity_Gym_Text_BlakeDefeat:
 	.string "ARATOR: That's NOT fair! The LIGHT\n"
@@ -432,10 +432,9 @@ MossdeepCity_Gym_Text_BlakeDefeat:
 	.string "wasn't. Please don't tell Mom.$"
 
 MossdeepCity_Gym_Text_BlakePostBattle:
-	.string "ARATOR: The LIGHT will avenge me!\n"
-	.string "And Turalyon. He's next.\p"
-	.string "He's very boring. But righteous.\n"
-	.string "So, so righteous.$"
+	.string "ARATOR: Ugh... the real treasure...\p"
+	.string "was the cozy friends we made\n"
+	.string "along the way...$"
 
 MossdeepCity_Gym_Text_HannahIntro:
 	.string "When you lose to me, don't be too hard\n"

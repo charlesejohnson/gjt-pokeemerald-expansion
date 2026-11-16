@@ -13,6 +13,6 @@ Story frame: the Windrunners and their lieutenants are a group separate from Kha
 - After: "Do give her my regards. I'd say my loyalty, but I think we both know better."
 
 ## Arator (immature, over-the-top righteous, whiny; a smidge of parents, mostly the Light)
-- Intro: "HALT, in the name of the LIGHT! The LIGHT sees all! And it says you're going down! Probably! It's been quiet lately."
+- Intro: "HALT, in the name of the LIGHT! The LIGHT sees all! And it says you're going down! By the power of friendship!"
 - Defeat: "That's NOT fair! The LIGHT was still warming up! I was going easy! ...Okay, I wasn't. Please don't tell Mom."
-- After: "The LIGHT will avenge me! And Turalyon. He's next. He's very boring. But righteous. So, so righteous."
+- After: "Ugh... the real treasure... was the cozy friends we made along the way..."
