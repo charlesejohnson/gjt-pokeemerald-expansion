@@ -404,16 +404,20 @@ MossdeepCity_Gym_Text_PrestonPostBattle:
 	.string "I'll say it was a draw.$"
 
 MossdeepCity_Gym_Text_VirgilIntro:
-	.string "Let me see your talent!$"
+	.string "VARIMATHRAS: A visitor. Do forgive\n"
+	.string "the dark. My lady insists.\p"
+	.string "I have always served the winning\n"
+	.string "side. It is simply not yours.$"
 
 MossdeepCity_Gym_Text_VirgilDefeat:
-	.string "You possess spectacular talent!$"
+	.string "VARIMATHRAS: Impressive. Truly.\p"
+	.string "I shall remember this. I am\n"
+	.string "very good at remembering.$"
 
 MossdeepCity_Gym_Text_VirgilPostBattle:
-	.string "If there are prodigies in the world,\n"
-	.string "then our GYM LEADERS are them!\p"
-	.string "However, you may be even more talented\n"
-	.string "than them…$"
+	.string "VARIMATHRAS: Do give her my regards.\p"
+	.string "I'd say my loyalty, but I think\n"
+	.string "we both know better.$"
 
 MossdeepCity_Gym_Text_BlakeIntro:
 	.string "Fufufufu… Watch me levitate a POKé\n"

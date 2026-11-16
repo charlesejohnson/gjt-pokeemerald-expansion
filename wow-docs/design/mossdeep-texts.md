@@ -6,3 +6,8 @@ Story frame: the Windrunners and their lieutenants are a group separate from Kha
 - Intro: "The Dark Lady wants to know who comes through her door. I'll mark you. That way I never have to ask twice."
 - Defeat: "Missed. I never miss. I'll tell Lady SYLVANAS it was the lighting."
 - After: "Go on, then. Don't tell her I lost. I'll say it was a draw."
+
+## Varimathras (classic-era: polite, servile, treacherous; "my lady", always on the winning side)
+- Intro: "A visitor. Do forgive the dark. My lady insists. I have always served the winning side. It is simply not yours."
+- Defeat: "Impressive. Truly. I shall remember this. I am very good at remembering."
+- After: "Do give her my regards. I'd say my loyalty, but I think we both know better."
