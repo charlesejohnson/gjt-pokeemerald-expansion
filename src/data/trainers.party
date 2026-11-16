@@ -4420,17 +4420,54 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Hidden Power
 
 === TRAINER_PRESTON ===
-Name: PRESTON
-Class: Psychic
-Pic: Psychic M
+Name: NATHANOS
+Class: Pkmn Ranger
+Pic: Pokemon Ranger M
 Gender: Male
 Music: Intense
+Items: Dire Hit / Dire Hit / Dire Hit / Dire Hit
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer / Ace Pokemon / Omniscient / Smart Mon Choices
 
-Kirlia
-Level: 36
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Houndoom
+Level: 37
+Ability: Flash Fire
+Nature: Naive
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Crunch
+- Fire Fang
+- Sucker Punch
+- Dark Pulse
+
+Weavile
+Level: 38
+Ability: Pressure
+Nature: Jolly
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Night Slash
+- Ice Shard
+- Knock Off
+- Brick Break
+
+Fearow
+Level: 39
+Ability: Sniper
+Nature: Jolly
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Drill Peck
+- Aerial Ace
+- Return
+- U-turn
+
+Dartrix @ Eviolite
+Level: 40
+Ability: Overgrow
+Nature: Adamant
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Leaf Blade
+- Brave Bird
+- Shadow Sneak
+- Swords Dance
 
 === TRAINER_VIRGIL ===
 Name: VIRGIL

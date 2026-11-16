@@ -188,3 +188,12 @@ Flint and Darius removed. The four remaining trainers keep their positions (entr
 | Prince Thunderaan (Winona) | Manectric 31, Skarmory 32, Altaria 32 (Sitrus, no Roost), Mega Pidgeot 32 (Pidgeotite; Hurricane, Heat Wave, Hyper Voice, Quick Attack; no Roost), Tornadus 33 (ace: Prankster Rain Dance, Hurricane, Thunder, Taunt) |
 
 **Castform rule (Charlie, v0.1.6):** each Conclave lieutenant has a non-lead Castform (Lv 29, Forecast, Focus Sash, Weather Ball + their weather move: Anshal Sunny Day, Nezir Hail, Rohash Rain Dance, with only the weather move and Weather Ball (AI should always pick Weather Ball once weather is up)).
+
+## Mossdeep Gym — Windrunner sisters (Ghost/Dark, cap 42) — IN PROGRESS
+
+Leader fight: Sylvanas + Alleria as one double battle (properly hard). Decidueye is reserved for Sylvanas.
+Lieutenants (replace all 12 vanilla trainers, 2 per warp cluster): Nathanos + Varimathras (Sylvanas's side), Arator + Turalyon (Alleria's family), Rhonin + Vereesa (Vereesa is the final lieutenant before the sisters).
+
+### Nathanos Blightcaller (`TRAINER_PRESTON`, Pkmn Ranger) — drafted
+Gimmick: Hunter's Mark. Holds 4 Dire Hit; AI uses one on each mon's first turn (about 50% crit chance, no other crit boosts stacked). Opponent-side use prints "HUNTER'S MARK! <mon> is lining up a killing shot!" (`STRINGID_GJT_HUNTERS_MARK`, `BattleScript_ItemSetFocusEnergy`).
+Team (IVs 20): Houndoom 37 (Crunch, Fire Fang, Sucker Punch, Dark Pulse), Weavile 38 (Night Slash, Ice Shard, Knock Off, Brick Break), Fearow 39 (Sniper; Drill Peck, Aerial Ace, Return, U-turn), Dartrix 40 ace (Eviolite; Leaf Blade, Brave Bird, Shadow Sneak, Swords Dance).

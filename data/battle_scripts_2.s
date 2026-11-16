@@ -157,6 +157,12 @@ BattleScript_ItemSetFocusEnergy::
 	playmoveanimation MOVE_FOCUS_ENERGY
 	waitanimation
 	copybyte sBATTLER, gBattlerAttacker
+	jumpifside BS_ATTACKER, B_SIDE_PLAYER, BattleScript_ItemSetFocusEnergy_Pumped
+	printstring STRINGID_GJT_HUNTERS_MARK
+	waitmessage B_WAIT_TIME_LONG
+	end
+
+BattleScript_ItemSetFocusEnergy_Pumped:
 	printstring STRINGID_PKMNUSEDXTOGETPUMPED
 	waitmessage B_WAIT_TIME_LONG
 	end
