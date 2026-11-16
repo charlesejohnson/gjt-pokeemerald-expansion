@@ -172,3 +172,17 @@ Scott (a guildmate and friend of Charlie's) woke up in Norman's body and is just
 | Jody | Beauty | Zangoose 27, Linoone 27 |
 
 All gym trainers have IV 16 and two mons. Rematch lines and the Wally tutorial scene still say "DAD".
+
+## Fortree Gym (level cap 33) - DRAFT v0.1.5
+
+Boss changed to **Prince Thunderaan** (Winona taken over, fine after). Al'Akir moves to Rayquaza, Neptulon to Kyogre, Therazane to Groudon. Ending: the Windseeker Binding (key item from the Ragnaros scene) seals Thunderaan and yields **Thunderfury** (placeholder key item, repurposed `ITEM_GLIMMERING_CHARM`; planned effect: held item, +10% damage dealt, 10% chance to parry a damaging attack with a short message; not implemented yet).
+
+Flint and Darius removed. The four remaining trainers keep their positions (entrance to boss): Humberto, Ashley, Jared, Edwardo.
+
+| Boss (vanilla slot) | Team |
+|---|---|
+| Anshal, Nature (Humberto) | Jumpluff 29, Cherrim 29, Tropius 31 (Miracle Seed) |
+| Nezir, Frost (Ashley) | Delibird 29, Pelipper 30 (Drizzle, Hail), Swanna 31 (Never-Melt Ice) |
+| Rohash, Wind (Jared) | Emolga 28, Swoobat 30, Drifblim 31 |
+| Faceless One (Edwardo, Hex Maniac sprite, Suspicious music) | Xatu 30, Claydol 30, Banette 31 (confusion/ancient theme) |
+| Prince Thunderaan (Winona) | Manectric 31, Skarmory 32, Altaria 32, Tornadus 33 (ace: Prankster Rain Dance, Hurricane, Thunder, Taunt) |

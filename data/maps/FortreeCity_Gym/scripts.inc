@@ -27,6 +27,11 @@ FortreeCity_Gym_EventScript_Winona::
 	end
 
 FortreeCity_Gym_EventScript_WinonaDefeated::
+	@ GJT: seal Thunderaan with the Windseeker Binding, yielding Thunderfury
+	checkitem ITEM_PARCEL
+	call_if_eq VAR_RESULT, TRUE, FortreeCity_Gym_EventScript_SealThunderaan
+	checkitem ITEM_GLIMMERING_CHARM
+	call_if_eq VAR_RESULT, FALSE, FortreeCity_Gym_EventScript_GiveThunderfury
 	message FortreeCity_Gym_Text_ReceivedFeatherBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
@@ -48,6 +53,15 @@ FortreeCity_Gym_EventScript_WinonaDefeated::
 	setflag FLAG_SCOTT_CALL_FORTREE_GYM
 	release
 	end
+
+FortreeCity_Gym_EventScript_SealThunderaan::
+	msgbox FortreeCity_Gym_Text_SealThunderaan, MSGBOX_DEFAULT
+	removeitem ITEM_PARCEL
+	return
+
+FortreeCity_Gym_EventScript_GiveThunderfury::
+	giveitem ITEM_GLIMMERING_CHARM
+	return
 
 FortreeCity_Gym_EventScript_GiveAerialAce2::
 	giveitem ITEM_TM_AERIAL_ACE
@@ -79,11 +93,6 @@ FortreeCity_Gym_EventScript_Edwardo::
 	msgbox FortreeCity_Gym_Text_EdwardoPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-FortreeCity_Gym_EventScript_Flint::
-	trainerbattle_single TRAINER_FLINT, FortreeCity_Gym_Text_FlintIntro, FortreeCity_Gym_Text_FlintDefeat
-	msgbox FortreeCity_Gym_Text_FlintPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 FortreeCity_Gym_EventScript_Ashley::
 	trainerbattle_single TRAINER_ASHLEY, FortreeCity_Gym_Text_AshleyIntro, FortreeCity_Gym_Text_AshleyDefeat
 	msgbox FortreeCity_Gym_Text_AshleyPostBattle, MSGBOX_AUTOCLOSE
@@ -92,11 +101,6 @@ FortreeCity_Gym_EventScript_Ashley::
 FortreeCity_Gym_EventScript_Humberto::
 	trainerbattle_single TRAINER_HUMBERTO, FortreeCity_Gym_Text_HumbertoIntro, FortreeCity_Gym_Text_HumbertoDefeat
 	msgbox FortreeCity_Gym_Text_HumbertoPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-FortreeCity_Gym_EventScript_Darius::
-	trainerbattle_single TRAINER_DARIUS, FortreeCity_Gym_Text_DariusIntro, FortreeCity_Gym_Text_DariusDefeat
-	msgbox FortreeCity_Gym_Text_DariusPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 FortreeCity_Gym_EventScript_GymGuide::
@@ -135,132 +139,111 @@ FortreeCity_Gym_EventScript_GymStatue::
 	end
 
 FortreeCity_Gym_Text_GymGuideAdvice:
-	.string "Yo, how's it going, CHAMPION-\n"
-	.string "bound {PLAYER}?\p"
-	.string "FORTREE GYM LEADER WINONA is\n"
-	.string "a master of FLYING-type POKéMON.\p"
-	.string "She's waiting at the back of this GYM,\n"
-	.string "behind the rotating doors.\p"
-	.string "She's waiting for new challengers\n"
-	.string "who are trying to take wing!\p"
-	.string "Okay, go for it!$"
+	.string "Hmm? CHAMPION!\p"
+	.string "I'm MAGNI. KHADGAR sent me tae guide\n"
+	.string "ye through these GYMS.\p"
+	.string "The FORTREE GYM is a tree-house maze\n"
+	.string "wi' rotatin' doors, aye. Mind yer step.\p"
+	.string "Guardin' it are the CONCLAVE OF THE\n"
+	.string "WIND: ANSHAL, NEZIR an' ROHASH.\p"
+	.string "An' somethin' else. Somethin' wi' no\n"
+	.string "face. I dinnae like the look o' that.\p"
+	.string "At the top is WINONA, taken by PRINCE\n"
+	.string "THUNDERAAN, the bound prince o' air.\p"
+	.string "Ye'll need that BINDIN' I gave ye. Keep\n"
+	.string "it safe, lad!$"
 
 FortreeCity_Gym_Text_GymGuidePostVictory:
-	.string "You did it!\n"
-	.string "You've achieved liftoff!$"
+	.string "Ye did it, lad! THUNDERAAN's bound\n"
+	.string "again, an' WINONA's alright.\p"
+	.string "Check yer TRAINER CARD. The FEATHER\n"
+	.string "BADGE is recorded.\p"
+	.string "An' that blade… THUNDERFURY. Och,\n"
+	.string "that's a story tae tell yer grandkids.$"
 
 FortreeCity_Gym_Text_JaredIntro:
-	.string "Behold the elegant battle style of\n"
-	.string "BIRD POKéMON!$"
+	.string "ROHASH, of the WIND ITSELF.\p"
+	.string "Blink, and I'll be gone.\n"
+	.string "Blink twice, and you'll be down!$"
 
 FortreeCity_Gym_Text_JaredDefeat:
-	.string "You…\n"
-	.string "You're strong…$"
+	.string "Too slow… I was too slow…$"
 
 FortreeCity_Gym_Text_JaredPostBattle:
-	.string "A TRAINER has to be smart to keep\n"
-	.string "up with unexpected turns of events.\p"
-	.string "Do you have the smarts to get to\n"
-	.string "our LEADER?$"
+	.string "The CONCLAVE stands as one wind.\n"
+	.string "One of us broke. Another is waiting.$"
 
 FortreeCity_Gym_Text_EdwardoIntro:
-	.string "The lovers of BIRD POKéMON aspire\n"
-	.string "to join this GYM.\p"
-	.string "As a member of the FORTREE GYM,\n"
-	.string "I'm not allowed to lose!$"
+	.string "…\p"
+	.string "You… should not… look…\p"
+	.string "There is no face here…\n"
+	.string "only the old thing that watches.\p"
+	.string "It does not blink…\n"
+	.string "It does not end…$"
 
 FortreeCity_Gym_Text_EdwardoDefeat:
-	.string "It was too much of a load for me\n"
-	.string "to bear…$"
+	.string "…It sees you now…$"
 
 FortreeCity_Gym_Text_EdwardoPostBattle:
-	.string "The world is huge, and there are\n"
-	.string "countless tough TRAINERS.\p"
-	.string "I'm going to keep training and make\n"
-	.string "myself even stronger.$"
-
-FortreeCity_Gym_Text_FlintIntro:
-	.string "There's no need for WINONA, our GYM\n"
-	.string "LEADER, to deal with you!\p"
-	.string "I'm plenty good enough for you!$"
-
-FortreeCity_Gym_Text_FlintDefeat:
-	.string "WINONA, I…\n"
-	.string "I lost!$"
-
-FortreeCity_Gym_Text_FlintPostBattle:
-	.string "WINONA is cute and she's strong.\n"
-	.string "She's the ultimate LEADER!\p"
-	.string "Blush…$"
+	.string "…\p"
+	.string "Forget my face.\n"
+	.string "There was no face.$"
 
 FortreeCity_Gym_Text_AshleyIntro:
-	.string "WINONA taught me personally!\n"
-	.string "You can't beat me easily!$"
+	.string "NEZIR, of the FROST WIND.\p"
+	.string "Winter rides the high air.\n"
+	.string "Feel the chill in your bones!$"
 
 FortreeCity_Gym_Text_AshleyDefeat:
-	.string "I was beaten…$"
+	.string "The frost… thins…$"
 
 FortreeCity_Gym_Text_AshleyPostBattle:
-	.string "Thanks to WINONA, the people of\n"
-	.string "FORTREE can live without fear.$"
+	.string "Even the coldest gale warms in time.\n"
+	.string "Go on. ROHASH awaits.$"
 
 FortreeCity_Gym_Text_HumbertoIntro:
-	.string "When WINONA takes to battle, her face\n"
-	.string "shines with beautiful determination…\p"
-	.string "I'm not letting you witness that\n"
-	.string "lovely sight!$"
+	.string "ANSHAL, of the NATURE WIND.\n"
+	.string "Roots hold the earth. Leaves ride the sky.\p"
+	.string "Let me show you how the forest\n"
+	.string "breathes on the gale!$"
 
 FortreeCity_Gym_Text_HumbertoDefeat:
-	.string "Urk!\n"
-	.string "I couldn't stop you.$"
+	.string "The forest… bows…$"
 
 FortreeCity_Gym_Text_HumbertoPostBattle:
-	.string "You'd better watch it!\n"
-	.string "Don't get distracted staring at WINONA\l"
-	.string "or you'll go crashing down in a heap!$"
-
-FortreeCity_Gym_Text_DariusIntro:
-	.string "You'd better know that there are all\n"
-	.string "sorts of FLYING-type POKéMON.\p"
-	.string "You do know that, right?$"
-
-FortreeCity_Gym_Text_DariusDefeat:
-	.string "You seem to know your stuff!$"
-
-FortreeCity_Gym_Text_DariusPostBattle:
-	.string "Sure, you beat me all right.\n"
-	.string "But you'd better watch it! Our LEADER\l"
-	.string "WINONA's POKéMON are all business.$"
+	.string "The wind carries seeds far.\n"
+	.string "Where they land, new groves rise.$"
 
 FortreeCity_Gym_Text_WinonaIntro:
-	.string "I am WINONA. I am the LEADER of\n"
-	.string "the FORTREE POKéMON GYM.\p"
-	.string "I have become one with BIRD POKéMON\n"
-	.string "and have soared the skies…\p"
-	.string "However grueling the battle, we have\n"
-	.string "triumphed with grace…\p"
-	.string "Witness the elegant choreography\n"
-	.string "of BIRD POKéMON and I!$"
+	.string "…the air…\n"
+	.string "…it screams…\p"
+	.string "WINONA… is not… here…\p"
+	.string "I am THUNDERAAN, PRINCE OF AIR!\n"
+	.string "Bow before the WINDSEEKER, little one!\p"
+	.string "I shall carry you into the storm,\n"
+	.string "and no sky will ever hold you again!$"
 
 FortreeCity_Gym_Text_WinonaDefeat:
-	.string "Never before have I seen a TRAINER\n"
-	.string "command POKéMON with more grace\l"
-	.string "than I…\p"
-	.string "In recognition of your prowess,\n"
-	.string "I present to you this GYM BADGE.$"
+	.string "The storm leaves her like a held breath.\p"
+	.string "WINONA drops to her knees, gasping,\n"
+	.string "but whole.\p"
+	.string "You raise the BINDING OF THE WINDSEEKER.\n"
+	.string "Light spirals outward…\p"
+	.string "and PRINCE THUNDERAAN is drawn into\n"
+	.string "the metal, screaming, bound once more.$"
 
 FortreeCity_Gym_Text_ReceivedFeatherBadge:
 	.string "{PLAYER} received the FEATHER BADGE\n"
 	.string "from WINONA.$"
 
 FortreeCity_Gym_Text_ExplainFeatherBadgeTakeThis:
-	.string "With the FEATHER BADGE, all POKéMON up\n"
-	.string "to LV 70, even those received through\l"
-	.string "trades, will obey your every command.\p"
-	.string "You will also be able to use\n"
+	.string "WINONA: …I don't remember much.\n"
+	.string "Only wind. And a voice.\p"
+	.string "But I remember you. Thank you.\p"
+	.string "The FEATHER BADGE lets POKéMON use\n"
 	.string "the HM move FLY outside of battle.\p"
-	.string "And this…\n"
-	.string "This is a gift from me.$"
+	.string "All obedience up to Level 70, too.\n"
+	.string "Please, take this as well.$"
 
 FortreeCity_Gym_Text_ExplainAerialAce:
 	.string "TM40 contains AERIAL ACE.\p"
@@ -273,8 +256,9 @@ FortreeCity_Gym_Text_RegisteredWinona:
 	.string "in the POKéNAV.$"
 
 FortreeCity_Gym_Text_WinonaPostBattle:
-	.string "Though I fell to you, I will remain\n"
-	.string "devoted to BIRD POKéMON.$"
+	.string "WINONA: I will watch the skies\n"
+	.string "more carefully now.\p"
+	.string "Thank you for freeing me, {PLAYER}.$"
 
 FortreeCity_Gym_Text_GymStatue:
 	.string "FORTREE CITY POKéMON GYM$"
@@ -317,3 +301,10 @@ FortreeCity_Gym_Text_WinonaRematchNeedTwoMons:
 	.string "POKéMON with you?\p"
 	.string "Please return with two POKéMON\n"
 	.string "at the very least.$"
+
+FortreeCity_Gym_Text_SealThunderaan:
+	.string "The BINDING hums in your hand.\p"
+	.string "The storm folds into a single blade,\n"
+	.string "crackling with quiet, proud fury.\p"
+	.string "THUNDERFURY, BLESSED BLADE OF THE\n"
+	.string "WINDSEEKER.$"
