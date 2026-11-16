@@ -4489,6 +4489,16 @@ IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 - Knock Off
 - U-turn
 
+Zoroark
+Level: 41
+Ability: Illusion
+Nature: Timid
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Double Team
+- Night Daze
+- Flamethrower
+- Sludge Bomb
+
 Crobat
 Level: 38
 Ability: Inner Focus
@@ -4508,16 +4518,6 @@ IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 - Crunch
 - Will-O-Wisp
 - Sucker Punch
-
-Zoroark
-Level: 41
-Ability: Illusion
-Nature: Timid
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-- Double Team
-- Night Daze
-- Flamethrower
-- Sludge Bomb
 
 === TRAINER_BLAKE ===
 Name: BLAKE
