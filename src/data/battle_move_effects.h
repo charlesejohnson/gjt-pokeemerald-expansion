@@ -1908,6 +1908,12 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
         .usesProtectCounter = TRUE,
     },
 
+    [EFFECT_DEATH_COIL] =
+    {
+        .battleScript = BattleScript_EffectDeathCoil,
+        .battleTvScore = 3,
+    },
+
     [EFFECT_ANTI_MAGIC_SHELL] =
     {
         .battleScript = BattleScript_EffectAntiMagicShell,

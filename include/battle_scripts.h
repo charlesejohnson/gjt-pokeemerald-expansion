@@ -347,6 +347,7 @@ extern const u8 BattleScript_TargetFormChange[];
 extern const u8 BattleScript_AnticipationActivates[];
 extern const u8 BattleScript_EffectIceBlock[];
 extern const u8 BattleScript_EffectAntiMagicShell[];
+extern const u8 BattleScript_EffectDeathCoil[];
 extern const u8 BattleScript_MoveEffectBloodBoil[];
 extern const u8 BattleScript_EffectSubstituteAndSleep[];
 extern const u8 BattleScript_SlowStartEnds[];

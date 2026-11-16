@@ -6281,11 +6281,9 @@ static inline u32 CalcMoveBasePower(struct DamageContext *ctx)
     case EFFECT_SPIT_UP:
         basePower = 100 * gBattleMons[battlerAtk].volatiles.stockpileCounter;
         break;
-    case EFFECT_DEATH_STRIKE:
-        basePower = 35 * gBattleMons[battlerAtk].volatiles.stockpileCounter;
-        break;
-    case EFFECT_FROST_STRIKE:
-        basePower = 55 * gBattleMons[battlerAtk].volatiles.stockpileCounter;
+    case EFFECT_RUNIC_CONSUME:
+        // Death Strike / Frost Strike: move power per Runic Power spent (max 3)
+        basePower *= gBattleMons[battlerAtk].volatiles.stockpileCounter;
         break;
     case EFFECT_REVENGE:
         if (gProtectStructs[battlerAtk].revengeDoubled & 1u << battlerDef)

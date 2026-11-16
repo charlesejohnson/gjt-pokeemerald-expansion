@@ -932,8 +932,9 @@ enum __attribute__((packed)) Move
     MOVE_ARCANE_BLAST = 871,
     MOVE_POLYMORPH = 872,
     MOVE_ARCANE_ORB = 873,
+    MOVE_DEATH_COIL = 874,
 
-    MOVES_COUNT = MOVE_ARCANE_ORB + 1, // includes custom moves (was MOVES_COUNT_GEN9)
+    MOVES_COUNT = MOVE_DEATH_COIL + 1, // includes custom moves (was MOVES_COUNT_GEN9)
 
     // Z Moves
     FIRST_Z_MOVE = MOVES_COUNT,

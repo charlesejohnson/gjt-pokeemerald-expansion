@@ -1,7 +1,8 @@
 Move Name,Type,Damage,Targets,Effects,accuracy,PP,implemented?,remaining work,Level Learned
 Death Knight Custom Moves,-- ,-- ,-- ,-- ,--,,,,
-Scourge Strike,Ghost,40,targeted enemy,"50% chance to poison, +1 runic power",100,25,x,NEED TO LOOK AT SAPPY SEED FOR BONUS EVENTS TRIGGERING ON KILL,5
-Death Strike,Dark,35,targeted enemy,"heal for 50% of damage dealt, consumes runic power",100,15,x,NEED TO LOOK AT SAPPY SEED FOR BONUS EVENTS TRIGGERING ON KILL,10
+Scourge Strike,Ghost,40,targeted enemy,"50% chance to poison, +1 runic power",100,25,x,,5
+Death Strike,Dark,35,targeted enemy,"35 power per runic power spent (max 105), consumes all runic power, heal for 50% of damage dealt",100,15,x,,10
+Death Coil,Ghost,60 (special),targeted enemy or Ghost ally,"spends 1 runic power; heals a Ghost ally for 50% max HP instead of damaging",100,15,x,,20
 Howling Blast,Ice,50,both enemies,"50% chance to freeze/frostbite",95,15,x,,12
 Icebound Fortitude,Ice,,,"2 stage def up, -1 speed",,15,x,,16
 AMS,Ghost,--,self,"safeguard, +1 sp. def",,15,x,,18
@@ -14,7 +15,7 @@ Night Slash,Dark,70,targeted enemy,"high crit chance",100,15,x,,40
 Shadow Claw,Ghost,70,targeted enemy,"high crit chance",100,15,x,,45
 ,,,,,,,,
 Frost DK Custom Moves,--,--,--,--,--,,,,
-Frost Strike,Ice,55,targeted enemy,"consumes runic power, high crit chance",100,15,x,,24
+Frost Strike,Ice,55,targeted enemy,"55 power per runic power spent (max 165), consumes all runic power, high crit chance",100,15,x,,24
 Remorseless Winter,Ice,45 (2-5),all,"10% flinch, 10% freeze",85,10,x,,55
 Obliterate,Ice,90,targeted enemy,high crit chance,85,10,x,,36
 ,,,,,,,,

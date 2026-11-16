@@ -24482,4 +24482,26 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_FocusBlast,
         .validApprenticeMove = TRUE,
     },
+    [MOVE_DEATH_COIL] =
+    {
+        .name = COMPOUND_STRING("Death Coil"),
+        .description = COMPOUND_STRING(
+            "Spends runic power to hurt\n"
+            "a foe or heal a Ghost ally."),
+        .effect = EFFECT_DEATH_COIL,
+        .power = 60,
+        .type = TYPE_GHOST,
+        .accuracy = 100,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_ShadowBall,
+        .validApprenticeMove = TRUE,
+    },
+
 };

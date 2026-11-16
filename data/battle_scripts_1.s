@@ -6489,6 +6489,15 @@ BattleScript_BelchFails::
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
+BattleScript_EffectDeathCoil::
+	jumpiftargetally BattleScript_EffectDeathCoilAlly
+	goto BattleScript_EffectHit
+
+BattleScript_EffectDeathCoilAlly::
+	jumpiftype BS_TARGET, TYPE_GHOST, BattleScript_EffectHealPulse
+	attackcanceler
+	goto BattleScript_ButItFailed
+
 BattleScript_EffectAntiMagicShell::
 	attackcanceler
 	setsafeguard

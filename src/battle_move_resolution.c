@@ -1266,6 +1266,7 @@ static enum CancelerResult CancelerMoveFailure(struct BattleCalcValues *cv)
     case EFFECT_DEATH_STRIKE:
     case EFFECT_FROST_STRIKE:
     case EFFECT_RUNIC_CONSUME:
+    case EFFECT_DEATH_COIL:
         if (gBattleMons[cv->battlerAtk].volatiles.stockpileCounter == 0)
             battleScript = BattleScript_ButItFailed;
         break;
@@ -2591,6 +2592,10 @@ static bool32 ShouldSkipBattlerForDamage(enum BattlerId battlerAtk, enum Battler
     if (gBattleStruct->battlerState[battlerAtk].targetsDone[battlerDef])
         return TRUE;
     if (gBattleStruct->moveResultFlags[battlerDef] & MOVE_RESULT_INVALID_TARGET)
+        return TRUE;
+    // Moves that heal an ally instead of damaging it (Pollen Puff, Death Coil) deal no damage to allies.
+    if ((GetMoveEffect(gCurrentMove) == EFFECT_DEATH_COIL || GetMoveEffect(gCurrentMove) == EFFECT_HIT_ENEMY_HEAL_ALLY)
+     && battlerAtk != battlerDef && IsBattlerAlly(battlerAtk, battlerDef))
         return TRUE;
     return FALSE;
 }
@@ -4124,6 +4129,11 @@ static enum MoveEndResult MoveEndMoveBlockRecoil(struct BattleCalcValues *cv)
 
     switch (cv->moveEffect)
     {
+    case EFFECT_DEATH_COIL:
+        // Spends exactly one Runic Power, whether it damages a foe or heals a Ghost ally.
+        if (!gBattleStruct->unableToUseMove && gBattleMons[cv->battlerAtk].volatiles.stockpileCounter > 0)
+            gBattleMons[cv->battlerAtk].volatiles.stockpileCounter--;
+        break;
     case EFFECT_RECOIL_IF_MISS:
         if (IsBattlerAlive(cv->battlerAtk)
          && IsBattlerUnaffectedByMove(cv->battlerDef)
