@@ -21,3 +21,8 @@ Story frame: the Windrunners and their lieutenants are a group separate from Kha
 - Intro: "The LIGHT has shown me your path. It ends here. I have held greater lines than this. Come. Test mine."
 - Defeat: "Well fought. The LIGHT marked you before I did. I will not argue with it. Today."
 - After: "Rhonin is ahead. He burns bright, and he knows it. Go. The LIGHT walks with you. I walk behind, with my son."
+
+## Rhonin (cocky, funny, reckless fire mage)
+- Intro: "Oh good, a challenger. My wife says no fire indoors. Technically, this is a gym."
+- Defeat: "Okay, that one's on me. Big explosion was the whole plan. Usually that's enough."
+- After: "Vereesa's next. She's the dangerous one. I'm the funny one. Don't tell her I said that."

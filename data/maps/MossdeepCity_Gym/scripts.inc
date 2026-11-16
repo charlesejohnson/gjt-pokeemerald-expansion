@@ -550,16 +550,19 @@ MossdeepCity_Gym_Text_MaceyPostBattle:
 	.string "The way you battle is somehow brutal!$"
 
 MossdeepCity_Gym_Text_NicholasIntro:
-	.string "Wroooar! Have a taste of my super\n"
-	.string "POKéMON hard-battling power!$"
+	.string "RHONIN: Oh good, a challenger. My\n"
+	.string "wife says no fire indoors.\p"
+	.string "Technically, this is a gym.$"
 
 MossdeepCity_Gym_Text_NicholasDefeat:
-	.string "Oh!\n"
-	.string "Done in!$"
+	.string "RHONIN: Okay, that one's on me.\p"
+	.string "Big explosion was the whole plan.\n"
+	.string "Usually that's enough.$"
 
 MossdeepCity_Gym_Text_NicholasPostBattle:
-	.string "All right! I think I'll develop a special\n"
-	.string "invincible POKéMON power next.$"
+	.string "RHONIN: Vereesa's next. She's the\n"
+	.string "dangerous one. I'm the funny one.\p"
+	.string "Don't tell her I said that.$"
 
 MossdeepCity_Gym_Text_TateAndLizaIntro:
 	.string "TATE: Hehehe… Were you surprised?\p"
