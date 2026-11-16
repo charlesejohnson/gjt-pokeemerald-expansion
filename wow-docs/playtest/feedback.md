@@ -57,3 +57,9 @@ When a new playtester or run is recorded, add a `## <Name>'s results` section in
 - Done as palette swaps only (`graphics/pokemon/deathknight/{frost,unholy}_{normal,shiny}.pal`); pixel art is shared with Bisharp.
 - Shinies: Blood keeps Bisharp's purple, Frost shiny is red, Unholy shiny is orange.
 - Party/PC icons still use Bisharp's shared icon palette (red-ish); recoloring needs a custom icon palette slot.
+
+## Mage sprites (2026-11-16)
+- Base Mage: Ralts (green). Frost / Fire / Arcane: Gardevoir recolored light blue / orange / light purple (green slots swapped; palettes in `graphics/pokemon/gardevoir/*_mage_*.pal`).
+- Shinies: Frost = original green, Fire = yellow, Arcane = Gardevoir's own shiny (teal).
+- Evolved forms now use Gardevoir's size/offset values (previously copied from Froslass/Delphox/Nihilego).
+- Icons use Gardevoir's shared icon palette (green); recoloring needs custom icon palettes.
