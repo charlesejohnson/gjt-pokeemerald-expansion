@@ -83,6 +83,6 @@ Remaining failures are expected for this fork and not regressions:
   - **Rustboro / Dewford / Mauville Gym**: warps to that gym's entrance.
   - **Supplies**: 10 Master Balls, 99 Rare Candies, 5 each of Fire/Water/Leaf Stone and the six vitamins, and TM39 Rock Tomb, TM08 Bulk Up, TM34 Shock Wave. Repeatable. (Rare Candy is not infinite; just 99 per visit.)
   - **Class Pokémon**: a level 5 Death Knight and a level 5 Mage. Add new class base forms in `GJT_TestWarp_EventScript_WowMons` as they are implemented.
-  - **Badges 1-3**: sets the first three badge flags. The level cap follows the badges (15 with none, 19, 24, then 29 with three), and Rare Candy and EXP obey it.
+  - **Badges**: a menu to flip badges 1 to 8 on or off one at a time (it stays open so you can flip several), plus Give All 8 and Clear All. The level cap is the value for the first badge you do **not** have, in order (`src/caps.c`): 0 badges = 15, badges 1 = 19, 1-2 = 24, 1-3 = 29, 1-4 = 31, 1-5 = 33, 1-6 = 42, 1-7 = 46, all 8 = 60 (until the Champion flag is set, after which there is no cap). Having badge 3 but not badge 2 still caps you at the badge-2 value.
   - It does not set "defeated gym" flags, so the gym guides' one-time loot is not triggered by this menu.
   - **Remove the two `GJT_TestWarp_EventScript_Guide` objects from `LittlerootTown_BrendansHouse_2F` and `LittlerootTown_MaysHouse_2F` map.json before release.** For each new gym add a menu entry and a warp line.
