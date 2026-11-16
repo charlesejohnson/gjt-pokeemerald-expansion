@@ -15,6 +15,7 @@ Docs here were consolidated on 2026-11-15 from sheets last edited in 2025. Anyth
 | Boss teams (Rustboro, Dewford, Mauville, misc) | [design/bosses.md](design/bosses.md) | The in-game trainer data is authoritative for exact values |
 | Feature list | [design/features.md](design/features.md) | |
 | Magma/Aqua dialogue ideas | [design/enemy-teams.md](design/enemy-teams.md) | Early brainstorm |
+| How bosses/gyms were built (reconstructed method, risks) | [design/boss-and-gym-method.md](design/boss-and-gym-method.md) | Inferred from git history; correct it if wrong |
 | Which trainers are replaced, tested, unused | [tracking/trainer-mapping.md](tracking/trainer-mapping.md) | Snapshot, update as you test |
 | DK move history | [tracking/death-knight-moves.md](tracking/death-knight-moves.md) | Superseded by `data/stats-moves.csv` |
 | Playtest results, bugs, per-boss design intent | [playtest/feedback.md](playtest/feedback.md) | |
