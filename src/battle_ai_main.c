@@ -2045,6 +2045,7 @@ static s32 AI_CheckBadMove(enum BattlerId battlerAtk, enum BattlerId battlerDef,
         if (!AI_CanBeInfatuated(battlerAtk, battlerDef, aiData->abilities[battlerDef]))
             ADJUST_SCORE(-10);
         break;
+    case EFFECT_ANTI_MAGIC_SHELL:
     case EFFECT_SAFEGUARD:
         if (gSideStatuses[GetBattlerSide(battlerAtk)] & SIDE_STATUS_SAFEGUARD
           || DoesPartnerHaveSameMoveEffect(GetPartnerBattler(battlerAtk), battlerDef, move, aiData->partnerMove))
@@ -4970,6 +4971,7 @@ static s32 AI_CalcMoveEffectScore(enum BattlerId battlerAtk, enum BattlerId batt
         else
             ADJUST_SCORE(DECENT_EFFECT);
         break;
+    case EFFECT_ANTI_MAGIC_SHELL:
     case EFFECT_SAFEGUARD:
         if (!IsMistyTerrainAffected(battlerAtk, aiData->abilities[battlerAtk], aiData->holdEffects[battlerAtk], gFieldTimers.terrain) || !AI_IsBattlerGrounded(battlerAtk))
             ADJUST_SCORE(DECENT_EFFECT); // TODO: check if opp has status move?

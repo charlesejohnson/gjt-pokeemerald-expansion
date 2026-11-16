@@ -617,6 +617,9 @@ AI_DOUBLE_BATTLE_TEST("AI values moves above Splash, 801-900")
         //TODO: AI HANDLING
         case EFFECT_SHED_TAIL:
         case EFFECT_FAIL_IF_NOT_ARG_TYPE:
+        case EFFECT_ANTI_MAGIC_SHELL:
+        case EFFECT_ICE_BLOCK:
+        case EFFECT_SUBSTITUTE_AND_SLEEP:
 
         //TODO: AI TESTS
         case EFFECT_WEATHER_AND_SWITCH:

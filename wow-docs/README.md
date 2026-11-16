@@ -68,3 +68,11 @@ The fork was merged with upstream master on branch `upstream-sync`. Notes for fu
 - Battle effects now live in C: Runic Power / Crit Up 1 are set-effect handlers in `src/battle_set_effect.c`; Mana Barrier recoil is in `MoveEndMoveBlockRecoil`; spender moves (Death Strike, Frost Strike, Runic Consume) fail without Runic Power and consume it in the move-end stockpile block (`src/battle_move_resolution.c`).
 - Ice Block counts as a protect move (`include/move.h`); Polymorph uses `argument.nonVolatileStatus = MOVE_EFFECT_SLEEP`.
 - Known failing upstream tests, caused by fork config (Gen 3 exp / Stockpile settings) or custom content (move-name widths, missing animations): exp.c, stockpile.c, sheer_force, embargo, text.c, all_anims, AI splash.
+
+## Known test failures (as of 2026-11-15, full `make check`)
+Remaining failures are expected for this fork and not regressions:
+- `exp.c`, `stockpile.c`, `sheer_force.c`, `embargo.c`, `competitive/defiant/guard_swap` assumptions: fork config (exp formula, stat-boost settings) differs from upstream defaults.
+- `gimmick_z_move.c` (AI Z-Detect): AI/config difference, not touched by WoW work.
+- `all_anims.c`: custom WoW moves have no unique animations yet (placeholder anims).
+- `text.c` "?? was turned into a harmless creature": fixed by shortening the Polymorph message; Army of the Dead renamed "Army of Dead" for Contest-screen width.
+- AI Splash test: custom effects (Anti-Magic Shell, Ice Block, Polymorph) are listed as "AI HANDLING" TODOs.

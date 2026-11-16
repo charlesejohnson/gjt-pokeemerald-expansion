@@ -24122,7 +24122,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_ARMY_OF_THE_DEAD] =
     {
-        .name = COMPOUND_STRING("Army of the Dead"),
+        .name = COMPOUND_STRING("Army of Dead"),
         .description = COMPOUND_STRING(
             "Summons an army of\n"
             "undead to swarm the foe."),
@@ -24130,6 +24130,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .power = 25,
         .type = TYPE_GHOST,
         .accuracy = 90,
+        .strikeCount = 10,
         .pp = 5,
         .target = TARGET_SELECTED,
         .priority = 0,

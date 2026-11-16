@@ -284,7 +284,7 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_PKMNCANTRUNICPOWER]                   = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} can't generate more Runic Power!"),
     [STRINGID_PKMNUSEDRUNICPOWER]                   = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} used {B_BUFF1} Runic Power!"),
     [STRINGID_PKMNFAILEDTORUNICPOWER]               = COMPOUND_STRING("But it failed!"),
-    [STRINGID_PKMNPOLYMORPHED]                      = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX} was turned into a harmless\ncreature!"),
+    [STRINGID_PKMNPOLYMORPHED]                      = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}\nwas polymorphed!"),
     [STRINGID_PKMNBLOODBOILING]                     = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s blood is boiling!"),
     [STRINGID_PKMNHOTSTREAK]                        = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} is on a hot streak!"),
 
