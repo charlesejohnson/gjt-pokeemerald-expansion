@@ -1,7 +1,7 @@
 Move Name,Type,Damage,Targets,Effects,accuracy,PP,implemented?,remaining work,Level Learned
 Death Knight Custom Moves,-- ,-- ,-- ,-- ,--,,,,
 Scourge Strike,Ghost,40,targeted enemy,"50% chance to poison, +1 runic power",100,25,x,,5
-Death Strike,Dark,35,targeted enemy,"35 power per runic power spent (max 105), consumes all runic power, heal for 50% of damage dealt",100,15,x,,10
+Death Strike,Dark,35,targeted enemy,"70 power, costs 2 runic power, heal for 50% of damage dealt",100,15,x,,10
 Death Coil,Ghost,60 (special),targeted enemy or Ghost ally,"spends 1 runic power; heals a Ghost ally for 50% max HP instead of damaging",100,15,x,,20
 Howling Blast,Ice,50,both enemies,"50% chance to freeze/frostbite",95,15,x,,12
 Icebound Fortitude,Ice,,,"2 stage def up, -1 speed",,15,x,,16

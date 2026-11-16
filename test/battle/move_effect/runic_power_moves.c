@@ -1,40 +1,39 @@
 #include "global.h"
 #include "test/battle.h"
 
-SINGLE_BATTLE_TEST("Death Strike power scales with Runic Power and spends all of it", s16 damage)
+SINGLE_BATTLE_TEST("Death Strike costs 2 Runic Power and has flat power")
 {
-    u32 scourges;
-    PARAMETRIZE { scourges = 1; }
-    PARAMETRIZE { scourges = 2; }
     GIVEN {
         PLAYER(SPECIES_DEATHKNIGHT_BLOOD) { Speed(100); }
-        OPPONENT(SPECIES_WOBBUFFET) { Ability(ABILITY_MAGIC_GUARD); Speed(1); HP(1000); MaxHP(1000); }
+        OPPONENT(SPECIES_WOBBUFFET) { Ability(ABILITY_MAGIC_GUARD); Speed(1); }
     } WHEN {
-        for (u32 j = 0; j < scourges; j++)
-            TURN { MOVE(player, MOVE_SCOURGE_STRIKE); }
+        TURN { MOVE(player, MOVE_SCOURGE_STRIKE); }
+        TURN { MOVE(player, MOVE_SCOURGE_STRIKE); }
+        TURN { MOVE(player, MOVE_SCOURGE_STRIKE); }
         TURN { MOVE(player, MOVE_DEATH_STRIKE); }
     } SCENE {
-        for (u32 j = 0; j < scourges; j++)
-            HP_BAR(opponent);
-        HP_BAR(opponent, captureDamage: &results[i].damage);
+        HP_BAR(opponent);
+        HP_BAR(opponent);
+        HP_BAR(opponent);
+        HP_BAR(opponent);
     } THEN {
-        EXPECT_EQ((u32)player->volatiles.stockpileCounter, 0);
-    } FINALLY {
-        EXPECT_GT(results[1].damage * 100, results[0].damage * 190);
-        EXPECT_LT(results[1].damage * 100, results[0].damage * 210);
+        EXPECT_EQ((u32)player->volatiles.stockpileCounter, 1);
     }
 }
 
-SINGLE_BATTLE_TEST("Death Strike fails without Runic Power")
+SINGLE_BATTLE_TEST("Death Strike fails with fewer than 2 Runic Power")
 {
     GIVEN {
-        PLAYER(SPECIES_DEATHKNIGHT_BLOOD);
-        OPPONENT(SPECIES_WOBBUFFET);
+        PLAYER(SPECIES_DEATHKNIGHT_BLOOD) { Speed(100); }
+        OPPONENT(SPECIES_WOBBUFFET) { Ability(ABILITY_MAGIC_GUARD); Speed(1); }
     } WHEN {
+        TURN { MOVE(player, MOVE_SCOURGE_STRIKE); }
         TURN { MOVE(player, MOVE_DEATH_STRIKE); }
     } SCENE {
+        HP_BAR(opponent);
         MESSAGE("But it failed!");
-        NOT HP_BAR(opponent);
+    } THEN {
+        EXPECT_EQ((u32)player->volatiles.stockpileCounter, 1);
     }
 }
 

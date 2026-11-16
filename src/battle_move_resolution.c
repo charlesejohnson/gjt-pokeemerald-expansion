@@ -1263,7 +1263,10 @@ static enum CancelerResult CancelerMoveFailure(struct BattleCalcValues *cv)
         if (gBattleMons[cv->battlerAtk].volatiles.noRetreat)
             battleScript = BattleScript_ButItFailed;
         break;
-    case EFFECT_DEATH_STRIKE:
+    case EFFECT_DEATH_STRIKE: // costs 2 Runic Power
+        if (gBattleMons[cv->battlerAtk].volatiles.stockpileCounter < 2)
+            battleScript = BattleScript_ButItFailed;
+        break;
     case EFFECT_FROST_STRIKE:
     case EFFECT_RUNIC_CONSUME:
     case EFFECT_DEATH_COIL:
@@ -4134,6 +4137,11 @@ static enum MoveEndResult MoveEndMoveBlockRecoil(struct BattleCalcValues *cv)
         if (!gBattleStruct->unableToUseMove && gBattleMons[cv->battlerAtk].volatiles.stockpileCounter > 0)
             gBattleMons[cv->battlerAtk].volatiles.stockpileCounter--;
         break;
+    case EFFECT_DEATH_STRIKE:
+        // Spends exactly two Runic Power.
+        if (!gBattleStruct->unableToUseMove && gBattleMons[cv->battlerAtk].volatiles.stockpileCounter >= 2)
+            gBattleMons[cv->battlerAtk].volatiles.stockpileCounter -= 2;
+        break;
     case EFFECT_RECOIL_IF_MISS:
         if (IsBattlerAlive(cv->battlerAtk)
          && IsBattlerUnaffectedByMove(cv->battlerDef)
@@ -4251,7 +4259,6 @@ static enum MoveEndResult MoveEndMoveBlock(struct BattleCalcValues *cv)
         {
         case EFFECT_SPIT_UP:
         case EFFECT_SWALLOW:
-        case EFFECT_DEATH_STRIKE:
         case EFFECT_FROST_STRIKE:
         case EFFECT_RUNIC_CONSUME:
             if (!gBattleStruct->unableToUseMove)

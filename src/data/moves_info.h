@@ -23855,8 +23855,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Cleaves into the target,\n"
             "draining their life force."),
-        .effect = EFFECT_RUNIC_CONSUME,
-        .power = 35,
+        .effect = EFFECT_DEATH_STRIKE,
+        .power = 70,
         .type = TYPE_DARK,
         .accuracy = 100,
         .pp = 15,

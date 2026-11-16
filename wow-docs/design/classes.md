@@ -21,7 +21,7 @@ Decisions (confirmed by Charlie, 2026-11-15):
 - *Will of the Necropolis* belongs to the **Blood DK** (replaces Cursed Body): takes 33% less damage while HP is below 50%. Implemented and tested. The in-game name is shortened to "Necropolis Will" because ability names are capped at 16 characters.
 - Snow Warning, Sniper, Poison Touch, Parental Bond and Dark Aura were audited on the merged build and tested (`test/battle/ability/will_of_the_necropolis.c`).
 
-Runic Power rules (confirmed 2026-11-15): Scourge Strike generates 1 (max 3). Death Strike and Frost Strike spend all of it and scale power per point (35 and 55). Death Coil spends 1 for flat 60 special power; used on a Ghost-type ally it heals 50% max HP instead, and it cannot target the user. The Sappy Seed note in the tracker was a reference for Blood Boil, not a kill-trigger requirement.
+Runic Power rules (confirmed 2026-11-15): Scourge Strike generates 1 (max 3). Death Strike costs exactly 2 for a flat 70 power (updated 2026-11-15). Frost Strike spends all of it and scales power per point (55). Death Coil spends 1 for flat 60 special power; used on a Ghost-type ally it heals 50% max HP instead, and it cannot target the user. The Sappy Seed note in the tracker was a reference for Blood Boil, not a kill-trigger requirement.
 
 Early Blood DK move ideas: Marrowrend (physical, Ground or Dark, +1 Def), Death Strike (Ghost or Dark, heals 100% of damage dealt), AMS (+2 SpDef, Safeguard), Blood Boil. See [../tracking/death-knight-moves.md](../tracking/death-knight-moves.md) for current status.
 
