@@ -257,29 +257,33 @@ MauvilleCity_Gym_EventScript_GymStatue::
 	end
 
 MauvilleCity_Gym_Text_GymGuideAdvice:
-	.string "Hey, how's it going, CHAMPION-\n"
-	.string "bound {PLAYER}?\p"
-	.string "WATTSON, the LEADER of MAUVILLE\n"
-	.string "GYM, uses ELECTRIC-type POKéMON.\p"
-	.string "If you challenge him with WATER-type\n"
-	.string "POKéMON, he'll zap them! Bzzt!\p"
-	.string "And, he's put in switch-controlled\n"
-	.string "doors all over his GYM! Eccentric!\p"
-	.string "Hey, go for it!$"
+	.string "Laddie!\p"
+	.string "Ye made it tae MAUVILLE!\p"
+	.string "The THUNDER KING himself,\n"
+	.string "LEI SHEN, has risen from his throne\l"
+	.string "an' taken this GYM!\p"
+	.string "Watch yer WATER-types, laddie.\n"
+	.string "The lightnin' will fry 'em!\l"
+	.string "A GROUND-type'd be a fine friend\l"
+	.string "in there.\p"
+	.string "But I know 'ye can do it!$"
 
 MauvilleCity_Gym_Text_GymGuidePostVictory:
-	.string "Whoa, you're electrifying!\n"
-	.string "You've powered the door open!$"
+	.string "Aye, ye shocked the THUNDER KING\n"
+	.string "right oot o' WATTSON!\p"
+	.string "KHADGAR'll be proud o' ye, laddie!$"
 
 MauvilleCity_Gym_Text_KirkIntro:
 	.string "Da Thunder King give me power!\n"
 	.string "Come, I show you!$"
 
 MauvilleCity_Gym_Text_KirkDefeat:
-	.string "How you beat me?$"
+	.string "Da storm...\n"
+	.string "it fade...$"
 
 MauvilleCity_Gym_Text_KirkPostBattle:
-	.string "How you beat me?$"
+	.string "Go.\n"
+	.string "Da THUNDER KING wait for you.$"
 
 MauvilleCity_Gym_Text_ShawnIntro:
 	.string "This twisted world is beyond redemption,\n"
@@ -302,11 +306,14 @@ MauvilleCity_Gym_Text_BenIntro:
 	.string "They told me I was a sacrifice\n"
 	.string "and stuffed me in this corner!$"
 MauvilleCity_Gym_Text_BenDefeat:
-	.string "It's no fun to lose…$"
+	.string "No fair!\n"
+	.string "I'm not even a boss!$"
 
 MauvilleCity_Gym_Text_BenPostBattle:
-	.string "WATTSON says he likes setting up\n"
-	.string "little traps with switches.$"
+	.string "WATTSON's eyes went all blue\n"
+	.string "and sparky.\p"
+	.string "I think he's still in there\n"
+	.string "somewhere.$"
 
 MauvilleCity_Gym_Text_VivianIntro:
 	.string "With my charm and my POKéMON's moves,\n"
@@ -326,11 +333,12 @@ MauvilleCity_Gym_Text_AngeloIntro:
 	.string "ROAAARRRRRR$"
 
 MauvilleCity_Gym_Text_AngeloDefeat:
-	.string "…$"
+	.string "The giant turtle slowly retreats\n"
+	.string "into its shell.$"
 
 MauvilleCity_Gym_Text_AngeloPostBattle:
-	.string "The man lays almost motionless,\p"
-	.string "but still breathing$"
+	.string "TORTOS lets out a low rumble,\n"
+	.string "then goes back to sleep.$"
 
 MauvilleCity_Gym_Text_WattsonIntro:
 	.string "LEI SHEN: This is not my first\n"

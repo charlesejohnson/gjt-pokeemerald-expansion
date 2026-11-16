@@ -132,7 +132,7 @@ RustboroCity_Gym_Text_GymGuideAdvice:
 	.string "our damsel in distress, AZEROTH, aye?\p"
 	.string "First up right here is the RUSTBORO GYM,\p"
 	.string "which seems to 'ave been taken over\n"
-	.string "by the ancients of AHN'QUIRAJ.\n"
+	.string "by the ancients of AHN'QIRAJ.\n"
 	.string "Should you emerge victorious,.\p"
 	.string "return to me for some LOOT!!$"
 
@@ -216,10 +216,10 @@ RustboroCity_Gym_Text_RoxannePostBattle:
 	.string "shocked from the ordeal$"
 
 RustboroCity_Gym_Text_GymStatue:
-	.string "AHN'QUIRAJ$"
+	.string "AHN'QIRAJ$"
 
 RustboroCity_Gym_Text_GymStatueCertified:
-	.string "AHN'QUIRAJ\p"
+	.string "AHN'QIRAJ\p"
 	.string "HALL OF FAME:\n"
 	.string "{PLAYER}$"
 

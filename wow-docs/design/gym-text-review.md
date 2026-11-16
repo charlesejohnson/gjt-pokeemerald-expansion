@@ -74,3 +74,17 @@ Reply with the lines in any order; I will drop them into the right `.string` blo
 ## Draft answers (Claude's guess at the author's voice, for editing)
 
 These are proposals, not final text. The Scottish Magni voice, short in-character boss lines and narrated leader scenes are copied from Rustboro and Dewford. See the chat thread for the full set; replace any with your own wording.
+
+## Applied 2026-11-16 (author approved)
+
+- Mauville Gym Guide advice and post-victory lines (Scots voice). The loot sentence was dropped because Mauville's guide gives no items.
+- Jin'Rokh (Kirk), Tortos (Angelo) and Ben defeat and post-battle lines.
+- Ra-Den unchanged. Vivian's text kept as a spare.
+- Rustboro raid spelling changed from AHN'QUIRAJ to AHN'QIRAJ (statue and boss line).
+- Rematch lines left vanilla.
+
+## Still open
+
+- **Wattson / Lei Shen post-win lines.** The author wants to compare against Roxanne and Brawly first. Reference: Roxanne wakes up confused and is narrated as "shell-shocked"; Brawly stays corrupted ("Leave me to my dishonor") and the badge scene is narrated. Wattson's badge scene already follows Roxanne (he regains control and thanks you). Only `WattsonPostBattle` and `WattsonGoForthAndEndeavor` still use cheerful vanilla text.
+- **Mauville loot.** Rustboro gives 5 each of six vitamins; Dewford gives Fire/Water/Leaf stones. Decide what Mauville gives (for example Thunder Stone, or more vitamins) and then restore a loot line to Magni's advice.
+- **Vivian** is not in the gym. Her trainer and script still exist; her map object was removed in the 2025-05-05 Mauville map redesign (commit `c84dc2292`). **Ben** is in the gym at (1,9) as a normal Youngster trainer (Zigzagoon and Gulpin, Lv 17), so he is a real fight, not just text.
