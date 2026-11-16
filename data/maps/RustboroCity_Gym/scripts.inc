@@ -171,7 +171,7 @@ RustboroCity_Gym_Text_MarcIntro:
 	.string "HSSSS!!!!$"
 
 RustboroCity_Gym_Text_MarcDefeat:
-	.string "Hssss....."
+	.string "Hssss.....$"
 
 RustboroCity_Gym_Text_MarcPostBattle:
 	.string "Hssss....$"

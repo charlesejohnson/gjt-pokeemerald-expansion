@@ -300,7 +300,7 @@ MauvilleCity_Gym_Text_BenIntro:
 	.string "WATTSON changed... and then all\n"
 	.string "The GYM trainers!\p"
 	.string "They told me I was a sacrifice\n"
-	.string "And stuffed me in this corner!\p"
+	.string "And stuffed me in this corner!$"
 MauvilleCity_Gym_Text_BenDefeat:
 	.string "It's no fun to lose…$"
 

@@ -19,7 +19,7 @@ Dewford, Slateport and Mauville bosses were not rated in any tab.
 
 ## Known bugs (from the sheet)
 
-- Some dialogue writes over itself in gyms — **needs a repro** (which gym/trainer?); a width scan of gym text is inconclusive since vanilla lines are similar
+- Some dialogue writes over itself in gyms — likely cause found 2026-11-16: three gym strings lacked the `$` terminator (Marc defeat, Bulk Up explanation, Ben intro) and are now fixed; please confirm in-game and tell me if overlap remains
 - Custom mons sometimes hover (display issue only) — **fixed 2026-11-15**: custom forms reusing Bisharp/Ralts/Froslass/Delphox/Nihilego sprites now copy that species' front/back size, Y offset and enemy elevation. Death Knight base form uses its own sprite and still needs checking in-game.
 
 - Mauville Gym: stray pressed-switch tiles appear after beating Wattson, and two NPC lines still mention switches (see [../design/boss-and-gym-method.md](../design/boss-and-gym-method.md)); gym is completable

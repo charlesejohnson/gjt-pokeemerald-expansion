@@ -781,13 +781,9 @@ void MauvilleGymSetDefaultBarriers(void)
 // Presses all switches and deactivates all beams.
 void MauvilleGymDeactivatePuzzle(void)
 {
-    int i, x, y;
-    const struct UCoords8 *switchCoords = sMauvilleGymSwitchCoords;
-    for (i = ARRAY_COUNT(sMauvilleGymSwitchCoords) - 1; i >= 0; i--)
-    {
-        MapGridSetMetatileIdAt(switchCoords->x, switchCoords->y, METATILE_MauvilleGym_PressedSwitch);
-        switchCoords++;
-    }
+    int x, y;
+    // GJT: the redesigned gym has no switches, so the vanilla loop that painted
+    // "pressed switch" tiles at the old switch coordinates is gone.
     for (y = 5 + MAP_OFFSET; y < 17 + MAP_OFFSET; y++)
     {
         for (x = 0 + MAP_OFFSET; x < 9 + MAP_OFFSET; x++)
