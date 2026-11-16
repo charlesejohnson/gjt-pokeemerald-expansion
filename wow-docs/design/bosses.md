@@ -204,7 +204,7 @@ Team (IVs 20, in order): Incineroar 40 (Sitrus; Flare Blitz, Darkest Lariat, Kno
 
 ### Arator the Hopeful (`TRAINER_BLAKE`, name "ARATOR", Expert placeholder sprite) — drafted
 Child of void and light. Joke: he is immature, so his first three mons are badly underleveled (33-35, IVs 12) but all carry Counter/Mirror Coat so careless hits get punished. The ace is far stronger: Lucario 42 (cap-level), IVs 31, 252 Atk / 252 Spe, Focus Sash, Justified (Dark moves in this gym power it up), Revenge.
-Team: Togekiss 33 (Serene Grace; Air Slash, Mirror Coat, Nasty Plot, Roost), Gardevoir 34 (Trace; Moonblast, Counter, Calm Mind, Shadow Ball), Spiritomb 35 (Infiltrator; Foul Play, Counter, Will-O-Wisp, Shadow Sneak), Lucario 42 ace (Close Combat, Extreme Speed, Revenge, Swords Dance).
+Team: Togekiss 33 (Serene Grace; Air Slash, Mirror Coat, Nasty Plot, Roost), Clefable 34 (Magic Guard; Moonblast, Counter, Calm Mind, Shadow Ball; replaced Gardevoir, no Ralts line), Spiritomb 35 (Infiltrator; Foul Play, Counter, Will-O-Wisp, Shadow Sneak), Lucario 42 ace (Close Combat, Extreme Speed, Revenge, Swords Dance).
 TODO when the gym layout is done: intro/defeat text should play up the immaturity.
 
 ### Turalyon (`TRAINER_NATE`, name "TURALYON") — drafted
@@ -238,5 +238,5 @@ Steel/Electric clockwork team, Will Suicide so Bronzong uses Explosion after Tri
 Team (IVs 24): Magneton 42 (Thunderbolt, Flash Cannon, Magnet Rise, Thunder Wave), Klang 42 (Gear Grind, Wild Charge, Rock Slide, Shift Gear), Bronzong 43 (Sitrus; Levitate; Trick Room, Gyro Ball, Hypnosis, Explosion), Magnezone 44 ace (Magnet; Discharge, Flash Cannon, Thunder Wave, Volt Switch).
 
 ### Taelia Fordragon (`TRAINER_CONNIE`, name "TAELIA", Expert F placeholder) — drafted
-Kul Tiran champion, earnest and warm; last fight before Jaina (5 mons, IVs 26). Bisharp is her "sword" (not Lucario, Arator has it). Seadra is a Sniper crit mon (Focus Energy).
-Team: Lanturn 42 (Volt Absorb; Scald, Thunderbolt, Ice Beam, Rest), Seadra 43 (Sniper; Surf, Dragon Pulse, Ice Beam, Focus Energy), Gyarados 44 (Sitrus; Intimidate; Waterfall, Crunch, Dragon Dance, Ice Fang), Bisharp 44 (Black Glasses; Defiant; Sucker Punch, Iron Head, Night Slash, Swords Dance), Empoleon 45 ace (Leftovers; Torrent; Surf, Flash Cannon, Ice Beam, Roost).
+Kul Tiran champion, earnest and warm; last fight before Jaina (5 mons, IVs 26). Scizor is her "sword" (Bisharp was dropped: too close to the Death Knight look; Lucario is Arator's). Seadra is a Sniper crit mon (Focus Energy).
+Team: Lanturn 42 (Volt Absorb; Scald, Thunderbolt, Ice Beam, Rest), Seadra 43 (Sniper; Surf, Dragon Pulse, Ice Beam, Focus Energy), Gyarados 44 (Sitrus; Intimidate; Waterfall, Crunch, Dragon Dance, Ice Fang), Scizor 44 (Choice Band; Technician; Bullet Punch, Iron Head, X-Scissor, Superpower), Empoleon 45 ace (Leftovers; Torrent; Surf, Flash Cannon, Ice Beam, Roost).

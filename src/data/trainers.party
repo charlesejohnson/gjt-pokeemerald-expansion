@@ -2578,15 +2578,15 @@ IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
 - Dragon Dance
 - Ice Fang
 
-Bisharp @ Black Glasses
+Scizor @ Choice Band
 Level: 44
-Ability: Defiant
+Ability: Technician
 Nature: Adamant
 IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
-- Sucker Punch
+- Bullet Punch
 - Iron Head
-- Night Slash
-- Swords Dance
+- X-Scissor
+- Superpower
 
 Empoleon @ Leftovers
 Level: 45
@@ -4584,9 +4584,9 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Nasty Plot
 - Roost
 
-Gardevoir
+Clefable
 Level: 34
-Ability: Trace
+Ability: Magic Guard
 Nature: Modest
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Moonblast
