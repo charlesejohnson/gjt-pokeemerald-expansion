@@ -12649,27 +12649,37 @@ Level: 29
 Ability: Vital Spirit
 Nature: Timid
 IVs: 22 HP / 22 Atk / 22 Def / 22 SpA / 22 SpD / 22 Spe
+- Hail
 - Ice Beam
 - Aerial Ace
-- Rapid Spin
-- Present
+- Fake Out
 
-Pelipper
+Glalie
 Level: 30
-Ability: Drizzle
-Nature: Bold
+Ability: Ice Body
+Nature: Modest
 IVs: 22 HP / 22 Atk / 22 Def / 22 SpA / 22 SpD / 22 Spe
 - Hail
-- Hurricane
-- Roost
-- Surf
+- Ice Shard
+- Crunch
+- Protect
+
+Sandslash-Alola
+Level: 30
+Ability: Slush Rush
+Nature: Adamant
+IVs: 22 HP / 22 Atk / 22 Def / 22 SpA / 22 SpD / 22 Spe
+- Icicle Crash
+- Iron Head
+- Rapid Spin
+- Swords Dance
 
 Swanna @ Never-Melt Ice
 Level: 31
 Ability: Keen Eye
 Nature: Timid
 IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
-- Ice Beam
+- Blizzard
 - Hurricane
 - Roost
 - Hail

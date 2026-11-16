@@ -182,7 +182,7 @@ Flint and Darius removed. The four remaining trainers keep their positions (entr
 | Boss (vanilla slot) | Team |
 |---|---|
 | Anshal, Nature (Humberto) | Jumpluff 29, Cherrim 29, Tropius 31 (Sitrus Berry so Harvest can recycle it). Approved by Charlie: low-mid difficulty, sun/grass kept |
-| Nezir, Frost (Ashley) | Delibird 29, Pelipper 30 (Drizzle, Hail), Swanna 31 (Never-Melt Ice) |
+| Nezir, Frost (Ashley) | Delibird 29 (Hail), Glalie 30 (Hail), Alolan Sandslash 30 (Slush Rush), Swanna 31 ace (Blizzard, Hurricane, Hail, Never-Melt Ice). Hail on three mons; Slush Rush Sandslash abuses it |
 | Rohash, Wind (Jared) | Emolga 28, Swoobat 30, Drifblim 31 |
 | Faceless One (Edwardo, Hex Maniac sprite, Suspicious music) | Xatu 30, Claydol 30, Banette 31 (confusion/ancient theme) |
 | Prince Thunderaan (Winona) | Manectric 31, Skarmory 32, Altaria 32, Tornadus 33 (ace: Prankster Rain Dance, Hurricane, Thunder, Taunt) |
