@@ -3707,25 +3707,35 @@ Music: Hiker
 Double Battle: No
 AI: Basic Trainer / Omniscient / Smart Mon Choices
 
-Stantler
+Litleo
 Level: 24
+Ability: Unnerve
+Nature: Adamant
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Flame Charge
+- Take Down
+- Fire Fang
+- Work Up
+
+Growlithe
+Level: 25
 Ability: Intimidate
 Nature: Jolly
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-- Take Down
-- Confuse Ray
-- Hypnosis
-- Calm Mind
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Flame Wheel
+- Crunch
+- Play Rough
+- Growl
 
-Cherrim
-Level: 25
-Ability: Flower Gift
+Scovillain
+Level: 26
+Ability: Chlorophyll
 Nature: Modest
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Flamethrower
 - Solar Beam
-- Sunny Day
-- Weather Ball
-- Synthesis
+- Leech Seed
+- Seed Bomb
 
 Ninetales @ Charcoal
 Level: 27
@@ -3736,7 +3746,6 @@ IVs: 28 HP / 28 Atk / 28 Def / 28 SpA / 28 SpD / 28 Spe
 - Solar Beam
 - Will-O-Wisp
 - Nasty Plot
-
 
 === TRAINER_JACE ===
 Name: RYO. LEFT

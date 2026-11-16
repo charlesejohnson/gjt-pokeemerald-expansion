@@ -151,5 +151,5 @@ Inspiration: Firelands raid. Teams are my first draft for editing; text style fo
 | Ryolith left foot (Jace, B1F) | Graveler 25, Magcargo 27 |
 | Ryolith right foot (Eli, B1F) | Rhyhorn 25, Camerupt 27 (fought as two separate battles, like the Twin Emperors) |
 | Alysrazor (Danielle, 1F) | Fletchinder 24, Flame-Orb Guts Swellow 26 (Atk IV 14, no Facade: Wing Attack), Talonflame 27 (ace, Atk IV 18). All three have Fly to echo the raid's flight phases. |
-| Staghelm (Axle, 1F) | Stantler 24, Cherrim 25, Ninetales 27 |
+| Staghelm (Axle, 1F) | Cat form: Litleo 24, Growlithe 25 (Intimidate; Growl). Druid: Scovillain 26 (Fire/Grass, Chlorophyll). Moonkin form ace: Ninetales 27 (Drought, Solar Beam, Nasty Plot). Sun ties the team together. |
 | Ragnaros (Flannery) | Magmar 26, Heatmor 27, Camerupt 28, Torkoal 29 (ace, Drought, Heat Rock) |
