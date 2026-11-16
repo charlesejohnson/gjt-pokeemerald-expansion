@@ -214,3 +214,7 @@ Team (IVs 24): Bastiodon 38 (Leftovers; Sturdy; Stealth Rock, Iron Head, Rock Sl
 ### Rhonin (`TRAINER_NICHOLAS`, name "RHONIN", Kindler sprite) — drafted
 Vereesa's husband, the red-haired fire mage. Mid-difficulty so Vereesa is the real test. Ace is the custom Fire Mage class mon (Fire/Dragon, Hot Streak, Pyroblast + Phoenix Flames). Party species name is `Mage-Fire` in trainers.party.
 Team (IVs 22): Alakazam 38 (Magic Guard; Psychic, Shadow Ball, Focus Blast, Calm Mind), Magmortar 38 (Flame Body; Flamethrower, Thunderbolt, Focus Blast, Psychic), Chandelure 39 (Spell Tag; Flash Fire; Shadow Ball, Flamethrower, Energy Ball, Will-O-Wisp), Mage-Fire 40 ace (Charcoal; Hot Streak; Pyroblast, Phoenix Flames, Flamethrower, Blast Wave).
+
+### Vereesa (`TRAINER_KATHLEEN`, name "VEREESA", Pkmn Ranger F) — drafted
+Ranger General; final and toughest lieutenant (5 mons, IVs 26). Normal/Steel core with a Psychic and a Fairy. Normal is immune to Ghost and Steel resists Ghost/Dark, so she walls the gym theme. Volley flavor via Skill Link Cinccino.
+Team: Staraptor 39 (Intimidate; Brave Bird, Close Combat, Double-Edge, U-turn), Cinccino 39 (Skill Link; Bullet Seed, Tail Slap, Rock Blast, U-turn), Mawile 40 (Intimidate; Iron Head, Play Rough, Sucker Punch, Swords Dance), Espeon 40 (Magic Bounce; Psychic, Shadow Ball, Calm Mind, Dazzling Gleam), Metagross 41 ace (Sitrus; Clear Body; Meteor Mash, Zen Headbutt, Earthquake, Bullet Punch).

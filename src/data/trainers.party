@@ -11503,17 +11503,63 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Thunder Wave
 
 === TRAINER_KATHLEEN ===
-Name: KATHLEEN
-Class: Hex Maniac
-Pic: Hex Maniac
+Name: VEREESA
+Class: Pkmn Ranger
+Pic: Pokemon Ranger F
 Gender: Female
-Music: Suspicious
+Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer / Ace Pokemon / Omniscient / Smart Mon Choices
 
-Kadabra
-Level: 36
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Staraptor
+Level: 39
+Ability: Intimidate
+Nature: Jolly
+IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
+- Brave Bird
+- Close Combat
+- Double-Edge
+- U-turn
+
+Cinccino
+Level: 39
+Ability: Skill Link
+Nature: Jolly
+IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
+- Bullet Seed
+- Tail Slap
+- Rock Blast
+- U-turn
+
+Mawile
+Level: 40
+Ability: Intimidate
+Nature: Adamant
+IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
+- Iron Head
+- Play Rough
+- Sucker Punch
+- Swords Dance
+
+Espeon
+Level: 40
+Ability: Magic Bounce
+Nature: Timid
+IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
+- Psychic
+- Shadow Ball
+- Calm Mind
+- Dazzling Gleam
+
+Metagross @ Sitrus Berry
+Level: 41
+Ability: Clear Body
+Nature: Adamant
+IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
+- Meteor Mash
+- Zen Headbutt
+- Earthquake
+- Bullet Punch
 
 === TRAINER_CLIFFORD ===
 Name: CLIFFORD
