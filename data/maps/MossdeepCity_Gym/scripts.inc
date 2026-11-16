@@ -496,17 +496,22 @@ MossdeepCity_Gym_Text_SylviaPostBattle:
 	.string "horrible befalls you…$"
 
 MossdeepCity_Gym_Text_NateIntro:
-	.string "Hohoho.\p"
-	.string "You need me to show you how tenacious\n"
-	.string "the PSYCHIC type can be.$"
+	.string "TURALYON: The LIGHT has shown me\n"
+	.string "your path. It ends here.\p"
+	.string "I have held greater lines than\n"
+	.string "this. Come. Test mine.$"
 
 MossdeepCity_Gym_Text_NateDefeat:
-	.string "Oh! My, my!\n"
-	.string "Your battle style is fantastic!$"
+	.string "TURALYON: Well fought. The LIGHT\n"
+	.string "marked you before I did.\p"
+	.string "I will not argue with it.\n"
+	.string "Today.$"
 
 MossdeepCity_Gym_Text_NatePostBattle:
-	.string "I… I don't let defeat rattle m-me,\n"
-	.string "however b-badly.$"
+	.string "TURALYON: Rhonin is ahead. He burns\n"
+	.string "bright, and he knows it.\p"
+	.string "Go. The LIGHT walks with you.\n"
+	.string "I walk behind, with my son.$"
 
 MossdeepCity_Gym_Text_KathleenIntro:
 	.string "Let me show you a perfectly awful,\n"

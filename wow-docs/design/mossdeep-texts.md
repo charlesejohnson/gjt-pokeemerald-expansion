@@ -16,3 +16,8 @@ Story frame: the Windrunners and their lieutenants are a group separate from Kha
 - Intro: "HALT, in the name of the LIGHT! The LIGHT sees all! And it says you're going down! By the power of friendship!"
 - Defeat: "Ugh... the real treasure... was the cozy friends we made along the way..."
 - After: "That's NOT fair! The LIGHT was still warming up! I was going easy! ...Okay, I wasn't. Please don't tell Mom."
+
+## Turalyon (bold, headstrong, self-assured; the Light genuinely guides him)
+- Intro: "The LIGHT has shown me your path. It ends here. I have held greater lines than this. Come. Test mine."
+- Defeat: "Well fought. The LIGHT marked you before I did. I will not argue with it. Today."
+- After: "Rhonin is ahead. He burns bright, and he knows it. Go. The LIGHT walks with you. I walk behind, with my son."
