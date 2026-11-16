@@ -70,7 +70,14 @@ Rules the edits follow:
 - **Dimensions, tilesets and warps are not changed** (`layouts.json` untouched). Only the metatile grid is repainted, with the existing gym tileset. That keeps warp/exit coordinates and the entrance mat valid.
 - The goal is **flow**: a new path past each trainer so sight lines hit the player in an intended order, ending at the leader.
 
-**Risk found (unverified in-game):** Mauville's switch puzzle scripts (`MauvilleCity_Gym_EventScript_SetAltBarriers`, etc.) place beam metatiles with hardcoded coordinates such as `setmetatile 3,11 ...`. Those lines were **not** changed in the layout rewrite, but 117 of the gym's tiles were. The beams may now sit in different places than the corridors they were meant to block. This should be checked by playing Mauville.
+**Mauville puzzle check (static analysis, 2026-11-16; not played in an emulator).** My first guess, that the puzzle scripts' beam coordinates no longer match the layout, turned out to be the wrong question: the redesigned interior has **no switch tiles and no switch objects at all**, so the vanilla switch puzzle is gone. Findings:
+
+- **The gym is completable.** A flood fill over the new collision data reaches Wattson from the entrance even if every beam tile is treated as a wall. Beams are decoration plus partial walls (36 of 47 beam tiles are impassable).
+- **The leftover puzzle code is mostly harmless.** The map-load script finds `VAR_MAUVILLE_GYM_STATE` = 0 and no barrier flag and does nothing. The post-victory special `MauvilleGymDeactivatePuzzle` scans for beam tiles (not fixed coordinates), so it correctly turns the beams "off" after Wattson.
+- **Cosmetic bug (confirmed in code, not seen in-game):** the same special also paints 4 "pressed switch" tiles at the vanilla switch coordinates (0,15), (4,12), (3,9), (8,9) (`sMauvilleGymSwitchCoords` in `src/field_specials.c`). In the new layout those spots are a wall, floor, floor and a beam tile. After beating Wattson, stray switch graphics appear there, and the wall cell at (0,15) becomes walkable (collision is copied from the new tile).
+- **Stale text:** the Gym Guide ("switch-controlled doors all over his GYM") and Ben's post-battle line ("little traps with switches") still describe the old puzzle.
+
+Suggested fix, if wanted: skip the switch-painting loop in `MauvilleGymDeactivatePuzzle` and rewrite those two text lines.
 
 ## 6. Boss design recipe (what the sheets imply)
 
