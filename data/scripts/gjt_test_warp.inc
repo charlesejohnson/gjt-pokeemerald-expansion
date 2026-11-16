@@ -9,16 +9,18 @@ GJT_TestWarp_EventScript_Guide::
 	dynmultipush GJT_TestWarp_Text_Rustboro, 0
 	dynmultipush GJT_TestWarp_Text_Dewford, 1
 	dynmultipush GJT_TestWarp_Text_Mauville, 2
+	dynmultipush GJT_TestWarp_Text_Lavaridge, 7
 	dynmultipush GJT_TestWarp_Text_Supplies, 3
 	dynmultipush GJT_TestWarp_Text_WowMons, 4
 	dynmultipush GJT_TestWarp_Text_Badges, 5
 	dynmultipush GJT_TestWarp_Text_NeverMind, 6
-	dynmultistack 0, 0, FALSE, 7, 0, 0, DYN_MULTICHOICE_CB_NONE
+	dynmultistack 0, 0, FALSE, 8, 0, 0, DYN_MULTICHOICE_CB_NONE
 	closemessage
 	switch VAR_RESULT
 	case 0, GJT_TestWarp_EventScript_Rustboro
 	case 1, GJT_TestWarp_EventScript_Dewford
 	case 2, GJT_TestWarp_EventScript_Mauville
+	case 7, GJT_TestWarp_EventScript_Lavaridge
 	case 3, GJT_TestWarp_EventScript_Supplies
 	case 4, GJT_TestWarp_EventScript_WowMons
 	case 5, GJT_TestWarp_EventScript_Badges
@@ -37,6 +39,11 @@ GJT_TestWarp_EventScript_Dewford::
 
 GJT_TestWarp_EventScript_Mauville::
 	warp MAP_MAUVILLE_CITY_GYM, 4, 19
+	waitstate
+	end
+
+GJT_TestWarp_EventScript_Lavaridge::
+	warp MAP_LAVARIDGE_TOWN_GYM_1F, 13, 17
 	waitstate
 	end
 
@@ -234,6 +241,9 @@ GJT_TestWarp_Text_Rustboro:
 
 GJT_TestWarp_Text_Dewford:
 	.string "DEWFORD GYM$"
+
+GJT_TestWarp_Text_Lavaridge:
+	.string "LAVARIDGE GYM$"
 
 GJT_TestWarp_Text_Mauville:
 	.string "MAUVILLE GYM$"

@@ -3699,43 +3699,114 @@ Level: 22
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_AXLE ===
-Name: AXLE
+Name: STAGHELM
 Class: Kindler
 Pic: Kindler
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer / Omniscient / Smart Mon Choices
 
-Numel
-Level: 23
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Stantler
+Level: 24
+Ability: Intimidate
+Nature: Jolly
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Take Down
+- Confuse Ray
+- Hypnosis
+- Calm Mind
+
+Cherrim
+Level: 25
+Ability: Flower Gift
+Nature: Modest
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Solar Beam
+- Sunny Day
+- Weather Ball
+- Synthesis
+
+Ninetales @ Charcoal
+Level: 27
+Ability: Drought
+Nature: Timid
+IVs: 28 HP / 28 Atk / 28 Def / 28 SpA / 28 SpD / 28 Spe
+- Flamethrower
+- Solar Beam
+- Will-O-Wisp
+- Nasty Plot
+
 
 === TRAINER_JACE ===
-Name: JACE
-Class: Kindler
-Pic: Kindler
+Name: RYO. LEFT
+Class: Hiker
+Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer / Omniscient / Smart Mon Choices
 
-Slugma
-Level: 23
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Graveler @ Eviolite
+Level: 25
+Ability: Sturdy
+Nature: Adamant
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Rock Blast
+- Magnitude
+- Defense Curl
+- Stealth Rock
+
+Magcargo @ Heat Rock
+Level: 27
+Ability: Flame Body
+Nature: Bold
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Lava Plume
+- Recover
+- Ancient Power
+- Sunny Day
+
 
 === TRAINER_KEEGAN ===
-Name: KEEGAN
+Name: BETH'TILAC
 Class: Kindler
 Pic: Kindler
-Gender: Male
-Music: Hiker
+Gender: Female
+Music: Female
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer / Omniscient / Smart Mon Choices
 
-Slugma
-Level: 23
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+Galvantula
+Level: 25
+Ability: Compound Eyes
+Nature: Timid
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Thunder
+- Bug Buzz
+- Sticky Web
+- Electroweb
+
+Parasect
+Level: 26
+Ability: Effect Spore
+Nature: Adamant
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Spore
+- Seed Bomb
+- X-Scissor
+- Leech Life
+
+Ariados @ Black Sludge
+Level: 27
+Ability: Sniper
+Nature: Adamant
+IVs: 28 HP / 28 Atk / 28 Def / 28 SpA / 28 SpD / 28 Spe
+- Sticky Web
+- Poison Jab
+- Megahorn
+- Toxic Spikes
+
 
 === TRAINER_BERNIE_1 ===
 Name: BERNIE
@@ -5058,46 +5129,55 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 12 Spe
 - Volt Switch
 
 === TRAINER_FLANNERY_1 ===
-Name: FLANNERY
+Name: RAGNAROS
 Class: Leader
 Pic: Leader Flannery
-Gender: Female
-Music: Female
+Gender: Male
+Music: Male
 Items: Hyper Potion / Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Ace Pokemon / Omniscient / Smart Mon Choices
 
-Numel
-Level: 24
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Overheat
-- Take Down
-- Magnitude
-- Sunny Day
-
-Slugma
-Level: 24
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Overheat
-- Smog
-- Light Screen
-- Sunny Day
-
-Camerupt
+Magmar @ Flame Orb
 Level: 26
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Overheat
-- Tackle
+Ability: Flame Body
+Nature: Naive
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Fire Punch
+- Thunder Punch
 - Sunny Day
-- Attract
+- Will-O-Wisp
 
-Torkoal @ White Herb
-Level: 29
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Overheat
+Heatmor @ Charcoal
+Level: 27
+Ability: Flash Fire
+Nature: Adamant
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Fire Lash
+- Flame Charge
+- Thief
 - Sunny Day
-- Body Slam
-- Attract
+
+Camerupt @ Passho Berry
+Level: 28
+Ability: Solid Rock
+Nature: Quiet
+IVs: 28 HP / 28 Atk / 28 Def / 28 SpA / 28 SpD / 28 Spe
+- Eruption
+- Earth Power
+- Rock Slide
+- Yawn
+
+Torkoal @ Heat Rock
+Level: 29
+Ability: Drought
+Nature: Relaxed
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Eruption
+- Lava Plume
+- Earth Power
+- Protect
+
 
 === TRAINER_NORMAN_1 ===
 Name: NORMAN
@@ -9349,17 +9429,34 @@ Level: 45
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_ELI ===
-Name: ELI
+Name: RYO. RIGHT
 Class: Hiker
 Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer / Omniscient / Smart Mon Choices
 
-Numel
-Level: 23
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Rhyhorn @ Rocky Helmet
+Level: 25
+Ability: Lightning Rod
+Nature: Impish
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Rock Blast
+- Horn Attack
+- Scary Face
+- Stealth Rock
+
+Camerupt @ Passho Berry
+Level: 27
+Ability: Magma Armor
+Nature: Adamant
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Fire Fang
+- Earth Power
+- Rock Slide
+- Ancient Power
+
 
 === TRAINER_ANNIKA ===
 Name: ANNIKA
@@ -12215,21 +12312,44 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Meditate
 
 === TRAINER_DANIELLE ===
-Name: DANIELLE
-Class: Battle Girl
-Pic: Battle Girl
+Name: ALYSRAZOR
+Class: Beauty
+Pic: Beauty
 Gender: Female
-Music: Intense
+Music: Female
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer / Omniscient / Smart Mon Choices
 
-Meditite
-Level: 23
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Bide
-- Detect
-- Confusion
-- Fire Punch
+Combusken @ Charcoal
+Level: 25
+Ability: Speed Boost
+Nature: Jolly
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Blaze Kick
+- Double Kick
+- Bulk Up
+- Protect
+
+Fletchinder
+Level: 26
+Ability: Gale Wings
+Nature: Jolly
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Acrobatics
+- Flame Charge
+- Roost
+- Quick Attack
+
+Swellow @ Sharp Beak
+Level: 27
+Ability: Guts
+Nature: Adamant
+IVs: 28 HP / 28 Atk / 28 Def / 28 SpA / 28 SpD / 28 Spe
+- Brave Bird
+- Facade
+- Quick Attack
+- Sunny Day
+
 
 === TRAINER_HIDEO ===
 Name: HIDEO

@@ -140,3 +140,16 @@ Electric doubles battle focused on protecting Raikou.
 | Machoke | 22 | guts | adamant | low sweep, knock off, scary face, focus energy | toxic orb |
 | Brionne | 23 | torrent | modest | disarming voice, water gun, icy wind, aqua jet | Mystic Water |
 | Gorebyss | 24 | swift swim | modest | confusion, water pulse, Aqua Ring, draining kiss | twistedspoon |
+
+## Lavaridge Gym (level cap 29) - DRAFT v0.1.1
+
+Inspiration: Firelands raid. Teams are my first draft for editing; text style follows C'Thun (possessed leader wakes up on defeat). Vanilla warp-tile puzzle kept. Cole, Gerald, Jeff removed. Rematch teams (TRAINER_FLANNERY_2 to 5) and rematch lines are still vanilla Flannery.
+
+| Boss (vanilla slot) | Team |
+|---|---|
+| Beth'tilac (Keegan, B1F) | Galvantula 25, Parasect 26, Ariados 27 |
+| Ryolith left foot (Jace, B1F) | Graveler 25, Magcargo 27 |
+| Ryolith right foot (Eli, B1F) | Rhyhorn 25, Camerupt 27 (fought as two separate battles, like the Twin Emperors) |
+| Alysrazor (Danielle, 1F) | Combusken 25, Fletchinder 26, Swellow 27 |
+| Staghelm (Axle, 1F) | Stantler 24, Cherrim 25, Ninetales 27 |
+| Ragnaros (Flannery) | Magmar 26, Heatmor 27, Camerupt 28, Torkoal 29 (ace, Drought, Heat Rock) |
