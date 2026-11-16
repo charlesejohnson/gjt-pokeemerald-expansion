@@ -27690,6 +27690,10 @@ const u32 gMonFrontPic_Deathknight[] = INCGFX_U32("graphics/pokemon/deathknight/
 const u16 gMonPalette_Deathknight[] = INCGFX_U16("graphics/pokemon/deathknight/normal.pal", ".gbapal");
 const u32 gMonBackPic_Deathknight[] = INCGFX_U32("graphics/pokemon/deathknight/back.png", ".4bpp.smol");
 const u16 gMonShinyPalette_Deathknight[] = INCGFX_U16("graphics/pokemon/deathknight/shiny.pal", ".gbapal");
+const u16 gMonPalette_DeathknightFrost[] = INCGFX_U16("graphics/pokemon/deathknight/frost_normal.pal", ".gbapal");
+const u16 gMonShinyPalette_DeathknightFrost[] = INCGFX_U16("graphics/pokemon/deathknight/frost_shiny.pal", ".gbapal");
+const u16 gMonPalette_DeathknightUnholy[] = INCGFX_U16("graphics/pokemon/deathknight/unholy_normal.pal", ".gbapal");
+const u16 gMonShinyPalette_DeathknightUnholy[] = INCGFX_U16("graphics/pokemon/deathknight/unholy_shiny.pal", ".gbapal");
 const u8 gMonIcon_Deathknight[] = INCGFX_U8("graphics/pokemon/deathknight/icon.png", ".4bpp");
 #if P_FOOTPRINTS
 const u8 gMonFootprint_Deathknight[] = INCGFX_U8("graphics/pokemon/deathknight/footprint.png", ".1bpp");

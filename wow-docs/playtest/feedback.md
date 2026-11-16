@@ -51,3 +51,9 @@ Same notes as the *Inspiration notes* column in the sheets, kept here so the int
 ## How to use this file going forward
 
 When a new playtester or run is recorded, add a `## <Name>'s results` section in the same format instead of creating another tab.
+
+## Death Knight sprites (2026-11-15)
+- Base Death Knight: Pawniard art. Blood: Bisharp (red). Frost: Bisharp recolored light blue. Unholy: Bisharp recolored green.
+- Done as palette swaps only (`graphics/pokemon/deathknight/{frost,unholy}_{normal,shiny}.pal`); pixel art is shared with Bisharp.
+- Shinies: Blood keeps Bisharp's purple, Frost shiny is red, Unholy shiny is orange.
+- Party/PC icons still use Bisharp's shared icon palette (red-ish); recoloring needs a custom icon palette slot.
