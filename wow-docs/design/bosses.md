@@ -197,3 +197,7 @@ Lieutenants (replace all 12 vanilla trainers, 2 per warp cluster): Nathanos + Va
 ### Nathanos Blightcaller (`TRAINER_PRESTON`, Pkmn Ranger) — drafted
 Gimmick: Hunter's Mark. Holds 4 Dire Hit; AI uses one on each mon's first turn (about 50% crit chance, no other crit boosts stacked). Opponent-side use prints "HUNTER'S MARK! <mon> is lining up a killing shot!" (`STRINGID_GJT_HUNTERS_MARK`, `BattleScript_ItemSetFocusEnergy`).
 Team (IVs 20): Houndoom 37 (Crunch, Fire Fang, Sucker Punch, Dark Pulse), Weavile 38 (Night Slash, Ice Shard, Knock Off, Brick Break), Fearow 39 (Sniper; Drill Peck, Aerial Ace, Return, U-turn), Dartrix 40 ace (Eviolite; Leaf Blade, Brave Bird, Shadow Sneak, Swords Dance).
+
+### Varimathras (`TRAINER_VIRGIL`, name "VARIMATH", Psychic placeholder sprite) — drafted
+Gimmick: debuffs. Incineroar leads (Intimidate + U-turn pivots; Smart Switching so the AI can bring it back), Will-O-Wisp/Toxic support, Zoroark ace (Illusion into Double Team). No Ace flag so Incineroar stays in front. Holds a Full Restore.
+Team (IVs 20): Incineroar 40 (Sitrus; Flare Blitz, Darkest Lariat, Knock Off, U-turn), Crobat 38 (Cross Poison, Air Slash, Will-O-Wisp, Toxic), Skuntank 39 (Aftermath; Poison Jab, Crunch, Will-O-Wisp, Sucker Punch), Zoroark 41 (Illusion; Double Team, Night Daze, Flamethrower, Sludge Bomb).

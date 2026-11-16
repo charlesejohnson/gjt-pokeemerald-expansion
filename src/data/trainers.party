@@ -4470,17 +4470,54 @@ IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 - Swords Dance
 
 === TRAINER_VIRGIL ===
-Name: VIRGIL
+Name: VARIMATH
 Class: Psychic
 Pic: Psychic M
 Gender: Male
 Music: Intense
+Items: Full Restore
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer / Omniscient / Smart Switching / Smart Mon Choices
 
-Ralts
-Level: 36
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Incineroar @ Sitrus Berry
+Level: 40
+Ability: Intimidate
+Nature: Adamant
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Flare Blitz
+- Darkest Lariat
+- Knock Off
+- U-turn
+
+Crobat
+Level: 38
+Ability: Inner Focus
+Nature: Jolly
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Cross Poison
+- Air Slash
+- Will-O-Wisp
+- Toxic
+
+Skuntank
+Level: 39
+Ability: Aftermath
+Nature: Adamant
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Poison Jab
+- Crunch
+- Will-O-Wisp
+- Sucker Punch
+
+Zoroark
+Level: 41
+Ability: Illusion
+Nature: Timid
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Double Team
+- Night Daze
+- Flamethrower
+- Sludge Bomb
 
 === TRAINER_BLAKE ===
 Name: BLAKE
