@@ -98,17 +98,20 @@ SootopolisCity_Gym_B1F_Text_DaphnePostBattle:
 	.string "POKéMON.$"
 
 SootopolisCity_Gym_B1F_Text_ConnieIntro:
-	.string "I should teach you how harsh battles\n"
-	.string "can be.$"
+	.string "TAELIA: Jaina is just ahead. I'm to\n"
+	.string "make sure you're ready for her.\p"
+	.string "I'm very fond of you already.\n"
+	.string "I'm still not going to go easy.$"
 
 SootopolisCity_Gym_B1F_Text_ConnieDefeat:
-	.string "Oh.\n"
-	.string "You're strong.$"
+	.string "TAELIA: Oh, well fought! Truly!\p"
+	.string "I mean it. I'm a little bit\n"
+	.string "proud of you.$"
 
 SootopolisCity_Gym_B1F_Text_ConniePostBattle:
-	.string "I'll tell you something good.\p"
-	.string "If you want to reach JUAN, you\n"
-	.string "need to walk on each floor tile once.$"
+	.string "TAELIA: Jaina has a lot on her mind.\n"
+	.string "Her father most of all.\p"
+	.string "Be kind, and be careful.$"
 
 SootopolisCity_Gym_B1F_Text_BridgetIntro:
 	.string "The POKéMON GYM of the highest level\n"
