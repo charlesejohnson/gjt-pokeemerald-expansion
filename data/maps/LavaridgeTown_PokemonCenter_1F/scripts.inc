@@ -46,6 +46,9 @@ LavaridgeTown_PokemonCenter_1F_EventScript_FlannerySaved::
 	setflag FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WALLY
 	setvar VAR_LAVARIDGE_TOWN_STATE, 1
 	call LavaridgeTown_Gym_1F_EventScript_GiveOverheat
+	msgbox LavaridgeTown_PokemonCenter_1F_Text_MagniBindings, MSGBOX_DEFAULT
+	giveitem ITEM_PARCEL
+	msgbox LavaridgeTown_PokemonCenter_1F_Text_MagniBindingsWarning, MSGBOX_DEFAULT
 	closemessage
 	delay 30
 	playfanfare MUS_REGISTER_MATCH_CALL
@@ -125,3 +128,15 @@ LavaridgeTown_PokemonCenter_1F_Text_TrainersShouldRestToo:
 	.string "If POKéMON are getting rest, so too\n"
 	.string "should their TRAINERS.$"
 
+
+LavaridgeTown_PokemonCenter_1F_Text_MagniBindings:
+	.string "MAGNI: One more thing, lad.\p"
+	.string "This was lyin' in RAGNAROS's hoard.\n"
+	.string "The BINDINGS OF THE WINDSEEKER.\p"
+	.string "Auld magic, that. Strong enough tae\n"
+	.string "bind a storm intae a blade.$"
+
+LavaridgeTown_PokemonCenter_1F_Text_MagniBindingsWarning:
+	.string "MAGNI: Keep 'em safe, an' dinnae\n"
+	.string "lose 'em. We'll need 'em for\l"
+	.string "PRINCE THUNDERAAN.$"

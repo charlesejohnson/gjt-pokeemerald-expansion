@@ -11,7 +11,7 @@ Source: Google Sheet "WoP Playtest, Documentation & Feedback", tab *Level Caps*,
 | Wattson | Thunder King | Electric | 24 | 24 |
 | Flannery | Ragnaros | Fire | 29 | 29 |
 | Norman | Scott | Normal | 31 | 31 |
-| Winona | Al'Akir | Flying | 33 | 33 |
+| Winona | Prince Thunderaan (ace Tornadus) | Flying | 33 | 33 |
 | Tate n Liza | Windrunner sisters | Ghost/Dark | 42 | 42 |
 | Juan | Jaina | Water | 46 | 46 |
 | E4 Sydney | N'Zoth | Dark/Water | 58 | 60 |
@@ -34,3 +34,6 @@ Names and spellings are copied from the sheet as written.
 | Mt. Chimney Maxie | not filled in | |
 
 Boss teams for the first three gyms are in [bosses.md](bosses.md). Teams from Lavaridge onward are not documented in any sheet I found.
+
+## Story legendaries (set 2026-11-16)
+Al'Akir becomes Rayquaza, Neptulon becomes Kyogre, Therazane becomes Groudon. Fortree's boss is now Prince Thunderaan, sealed with the Windseeker Binding (key item, currently the repurposed ITEM_PARCEL, found after Ragnaros) to yield Thunderfury (item to be specified).
