@@ -150,6 +150,6 @@ Inspiration: Firelands raid. Teams are my first draft for editing; text style fo
 | Beth'tilac (Keegan, B1F) | Ariados 24 (lead, Sticky Web/Toxic Spikes), Eviolite Larvesta 24 (Quiver Dance, a DPS check: kill it before it sets up), Galvantula 25 (ace; Electroweb, Bug Buzz, Sticky Web, Thunder Wave). Easiest lieutenant, low damage, speed control. |
 | Ryolith left foot (Jace, B1F) | Graveler 25, Magcargo 27 |
 | Ryolith right foot (Eli, B1F) | Rhyhorn 25, Camerupt 27 (fought as two separate battles, like the Twin Emperors) |
-| Alysrazor (Danielle, 1F) | Fletchinder 24, Flame-Orb Guts Swellow 26, Talonflame 27 (ace). All three have Fly to echo the raid's flight phases. |
+| Alysrazor (Danielle, 1F) | Fletchinder 24, Flame-Orb Guts Swellow 26 (Atk IV 14, no Facade: Wing Attack), Talonflame 27 (ace, Atk IV 18). All three have Fly to echo the raid's flight phases. |
 | Staghelm (Axle, 1F) | Stantler 24, Cherrim 25, Ninetales 27 |
 | Ragnaros (Flannery) | Magmar 26, Heatmor 27, Camerupt 28, Torkoal 29 (ace, Drought, Heat Rock) |
