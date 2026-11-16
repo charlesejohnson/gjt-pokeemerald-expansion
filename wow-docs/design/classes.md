@@ -23,7 +23,7 @@ Decisions (confirmed by Charlie, 2026-11-15):
 
 Runic Power rules (confirmed 2026-11-15): Scourge Strike generates 1 (max 3). Death Strike costs exactly 2 for a flat 70 power (updated 2026-11-15). Frost Strike spends all of it and scales power per point (55). Death Coil spends 1 for flat 60 special power; used on a Ghost-type ally it heals 50% max HP instead, and it cannot target the user. The Sappy Seed note in the tracker was a reference for Blood Boil, not a kill-trigger requirement.
 
-Early Blood DK move ideas: Marrowrend (physical, Ground or Dark, +1 Def), Death Strike (Ghost or Dark, heals 100% of damage dealt), AMS (+2 SpDef, Safeguard), Blood Boil. See [../tracking/death-knight-moves.md](../tracking/death-knight-moves.md) for current status.
+Early Blood DK move ideas: Marrowrend (physical, Ground or Dark, +1 Def), Death Strike (Dark, 70 power, costs 2 Runic Power, heals 50% of damage dealt), AMS (Ghost, +1 Sp. Def and Safeguard), Blood Boil (Leech Seed with a blood-boiling message). See [../tracking/death-knight-moves.md](../tracking/death-knight-moves.md) for current status.
 
 ## Mage
 
