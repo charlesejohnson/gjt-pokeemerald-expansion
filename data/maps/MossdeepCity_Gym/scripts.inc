@@ -388,16 +388,20 @@ MossdeepCity_Gym_Text_GymGuidePostVictory:
 	.string "You're one great TRAINER!$"
 
 MossdeepCity_Gym_Text_PrestonIntro:
-	.string "Battles hinge on the strength of your\n"
-	.string "spirit! The weak-spirited will never win!$"
+	.string "NATHANOS: The Dark Lady wants to\n"
+	.string "know who comes through her door.\p"
+	.string "I'll mark you. That way I never\n"
+	.string "have to ask twice.$"
 
 MossdeepCity_Gym_Text_PrestonDefeat:
-	.string "I lost!\n"
-	.string "I must temper my spirit again!$"
+	.string "NATHANOS: Missed. I never miss.\p"
+	.string "I'll tell Lady SYLVANAS it was\n"
+	.string "the lighting.$"
 
 MossdeepCity_Gym_Text_PrestonPostBattle:
-	.string "The indecisive lose.\n"
-	.string "That's my warning to you.$"
+	.string "NATHANOS: Go on, then.\n"
+	.string "Don't tell her I lost.\p"
+	.string "I'll say it was a draw.$"
 
 MossdeepCity_Gym_Text_VirgilIntro:
 	.string "Let me see your talent!$"
