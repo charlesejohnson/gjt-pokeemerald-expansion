@@ -181,7 +181,7 @@ Flint and Darius removed. The four remaining trainers keep their positions (entr
 
 | Boss (vanilla slot) | Team |
 |---|---|
-| Anshal, Nature (Humberto) | Jumpluff 29, Cherrim 29, Tropius 31 (Miracle Seed) |
+| Anshal, Nature (Humberto) | Jumpluff 29, Cherrim 29, Tropius 31 (Sitrus Berry so Harvest can recycle it). Approved by Charlie: low-mid difficulty, sun/grass kept |
 | Nezir, Frost (Ashley) | Delibird 29, Pelipper 30 (Drizzle, Hail), Swanna 31 (Never-Melt Ice) |
 | Rohash, Wind (Jared) | Emolga 28, Swoobat 30, Drifblim 31 |
 | Faceless One (Edwardo, Hex Maniac sprite, Suspicious music) | Xatu 30, Claydol 30, Banette 31 (confusion/ancient theme) |
