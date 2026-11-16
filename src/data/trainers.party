@@ -5155,17 +5155,17 @@ Items: Hyper Potion / Hyper Potion
 Double Battle: No
 AI: Basic Trainer / Ace Pokemon / Omniscient / Smart Mon Choices
 
-Magmar @ Flame Orb
+Magmar
 Level: 26
 Ability: Flame Body
 Nature: Naive
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Fire Punch
 - Thunder Punch
-- Sunny Day
 - Will-O-Wisp
+- Smokescreen
 
-Heatmor @ Charcoal
+Heatmor
 Level: 27
 Ability: Flash Fire
 Nature: Adamant
@@ -5173,7 +5173,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Fire Lash
 - Flame Charge
 - Thief
-- Sunny Day
+- Rock Slide
 
 Camerupt @ Passho Berry
 Level: 28
@@ -5185,16 +5185,15 @@ IVs: 28 HP / 28 Atk / 28 Def / 28 SpA / 28 SpD / 28 Spe
 - Rock Slide
 - Yawn
 
-Torkoal @ Heat Rock
+Typhlosion @ Charcoal
 Level: 29
-Ability: Drought
-Nature: Relaxed
+Ability: Blaze
+Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Eruption
-- Lava Plume
+- Flamethrower
+- Focus Blast
 - Earth Power
-- Protect
-
 
 === TRAINER_NORMAN_1 ===
 Name: NORMAN

@@ -41,29 +41,14 @@ LavaridgeTown_Gym_1F_EventScript_Flannery::
 	end
 
 LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated::
-	message LavaridgeTown_Gym_1F_Text_ReceivedHeatBadge
-	waitmessage
-	call Common_EventScript_PlayGymBadgeFanfare
-	msgbox LavaridgeTown_Gym_1F_Text_ExplainHeatBadgeTakeThis, MSGBOX_DEFAULT
-	setflag FLAG_WHITEOUT_TO_LAVARIDGE
-	setflag FLAG_DEFEATED_LAVARIDGE_GYM
-	setflag FLAG_BADGE04_GET
-	addvar VAR_PETALBURG_GYM_STATE, 1
-	call_if_eq VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle
-	setvar VAR_0x8008, 4
-	call Common_EventScript_SetGymTrainers
-	setflag FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WALLY
-	setvar VAR_LAVARIDGE_TOWN_STATE, 1
-	call LavaridgeTown_Gym_1F_EventScript_GiveOverheat
+	@ GJT: Flannery is carried to the Pokemon Center; the rewards come from Magni there
+	@ (LavaridgeTown_PokemonCenter_1F_EventScript_FlannerySaved).
+	setflag FLAG_GJT_HIDE_LAVARIDGE_FLANNERY
+	setvar VAR_GJT_LAVARIDGE_SCENE, 1
 	closemessage
-	delay 30
-	playfanfare MUS_REGISTER_MATCH_CALL
-	msgbox LavaridgeTown_Gym_1F_Text_RegisteredFlannery, MSGBOX_DEFAULT
-	waitfanfare
-	closemessage
-	delay 30
-	setflag FLAG_ENABLE_FLANNERY_MATCH_CALL
-	release
+	delay 40
+	warp MAP_LAVARIDGE_TOWN_POKEMON_CENTER_1F, 7, 5
+	waitstate
 	end
 
 LavaridgeTown_Gym_1F_EventScript_GiveOverheat2::
@@ -154,18 +139,26 @@ LavaridgeTown_Gym_1F_EventScript_GymStatue::
 	end
 
 LavaridgeTown_Gym_1F_Text_GymGuideAdvice:
-	.string "Hey, {PLAYER}!\p"
-	.string "This is the FIRELANDS, and RAGNAROS\n"
-	.string "holds the old GYM LEADER in his grip.\p"
-	.string "His FIRE-types hit hard and the sun\n"
-	.string "makes them hit harder. Bring WATER\n"
-	.string "or ROCK, and keep your POKéMON healthy.\p"
-	.string "Four of his lieutenants block the way:\n"
-	.string "BETH'TILAC, ALYSRAZOR, the pair that\l"
-	.string "are LORD RYOLITH's feet, and STAGHELM.$"
+	.string "CHAMPION! Ye've made it tae the\n"
+	.string "LAVARIDGE GYM, aye!\p"
+	.string "I'm MAGNI. KHADGAR sent me tae guide\n"
+	.string "ye, an' ye'll want me wits here.\p"
+	.string "The FIRELANDS 'ave spilled intae this\n"
+	.string "gym, an' RAGNAROS himself has taken\l"
+	.string "poor FLANNERY.\p"
+	.string "His lieutenants stand in the way:\n"
+	.string "BETH'TILAC, ALYSRAZOR, STAGHELM,\l"
+	.string "an' RYOLITH's two feet.\p"
+	.string "Bring somethin' tae cool 'em doon,\n"
+	.string "an' mind the sun!\p"
+	.string "When it's over, I'll meet ye at the\n"
+	.string "POKéMON CENTER. Ye'll earn yer LOOT!$"
 
 LavaridgeTown_Gym_1F_Text_GymGuidePostVictory:
-	.string "Yow! That was a scorching-hot battle!$"
+	.string "Aye, I knew ye'd do it, lad!\n"
+	.string "FLANNERY's on the mend.\p"
+	.string "Check yer TRAINER CARD. The HEAT\n"
+	.string "BADGE should be properly recorded.$"
 
 LavaridgeTown_Gym_1F_Text_AxleIntro:
 	.string "I am MAJORDOMO STAGHELM, Druid of\n"
@@ -248,26 +241,24 @@ LavaridgeTown_Gym_1F_Text_FlanneryIntro:
 	.string "worthless little world!$"
 
 LavaridgeTown_Gym_1F_Text_FlanneryDefeat:
-	.string "Oh…\n"
-	.string "My head… what happened?\p"
-	.string "I felt a burning presence take me…\n"
-	.string "I couldn't think. I couldn't stop.\p"
-	.string "It's gone now. Thank you…\n"
-	.string "For that, you deserve this.$"
+	.string "The lava recedes from her skin as\n"
+	.string "SULFURAS clatters to the ground.\p"
+	.string "Burns cover her skin, but she is\n"
+	.string "breathing.\p"
+	.string "Barely.$"
 
 LavaridgeTown_Gym_1F_Text_ReceivedHeatBadge:
 	.string "{PLAYER} received the HEAT BADGE\n"
-	.string "from FLANNERY.$"
+	.string "from MAGNI.$"
 
 LavaridgeTown_Gym_1F_Text_ExplainHeatBadgeTakeThis:
-	.string "If you have a HEAT BADGE, all POKéMON\n"
-	.string "up to Level 50, even those you get in\l"
-	.string "trades from other people, will obey\l"
-	.string "you completely.\p"
-	.string "And, it lets POKéMON use the HM move\n"
-	.string "STRENGTH outside of battle.\p"
-	.string "This is a token of my appreciation.\n"
-	.string "Don't be shy about taking it!$"
+	.string "Here, lad.\p"
+	.string "With the HEAT BADGE, all POKéMON up\n"
+	.string "tae Level 50, even those ye get in\l"
+	.string "trades, will obey ye completely.\p"
+	.string "An' it lets POKéMON use the HM move\n"
+	.string "STRENGTH outside o' battle.\p"
+	.string "FLANNERY wanted ye tae 'ave this too.$"
 
 LavaridgeTown_Gym_1F_Text_ExplainOverheat:
 	.string "That TM50 contains OVERHEAT.\p"

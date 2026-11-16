@@ -54,8 +54,8 @@
 #define FLAG_RECEIVED_RUSTBORO_GUIDE_LOOT 0x20 // GJT: one-time gym guide loot
 #define FLAG_RECEIVED_DEWFORD_GUIDE_LOOT 0x21 // GJT: one-time gym guide loot
 #define FLAG_RECEIVED_MAUVILLE_GUIDE_LOOT 0x22 // GJT: one-time gym guide loot
-#define FLAG_UNUSED_0x023    0x23 // Unused Flag
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
+#define FLAG_GJT_HIDE_LAVARIDGE_FLANNERY 0x23 // GJT: set when Ragnaros is beaten; Flannery was carried to the Pokemon Center
+#define FLAG_GJT_HIDE_LAVARIDGE_MAGNI 0x24 // GJT: Magni in the Lavaridge Pokemon Center, shown only during the victory scene
 #define FLAG_UNUSED_0x025    0x25 // Unused Flag
 #define FLAG_UNUSED_0x026    0x26 // Unused Flag
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
