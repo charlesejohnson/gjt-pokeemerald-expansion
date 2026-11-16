@@ -5376,8 +5376,18 @@ Nature: Adamant
 IVs: 28 HP / 28 Atk / 28 Def / 28 SpA / 28 SpD / 28 Spe
 - Dragon Dance
 - Dragon Claw
-- Roost
 - Aerial Ace
+- Earthquake
+
+Pidgeot @ Pidgeotite
+Level: 32
+Ability: Keen Eye
+Nature: Timid
+IVs: 28 HP / 28 Atk / 28 Def / 28 SpA / 28 SpD / 28 Spe
+- Hurricane
+- Heat Wave
+- Hyper Voice
+- Quick Attack
 
 Tornadus
 Level: 33

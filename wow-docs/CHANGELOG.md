@@ -2,6 +2,9 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.6 (2026-11-16)
+- Fortree boss-by-boss pass: Anshal (Sitrus Tropius, Castform sun), Nezir (hail: Delibird, Glalie, Alolan Sandslash, Swanna, Castform), Rohash (Shiftry Wind Rider, Castform rain), Faceless One (toned down, Octillery, Explosion Claydol, Will Suicide AI), Thunderaan (5 mons: Mega Pidgeot added, Altaria without Roost). AI test: Castform uses Weather Ball once weather is set.
+
 ## v0.1.5 (2026-11-16)
 - Fortree gym draft (Prince Thunderaan, Conclave of the Wind, Faceless One), Windseeker Binding from the Ragnaros scene, sealing scene giving Thunderfury (placeholder item, no effect yet).
 
