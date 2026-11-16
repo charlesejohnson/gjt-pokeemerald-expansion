@@ -206,3 +206,7 @@ Team (IVs 20, in order): Incineroar 40 (Sitrus; Flare Blitz, Darkest Lariat, Kno
 Child of void and light. Joke: he is immature, so his first three mons are badly underleveled (33-35, IVs 12) but all carry Counter/Mirror Coat so careless hits get punished. The ace is far stronger: Lucario 42 (cap-level), IVs 31, 252 Atk / 252 Spe, Focus Sash, Justified (Dark moves in this gym power it up), Revenge.
 Team: Togekiss 33 (Serene Grace; Air Slash, Mirror Coat, Nasty Plot, Roost), Gardevoir 34 (Trace; Moonblast, Counter, Calm Mind, Shadow Ball), Spiritomb 35 (Infiltrator; Foul Play, Counter, Will-O-Wisp, Shadow Sneak), Lucario 42 ace (Close Combat, Extreme Speed, Revenge, Swords Dance).
 TODO when the gym layout is done: intro/defeat text should play up the immaturity.
+
+### Turalyon (`TRAINER_NATE`, name "TURALYON") — drafted
+Lightforged Paladin, the holy tank who holds the line. Steel resists Ghost and Dark, so he walls the gym theme. Stealth Rock + Wish stalling. Pairs with Arator in the same cluster.
+Team (IVs 24): Bastiodon 38 (Leftovers; Sturdy; Stealth Rock, Iron Head, Rock Slide, Roar), Blissey 39 (Natural Cure; Wish, Seismic Toss, Toxic, Heal Bell), Aegislash 40 (Stance Change; King's Shield, Sacred Sword, Shadow Ball, Iron Head), Aggron 41 ace (Sitrus; Sturdy; Heavy Slam, Earthquake, Rock Slide, Thunder Wave).

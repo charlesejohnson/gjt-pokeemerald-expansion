@@ -11454,17 +11454,53 @@ Level: 37
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_NATE ===
-Name: NATE
+Name: TURALYON
 Class: Gentleman
 Pic: Gentleman
 Gender: Male
-Music: Rich
+Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer / Ace Pokemon / Omniscient / Smart Mon Choices
 
-Spoink
-Level: 36
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Bastiodon @ Leftovers
+Level: 38
+Ability: Sturdy
+Nature: Impish
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Stealth Rock
+- Iron Head
+- Rock Slide
+- Roar
+
+Blissey
+Level: 39
+Ability: Natural Cure
+Nature: Bold
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Wish
+- Seismic Toss
+- Toxic
+- Heal Bell
+
+Aegislash
+Level: 40
+Ability: Stance Change
+Nature: Quiet
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- King's Shield
+- Sacred Sword
+- Shadow Ball
+- Iron Head
+
+Aggron @ Sitrus Berry
+Level: 41
+Ability: Sturdy
+Nature: Adamant
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Heavy Slam
+- Earthquake
+- Rock Slide
+- Thunder Wave
 
 === TRAINER_KATHLEEN ===
 Name: KATHLEEN
