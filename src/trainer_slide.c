@@ -61,6 +61,10 @@ static const u8* const sTrainerSlides[DIFFICULTY_COUNT][TRAINER_PARTNER(PARTNER_
 {
     [DIFFICULTY_NORMAL] =
     {
+        [TRAINER_ANDREA] = // Mekkatorque (Sootopolis gym)
+        {
+            [TRAINER_SLIDE_SELF_LAST_SWITCHIN] = COMPOUND_STRING("MEKKATORQUE: We've come too far to let\nthis responsibility fall to someone\nelse!{PAUSE_UNTIL_PRESS}"),
+        },
     },
 };
 

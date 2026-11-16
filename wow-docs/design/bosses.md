@@ -254,3 +254,5 @@ Low-difficulty, no gimmicks, default movesets, IVs 14; the punishment is falling
 
 ### Sootopolis map placement (v0.1.12)
 1F: Mekkatorque (`TRAINER_ANDREA`, label `SootopolisCity_Gym_B1F_EventScript_Andrea`, Hiker sprite) at (8,21) in the doorway above the entrance room, sight 4; Taelia (`TRAINER_CONNIE`, Expert F sprite) at (6,3) to the left of the path in Jaina's room, facing right, sight 3 (so she does not block access to Jaina at (8,2)); Jaina is the old Juan object (Woman 5 sprite). Scripts for the two lieutenants still live in the B1F scripts file (global labels), with vanilla texts. B1F: Daelin (`TRAINER_BRIANNA`, Sailor sprite) at (8,6) at the top of the last room, sight 4; fillers around him; the lower B1F room is now empty. Bridget, Daphne and Annika use the Sailor sprite and class.
+
+Mid-battle lines ("ace lines") use the trainer slide system: add an entry under `sTrainerSlides[DIFFICULTY_NORMAL][TRAINER_X]` in `src/trainer_slide.c` with a slide type such as `TRAINER_SLIDE_SELF_LAST_SWITCHIN`. Mekkatorque has one: "We've come too far to let this responsibility fall to someone else!" (untested in-game).
