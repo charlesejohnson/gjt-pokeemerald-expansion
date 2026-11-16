@@ -16,7 +16,8 @@ def load_tileset(d):
         if f.endswith('.pal'): pals[int(f[:2])]=load_pal(base+'palettes/'+f)
     return im,mt,pals
 pim,pmt,ppal=load_tileset('primary/building')
-sim,smt,spal=load_tileset('secondary/mossdeep_gym')
+SECONDARY=os.environ.get('GJT_SECONDARY','mossdeep_gym')
+sim,smt,spal=load_tileset('secondary/'+SECONDARY)
 def tile_img(idx,pal,xf,yf):
     if idx<512: im=pim; i=idx; cols=ppal.get(pal)
     else: im=sim; i=idx-512; cols=spal.get(pal)

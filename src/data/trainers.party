@@ -2326,9 +2326,9 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DAPHNE ===
 Name: MARINE
-Class: Lady
-Pic: Lady
-Gender: Female
+Class: Sailor
+Pic: Sailor
+Gender: Male
 Music: Female
 Items: Full Restore
 Double Battle: No
@@ -2638,9 +2638,9 @@ IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
 
 === TRAINER_BRIDGET ===
 Name: DECKHAND
-Class: Beauty
-Pic: Beauty
-Gender: Female
+Class: Sailor
+Pic: Sailor
+Gender: Male
 Music: Female
 Double Battle: No
 AI: Check Bad Move
@@ -9911,9 +9911,9 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
 === TRAINER_ANNIKA ===
 Name: BOSUN
-Class: Pokefan
-Pic: Pokefan F
-Gender: Female
+Class: Sailor
+Pic: Sailor
+Gender: Male
 Music: Twins
 Double Battle: No
 AI: Check Bad Move

@@ -13,6 +13,7 @@ GJT_TestWarp_EventScript_Guide::
 	dynmultipush GJT_TestWarp_Text_Petalburg, 8
 	dynmultipush GJT_TestWarp_Text_Fortree, 9
 	dynmultipush GJT_TestWarp_Text_Mossdeep, 10
+	dynmultipush GJT_TestWarp_Text_Sootopolis, 11
 	dynmultipush GJT_TestWarp_Text_Supplies, 3
 	dynmultipush GJT_TestWarp_Text_WowMons, 4
 	dynmultipush GJT_TestWarp_Text_Badges, 5
@@ -27,6 +28,7 @@ GJT_TestWarp_EventScript_Guide::
 	case 8, GJT_TestWarp_EventScript_Petalburg
 	case 9, GJT_TestWarp_EventScript_Fortree
 	case 10, GJT_TestWarp_EventScript_Mossdeep
+	case 11, GJT_TestWarp_EventScript_Sootopolis
 	case 3, GJT_TestWarp_EventScript_Supplies
 	case 4, GJT_TestWarp_EventScript_WowMons
 	case 5, GJT_TestWarp_EventScript_Badges
@@ -70,6 +72,11 @@ GJT_TestWarp_EventScript_Fortree::
 
 GJT_TestWarp_EventScript_Mossdeep::
 	warp MAP_MOSSDEEP_CITY_GYM, 4, 29
+	waitstate
+	end
+
+GJT_TestWarp_EventScript_Sootopolis::
+	warp MAP_SOOTOPOLIS_CITY_GYM_1F, 8, 24
 	waitstate
 	end
 
@@ -277,6 +284,9 @@ GJT_TestWarp_Text_Fortree:
 
 GJT_TestWarp_Text_Mossdeep:
 	.string "MOSSDEEP GYM$"
+
+GJT_TestWarp_Text_Sootopolis:
+	.string "SOOTOPOLIS GYM$"
 
 GJT_TestWarp_Text_Lavaridge:
 	.string "LAVARIDGE GYM$"
