@@ -2388,18 +2388,64 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Tail Whip
 
 === TRAINER_BRIANNA ===
-Name: BRIANNA
-Class: Lady
-Pic: Lady
-Gender: Female
-Music: Female
-Items: Full Restore
+Name: DAELIN
+Class: Sailor
+Pic: Sailor
+Gender: Male
+Music: Intense
+Items: Full Restore / Full Restore
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer / Ace Pokemon / Omniscient / Smart Mon Choices
 
-Seaking @ Nugget
-Level: 40
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+Pelipper
+Level: 44
+Ability: Drizzle
+Nature: Modest
+IVs: 28 HP / 28 Atk / 28 Def / 28 SpA / 28 SpD / 28 Spe
+- Hurricane
+- Surf
+- Roost
+- U-turn
+
+Tentacruel @ Black Sludge
+Level: 44
+Ability: Clear Body
+Nature: Bold
+IVs: 28 HP / 28 Atk / 28 Def / 28 SpA / 28 SpD / 28 Spe
+- Scald
+- Sludge Bomb
+- Toxic
+- Rapid Spin
+
+Kingler @ Sitrus Berry
+Level: 45
+Ability: Sheer Force
+Nature: Adamant
+IVs: 28 HP / 28 Atk / 28 Def / 28 SpA / 28 SpD / 28 Spe
+- Crabhammer
+- X-Scissor
+- Knock Off
+- Swords Dance
+
+Clawitzer
+Level: 45
+Ability: Mega Launcher
+Nature: Modest
+IVs: 28 HP / 28 Atk / 28 Def / 28 SpA / 28 SpD / 28 Spe
+- Water Pulse
+- Dark Pulse
+- Aura Sphere
+- Dragon Pulse
+
+Kingdra @ Mystic Water
+Level: 46
+Ability: Swift Swim
+Nature: Adamant
+IVs: 28 HP / 28 Atk / 28 Def / 28 SpA / 28 SpD / 28 Spe
+- Waterfall
+- Outrage
+- Dragon Dance
+- Hydro Pump
 
 === TRAINER_NAOMI ===
 Name: NAOMI

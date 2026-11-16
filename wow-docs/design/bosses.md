@@ -240,3 +240,7 @@ Team (IVs 24): Magneton 42 (Thunderbolt, Flash Cannon, Magnet Rise, Thunder Wave
 ### Taelia Fordragon (`TRAINER_CONNIE`, name "TAELIA", Expert F placeholder) — drafted
 Kul Tiran champion, earnest and warm; last fight before Jaina (5 mons, IVs 26). Scizor is her "sword" (Bisharp was dropped: too close to the Death Knight look; Lucario is Arator's). Seadra is a Sniper crit mon (Focus Energy).
 Team: Lanturn 42 (Volt Absorb; Scald, Thunderbolt, Ice Beam, Rest), Seadra 43 (Sniper; Surf, Dragon Pulse, Ice Beam, Focus Energy), Gyarados 44 (Sitrus; Intimidate; Waterfall, Crunch, Dragon Dance, Ice Fang), Scizor 44 (Choice Band; Technician; Bullet Punch, Iron Head, X-Scissor, Superpower), Empoleon 45 ace (Leftovers; Torrent; Surf, Flash Cannon, Ice Beam, Roost).
+
+### Daelin Proudmoore (`TRAINER_BRIANNA`, name "DAELIN", Sailor placeholder) — drafted (secret boss, top of B1F)
+Admiral; optional, a step above the lieutenants (IVs 28, 2 Full Restore). Drizzle Pelipper sets rain for Swift Swim Kingdra and Hurricane. "Clawf" is not in the build; Clawitzer used instead.
+Team: Pelipper 44 (Drizzle; Hurricane, Surf, Roost, U-turn), Tentacruel 44 (Black Sludge; Clear Body; Scald, Sludge Bomb, Toxic, Rapid Spin), Kingler 45 (Sitrus; Sheer Force; Crabhammer, X-Scissor, Knock Off, Swords Dance), Clawitzer 45 (Mega Launcher; Water Pulse, Dark Pulse, Aura Sphere, Dragon Pulse), Kingdra 46 ace (Mystic Water; Swift Swim; Waterfall, Outrage, Dragon Dance, Hydro Pump).
