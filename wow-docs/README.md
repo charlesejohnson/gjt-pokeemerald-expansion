@@ -86,3 +86,7 @@ Remaining failures are expected for this fork and not regressions:
   - **Badges**: a menu to flip badges 1 to 8 on or off one at a time (it stays open so you can flip several), plus Give All 8 and Clear All. The level cap is the value for the first badge you do **not** have, in order (`src/caps.c`): 0 badges = 15, badges 1 = 19, 1-2 = 24, 1-3 = 29, 1-4 = 31, 1-5 = 33, 1-6 = 42, 1-7 = 46, all 8 = 60 (until the Champion flag is set, after which there is no cap). Having badge 3 but not badge 2 still caps you at the badge-2 value.
   - It does not set "defeated gym" flags, so the gym guides' one-time loot is not triggered by this menu.
   - **Remove the two `GJT_TestWarp_EventScript_Guide` objects from `LittlerootTown_BrendansHouse_2F` and `LittlerootTown_MaysHouse_2F` map.json before release.** For each new gym add a menu entry and a warp line.
+
+
+## Build version
+Current dev build version lives in `data/text/gjt_version.inc` and is shown at the start of a new game (Khadgar intro) and by the bedroom test NPC. History: `wow-docs/CHANGELOG.md`. ROMs are sent as `GJT-WoW-vX.Y.Z.gba`.

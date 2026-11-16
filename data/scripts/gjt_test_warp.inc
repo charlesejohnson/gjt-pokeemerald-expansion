@@ -223,6 +223,8 @@ GJT_TestWarp_EventScript_ClearBadges::
 	goto GJT_TestWarp_EventScript_Badges
 
 GJT_TestWarp_Text_WhereTo:
+	.include "data/text/gjt_version.inc"
+	.string "\p"
 	.string "Laddie! KHADGAR set up a wee\n"
 	.string "shortcut fer testin'.\p"
 	.string "Where tae?$"

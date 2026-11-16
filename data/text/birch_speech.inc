@@ -1,4 +1,6 @@
 gText_Birch_Welcome::
+	.include "data/text/gjt_version.inc"
+	.string "\p"
 	.string "Champion!\p"
 	.string "Welcome to the world of POKéMON!\p"
 	.string "You may not recognize me, but it\n"
