@@ -1852,6 +1852,12 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
         .battleTvScore = 0, // TODO: Assign points
     },
 
+    [EFFECT_SWEEPING_STRIKES] =
+    {
+        .battleScript = BattleScript_EffectSweepingStrikes,
+        .battleTvScore = 4,
+    },
+
     [EFFECT_EXECUTE] =
     {
         .battleScript = BattleScript_EffectHit,

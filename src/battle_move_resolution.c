@@ -3271,7 +3271,7 @@ static enum MoveEndResult MoveEndProtectLikeEffect(struct BattleCalcValues *cv)
 
     if (gProtectStructs[cv->battlerAtk].chargingTurn
      || !IsBattlerAlive(cv->battlerAtk)
-     || CanBattlerAvoidContactEffects(cv->battlerAtk, cv->battlerDef, cv->abilities[cv->battlerAtk], cv->holdEffects[cv->battlerAtk], cv->move))
+     || (method != PROTECT_SPELL_REFLECT && CanBattlerAvoidContactEffects(cv->battlerAtk, cv->battlerDef, cv->abilities[cv->battlerAtk], cv->holdEffects[cv->battlerAtk], cv->move)))
     {
         gBattleScripting.moveendState++;
         return result;
@@ -3322,6 +3322,18 @@ static enum MoveEndResult MoveEndProtectLikeEffect(struct BattleCalcValues *cv)
         {
             gBattleScripting.moveEffect = MOVE_EFFECT_BURN;
             BattleScriptCall(BattleScript_BanefulBunkerEffect);
+            result = MOVEEND_RESULT_RUN_SCRIPT;
+        }
+        break;
+    case PROTECT_SPELL_REFLECT:
+        // GJT: the blocked spell is thrown back at the caster.
+        if (cv->battlerAtk != cv->battlerDef
+         && IsBattleMoveSpecial(cv->move)
+         && !IsAbilityAndRecord(cv->battlerAtk, cv->abilities[cv->battlerAtk], ABILITY_MAGIC_GUARD))
+        {
+            SetPassiveDamageAmount(cv->battlerAtk, GetNonDynamaxMaxHP(cv->battlerAtk) / 4);
+            PREPARE_MOVE_BUFFER(gBattleTextBuff1, MOVE_SPELL_REFLECT);
+            BattleScriptCall(BattleScript_SpikyShieldEffect);
             result = MOVEEND_RESULT_RUN_SCRIPT;
         }
         break;

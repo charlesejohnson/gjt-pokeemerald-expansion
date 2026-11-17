@@ -24821,4 +24821,56 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .validApprenticeMove = TRUE,
     },
 
+    [MOVE_SPELL_REFLECT] =
+    {
+        .name = COMPOUND_STRING("Spell Reflect"),
+        .description = COMPOUND_STRING(
+            "Blocks special attacks and\n"
+            "throws them back (1/4 HP)."),
+        .effect = EFFECT_PROTECT,
+        .power = 0,
+        .type = TYPE_STEEL,
+        .accuracy = 0,
+        .pp = 3,
+        .target = TARGET_USER,
+        .priority = 4,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .argument = { .protectMethod = PROTECT_SPELL_REFLECT },
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .copycatBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Protect,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_SWEEPING_STRIKES] =
+    {
+        .name = COMPOUND_STRING("Sweep. Strikes"),
+        .description = COMPOUND_STRING(
+            "For 4 turns, attacks hit\n"
+            "every foe."),
+        .effect = EFFECT_SWEEPING_STRIKES,
+        .power = 0,
+        .type = TYPE_FIGHTING,
+        .accuracy = 0,
+        .pp = 5,
+        .target = TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .snatchAffected = TRUE,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_SwordsDance,
+        .validApprenticeMove = TRUE,
+    },
+
 };

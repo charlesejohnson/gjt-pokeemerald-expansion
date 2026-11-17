@@ -22492,6 +22492,7 @@ static const struct LevelUpMove sWarriorArmsLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 34, MOVE_EXECUTE),
     LEVEL_UP_MOVE( 36, MOVE_CLOSE_COMBAT),
     LEVEL_UP_MOVE( 40, MOVE_COLOSSUS),
+    LEVEL_UP_MOVE( 44, MOVE_SWEEPING_STRIKES),
     LEVEL_UP_END
 };
 
@@ -22511,6 +22512,7 @@ static const struct LevelUpMove sWarriorFuryLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 34, MOVE_EXECUTE),
     LEVEL_UP_MOVE( 36, MOVE_CLOSE_COMBAT),
     LEVEL_UP_MOVE( 40, MOVE_SWORDS_DANCE),
+    LEVEL_UP_MOVE( 44, MOVE_SWEEPING_STRIKES),
     LEVEL_UP_END
 };
 
@@ -22529,6 +22531,7 @@ static const struct LevelUpMove sWarriorProtectionLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 30, MOVE_COMMANDING_SHOUT),
     LEVEL_UP_MOVE( 34, MOVE_BODY_PRESS),
     LEVEL_UP_MOVE( 40, MOVE_COLOSSUS),
+    LEVEL_UP_MOVE( 44, MOVE_SPELL_REFLECT),
     LEVEL_UP_END
 };
 

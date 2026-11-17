@@ -6577,3 +6577,13 @@ BattleScript_WarriorRageReport::
 	printstring STRINGID_GJT_RAGE
 	waitmessage B_WAIT_TIME_MED
 	return
+
+BattleScript_EffectSweepingStrikes::
+	attackcanceler
+	callnative BS_TrySetSweepingStrikes
+	.4byte BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	printstring STRINGID_GJT_SWEEPING_STRIKES
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd

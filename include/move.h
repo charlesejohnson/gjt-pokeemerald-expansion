@@ -85,6 +85,7 @@ enum ProtectMethod
     PROTECT_QUICK_GUARD,
     PROTECT_CRAFTY_SHIELD,
     PROTECT_MAT_BLOCK,
+    PROTECT_SPELL_REFLECT,
 };
 
 enum TerrainGroundCheck

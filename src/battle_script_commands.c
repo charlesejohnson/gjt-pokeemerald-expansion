@@ -11779,6 +11779,20 @@ void BS_TryHealFortyPercent(void)
         gBattlescriptCurrInstr = cmd->nextInstr;
 }
 
+void BS_TrySetSweepingStrikes(void)
+{
+    NATIVE_ARGS(const u8 *failInstr);
+    if (gBattleMons[gBattlerAttacker].volatiles.sweepingStrikes)
+    {
+        gBattlescriptCurrInstr = cmd->failInstr;
+    }
+    else
+    {
+        gBattleMons[gBattlerAttacker].volatiles.sweepingStrikes = 5; // counts down at end of turn: 4 full turns after this one
+        gBattlescriptCurrInstr = cmd->nextInstr;
+    }
+}
+
 void BS_JumpIfPranksterBlocked(void)
 {
     NATIVE_ARGS(const u8 *jumpInstr);

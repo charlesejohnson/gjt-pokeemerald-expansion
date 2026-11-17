@@ -945,8 +945,10 @@ enum __attribute__((packed)) Move
     MOVE_WARRIOR_CHARGE = 884,
     MOVE_VICTORY_RUSH = 885,
     MOVE_WARRIOR_RAMPAGE = 886,
+    MOVE_SPELL_REFLECT = 887,
+    MOVE_SWEEPING_STRIKES = 888,
 
-    MOVES_COUNT = MOVE_WARRIOR_RAMPAGE + 1, // includes custom moves (was MOVES_COUNT_GEN9)
+    MOVES_COUNT = MOVE_SWEEPING_STRIKES + 1, // includes custom moves (was MOVES_COUNT_GEN9)
 
     // Z Moves
     FIRST_Z_MOVE = MOVES_COUNT,

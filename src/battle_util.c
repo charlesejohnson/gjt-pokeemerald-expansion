@@ -5918,6 +5918,8 @@ bool32 IsBattlerProtected(struct BattleCalcValues *cv)
         isProtected = TRUE;
     else if (gProtectStructs[cv->battlerDef].protected == PROTECT_KINGS_SHIELD && !IsBattleMoveStatus(cv->move))
         isProtected = TRUE;
+    else if (gProtectStructs[cv->battlerDef].protected == PROTECT_SPELL_REFLECT && IsBattleMoveSpecial(cv->move))
+        isProtected = TRUE;
     else if (IsSideProtected(cv->battlerDef, PROTECT_QUICK_GUARD) && GetChosenMovePriority(cv->battlerAtk, cv->abilities[cv->battlerAtk]) > 0)
         isProtected = TRUE;
     else if (IsSideProtected(cv->battlerDef, PROTECT_MAT_BLOCK) && !IsBattleMoveStatus(cv->move))
@@ -5952,6 +5954,7 @@ enum ProtectType GetProtectType(enum ProtectMethod method)
     case PROTECT_BURNING_BULWARK:
     case PROTECT_OBSTRUCT:
     case PROTECT_SILK_TRAP:
+    case PROTECT_SPELL_REFLECT:
     case PROTECT_MAX_GUARD:
         return PROTECT_TYPE_SINGLE;
     case PROTECT_WIDE_GUARD:
@@ -9585,6 +9588,14 @@ enum MoveTarget GetBattlerMoveTargetType(enum BattlerId battler, enum Move move)
 {
     if (CanBattlerHitBothFoesInTerrain(battler, move, GetMoveEffect(move)))
         return TARGET_BOTH;
+
+    // GJT: Sweeping Strikes makes single-target attacks hit every foe.
+    if (gBattleMons[battler].volatiles.sweepingStrikes && !IsBattleMoveStatus(move))
+    {
+        enum MoveTarget selectionTarget = GetBattlerMoveSelectionTargetType(battler, move);
+        if (selectionTarget == TARGET_SELECTED || selectionTarget == TARGET_RANDOM)
+            return TARGET_BOTH;
+    }
 
     return GetBattlerMoveSelectionTargetType(battler, move);
 }

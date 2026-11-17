@@ -895,6 +895,10 @@ static bool32 HandleEndTurnHealBlock(enum BattlerId battler)
 
     gBattleStruct->eventState.endTurnBattler++;
 
+    // GJT: Sweeping Strikes counts down here (silently).
+    if (gBattleMons[battler].volatiles.sweepingStrikes > 0)
+        gBattleMons[battler].volatiles.sweepingStrikes--;
+
     if (gBattleMons[battler].volatiles.healBlockTimer > 0 && --gBattleMons[battler].volatiles.healBlockTimer == 0)
     {
         gBattleScripting.battler = battler;
