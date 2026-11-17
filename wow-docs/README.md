@@ -96,4 +96,6 @@ Current dev build version lives in `data/text/gjt_version.inc` and is shown at t
 2. Team Aqua/Magma special encounters: guildies and people met in WoW as set-piece fights.
 3. Pattern doc for building new route encounter tables.
 4. **To-do: mid-fight lines.** Add trainer-slide lines (see the note at the end of `design/bosses.md`) for our harder or more interesting fights: ace sent out, first crit, super-effective hit, low HP, Mega Evolution. Done so far: Mekkatorque. Candidates: Nathanos (Hunter's Mark), Sylvanas and Alleria, Thunderaan, Ragnaros, Scott, Daelin, Jaina.
+5. **Class implementation (set 2026-11-16):** Warrior first (rage counter, moves, abilities, species), then Shaman. Direction after that is open. Druid and Monk follow in the same pattern.
+6. Still on the docket: rematch teams/text, Thunderfury effect, sprite pass (new Xal'atath sprite, DK/Mage icon palettes), Elite Four / Champion void arc.
 Working method: one boss at a time, back and forth with Charlie, draft in the game, then notes in `design/bosses.md` and `CHANGELOG.md`.
