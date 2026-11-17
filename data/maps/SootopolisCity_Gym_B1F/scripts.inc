@@ -83,33 +83,29 @@ SootopolisCity_Gym_B1F_Text_AndreaPostBattle:
 	.string "feature either.$"
 
 SootopolisCity_Gym_B1F_Text_CrissyIntro:
-	.string "You came all the way here, but you won't\n"
-	.string "get to see JUAN.\p"
-	.string "Not if you lose to me, you won't!$"
+	.string "I can summon a feast out of\n"
+	.string "nothing. Sadly, this won't be one.$"
 
 SootopolisCity_Gym_B1F_Text_CrissyDefeat:
-	.string "You're strong!\n"
-	.string "I was fooled by your cute looks!$"
+	.string "I'm keeping the sandwiches I\n"
+	.string "conjured. You can't have them.$"
 
 SootopolisCity_Gym_B1F_Text_CrissyPostBattle:
-	.string "You might be good enough to avoid\n"
-	.string "being wiped out in one hit by JUAN.$"
+	.string "They're good sandwiches, too.\n"
+	.string "Ham. Possibly.$"
 
 SootopolisCity_Gym_B1F_Text_DaphneIntro:
-	.string "The sight of JUAN conducting\n"
-	.string "a battle…\p"
-	.string "The very beauty of it compelled me to\n"
-	.string "become a TRAINER.$"
+	.string "KUL TIRAS never loses at sea.\p"
+	.string "We also never go back on dry\n"
+	.string "land. This ice is a compromise.$"
 
 SootopolisCity_Gym_B1F_Text_DaphneDefeat:
-	.string "You battled with more beauty than\n"
-	.string "I could muster…$"
+	.string "I blame the ice. Not me.\n"
+	.string "The ice.$"
 
 SootopolisCity_Gym_B1F_Text_DaphnePostBattle:
-	.string "The grace you bring to battle is\n"
-	.string "fabulous.\p"
-	.string "Oh… I'm so fortunate to have found\n"
-	.string "POKéMON.$"
+	.string "I'd prefer the sea. It doesn't\n"
+	.string "crack when I step on it.$"
 
 SootopolisCity_Gym_B1F_Text_ConnieIntro:
 	.string "TAELIA: Jaina is just ahead. I'm to\n"
@@ -128,69 +124,72 @@ SootopolisCity_Gym_B1F_Text_ConniePostBattle:
 	.string "Be kind, and be careful.$"
 
 SootopolisCity_Gym_B1F_Text_BridgetIntro:
-	.string "The POKéMON GYM of the highest level\n"
-	.string "in the HOENN region…\p"
-	.string "That's the SOOTOPOLIS GYM.$"
+	.string "The ADMIRAL said to hold the line.\n"
+	.string "I've held it for three hours.\p"
+	.string "My arms are tired.$"
 
 SootopolisCity_Gym_B1F_Text_BridgetDefeat:
-	.string "What a high level you are!$"
+	.string "That's it. I'm going to go\n"
+	.string "swab something.$"
 
 SootopolisCity_Gym_B1F_Text_BridgetPostBattle:
-	.string "Rather than being satisfied by being\n"
-	.string "in a strong GYM, I imagine training in\l"
-	.string "other places will make you stronger.\l"
-	.string "But above all, it looks more fun.$"
+	.string "Three hours. I'd like that\n"
+	.string "noted somewhere.$"
 
 SootopolisCity_Gym_B1F_Text_OliviaIntro:
-	.string "I train my POKéMON together with\n"
-	.string "JUAN.\p"
-	.string "Don't think I'm a pushover.$"
+	.string "Your team looks a bit dull.\n"
+	.string "Let me enchant them.\p"
+	.string "By which I mean beat them.$"
 
 SootopolisCity_Gym_B1F_Text_OliviaDefeat:
-	.string "I was beaten…$"
+	.string "Fine. Take the compliment. Your\n"
+	.string "team is shinier than I thought.$"
 
 SootopolisCity_Gym_B1F_Text_OliviaPostBattle:
-	.string "I think you have potential.\n"
-	.string "Why don't you stay and train with us?$"
+	.string "Honestly, the shine is mostly\n"
+	.string "the enchantment. Mine.$"
 
 SootopolisCity_Gym_B1F_Text_TiffanyIntro:
-	.string "A graceful glide across the ice while\n"
-	.string "crossing no lines…\p"
-	.string "A TRAINER putting on that performance\n"
-	.string "would be elegantly beautiful!$"
+	.string "Oh! A visitor! JAINA says no one\n"
+	.string "gets past the ice.\p"
+	.string "I've been practicing the speech\n"
+	.string "for weeks.$"
 
 SootopolisCity_Gym_B1F_Text_TiffanyDefeat:
-	.string "Well, excuse me?!$"
+	.string "Does a defeat count as practice?\n"
+	.string "Please say yes.$"
 
 SootopolisCity_Gym_B1F_Text_TiffanyPostBattle:
-	.string "This is really obvious, but how strong\n"
-	.string "you are as a TRAINER has nothing to do\l"
-	.string "with how young or old you are.$"
+	.string "I'll get the speech right next\n"
+	.string "time. Probably.$"
 
 SootopolisCity_Gym_B1F_Text_BethanyIntro:
-	.string "When I'm with my POKéMON, the time\n"
-	.string "flies by before you can say, “Oops!”$"
+	.string "I studied ten years at the KIRIN TOR.\n"
+	.string "Ten! Do you know how many of those\l"
+	.string "involved ice floors? Zero.$"
 
 SootopolisCity_Gym_B1F_Text_BethanyDefeat:
-	.string "Oops!$"
+	.string "I'd like to file a formal complaint\n"
+	.string "with the floor.$"
 
 SootopolisCity_Gym_B1F_Text_BethanyPostBattle:
-	.string "I wish I could forget about lost causes\n"
-	.string "before I can manage an “Oops!”$"
+	.string "The KIRIN TOR never covered\n"
+	.string "this in the curriculum.$"
 
 SootopolisCity_Gym_B1F_Text_AnnikaIntro:
-	.string "I can battle with really rare POKéMON\n"
-	.string "if you'd like.$"
+	.string "Halt! No one passes the ADMIRAL\n"
+	.string "without going through me.\p"
+	.string "Also the mages. They're not very\n"
+	.string "reliable.$"
 
 SootopolisCity_Gym_B1F_Text_AnnikaDefeat:
-	.string "Oh, there now! Did you have a good look\n"
-	.string "at my POKéMON?$"
+	.string "Well done. Mind the ice on your\n"
+	.string "way up. Or don't. I won't be\l"
+	.string "there.$"
 
 SootopolisCity_Gym_B1F_Text_AnnikaPostBattle:
-	.string "I came to this GYM because JUAN\n"
-	.string "praised me for my darling POKéMON.\p"
-	.string "Oh, if only I'd met JUAN years ago\n"
-	.string "when I was younger…$"
+	.string "The ADMIRAL is below. Be polite.\n"
+	.string "Or don't. He won't be.$"
 
 SootopolisCity_Gym_B1F_Text_DaelinReward:
 	.string "DAELIN: My supplies. Salted, stale,\n"

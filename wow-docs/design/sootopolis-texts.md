@@ -26,3 +26,6 @@
 - Before Fortree badge: "You still lack the badge from FORTREE. Come back when you have it. I'm not going anywhere. I like the hair."
 - Plaque and rematch lines rewritten (rematch lines are short placeholders).
 - Magni (Gym Guide): warns the ice cracks on first step and breaks on the second, two guards, Jaina's rain and hail, "I'd expect an admiral". After: League foreshadowing, "These knees are like rocks."
+
+## B1F fillers
+Dalaran mages (Tiffany, Bethany, Crissy, Olivia) and Kul Tiran sailors (Bridget, Daphne, Annika): short jokey intro/defeat/post lines; see `data/maps/SootopolisCity_Gym_B1F/scripts.inc`.
