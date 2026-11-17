@@ -164,7 +164,7 @@ SootopolisCity_Gym_B1F_Text_TiffanyPostBattle:
 	.string "time. Probably.$"
 
 SootopolisCity_Gym_B1F_Text_BethanyIntro:
-	.string "I studied ten years at the KIRIN TOR.\n"
+	.string "I studied ten years at KIRIN TOR.\n"
 	.string "Ten! Do you know how many of those\l"
 	.string "involved ice floors? Zero.$"
 
