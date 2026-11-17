@@ -22,6 +22,6 @@
 - Intro: "You're the one KHADGAR sent. Good. I haven't the patience to be cruel today. You know, at first I was upset about being put in this body. But his sense of fashion and hair are fantastic. It will do for now. I'll be honest with you. Everyone here wants AZEROTH back. I want to be the one who brings it back. I have buried too much of it already to let someone else try. So I can't lose to you. Fight well, and I will do the same."
 - Defeat: "...Well fought. I wanted this one more than you did. It didn't matter. Take your badge." (kept short: the vanilla defeat text overflows the battle text buffer)
 - Badge: RAIN BADGE from JAINA. "The RAIN BADGE assures the full obedience of your POKéMON. It also lets you use WATERFALL. Take this as well. It was in his pocket. I think he'd want you to have it." (TM Water Pulse; the pocket is Juan's)
-- After: "Go on to AZEROTH. I'll be right behind you. And when this is done, we'll see who has proven the worthiest champion."
+- After: "We've tracked AZEROTH to the POKéMON LEAGUE, at EVER GRANDE CITY. We'll be right behind you, but I've got a bad feeling about who beat us there..."
 - Before Fortree badge: "You still lack the badge from FORTREE. Come back when you have it. I'm not going anywhere. I like the hair."
 - Plaque and rematch lines rewritten (rematch lines are short placeholders).

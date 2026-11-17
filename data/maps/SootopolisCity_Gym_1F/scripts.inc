@@ -244,10 +244,11 @@ SootopolisCity_Gym_1F_Text_RegisteredJuan:
 	.string "in the POKéNAV.$"
 
 SootopolisCity_Gym_1F_Text_JuanPostBattle:
-	.string "JAINA: Go on to AZEROTH. I'll be\n"
-	.string "right behind you.\p"
-	.string "And when this is done, we'll see who\n"
-	.string "has proven the worthiest champion.$"
+	.string "JAINA: We've tracked AZEROTH to the\n"
+	.string "POKéMON LEAGUE, at EVER GRANDE CITY.\p"
+	.string "We'll be right behind you, but I've\n"
+	.string "got a bad feeling about who beat us\l"
+	.string "there...$"
 
 SootopolisCity_Gym_1F_Text_GoGetFortreeBadge:
 	.string "JAINA: You still lack the badge from\n"
