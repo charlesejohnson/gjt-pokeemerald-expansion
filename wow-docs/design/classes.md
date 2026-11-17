@@ -68,6 +68,12 @@ Every class has a **base form** that evolves at some point into one of **three W
   - Riptide: Water status, 10 PP, any friendly target; heals 12.5% max HP now, then 1/16 max HP at the end of each of the next 4 turns (about 37% total). Restoration, about level 28.
   - Chain Lightning: Electric special, 60 power, 100% accuracy, 5 PP. Hits the main target at full power and the second foe at half power. Elemental, about level 32.
   - Bloodlust (covers both Bloodlust and Heroism): Electric status, 1 PP, +2 Atk and +2 Sp. Atk for the user and all allies. About level 36.
+  - Totems (each a separate status move, all last 4 turns on the user's side; numbers for PP/type/level still being settled):
+    - Stoneskin Totem: 25% less damage from physical moves, none from special.
+    - Windfury Totem: allies get Windfury Weapon's 20% chained physical repeat while it lasts (preferred: a side effect, not overwriting abilities; fall back to overwriting if too hard).
+    - Healing Stream Totem: side heals 1/16 max HP each turn.
+    - Grounding Totem: Light Screen plus Mud Sport effects.
+    - Searing Totem: opponents lose 1/8 max HP each turn.
 - Other abilities still open (Restoration: Storm Drain / Drizzle listed in the sheet; base Shaman open).
 
 ## Druid (design draft, not implemented)
