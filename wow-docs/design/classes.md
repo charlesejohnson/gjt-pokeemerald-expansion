@@ -99,4 +99,4 @@ Specs: Arms, Fury, Protection.
 **Abilities**
 - Shield Specialization (Protection): 20% chance to negate all physical damage when hit.
 - Enrage (Fury): +1 Speed or +1 Attack at random on a KO.
-- Resilient Fighter (Arms): removes the first negative status applied each battle. Probably worth changing; the best Arms ability is still undecided.
+- Sudden Death (Arms, confirmed 2026-11-16): 20% chance, after any hit, to refund the rage that move cost. Replaces Resilient Fighter (removes the first negative status each battle), which is dropped.
