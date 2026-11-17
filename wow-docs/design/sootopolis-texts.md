@@ -25,3 +25,4 @@
 - After: "We've tracked AZEROTH to the POKéMON LEAGUE, at EVER GRANDE CITY. We'll be right behind you, but I've got a bad feeling about who beat us there..."
 - Before Fortree badge: "You still lack the badge from FORTREE. Come back when you have it. I'm not going anywhere. I like the hair."
 - Plaque and rematch lines rewritten (rematch lines are short placeholders).
+- Magni (Gym Guide): warns the ice cracks on first step and breaks on the second, two guards, Jaina's rain and hail, "I'd expect an admiral". After: League foreshadowing, "These knees are like rocks."

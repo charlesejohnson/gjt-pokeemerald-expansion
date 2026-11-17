@@ -176,23 +176,27 @@ SootopolisCity_Gym_1F_EventScript_GymStatue::
 	end
 
 SootopolisCity_Gym_1F_Text_GymGuideAdvice:
-	.string "Yo! How's it going, CHAMPION-\n"
-	.string "bound {PLAYER}?\p"
-	.string "SOOTOPOLIS's GYM LEADER JUAN is\n"
-	.string "a master of WATER-type POKéMON.\p"
-	.string "And, to get to JUAN, an icy floor\n"
-	.string "will hamper your progress…\p"
-	.string "Listen, I'm sorry, but that's all the\n"
-	.string "advice that I have for you.\p"
-	.string "The rest of the way, you have to\n"
-	.string "go for it yourself!$"
+	.string "MAGNI: Och, ye've made it this far,\n"
+	.string "lad. Mind yer feet in here.\p"
+	.string "The ice cracks the first time ye\n"
+	.string "step on it, and gives way the\l"
+	.string "second. Plan yer path.\p"
+	.string "A tinker and a sailor stand guard,\n"
+	.string "and neither will let ye by easy.\p"
+	.string "JAINA's at the top. Rain and hail,\n"
+	.string "the both of them. And if ye fall,\l"
+	.string "ye'll land somewhere unfriendly.\p"
+	.string "I'd expect an admiral.$"
 
 SootopolisCity_Gym_1F_Text_GymGuidePostVictory:
-	.string "Yow! You've beaten even JUAN, who\n"
-	.string "was supposedly the best in all HOENN!\p"
-	.string "Okay! Check out your TRAINER CARD.\p"
-	.string "If you've gotten all the BADGES, you're\n"
-	.string "set for the POKéMON LEAGUE challenge!$"
+	.string "MAGNI: Ye did it, lad! JAINA, beaten!\n"
+	.string "Me ol' heart's fair swelling.\p"
+	.string "EVER GRANDE's next, and the LEAGUE.\n"
+	.string "I've a bad feeling about what's\l"
+	.string "waitin' there. But ye'll manage.\p"
+	.string "Go on. I'll be right behind ye.\n"
+	.string "Slowly, mind. These knees are like\l"
+	.string "rocks.$"
 
 SootopolisCity_Gym_1F_Text_JuanIntro:
 	.string "JAINA: You're the one KHADGAR sent.\n"
