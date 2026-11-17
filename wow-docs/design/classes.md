@@ -66,6 +66,7 @@ Every class has a **base form** that evolves at some point into one of **three W
   - Stormstrike: Electric physical, 65 power, 100% accuracy, 15 PP, single hit, 50% chance to lower the target's Sp. Def by 1. Enhancement, about level 20.
   - Healing Wave: Water status, 10 PP, heals any friendly target (self or ally) by 40% max HP. Restoration, about level 16.
   - Riptide: Water status, 10 PP, any friendly target; heals 12.5% max HP now, then 1/16 max HP at the end of each of the next 4 turns (about 37% total). Restoration, about level 28.
+  - Chain Lightning: Electric special, 60 power, 100% accuracy, 5 PP. Hits the main target at full power and the second foe at half power. Elemental, about level 32.
 - Other abilities still open (Restoration: Storm Drain / Drizzle listed in the sheet; base Shaman open).
 
 ## Druid (design draft, not implemented)
