@@ -245,7 +245,7 @@ Team: Lanturn 42 (Volt Absorb; Scald, Thunderbolt, Ice Beam, Rest), Seadra 43 (S
 Admiral; optional, a step above the lieutenants (IVs 28, 2 Full Restore). Drizzle Pelipper sets rain for Swift Swim Kingdra and Hurricane. "Clawf" is not in the build; Clawitzer used instead.
 Team: Pelipper 44 (Damp Rock, 8-turn rain; Drizzle; Hurricane, Surf, Roost, U-turn), Tentacruel 44 (Black Sludge; Clear Body; Scald, Sludge Bomb, Toxic, Rapid Spin), Kingler 45 (Sitrus; Sheer Force; Crabhammer, X-Scissor, Knock Off, Swords Dance), Clawitzer 45 (Mega Launcher; Water Pulse, Dark Pulse, Aura Sphere, Dragon Pulse), Kingdra 46 ace (Mystic Water; Swift Swim; Waterfall, Outrage, Dragon Dance, Hydro Pump).
 
-### Jaina Proudmoore (`TRAINER_JUAN_1`, name "JAINA", Leader Juan sprite) — drafted
+### Jaina Proudmoore (`TRAINER_JUAN_1`, name "JAINA"; she is in Juan's body like Scott in Norman's, so Juan's sprites and gender are kept) — drafted
 Water/frost mage, cap 46, IVs 31, conflicted over her father but indifferent to the player. Dual weather team: Articuno (Hail + Aurora Veil, comes after Vaporeon so hail is set last) vs Vaporeon (Rain Dance). Items: 2 Full Restore, 2 Hyper Potion.
 Team: Slowbro 44 (Regenerator; Scald, Psychic, Slack Off, Thunder Wave), Starmie 45 (Analytic; Surf, Psychic, Ice Beam, Rapid Spin), Vaporeon 45 (Leftovers; Hydration, cures status in rain; Rain Dance, Scald, Ice Beam, Wish), Articuno 45 (Never-Melt Ice; Snow Warning, non-native but worth it here; Hail, Aurora Veil, Blizzard, Freeze-Dry; replaced Alolan Ninetales, sets hail with the move), Lapras 46 ace (Sitrus; Water Absorb; Hydro Pump, Freeze-Dry, Thunderbolt, Ice Shard).
 

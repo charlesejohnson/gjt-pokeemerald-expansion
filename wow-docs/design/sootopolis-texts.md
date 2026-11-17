@@ -17,3 +17,6 @@
 - Defeat: "Hmph. The sea favors you today. Do not mistake that for respect."
 - Reward (5 of each vitamin, one-time): "My supplies. Salted, stale, and mine. Take them. Perhaps they will do you more good than they did my fleet."
 - After: "Take it, and go. A man pays what he owes. Even a bad one."
+
+## Jaina (in Juan's body; cool, tired, determined to be the one who rescues Azeroth)
+- Intro: "You're the one KHADGAR sent. Good. I haven't the patience to be cruel today. You know, at first I was upset about being put in this body. But his sense of fashion and hair are fantastic. It will do for now. I'll be honest with you. Everyone here wants AZEROTH back. I want to be the one who brings it back. I have buried too much of it already to let someone else try. So I can't lose to you. Fight well, and I will do the same."
