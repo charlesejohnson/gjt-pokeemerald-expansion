@@ -2,6 +2,9 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.16 (2026-11-16)
+- Daelin uses Drake's overworld and battle sprites. Jaina intro added (body swap with Juan; she keeps Juan's sprite).
+
 ## v0.1.15 (2026-11-16)
 - Sootopolis: Taelia and Daelin texts, Daelin ace line (trainer slide), Daelin vitamin reward (5 of each, once, `FLAG_RECEIVED_DAELIN_VITAMINS`), Jaina's Articuno (Snow Warning) replacing Alolan Ninetales.
 
