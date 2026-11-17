@@ -24696,4 +24696,129 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .validApprenticeMove = TRUE,
     },
 
+    [MOVE_MORTAL_STRIKE] =
+    {
+        .name = COMPOUND_STRING("Mortal Strike"),
+        .description = COMPOUND_STRING(
+            "Costs 4 rage. A brutal blow\n"
+            "that blocks the foe's healing."),
+        .effect = EFFECT_HIT,
+        .power = 60,
+        .type = TYPE_FIGHTING,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_PSYCHIC_NOISE,
+            .chance = 100,
+        }),
+        .battleAnimScript = gBattleAnimMove_CloseCombat,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_EXECUTE] =
+    {
+        .name = COMPOUND_STRING("Execute"),
+        .description = COMPOUND_STRING(
+            "Spends all rage. 15 power\n"
+            "per point of rage spent."),
+        .effect = EFFECT_EXECUTE,
+        .power = 15,
+        .type = TYPE_FIGHTING,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Guillotine,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_WARRIOR_CHARGE] =
+    {
+        .name = COMPOUND_STRING("Charge!"),
+        .description = COMPOUND_STRING(
+            "First turn only. Slows the\n"
+            "foe and builds 5 rage."),
+        .effect = EFFECT_FIRST_TURN_ONLY,
+        .power = 40,
+        .type = TYPE_FIGHTING,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_STAT_MINUS,
+            .speed = 1,
+            .chance = 100,
+        }),
+        .battleAnimScript = gBattleAnimMove_Tackle,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_VICTORY_RUSH] =
+    {
+        .name = COMPOUND_STRING("Victory Rush"),
+        .description = COMPOUND_STRING(
+            "Heals a quarter of max HP\n"
+            "if it knocks the foe out."),
+        .effect = EFFECT_HIT,
+        .power = 40,
+        .type = TYPE_FIGHTING,
+        .accuracy = 100,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Slash,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_WARRIOR_RAMPAGE] =
+    {
+        .name = COMPOUND_STRING("Rampage"),
+        .description = COMPOUND_STRING(
+            "Costs 5 rage. Four swift hits.\n"
+            "Raises own crit rate."),
+        .effect = EFFECT_HIT,
+        .power = 20,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .strikeCount = 4,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Slash,
+        .validApprenticeMove = TRUE,
+    },
+
 };

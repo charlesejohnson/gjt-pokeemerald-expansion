@@ -6563,3 +6563,12 @@ BattleScript_EffectSubstituteAndSleep::
 	printstring STRINGID_PKMNPOLYMORPHED
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
+
+BattleScript_VictoryRushHeal::
+	tryhealquarterhealth BS_ATTACKER, BattleScript_VictoryRushHealEnd
+	healthbarupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER, ASSURANCE_DOUBLE
+	printstring STRINGID_GJT_VICTORY_RUSH
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_VictoryRushHealEnd:
+	return

@@ -312,6 +312,7 @@ extern const u8 BattleScript_HadronEngineActivates[];
 extern const u8 BattleScript_HadronEngineActivatesInTerrain[];
 extern const u8 BattleScript_EffectLifeDew[];
 extern const u8 BattleScript_EffectCommandingShout[];
+extern const u8 BattleScript_VictoryRushHeal[];
 extern const u8 BattleScript_PowderMoveNoEffect[];
 extern const u8 BattleScript_GrassyTerrainHeals[];
 extern const u8 BattleScript_SpikyShieldEffect[];

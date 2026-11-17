@@ -4577,6 +4577,7 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
         case ABILITY_AS_ONE_SHADOW_RIDER:
         case ABILITY_BEAST_BOOST:
         case ABILITY_EELEVATE:
+        case ABILITY_ENRAGE:
             {
                 if (NoAliveMonsForEitherParty())
                     break;
@@ -4584,7 +4585,9 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
                 enum Stat stat = STAT_ATK;
                 u32 numMonsFainted = NumFaintedBattlersByAttacker(battler);
 
-                if (ability == ABILITY_BEAST_BOOST || ability == ABILITY_EELEVATE)
+                if (ability == ABILITY_ENRAGE)
+                    stat = RandomPercentage(RNG_ENRAGE, 50) ? STAT_ATK : STAT_SPEED;
+                else if (ability == ABILITY_BEAST_BOOST || ability == ABILITY_EELEVATE)
                     stat = GetHighestStatId(battler);
                 else if (ability == ABILITY_GRIM_NEIGH || ability == ABILITY_AS_ONE_SHADOW_RIDER)
                     stat = STAT_SPATK;
@@ -6280,6 +6283,9 @@ static inline u32 CalcMoveBasePower(struct DamageContext *ctx)
         break;
     case EFFECT_SPIT_UP:
         basePower = 100 * gBattleMons[battlerAtk].volatiles.stockpileCounter;
+        break;
+    case EFFECT_EXECUTE:
+        basePower *= gBattleMons[battlerAtk].volatiles.warriorRage;
         break;
     case EFFECT_RUNIC_CONSUME:
         // Death Strike / Frost Strike: move power per Runic Power spent (max 3)
@@ -11306,4 +11312,32 @@ bool32 IsBattlerInvolvedInSkyDrop(enum BattlerId battler)
 bool32 IsAsleepOrComatose(enum BattlerId battler, enum Ability ability)
 {
     return (gBattleMons[battler].status1 & STATUS1_SLEEP) || ability == ABILITY_COMATOSE;
+}
+
+// GJT: Warrior rage helpers
+bool32 IsWarriorSpecies(enum Species species)
+{
+    return species >= SPECIES_WARRIOR && species <= SPECIES_WARRIOR_PROTECTION;
+}
+
+u32 GetMoveRageCost(enum Move move)
+{
+    switch (move)
+    {
+    case MOVE_MORTAL_STRIKE: return 4;
+    case MOVE_REND: return 2;
+    case MOVE_WARRIOR_RAMPAGE: return 5;
+    case MOVE_EXECUTE: return 1; // minimum needed; the move spends all rage
+    default: return 0;
+    }
+}
+
+void GainWarriorRage(enum BattlerId battler, u32 amount)
+{
+    u32 rage;
+
+    if (!IsWarriorSpecies(gBattleMons[battler].species))
+        return;
+    rage = gBattleMons[battler].volatiles.warriorRage + amount;
+    gBattleMons[battler].volatiles.warriorRage = (rage > 10) ? 10 : rage;
 }

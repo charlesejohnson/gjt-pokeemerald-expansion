@@ -1185,6 +1185,9 @@ static enum CancelerResult CancelerMoveFailure(struct BattleCalcValues *cv)
 {
     const u8 *battleScript = NULL;
 
+    if (GetMoveRageCost(cv->move) > gBattleMons[cv->battlerAtk].volatiles.warriorRage)
+        battleScript = BattleScript_ButItFailed;
+
     switch (cv->moveEffect)
     {
     case EFFECT_FLING:
@@ -2688,6 +2691,13 @@ static enum CancelerResult CancelerDamageCalc(struct BattleCalcValues *cv)
 
         ctx.battlerDef = battlerDef;
         gBattleStruct->moveDamage[battlerDef] = CalculateMoveDamage(&ctx);
+
+        // GJT: Shield Specialization has a 20% chance to negate physical damage.
+        if (cv->abilities[battlerDef] == ABILITY_SHIELD_SPECIALIZATION
+         && IsBattleMovePhysical(cv->move)
+         && gBattleStruct->moveDamage[battlerDef] != 0
+         && RandomPercentage(RNG_SHIELD_SPECIALIZATION, 20))
+            gBattleStruct->moveDamage[battlerDef] = 0;
     }
 
     if (gSpecialStatuses[cv->battlerAtk].gemBoost
@@ -3426,6 +3436,50 @@ static enum MoveEndResult MoveEndRage(struct BattleCalcValues *cv)
     return result;
 }
 
+// GJT: Warrior rage builds when hitting or being hit by an opponent.
+static enum MoveEndResult MoveEndWarriorRage(struct BattleCalcValues *cv)
+{
+    if (cv->battlerAtk != cv->battlerDef
+     && !IsBattlerAlly(cv->battlerAtk, cv->battlerDef)
+     && !IsBattleMoveStatus(cv->move)
+     && IsBattlerTurnDamaged(cv->battlerDef, EXCLUDING_SUBSTITUTES))
+    {
+        GainWarriorRage(cv->battlerAtk, 1);
+        GainWarriorRage(cv->battlerDef, 1);
+    }
+
+    if (cv->move == MOVE_WARRIOR_CHARGE && !gBattleStruct->unableToUseMove)
+        GainWarriorRage(cv->battlerAtk, 5);
+
+    gBattleScripting.moveendState++;
+    return MOVEEND_RESULT_CONTINUE;
+}
+
+// GJT: Victory Rush heals a quarter of max HP after a KO; Rampage raises crit rate.
+static enum MoveEndResult MoveEndWarriorVictory(struct BattleCalcValues *cv)
+{
+    enum MoveEndResult result = MOVEEND_RESULT_CONTINUE;
+
+    if (cv->move == MOVE_VICTORY_RUSH
+     && !gBattleStruct->unableToUseMove
+     && IsBattlerAlive(cv->battlerAtk)
+     && !IsBattlerAlive(cv->battlerDef)
+     && IsBattlerTurnDamaged(cv->battlerDef, EXCLUDING_SUBSTITUTES))
+    {
+        BattleScriptCall(BattleScript_VictoryRushHeal);
+        result = MOVEEND_RESULT_RUN_SCRIPT;
+    }
+    else if (cv->move == MOVE_WARRIOR_RAMPAGE
+     && !gBattleStruct->unableToUseMove
+     && gBattleMons[cv->battlerAtk].volatiles.bonusCritStages < 3)
+    {
+        gBattleMons[cv->battlerAtk].volatiles.bonusCritStages++;
+    }
+
+    gBattleScripting.moveendState++;
+    return result;
+}
+
 static enum MoveEndResult MoveEndBeakBlast(struct BattleCalcValues *cv)
 {
     enum MoveEndResult result = MOVEEND_RESULT_CONTINUE;
@@ -4129,6 +4183,20 @@ static enum MoveEndResult MoveEndDefrost(struct BattleCalcValues *cv)
 static enum MoveEndResult MoveEndMoveBlockRecoil(struct BattleCalcValues *cv)
 {
     enum MoveEndResult result = MOVEEND_RESULT_CONTINUE;
+
+    // GJT: rage costs. Execute spends everything; Sudden Death may refund the cost.
+    if (!gBattleStruct->unableToUseMove && GetMoveRageCost(cv->move) != 0)
+    {
+        u32 rage = gBattleMons[cv->battlerAtk].volatiles.warriorRage;
+        u32 cost = (cv->move == MOVE_EXECUTE) ? rage : GetMoveRageCost(cv->move);
+
+        if (cost > rage)
+            cost = rage;
+        if (cost != 0 && cv->abilities[cv->battlerAtk] == ABILITY_SUDDEN_DEATH
+         && RandomPercentage(RNG_SUDDEN_DEATH, 20))
+            cost = 0;
+        gBattleMons[cv->battlerAtk].volatiles.warriorRage -= cost;
+    }
 
     switch (cv->moveEffect)
     {
@@ -5361,6 +5429,7 @@ static enum MoveEndResult (*const sMoveEndHandlers[])(struct BattleCalcValues *c
     [MOVEEND_PROTECT_LIKE_EFFECT] = MoveEndProtectLikeEffect,
     [MOVEEND_ABSORB] = MoveEndAbsorb,
     [MOVEEND_RAGE] = MoveEndRage,
+    [MOVEEND_WARRIOR_RAGE] = MoveEndWarriorRage,
     [MOVEEND_BEAK_BLAST] = MoveEndBeakBlast,
     [MOVEEND_ABILITIES] = MoveEndAbilities,
     [MOVEEND_RESIST_BERRY_MESSAGE] = MoveEndResistBerryMessage,
@@ -5376,6 +5445,7 @@ static enum MoveEndResult (*const sMoveEndHandlers[])(struct BattleCalcValues *c
     [MOVEEND_SYMBIOSIS] = MoveEndSymbiosis,
     [MOVEEND_SUBSTITUTE] = MoveEndSubstitute,
     [MOVEEND_FAINT_BLOCK] = MoveEndFaintBlock,
+    [MOVEEND_WARRIOR_VICTORY] = MoveEndWarriorVictory,
     [MOVEEND_UPDATE_LAST_MOVES] = MoveEndUpdateLastMoves,
     [MOVEEND_MIRROR_MOVE] = MoveEndMirrorMove,
     [MOVEEND_NEXT_TARGET] = MoveEndNextTarget,

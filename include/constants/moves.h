@@ -940,8 +940,13 @@ enum __attribute__((packed)) Move
     MOVE_CHALLENGE = 879,   // Warrior "Taunt" (Follow Me style redirection)
     MOVE_WAR_WHIRLWIND = 880,
     MOVE_REND = 881,
+    MOVE_MORTAL_STRIKE = 882,
+    MOVE_EXECUTE = 883,
+    MOVE_WARRIOR_CHARGE = 884,
+    MOVE_VICTORY_RUSH = 885,
+    MOVE_WARRIOR_RAMPAGE = 886,
 
-    MOVES_COUNT = MOVE_REND + 1, // includes custom moves (was MOVES_COUNT_GEN9)
+    MOVES_COUNT = MOVE_WARRIOR_RAMPAGE + 1, // includes custom moves (was MOVES_COUNT_GEN9)
 
     // Z Moves
     FIRST_Z_MOVE = MOVES_COUNT,

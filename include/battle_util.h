@@ -318,5 +318,10 @@ bool32 IsVictoryCatchGuaranteed(void);
 bool32 IsBattlerInvolvedInSkyDrop(enum BattlerId battler);
 bool32 IsAsleepOrComatose(enum BattlerId battler, enum Ability ability);
 
+
+bool32 IsWarriorSpecies(enum Species species);
+u32 GetMoveRageCost(enum Move move);
+void GainWarriorRage(enum BattlerId battler, u32 amount);
+
 #endif // GUARD_BATTLE_UTIL_H
 u32 GetManaBarrierRecoil(u32 battler, u32 move);

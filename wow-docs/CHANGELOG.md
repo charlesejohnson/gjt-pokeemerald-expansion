@@ -2,6 +2,12 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.21
+- Warrior rage (stage 2): new rage counter (max 10, resets on switch-out). Warriors gain 1 rage when they damage an opponent and 1 when an opponent damages them. Rage-cost moves fail if you can't afford them.
+- New moves: Mortal Strike (4 rage, 60 power, heal block), Execute (spends all rage, 15 power per point), Charge! (first turn only, slows the foe, +5 rage), Victory Rush (heals 25% after a KO), Rampage (5 rage, 4 hits, +1 crit stage afterwards). Rend now costs 2 rage.
+- Abilities live: Sudden Death (20% to refund a move's rage cost), Enrage (a KO raises Attack or Speed at random), Shield Specialization (20% to negate a physical hit).
+- Not yet: Spell Reflect, Sweeping Strikes, rage display in battle, bleed (Rend/Whirlwind use poison/plain damage).
+
 ## v0.1.20
 - Warrior line added (stage 1): Warrior (Fighting) evolves by Moon / Sun / Shiny Stone into Arms, Fury or Protection (all Fighting/Steel). Placeholder sprites: Timburr, Machamp, Mienshao, Bastiodon.
 - New moves: Sunder Armor (-3 Def), Battle Shout, Command Shout (heal 40% self + ally), Colossus, Challenge (Warrior Taunt, Follow Me redirect), W. Whirlwind, Rend (poisons; bleed isn't implemented).
