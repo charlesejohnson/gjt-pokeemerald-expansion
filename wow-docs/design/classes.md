@@ -65,7 +65,7 @@ Every class has a **base form** that evolves at some point into one of **three W
   - Lava Burst: Fire special, 55 power, 85% accuracy, 10 PP, always crits a burned target. Elemental, about level 24.
   - Stormstrike: Electric physical, 65 power, 100% accuracy, 15 PP, single hit, 50% chance to lower the target's Sp. Def by 1. Enhancement, about level 20.
   - Healing Wave: Water status, 10 PP, heals any friendly target (self or ally) by 40% max HP. Restoration, about level 16.
-  - Riptide: Water status, small up-front heal plus heal over time (numbers being settled). Restoration, about level 28.
+  - Riptide: Water status, 10 PP, any friendly target; heals 12.5% max HP now, then 1/16 max HP at the end of each of the next 4 turns (about 37% total). Restoration, about level 28.
 - Other abilities still open (Restoration: Storm Drain / Drizzle listed in the sheet; base Shaman open).
 
 ## Druid (design draft, not implemented)
