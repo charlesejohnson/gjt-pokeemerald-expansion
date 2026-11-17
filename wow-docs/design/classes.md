@@ -75,9 +75,10 @@ Every class has a **base form** that evolves at some point into one of **three W
     - Grounding Totem: Light Screen plus Mud Sport effects.
     - Searing Totem: opponents lose 1/8 max HP each turn. Learned by every Shaman, level 20.
     - Stoneskin Totem learned by every Shaman at level 16. Windfury ~42 (Enhancement), Healing Stream ~44 (Restoration), Grounding ~46 (all).
+    - Earthbind Totem: about level 30; lowers the Speed of all enemies by 1 while active (4 turns; exact behaviour for switch-ins to settle).
     - Magma Totem (Elemental only): lasts 2 turns, casts Lava Plume once at the end of each turn starting the turn after it is cast, at full power (80), with Lava Plume's 30% burn chance. Foes only (assumed; confirm).
-  - Earth Shock: Ground special, 60 power, lowers the target's Sp. Atk by 1 (assumed from "spark"; confirm).
-  - Frost Shock: Ice special, 65 power, lowers the target's Speed by 1.
+  - Earth Shock: Ground special, 60 power, lowers the target's Sp. Atk by 1, 100% chance. About level 28.
+  - Frost Shock: Ice special, 65 power, lowers the target's Speed by 1, 100% chance. About level 30.
   - Shock Wave (vanilla) dropped from the draft learnset in favour of these.
     - All totems 5 PP (proposed), Electric Shaman types: Stoneskin Rock, Windfury Flying, Healing Stream Water, Grounding Ground, Searing/Magma Fire.
 - Other abilities still open (Restoration: Storm Drain / Drizzle listed in the sheet; base Shaman open).
