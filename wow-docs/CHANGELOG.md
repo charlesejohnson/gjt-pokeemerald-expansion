@@ -2,6 +2,13 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.20
+- Warrior line added (stage 1): Warrior (Fighting) evolves by Moon / Sun / Shiny Stone into Arms, Fury or Protection (all Fighting/Steel). Placeholder sprites: Timburr, Machamp, Mienshao, Bastiodon.
+- New moves: Sunder Armor (-3 Def), Battle Shout, Command Shout (heal 40% self + ally), Colossus, Challenge (Warrior Taunt, Follow Me redirect), W. Whirlwind, Rend (poisons; bleed isn't implemented).
+- New abilities registered (effects pending): Sudden Death, Enrage, Shield Specialization.
+- Test NPC now also gives a level 5 Warrior and Moon/Sun/Shiny Stones.
+- Not yet in: rage counter, rage-cost moves (Mortal Strike, Execute, Rampage, Charge, Victory Rush, Sweeping Strikes, Spell Reflect), ability effects.
+
 ## v0.1.19
 - Sootopolis B1F filler texts rewritten (Dalaran mages Tiffany, Bethany, Crissy, Olivia; Kul Tiran sailors Bridget, Daphne, Annika).
 - Warrior class design notes added (Arms ability: Sudden Death).

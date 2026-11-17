@@ -2584,4 +2584,24 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("Takes less damage when\nbelow half HP."),
         .aiRating = 7,
     },
+    [ABILITY_SUDDEN_DEATH] =
+    {
+        .name = _("Sudden Death"),
+        .description = COMPOUND_STRING("May refund the rage a\nmove cost."),
+        .aiRating = 7,
+    },
+
+    [ABILITY_ENRAGE] =
+    {
+        .name = _("Enrage"),
+        .description = COMPOUND_STRING("A KO raises Attack or\nSpeed."),
+        .aiRating = 7,
+    },
+
+    [ABILITY_SHIELD_SPECIALIZATION] =
+    {
+        .name = _("Shield Spec."),
+        .description = COMPOUND_STRING("May negate physical\ndamage."),
+        .aiRating = 7,
+    },
 };

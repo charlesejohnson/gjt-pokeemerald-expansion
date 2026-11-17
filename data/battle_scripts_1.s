@@ -766,6 +766,36 @@ BattleScript_EffectLifeDewHealing:
 	waitmessage B_WAIT_TIME_LONG
 	return
 
+BattleScript_EffectCommandingShout::
+	attackcanceler
+	jumpiffullhp BS_ATTACKER, BattleScript_EffectCommandingShoutCheckPartner
+	copybyte gBattlerTarget, gBattlerAttacker
+	attackanimation
+	waitanimation
+	call BattleScript_EffectCommandingShoutHealing
+	jumpifabsent BS_ATTACKER_PARTNER, BattleScript_EffectCommandingShoutEnd
+	jumpiffullhp BS_ATTACKER_PARTNER, BattleScript_EffectCommandingShoutEnd
+	setallytonexttarget BattleScript_EffectCommandingShoutNextTarget
+BattleScript_EffectCommandingShoutNextTarget:
+	call BattleScript_EffectCommandingShoutHealing
+BattleScript_EffectCommandingShoutEnd:
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectCommandingShoutCheckPartner:
+	jumpifabsent BS_ATTACKER_PARTNER, BattleScript_ButItFailed
+	jumpiffullhp BS_ATTACKER_PARTNER, BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	setallytonexttarget BattleScript_EffectCommandingShoutNextTarget
+
+BattleScript_EffectCommandingShoutHealing:
+	tryhealfortypercent BS_TARGET, BattleScript_EffectCommandingShoutEnd
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET, ASSURANCE_DOUBLE
+	printstring STRINGID_PKMNREGAINEDHEALTH
+	waitmessage B_WAIT_TIME_LONG
+	return
+
 BattleScript_EffectAllySwitch::
 	attackcanceler
 	tryallyswitch BattleScript_ButItFailed

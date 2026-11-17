@@ -1852,6 +1852,12 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
         .battleTvScore = 0, // TODO: Assign points
     },
 
+    [EFFECT_COMMANDING_SHOUT] =
+    {
+        .battleScript = BattleScript_EffectCommandingShout,
+        .battleTvScore = 0,
+    },
+
     [EFFECT_LIFE_DEW] =
     {
         .battleScript = BattleScript_EffectLifeDew,

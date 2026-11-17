@@ -933,8 +933,15 @@ enum __attribute__((packed)) Move
     MOVE_POLYMORPH = 872,
     MOVE_ARCANE_ORB = 873,
     MOVE_DEATH_COIL = 874,
+    MOVE_SUNDER_ARMOR = 875,
+    MOVE_BATTLE_SHOUT = 876,
+    MOVE_COMMANDING_SHOUT = 877,
+    MOVE_COLOSSUS = 878,
+    MOVE_CHALLENGE = 879,   // Warrior "Taunt" (Follow Me style redirection)
+    MOVE_WAR_WHIRLWIND = 880,
+    MOVE_REND = 881,
 
-    MOVES_COUNT = MOVE_DEATH_COIL + 1, // includes custom moves (was MOVES_COUNT_GEN9)
+    MOVES_COUNT = MOVE_REND + 1, // includes custom moves (was MOVES_COUNT_GEN9)
 
     // Z Moves
     FIRST_Z_MOVE = MOVES_COUNT,

@@ -24505,4 +24505,195 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .validApprenticeMove = TRUE,
     },
 
+    [MOVE_SUNDER_ARMOR] =
+    {
+        .name = COMPOUND_STRING("Sunder Armor"),
+        .description = COMPOUND_STRING(
+            "Tears at the foe's armor,\n"
+            "sharply lowering Defense."),
+        .effect = EFFECT_STAT_CHANGE,
+        .power = 0,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .pp = 20,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .magicCoatAffected = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = STAT_CHANGE_EFFECT_MINUS,
+            .defense = 3,
+        }),
+        .battleAnimScript = gBattleAnimMove_Screech,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_BATTLE_SHOUT] =
+    {
+        .name = COMPOUND_STRING("Battle Shout"),
+        .description = COMPOUND_STRING(
+            "A rallying cry that raises\n"
+            "the Attack of user and ally."),
+        .effect = EFFECT_STAT_CHANGE,
+        .power = 0,
+        .type = TYPE_FIGHTING,
+        .accuracy = 0,
+        .pp = 20,
+        .target = TARGET_USER_AND_ALLY,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .soundMove = TRUE,
+        .snatchAffected = TRUE,
+        .ignoresProtect = TRUE,
+        .ignoresSubstitute = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = STAT_CHANGE_EFFECT_PLUS,
+            .attack = 1,
+        }),
+        .battleAnimScript = gBattleAnimMove_Howl,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_COMMANDING_SHOUT] =
+    {
+        .name = COMPOUND_STRING("Command Shout"),
+        .description = COMPOUND_STRING(
+            "A bellowing order that heals\n"
+            "the user and ally by 40%."),
+        .effect = EFFECT_COMMANDING_SHOUT,
+        .power = 0,
+        .type = TYPE_FIGHTING,
+        .accuracy = 0,
+        .pp = 1,
+        .target = TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .soundMove = TRUE,
+        .snatchAffected = TRUE,
+        .ignoresProtect = TRUE,
+        .ignoresSubstitute = TRUE,
+        .healingMove = TRUE,
+        .metronomeBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_LifeDew,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_COLOSSUS] =
+    {
+        .name = COMPOUND_STRING("Colossus"),
+        .description = COMPOUND_STRING(
+            "Swells to enormous size,\n"
+            "raising Def, Atk and Sp. Def."),
+        .effect = EFFECT_STAT_CHANGE,
+        .power = 0,
+        .type = TYPE_STEEL,
+        .accuracy = 0,
+        .pp = 1,
+        .target = TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .snatchAffected = TRUE,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = STAT_CHANGE_EFFECT_PLUS,
+            .defense = 2,
+            .attack = 1,
+            .spDef = 1,
+        }),
+        .battleAnimScript = gBattleAnimMove_CosmicPower,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_CHALLENGE] =
+    {
+        .name = COMPOUND_STRING("Challenge"),
+        .description = COMPOUND_STRING(
+            "Draws attention to make\n"
+            "foes attack only the user."),
+        .effect = EFFECT_FOLLOW_ME,
+        .power = 0,
+        .type = TYPE_FIGHTING,
+        .accuracy = 0,
+        .pp = 20,
+        .target = TARGET_USER,
+        .priority = 2,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_FollowMe,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_WAR_WHIRLWIND] =
+    {
+        .name = COMPOUND_STRING("W. Whirlwind"),
+        .description = COMPOUND_STRING(
+            "Spins with the blade out,\n"
+            "hitting everything nearby."),
+        .effect = EFFECT_HIT,
+        .power = 40,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .pp = 15,
+        .target = TARGET_FOES_AND_ALLY,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Slash,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_REND] =
+    {
+        .name = COMPOUND_STRING("Rend"),
+        .description = COMPOUND_STRING(
+            "Rips a wound open that\n"
+            "poisons the target."),
+        .effect = EFFECT_HIT,
+        .power = 20,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .pp = 20,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_POISON,
+            .chance = 100,
+        }),
+        .battleAnimScript = gBattleAnimMove_Slash,
+        .validApprenticeMove = TRUE,
+    },
+
 };

@@ -1967,6 +1967,12 @@
 	.4byte \jumpInstr
 	.endm
 
+	.macro tryhealfortypercent battler:req, failInstr:req
+	callnative BS_TryHealFortyPercent
+	.byte \battler
+	.4byte \failInstr
+	.endm
+
 	.macro tryhealquarterhealth battler:req, failInstr:req
 	callnative BS_TryHealQuarterHealth
 	.byte \battler

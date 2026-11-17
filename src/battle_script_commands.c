@@ -11768,6 +11768,17 @@ void BS_TryHealQuarterHealth(void)
         gBattlescriptCurrInstr = cmd->nextInstr;   // can heal
 }
 
+void BS_TryHealFortyPercent(void)
+{
+    NATIVE_ARGS(u8 battler, const u8 *failInstr);
+    enum BattlerId battler = GetBattlerForBattleScript(cmd->battler);
+    SetHealAmount(battler, GetNonDynamaxMaxHP(battler) * 2 / 5);
+    if (gBattleMons[battler].hp == gBattleMons[battler].maxHP)
+        gBattlescriptCurrInstr = cmd->failInstr;
+    else
+        gBattlescriptCurrInstr = cmd->nextInstr;
+}
+
 void BS_JumpIfPranksterBlocked(void)
 {
     NATIVE_ARGS(const u8 *jumpInstr);
