@@ -6572,3 +6572,8 @@ BattleScript_VictoryRushHeal::
 	waitmessage B_WAIT_TIME_LONG
 BattleScript_VictoryRushHealEnd:
 	return
+
+BattleScript_WarriorRageReport::
+	printstring STRINGID_GJT_RAGE
+	waitmessage B_WAIT_TIME_MED
+	return

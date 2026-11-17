@@ -8,6 +8,9 @@ SINGLE_BATTLE_TEST("Warrior gains rage when hitting and being hit")
         OPPONENT(SPECIES_WOBBUFFET) { Speed(1); HP(10000); MaxHP(10000); }
     } WHEN {
         TURN { MOVE(player, MOVE_TACKLE); MOVE(opponent, MOVE_TACKLE); }
+    } SCENE {
+        MESSAGE("Arms Warrior's rage: 1/10");
+        MESSAGE("Arms Warrior's rage: 2/10");
     } THEN {
         EXPECT_EQ((u32)gBattleMons[0].volatiles.warriorRage, 2);
     }

@@ -103,6 +103,6 @@ Specs: Arms, Fury, Protection.
 
 ### Warrior implementation status (v0.1.21)
 Species: Warrior (Fighting) -> Arms / Fury / Protection (all Fighting/Steel) via Moon / Sun / Shiny Stone. Placeholder sprites: Timburr, Machamp, Mienshao, Bastiodon. Stats are a draft proposal (Arms 100/140/100/45/70/90, Fury 90/150/75/45/70/125, Protection 140/95/150/40/90/55), not from the sheet.
-- **Rage:** `volatiles.warriorRage` (0-10). +1 when the Warrior damages an opponent, +1 when an opponent damages it. Resets on switch-out. Moves fail without enough rage. No in-battle display yet.
+- **Rage:** `volatiles.warriorRage` (0-10). +1 when the Warrior damages an opponent, +1 when an opponent damages it. Resets on switch-out. Moves fail without enough rage. In-battle display: a message after each change ("rage: N/10"). Healthbox red number or fill bar is a later nice-to-have.
 - **Done:** Mortal Strike, Execute, Charge!, Victory Rush, Rampage, Rend (2 rage), Sunder Armor, Battle Shout, Command Shout, Colossus, Challenge (Taunt), W. Whirlwind; abilities Sudden Death, Enrage, Shield Specialization (20% negate, silent). Names that clash with vanilla moves got different display names (Charge!, W. Whirlwind, Challenge, Command Shout).
 - **Not yet:** Spell Reflect, Sweeping Strikes, bleed, rage display, real sprites, wild/trainer use. Tests in `test/battle/ability/warrior_rage.c`.

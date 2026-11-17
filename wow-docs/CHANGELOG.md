@@ -2,6 +2,9 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.22
+- Warrior rage display (interim): a battle message "<name>'s rage: N/10" whenever a Warrior's rage changes. A healthbox number or bar is still wanted but needs on-screen testing.
+
 ## v0.1.21
 - Warrior rage (stage 2): new rage counter (max 10, resets on switch-out). Warriors gain 1 rage when they damage an opponent and 1 when an opponent damages them. Rage-cost moves fail if you can't afford them.
 - New moves: Mortal Strike (4 rage, 60 power, heal block), Execute (spends all rage, 15 power per point), Charge! (first turn only, slows the foe, +5 rage), Victory Rush (heals 25% after a KO), Rampage (5 rage, 4 hits, +1 crit stage afterwards). Rend now costs 2 rage.

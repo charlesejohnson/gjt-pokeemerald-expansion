@@ -3480,6 +3480,38 @@ static enum MoveEndResult MoveEndWarriorVictory(struct BattleCalcValues *cv)
     return result;
 }
 
+// GJT: tell the player when a Warrior's rage changed.
+static enum MoveEndResult MoveEndWarriorRageReport(struct BattleCalcValues *cv)
+{
+    static u8 sReportedRage[MAX_BATTLERS_COUNT];
+    enum BattlerId battlers[2] = { cv->battlerAtk, cv->battlerDef };
+
+    for (u32 i = 0; i < 2; i++)
+    {
+        enum BattlerId battler = battlers[i];
+        u32 rage = gBattleMons[battler].volatiles.warriorRage;
+
+        if (!IsWarriorSpecies(gBattleMons[battler].species) || !IsBattlerAlive(battler))
+        {
+            sReportedRage[battler] = rage;
+            continue;
+        }
+        if (rage == sReportedRage[battler])
+            continue;
+
+        sReportedRage[battler] = rage;
+        if (rage == 0 && GetMoveRageCost(cv->move) == 0)
+            continue; // switched in fresh, nothing worth announcing
+        gBattleScripting.battler = battler;
+        PREPARE_BYTE_NUMBER_BUFFER(gBattleTextBuff1, 2, rage);
+        BattleScriptCall(BattleScript_WarriorRageReport);
+        return MOVEEND_RESULT_RUN_SCRIPT; // stay in this state to report the next battler
+    }
+
+    gBattleScripting.moveendState++;
+    return MOVEEND_RESULT_CONTINUE;
+}
+
 static enum MoveEndResult MoveEndBeakBlast(struct BattleCalcValues *cv)
 {
     enum MoveEndResult result = MOVEEND_RESULT_CONTINUE;
@@ -5454,6 +5486,7 @@ static enum MoveEndResult (*const sMoveEndHandlers[])(struct BattleCalcValues *c
     [MOVEEND_MULTIHIT_MOVE] = MoveEndMultihitMove,
     [MOVEEND_DEFROST] = MoveEndDefrost,
     [MOVEEND_MOVE_BLOCK_RECOIL] = MoveEndMoveBlockRecoil,
+    [MOVEEND_WARRIOR_RAGE_REPORT] = MoveEndWarriorRageReport,
     [MOVEEND_SHEER_FORCE] = MoveEndSheerForce,
     [MOVEEND_MOVE_BLOCK] = MoveEndMoveBlock,
     [MOVEEND_ITEM_EFFECTS_ATTACKER_2] = MoveEndItemEffectsAttacker2,
