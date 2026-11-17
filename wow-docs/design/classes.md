@@ -59,6 +59,8 @@ Every class has a **base form** that evolves at some point into one of **three W
 - **Windfury Weapon** (Enhancement ability): every physical attack has a 20% chance to repeat; repeats can chain, up to 5 times.
 - **Elemental Overload** (Elemental ability): same idea for special attacks, 20% repeat, chains up to 5.
 - **No Maelstrom** for now (no resource counter). Moves are being chosen one by one with Charlie; none agreed yet.
+- **Agreed moves:**
+  - Lightning Bolt: Electric special, 55 power, 100% accuracy, small (10%) chance to paralyze. Learned early (about level 5).
 - Other abilities still open (Restoration: Storm Drain / Drizzle listed in the sheet; base Shaman open).
 
 ## Druid (design draft, not implemented)
