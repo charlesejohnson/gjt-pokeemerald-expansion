@@ -2,6 +2,9 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.24
+- Spell Reflect now reflects the real damage the blocked special move would have dealt (1x, not Mirror Coat's 2x), instead of a flat 1/4 HP.
+
 ## v0.1.23
 - Spell Reflect (Protection, Steel, 3 PP, priority +4): blocks special attacks this turn and throws them back, so the attacker loses 1/4 of its max HP. Not true Mirror Coat damage yet.
 - Sweeping Strikes (Arms/Fury, 5 PP): for 4 turns, the user's single-target attacks hit every foe.

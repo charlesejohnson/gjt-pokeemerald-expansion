@@ -3331,7 +3331,27 @@ static enum MoveEndResult MoveEndProtectLikeEffect(struct BattleCalcValues *cv)
          && IsBattleMoveSpecial(cv->move)
          && !IsAbilityAndRecord(cv->battlerAtk, cv->abilities[cv->battlerAtk], ABILITY_MAGIC_GUARD))
         {
-            SetPassiveDamageAmount(cv->battlerAtk, GetNonDynamaxMaxHP(cv->battlerAtk) / 4);
+            // Reflect the damage the blocked spell would have done (1x, not Mirror Coat's 2x).
+            struct DamageContext reflectCtx = {
+                .battlerAtk = cv->battlerAtk,
+                .battlerDef = cv->battlerDef,
+                .move = cv->move,
+                .chosenMove = gChosenMove,
+                .baseMove = gBattleStruct->baseMove,
+                .moveType = GetBattleMoveType(cv->move),
+                .weather = GetWeather(),
+                .terrain = gFieldTimers.terrain,
+                .randomFactor = TRUE,
+            };
+            for (enum BattlerId b = B_BATTLER_0; b < gBattlersCount; b++)
+            {
+                reflectCtx.abilities[b] = cv->abilities[b];
+                reflectCtx.holdEffects[b] = cv->holdEffects[b];
+            }
+            s32 reflected = CalculateMoveDamage(&reflectCtx);
+            if (reflected < 1)
+                reflected = 1;
+            SetPassiveDamageAmount(cv->battlerAtk, reflected);
             PREPARE_MOVE_BUFFER(gBattleTextBuff1, MOVE_SPELL_REFLECT);
             BattleScriptCall(BattleScript_SpikyShieldEffect);
             result = MOVEEND_RESULT_RUN_SCRIPT;

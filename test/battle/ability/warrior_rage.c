@@ -68,6 +68,7 @@ SINGLE_BATTLE_TEST("Spell Reflect blocks special attacks and hurts the caster")
     } THEN {
         EXPECT_EQ(player->hp, player->maxHP);
         EXPECT_LT(opponent->hp, opponent->maxHP);
+        EXPECT_GT(opponent->maxHP - opponent->hp, 1); // real reflected damage
     }
 }
 

@@ -24826,7 +24826,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Spell Reflect"),
         .description = COMPOUND_STRING(
             "Blocks special attacks and\n"
-            "throws them back (1/4 HP)."),
+            "throws the damage back."),
         .effect = EFFECT_PROTECT,
         .power = 0,
         .type = TYPE_STEEL,
