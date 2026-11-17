@@ -73,7 +73,10 @@ Every class has a **base form** that evolves at some point into one of **three W
     - Windfury Totem: allies get Windfury Weapon's 20% chained physical repeat while it lasts (preferred: a side effect, not overwriting abilities; fall back to overwriting if too hard).
     - Healing Stream Totem: side heals 1/16 max HP each turn.
     - Grounding Totem: Light Screen plus Mud Sport effects.
-    - Searing Totem: opponents lose 1/8 max HP each turn.
+    - Searing Totem: opponents lose 1/8 max HP each turn. Learned by every Shaman, level 20.
+    - Stoneskin Totem learned by every Shaman at level 16. Windfury ~42 (Enhancement), Healing Stream ~44 (Restoration), Grounding ~46 (all).
+    - Magma Totem (Elemental only): casts Lava Plume twice each turn starting the turn after it is cast (duration and exact behaviour still being settled).
+    - All totems 5 PP (proposed), Electric Shaman types: Stoneskin Rock, Windfury Flying, Healing Stream Water, Grounding Ground, Searing/Magma Fire.
 - Other abilities still open (Restoration: Storm Drain / Drizzle listed in the sheet; base Shaman open).
 
 ## Druid (design draft, not implemented)
