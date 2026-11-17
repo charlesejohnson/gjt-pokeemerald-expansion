@@ -63,6 +63,7 @@ Every class has a **base form** that evolves at some point into one of **three W
   - Lightning Bolt: Electric special, 55 power, 100% accuracy, small (10%) chance to paralyze. Learned early (about level 5).
   - Flame Shock: Fire special, 15 power, 100% accuracy, 20 PP, always burns the target. About level 12.
   - Lava Burst: Fire special, 55 power, 85% accuracy, 10 PP, always crits a burned target. Elemental, about level 24.
+  - Stormstrike: Electric physical, 65 power, 100% accuracy, 15 PP, single hit, 50% chance to lower the target's Sp. Def by 1. Enhancement, about level 20.
 - Other abilities still open (Restoration: Storm Drain / Drizzle listed in the sheet; base Shaman open).
 
 ## Druid (design draft, not implemented)
