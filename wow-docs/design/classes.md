@@ -67,6 +67,7 @@ Every class has a **base form** that evolves at some point into one of **three W
   - Healing Wave: Water status, 10 PP, heals any friendly target (self or ally) by 40% max HP. Restoration, about level 16.
   - Riptide: Water status, 10 PP, any friendly target; heals 12.5% max HP now, then 1/16 max HP at the end of each of the next 4 turns (about 37% total). Restoration, about level 28.
   - Chain Lightning: Electric special, 60 power, 100% accuracy, 5 PP. Hits the main target at full power and the second foe at half power. Elemental, about level 32.
+  - Bloodlust (covers both Bloodlust and Heroism): Electric status, 1 PP, +2 Atk and +2 Sp. Atk for the user and all allies. About level 36.
 - Other abilities still open (Restoration: Storm Drain / Drizzle listed in the sheet; base Shaman open).
 
 ## Druid (design draft, not implemented)
