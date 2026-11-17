@@ -61,6 +61,7 @@ Every class has a **base form** that evolves at some point into one of **three W
 - **No Maelstrom** for now (no resource counter). Moves are being chosen one by one with Charlie; none agreed yet.
 - **Agreed moves:**
   - Lightning Bolt: Electric special, 55 power, 100% accuracy, small (10%) chance to paralyze. Learned early (about level 5).
+  - Flame Shock: Fire special, 15 power, 100% accuracy, 20 PP, always burns the target. About level 12.
 - Other abilities still open (Restoration: Storm Drain / Drizzle listed in the sheet; base Shaman open).
 
 ## Druid (design draft, not implemented)
