@@ -73,3 +73,30 @@ Every class has a **base form** that evolves at some point into one of **three W
 | Mistweaver Monk | Fairy | 100 / 85 / 90 / 70 / 90 / 90 | 525 |
 | Brewmaster Monk | Fairy/Fire | not filled in | |
 | Windwalker Monk | Fairy/Fighting | not filled in | |
+
+## Warrior (design notes, not implemented)
+
+Specs: Arms, Fury, Protection.
+
+**Rage resource:** builds when the Warrior hits or is hit. Needs a new counter that goes much higher than 3 (ideally 10). Several moves spend it.
+
+**Moves**
+- Mortal Strike (Arms): costs 4 rage, 60 base power, plus a heal block effect.
+- Sunder Armor: -3 Defense on the target.
+- Victory Rush: a bit of damage, and heals when the user has just knocked out an enemy (look at Retaliate for an inverse trigger).
+- Whirlwind: 40 damage to all other targets, plus bleed if bleed is implemented.
+- Sweeping Strikes (maybe): for 4 turns, all your attacks target all enemies.
+- Execute: spends all rage, 15 or 20 damage per point.
+- Charge: first turn only, like Fake Out. Generates 5 rage and lowers the enemy's Speed.
+- Spell Reflect (Protection): Mirror Coat, plus no damage taken if the enemy uses a special attack. Probably 3 PP.
+- Rampage (Fury): costs 5 rage, 4 hits of 20 base power, raises own crit rate by 1 stage.
+- Battle Shout: +1 Attack for self and ally.
+- Commanding Shout: heals self and ally by 40% (stronger Life Dew). 1 PP.
+- Colossus: 1 PP. +2 Defense, +1 Attack, +1 Sp. Def.
+- Rend: costs 2 rage, 20 base power plus bleed (poison if bleed isn't implemented).
+- Taunt: Follow Me redirection.
+
+**Abilities**
+- Shield Specialization (Protection): 20% chance to negate all physical damage when hit.
+- Enrage (Fury): +1 Speed or +1 Attack at random on a KO.
+- Resilient Fighter (Arms): removes the first negative status applied each battle. Probably worth changing; the best Arms ability is still undecided.
