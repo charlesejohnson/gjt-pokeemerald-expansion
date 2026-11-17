@@ -10,3 +10,10 @@
 - Intro: "Jaina is just ahead. I'm to make sure you're ready for her. I'm very fond of you already. I'm still not going to go easy."
 - Defeat: "Oh, well fought! Truly! I mean it. I'm a little bit proud of you."
 - After: "Jaina has a lot on her mind. Her father most of all. Be kind, and be careful." (hints at the Daelin secret)
+
+## Daelin Proudmoore (secret boss; gruff, bitter, formal, hostile to the intruder)
+- Intro: "You fell. Into MY hold. Most would have stayed down. Let me teach you what the sea does to the stubborn."
+- Ace line (slide, Kingdra out): "I've lost a fleet. I've lost a daughter's trust. I will not lose to a child!"
+- Defeat: "Hmph. The sea favors you today. Do not mistake that for respect."
+- Reward (5 of each vitamin, one-time): "My supplies. Salted, stale, and mine. Take them. Perhaps they will do you more good than they did my fleet."
+- After: "Take it, and go. A man pays what he owes. Even a bad one."

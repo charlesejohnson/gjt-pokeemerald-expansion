@@ -61,6 +61,10 @@ static const u8* const sTrainerSlides[DIFFICULTY_COUNT][TRAINER_PARTNER(PARTNER_
 {
     [DIFFICULTY_NORMAL] =
     {
+        [TRAINER_BRIANNA] = // Daelin Proudmoore (Sootopolis gym, secret boss)
+        {
+            [TRAINER_SLIDE_SELF_LAST_SWITCHIN] = COMPOUND_STRING("DAELIN: I've lost a fleet. I've lost a\ndaughter's trust. I will not lose\nto a child!{PAUSE_UNTIL_PRESS}"),
+        },
         [TRAINER_ANDREA] = // Mekkatorque (Sootopolis gym)
         {
             [TRAINER_SLIDE_SELF_LAST_SWITCHIN] = COMPOUND_STRING("MEKKATORQUE: We've come too far to let\nthis responsibility fall to someone\nelse!{PAUSE_UNTIL_PRESS}"),

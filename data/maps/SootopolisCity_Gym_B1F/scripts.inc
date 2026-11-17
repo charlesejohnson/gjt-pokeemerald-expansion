@@ -12,8 +12,22 @@ SootopolisCity_Gym_B1F_EventScript_Crissy::
 	end
 
 SootopolisCity_Gym_B1F_EventScript_Brianna::
-	trainerbattle_single TRAINER_BRIANNA, SootopolisCity_Gym_B1F_Text_BriannaIntro, SootopolisCity_Gym_B1F_Text_BriannaDefeat
+	trainerbattle_single TRAINER_BRIANNA, SootopolisCity_Gym_B1F_Text_BriannaIntro, SootopolisCity_Gym_B1F_Text_BriannaDefeat, SootopolisCity_Gym_B1F_EventScript_DaelinDefeated
 	msgbox SootopolisCity_Gym_B1F_Text_BriannaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+SootopolisCity_Gym_B1F_EventScript_DaelinDefeated::
+	goto_if_set FLAG_RECEIVED_DAELIN_VITAMINS, SootopolisCity_Gym_B1F_EventScript_DaelinVitaminsGiven
+	msgbox SootopolisCity_Gym_B1F_Text_DaelinReward, MSGBOX_DEFAULT
+	giveitem ITEM_PROTEIN, 5
+	giveitem ITEM_CALCIUM, 5
+	giveitem ITEM_HP_UP, 5
+	giveitem ITEM_ZINC, 5
+	giveitem ITEM_IRON, 5
+	giveitem ITEM_CARBOS, 5
+	setflag FLAG_RECEIVED_DAELIN_VITAMINS
+SootopolisCity_Gym_B1F_EventScript_DaelinVitaminsGiven::
+	release
 	end
 
 SootopolisCity_Gym_B1F_EventScript_Connie::
@@ -178,15 +192,24 @@ SootopolisCity_Gym_B1F_Text_AnnikaPostBattle:
 	.string "Oh, if only I'd met JUAN years ago\n"
 	.string "when I was younger…$"
 
+SootopolisCity_Gym_B1F_Text_DaelinReward:
+	.string "DAELIN: My supplies. Salted, stale,\n"
+	.string "and mine. Take them.\p"
+	.string "Perhaps they will do you more good\n"
+	.string "than they did my fleet.$"
+
 SootopolisCity_Gym_B1F_Text_BriannaIntro:
-	.string "Giggle…\n"
-	.string "Your grim look is so charming.$"
+	.string "DAELIN: You fell. Into MY hold.\n"
+	.string "Most would have stayed down.\p"
+	.string "Let me teach you what the sea does\n"
+	.string "to the stubborn.$"
 
 SootopolisCity_Gym_B1F_Text_BriannaDefeat:
-	.string "Oh, dear.\n"
-	.string "I went much too easy on you.$"
+	.string "DAELIN: Hmph. The sea favors you\n"
+	.string "today.\p"
+	.string "Do not mistake that for respect.$"
 
 SootopolisCity_Gym_B1F_Text_BriannaPostBattle:
-	.string "You couldn't lay a finger on JUAN,\n"
-	.string "I'm sure. Giggle…$"
+	.string "DAELIN: Take it, and go. A man pays\n"
+	.string "what he owes. Even a bad one.$"
 
