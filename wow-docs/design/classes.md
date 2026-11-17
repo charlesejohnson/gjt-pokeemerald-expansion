@@ -55,6 +55,12 @@ Every class has a **base form** that evolves at some point into one of **three W
 | Enhance | Electric/Flying | 95 / 125 / 75 / 70 / 75 / 124 | 564 | | |
 | Ele | Electric/Fire | 100 / 60 / 80 / 135 / 80 / 120 | 575 | | Solar Power (a *Parental Bond* entry follows it in the source; assignment unclear) |
 
+### Shaman design decisions (2026-11-17)
+- **Windfury Weapon** (Enhancement ability): every physical attack has a 20% chance to repeat; repeats can chain, up to 5 times.
+- **Elemental Overload** (Elemental ability): same idea for special attacks, 20% repeat, chains up to 5.
+- **No Maelstrom** for now (no resource counter). Moves are being chosen one by one with Charlie; none agreed yet.
+- Other abilities still open (Restoration: Storm Drain / Drizzle listed in the sheet; base Shaman open).
+
 ## Druid (design draft, not implemented)
 
 | Form | Types | Stats | BST | Notes |
