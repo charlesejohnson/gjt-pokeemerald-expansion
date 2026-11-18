@@ -2,6 +2,13 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.28
+- Druid line (stage 1): Druid (Grass, Sunkern art), Resto (Sudowoodo art, orange wood), Feral (Grass/Normal, brown Liepard), Guardian (Grass/Rock, brown Torterra), Boomy (Grass/Fairy, Noctowl with blue eyes). Sheet stats; base Druid 65/55/70/70/70/60.
+- Evolution (assumed): Moon -> Resto, Shiny -> Feral, Dawn -> Guardian, Sun -> Boomy.
+- Abilities registered with no effect yet: Efflorescence, Predatory Swiftness, Thick Hide, Eclipse. Natural Cure on the base.
+- Learnsets use regular Pokemon moves only so far (fillers); forms, combo points, bear rage and the custom Druid moves come next.
+- Test NPC also hands out a Druid and Dawn Stones.
+
 ## v0.1.27
 - Magma Totem: 30% chance to burn each foe it hits.
 - Chain Lightning is a normal pick-your-target move again. After it hits, the lightning arcs to the other foe (doubles) for half of the damage it would have dealt there.

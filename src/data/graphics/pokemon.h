@@ -27716,6 +27716,16 @@ const u16 gMonPalette_ShamanEnh[] = INCGFX_U16("graphics/pokemon/conkeldurr/sham
 const u16 gMonShinyPalette_ShamanEnh[] = INCGFX_U16("graphics/pokemon/conkeldurr/shaman_enh_shiny.pal", ".gbapal");
 const u16 gMonPalette_ShamanEle[] = INCGFX_U16("graphics/pokemon/conkeldurr/shaman_ele_normal.pal", ".gbapal");
 const u16 gMonShinyPalette_ShamanEle[] = INCGFX_U16("graphics/pokemon/conkeldurr/shaman_ele_shiny.pal", ".gbapal");
+const u16 gMonPalette_Druid[] = INCGFX_U16("graphics/pokemon/sunkern/druid_normal.pal", ".gbapal");
+const u16 gMonShinyPalette_Druid[] = INCGFX_U16("graphics/pokemon/sunkern/druid_shiny.pal", ".gbapal");
+const u16 gMonPalette_DruidResto[] = INCGFX_U16("graphics/pokemon/sudowoodo/druid_resto_normal.pal", ".gbapal");
+const u16 gMonShinyPalette_DruidResto[] = INCGFX_U16("graphics/pokemon/sudowoodo/druid_resto_shiny.pal", ".gbapal");
+const u16 gMonPalette_DruidFeral[] = INCGFX_U16("graphics/pokemon/liepard/druid_feral_normal.pal", ".gbapal");
+const u16 gMonShinyPalette_DruidFeral[] = INCGFX_U16("graphics/pokemon/liepard/druid_feral_shiny.pal", ".gbapal");
+const u16 gMonPalette_DruidGuardian[] = INCGFX_U16("graphics/pokemon/torterra/druid_guardian_normal.pal", ".gbapal");
+const u16 gMonShinyPalette_DruidGuardian[] = INCGFX_U16("graphics/pokemon/torterra/druid_guardian_shiny.pal", ".gbapal");
+const u16 gMonPalette_DruidBoomy[] = INCGFX_U16("graphics/pokemon/noctowl/druid_boomy_normal.pal", ".gbapal");
+const u16 gMonShinyPalette_DruidBoomy[] = INCGFX_U16("graphics/pokemon/noctowl/druid_boomy_shiny.pal", ".gbapal");
 const u8 gMonIcon_Deathknight[] = INCGFX_U8("graphics/pokemon/deathknight/icon.png", ".4bpp");
 #if P_FOOTPRINTS
 const u8 gMonFootprint_Deathknight[] = INCGFX_U8("graphics/pokemon/deathknight/footprint.png", ".1bpp");

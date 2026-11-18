@@ -89,6 +89,7 @@ GJT_TestWarp_EventScript_Supplies::
 	additem ITEM_MOON_STONE, 5
 	additem ITEM_SUN_STONE, 5
 	additem ITEM_SHINY_STONE, 5
+	additem ITEM_DAWN_STONE, 5
 	additem ITEM_PROTEIN, 5
 	additem ITEM_CALCIUM, 5
 	additem ITEM_HP_UP, 5
@@ -113,6 +114,8 @@ GJT_TestWarp_EventScript_WowMons::
 	givemon SPECIES_WARRIOR, 5
 	goto_if_eq VAR_RESULT, MON_CANT_GIVE, Common_EventScript_NoMoreRoomForPokemon
 	givemon SPECIES_SHAMAN, 5
+	goto_if_eq VAR_RESULT, MON_CANT_GIVE, Common_EventScript_NoMoreRoomForPokemon
+	givemon SPECIES_DRUID, 5
 	goto_if_eq VAR_RESULT, MON_CANT_GIVE, Common_EventScript_NoMoreRoomForPokemon
 	playfanfare MUS_OBTAIN_ITEM
 	msgbox GJT_TestWarp_Text_GaveMons, MSGBOX_DEFAULT
@@ -321,7 +324,7 @@ GJT_TestWarp_Text_GaveSupplies:
 
 GJT_TestWarp_Text_GaveMons:
 	.string "A level 5 DEATH KNIGHT, MAGE,\n"
-	.string "WARRIOR an' SHAMAN are yers!$"
+	.string "WARRIOR, SHAMAN an' DRUID are yers!$"
 
 GJT_TestWarp_Text_WhichBadge:
 	.string "Which BADGE should I flip, laddie?$"

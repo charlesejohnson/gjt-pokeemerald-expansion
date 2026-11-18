@@ -2617,4 +2617,32 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("Special hits may repeat,\nup to 5 times."),
         .aiRating = 8,
     },
+    [ABILITY_EFFLORESCENCE] =
+    {
+        .name = _("Efflorescence"),
+        .description = COMPOUND_STRING("A bloom heals allies\non entering the field."),
+        .aiRating = 7,
+    },
+
+    [ABILITY_PREDATORY_SWIFTNESS] =
+    {
+        .name = _("Pred Swiftness"),
+        .description = COMPOUND_STRING("After a crit, the next\nmove gains priority."),
+        .aiRating = 7,
+    },
+
+    [ABILITY_THICK_HIDE] =
+    {
+        .name = _("Thick Hide"),
+        .description = COMPOUND_STRING("Takes less damage\nat low HP."),
+        .aiRating = 7,
+    },
+
+    [ABILITY_ECLIPSE] =
+    {
+        .name = _("Eclipse"),
+        .description = COMPOUND_STRING("Grass and Fairy moves are\nboosted on alternate turns."),
+        .aiRating = 7,
+    },
+
 };
