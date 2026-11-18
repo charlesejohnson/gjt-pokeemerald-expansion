@@ -117,6 +117,7 @@ Every class has a **base form** that evolves at some point into one of **three W
 - **Thrash** (Normal/Grass physical, 50 power, 15 PP, lv22, hits both foes in doubles, +2 rage, 35% poison, Bear Form). **Frenzied Regeneration** (Grass status, 5 PP, lv34, heals 60% max HP, costs 5 rage, Bear Form). Approved.
 - **Wild Growth** (Grass status, 5 PP, lv38): heals every ally on the field 25% now. **Tranquility** (Grass status, 1 PP, lv50): heals the whole team 35% and gives +1 Sp. Def. Approved.
 - **Wild Growth** (Grass status, 5 PP, lv38): heals every ally on the field 25% now. **Tranquility** (Grass status, 1 PP, lv50): heals the whole team 35% and +1 Sp. Def. Approved.
+- **Type rule:** Cat and Bear form moves are either Normal or Grass; each move needs a single type, decided per move (earlier "Normal/Grass" notes mean undecided). Mangle is a Bear Form move (Normal/Grass TBD, 55 power, 15 PP, lv28).
 - **Move management (decided):** moves stay constant across forms. A spec doesn't have to use its own form, so each spec can carry 3 spec moves plus a form move. A Druid trainer NPC with scroll menus to set loadouts comes later (added to docket).
 - **Moves and levels:** drafting in progress (Moonkin, Bear, Cat Form, Shred done; Ferocious Bite proposed: Normal/Grass physical, 10 PP, ~lv24, spends all combo points, power 20 + 20 per point, Cat Form only (confirmed)).
 
