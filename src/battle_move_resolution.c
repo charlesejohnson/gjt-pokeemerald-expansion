@@ -3526,6 +3526,55 @@ static enum MoveEndResult MoveEndWarriorVictory(struct BattleCalcValues *cv)
     return result;
 }
 
+// GJT: Chain Lightning arcs to the other foe for half damage.
+static enum MoveEndResult MoveEndChainLightning(struct BattleCalcValues *cv)
+{
+    enum MoveEndResult result = MOVEEND_RESULT_CONTINUE;
+
+    if (cv->move == MOVE_CHAIN_LIGHTNING
+     && IsDoubleBattle()
+     && !gBattleStruct->unableToUseMove
+     && IsBattlerTurnDamaged(cv->battlerDef, EXCLUDING_SUBSTITUTES))
+    {
+        enum BattlerId other = GetPartnerBattler(cv->battlerDef);
+        enum Ability otherAbility = GetBattlerAbility(other);
+        if (other != cv->battlerAtk
+         && IsBattlerAlive(other)
+         && otherAbility != ABILITY_VOLT_ABSORB
+         && otherAbility != ABILITY_LIGHTNING_ROD
+         && otherAbility != ABILITY_MOTOR_DRIVE)
+        {
+            struct DamageContext ctx = {
+                .battlerAtk = cv->battlerAtk,
+                .battlerDef = other,
+                .move = cv->move,
+                .chosenMove = gChosenMove,
+                .baseMove = gBattleStruct->baseMove,
+                .moveType = GetBattleMoveType(cv->move),
+                .weather = GetWeather(),
+                .terrain = gFieldTimers.terrain,
+                .randomFactor = TRUE,
+            };
+            for (enum BattlerId b = B_BATTLER_0; b < gBattlersCount; b++)
+            {
+                ctx.abilities[b] = GetBattlerAbility(b);
+                ctx.holdEffects[b] = GetBattlerHoldEffect(b);
+            }
+            s32 dmg = CalculateMoveDamage(&ctx) / 2;
+            if (dmg > 0)
+            {
+                gBattleScripting.battler = other;
+                SetPassiveDamageAmount(other, dmg);
+                BattleScriptCall(BattleScript_ChainLightningArc);
+                result = MOVEEND_RESULT_RUN_SCRIPT;
+            }
+        }
+    }
+
+    gBattleScripting.moveendState++;
+    return result;
+}
+
 // GJT: tell the player when a Warrior's rage changed.
 static enum MoveEndResult MoveEndWarriorRageReport(struct BattleCalcValues *cv)
 {
@@ -5524,6 +5573,7 @@ static enum MoveEndResult (*const sMoveEndHandlers[])(struct BattleCalcValues *c
     [MOVEEND_SUBSTITUTE] = MoveEndSubstitute,
     [MOVEEND_FAINT_BLOCK] = MoveEndFaintBlock,
     [MOVEEND_WARRIOR_VICTORY] = MoveEndWarriorVictory,
+    [MOVEEND_CHAIN_LIGHTNING] = MoveEndChainLightning,
     [MOVEEND_UPDATE_LAST_MOVES] = MoveEndUpdateLastMoves,
     [MOVEEND_MIRROR_MOVE] = MoveEndMirrorMove,
     [MOVEEND_NEXT_TARGET] = MoveEndNextTarget,

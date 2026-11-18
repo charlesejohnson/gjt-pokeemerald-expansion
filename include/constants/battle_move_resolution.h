@@ -145,6 +145,7 @@ enum MoveEndState
     MOVEEND_SUBSTITUTE,
     MOVEEND_FAINT_BLOCK,
     MOVEEND_WARRIOR_VICTORY,
+    MOVEEND_CHAIN_LIGHTNING,
     MOVEEND_UPDATE_LAST_MOVES,
     MOVEEND_MIRROR_MOVE,
     MOVEEND_NEXT_TARGET, // Everything up until here is handled for each strike of a spread move

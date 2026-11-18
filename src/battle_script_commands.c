@@ -11833,6 +11833,25 @@ void BS_TryPlantTotem(void)
     gBattlescriptCurrInstr = cmd->nextInstr;
 }
 
+void BS_TryMagmaBurn(void)
+{
+    NATIVE_ARGS(const u8 *skipInstr);
+    enum BattlerId battler = gBattlerAttacker; // end-turn victim
+    if (IsBattlerAlive(battler)
+     && CanBeBurned(gSideTimers[GetBattlerSide(battler) ^ BIT_SIDE].magmaCaster, battler, GetBattlerAbility(battler))
+     && RandomPercentage(RNG_SECONDARY_EFFECT, 30))
+    {
+        gBattleMons[battler].status1 = STATUS1_BURN;
+        gEffectBattler = battler;
+        gBattleCommunication[MULTISTRING_CHOOSER] = 0;
+        gBattlescriptCurrInstr = cmd->nextInstr;
+    }
+    else
+    {
+        gBattlescriptCurrInstr = cmd->skipInstr;
+    }
+}
+
 void BS_TryRiptide(void)
 {
     NATIVE_ARGS(const u8 *failInstr);

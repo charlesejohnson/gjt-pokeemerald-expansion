@@ -25115,14 +25115,14 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Chain Lightning"),
         .description = COMPOUND_STRING(
-            "Hits one foe hard and the\n"
-            "other for half damage."),
+            "Hits the target; the other foe\n"
+            "takes half as much damage."),
         .effect = EFFECT_HIT,
         .power = 60,
         .type = TYPE_ELECTRIC,
         .accuracy = 100,
         .pp = 5,
-        .target = TARGET_BOTH,
+        .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,

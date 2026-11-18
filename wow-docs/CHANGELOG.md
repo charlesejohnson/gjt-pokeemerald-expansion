@@ -2,6 +2,10 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.27
+- Magma Totem: 30% chance to burn each foe it hits.
+- Chain Lightning is a normal pick-your-target move again. After it hits, the lightning arcs to the other foe (doubles) for half of the damage it would have dealt there.
+
 ## v0.1.26
 - Shaman stage 2: Windfury Weapon and Elemental Overload live (20% to repeat, chaining up to 5 repeats; shows as a multi-hit). Plain single-hit damaging moves only.
 - Totems (4 turns, own side): Stoneskin (-25% physical damage taken), Searing (foes lose 1/8 per turn), Windfury (allies' physical hits can repeat), Healing Stream (team heals 1/16 per turn), Grounding (Light Screen + Mud Sport), Earthbind (foes' Speed held at -1 stage), Magma Totem (Lava Plume on foes at end of each of the 2 turns after the cast; no burn chance yet).

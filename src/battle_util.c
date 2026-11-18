@@ -7357,14 +7357,6 @@ static inline s32 CalculateBaseDamage(u32 power, u32 userFinalAttack, u32 level,
 
 static inline uq4_12_t GetTargetDamageModifier(struct DamageContext *ctx)
 {
-    if (ctx->move == MOVE_CHAIN_LIGHTNING)
-    {
-        // GJT: main target takes full damage, the other foe takes half.
-        enum BattlerId mainTarget = gBattleStruct->moveTarget[ctx->battlerAtk];
-        if (GetBattlerSide(mainTarget) == GetBattlerSide(ctx->battlerAtk) || !IsBattlerAlive(mainTarget))
-            mainTarget = ctx->battlerDef;
-        return (ctx->battlerDef == mainTarget || !IsDoubleBattle()) ? UQ_4_12(1.0) : UQ_4_12(0.5);
-    }
     if (IsDoubleBattle())
     {
         u32 targetCount = GetMoveTargetCount(ctx);

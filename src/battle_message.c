@@ -496,6 +496,7 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_GJT_STREAM_HEAL]                      = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} is soothed\nby the healing stream!"),
     [STRINGID_GJT_RIPTIDE_HEAL]                     = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} is mended\nby the riptide!"),
     [STRINGID_GJT_GROUNDING]                        = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s totem grounds\nthe field!"),
+    [STRINGID_GJT_CHAIN_LIGHTNING]                  = COMPOUND_STRING("The lightning chained to\n{B_SCR_NAME_WITH_PREFIX}!"),
     [STRINGID_GJT_VICTORY_RUSH]                     = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} caught its breath after the kill!"),
     [STRINGID_GJT_HUNTERS_MARK]                     = COMPOUND_STRING("HUNTER'S MARK!\n{B_SCR_NAME_WITH_PREFIX} is lining up a killing shot!"),
     [STRINGID_PKMNSXMADEYUSELESS]                   = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX}'s {B_SCR_ABILITY} made {B_CURRENT_MOVE} useless!"), //not in gen 5+, ability popup

@@ -99,3 +99,37 @@ SINGLE_BATTLE_TEST("Shaman: Windfury Weapon can repeat a physical hit")
         MESSAGE("The Pokémon was hit 6 times!"); // forced rolls chain to the cap
     }
 }
+
+DOUBLE_BATTLE_TEST("Shaman: Chain Lightning hits the chosen target and arcs to the other foe at half damage")
+{
+    s16 main, arc;
+    GIVEN {
+        PLAYER(SPECIES_SHAMAN_ELEMENTAL) { Speed(100); }
+        PLAYER(SPECIES_WOBBUFFET) { Speed(2); }
+        OPPONENT(SPECIES_WOBBUFFET) { Speed(1); HP(10000); MaxHP(10000); }
+        OPPONENT(SPECIES_WOBBUFFET) { Speed(3); HP(10000); MaxHP(10000); }
+    } WHEN {
+        TURN { MOVE(playerLeft, MOVE_CHAIN_LIGHTNING, target: opponentRight, criticalHit: FALSE); }
+    } SCENE {
+        HP_BAR(opponentRight, captureDamage: &main);
+        MESSAGE("The lightning chained to\nThe opposing Wobbuffet!");
+        HP_BAR(opponentLeft, captureDamage: &arc);
+    } THEN {
+        EXPECT_GT(main, arc);
+    }
+}
+
+SINGLE_BATTLE_TEST("Shaman: Magma Totem can burn")
+{
+    PASSES_RANDOMLY(30, 100, RNG_SECONDARY_EFFECT);
+    GIVEN {
+        PLAYER(SPECIES_SHAMAN_ELEMENTAL) { Speed(100); }
+        OPPONENT(SPECIES_WOBBUFFET) { Speed(1); HP(10000); MaxHP(10000); }
+    } WHEN {
+        TURN { MOVE(player, MOVE_MAGMA_TOTEM); }
+        TURN { MOVE(player, MOVE_CELEBRATE); }
+    } SCENE {
+        MESSAGE("The opposing Wobbuffet is engulfed\nby magma!");
+        MESSAGE("The opposing Wobbuffet was burned!");
+    }
+}

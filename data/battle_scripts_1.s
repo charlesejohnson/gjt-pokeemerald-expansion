@@ -6611,7 +6611,20 @@ BattleScript_SearingTotemHurt::
 BattleScript_MagmaTotemHurt::
 	printstring STRINGID_GJT_MAGMA_HURT
 	waitmessage B_WAIT_TIME_LONG
-	goto BattleScript_DoTurnDmg
+	call BattleScript_DoTurnDmg
+	callnative BS_TryMagmaBurn
+	.4byte BattleScript_MagmaTotemHurtEnd
+	call BattleScript_MoveEffectBurn
+BattleScript_MagmaTotemHurtEnd:
+	return
+
+BattleScript_ChainLightningArc::
+	printstring STRINGID_GJT_CHAIN_LIGHTNING
+	waitmessage B_WAIT_TIME_LONG
+	healthbarupdate BS_SCRIPTING
+	datahpupdate BS_SCRIPTING, ASSURANCE_DOUBLE
+	tryfaintmon BS_SCRIPTING
+	return
 
 BattleScript_HealingStreamHeal::
 	printstring STRINGID_GJT_STREAM_HEAL
