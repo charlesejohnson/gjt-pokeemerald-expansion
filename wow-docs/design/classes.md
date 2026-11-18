@@ -88,10 +88,18 @@ Every class has a **base form** that evolves at some point into one of **three W
 | Form | Types | Stats | BST | Notes |
 |---|---|---|---|---|
 | Druid | Grass | not filled in | | |
-| Rdruid | Grass | 130 / 80 / 85 / 80 / 85 / 115 | 575 | |
+| Resto Druid | Grass | 130 / 80 / 85 / 80 / 85 / 115 | 575 | |
 | Feral | Grass/Normal | 100 / 160 / 60 / 30 / 60 / 165 | 575 | Could work like Honedge forms |
 | Guardian | Grass/Rock | 220 / 110 / 90 / 30 / 70 / 55 | 575 | |
 | Boomy | Grass/Fairy | 90 / 50 / 75 / 160 / 95 / 105 | 575 | |
+
+### Druid design decisions (2026-11-17)
+- **Gimmick:** shapeshifting. Every Druid learns Moonkin, Bear, Cat and Tree Form (status moves). Using one swaps the Druid's battle form (stats/moves, sprite if art exists) for the rest of the fight. Each spec masters one form (Boomy/Moonkin, Guardian/Bear, Feral/Cat, Resto/Tree). Honedge-style form change.
+- **Abilities (proposed, approved in spirit):** base Natural Cure or a small passive heal (Regrowth); Resto: **Efflorescence** (user's pick, replaces Lifebloom); Feral: Predatory Swiftness (next move after a crit gets priority); Guardian: Thick Hide (less damage taken at low HP); Boomy: Eclipse (Grass moves boosted one turn, Fairy the next).
+- **Base Druid stats:** proposed 65/55/70/70/70/60 (BST 390), not yet confirmed.
+- **Evolution items:** open (Moon/Sun/Shiny are used by Warrior and Shaman; four specs need four items, e.g. add Dawn Stone).
+- **Art:** undecided, Charlie is thinking about it. Do not implement until chosen.
+- **Moves, levels, Efflorescence's exact effect:** not yet designed.
 
 ## Monk (design draft, not implemented)
 
