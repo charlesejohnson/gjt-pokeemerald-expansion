@@ -105,8 +105,9 @@ Every class has a **base form** that evolves at some point into one of **three W
 - Bear Form (Grass, status, 5 PP, ~lv14): +1 Def, +1 Sp. Def. Approved as is.
 - Cat Form (Grass, status, 5 PP, ~lv18): +1 Atk, +1 Speed, no crit bonus. Shifting forms counts as switching in for first-turn checks, so first-turn-only moves (and first-turn crit bonuses) work again after a shift.
 - **Shred** (Normal/Grass physical, 20 PP, 100% acc, 40 power, ~lv20): always crits on the first turn after switching in or shifting forms. Builds combo points: +1, or +2 on a crit.
-- **Resource systems:** Feral gets **combo points** (cap 5): some moves gain points, finishers spend them and scale with points spent (like runic power / rage). Guardian/Bear gets **rage** (like Warrior; details TBD).
-- **Moves and levels:** drafting in progress (Moonkin, Bear, Cat Form, Shred done; Ferocious Bite proposed: Normal/Grass physical, 10 PP, ~lv24, spends all combo points, power 20 + 20 per point, Cat Form only (not yet confirmed)).
+- **Resource systems:** Feral gets **combo points** (cap 5): some moves gain points, finishers spend them and scale with points spent (like runic power / rage). Guardian/Bear gets **rage**, same rules as Warrior (+1 hitting, +1 being hit, cap 10, resets on switch-out).
+- **Maul** (Normal/Grass physical, 60 power, spends 3 rage) and **Ironfur** (Grass status, +2 Def, spends 4 rage): approved, Bear Form presumably required (to confirm).
+- **Moves and levels:** drafting in progress (Moonkin, Bear, Cat Form, Shred done; Ferocious Bite proposed: Normal/Grass physical, 10 PP, ~lv24, spends all combo points, power 20 + 20 per point, Cat Form only (confirmed)).
 
 ## Monk (design draft, not implemented)
 
