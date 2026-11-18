@@ -42,6 +42,9 @@ Decisions (confirmed by Charlie, 2026-11-15):
 - Frost Armor (confirmed 2026-11-15): 30% chance to inflict **frostbite** on an attacker that makes contact. Ice types are immune. Implemented and tested.
 - Arcane Mage keeps Mirror Armor as its normal ability, with Mana Barrier hidden.
 
+## Learnset design principle (2026-11-18)
+Classes should have weaker versions of the same kind of move early so there are upgrades to earn while leveling (e.g. a small heal early, a bigger one later). Duplicate-purpose moves of different strength are fine. Not a priority to hyper-focus on now, but keep it in mind when building out learnsets (revisit Shaman and Warrior too).
+
 ## Class structure
 
 Every class has a **base form** that evolves at some point into one of **three WoW specializations**. For example, Mage evolves into Frost, Fire or Arcane, and Death Knight into Blood, Frost or Unholy. The Druid draft below lists four specs (Restoration, Feral, Guardian, Balance), which needs reconciling with this rule.
@@ -113,6 +116,7 @@ Every class has a **base form** that evolves at some point into one of **three W
 - **Rejuvenation** (Grass status, 10 PP, lv14, self/ally): no up-front heal, 1/8 max HP at the end of each of the next 3 turns, doesn't stack with itself. **Swiftmend** (Grass status, 5 PP, lv30, self/ally): consumes Rejuvenation on the target, heals 50% instantly, fails without it. Approved.
 - **Thrash** (Normal/Grass physical, 50 power, 15 PP, lv22, hits both foes in doubles, +2 rage, 35% poison, Bear Form). **Frenzied Regeneration** (Grass status, 5 PP, lv34, heals 60% max HP, costs 5 rage, Bear Form). Approved.
 - **Wild Growth** (Grass status, 5 PP, lv38): heals every ally on the field 25% now. **Tranquility** (Grass status, 1 PP, lv50): heals the whole team 35% and gives +1 Sp. Def. Approved.
+- **Wild Growth** (Grass status, 5 PP, lv38): heals every ally on the field 25% now. **Tranquility** (Grass status, 1 PP, lv50): heals the whole team 35% and +1 Sp. Def. Approved.
 - **Move management (decided):** moves stay constant across forms. A spec doesn't have to use its own form, so each spec can carry 3 spec moves plus a form move. A Druid trainer NPC with scroll menus to set loadouts comes later (added to docket).
 - **Moves and levels:** drafting in progress (Moonkin, Bear, Cat Form, Shred done; Ferocious Bite proposed: Normal/Grass physical, 10 PP, ~lv24, spends all combo points, power 20 + 20 per point, Cat Form only (confirmed)).
 
