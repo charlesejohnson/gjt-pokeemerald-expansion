@@ -109,7 +109,7 @@ Every class has a **base form** that evolves at some point into one of **three W
 - **Maul** (Normal/Grass physical, 60 power, spends 3 rage) and **Ironfur** (Grass status, +2 Def, spends 4 rage): approved, Bear Form presumably required (to confirm).
 - **Moonfire** (Fairy special, 40 power, 15 PP, 100% acc, lv10): always burns the target (the burn is the DoT). **Starfire** (Grass special, 80 power, 10 PP, 100% acc, 20% lower Sp. Def, lv26). Both approved.
 - **Rejuvenation** (Grass status, 10 PP, lv14, self/ally): no up-front heal, 1/8 max HP at the end of each of the next 3 turns, doesn't stack with itself. **Swiftmend** (Grass status, 5 PP, lv30, self/ally): consumes Rejuvenation on the target, heals 50% instantly, fails without it. Approved.
-- **Open question (move management across forms):** keep moves constant vs. a Druid trainer NPC with scroll menus to set loadouts.
+- **Move management (decided):** moves stay constant across forms. A spec doesn't have to use its own form, so each spec can carry 3 spec moves plus a form move. A Druid trainer NPC with scroll menus to set loadouts comes later (added to docket).
 - **Moves and levels:** drafting in progress (Moonkin, Bear, Cat Form, Shred done; Ferocious Bite proposed: Normal/Grass physical, 10 PP, ~lv24, spends all combo points, power 20 + 20 per point, Cat Form only (confirmed)).
 
 ## Monk (design draft, not implemented)
