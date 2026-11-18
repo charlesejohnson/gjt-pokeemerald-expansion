@@ -107,6 +107,7 @@ Every class has a **base form** that evolves at some point into one of **three W
 - **Shred** (Normal/Grass physical, 20 PP, 100% acc, 40 power, ~lv20): always crits on the first turn after switching in or shifting forms. Builds combo points: +1, or +2 on a crit.
 - **Resource systems:** Feral gets **combo points** (cap 5): some moves gain points, finishers spend them and scale with points spent (like runic power / rage). Guardian/Bear gets **rage**, same rules as Warrior (+1 hitting, +1 being hit, cap 10, resets on switch-out).
 - **Maul** (Normal/Grass physical, 60 power, spends 3 rage) and **Ironfur** (Grass status, +2 Def, spends 4 rage): approved, Bear Form presumably required (to confirm).
+- **Moonfire** (Fairy special, 40 power, 15 PP, 100% acc, lv10): always burns the target (the burn is the DoT). **Starfire** (Grass special, 80 power, 10 PP, 100% acc, 20% lower Sp. Def, lv26). Both approved.
 - **Moves and levels:** drafting in progress (Moonkin, Bear, Cat Form, Shred done; Ferocious Bite proposed: Normal/Grass physical, 10 PP, ~lv24, spends all combo points, power 20 + 20 per point, Cat Form only (confirmed)).
 
 ## Monk (design draft, not implemented)
