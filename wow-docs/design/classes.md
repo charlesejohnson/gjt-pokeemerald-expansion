@@ -81,7 +81,7 @@ Every class has a **base form** that evolves at some point into one of **three W
   - Frost Shock: Ice special, 65 power, lowers the target's Speed by 1, 100% chance. About level 30.
   - Shock Wave (vanilla) dropped from the draft learnset in favour of these.
     - All totems 5 PP (proposed), Electric Shaman types: Stoneskin Rock, Windfury Flying, Healing Stream Water, Grounding Ground, Searing/Magma Fire.
-- Other abilities still open (Restoration: Storm Drain / Drizzle listed in the sheet; base Shaman open).
+- **Restoration ability: Storm Drain** (decided 2026-11-17). Enemy Storm Drain users can steal Healing Wave and Riptide in doubles, which Charlie likes. Base Shaman ability still open (Lightning Rod rejected).
 
 ## Druid (design draft, not implemented)
 
