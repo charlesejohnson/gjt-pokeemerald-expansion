@@ -99,7 +99,8 @@ Every class has a **base form** that evolves at some point into one of **three W
 - **Base Druid stats:** proposed 65/55/70/70/70/60 (BST 390), not yet confirmed.
 - **Evolution items:** open (Moon/Sun/Shiny are used by Warrior and Shaman; four specs need four items, e.g. add Dawn Stone).
 - **Art:** undecided, Charlie is thinking about it. Do not implement until chosen.
-- **Moves, levels, Efflorescence's exact effect:** not yet designed.
+- **Efflorescence (Resto):** triggers when the Druid enters the field. Proposed: bloom on its side for 3 turns, each ally on the field heals 1/16 max HP at end of turn (duration and amount not confirmed).
+- **Moves and levels:** not yet designed.
 
 ## Monk (design draft, not implemented)
 
