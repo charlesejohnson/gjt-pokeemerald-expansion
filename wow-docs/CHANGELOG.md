@@ -2,6 +2,13 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.26
+- Shaman stage 2: Windfury Weapon and Elemental Overload live (20% to repeat, chaining up to 5 repeats; shows as a multi-hit). Plain single-hit damaging moves only.
+- Totems (4 turns, own side): Stoneskin (-25% physical damage taken), Searing (foes lose 1/8 per turn), Windfury (allies' physical hits can repeat), Healing Stream (team heals 1/16 per turn), Grounding (Light Screen + Mud Sport), Earthbind (foes' Speed held at -1 stage), Magma Totem (Lava Plume on foes at end of each of the 2 turns after the cast; no burn chance yet).
+- New moves: Lava Burst (always crits a burned target), Riptide (12.5% now, 1/16 for 4 turns), Chain Lightning (main target full, other foe half; in doubles the first foe is main, no target menu), totems.
+- Learnsets updated (Stoneskin 16, Searing 20, Earthbind 30, Grounding 46, Healing Wave 16, Stormstrike 20, Lava Burst 24, Riptide 28, Chain Lightning 32, Windfury Totem 42, Healing Stream 44, Magma Totem 44).
+- All Warrior sprites recolored (Arms red, Fury orange, Protection steel blue, base bronze).
+
 ## v0.1.25
 - Shaman line (stage 1): Shaman (Electric), Resto (Electric/Water), Enhancement (Electric/Flying), Elemental (Electric/Fire). Evolve with Moon/Shiny/Sun stones (Moon -> Resto, Shiny -> Enhancement, Sun -> Elemental). Placeholder Timburr/Conkeldurr sprites, recolored per spec.
 - Abilities registered: Static, Storm Drain, Windfury Weapon and Elemental Overload (the last two have no effect yet).

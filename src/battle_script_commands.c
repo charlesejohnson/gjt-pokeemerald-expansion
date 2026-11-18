@@ -11781,6 +11781,71 @@ void BS_TryHealFortyPercent(void)
         gBattlescriptCurrInstr = cmd->nextInstr;
 }
 
+void BS_TryPlantTotem(void)
+{
+    NATIVE_ARGS(const u8 *failInstr);
+    enum BattleSide side = GetBattlerSide(gBattlerAttacker);
+    struct SideTimer *t = &gSideTimers[side];
+    u8 *timer = NULL;
+    u8 duration = 4;
+
+    switch (gCurrentMove)
+    {
+    case MOVE_STONESKIN_TOTEM:      timer = &t->stoneskinTimer; break;
+    case MOVE_SEARING_TOTEM:        timer = &t->searingTimer; break;
+    case MOVE_WINDFURY_TOTEM:       timer = &t->windfuryTotemTimer; break;
+    case MOVE_HEALING_STREAM_TOTEM: timer = &t->healingStreamTimer; break;
+    case MOVE_EARTHBIND_TOTEM:      timer = &t->earthbindTimer; break;
+    case MOVE_MAGMA_TOTEM:          timer = &t->magmaTimer; duration = 3; break; // no damage on the cast turn, then 2 turns of lava
+    case MOVE_GROUNDING_TOTEM:
+    {
+        bool32 light = TrySetLightScreen(gBattlerAttacker);
+        bool32 mud = FALSE;
+        if (!(gFieldStatuses & STATUS_FIELD_MUDSPORT))
+        {
+            gFieldStatuses |= STATUS_FIELD_MUDSPORT;
+            gFieldTimers.mudSportTimer = 5;
+            mud = TRUE;
+        }
+        if (!light && !mud)
+        {
+            gBattlescriptCurrInstr = cmd->failInstr;
+            return;
+        }
+        PREPARE_MOVE_BUFFER(gBattleTextBuff1, gCurrentMove);
+        gBattlescriptCurrInstr = cmd->nextInstr;
+        return;
+    }
+    default:
+        gBattlescriptCurrInstr = cmd->failInstr;
+        return;
+    }
+
+    if (*timer != 0)
+    {
+        gBattlescriptCurrInstr = cmd->failInstr;
+        return;
+    }
+    *timer = duration;
+    if (gCurrentMove == MOVE_MAGMA_TOTEM)
+        t->magmaCaster = gBattlerAttacker;
+    PREPARE_MOVE_BUFFER(gBattleTextBuff1, gCurrentMove);
+    gBattlescriptCurrInstr = cmd->nextInstr;
+}
+
+void BS_TryRiptide(void)
+{
+    NATIVE_ARGS(const u8 *failInstr);
+    if (IsBattlerAtMaxHp(gBattlerTarget) || gBattleMons[gBattlerTarget].volatiles.riptideTimer)
+    {
+        gBattlescriptCurrInstr = cmd->failInstr;
+        return;
+    }
+    SetHealAmount(gBattlerTarget, GetNonDynamaxMaxHP(gBattlerTarget) / 8);
+    gBattleMons[gBattlerTarget].volatiles.riptideTimer = 4;
+    gBattlescriptCurrInstr = cmd->nextInstr;
+}
+
 void BS_TrySetSweepingStrikes(void)
 {
     NATIVE_ARGS(const u8 *failInstr);

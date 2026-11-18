@@ -2403,6 +2403,20 @@ static enum CancelerResult CancelerMultihitMoves(struct BattleCalcValues *cv)
 
         PREPARE_BYTE_NUMBER_BUFFER(gBattleScripting.multihitString, 1, 0)
     }
+    else if (GetMovePower(cv->move) > 0
+          && cv->moveEffect == EFFECT_HIT
+          && ((IsBattleMovePhysical(cv->move)
+               && (cv->abilities[cv->battlerAtk] == ABILITY_WINDFURY_WEAPON
+                   || gSideTimers[GetBattlerSide(cv->battlerAtk)].windfuryTotemTimer))
+           || (IsBattleMoveSpecial(cv->move) && cv->abilities[cv->battlerAtk] == ABILITY_ELEMENTAL_OVERLOAD))
+          && RandomPercentage(RNG_WINDFURY, 20))
+    {
+        // GJT: Windfury Weapon / Elemental Overload: 20% to repeat, chaining up to 5 repeats.
+        gMultiHitCounter = 2;
+        while (gMultiHitCounter < 6 && RandomPercentage(RNG_WINDFURY, 20))
+            gMultiHitCounter++;
+        PREPARE_BYTE_NUMBER_BUFFER(gBattleScripting.multihitString, 1, 0)
+    }
     else if (IsMoveParentalBondAffected(cv))
     {
         gSpecialStatuses[gBattlerAttacker].parentalBondState = PARENTAL_BOND_1ST_HIT;

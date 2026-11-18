@@ -7357,6 +7357,14 @@ static inline s32 CalculateBaseDamage(u32 power, u32 userFinalAttack, u32 level,
 
 static inline uq4_12_t GetTargetDamageModifier(struct DamageContext *ctx)
 {
+    if (ctx->move == MOVE_CHAIN_LIGHTNING)
+    {
+        // GJT: main target takes full damage, the other foe takes half.
+        enum BattlerId mainTarget = gBattleStruct->moveTarget[ctx->battlerAtk];
+        if (GetBattlerSide(mainTarget) == GetBattlerSide(ctx->battlerAtk) || !IsBattlerAlive(mainTarget))
+            mainTarget = ctx->battlerDef;
+        return (ctx->battlerDef == mainTarget || !IsDoubleBattle()) ? UQ_4_12(1.0) : UQ_4_12(0.5);
+    }
     if (IsDoubleBattle())
     {
         u32 targetCount = GetMoveTargetCount(ctx);
@@ -7706,6 +7714,8 @@ static inline uq4_12_t GetOtherModifiers(struct DamageContext *ctx)
     DAMAGE_MULTIPLY_MODIFIER(GetDiveModifier(ctx->move, ctx->battlerDef));
     DAMAGE_MULTIPLY_MODIFIER(GetAirborneModifier(ctx->move, ctx->battlerDef));
     DAMAGE_MULTIPLY_MODIFIER(GetScreensModifier(ctx));
+    if (gSideTimers[GetBattlerSide(ctx->battlerDef)].stoneskinTimer && IsBattleMovePhysical(ctx->move))
+        DAMAGE_MULTIPLY_MODIFIER(UQ_4_12(0.75)); // GJT: Stoneskin Totem
     DAMAGE_MULTIPLY_MODIFIER(GetCollisionCourseElectroDriftModifier(ctx->move, ctx->typeEffectivenessModifier));
 
     if (unmodifiedAttackerSpeed >= unmodifiedDefenderSpeed)
@@ -8108,6 +8118,9 @@ static bool32 IsCriticalHit(struct DamageContext *ctx)
         critChance = CalcCritChanceStageGen1(ctx);
     else
         critChance = CalcCritChanceStage(ctx);
+
+    if (critChance != CRITICAL_HIT_BLOCKED && ctx->move == MOVE_LAVA_BURST && (gBattleMons[ctx->battlerDef].status1 & STATUS1_BURN))
+        critChance = CRITICAL_HIT_ALWAYS; // GJT: Lava Burst vs burned targets
 
     if (critChance == CRITICAL_HIT_BLOCKED)
         isCrit = FALSE;

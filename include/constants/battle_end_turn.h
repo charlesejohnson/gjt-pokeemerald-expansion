@@ -16,6 +16,7 @@ enum EndTurnResolutionOrder
     ENDTURN_FIRST_EVENT_BLOCK,
     ENDTURN_SEND_OUT_REPLACEMENTS_2, // For Emergency Exit/Wimp Out activations
     ENDTURN_AQUA_RING,
+    ENDTURN_RIPTIDE,
     ENDTURN_INGRAIN,
     ENDTURN_LEECH_SEED,
     ENDTURN_POISON,
@@ -68,6 +69,7 @@ enum FirstEventBlock
 {
     FIRST_EVENT_BLOCK_GMAX_MOVE_RESIDUAL, // Needs to be split
     FIRST_EVENT_BLOCK_SEA_OF_FIRE_DAMAGE,
+    FIRST_EVENT_BLOCK_TOTEMS,
     FIRST_EVENT_BLOCK_THRASH, // Thrash isn't handled here in vanilla but for now it is that best place for it.
     FIRST_EVENT_BLOCK_GRASSY_TERRAIN_HEAL,
     FIRST_EVENT_BLOCK_ABILITIES,
@@ -87,6 +89,7 @@ enum SecondEventBlock
     SECOND_EVENT_BLOCK_SEA_OF_FIRE,
     SECOND_EVENT_BLOCK_SWAMP,
     SECOND_EVENT_BLOCK_AURORA_VEIL,
+    SECOND_EVENT_BLOCK_TOTEMS,
 };
 
 // Block that handles Uproar, items and non-form changing abilities

@@ -171,6 +171,13 @@ struct SideTimer
     u16 rainbowTimer;
     u16 seaOfFireTimer;
     u16 swampTimer;
+    u8 stoneskinTimer;
+    u8 searingTimer;
+    u8 windfuryTotemTimer;
+    u8 healingStreamTimer;
+    u8 earthbindTimer;
+    u8 magmaTimer;
+    u8 magmaCaster;
 };
 
 struct FieldTimer

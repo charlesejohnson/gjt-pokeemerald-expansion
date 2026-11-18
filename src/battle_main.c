@@ -4379,6 +4379,10 @@ u32 GetBattlerTotalSpeedStat(enum BattlerId battler, enum Ability ability, enum 
     speed *= gStatStageRatios[gBattleMons[battler].statStages[STAT_SPEED]][0];
     speed /= gStatStageRatios[gBattleMons[battler].statStages[STAT_SPEED]][1];
 
+    // GJT: Earthbind Totem on the other side holds Speed one stage lower
+    if (gSideTimers[GetBattlerSide(battler) ^ BIT_SIDE].earthbindTimer)
+        speed = speed * 2 / 3;
+
     u32 weather = GetWeather();
     // weather abilities
     if (ability == ABILITY_SWIFT_SWIM       && holdEffect != HOLD_EFFECT_UTILITY_UMBRELLA && weather  & B_WEATHER_RAIN)

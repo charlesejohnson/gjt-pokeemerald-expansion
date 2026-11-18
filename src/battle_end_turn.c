@@ -374,6 +374,60 @@ static bool32 HandleEndTurnFirstEventBlock(enum BattlerId battler)
         }
         gBattleStruct->eventState.endTurnBlock++;
         break;
+    case FIRST_EVENT_BLOCK_TOTEMS:
+        side = GetBattlerSide(battler);
+        if (IsBattlerAlive(battler))
+        {
+            enum BattleSide foe = side ^ BIT_SIDE;
+            if (gSideTimers[side].healingStreamTimer
+             && !gBattleMons[battler].volatiles.healBlockTimer
+             && !IsBattlerAtMaxHp(battler))
+            {
+                SetHealAmount(battler, GetNonDynamaxMaxHP(battler) / 16);
+                BattleScriptCall(BattleScript_HealingStreamHeal);
+                effect = TRUE;
+            }
+            else if (gSideTimers[foe].searingTimer
+             && !IsAbilityAndRecord(battler, GetBattlerAbility(battler), ABILITY_MAGIC_GUARD))
+            {
+                gBattlerAttacker = battler;
+                SetPassiveDamageAmount(battler, GetNonDynamaxMaxHP(battler) / 8);
+                BattleScriptCall(BattleScript_SearingTotemHurt);
+                effect = TRUE;
+            }
+            else if (gSideTimers[foe].magmaTimer && gSideTimers[foe].magmaTimer <= 2
+             && !IsAbilityAndRecord(battler, GetBattlerAbility(battler), ABILITY_MAGIC_GUARD))
+            {
+                // Lava Plume, cast by the totem's owner (whoever holds that slot now).
+                enum BattlerId caster = gSideTimers[foe].magmaCaster;
+                struct DamageContext ctx = {
+                    .battlerAtk = caster,
+                    .battlerDef = battler,
+                    .move = MOVE_LAVA_PLUME,
+                    .chosenMove = MOVE_LAVA_PLUME,
+                    .baseMove = MOVE_LAVA_PLUME,
+                    .moveType = TYPE_FIRE,
+                    .weather = GetWeather(),
+                    .terrain = gFieldTimers.terrain,
+                    .randomFactor = TRUE,
+                };
+                for (enum BattlerId b = B_BATTLER_0; b < gBattlersCount; b++)
+                {
+                    ctx.abilities[b] = GetBattlerAbility(b);
+                    ctx.holdEffects[b] = GetBattlerHoldEffect(b);
+                }
+                s32 dmg = IsBattlerAlive(caster) ? CalculateMoveDamage(&ctx) : 0;
+                if (dmg > 0)
+                {
+                    gBattlerAttacker = battler;
+                    SetPassiveDamageAmount(battler, dmg);
+                    BattleScriptCall(BattleScript_MagmaTotemHurt);
+                    effect = TRUE;
+                }
+            }
+        }
+        gBattleStruct->eventState.endTurnBlock++;
+        break;
     case FIRST_EVENT_BLOCK_THRASH:
         if (B_RAMPAGE_CONFUSION < GEN_5
          && gBattleMons[battler].volatiles.rampageTurns
@@ -434,6 +488,26 @@ static bool32 HandleEndTurnFirstEventBlock(enum BattlerId battler)
         gBattleStruct->eventState.endTurnBlock = 0;
         gBattleStruct->eventState.endTurnBattler++;
         break;
+    }
+
+    return effect;
+}
+
+static bool32 HandleEndTurnRiptide(enum BattlerId battler)
+{
+    bool32 effect = FALSE;
+
+    gBattleStruct->eventState.endTurnBattler++;
+
+    if (gBattleMons[battler].volatiles.riptideTimer && IsBattlerPresent(battler))
+    {
+        gBattleMons[battler].volatiles.riptideTimer--;
+        if (!gBattleMons[battler].volatiles.healBlockTimer && !IsBattlerAtMaxHp(battler))
+        {
+            SetHealAmount(battler, GetNonDynamaxMaxHP(battler) / 16);
+            BattleScriptCall(BattleScript_RiptideHeal);
+            effect = TRUE;
+        }
     }
 
     return effect;
@@ -1149,9 +1223,30 @@ static bool32 HandleEndTurnSecondEventBlock(enum BattlerId battler)
             PREPARE_MOVE_BUFFER(gBattleTextBuff1, MOVE_AURORA_VEIL);
             effect = TRUE;
         }
+        gBattleStruct->eventState.endTurnBlock++;
+        break;
+    case SECOND_EVENT_BLOCK_TOTEMS:
+    {
+        // GJT: count down one totem per pass until all of this side's totems are handled.
+        static const u16 sTotemMoves[] = { MOVE_STONESKIN_TOTEM, MOVE_SEARING_TOTEM, MOVE_WINDFURY_TOTEM, MOVE_HEALING_STREAM_TOTEM, MOVE_EARTHBIND_TOTEM, MOVE_MAGMA_TOTEM };
+        u8 *timers[] = { &gSideTimers[side].stoneskinTimer, &gSideTimers[side].searingTimer, &gSideTimers[side].windfuryTotemTimer, &gSideTimers[side].healingStreamTimer, &gSideTimers[side].earthbindTimer, &gSideTimers[side].magmaTimer };
+        s32 expired = -1;
+        for (u32 i = 0; i < ARRAY_COUNT(timers); i++)
+        {
+            if (*timers[i] > 0 && --*timers[i] == 0 && expired < 0)
+                expired = i;
+        }
         gBattleStruct->eventState.battlerSide++;
         gBattleStruct->eventState.endTurnBlock = 0;
+        if (expired >= 0)
+        {
+            gBattlerAttacker = GetBattlerSideForMessage(side);
+            PREPARE_MOVE_BUFFER(gBattleTextBuff1, sTotemMoves[expired]);
+            BattleScriptCall(BattleScript_TotemCrumbled);
+            effect = TRUE;
+        }
         break;
+    }
     }
 
     return effect;
@@ -1571,6 +1666,7 @@ static bool32 (*const sEndTurnEffectHandlers[])(enum BattlerId battler) =
     [ENDTURN_FIRST_EVENT_BLOCK] = HandleEndTurnFirstEventBlock,
     [ENDTURN_SEND_OUT_REPLACEMENTS_2] = HandleEndTurnSendOutReplacements,
     [ENDTURN_AQUA_RING] = HandleEndTurnAquaRing,
+    [ENDTURN_RIPTIDE] = HandleEndTurnRiptide,
     [ENDTURN_INGRAIN] = HandleEndTurnIngrain,
     [ENDTURN_LEECH_SEED] = HandleEndTurnLeechSeed,
     [ENDTURN_POISON] = HandleEndTurnPoison,

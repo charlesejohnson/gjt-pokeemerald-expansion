@@ -6587,3 +6587,50 @@ BattleScript_EffectSweepingStrikes::
 	printstring STRINGID_GJT_SWEEPING_STRIKES
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
+
+BattleScript_EffectTotem::
+	attackcanceler
+	callnative BS_TryPlantTotem
+	.4byte BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	printstring STRINGID_GJT_TOTEM_PLANTED
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_TotemCrumbled::
+	printstring STRINGID_GJT_TOTEM_CRUMBLED
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_SearingTotemHurt::
+	printstring STRINGID_GJT_SEARING_HURT
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_DoTurnDmg
+
+BattleScript_MagmaTotemHurt::
+	printstring STRINGID_GJT_MAGMA_HURT
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_DoTurnDmg
+
+BattleScript_HealingStreamHeal::
+	printstring STRINGID_GJT_STREAM_HEAL
+	goto BattleScript_TurnHeal
+
+BattleScript_RiptideHeal::
+	printstring STRINGID_GJT_RIPTIDE_HEAL
+	goto BattleScript_TurnHeal
+
+BattleScript_EffectRiptide::
+	attackcanceler
+	jumpifvolatile BS_ATTACKER, VOLATILE_HEAL_BLOCK_TIMER, BattleScript_MoveUsedHealBlockPrevents
+	jumpifvolatile BS_TARGET, VOLATILE_HEAL_BLOCK_TIMER, BattleScript_MoveUsedHealBlockPrevents
+	callnative BS_TryRiptide
+	.4byte BattleScript_AlreadyAtFullHp
+	attackanimation
+	waitanimation
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET, ASSURANCE_DOUBLE
+	printstring STRINGID_PKMNREGAINEDHEALTH
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd

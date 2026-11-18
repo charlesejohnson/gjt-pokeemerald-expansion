@@ -46,7 +46,7 @@ Decisions (confirmed by Charlie, 2026-11-15):
 
 Every class has a **base form** that evolves at some point into one of **three WoW specializations**. For example, Mage evolves into Frost, Fire or Arcane, and Death Knight into Blood, Frost or Unholy. The Druid draft below lists four specs (Restoration, Feral, Guardian, Balance), which needs reconciling with this rule.
 
-## Shaman (design draft, not implemented)
+## Shaman (implemented v0.1.25-v0.1.26)
 
 | Form | Types | Stats | BST | Ability | Hidden ability |
 |---|---|---|---|---|---|
@@ -135,3 +135,11 @@ Species: Warrior (Fighting) -> Arms / Fury / Protection (all Fighting/Steel) via
 - **Done:** Mortal Strike, Execute, Charge!, Victory Rush, Rampage, Rend (2 rage), Sunder Armor, Battle Shout, Command Shout, Colossus, Challenge (Taunt), W. Whirlwind; abilities Sudden Death, Enrage, Shield Specialization (20% negate, silent). Names that clash with vanilla moves got different display names (Charge!, W. Whirlwind, Challenge, Command Shout).
 - **Spell Reflect / Sweeping Strikes:** done (v0.1.23). Spell Reflect is a Protect variant for special moves that reflects the move's real damage back at 1x (v0.1.24).
 - **Not yet:** bleed (not in the codebase; poison stands in), healthbox rage display, real sprites, wild/trainer use. Tests in `test/battle/ability/warrior_rage.c`.
+
+
+### Shaman implementation status (v0.1.26)
+- Species ids 1585-1588 (Shaman, Resto, Enhancement, Elemental). Placeholder art: Timburr (base), Conkeldurr (specs), recolored (yellow / blue / purple / red). Stones: Moon -> Resto, Shiny -> Enhancement, Sun -> Elemental (assumed mapping). Warrior line also recolored.
+- Abilities: Static, Storm Drain, Windfury Weapon and Elemental Overload (`CancelerMultihitMoves`: 20% repeat roll, then 20% per extra repeat up to 5, `RNG_WINDFURY`). Only plain EFFECT_HIT moves repeat.
+- Totems live in `SideTimer` (stoneskin/searing/windfuryTotem/healingStream/earthbind/magma + magmaCaster), planted by `BS_TryPlantTotem`. Effects: stoneskin in the damage calc, earthbind in `GetBattlerTotalSpeedStat` (x2/3), windfury in the repeat roll, searing/healing stream/magma damage in `FIRST_EVENT_BLOCK_TOTEMS`, countdown in `SECOND_EVENT_BLOCK_TOTEMS` (only the first expiry per side per turn prints a message). Magma Totem uses the caster's slot at tick time; no burn yet.
+- Riptide: `volatiles.riptideTimer`, `ENDTURN_RIPTIDE`. Lava Burst crit hook is in `IsCriticalHit`. Chain Lightning is TARGET_BOTH; main target = `moveTarget[attacker]`.
+- Not yet: Maelstrom (declined for now), burn on Magma Totem, AI awareness of totems, tests are in `test/battle/ability/shaman.c`.

@@ -25063,4 +25063,249 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .validApprenticeMove = TRUE,
     },
 
+    [MOVE_LAVA_BURST] =
+    {
+        .name = COMPOUND_STRING("Lava Burst"),
+        .description = COMPOUND_STRING(
+            "Always a critical hit on\n"
+            "a burned target."),
+        .effect = EFFECT_HIT,
+        .power = 55,
+        .type = TYPE_FIRE,
+        .accuracy = 85,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Eruption,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_RIPTIDE] =
+    {
+        .name = COMPOUND_STRING("Riptide"),
+        .description = COMPOUND_STRING(
+            "Heals a friendly target now,\n"
+            "then a bit each turn."),
+        .effect = EFFECT_RIPTIDE,
+        .power = 0,
+        .type = TYPE_WATER,
+        .accuracy = 0,
+        .pp = 10,
+        .target = TARGET_USER_OR_ALLY,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .healingMove = TRUE,
+        .ignoresProtect = TRUE,
+        .ignoresSubstitute = TRUE,
+        .metronomeBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_HealPulse,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_CHAIN_LIGHTNING] =
+    {
+        .name = COMPOUND_STRING("Chain Lightning"),
+        .description = COMPOUND_STRING(
+            "Hits one foe hard and the\n"
+            "other for half damage."),
+        .effect = EFFECT_HIT,
+        .power = 60,
+        .type = TYPE_ELECTRIC,
+        .accuracy = 100,
+        .pp = 5,
+        .target = TARGET_BOTH,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Thunderbolt,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_STONESKIN_TOTEM] =
+    {
+        .name = COMPOUND_STRING("Stoneskin Totem"),
+        .description = COMPOUND_STRING(
+            "Cuts physical damage to\n"
+            "the team by 25% (4 turns)."),
+        .effect = EFFECT_TOTEM,
+        .power = 0,
+        .type = TYPE_ROCK,
+        .accuracy = 0,
+        .pp = 5,
+        .target = TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Protect,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_SEARING_TOTEM] =
+    {
+        .name = COMPOUND_STRING("Searing Totem"),
+        .description = COMPOUND_STRING(
+            "Foes lose 1/8 HP each turn\n"
+            "for 4 turns."),
+        .effect = EFFECT_TOTEM,
+        .power = 0,
+        .type = TYPE_FIRE,
+        .accuracy = 0,
+        .pp = 5,
+        .target = TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Protect,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_WINDFURY_TOTEM] =
+    {
+        .name = COMPOUND_STRING("Windfury Totem"),
+        .description = COMPOUND_STRING(
+            "Allies' physical hits may\n"
+            "repeat (4 turns)."),
+        .effect = EFFECT_TOTEM,
+        .power = 0,
+        .type = TYPE_FLYING,
+        .accuracy = 0,
+        .pp = 5,
+        .target = TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Protect,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_HEALING_STREAM_TOTEM] =
+    {
+        .name = COMPOUND_STRING("Heal Stream Totem"),
+        .description = COMPOUND_STRING(
+            "Team heals 1/16 HP each\n"
+            "turn for 4 turns."),
+        .effect = EFFECT_TOTEM,
+        .power = 0,
+        .type = TYPE_WATER,
+        .accuracy = 0,
+        .pp = 5,
+        .target = TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Protect,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_GROUNDING_TOTEM] =
+    {
+        .name = COMPOUND_STRING("Grounding Totem"),
+        .description = COMPOUND_STRING(
+            "Sets Light Screen and\n"
+            "Mud Sport."),
+        .effect = EFFECT_TOTEM,
+        .power = 0,
+        .type = TYPE_GROUND,
+        .accuracy = 0,
+        .pp = 5,
+        .target = TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Protect,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_EARTHBIND_TOTEM] =
+    {
+        .name = COMPOUND_STRING("Earthbind Totem"),
+        .description = COMPOUND_STRING(
+            "Slows all foes by one stage\n"
+            "for 4 turns."),
+        .effect = EFFECT_TOTEM,
+        .power = 0,
+        .type = TYPE_GROUND,
+        .accuracy = 0,
+        .pp = 5,
+        .target = TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Protect,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_MAGMA_TOTEM] =
+    {
+        .name = COMPOUND_STRING("Magma Totem"),
+        .description = COMPOUND_STRING(
+            "Lava Plume on foes each turn\n"
+            "for 2 turns, from next turn."),
+        .effect = EFFECT_TOTEM,
+        .power = 0,
+        .type = TYPE_FIRE,
+        .accuracy = 0,
+        .pp = 5,
+        .target = TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Protect,
+        .validApprenticeMove = TRUE,
+    },
+
 };

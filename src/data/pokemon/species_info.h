@@ -696,8 +696,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .backPicSize = MON_COORDS_SIZE(64, 40),
         .backPicYOffset = 15,
         .backAnimId = BACK_ANIM_CONCAVE_ARC_SMALL,
-        .palette = gMonPalette_Timburr,
-        .shinyPalette = gMonShinyPalette_Timburr,
+        .palette = gMonPalette_Warrior,
+        .shinyPalette = gMonShinyPalette_Warrior,
         .iconSprite = gMonIcon_Timburr,
         .iconPalIndex = 1,
         FOOTPRINT(Timburr)
@@ -758,8 +758,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .backPicSize = P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(48, 56) : MON_COORDS_SIZE(64, 56),
         .backPicYOffset = P_GBA_STYLE_SPECIES_GFX ? 4 : 7,
         .backAnimId = BACK_ANIM_V_SHAKE,
-        .palette = gMonPalette_Machamp,
-        .shinyPalette = gMonShinyPalette_Machamp,
+        .palette = gMonPalette_WarriorArms,
+        .shinyPalette = gMonShinyPalette_WarriorArms,
         .iconSprite = gMonIcon_Machamp,
         .iconPalIndex = 0,
         FOOTPRINT(Machamp)
@@ -818,8 +818,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .backPicSize = MON_COORDS_SIZE(56, 56),
         .backPicYOffset = 7,
         .backAnimId = BACK_ANIM_V_STRETCH,
-        .palette = gMonPalette_Mienshao,
-        .shinyPalette = gMonShinyPalette_Mienshao,
+        .palette = gMonPalette_WarriorFury,
+        .shinyPalette = gMonShinyPalette_WarriorFury,
         .iconSprite = gMonIcon_Mienshao,
         .iconPalIndex = 2,
         FOOTPRINT(Mienshao)
@@ -874,8 +874,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .backPicSize = MON_COORDS_SIZE(64, 56),
         .backPicYOffset = 7,
         .backAnimId = BACK_ANIM_V_SHAKE_LOW,
-        .palette = gMonPalette_Bastiodon,
-        .shinyPalette = gMonShinyPalette_Bastiodon,
+        .palette = gMonPalette_WarriorProtection,
+        .shinyPalette = gMonShinyPalette_WarriorProtection,
         .iconSprite = gMonIcon_Bastiodon,
         .iconPalIndex = 1,
         FOOTPRINT(Bastiodon)
