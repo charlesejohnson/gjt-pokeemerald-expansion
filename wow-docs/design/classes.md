@@ -103,7 +103,8 @@ Every class has a **base form** that evolves at some point into one of **three W
 - **Forms are stage boosts** (no extra effectiveness penalty for other specs). Moonkin Form (Grass, status, 5 PP, ~lv10): +1 Sp. Atk. Switching forms removes the old form's stages and applies the new ones.
 - **Unshift** (one shared move for all specs, Protect-like): protects the user this turn and returns it to base form (removing the form's stage boosts). Replaces per-form un-shifting.
 - Bear Form (Grass, status, 5 PP, ~lv14): +1 Def, +1 Sp. Def. Approved as is.
-- **Moves and levels:** drafting in progress (Moonkin, Bear done; Cat next).
+- Cat Form (Grass, status, 5 PP, ~lv18): +1 Atk, +1 Speed, no crit bonus. Shifting forms counts as switching in for first-turn checks, so first-turn-only moves (and first-turn crit bonuses) work again after a shift.
+- **Moves and levels:** drafting in progress (Moonkin, Bear, Cat Form done; first Cat attack next).
 
 ## Monk (design draft, not implemented)
 
