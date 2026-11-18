@@ -102,7 +102,8 @@ Every class has a **base form** that evolves at some point into one of **three W
 - **Efflorescence (Resto):** triggers when the Druid enters the field. Proposed: bloom on its side for 3 turns, each ally on the field heals 1/16 max HP at end of turn (duration and amount not confirmed).
 - **Forms are stage boosts** (no extra effectiveness penalty for other specs). Moonkin Form (Grass, status, 5 PP, ~lv10): +1 Sp. Atk. Switching forms removes the old form's stages and applies the new ones.
 - **Unshift** (one shared move for all specs, Protect-like): protects the user this turn and returns it to base form (removing the form's stage boosts). Replaces per-form un-shifting.
-- **Moves and levels:** drafting in progress (Moonkin done, Bear next).
+- Bear Form (Grass, status, 5 PP, ~lv14): +1 Def, +1 Sp. Def. Approved as is.
+- **Moves and levels:** drafting in progress (Moonkin, Bear done; Cat next).
 
 ## Monk (design draft, not implemented)
 
