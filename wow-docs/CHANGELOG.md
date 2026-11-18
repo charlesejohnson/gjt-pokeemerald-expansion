@@ -2,6 +2,13 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.25
+- Shaman line (stage 1): Shaman (Electric), Resto (Electric/Water), Enhancement (Electric/Flying), Elemental (Electric/Fire). Evolve with Moon/Shiny/Sun stones (Moon -> Resto, Shiny -> Enhancement, Sun -> Elemental). Placeholder Timburr/Conkeldurr sprites, recolored per spec.
+- Abilities registered: Static, Storm Drain, Windfury Weapon and Elemental Overload (the last two have no effect yet).
+- New moves: Lightning Bolt, Flame Shock, Stormstrike, Healing Wave (any friendly target, 40%), Earth Shock, Frost Shock, Bloodlust (+2 Atk/Sp. Atk to user and allies).
+- Not yet in: Lava Burst, Riptide, Chain Lightning, all totems, the repeat-attack abilities.
+- Test NPC now also hands out a Shaman.
+
 ## v0.1.24
 - Spell Reflect now reflects the real damage the blocked special move would have dealt (1x, not Mirror Coat's 2x), instead of a flat 1/4 HP.
 

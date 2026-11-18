@@ -27700,6 +27700,14 @@ const u16 gMonPalette_MageFire[] = INCGFX_U16("graphics/pokemon/gardevoir/fire_m
 const u16 gMonShinyPalette_MageFire[] = INCGFX_U16("graphics/pokemon/gardevoir/fire_mage_shiny.pal", ".gbapal");
 const u16 gMonPalette_MageArcane[] = INCGFX_U16("graphics/pokemon/gardevoir/arcane_mage_normal.pal", ".gbapal");
 const u16 gMonShinyPalette_MageArcane[] = INCGFX_U16("graphics/pokemon/gardevoir/arcane_mage_shiny.pal", ".gbapal");
+const u16 gMonPalette_Shaman[] = INCGFX_U16("graphics/pokemon/timburr/shaman_normal.pal", ".gbapal");
+const u16 gMonShinyPalette_Shaman[] = INCGFX_U16("graphics/pokemon/timburr/shaman_shiny.pal", ".gbapal");
+const u16 gMonPalette_ShamanResto[] = INCGFX_U16("graphics/pokemon/conkeldurr/shaman_resto_normal.pal", ".gbapal");
+const u16 gMonShinyPalette_ShamanResto[] = INCGFX_U16("graphics/pokemon/conkeldurr/shaman_resto_shiny.pal", ".gbapal");
+const u16 gMonPalette_ShamanEnh[] = INCGFX_U16("graphics/pokemon/conkeldurr/shaman_enh_normal.pal", ".gbapal");
+const u16 gMonShinyPalette_ShamanEnh[] = INCGFX_U16("graphics/pokemon/conkeldurr/shaman_enh_shiny.pal", ".gbapal");
+const u16 gMonPalette_ShamanEle[] = INCGFX_U16("graphics/pokemon/conkeldurr/shaman_ele_normal.pal", ".gbapal");
+const u16 gMonShinyPalette_ShamanEle[] = INCGFX_U16("graphics/pokemon/conkeldurr/shaman_ele_shiny.pal", ".gbapal");
 const u8 gMonIcon_Deathknight[] = INCGFX_U8("graphics/pokemon/deathknight/icon.png", ".4bpp");
 #if P_FOOTPRINTS
 const u8 gMonFootprint_Deathknight[] = INCGFX_U8("graphics/pokemon/deathknight/footprint.png", ".1bpp");

@@ -112,6 +112,8 @@ GJT_TestWarp_EventScript_WowMons::
 	goto_if_eq VAR_RESULT, MON_CANT_GIVE, Common_EventScript_NoMoreRoomForPokemon
 	givemon SPECIES_WARRIOR, 5
 	goto_if_eq VAR_RESULT, MON_CANT_GIVE, Common_EventScript_NoMoreRoomForPokemon
+	givemon SPECIES_SHAMAN, 5
+	goto_if_eq VAR_RESULT, MON_CANT_GIVE, Common_EventScript_NoMoreRoomForPokemon
 	playfanfare MUS_OBTAIN_ITEM
 	msgbox GJT_TestWarp_Text_GaveMons, MSGBOX_DEFAULT
 	waitfanfare
@@ -318,8 +320,8 @@ GJT_TestWarp_Text_GaveSupplies:
 	.string "an' the gym TMs!$"
 
 GJT_TestWarp_Text_GaveMons:
-	.string "A level 5 DEATH KNIGHT, MAGE\n"
-	.string "an' WARRIOR are yers!$"
+	.string "A level 5 DEATH KNIGHT, MAGE,\n"
+	.string "WARRIOR an' SHAMAN are yers!$"
 
 GJT_TestWarp_Text_WhichBadge:
 	.string "Which BADGE should I flip, laddie?$"

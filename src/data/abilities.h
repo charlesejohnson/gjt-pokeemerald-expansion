@@ -2604,4 +2604,17 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("May negate physical\ndamage."),
         .aiRating = 7,
     },
+    [ABILITY_WINDFURY_WEAPON] =
+    {
+        .name = _("Windfury Wpn"),
+        .description = COMPOUND_STRING("Physical hits may repeat,\nup to 5 times."),
+        .aiRating = 8,
+    },
+
+    [ABILITY_ELEMENTAL_OVERLOAD] =
+    {
+        .name = _("Elem Overload"),
+        .description = COMPOUND_STRING("Special hits may repeat,\nup to 5 times."),
+        .aiRating = 8,
+    },
 };

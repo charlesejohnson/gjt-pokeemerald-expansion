@@ -24873,4 +24873,194 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .validApprenticeMove = TRUE,
     },
 
+    [MOVE_LIGHTNING_BOLT] =
+    {
+        .name = COMPOUND_STRING("Lightning Bolt"),
+        .description = COMPOUND_STRING(
+            "A bolt of lightning. May\n"
+            "paralyze the target."),
+        .effect = EFFECT_HIT,
+        .power = 55,
+        .type = TYPE_ELECTRIC,
+        .accuracy = 100,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_PARALYSIS,
+            .chance = 10,
+        }),
+        .battleAnimScript = gBattleAnimMove_Thunderbolt,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_FLAME_SHOCK] =
+    {
+        .name = COMPOUND_STRING("Flame Shock"),
+        .description = COMPOUND_STRING(
+            "A searing shock that always\n"
+            "burns the target."),
+        .effect = EFFECT_HIT,
+        .power = 15,
+        .type = TYPE_FIRE,
+        .accuracy = 100,
+        .pp = 20,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_BURN,
+            .chance = 100,
+        }),
+        .battleAnimScript = gBattleAnimMove_Ember,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_STORMSTRIKE] =
+    {
+        .name = COMPOUND_STRING("Stormstrike"),
+        .description = COMPOUND_STRING(
+            "A charged blow. May lower\n"
+            "the target's Sp. Def."),
+        .effect = EFFECT_HIT,
+        .power = 65,
+        .type = TYPE_ELECTRIC,
+        .accuracy = 100,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_STAT_MINUS,
+            .spDef = 1,
+            .chance = 50,
+        }),
+        .battleAnimScript = gBattleAnimMove_ThunderPunch,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_HEALING_WAVE] =
+    {
+        .name = COMPOUND_STRING("Healing Wave"),
+        .description = COMPOUND_STRING(
+            "Heals the user or an ally\n"
+            "for 40% of max HP."),
+        .effect = EFFECT_HEAL_PULSE,
+        .power = 0,
+        .type = TYPE_WATER,
+        .accuracy = 0,
+        .pp = 10,
+        .target = TARGET_USER_OR_ALLY,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .healingMove = TRUE,
+        .ignoresProtect = TRUE,
+        .ignoresSubstitute = TRUE,
+        .metronomeBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_HealPulse,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_EARTH_SHOCK] =
+    {
+        .name = COMPOUND_STRING("Earth Shock"),
+        .description = COMPOUND_STRING(
+            "A jolt from the ground that\n"
+            "lowers the target's Sp. Atk."),
+        .effect = EFFECT_HIT,
+        .power = 60,
+        .type = TYPE_GROUND,
+        .accuracy = 100,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_STAT_MINUS,
+            .spAtk = 1,
+            .chance = 100,
+        }),
+        .battleAnimScript = gBattleAnimMove_MudShot,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_FROST_SHOCK] =
+    {
+        .name = COMPOUND_STRING("Frost Shock"),
+        .description = COMPOUND_STRING(
+            "A freezing jolt that lowers\n"
+            "the target's Speed."),
+        .effect = EFFECT_HIT,
+        .power = 65,
+        .type = TYPE_ICE,
+        .accuracy = 100,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_STAT_MINUS,
+            .speed = 1,
+            .chance = 100,
+        }),
+        .battleAnimScript = gBattleAnimMove_IceBeam,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_BLOODLUST] =
+    {
+        .name = COMPOUND_STRING("Bloodlust"),
+        .description = COMPOUND_STRING(
+            "Sharply raises Atk and Sp. Atk\n"
+            "of the user and allies."),
+        .effect = EFFECT_STAT_CHANGE,
+        .power = 0,
+        .type = TYPE_ELECTRIC,
+        .accuracy = 0,
+        .pp = 1,
+        .target = TARGET_USER_AND_ALLY,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .snatchAffected = TRUE,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = STAT_CHANGE_EFFECT_PLUS,
+            .attack = 2,
+            .spAtk = 2,
+        }),
+        .battleAnimScript = gBattleAnimMove_DragonDance,
+        .validApprenticeMove = TRUE,
+    },
+
 };
