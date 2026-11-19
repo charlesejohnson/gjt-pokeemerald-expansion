@@ -2,6 +2,9 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.29
+- Boomy Druid: Noctowl's brow tufts and eye band recolored blue (beak and talons pick up the blue too).
+
 ## v0.1.28
 - Druid line (stage 1): Druid (Grass, Sunkern art), Resto (Sudowoodo art, orange wood), Feral (Grass/Normal, brown Liepard), Guardian (Grass/Rock, brown Torterra), Boomy (Grass/Fairy, Noctowl with blue eyes). Sheet stats; base Druid 65/55/70/70/70/60.
 - Evolution (assumed): Moon -> Resto, Shiny -> Feral, Dawn -> Guardian, Sun -> Boomy.
