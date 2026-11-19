@@ -87,3 +87,17 @@ DOUBLE_BATTLE_TEST("Sweeping Strikes makes single-target attacks hit every foe")
         EXPECT_LT(opponentRight->hp, opponentRight->maxHP);
     }
 }
+
+SINGLE_BATTLE_TEST("Charge! has priority over a faster foe and slows it")
+{
+    GIVEN {
+        PLAYER(SPECIES_WARRIOR_ARMS) { Speed(1); }
+        OPPONENT(SPECIES_WOBBUFFET) { Speed(100); HP(10000); MaxHP(10000); }
+    } WHEN {
+        TURN { MOVE(player, MOVE_WARRIOR_CHARGE); MOVE(opponent, MOVE_CELEBRATE); }
+    } SCENE {
+        MESSAGE("Warrior used Charge!");
+    } THEN {
+        EXPECT_EQ(opponent->statStages[STAT_SPEED], DEFAULT_STAT_STAGE - 1);
+    }
+}

@@ -24750,15 +24750,15 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Charge!"),
         .description = COMPOUND_STRING(
-            "First turn only. Slows the\n"
-            "foe and builds 5 rage."),
+            "First turn only. Priority,\n"
+            "slows foe, builds 5 rage."),
         .effect = EFFECT_FIRST_TURN_ONLY,
         .power = 40,
         .type = TYPE_FIGHTING,
         .accuracy = 100,
         .pp = 10,
         .target = TARGET_SELECTED,
-        .priority = 0,
+        .priority = 1,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
         .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
@@ -25650,7 +25650,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Scorches with moonlight.\n"
             "Always burns."),
         .effect = EFFECT_HIT,
-        .power = 40,
+        .power = 20,
         .type = TYPE_FAIRY,
         .accuracy = 100,
         .pp = 15,
