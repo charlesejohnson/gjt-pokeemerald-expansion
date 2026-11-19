@@ -2,6 +2,14 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.35
+- Druid form loadouts. Shifting swaps the move list: each form has up to 3 assigned moves plus Unshift (always last). Base form keeps the Pokémon's own moves.
+- Bear and Cat moves (and Unshift) no longer take normal move slots. They are auto-assigned to their form as learned (first 3, in level order). A 4th one waits for the Druid trainer NPC (not built yet).
+- Tree Form auto-fills with Resto's heals and Owlkin Form with Boomy's spells (Wrath, Starfire, Starsurge, Celestial Alignment). These are also normal moves.
+- Form moves keep their own PP. It is saved per Druid in SaveBlock3 (20 Druids, 800 bytes) and refilled at a Pokémon Center. Base-move PP is untouched by shifting.
+- To switch forms you now Unshift first (Unshift is in every form's list).
+- Moved 3 class statics from IWRAM to EWRAM.
+
 ## v0.1.34
 - Shared Druid moves: Wrath (Grass special, 45, lv6), Moonfire (Fairy special, 40, always burns, lv10). Rake moved to lv18.
 - Boomy: Starfire (Grass special 80, 20% lower Sp. Def, lv26), Starsurge (Fairy special 70, 20% +1 Sp. Atk, lv32), Solar Beam (lv40, no charge turn in Owlkin Form), Celestial Alignment (lv46, Boomy only, 1 PP: +2 Sp. Atk and +1 crit stage for 2 turns, then both removed).

@@ -203,4 +203,6 @@ Species: Warrior (Fighting) -> Arms / Fury / Protection (all Fighting/Steel) via
 - Learning a form-gated move auto-fills the first empty slot of its form. Past 3, it is learned but unassigned and needs the Druid trainer NPC (scroll menu). Moves usable in all forms (Moonfire, Wrath, Vine Whip...) can be assigned to any form.
 - Shift moves (Bear, Cat, Tree, Owlkin Form) and Unshift stop being learnset moves and are granted automatically.
 - Storage: SaveBlock3, keyed by personality, ~22 B per Druid. See [memory-budget.md](memory-budget.md).
-- Open: PP for swapped-in moves (proposal: full PP each battle, base moves keep persistent PP).
+- PP: form moves keep persistent PP per Druid (`pp` bytes in the loadout, 0xFF = full), refilled by `HealPlayerParty`. Implemented in v0.1.35 (`src/gjt_druid.c`).
+- Implemented v0.1.35: affinity table `GetDruidMoveAffinity` (1 Bear, 2 Cat, 3 Tree, 4 Owlkin). Bear/Cat moves and Unshift are *exclusive* (skipped by level-up learning). Tree/Owlkin affinity moves are normal moves that also auto-fill those forms.
+- Known gaps: the Druid trainer NPC; Bear Form is learned at 10 but Bear moves start at 18, so Bear Form shows only Unshift until then; Elixirs/Ethers do not restore form PP; a Druid knows no form moves in the base summary screen.

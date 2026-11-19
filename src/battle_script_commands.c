@@ -1,4 +1,5 @@
 #include "global.h"
+#include "gjt_druid.h"
 #include "battle.h"
 #include "battle_hold_effects.h"
 #include "battle_message.h"
@@ -11824,6 +11825,7 @@ void BS_DruidShift(void)
 
     ApplyDruidFormStages(gBattlerAttacker, gBattleMons[gBattlerAttacker].volatiles.druidForm, -1);
     gBattleMons[gBattlerAttacker].volatiles.druidForm = form;
+    DruidApplyFormMoves(gBattlerAttacker, form);
     ApplyDruidFormStages(gBattlerAttacker, form, +1);
     gBattleStruct->battlerState[gBattlerAttacker].isFirstTurn = 2; // counts as switching in
     PREPARE_MOVE_BUFFER(gBattleTextBuff1, gCurrentMove);
@@ -11837,6 +11839,7 @@ void BS_DruidUnshift(void)
     {
         ApplyDruidFormStages(gBattlerAttacker, gBattleMons[gBattlerAttacker].volatiles.druidForm, -1);
         gBattleMons[gBattlerAttacker].volatiles.druidForm = 0;
+        DruidRestoreBaseMoves(gBattlerAttacker);
         gBattleStruct->battlerState[gBattlerAttacker].isFirstTurn = 2;
         BattleScriptPush(cmd->nextInstr);
         gBattlescriptCurrInstr = BattleScript_DruidUnshiftAnim;

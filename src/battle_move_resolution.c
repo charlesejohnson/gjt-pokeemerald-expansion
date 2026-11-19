@@ -1,4 +1,5 @@
 #include "global.h"
+#include "gjt_druid.h"
 #include "battle.h"
 #include "battle_arena.h"
 #include "battle_environment.h"
@@ -1036,6 +1037,8 @@ static enum CancelerResult CancelerPPDeduction(struct BattleCalcValues *cv)
         gBattleMons[cv->battlerAtk].pp[movePosition] -= ppToDeduct;
     else
         gBattleMons[cv->battlerAtk].pp[movePosition] = 0;
+
+    DruidSaveFormPP(cv->battlerAtk, movePosition); // GJT: form moves keep their own PP
 
     gLastMoves[cv->battlerAtk] = gChosenMove;
 

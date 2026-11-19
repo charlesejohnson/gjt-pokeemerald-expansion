@@ -254,6 +254,19 @@ struct NPCFollower
 #include "constants/items.h"
 #define ITEM_FLAGS_COUNT ((ITEMS_COUNT / 8) + ((ITEMS_COUNT % 8) ? 1 : 0))
 
+// GJT: Druid form loadouts. Each non-base form has 3 assignable slots (Unshift is always added last).
+#define DRUID_LOADOUT_COUNT 20      // Druids whose loadouts are remembered (SaveBlock3)
+#define DRUID_FORM_COUNT 4          // Bear, Cat, Tree, Owlkin
+#define DRUID_FORM_SLOTS 3
+#define DRUID_PP_FULL 0xFF          // sentinel: slot has not been used since the last heal
+
+struct DruidLoadout
+{
+    u32 personality;                                    // key; 0 = empty entry
+    u16 moves[DRUID_FORM_COUNT][DRUID_FORM_SLOTS];      // 0 = empty slot
+    u8 pp[DRUID_FORM_COUNT][DRUID_FORM_SLOTS];
+}; // 40 bytes
+
 struct SaveBlock3
 {
 #if OW_USE_FAKE_RTC
@@ -269,6 +282,8 @@ struct SaveBlock3
     u8 dexNavSearchLevels[NUM_SPECIES];
 #endif
     u8 dexNavChain;
+    struct DruidLoadout druidLoadouts[DRUID_LOADOUT_COUNT]; // GJT: Druid form loadouts (gjt_druid.c)
+    u8 druidLoadoutNext;
 #if APRICORN_TREE_COUNT > 0
     u8 apricornTrees[NUM_APRICORN_TREE_BYTES];
 #endif

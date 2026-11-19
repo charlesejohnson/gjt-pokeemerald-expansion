@@ -1,4 +1,5 @@
 #include "global.h"
+#include "gjt_druid.h"
 #include "battle.h"
 #include "battle_gfx_sfx_util.h"
 #include "berry.h"
@@ -37,6 +38,7 @@ static void HealPlayerBoxes(void);
 
 void HealPlayerParty(void)
 {
+    DruidRefillLoadoutPP();
     u32 i;
     for (i = 0; i < gPartiesCount[B_TRAINER_PLAYER]; i++)
         HealPokemon(&gParties[B_TRAINER_PLAYER][i]);

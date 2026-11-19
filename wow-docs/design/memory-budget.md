@@ -31,6 +31,6 @@ SaveBlock1 and 2 are nearly full, so new persistent data goes in SaveBlock3. Box
 - IWRAM (32 KiB): 28,380 B used. **Free: ~4.4 KB, and the stack lives in it.** Treat as full. New statics must be `EWRAM_DATA`. (Three statics from v0.1.33/34 were IWRAM by default and were moved, v0.1.35.)
 - Battle volatiles are bit-packed into gBattleMons (144 B per battler); the class volatiles added so far total about 25 bits.
 
-## Planned Druid loadout cost
-- Per Druid: key (personality, 4 B) + 4 forms x 3 slots x 11 bits (17 B) + flags = ~22 B. 24 entries = ~530 B of SaveBlock3. Pool of known moves is derived from the learnset, so only assignments are stored.
+## Druid loadout cost (implemented v0.1.35)
+- Per Druid: 40 B (key 4 B, 12 move slots x 2 B, 12 PP bytes). 20 entries = 800 B + 1 B of SaveBlock3, leaving ~820 B for other classes. The pool of known moves is derived from the learnset, so only assignments and PP are stored.
 - Code: ~3 to 4 KB ROM (shift hook, auto-fill, menu).

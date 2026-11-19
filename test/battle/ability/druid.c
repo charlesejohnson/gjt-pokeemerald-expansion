@@ -1,13 +1,15 @@
 #include "global.h"
 #include "test/battle.h"
+#include "gjt_druid.h"
 
 SINGLE_BATTLE_TEST("Druid: Bear Form raises Def and Sp. Def, Cat Form swaps the boosts")
 {
     GIVEN {
-        PLAYER(SPECIES_DRUID) { Speed(100); }
+        PLAYER(SPECIES_DRUID) { Speed(100); Moves(MOVE_BEAR_FORM, MOVE_CAT_FORM); }
         OPPONENT(SPECIES_WOBBUFFET) { Speed(1); }
     } WHEN {
         TURN { MOVE(player, MOVE_BEAR_FORM); }
+        TURN { MOVE(player, moveSlot: 0); } // Unshift (the only slot while the Druid has no Bear moves)
         TURN { MOVE(player, MOVE_CAT_FORM); }
     } THEN {
         EXPECT_EQ(player->statStages[STAT_DEF], DEFAULT_STAT_STAGE);
@@ -20,11 +22,11 @@ SINGLE_BATTLE_TEST("Druid: Bear Form raises Def and Sp. Def, Cat Form swaps the 
 SINGLE_BATTLE_TEST("Druid: Unshift protects and removes the form boosts")
 {
     GIVEN {
-        PLAYER(SPECIES_DRUID) { Speed(100); }
+        PLAYER(SPECIES_DRUID) { Speed(100); Moves(MOVE_BEAR_FORM); }
         OPPONENT(SPECIES_WOBBUFFET) { Speed(1); }
     } WHEN {
         TURN { MOVE(player, MOVE_BEAR_FORM); }
-        TURN { MOVE(player, MOVE_UNSHIFT); MOVE(opponent, MOVE_TACKLE); }
+        TURN { MOVE(player, moveSlot: 0); MOVE(opponent, MOVE_TACKLE); }
     } SCENE {
         MESSAGE("Druid returned to\nits base form!");
         MESSAGE("Druid protected itself!");
@@ -49,11 +51,12 @@ SINGLE_BATTLE_TEST("Druid: Tree Form is for Resto only")
 SINGLE_BATTLE_TEST("Druid: Tree Form boosts Sp. Def and makes heals 25% stronger")
 {
     GIVEN {
-        PLAYER(SPECIES_DRUID_RESTORATION) { Speed(100); HP(10); MaxHP(100); Ability(ABILITY_BALL_FETCH); }
+        PLAYER(SPECIES_DRUID_RESTORATION) { Speed(100); HP(10); MaxHP(100); Ability(ABILITY_BALL_FETCH); Moves(MOVE_TREE_FORM); }
         OPPONENT(SPECIES_WOBBUFFET) { Speed(1); }
     } WHEN {
+        DruidTestForceSlot(3, 0, MOVE_HEALING_WAVE);
         TURN { MOVE(player, MOVE_TREE_FORM); }
-        TURN { MOVE(player, MOVE_HEALING_WAVE, target: player); }
+        TURN { MOVE(player, moveSlot: 0, target: player); }
     } THEN {
         EXPECT_EQ(player->statStages[STAT_SPDEF], DEFAULT_STAT_STAGE + 1);
         EXPECT_EQ(player->hp, 10 + 50);
@@ -127,11 +130,11 @@ SINGLE_BATTLE_TEST("Druid: Eclipse boosts Grass moves on alternate turns", s16 d
 SINGLE_BATTLE_TEST("Druid: Shred crits on the first turn after shifting and builds combo points")
 {
     GIVEN {
-        PLAYER(SPECIES_DRUID_FERAL) { Speed(100); }
+        PLAYER(SPECIES_DRUID_FERAL) { Speed(100); Moves(MOVE_CAT_FORM); }
         OPPONENT(SPECIES_WOBBUFFET) { Speed(1); HP(10000); MaxHP(10000); }
     } WHEN {
         TURN { MOVE(player, MOVE_CAT_FORM); }
-        TURN { MOVE(player, MOVE_SHRED); }
+        TURN { MOVE(player, moveSlot: 1); } // Shred
     } SCENE {
         MESSAGE("A critical hit!");
         MESSAGE("Feral Druid's combo points: 2/5");
@@ -155,13 +158,13 @@ SINGLE_BATTLE_TEST("Druid: Shred fails outside Cat Form")
 SINGLE_BATTLE_TEST("Druid: Rake poisons and Ferocious Bite spends all combo points")
 {
     GIVEN {
-        PLAYER(SPECIES_DRUID_FERAL) { Speed(100); }
+        PLAYER(SPECIES_DRUID_FERAL) { Speed(100); Moves(MOVE_CAT_FORM); }
         OPPONENT(SPECIES_WOBBUFFET) { Speed(1); HP(10000); MaxHP(10000); }
     } WHEN {
         TURN { MOVE(player, MOVE_CAT_FORM); }
-        TURN { MOVE(player, MOVE_RAKE); }
-        TURN { MOVE(player, MOVE_RAKE); }
-        TURN { MOVE(player, MOVE_FEROCIOUS_BITE); }
+        TURN { MOVE(player, moveSlot: 0); }
+        TURN { MOVE(player, moveSlot: 0); }
+        TURN { MOVE(player, moveSlot: 2); }
     } THEN {
         EXPECT(opponent->status1 & STATUS1_POISON);
         EXPECT_EQ((u32)player->volatiles.comboPoints, 0);
@@ -174,15 +177,15 @@ SINGLE_BATTLE_TEST("Druid: Ferocious Bite hits harder per combo point", s16 dama
     PARAMETRIZE { builds = 0; }
     PARAMETRIZE { builds = 2; }
     GIVEN {
-        PLAYER(SPECIES_DRUID_FERAL) { Speed(100); }
+        PLAYER(SPECIES_DRUID_FERAL) { Speed(100); Moves(MOVE_CAT_FORM); }
         OPPONENT(SPECIES_WOBBUFFET) { Speed(1); HP(10000); MaxHP(10000); }
     } WHEN {
         TURN { MOVE(player, MOVE_CAT_FORM); }
         if (builds >= 1)
-            TURN { MOVE(player, MOVE_RAKE); }
+            TURN { MOVE(player, moveSlot: 0); }
         if (builds >= 2)
-            TURN { MOVE(player, MOVE_RAKE); }
-        TURN { MOVE(player, MOVE_FEROCIOUS_BITE, criticalHit: FALSE, WITH_RNG(RNG_DAMAGE_MODIFIER, 0)); }
+            TURN { MOVE(player, moveSlot: 0); }
+        TURN { MOVE(player, moveSlot: 2, criticalHit: FALSE, WITH_RNG(RNG_DAMAGE_MODIFIER, 0)); }
     } SCENE {
         MESSAGE("Feral Druid used Ferocious Bite!");
         HP_BAR(opponent, captureDamage: &results[i].damage);
@@ -194,12 +197,15 @@ SINGLE_BATTLE_TEST("Druid: Ferocious Bite hits harder per combo point", s16 dama
 SINGLE_BATTLE_TEST("Druid: Bear Form builds rage and Maul spends 3")
 {
     GIVEN {
-        PLAYER(SPECIES_DRUID_GUARDIAN) { Speed(100); }
+        PLAYER(SPECIES_DRUID_GUARDIAN) { Speed(100); Moves(MOVE_BEAR_FORM); }
         OPPONENT(SPECIES_WOBBUFFET) { Speed(1); HP(10000); MaxHP(10000); }
     } WHEN {
+        DruidTestForceSlot(1, 0, MOVE_MAUL);
+        DruidTestForceSlot(1, 1, MOVE_MANGLE);
+        DruidTestForceSlot(1, 2, MOVE_FRENZIED_REGEN);
         TURN { MOVE(player, MOVE_BEAR_FORM); }
-        TURN { MOVE(player, MOVE_MANGLE); }
-        TURN { MOVE(player, MOVE_MAUL); }
+        TURN { MOVE(player, moveSlot: 1); } // Mangle
+        TURN { MOVE(player, moveSlot: 0); } // Maul
     } THEN {
         EXPECT_EQ((u32)player->volatiles.warriorRage, 1); // Mangle +3, Maul +1 then -3
     }
@@ -208,13 +214,16 @@ SINGLE_BATTLE_TEST("Druid: Bear Form builds rage and Maul spends 3")
 SINGLE_BATTLE_TEST("Druid: Frenzied Regeneration heals 60% and costs 5 rage")
 {
     GIVEN {
-        PLAYER(SPECIES_DRUID_GUARDIAN) { Speed(100); HP(10); MaxHP(100); }
+        PLAYER(SPECIES_DRUID_GUARDIAN) { Speed(100); HP(10); MaxHP(100); Moves(MOVE_BEAR_FORM); }
         OPPONENT(SPECIES_WOBBUFFET) { Speed(1); HP(10000); MaxHP(10000); }
     } WHEN {
+        DruidTestForceSlot(1, 0, MOVE_MAUL);
+        DruidTestForceSlot(1, 1, MOVE_MANGLE);
+        DruidTestForceSlot(1, 2, MOVE_FRENZIED_REGEN);
         TURN { MOVE(player, MOVE_BEAR_FORM); }
-        TURN { MOVE(player, MOVE_MANGLE); }
-        TURN { MOVE(player, MOVE_MANGLE); }
-        TURN { MOVE(player, MOVE_FRENZIED_REGEN); }
+        TURN { MOVE(player, moveSlot: 1); } // Mangle
+        TURN { MOVE(player, moveSlot: 1); }
+        TURN { MOVE(player, moveSlot: 2); } // Frenzied Regeneration
     } THEN {
         EXPECT_EQ((u32)player->volatiles.warriorRage, 1); // 3 + 3 - 5
         EXPECT_GE(player->hp, 70);
@@ -316,5 +325,53 @@ DOUBLE_BATTLE_TEST("Druid: Wild Growth heals the user and its ally")
     } THEN {
         EXPECT_EQ(playerLeft->hp, 35);
         EXPECT_EQ(playerRight->hp, 35);
+    }
+}
+
+SINGLE_BATTLE_TEST("Druid: form loadouts auto-fill the first 3 moves learned and add Unshift")
+{
+    GIVEN {
+        PLAYER(SPECIES_DRUID_GUARDIAN) { Level(40); Speed(100); Moves(MOVE_BEAR_FORM); }
+        OPPONENT(SPECIES_WOBBUFFET) { Speed(1); HP(10000); MaxHP(10000); }
+    } WHEN {
+        TURN { MOVE(player, MOVE_BEAR_FORM); }
+    } THEN {
+        EXPECT_EQ(player->moves[0], MOVE_MAUL);
+        EXPECT_EQ(player->moves[1], MOVE_THRASH_DRUID);
+        EXPECT_EQ(player->moves[2], MOVE_IRONFUR);
+        EXPECT_EQ(player->moves[3], MOVE_UNSHIFT);
+    }
+}
+
+SINGLE_BATTLE_TEST("Druid: form moves keep their PP across Unshift and re-shifting")
+{
+    GIVEN {
+        PLAYER(SPECIES_DRUID_FERAL) { Speed(100); Moves(MOVE_CAT_FORM); }
+        OPPONENT(SPECIES_WOBBUFFET) { Speed(1); HP(10000); MaxHP(10000); }
+    } WHEN {
+        TURN { MOVE(player, MOVE_CAT_FORM); }
+        TURN { MOVE(player, moveSlot: 0); } // Rake
+        TURN { MOVE(player, moveSlot: 3); } // Unshift
+        TURN { MOVE(player, MOVE_CAT_FORM); }
+    } THEN {
+        EXPECT_EQ(player->moves[0], MOVE_RAKE);
+        EXPECT_EQ(player->pp[0], GetMovePP(MOVE_RAKE) - 1);
+    }
+}
+
+SINGLE_BATTLE_TEST("Druid: shifting does not overwrite the base moves or their PP")
+{
+    GIVEN {
+        PLAYER(SPECIES_DRUID_FERAL) { Speed(100); Moves(MOVE_CAT_FORM, MOVE_VINE_WHIP); }
+        OPPONENT(SPECIES_WOBBUFFET) { Speed(1); HP(10000); MaxHP(10000); }
+    } WHEN {
+        TURN { MOVE(player, MOVE_CAT_FORM); }
+        TURN { MOVE(player, moveSlot: 0); } // Rake, in form
+        TURN { MOVE(player, moveSlot: 3); } // Unshift
+    } THEN {
+        EXPECT_EQ(player->moves[0], MOVE_CAT_FORM);
+        EXPECT_EQ(player->moves[1], MOVE_VINE_WHIP);
+        EXPECT_EQ(GetMonData(&gParties[B_TRAINER_PLAYER][0], MON_DATA_PP1), GetMovePP(MOVE_CAT_FORM) - 1);
+        EXPECT_EQ(GetMonData(&gParties[B_TRAINER_PLAYER][0], MON_DATA_PP2), GetMovePP(MOVE_VINE_WHIP));
     }
 }

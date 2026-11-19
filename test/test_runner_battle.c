@@ -1,4 +1,5 @@
 #include "global.h"
+#include "gjt_druid.h"
 #include "battle.h"
 #include "battle_ai_util.h"
 #include "battle_anim.h"
@@ -422,6 +423,7 @@ static void BattleTest_Run(void *data)
     const struct BattleTest *test = data;
 
     memset(&DATA, 0, sizeof(DATA));
+    DruidResetLoadouts();
     InitTestBattlers(test);
     TestInitConfigData();
 

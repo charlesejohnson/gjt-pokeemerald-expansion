@@ -1,4 +1,5 @@
 #include "global.h"
+#include "gjt_druid.h"
 #include "malloc.h"
 #include "apprentice.h"
 #include "battle.h"
@@ -1586,7 +1587,7 @@ void GiveBoxMonInitialMoveset(struct BoxPokemon *boxMon) //Credit: AsparagusEdua
 
         if (learnset[i].level > level)
             break;
-        if (learnset[i].level == 0)
+        if (learnset[i].level == 0 || IsDruidExclusiveMove(learnset[i].move))
             continue;
 
         for (j = 0; j < addedMoves; j++)
@@ -1639,7 +1640,7 @@ void GiveBoxMonDefaultMove(struct BoxPokemon *boxMon, u32 slot)
 
         if (learnset[i].level > level)
             break;
-        if (learnset[i].level == 0)
+        if (learnset[i].level == 0 || IsDruidExclusiveMove(learnset[i].move))
             continue;
 
         for (j = 0; j < slot; j++)
@@ -1701,6 +1702,12 @@ enum Move MonTryLearningNewMoveAtLevel(struct Pokemon *mon, bool32 firstMove, u3
                 }
             }
         }
+    }
+
+    if (learnset[sLearningMoveTableID].level == level && IsDruidExclusiveMove(learnset[sLearningMoveTableID].move))
+    {
+        sLearningMoveTableID++; // GJT: Druid form moves live in form loadouts, not move slots
+        return MON_ALREADY_KNOWS_MOVE;
     }
 
     if (learnset[sLearningMoveTableID].level == level)
