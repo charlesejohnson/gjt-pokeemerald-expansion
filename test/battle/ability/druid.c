@@ -54,12 +54,12 @@ SINGLE_BATTLE_TEST("Druid: Tree Form boosts Sp. Def and makes heals 25% stronger
         PLAYER(SPECIES_DRUID_RESTORATION) { Speed(100); HP(10); MaxHP(100); Ability(ABILITY_BALL_FETCH); Moves(MOVE_TREE_FORM); }
         OPPONENT(SPECIES_WOBBUFFET) { Speed(1); }
     } WHEN {
-        DruidTestForceSlot(3, 0, MOVE_HEALING_WAVE);
+        DruidTestForceSlot(3, 0, MOVE_SYNTHESIS);
         TURN { MOVE(player, MOVE_TREE_FORM); }
         TURN { MOVE(player, moveSlot: 0, target: player); }
     } THEN {
         EXPECT_EQ(player->statStages[STAT_SPDEF], DEFAULT_STAT_STAGE + 1);
-        EXPECT_EQ(player->hp, 10 + 50);
+        EXPECT_EQ(player->hp, 10 + 62); // Synthesis 50% x 1.25
     }
 }
 
@@ -389,5 +389,20 @@ SINGLE_BATTLE_TEST("Druid: a cleared form slot stays empty instead of auto-filli
         EXPECT_EQ(player->moves[1], MOVE_SHRED);
         EXPECT_EQ(player->moves[2], MOVE_UNSHIFT);
         EXPECT_EQ(player->moves[3], MOVE_NONE);
+    }
+}
+
+SINGLE_BATTLE_TEST("Druid: a form cannot hold moves it is not allowed to use")
+{
+    GIVEN {
+        PLAYER(SPECIES_DRUID_GUARDIAN) { Speed(100); Moves(MOVE_BEAR_FORM); }
+        OPPONENT(SPECIES_WOBBUFFET) { Speed(1); HP(10000); MaxHP(10000); }
+    } WHEN {
+        DruidTestForceSlot(1, 0, MOVE_WRATH);
+        TURN { MOVE(player, MOVE_BEAR_FORM); }
+    } THEN {
+        EXPECT_EQ(player->moves[0], MOVE_MAUL); // Wrath skipped; slots 2 and 3 fill with Maul and Thrash
+        EXPECT_EQ(player->moves[1], MOVE_THRASH_DRUID);
+        EXPECT_EQ(player->moves[2], MOVE_UNSHIFT);
     }
 }

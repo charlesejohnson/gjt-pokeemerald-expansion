@@ -4,6 +4,7 @@
 // struct DruidLoadout and its constants live in global.h (SaveBlock3 needs them)
 
 u32 GetDruidMoveAffinity(enum Move move);     // which form auto-fills this move (1 Bear, 2 Cat, 3 Tree, 4 Owlkin, 0 none)
+bool32 IsMoveAllowedInDruidForm(enum Move move, u32 form);
 bool32 IsDruidExclusiveMove(enum Move move);  // never takes a normal move slot (Bear/Cat moves, Unshift)
 void DruidResetLoadouts(void);
 void DruidTestForceSlot(u32 form, u32 slot, enum Move move); // tests only: forces a slot on the player's Druid at shift time

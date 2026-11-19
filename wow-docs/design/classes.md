@@ -208,3 +208,4 @@ Species: Warrior (Fighting) -> Arms / Fury / Protection (all Fighting/Steel) via
 - Known gaps: the Druid trainer NPC; Bear Form is learned at 10 but Bear moves start at 18, so Bear Form shows only Unshift until then; Elixirs/Ethers do not restore form PP; a Druid knows no form moves in the base summary screen.
 
 - Druid trainer (v0.1.36): `data/scripts/gjt_druid_trainer.inc` + `DruidTrainer_*` natives in `src/gjt_druid.c`. Uses dynamic multichoice menus (party mon, form, slot, move). `DRUID_SLOT_CLEARED` (0xFFFF) marks a deliberately empty slot. Reached from the test guide until it gets a real map spot.
+- Per-form allowed moves (v0.1.37): lists live in `src/gjt_druid.c` (`sBearMoves` etc.), edit there to change what a form can hold.

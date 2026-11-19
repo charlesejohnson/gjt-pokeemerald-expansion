@@ -106,6 +106,31 @@ static struct DruidLoadout *FindEntry(u32 personality, bool32 create)
 }
 
 // Fills empty slots with the moves the mon has learned for each form, in level order, up to 3 per form.
+// Moves a form may use besides its own affinity moves. Moonfire is open to every form.
+static const u16 sBearMoves[] = {MOVE_MOONFIRE, MOVE_GROWL, MOVE_VINE_WHIP, MOVE_BULK_UP, MOVE_ROCK_THROW, MOVE_ROCK_SLIDE, MOVE_BODY_PRESS, MOVE_STONE_EDGE, MOVE_EARTHQUAKE, MOVE_NONE};
+static const u16 sCatMoves[] = {MOVE_MOONFIRE, MOVE_GROWL, MOVE_VINE_WHIP, MOVE_RAZOR_LEAF, MOVE_QUICK_ATTACK, MOVE_SLASH, MOVE_POISON_JAB, MOVE_X_SCISSOR, MOVE_SWORDS_DANCE, MOVE_NONE};
+static const u16 sTreeMoves[] = {MOVE_MOONFIRE, MOVE_LEECH_SEED, MOVE_MEGA_DRAIN, MOVE_SYNTHESIS, MOVE_AROMATHERAPY, MOVE_GIGA_DRAIN, MOVE_INGRAIN, MOVE_SOLAR_BEAM, MOVE_NONE};
+static const u16 sOwlkinMoves[] = {MOVE_MOONFIRE, MOVE_LEECH_SEED, MOVE_FAIRY_WIND, MOVE_DISARMING_VOICE, MOVE_ENERGY_BALL, MOVE_DAZZLING_GLEAM, MOVE_CALM_MIND, MOVE_MOONBLAST, MOVE_SOLAR_BEAM, MOVE_NONE};
+
+static const u16 *const sFormMoves[DRUID_FORM_COUNT] = {sBearMoves, sCatMoves, sTreeMoves, sOwlkinMoves};
+
+// A form can only hold its own affinity moves plus its shared list (Bear can't cast Wrath).
+bool32 IsMoveAllowedInDruidForm(enum Move move, u32 form)
+{
+    const u16 *list;
+
+    if (form < 1 || form > DRUID_FORM_COUNT)
+        return FALSE;
+    if (GetDruidMoveAffinity(move) == form)
+        return TRUE;
+    for (list = sFormMoves[form - 1]; *list != MOVE_NONE; list++)
+    {
+        if (*list == move)
+            return TRUE;
+    }
+    return FALSE;
+}
+
 static bool32 SlotIsEmpty(u16 move)
 {
     return move == MOVE_NONE || move == DRUID_SLOT_CLEARED;
@@ -201,7 +226,7 @@ void DruidApplyFormMoves(enum BattlerId battler, u32 form)
         enum Move move = entry->moves[form - 1][s];
         u32 maxPp, pp;
 
-        if (SlotIsEmpty(move))
+        if (SlotIsEmpty(move) || !IsMoveAllowedInDruidForm(move, form))
             continue;
         maxPp = GetMovePP(move);
         pp = entry->pp[form - 1][s];
@@ -244,7 +269,7 @@ void DruidSaveFormPP(enum BattlerId battler, u32 movePosition)
         return;
     for (u32 s = 0; s < DRUID_FORM_SLOTS; s++)
     {
-        if (SlotIsEmpty(entry->moves[form - 1][s]))
+        if (SlotIsEmpty(entry->moves[form - 1][s]) || !IsMoveAllowedInDruidForm(entry->moves[form - 1][s], form))
             continue;
         if (n == movePosition)
         {
@@ -346,7 +371,8 @@ void DruidTrainer_PushMoves(void)
         enum Move move = learnset[i].move;
         bool32 dup = FALSE;
 
-        if (learnset[i].level == 0 || learnset[i].level > level || IsDruidFormMove(move))
+        if (learnset[i].level == 0 || learnset[i].level > level || IsDruidFormMove(move)
+         || !IsMoveAllowedInDruidForm(move, gSpecialVar_0x8005))
             continue;
         for (u32 j = 0; j < count; j++)
         {

@@ -2,6 +2,10 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.37
+- Khadgar's class picker now offers Warrior, Shaman and Druid alongside Death Knight and Mage.
+- Druid forms have their own allowed-move lists (`IsMoveAllowedInDruidForm`). Each form takes its own affinity moves plus a shared list; Moonfire is open to all. Bear: Growl, Vine Whip, Bulk Up, Rock Throw, Rock Slide, Body Press, Stone Edge, Earthquake. Cat: Growl, Vine Whip, Razor Leaf, Quick Attack, Slash, Poison Jab, X-Scissor, Swords Dance. Tree: Leech Seed, Mega Drain, Synthesis, Aromatherapy, Giga Drain, Ingrain, Solar Beam. Owlkin: Leech Seed, Fairy Wind, Disarming Voice, Energy Ball, Dazzling Gleam, Calm Mind, Moonblast, Solar Beam. The trainer menu only lists allowed moves, and a disallowed stored move is skipped in battle.
+
 ## v0.1.36
 - Druid trainer menu (test guide in the bedroom, new "DRUID TRAINER" option). Pick a Druid, a form (Bear, Cat, plus Tree for Resto and Owlkin for Boomy), a slot, then a move. Known moves = the Druid's learnset up to its level, minus the shift moves. "Clear slot" leaves a slot empty and it stays empty (no auto-fill). Picking a move already in another slot of that form moves it.
 - Becomes a real NPC once a town is chosen.
