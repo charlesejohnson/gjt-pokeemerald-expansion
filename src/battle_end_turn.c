@@ -379,7 +379,7 @@ static bool32 HandleEndTurnFirstEventBlock(enum BattlerId battler)
         if (IsBattlerAlive(battler))
         {
             enum BattleSide foe = side ^ BIT_SIDE;
-            if (gSideTimers[side].healingStreamTimer
+            if ((gSideTimers[side].healingStreamTimer || gSideTimers[side].bloomTimer)
              && !gBattleMons[battler].volatiles.healBlockTimer
              && !IsBattlerAtMaxHp(battler))
             {
@@ -1228,8 +1228,8 @@ static bool32 HandleEndTurnSecondEventBlock(enum BattlerId battler)
     case SECOND_EVENT_BLOCK_TOTEMS:
     {
         // GJT: count down one totem per pass until all of this side's totems are handled.
-        static const u16 sTotemMoves[] = { MOVE_STONESKIN_TOTEM, MOVE_SEARING_TOTEM, MOVE_WINDFURY_TOTEM, MOVE_HEALING_STREAM_TOTEM, MOVE_EARTHBIND_TOTEM, MOVE_MAGMA_TOTEM };
-        u8 *timers[] = { &gSideTimers[side].stoneskinTimer, &gSideTimers[side].searingTimer, &gSideTimers[side].windfuryTotemTimer, &gSideTimers[side].healingStreamTimer, &gSideTimers[side].earthbindTimer, &gSideTimers[side].magmaTimer };
+        static const u16 sTotemMoves[] = { MOVE_STONESKIN_TOTEM, MOVE_SEARING_TOTEM, MOVE_WINDFURY_TOTEM, MOVE_HEALING_STREAM_TOTEM, MOVE_EARTHBIND_TOTEM, MOVE_MAGMA_TOTEM, MOVE_NONE };
+        u8 *timers[] = { &gSideTimers[side].stoneskinTimer, &gSideTimers[side].searingTimer, &gSideTimers[side].windfuryTotemTimer, &gSideTimers[side].healingStreamTimer, &gSideTimers[side].earthbindTimer, &gSideTimers[side].magmaTimer, &gSideTimers[side].bloomTimer };
         s32 expired = -1;
         for (u32 i = 0; i < ARRAY_COUNT(timers); i++)
         {
@@ -1242,7 +1242,7 @@ static bool32 HandleEndTurnSecondEventBlock(enum BattlerId battler)
         {
             gBattlerAttacker = GetBattlerSideForMessage(side);
             PREPARE_MOVE_BUFFER(gBattleTextBuff1, sTotemMoves[expired]);
-            BattleScriptCall(BattleScript_TotemCrumbled);
+            BattleScriptCall(sTotemMoves[expired] == MOVE_NONE ? BattleScript_BloomFaded : BattleScript_TotemCrumbled);
             effect = TRUE;
         }
         break;

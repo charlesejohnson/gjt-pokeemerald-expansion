@@ -3531,6 +3531,10 @@ static enum MoveEndResult MoveEndChainLightning(struct BattleCalcValues *cv)
 {
     enum MoveEndResult result = MOVEEND_RESULT_CONTINUE;
 
+    // GJT: Predatory Swiftness - a crit makes the Druid's next move gain priority.
+    if (cv->abilities[cv->battlerAtk] == ABILITY_PREDATORY_SWIFTNESS && GetMovePower(cv->move) > 0)
+        gBattleMons[cv->battlerAtk].volatiles.predatorySwiftness = gSpecialStatuses[cv->battlerDef].criticalHit ? 1 : 0;
+
     if (cv->move == MOVE_CHAIN_LIGHTNING
      && IsDoubleBattle()
      && !gBattleStruct->unableToUseMove

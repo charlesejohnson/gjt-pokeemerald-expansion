@@ -3185,6 +3185,15 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
                 effect++;
             }
             break;
+        case ABILITY_EFFLORESCENCE:
+            if (shouldAbilityTrigger)
+            {
+                gSideTimers[GetBattlerSide(battler)].bloomTimer = 3;
+                gEffectBattler = gBattlerAbility = battler;
+                BattleScriptCall(BattleScript_EfflorescenceActivates);
+                effect++;
+            }
+            break;
         case ABILITY_SLOW_START:
             if (shouldAbilityTrigger)
             {
@@ -6602,6 +6611,12 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct DamageContext *ctx)
         if (basePower <= 60)
            modifier = uq4_12_multiply(modifier, UQ_4_12(1.5));
         break;
+    case ABILITY_ECLIPSE:
+        // GJT: Grass moves are boosted on even turns, Fairy moves on odd turns.
+        if ((GetBattleMoveType(move) == TYPE_GRASS && !(gBattleResults.battleTurnCounter & 1))
+         || (GetBattleMoveType(move) == TYPE_FAIRY && (gBattleResults.battleTurnCounter & 1)))
+           modifier = uq4_12_multiply(modifier, UQ_4_12(1.3));
+        break;
     case ABILITY_FLARE_BOOST:
         if (gBattleMons[battlerAtk].status1 & STATUS1_BURN && IsBattleMoveSpecial(move))
            modifier = uq4_12_multiply(modifier, UQ_4_12(1.5));
@@ -7561,6 +7576,14 @@ static inline uq4_12_t GetDefenderAbilitiesModifier(struct DamageContext *ctx)
         if (IsBattlerAtMaxHp(ctx->battlerDef))
         {
             modifier = UQ_4_12(0.5);
+            recordAbility = TRUE;
+        }
+        break;
+    case ABILITY_THICK_HIDE:
+        // GJT: at or below half HP, takes 25% less damage.
+        if (gBattleMons[ctx->battlerDef].hp <= gBattleMons[ctx->battlerDef].maxHP / 2)
+        {
+            modifier = UQ_4_12(0.75);
             recordAbility = TRUE;
         }
         break;

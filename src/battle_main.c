@@ -4466,6 +4466,8 @@ s32 GetBattleMovePriority(enum BattlerId battler, enum Ability ability, enum Mov
         move = GetUsableZMove(battler, move);
 
     priority = GetMovePriority(move);
+    if (ability == ABILITY_PREDATORY_SWIFTNESS && gBattleMons[battler].volatiles.predatorySwiftness)
+        priority++; // GJT: next move after a crit
 
     // Max Guard check
     if (GetActiveGimmick(battler) == GIMMICK_DYNAMAX && GetMoveCategory(move) == DAMAGE_CATEGORY_STATUS)

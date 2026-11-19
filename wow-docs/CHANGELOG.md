@@ -2,6 +2,10 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.31
+- Druid abilities live. Efflorescence (Resto): on switch-in, a bloom on your side heals every ally 1/16 max HP at the end of each of the next 3 turns. Predatory Swiftness (Feral): after a move that crits, the next move gains +1 priority. Thick Hide (Guardian): at half HP or less, takes 25% less damage. Eclipse (Boomy): Grass moves hit 30% harder on odd turns (1, 3, ...), Fairy moves on even turns.
+- Numbers for Thick Hide and Eclipse were my picks; easy to tune.
+
 ## v0.1.30
 - Druid forms live. Bear Form (+1 Def/Sp. Def), Cat Form (+1 Atk/Speed), Tree Form (Resto only: +1 Sp. Def, your healing moves 25% stronger), Owlkin Form (Boomy only: +1 Sp. Atk), Unshift (Protect that returns you to base form). Switching forms swaps the old boosts for the new ones and counts as switching in.
 - Forms swap the battle sprite only: Bear = Grotle (Torterra for Guardian), Cat = Purrloin (Liepard for Feral), Tree = Sudowoodo, Owlkin = Noctowl. Evolved Druids are now the green Sunflora in their base form.

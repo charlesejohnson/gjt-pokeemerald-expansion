@@ -6665,3 +6665,14 @@ BattleScript_DruidUnshiftAnim::
 	printstring STRINGID_GJT_UNSHIFT
 	waitmessage B_WAIT_TIME_LONG
 	return
+
+BattleScript_EfflorescenceActivates::
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_GJT_BLOOM
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_BloomFaded::
+	printstring STRINGID_GJT_BLOOM_FADED
+	waitmessage B_WAIT_TIME_LONG
+	return
