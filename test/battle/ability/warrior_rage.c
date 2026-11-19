@@ -96,7 +96,7 @@ SINGLE_BATTLE_TEST("Charge! has priority over a faster foe and slows it")
     } WHEN {
         TURN { MOVE(player, MOVE_WARRIOR_CHARGE); MOVE(opponent, MOVE_CELEBRATE); }
     } SCENE {
-        MESSAGE("Warrior used Charge!");
+        MESSAGE("Arms Warrior used Charge!!");
     } THEN {
         EXPECT_EQ(opponent->statStages[STAT_SPEED], DEFAULT_STAT_STAGE - 1);
     }
