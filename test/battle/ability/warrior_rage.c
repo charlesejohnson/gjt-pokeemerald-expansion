@@ -44,7 +44,7 @@ SINGLE_BATTLE_TEST("Execute spends all rage")
     }
 }
 
-SINGLE_BATTLE_TEST("Charge! builds 5 rage")
+SINGLE_BATTLE_TEST("Charge builds 5 rage")
 {
     GIVEN {
         PLAYER(SPECIES_WARRIOR_ARMS) { Speed(100); }
@@ -88,7 +88,7 @@ DOUBLE_BATTLE_TEST("Sweeping Strikes makes single-target attacks hit every foe")
     }
 }
 
-SINGLE_BATTLE_TEST("Charge! has priority over a faster foe and slows it")
+SINGLE_BATTLE_TEST("Charge has priority over a faster foe and slows it")
 {
     GIVEN {
         PLAYER(SPECIES_WARRIOR_ARMS) { Speed(1); }
@@ -96,7 +96,7 @@ SINGLE_BATTLE_TEST("Charge! has priority over a faster foe and slows it")
     } WHEN {
         TURN { MOVE(player, MOVE_WARRIOR_CHARGE); MOVE(opponent, MOVE_CELEBRATE); }
     } SCENE {
-        MESSAGE("Arms Warrior used Charge!!");
+        MESSAGE("Arms Warrior used Charge!");
     } THEN {
         EXPECT_EQ(opponent->statStages[STAT_SPEED], DEFAULT_STAT_STAGE - 1);
     }

@@ -24748,7 +24748,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_WARRIOR_CHARGE] =
     {
-        .name = COMPOUND_STRING("Charge!"),
+        .name = COMPOUND_STRING("Charge"),
         .description = COMPOUND_STRING(
             "First turn only. Priority,\n"
             "slows foe, builds 5 rage."),

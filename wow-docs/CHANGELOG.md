@@ -2,9 +2,12 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.39
+- Warrior's Charge lost its exclamation point.
+
 ## v0.1.38
 - Moonfire power 40 -> 20.
-- Charge! (Warrior) now has +1 priority. Still first turn only after switch-in, -1 foe Speed, +5 rage.
+- Charge (Warrior) now has +1 priority. Still first turn only after switch-in, -1 foe Speed, +5 rage.
 - A Druid trainer (Hiker, right wall at 12,5) now stands in the 1F of 15 Pokémon Centers using the standard layout (Oldale, Petalburg, Rustboro, Dewford, Slateport, Mauville, Verdanturf, Fallarbor, Fortree, Lilycove, Mossdeep, Sootopolis, Pacifidlog, Ever Grande, Battle Frontier). Lavaridge's center has its own layout and is not done.
 
 ## v0.1.37
