@@ -6676,3 +6676,12 @@ BattleScript_BloomFaded::
 	printstring STRINGID_GJT_BLOOM_FADED
 	waitmessage B_WAIT_TIME_LONG
 	return
+
+BattleScript_SurvivalInstincts::
+	copybyte gBattlerAbility, sBATTLER
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_GJT_SURVIVAL
+	waitmessage B_WAIT_TIME_LONG
+	healthbarupdate BS_SCRIPTING
+	datahpupdate BS_SCRIPTING, ASSURANCE_DOUBLE
+	return

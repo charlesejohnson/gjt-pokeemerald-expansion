@@ -7579,14 +7579,6 @@ static inline uq4_12_t GetDefenderAbilitiesModifier(struct DamageContext *ctx)
             recordAbility = TRUE;
         }
         break;
-    case ABILITY_THICK_HIDE:
-        // GJT: at or below half HP, takes 25% less damage.
-        if (gBattleMons[ctx->battlerDef].hp <= gBattleMons[ctx->battlerDef].maxHP / 2)
-        {
-            modifier = UQ_4_12(0.75);
-            recordAbility = TRUE;
-        }
-        break;
     case ABILITY_WILL_OF_THE_NECROPOLIS:
         if (gBattleMons[ctx->battlerDef].hp * 2 < gBattleMons[ctx->battlerDef].maxHP)
         {

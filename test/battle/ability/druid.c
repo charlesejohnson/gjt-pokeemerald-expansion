@@ -75,20 +75,17 @@ SINGLE_BATTLE_TEST("Druid: Efflorescence blooms on switch-in and heals for 3 tur
     }
 }
 
-SINGLE_BATTLE_TEST("Druid: Thick Hide cuts damage at half HP or less", s16 damage)
+SINGLE_BATTLE_TEST("Druid: Survival Instincts heals 60% once when HP first falls to 30%")
 {
-    u32 hp;
-    PARAMETRIZE { hp = 300; }
-    PARAMETRIZE { hp = 100; }
     GIVEN {
-        PLAYER(SPECIES_DRUID_GUARDIAN) { Speed(1); HP(hp); MaxHP(300); }
+        PLAYER(SPECIES_DRUID_GUARDIAN) { Speed(1); HP(95); MaxHP(300); }
         OPPONENT(SPECIES_WOBBUFFET) { Speed(100); }
     } WHEN {
         TURN { MOVE(opponent, MOVE_TACKLE, criticalHit: FALSE); }
     } SCENE {
-        HP_BAR(player, captureDamage: &results[i].damage);
-    } FINALLY {
-        EXPECT_MUL_EQ(results[0].damage, Q_4_12(0.75), results[1].damage);
+        MESSAGE("Guard Druid's survival instincts\nkicked in!");
+    } THEN {
+        EXPECT_GT(player->hp, 150);
     }
 }
 

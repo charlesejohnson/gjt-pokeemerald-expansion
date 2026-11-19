@@ -2,6 +2,9 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.32
+- Guardian's ability is now Survival Instincts (replaces Thick Hide): the first time its HP falls to 30% or less, it heals 60% for free (once per switch-in).
+
 ## v0.1.31
 - Druid abilities live. Efflorescence (Resto): on switch-in, a bloom on your side heals every ally 1/16 max HP at the end of each of the next 3 turns. Predatory Swiftness (Feral): after a move that crits, the next move gains +1 priority. Thick Hide (Guardian): at half HP or less, takes 25% less damage. Eclipse (Boomy): Grass moves hit 30% harder on odd turns (1, 3, ...), Fairy moves on even turns.
 - Numbers for Thick Hide and Eclipse were my picks; easy to tune.

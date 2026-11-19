@@ -3535,6 +3535,22 @@ static enum MoveEndResult MoveEndChainLightning(struct BattleCalcValues *cv)
     if (cv->abilities[cv->battlerAtk] == ABILITY_PREDATORY_SWIFTNESS && GetMovePower(cv->move) > 0)
         gBattleMons[cv->battlerAtk].volatiles.predatorySwiftness = gSpecialStatuses[cv->battlerDef].criticalHit ? 1 : 0;
 
+    // GJT: Survival Instincts - first time HP falls to 30% or less, heal 60% for free (Frenzied Regeneration).
+    if (cv->abilities[cv->battlerDef] == ABILITY_SURVIVAL_INSTINCTS
+     && IsBattlerAlive(cv->battlerDef)
+     && !gBattleMons[cv->battlerDef].volatiles.survivalInstinctsUsed
+     && gBattleMons[cv->battlerDef].hp * 10 <= gBattleMons[cv->battlerDef].maxHP * 3
+     && IsBattlerTurnDamaged(cv->battlerDef, EXCLUDING_SUBSTITUTES)
+     && !gBattleMons[cv->battlerDef].volatiles.healBlockTimer)
+    {
+        gBattleMons[cv->battlerDef].volatiles.survivalInstinctsUsed = TRUE;
+        gBattleScripting.battler = cv->battlerDef;
+        SetHealAmount(cv->battlerDef, GetNonDynamaxMaxHP(cv->battlerDef) * 3 / 5);
+        BattleScriptCall(BattleScript_SurvivalInstincts);
+        gBattleScripting.moveendState++;
+        return MOVEEND_RESULT_RUN_SCRIPT;
+    }
+
     if (cv->move == MOVE_CHAIN_LIGHTNING
      && IsDoubleBattle()
      && !gBattleStruct->unableToUseMove

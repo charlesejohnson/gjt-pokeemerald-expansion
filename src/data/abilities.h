@@ -2631,11 +2631,11 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .aiRating = 7,
     },
 
-    [ABILITY_THICK_HIDE] =
+    [ABILITY_SURVIVAL_INSTINCTS] =
     {
-        .name = _("Thick Hide"),
-        .description = COMPOUND_STRING("Takes less damage\nat low HP."),
-        .aiRating = 7,
+        .name = _("Survival Inst"),
+        .description = COMPOUND_STRING("Heals 60% once when HP\nfirst falls to 30%."),
+        .aiRating = 8,
     },
 
     [ABILITY_ECLIPSE] =

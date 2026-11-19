@@ -234,6 +234,7 @@ enum VolatileFlags
     F(VOLATILE_RIPTIDE,                     riptideTimer,                  (u32, 4)) \
     F(VOLATILE_DRUID_FORM,                  druidForm,                     (u32, 4)) \
     F(VOLATILE_PREDATORY_SWIFTNESS,         predatorySwiftness,            (u32, 1)) \
+    F(VOLATILE_SURVIVAL_INSTINCTS_USED,     survivalInstinctsUsed,         (u32, 1)) \
     F(VOLATILE_SEMI_INVULNERABLE,           semiInvulnerable,              (enum SemiInvulnerableState, SEMI_INVULNERABLE_COUNT)) \
     F(VOLATILE_ELECTRIFIED,                 electrified,                   (u32, 1)) \
     F(VOLATILE_MUD_SPORT,                   mudSport,                      (u32, 1), V_BATON_PASSABLE) \
