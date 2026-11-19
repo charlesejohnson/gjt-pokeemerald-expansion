@@ -258,6 +258,7 @@ struct NPCFollower
 #define DRUID_LOADOUT_COUNT 20      // Druids whose loadouts are remembered (SaveBlock3)
 #define DRUID_FORM_COUNT 4          // Bear, Cat, Tree, Owlkin
 #define DRUID_FORM_SLOTS 3
+#define DRUID_SLOT_CLEARED 0xFFFF // slot deliberately emptied by the player (not auto-filled)
 #define DRUID_PP_FULL 0xFF          // sentinel: slot has not been used since the last heal
 
 struct DruidLoadout

@@ -375,3 +375,19 @@ SINGLE_BATTLE_TEST("Druid: shifting does not overwrite the base moves or their P
         EXPECT_EQ(GetMonData(&gParties[B_TRAINER_PLAYER][0], MON_DATA_PP2), GetMovePP(MOVE_VINE_WHIP));
     }
 }
+
+SINGLE_BATTLE_TEST("Druid: a cleared form slot stays empty instead of auto-filling")
+{
+    GIVEN {
+        PLAYER(SPECIES_DRUID_FERAL) { Speed(100); Moves(MOVE_CAT_FORM); }
+        OPPONENT(SPECIES_WOBBUFFET) { Speed(1); HP(10000); MaxHP(10000); }
+    } WHEN {
+        DruidTestForceSlot(2, 0, DRUID_SLOT_CLEARED);
+        TURN { MOVE(player, MOVE_CAT_FORM); }
+    } THEN {
+        EXPECT_EQ(player->moves[0], MOVE_RAKE); // slot 1 stayed cleared; Rake and Shred fill 2 and 3
+        EXPECT_EQ(player->moves[1], MOVE_SHRED);
+        EXPECT_EQ(player->moves[2], MOVE_UNSHIFT);
+        EXPECT_EQ(player->moves[3], MOVE_NONE);
+    }
+}

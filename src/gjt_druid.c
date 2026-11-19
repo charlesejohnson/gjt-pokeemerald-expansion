@@ -5,6 +5,14 @@
 #include "pokemon.h"
 #include "move.h"
 #include "constants/moves.h"
+#include "constants/script_menu.h"
+#include "constants/vars.h"
+#include "event_data.h"
+#include "script_menu.h"
+#include "string_util.h"
+#include "text.h"
+#include "malloc.h"
+#include "list_menu.h"
 
 EWRAM_DATA static struct DruidLoadout sAiLoadouts[MAX_BATTLERS_COUNT] = {0}; // opponents' loadouts are never saved
 
@@ -98,6 +106,11 @@ static struct DruidLoadout *FindEntry(u32 personality, bool32 create)
 }
 
 // Fills empty slots with the moves the mon has learned for each form, in level order, up to 3 per form.
+static bool32 SlotIsEmpty(u16 move)
+{
+    return move == MOVE_NONE || move == DRUID_SLOT_CLEARED;
+}
+
 static void AutoFill(struct Pokemon *mon, struct DruidLoadout *entry)
 {
     const struct LevelUpMove *learnset = GetSpeciesLevelUpLearnset(GetMonData(mon, MON_DATA_SPECIES));
@@ -121,7 +134,7 @@ static void AutoFill(struct Pokemon *mon, struct DruidLoadout *entry)
             continue;
         for (s = 0; s < DRUID_FORM_SLOTS; s++)
         {
-            if (slots[s] == MOVE_NONE)
+            if (slots[s] == MOVE_NONE) // cleared slots stay empty
             {
                 slots[s] = learnset[i].move;
                 entry->pp[form - 1][s] = DRUID_PP_FULL;
@@ -188,7 +201,7 @@ void DruidApplyFormMoves(enum BattlerId battler, u32 form)
         enum Move move = entry->moves[form - 1][s];
         u32 maxPp, pp;
 
-        if (move == MOVE_NONE)
+        if (SlotIsEmpty(move))
             continue;
         maxPp = GetMovePP(move);
         pp = entry->pp[form - 1][s];
@@ -231,7 +244,7 @@ void DruidSaveFormPP(enum BattlerId battler, u32 movePosition)
         return;
     for (u32 s = 0; s < DRUID_FORM_SLOTS; s++)
     {
-        if (entry->moves[form - 1][s] == MOVE_NONE)
+        if (SlotIsEmpty(entry->moves[form - 1][s]))
             continue;
         if (n == movePosition)
         {
@@ -240,4 +253,132 @@ void DruidSaveFormPP(enum BattlerId battler, u32 movePosition)
         }
         n++;
     }
+}
+
+// ---- Druid trainer NPC (field script helpers) ----
+// Variables: VAR_0x8004 party slot, 0x8005 form (1-4), 0x8006 slot (1-3), 0x8007 chosen move.
+
+static const u8 sText_BearForm[] = _("Bear Form");
+static const u8 sText_CatForm[] = _("Cat Form");
+static const u8 sText_TreeForm[] = _("Tree Form");
+static const u8 sText_OwlkinForm[] = _("Owlkin Form");
+static const u8 sText_Done[] = _("Done");
+static const u8 sText_Back[] = _("Back");
+static const u8 sText_Empty[] = _("-----");
+static const u8 sText_ClearSlot[] = _("Clear slot");
+static const u8 sText_Sep[] = _(": ");
+
+#define DRUID_MENU_CLEAR 4095
+
+static void PushMenuItem(const u8 *text, u32 id)
+{
+    struct ListMenuItem item;
+    u8 *buffer = Alloc(100); // freed by the menu when it closes
+
+    StringCopy(buffer, text);
+    item.name = buffer;
+    item.id = id;
+    MultichoiceDynamic_PushElement(item);
+}
+
+static struct Pokemon *GetChosenDruid(void)
+{
+    return &gParties[B_TRAINER_PLAYER][gSpecialVar_0x8004];
+}
+
+static bool32 IsDruidFormMove(enum Move move)
+{
+    return move == MOVE_BEAR_FORM || move == MOVE_CAT_FORM || move == MOVE_TREE_FORM
+        || move == MOVE_OWLKIN_FORM || move == MOVE_UNSHIFT;
+}
+
+void DruidTrainer_Begin(void)
+{
+    enum Species species = GetMonData(GetChosenDruid(), MON_DATA_SPECIES);
+
+    gSpecialVar_Result = (species >= SPECIES_DRUID && species <= SPECIES_DRUID_BOOMY);
+}
+
+void DruidTrainer_PushForms(void)
+{
+    enum Species species = GetMonData(GetChosenDruid(), MON_DATA_SPECIES);
+
+    PushMenuItem(sText_BearForm, 1);
+    PushMenuItem(sText_CatForm, 2);
+    if (species == SPECIES_DRUID_RESTORATION)
+        PushMenuItem(sText_TreeForm, 3);
+    if (species == SPECIES_DRUID_BOOMY)
+        PushMenuItem(sText_OwlkinForm, 4);
+    PushMenuItem(sText_Done, 0);
+}
+
+void DruidTrainer_PushSlots(void)
+{
+    struct Pokemon *mon = GetChosenDruid();
+    struct DruidLoadout *entry = FindEntry(GetMonData(mon, MON_DATA_PERSONALITY), TRUE);
+    u8 text[40];
+
+    AutoFill(mon, entry);
+    for (u32 s = 0; s < DRUID_FORM_SLOTS; s++)
+    {
+        u16 move = entry->moves[gSpecialVar_0x8005 - 1][s];
+        u8 *end = ConvertIntToDecimalStringN(text, s + 1, STR_CONV_MODE_LEFT_ALIGN, 1);
+
+        end = StringAppend(text, sText_Sep);
+        StringAppend(text, SlotIsEmpty(move) ? sText_Empty : GetMoveName(move));
+        PushMenuItem(text, s + 1);
+        (void)end;
+    }
+    PushMenuItem(sText_Back, 0);
+}
+
+// Known moves: everything on the Druid's learnset at or below its level, except the shift moves.
+void DruidTrainer_PushMoves(void)
+{
+    struct Pokemon *mon = GetChosenDruid();
+    const struct LevelUpMove *learnset = GetSpeciesLevelUpLearnset(GetMonData(mon, MON_DATA_SPECIES));
+    u32 level = GetMonData(mon, MON_DATA_LEVEL);
+    enum Move seen[64];
+    u32 count = 0;
+
+    for (u32 i = 0; learnset[i].move != LEVEL_UP_MOVE_END && count < ARRAY_COUNT(seen); i++)
+    {
+        enum Move move = learnset[i].move;
+        bool32 dup = FALSE;
+
+        if (learnset[i].level == 0 || learnset[i].level > level || IsDruidFormMove(move))
+            continue;
+        for (u32 j = 0; j < count; j++)
+        {
+            if (seen[j] == move)
+                dup = TRUE;
+        }
+        if (dup)
+            continue;
+        seen[count++] = move;
+        PushMenuItem(GetMoveName(move), move);
+    }
+    PushMenuItem(sText_ClearSlot, DRUID_MENU_CLEAR);
+}
+
+void DruidTrainer_Assign(void)
+{
+    struct Pokemon *mon = GetChosenDruid();
+    struct DruidLoadout *entry = FindEntry(GetMonData(mon, MON_DATA_PERSONALITY), TRUE);
+    u32 form = gSpecialVar_0x8005 - 1;
+    u32 slot = gSpecialVar_0x8006 - 1;
+    u16 move = gSpecialVar_0x8007;
+
+    if (move == DRUID_MENU_CLEAR)
+    {
+        entry->moves[form][slot] = DRUID_SLOT_CLEARED;
+        return;
+    }
+    for (u32 s = 0; s < DRUID_FORM_SLOTS; s++)
+    {
+        if (s != slot && entry->moves[form][s] == move) // no duplicates within a form
+            entry->moves[form][s] = DRUID_SLOT_CLEARED;
+    }
+    entry->moves[form][slot] = move;
+    entry->pp[form][slot] = DRUID_PP_FULL;
 }

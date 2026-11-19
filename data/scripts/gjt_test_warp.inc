@@ -17,6 +17,7 @@ GJT_TestWarp_EventScript_Guide::
 	dynmultipush GJT_TestWarp_Text_Supplies, 3
 	dynmultipush GJT_TestWarp_Text_WowMons, 4
 	dynmultipush GJT_TestWarp_Text_Badges, 5
+	dynmultipush GJT_TestWarp_Text_DruidTrainer, 12
 	dynmultipush GJT_TestWarp_Text_NeverMind, 6
 	dynmultistack 0, 0, FALSE, 7, 0, 0, DYN_MULTICHOICE_CB_NONE
 	closemessage
@@ -32,6 +33,7 @@ GJT_TestWarp_EventScript_Guide::
 	case 3, GJT_TestWarp_EventScript_Supplies
 	case 4, GJT_TestWarp_EventScript_WowMons
 	case 5, GJT_TestWarp_EventScript_Badges
+	case 12, GJT_DruidTrainer_EventScript_Start
 	release
 	end
 
@@ -303,6 +305,9 @@ GJT_TestWarp_Text_Lavaridge:
 
 GJT_TestWarp_Text_Mauville:
 	.string "MAUVILLE GYM$"
+
+GJT_TestWarp_Text_DruidTrainer:
+	.string "DRUID TRAINER$"
 
 GJT_TestWarp_Text_NeverMind:
 	.string "NEVER MIND$"

@@ -2,6 +2,10 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.36
+- Druid trainer menu (test guide in the bedroom, new "DRUID TRAINER" option). Pick a Druid, a form (Bear, Cat, plus Tree for Resto and Owlkin for Boomy), a slot, then a move. Known moves = the Druid's learnset up to its level, minus the shift moves. "Clear slot" leaves a slot empty and it stays empty (no auto-fill). Picking a move already in another slot of that form moves it.
+- Becomes a real NPC once a town is chosen.
+
 ## v0.1.35
 - Druid form loadouts. Shifting swaps the move list: each form has up to 3 assigned moves plus Unshift (always last). Base form keeps the Pokémon's own moves.
 - Bear and Cat moves (and Unshift) no longer take normal move slots. They are auto-assigned to their form as learned (first 3, in level order). A 4th one waits for the Druid trainer NPC (not built yet).

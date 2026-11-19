@@ -13,4 +13,11 @@ void DruidApplyFormMoves(enum BattlerId battler, u32 form);
 void DruidRestoreBaseMoves(enum BattlerId battler);
 void DruidSaveFormPP(enum BattlerId battler, u32 movePosition);
 
+// Druid trainer NPC (field script natives)
+void DruidTrainer_Begin(void);
+void DruidTrainer_PushForms(void);
+void DruidTrainer_PushSlots(void);
+void DruidTrainer_PushMoves(void);
+void DruidTrainer_Assign(void);
+
 #endif // GUARD_GJT_DRUID_H
