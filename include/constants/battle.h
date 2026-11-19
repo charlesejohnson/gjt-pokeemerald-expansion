@@ -232,6 +232,7 @@ enum VolatileFlags
     F(VOLATILE_WARRIOR_RAGE,                warriorRage,                   (u32, 10)) \
     F(VOLATILE_SWEEPING_STRIKES,            sweepingStrikes,               (u32, 5)) \
     F(VOLATILE_RIPTIDE,                     riptideTimer,                  (u32, 4)) \
+    F(VOLATILE_COMBO_POINTS,                comboPoints,                   (u32, 5)) \
     F(VOLATILE_DRUID_FORM,                  druidForm,                     (u32, 4)) \
     F(VOLATILE_PREDATORY_SWIFTNESS,         predatorySwiftness,            (u32, 1)) \
     F(VOLATILE_SURVIVAL_INSTINCTS_USED,     survivalInstinctsUsed,         (u32, 1)) \

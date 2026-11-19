@@ -5226,7 +5226,7 @@ static void Cmd_tryhealhalfhealth(void)
     if (cmd->battler == BS_ATTACKER)
         gBattlerTarget = gBattlerAttacker;
 
-    SetHealAmount(gBattlerTarget, GetNonDynamaxMaxHP(gBattlerTarget) / 2);
+    SetHealAmount(gBattlerTarget, GetNonDynamaxMaxHP(gBattlerTarget) * (gCurrentMove == MOVE_FRENZIED_REGEN ? 3 : 1) / (gCurrentMove == MOVE_FRENZIED_REGEN ? 5 : 2));
     if (gBattleMons[gBattlerTarget].hp == gBattleMons[gBattlerTarget].maxHP)
         gBattlescriptCurrInstr = failInstr;
     else

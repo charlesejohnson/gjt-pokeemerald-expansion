@@ -6299,6 +6299,9 @@ static inline u32 CalcMoveBasePower(struct DamageContext *ctx)
     case EFFECT_EXECUTE:
         basePower *= gBattleMons[battlerAtk].volatiles.warriorRage;
         break;
+    case EFFECT_FEROCIOUS_BITE:
+        basePower += 20 * gBattleMons[battlerAtk].volatiles.comboPoints;
+        break;
     case EFFECT_RUNIC_CONSUME:
         // Death Strike / Frost Strike: move power per Runic Power spent (max 3)
         basePower *= gBattleMons[battlerAtk].volatiles.stockpileCounter;
@@ -8128,6 +8131,9 @@ static bool32 IsCriticalHit(struct DamageContext *ctx)
 
     if (critChance != CRITICAL_HIT_BLOCKED && ctx->move == MOVE_LAVA_BURST && (gBattleMons[ctx->battlerDef].status1 & STATUS1_BURN))
         critChance = CRITICAL_HIT_ALWAYS; // GJT: Lava Burst vs burned targets
+
+    if (critChance != CRITICAL_HIT_BLOCKED && ctx->move == MOVE_SHRED && IsBattlersFirstTurn(ctx->battlerAtk))
+        critChance = CRITICAL_HIT_ALWAYS; // GJT: Shred crits on the first turn after switching in or shifting
 
     if (critChance == CRITICAL_HIT_BLOCKED)
         isCrit = FALSE;
@@ -11388,15 +11394,52 @@ u32 GetMoveRageCost(enum Move move)
     case MOVE_REND: return 2;
     case MOVE_WARRIOR_RAMPAGE: return 5;
     case MOVE_EXECUTE: return 1; // minimum needed; the move spends all rage
+    case MOVE_MAUL: return 3;
+    case MOVE_IRONFUR: return 4;
+    case MOVE_FRENZIED_REGEN: return 5;
     default: return 0;
     }
+}
+
+// GJT: Warriors always use rage; Druids use it while in Bear Form.
+bool32 BattlerUsesRage(enum BattlerId battler)
+{
+    return IsWarriorSpecies(gBattleMons[battler].species)
+        || (IsDruidSpecies(gBattleMons[battler].species) && gBattleMons[battler].volatiles.druidForm == 1);
+}
+
+// GJT: Druid moves that only work in one form (1 = Bear, 2 = Cat). 0 = no requirement.
+u32 GetMoveDruidFormRequirement(enum Move move)
+{
+    switch (move)
+    {
+    case MOVE_SHRED:
+    case MOVE_RAKE:
+    case MOVE_FEROCIOUS_BITE:
+        return 2;
+    case MOVE_MAUL:
+    case MOVE_MANGLE:
+    case MOVE_IRONFUR:
+    case MOVE_THRASH_DRUID:
+    case MOVE_FRENZIED_REGEN:
+        return 1;
+    default:
+        return 0;
+    }
+}
+
+void GainComboPoints(enum BattlerId battler, u32 amount)
+{
+    u32 points = gBattleMons[battler].volatiles.comboPoints + amount;
+
+    gBattleMons[battler].volatiles.comboPoints = (points > 5) ? 5 : points;
 }
 
 void GainWarriorRage(enum BattlerId battler, u32 amount)
 {
     u32 rage;
 
-    if (!IsWarriorSpecies(gBattleMons[battler].species))
+    if (!BattlerUsesRage(battler))
         return;
     rage = gBattleMons[battler].volatiles.warriorRage + amount;
     gBattleMons[battler].volatiles.warriorRage = (rage > 10) ? 10 : rage;

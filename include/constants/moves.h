@@ -969,8 +969,16 @@ enum __attribute__((packed)) Move
     MOVE_TREE_FORM = 908,
     MOVE_OWLKIN_FORM = 909,
     MOVE_UNSHIFT = 910,
+    MOVE_SHRED = 911,
+    MOVE_RAKE = 912,
+    MOVE_FEROCIOUS_BITE = 913,
+    MOVE_MAUL = 914,
+    MOVE_MANGLE = 915,
+    MOVE_IRONFUR = 916,
+    MOVE_THRASH_DRUID = 917,
+    MOVE_FRENZIED_REGEN = 918,
 
-    MOVES_COUNT = MOVE_UNSHIFT + 1, // includes custom moves (was MOVES_COUNT_GEN9)
+    MOVES_COUNT = MOVE_FRENZIED_REGEN + 1, // includes custom moves (was MOVES_COUNT_GEN9)
 
     // Z Moves
     FIRST_Z_MOVE = MOVES_COUNT,

@@ -329,6 +329,7 @@ extern const u8 BattleScript_MagmaTotemHurt[];
 extern const u8 BattleScript_HealingStreamHeal[];
 extern const u8 BattleScript_RiptideHeal[];
 extern const u8 BattleScript_WarriorRageReport[];
+extern const u8 BattleScript_ComboPointsReport[];
 extern const u8 BattleScript_PowderMoveNoEffect[];
 extern const u8 BattleScript_GrassyTerrainHeals[];
 extern const u8 BattleScript_SpikyShieldEffect[];

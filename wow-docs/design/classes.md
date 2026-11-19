@@ -183,3 +183,11 @@ Species: Warrior (Fighting) -> Arms / Fury / Protection (all Fighting/Steel) via
 - Totems live in `SideTimer` (stoneskin/searing/windfuryTotem/healingStream/earthbind/magma + magmaCaster), planted by `BS_TryPlantTotem`. Effects: stoneskin in the damage calc, earthbind in `GetBattlerTotalSpeedStat` (x2/3), windfury in the repeat roll, searing/healing stream/magma damage in `FIRST_EVENT_BLOCK_TOTEMS`, countdown in `SECOND_EVENT_BLOCK_TOTEMS` (only the first expiry per side per turn prints a message). Magma Totem uses the caster's slot at tick time; 30% burn (`BS_TryMagmaBurn`).
 - Riptide: `volatiles.riptideTimer`, `ENDTURN_RIPTIDE`. Lava Burst crit hook is in `IsCriticalHit`. Chain Lightning is TARGET_SELECTED; `MOVEEND_CHAIN_LIGHTNING` arcs to the target's partner for half damage (skips Volt Absorb / Lightning Rod / Motor Drive holders).
 - Not yet: Maelstrom (declined for now), AI awareness of totems, tests are in `test/battle/ability/shaman.c`.
+
+### Druid combo points, bear rage and moves (v0.1.33)
+- **Combo points (Feral):** `volatiles.comboPoints` (0-5), resets on switch-out, shown as a message after each change. Shred (Normal 40, +1, +2 on crit, always crits while `IsBattlersFirstTurn`, i.e. the turn after switching in or shifting), Rake (Grass 35, 100% poison, +1), Ferocious Bite (`EFFECT_FEROCIOUS_BITE`, Normal 20 +20 per point, spends all). All Cat Form only.
+- **Bear rage (Guardian etc.):** `BattlerUsesRage()` = Warrior species, or a Druid in Bear Form. Shares `volatiles.warriorRage`. Maul (Rock 70, cost 3), Mangle (Rock 45, +2 rage), Ironfur (Grass, +2 Def, cost 4), Thrash (`MOVE_THRASH_DRUID`, Grass 50, both foes, +2 rage, 35% poison), Frenzied Regen (heals 60%, cost 5). All Bear Form only.
+- Form gating lives in `GetMoveDruidFormRequirement()` (1 Bear, 2 Cat) and is checked in `CancelerMoveFailure`.
+- **Survival Instincts** is now once per battle (`PartyState.survivalInstinctsUsed`).
+- Maul was raised from 60 to 70 and Mangle lowered from 55 to 45 after review: Maul is the rage spender, Mangle the builder.
+- Not yet: Boomy (Wrath, Starfire, Starsurge, Solar Beam, Celestial Alignment) and Resto (Rejuvenation, Swiftmend, Wild Growth, Tranquility) moves, Moonfire, Druid trainer NPC.

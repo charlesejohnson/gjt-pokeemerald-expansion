@@ -500,6 +500,7 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_GJT_FORM_SHIFT]                       = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} shifted\ninto {B_BUFF1}!"),
     [STRINGID_GJT_UNSHIFT]                          = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} returned to\nits base form!"),
     [STRINGID_GJT_BLOOM]                            = COMPOUND_STRING("A bloom spreads around\n{B_EFF_NAME_WITH_PREFIX}!"),
+    [STRINGID_GJT_COMBO]                            = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX}'s combo points: {B_BUFF1}/5"),
     [STRINGID_GJT_BLOOM_FADED]                      = COMPOUND_STRING("The bloom faded!"),
     [STRINGID_GJT_SURVIVAL]                         = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX}'s survival instincts\nkicked in!"),
     [STRINGID_GJT_VICTORY_RUSH]                     = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} caught its breath after the kill!"),

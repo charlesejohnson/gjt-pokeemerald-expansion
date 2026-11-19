@@ -325,6 +325,9 @@ s32 ModifyDruidHealAmount(s32 amount);
 bool32 IsWarriorSpecies(enum Species species);
 u32 GetMoveRageCost(enum Move move);
 void GainWarriorRage(enum BattlerId battler, u32 amount);
+bool32 BattlerUsesRage(enum BattlerId battler);
+u32 GetMoveDruidFormRequirement(enum Move move);
+void GainComboPoints(enum BattlerId battler, u32 amount);
 
 #endif // GUARD_BATTLE_UTIL_H
 u32 GetManaBarrierRecoil(u32 battler, u32 move);

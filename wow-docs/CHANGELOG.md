@@ -2,6 +2,13 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.33
+- Feral combo points (cap 5, shown after each change). Shred (Normal, 40 power, +1 point, +2 on a crit, always crits the first turn after switching in or shifting form), Rake (Grass, 35 power, always poisons, +1), Ferocious Bite (Normal, 20 power +20 per point, spends all). All need Cat Form.
+- Bear rage: a Druid in Bear Form builds rage exactly like the Warrior (+1 hitting, +1 being hit, cap 10). Maul (Rock, 70, costs 3), Mangle (Rock, 45, +2 rage), Ironfur (+2 Def, costs 4), Thrash (Grass, 50, hits both foes, +2 rage, 35% poison), Frenzied Regen (heals 60%, costs 5). All need Bear Form.
+- Survival Instincts is now once per battle, not per switch-in.
+- Learnsets: Feral Rake 16, Shred 20, Ferocious Bite 24. Guardian Maul 18, Thrash 22, Ironfur 26, Mangle 28, Frenzied Regen 34.
+- Still to come: Boomy and Resto moves, Moonfire, Wrath.
+
 ## v0.1.32
 - Guardian's ability is now Survival Instincts (replaces Thick Hide): the first time its HP falls to 30% or less, it heals 60% for free (once per switch-in).
 

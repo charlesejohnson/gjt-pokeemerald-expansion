@@ -6579,6 +6579,11 @@ BattleScript_WarriorRageReport::
 	waitmessage B_WAIT_TIME_MED
 	return
 
+BattleScript_ComboPointsReport::
+	printstring STRINGID_GJT_COMBO
+	waitmessage B_WAIT_TIME_MED
+	return
+
 BattleScript_EffectSweepingStrikes::
 	attackcanceler
 	callnative BS_TrySetSweepingStrikes

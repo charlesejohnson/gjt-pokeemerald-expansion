@@ -123,3 +123,100 @@ SINGLE_BATTLE_TEST("Druid: Eclipse boosts Grass moves on alternate turns", s16 d
         EXPECT_MUL_EQ(results[1].damage, Q_4_12(1.3), results[0].damage);
     }
 }
+
+SINGLE_BATTLE_TEST("Druid: Shred crits on the first turn after shifting and builds combo points")
+{
+    GIVEN {
+        PLAYER(SPECIES_DRUID_FERAL) { Speed(100); }
+        OPPONENT(SPECIES_WOBBUFFET) { Speed(1); HP(10000); MaxHP(10000); }
+    } WHEN {
+        TURN { MOVE(player, MOVE_CAT_FORM); }
+        TURN { MOVE(player, MOVE_SHRED); }
+    } SCENE {
+        MESSAGE("A critical hit!");
+        MESSAGE("Feral Druid's combo points: 2/5");
+    } THEN {
+        EXPECT_EQ((u32)player->volatiles.comboPoints, 2);
+    }
+}
+
+SINGLE_BATTLE_TEST("Druid: Shred fails outside Cat Form")
+{
+    GIVEN {
+        PLAYER(SPECIES_DRUID_FERAL) { Speed(100); }
+        OPPONENT(SPECIES_WOBBUFFET) { Speed(1); HP(10000); MaxHP(10000); }
+    } WHEN {
+        TURN { MOVE(player, MOVE_SHRED); }
+    } SCENE {
+        MESSAGE("But it failed!");
+    }
+}
+
+SINGLE_BATTLE_TEST("Druid: Rake poisons and Ferocious Bite spends all combo points")
+{
+    GIVEN {
+        PLAYER(SPECIES_DRUID_FERAL) { Speed(100); }
+        OPPONENT(SPECIES_WOBBUFFET) { Speed(1); HP(10000); MaxHP(10000); }
+    } WHEN {
+        TURN { MOVE(player, MOVE_CAT_FORM); }
+        TURN { MOVE(player, MOVE_RAKE); }
+        TURN { MOVE(player, MOVE_RAKE); }
+        TURN { MOVE(player, MOVE_FEROCIOUS_BITE); }
+    } THEN {
+        EXPECT(opponent->status1 & STATUS1_POISON);
+        EXPECT_EQ((u32)player->volatiles.comboPoints, 0);
+    }
+}
+
+SINGLE_BATTLE_TEST("Druid: Ferocious Bite hits harder per combo point", s16 damage)
+{
+    u32 builds;
+    PARAMETRIZE { builds = 0; }
+    PARAMETRIZE { builds = 2; }
+    GIVEN {
+        PLAYER(SPECIES_DRUID_FERAL) { Speed(100); }
+        OPPONENT(SPECIES_WOBBUFFET) { Speed(1); HP(10000); MaxHP(10000); }
+    } WHEN {
+        TURN { MOVE(player, MOVE_CAT_FORM); }
+        if (builds >= 1)
+            TURN { MOVE(player, MOVE_RAKE); }
+        if (builds >= 2)
+            TURN { MOVE(player, MOVE_RAKE); }
+        TURN { MOVE(player, MOVE_FEROCIOUS_BITE, criticalHit: FALSE, WITH_RNG(RNG_DAMAGE_MODIFIER, 0)); }
+    } SCENE {
+        MESSAGE("Feral Druid used Ferocious Bite!");
+        HP_BAR(opponent, captureDamage: &results[i].damage);
+    } FINALLY {
+        EXPECT_MUL_EQ(results[0].damage, Q_4_12(3.0), results[1].damage);
+    }
+}
+
+SINGLE_BATTLE_TEST("Druid: Bear Form builds rage and Maul spends 3")
+{
+    GIVEN {
+        PLAYER(SPECIES_DRUID_GUARDIAN) { Speed(100); }
+        OPPONENT(SPECIES_WOBBUFFET) { Speed(1); HP(10000); MaxHP(10000); }
+    } WHEN {
+        TURN { MOVE(player, MOVE_BEAR_FORM); }
+        TURN { MOVE(player, MOVE_MANGLE); }
+        TURN { MOVE(player, MOVE_MAUL); }
+    } THEN {
+        EXPECT_EQ((u32)player->volatiles.warriorRage, 1); // Mangle +3, Maul +1 then -3
+    }
+}
+
+SINGLE_BATTLE_TEST("Druid: Frenzied Regeneration heals 60% and costs 5 rage")
+{
+    GIVEN {
+        PLAYER(SPECIES_DRUID_GUARDIAN) { Speed(100); HP(10); MaxHP(100); }
+        OPPONENT(SPECIES_WOBBUFFET) { Speed(1); HP(10000); MaxHP(10000); }
+    } WHEN {
+        TURN { MOVE(player, MOVE_BEAR_FORM); }
+        TURN { MOVE(player, MOVE_MANGLE); }
+        TURN { MOVE(player, MOVE_MANGLE); }
+        TURN { MOVE(player, MOVE_FRENZIED_REGEN); }
+    } THEN {
+        EXPECT_EQ((u32)player->volatiles.warriorRage, 1); // 3 + 3 - 5
+        EXPECT_GE(player->hp, 70);
+    }
+}

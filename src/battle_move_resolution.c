@@ -1188,6 +1188,11 @@ static enum CancelerResult CancelerMoveFailure(struct BattleCalcValues *cv)
     if (GetMoveRageCost(cv->move) > gBattleMons[cv->battlerAtk].volatiles.warriorRage)
         battleScript = BattleScript_ButItFailed;
 
+    // GJT: Druid form-gated moves
+    if (GetMoveDruidFormRequirement(cv->move) != 0
+     && GetMoveDruidFormRequirement(cv->move) != gBattleMons[cv->battlerAtk].volatiles.druidForm)
+        battleScript = BattleScript_ButItFailed;
+
     switch (cv->moveEffect)
     {
     case EFFECT_FLING:
@@ -3497,6 +3502,15 @@ static enum MoveEndResult MoveEndWarriorRage(struct BattleCalcValues *cv)
     if (cv->move == MOVE_WARRIOR_CHARGE && !gBattleStruct->unableToUseMove)
         GainWarriorRage(cv->battlerAtk, 5);
 
+    // GJT: Bear Form builders (Mangle, Thrash) and Cat Form builders (Shred, Rake)
+    if (!gBattleStruct->unableToUseMove && IsBattlerTurnDamaged(cv->battlerDef, EXCLUDING_SUBSTITUTES))
+    {
+        if (cv->move == MOVE_MANGLE || cv->move == MOVE_THRASH_DRUID)
+            GainWarriorRage(cv->battlerAtk, 2);
+        if (cv->move == MOVE_SHRED || cv->move == MOVE_RAKE)
+            GainComboPoints(cv->battlerAtk, (cv->move == MOVE_SHRED && gSpecialStatuses[cv->battlerDef].criticalHit) ? 2 : 1);
+    }
+
     gBattleScripting.moveendState++;
     return MOVEEND_RESULT_CONTINUE;
 }
@@ -3538,12 +3552,12 @@ static enum MoveEndResult MoveEndChainLightning(struct BattleCalcValues *cv)
     // GJT: Survival Instincts - first time HP falls to 30% or less, heal 60% for free (Frenzied Regeneration).
     if (cv->abilities[cv->battlerDef] == ABILITY_SURVIVAL_INSTINCTS
      && IsBattlerAlive(cv->battlerDef)
-     && !gBattleMons[cv->battlerDef].volatiles.survivalInstinctsUsed
+     && !GetBattlerPartyState(cv->battlerDef)->survivalInstinctsUsed
      && gBattleMons[cv->battlerDef].hp * 10 <= gBattleMons[cv->battlerDef].maxHP * 3
      && IsBattlerTurnDamaged(cv->battlerDef, EXCLUDING_SUBSTITUTES)
      && !gBattleMons[cv->battlerDef].volatiles.healBlockTimer)
     {
-        gBattleMons[cv->battlerDef].volatiles.survivalInstinctsUsed = TRUE;
+        GetBattlerPartyState(cv->battlerDef)->survivalInstinctsUsed = TRUE;
         gBattleScripting.battler = cv->battlerDef;
         SetHealAmount(cv->battlerDef, GetNonDynamaxMaxHP(cv->battlerDef) * 3 / 5);
         BattleScriptCall(BattleScript_SurvivalInstincts);
@@ -3606,7 +3620,7 @@ static enum MoveEndResult MoveEndWarriorRageReport(struct BattleCalcValues *cv)
         enum BattlerId battler = battlers[i];
         u32 rage = gBattleMons[battler].volatiles.warriorRage;
 
-        if (!IsWarriorSpecies(gBattleMons[battler].species) || !IsBattlerAlive(battler))
+        if (!BattlerUsesRage(battler) || !IsBattlerAlive(battler))
         {
             sReportedRage[battler] = rage;
             continue;
@@ -3621,6 +3635,30 @@ static enum MoveEndResult MoveEndWarriorRageReport(struct BattleCalcValues *cv)
         PREPARE_BYTE_NUMBER_BUFFER(gBattleTextBuff1, 2, rage);
         BattleScriptCall(BattleScript_WarriorRageReport);
         return MOVEEND_RESULT_RUN_SCRIPT; // stay in this state to report the next battler
+    }
+
+    // GJT: Feral combo points
+    {
+        static u8 sReportedCombo[MAX_BATTLERS_COUNT];
+        enum BattlerId battler = cv->battlerAtk;
+        u32 points = gBattleMons[battler].volatiles.comboPoints;
+
+        if (!IsBattlerAlive(battler) || sReportedCombo[battler] == points)
+        {
+            sReportedCombo[battler] = points;
+        }
+        else
+        {
+            sReportedCombo[battler] = points;
+            if (points != 0)
+            {
+                gBattleScripting.battler = battler;
+                PREPARE_BYTE_NUMBER_BUFFER(gBattleTextBuff1, 1, points);
+                BattleScriptCall(BattleScript_ComboPointsReport);
+                gBattleScripting.moveendState++;
+                return MOVEEND_RESULT_RUN_SCRIPT;
+            }
+        }
     }
 
     gBattleScripting.moveendState++;
@@ -4344,6 +4382,9 @@ static enum MoveEndResult MoveEndMoveBlockRecoil(struct BattleCalcValues *cv)
             cost = 0;
         gBattleMons[cv->battlerAtk].volatiles.warriorRage -= cost;
     }
+
+    if (cv->moveEffect == EFFECT_FEROCIOUS_BITE && !gBattleStruct->unableToUseMove)
+        gBattleMons[cv->battlerAtk].volatiles.comboPoints = 0;
 
     switch (cv->moveEffect)
     {
