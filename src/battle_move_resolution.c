@@ -3613,7 +3613,7 @@ static enum MoveEndResult MoveEndChainLightning(struct BattleCalcValues *cv)
 // GJT: tell the player when a Warrior's rage changed.
 static enum MoveEndResult MoveEndWarriorRageReport(struct BattleCalcValues *cv)
 {
-    static u8 sReportedRage[MAX_BATTLERS_COUNT];
+    EWRAM_DATA static u8 sReportedRage[MAX_BATTLERS_COUNT] = {0};
     enum BattlerId battlers[2] = { cv->battlerAtk, cv->battlerDef };
 
     for (u32 i = 0; i < 2; i++)
@@ -3640,7 +3640,7 @@ static enum MoveEndResult MoveEndWarriorRageReport(struct BattleCalcValues *cv)
 
     // GJT: Feral combo points
     {
-        static u8 sReportedCombo[MAX_BATTLERS_COUNT];
+        EWRAM_DATA static u8 sReportedCombo[MAX_BATTLERS_COUNT] = {0};
         enum BattlerId battler = cv->battlerAtk;
         u32 points = gBattleMons[battler].volatiles.comboPoints;
 

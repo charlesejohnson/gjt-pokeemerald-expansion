@@ -11985,7 +11985,7 @@ void BS_RemoveCelestialAlignment(enum BattlerId battler)
 }
 
 // GJT: Wild Growth (user + ally 25%) and Tranquility (whole team 35%, +1 Sp. Def).
-static u32 sTeamHealStep;
+EWRAM_DATA static u32 sTeamHealStep = 0;
 
 void BS_TryTeamHeal(void)
 {

@@ -197,3 +197,10 @@ Species: Warrior (Fighting) -> Arms / Fury / Protection (all Fighting/Steel) via
 - Rejuvenation: `volatiles.rejuvTimer` (3), ticks in `ENDTURN_REJUVENATION`. Swiftmend clears it. Wild Growth / Tranquility share `BS_TryTeamHeal` + `BS_HealNextAlly` (loop in the battle script); Tranquility heals the bench directly in party data.
 - Solar Beam skips its charge turn when `druidForm == 4` (Owlkin), in `CancelerCharging`.
 - Open design question: per-form move loadouts (Druid has 4 move slots but many form moves). Proposal pending: store assigned moves per form, swap them on shift, edit via the Druid trainer NPC.
+
+### Druid form loadouts (design, 2026-11-19)
+- Every non-base form has 4 slots: **Unshift (fixed) + 3 assignable**. Base form uses the mon's own 4 moves.
+- Learning a form-gated move auto-fills the first empty slot of its form. Past 3, it is learned but unassigned and needs the Druid trainer NPC (scroll menu). Moves usable in all forms (Moonfire, Wrath, Vine Whip...) can be assigned to any form.
+- Shift moves (Bear, Cat, Tree, Owlkin Form) and Unshift stop being learnset moves and are granted automatically.
+- Storage: SaveBlock3, keyed by personality, ~22 B per Druid. See [memory-budget.md](memory-budget.md).
+- Open: PP for swapped-in moves (proposal: full PP each battle, base moves keep persistent PP).
