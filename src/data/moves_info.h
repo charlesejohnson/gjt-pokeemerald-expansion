@@ -25643,4 +25643,234 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .validApprenticeMove = TRUE,
     },
 
+    [MOVE_MOONFIRE] =
+    {
+        .name = COMPOUND_STRING("Moonfire"),
+        .description = COMPOUND_STRING(
+            "Scorches with moonlight.\n"
+            "Always burns."),
+        .effect = EFFECT_HIT,
+        .power = 40,
+        .type = TYPE_FAIRY,
+        .accuracy = 100,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_BURN,
+            .chance = 100,
+        }),
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_BEAUTIFUL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Moonblast,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_WRATH] =
+    {
+        .name = COMPOUND_STRING("Wrath"),
+        .description = COMPOUND_STRING(
+            "A bolt of nature's anger."),
+        .effect = EFFECT_HIT,
+        .power = 45,
+        .type = TYPE_GRASS,
+        .accuracy = 100,
+        .pp = 25,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_BEAUTIFUL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_MagicalLeaf,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_STARFIRE] =
+    {
+        .name = COMPOUND_STRING("Starfire"),
+        .description = COMPOUND_STRING(
+            "A burning star. May lower\n"
+            "Sp. Def."),
+        .effect = EFFECT_HIT,
+        .power = 80,
+        .type = TYPE_GRASS,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_STAT_MINUS,
+            .spDef = 1,
+            .chance = 20,
+        }),
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_BEAUTIFUL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Moonblast,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_STARSURGE] =
+    {
+        .name = COMPOUND_STRING("Starsurge"),
+        .description = COMPOUND_STRING(
+            "A surge of starlight. May\n"
+            "raise the user's Sp. Atk."),
+        .effect = EFFECT_HIT,
+        .power = 70,
+        .type = TYPE_FAIRY,
+        .accuracy = 100,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_STAT_PLUS,
+            .spAtk = 1,
+            .self = TRUE,
+            .chance = 20,
+        }),
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_BEAUTIFUL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Moonblast,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_CELESTIAL_ALIGNMENT] =
+    {
+        .name = COMPOUND_STRING("Celest. Align"),
+        .description = COMPOUND_STRING(
+            "Boomy only. +2 Sp. Atk and\n"
+            "+1 crit for 2 turns."),
+        .effect = EFFECT_CELESTIAL_ALIGNMENT,
+        .power = 0,
+        .type = TYPE_FAIRY,
+        .accuracy = 0,
+        .pp = 1,
+        .target = TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_BEAUTIFUL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_CosmicPower,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_REJUVENATION] =
+    {
+        .name = COMPOUND_STRING("Rejuvenation"),
+        .description = COMPOUND_STRING(
+            "Heals the user or an ally\n"
+            "1/8 HP for 3 turns."),
+        .effect = EFFECT_REJUVENATION,
+        .power = 0,
+        .type = TYPE_GRASS,
+        .accuracy = 0,
+        .pp = 10,
+        .target = TARGET_USER_OR_ALLY,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .healingMove = TRUE,
+        .ignoresProtect = TRUE,
+        .ignoresSubstitute = TRUE,
+        .metronomeBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_BEAUTIFUL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_HealPulse,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_SWIFTMEND] =
+    {
+        .name = COMPOUND_STRING("Swiftmend"),
+        .description = COMPOUND_STRING(
+            "Consumes Rejuvenation to heal\n"
+            "50% of max HP."),
+        .effect = EFFECT_SWIFTMEND,
+        .power = 0,
+        .type = TYPE_GRASS,
+        .accuracy = 0,
+        .pp = 5,
+        .target = TARGET_USER_OR_ALLY,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .healingMove = TRUE,
+        .ignoresProtect = TRUE,
+        .ignoresSubstitute = TRUE,
+        .metronomeBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_BEAUTIFUL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_HealPulse,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_WILD_GROWTH] =
+    {
+        .name = COMPOUND_STRING("Wild Growth"),
+        .description = COMPOUND_STRING(
+            "Heals the user and its ally\n"
+            "for 25% of max HP."),
+        .effect = EFFECT_WILD_GROWTH,
+        .power = 0,
+        .type = TYPE_GRASS,
+        .accuracy = 0,
+        .pp = 5,
+        .target = TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .healingMove = TRUE,
+        .ignoresProtect = TRUE,
+        .ignoresSubstitute = TRUE,
+        .metronomeBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_BEAUTIFUL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Aromatherapy,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_TRANQUILITY] =
+    {
+        .name = COMPOUND_STRING("Tranquility"),
+        .description = COMPOUND_STRING(
+            "Heals the whole team 35%.\n"
+            "Raises user's Sp. Def."),
+        .effect = EFFECT_TRANQUILITY,
+        .power = 0,
+        .type = TYPE_GRASS,
+        .accuracy = 0,
+        .pp = 1,
+        .target = TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .healingMove = TRUE,
+        .ignoresProtect = TRUE,
+        .ignoresSubstitute = TRUE,
+        .metronomeBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_BEAUTIFUL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Aromatherapy,
+        .validApprenticeMove = TRUE,
+    },
+
 };

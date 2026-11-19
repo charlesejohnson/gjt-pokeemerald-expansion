@@ -11929,6 +11929,130 @@ void BS_TryRiptide(void)
     gBattlescriptCurrInstr = cmd->nextInstr;
 }
 
+// GJT: Rejuvenation - no upfront heal, mends 1/8 at the end of each of the next 3 turns.
+void BS_TryRejuvenation(void)
+{
+    NATIVE_ARGS(const u8 *failInstr);
+    if (gBattleMons[gBattlerTarget].volatiles.rejuvTimer || !IsBattlerAlive(gBattlerTarget))
+    {
+        gBattlescriptCurrInstr = cmd->failInstr;
+        return;
+    }
+    gBattleMons[gBattlerTarget].volatiles.rejuvTimer = 3;
+    gBattlescriptCurrInstr = cmd->nextInstr;
+}
+
+// GJT: Swiftmend consumes Rejuvenation for a 50% heal.
+void BS_TrySwiftmend(void)
+{
+    NATIVE_ARGS(const u8 *failInstr);
+    if (!gBattleMons[gBattlerTarget].volatiles.rejuvTimer || IsBattlerAtMaxHp(gBattlerTarget))
+    {
+        gBattlescriptCurrInstr = cmd->failInstr;
+        return;
+    }
+    gBattleMons[gBattlerTarget].volatiles.rejuvTimer = 0;
+    SetHealAmount(gBattlerTarget, GetNonDynamaxMaxHP(gBattlerTarget) / 2);
+    gBattlescriptCurrInstr = cmd->nextInstr;
+}
+
+// GJT: Celestial Alignment (Boomy only): +2 Sp. Atk and +1 crit stage for 2 turns.
+void BS_CelestialAlignment(void)
+{
+    NATIVE_ARGS(const u8 *failInstr);
+    struct BattlePokemon *mon = &gBattleMons[gBattlerAttacker];
+    u32 spatk;
+
+    if (mon->species != SPECIES_DRUID_BOOMY || mon->volatiles.celestialTimer)
+    {
+        gBattlescriptCurrInstr = cmd->failInstr;
+        return;
+    }
+    spatk = mon->statStages[STAT_SPATK] + 2;
+    mon->statStages[STAT_SPATK] = (spatk > MAX_STAT_STAGE) ? MAX_STAT_STAGE : spatk;
+    mon->volatiles.bonusCritStages++;
+    mon->volatiles.celestialTimer = 2;
+    gBattlescriptCurrInstr = cmd->nextInstr;
+}
+
+void BS_RemoveCelestialAlignment(enum BattlerId battler)
+{
+    struct BattlePokemon *mon = &gBattleMons[battler];
+
+    mon->statStages[STAT_SPATK] = (mon->statStages[STAT_SPATK] < 2) ? MIN_STAT_STAGE : mon->statStages[STAT_SPATK] - 2;
+    if (mon->volatiles.bonusCritStages)
+        mon->volatiles.bonusCritStages--;
+}
+
+// GJT: Wild Growth (user + ally 25%) and Tranquility (whole team 35%, +1 Sp. Def).
+static u32 sTeamHealStep;
+
+void BS_TryTeamHeal(void)
+{
+    NATIVE_ARGS(const u8 *failInstr);
+    bool32 any = FALSE;
+    enum BattlerId partner = GetPartnerBattler(gBattlerAttacker);
+    u32 pct = (gCurrentMove == MOVE_TRANQUILITY) ? 35 : 25;
+
+    sTeamHealStep = 0;
+    if (!IsBattlerAtMaxHp(gBattlerAttacker))
+        any = TRUE;
+    if (IsDoubleBattle() && IsBattlerAlive(partner) && !IsBattlerAtMaxHp(partner))
+        any = TRUE;
+
+    if (gCurrentMove == MOVE_TRANQUILITY)
+    {
+        struct Pokemon *party = GetBattlerParty(gBattlerAttacker);
+
+        for (u32 i = 0; i < PARTY_SIZE; i++)
+        {
+            u32 hp, maxHp;
+
+            if (GetMonData(&party[i], MON_DATA_SPECIES_OR_EGG) == SPECIES_NONE
+             || GetMonData(&party[i], MON_DATA_IS_EGG))
+                continue;
+            if (i == gBattlerPartyIndexes[gBattlerAttacker]
+             || (IsDoubleBattle() && IsBattlerAlive(partner) && i == gBattlerPartyIndexes[partner]))
+                continue;
+            hp = GetMonData(&party[i], MON_DATA_HP);
+            maxHp = GetMonData(&party[i], MON_DATA_MAX_HP);
+            if (hp == 0 || hp >= maxHp)
+                continue;
+            any = TRUE;
+            hp += maxHp * pct / 100;
+            if (hp > maxHp)
+                hp = maxHp;
+            SetMonData(&party[i], MON_DATA_HP, &hp);
+        }
+        if (any && gBattleMons[gBattlerAttacker].statStages[STAT_SPDEF] < MAX_STAT_STAGE)
+            gBattleMons[gBattlerAttacker].statStages[STAT_SPDEF]++;
+    }
+
+    gBattlescriptCurrInstr = any ? cmd->nextInstr : cmd->failInstr;
+}
+
+void BS_HealNextAlly(void)
+{
+    NATIVE_ARGS(const u8 *doneInstr);
+    u32 pct = (gCurrentMove == MOVE_TRANQUILITY) ? 35 : 25;
+
+    while (sTeamHealStep < 2)
+    {
+        enum BattlerId battler = (sTeamHealStep == 0) ? gBattlerAttacker : GetPartnerBattler(gBattlerAttacker);
+        bool32 valid = (sTeamHealStep == 0) || (IsDoubleBattle() && IsBattlerAlive(battler));
+
+        sTeamHealStep++;
+        if (valid && !IsBattlerAtMaxHp(battler) && !gBattleMons[battler].volatiles.healBlockTimer)
+        {
+            gBattlerTarget = battler;
+            SetHealAmount(battler, GetNonDynamaxMaxHP(battler) * pct / 100);
+            gBattlescriptCurrInstr = cmd->nextInstr;
+            return;
+        }
+    }
+    gBattlescriptCurrInstr = cmd->doneInstr;
+}
+
 void BS_TrySetSweepingStrikes(void)
 {
     NATIVE_ARGS(const u8 *failInstr);

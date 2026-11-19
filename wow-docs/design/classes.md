@@ -191,3 +191,9 @@ Species: Warrior (Fighting) -> Arms / Fury / Protection (all Fighting/Steel) via
 - **Survival Instincts** is now once per battle (`PartyState.survivalInstinctsUsed`).
 - Maul was raised from 60 to 70 and Mangle lowered from 55 to 45 after review: Maul is the rage spender, Mangle the builder.
 - Not yet: Boomy (Wrath, Starfire, Starsurge, Solar Beam, Celestial Alignment) and Resto (Rejuvenation, Swiftmend, Wild Growth, Tranquility) moves, Moonfire, Druid trainer NPC.
+
+### Druid Boomy / Resto moves (v0.1.34)
+- Celestial Alignment: `volatiles.celestialTimer` (2) + `bonusCritStages`, removed by `ENDTURN_CELESTIAL`. Species check (Boomy), not form check.
+- Rejuvenation: `volatiles.rejuvTimer` (3), ticks in `ENDTURN_REJUVENATION`. Swiftmend clears it. Wild Growth / Tranquility share `BS_TryTeamHeal` + `BS_HealNextAlly` (loop in the battle script); Tranquility heals the bench directly in party data.
+- Solar Beam skips its charge turn when `druidForm == 4` (Owlkin), in `CancelerCharging`.
+- Open design question: per-form move loadouts (Druid has 4 move slots but many form moves). Proposal pending: store assigned moves per form, swap them on shift, edit via the Druid trainer NPC.

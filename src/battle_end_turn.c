@@ -513,6 +513,47 @@ static bool32 HandleEndTurnRiptide(enum BattlerId battler)
     return effect;
 }
 
+static bool32 HandleEndTurnRejuvenation(enum BattlerId battler)
+{
+    bool32 effect = FALSE;
+
+    gBattleStruct->eventState.endTurnBattler++;
+
+    if (gBattleMons[battler].volatiles.rejuvTimer && IsBattlerPresent(battler))
+    {
+        gBattleMons[battler].volatiles.rejuvTimer--;
+        if (!gBattleMons[battler].volatiles.healBlockTimer && !IsBattlerAtMaxHp(battler))
+        {
+            SetHealAmount(battler, GetNonDynamaxMaxHP(battler) / 8);
+            BattleScriptCall(BattleScript_RejuvenationHeal);
+            effect = TRUE;
+        }
+    }
+
+    return effect;
+}
+
+static bool32 HandleEndTurnCelestial(enum BattlerId battler)
+{
+    bool32 effect = FALSE;
+
+    gBattleStruct->eventState.endTurnBattler++;
+
+    if (gBattleMons[battler].volatiles.celestialTimer && IsBattlerPresent(battler))
+    {
+        gBattleMons[battler].volatiles.celestialTimer--;
+        if (gBattleMons[battler].volatiles.celestialTimer == 0)
+        {
+            BS_RemoveCelestialAlignment(battler);
+            gBattlerAttacker = battler;
+            BattleScriptCall(BattleScript_CelestialFaded);
+            effect = TRUE;
+        }
+    }
+
+    return effect;
+}
+
 static bool32 HandleEndTurnAquaRing(enum BattlerId battler)
 {
     bool32 effect = FALSE;
@@ -1667,6 +1708,8 @@ static bool32 (*const sEndTurnEffectHandlers[])(enum BattlerId battler) =
     [ENDTURN_SEND_OUT_REPLACEMENTS_2] = HandleEndTurnSendOutReplacements,
     [ENDTURN_AQUA_RING] = HandleEndTurnAquaRing,
     [ENDTURN_RIPTIDE] = HandleEndTurnRiptide,
+    [ENDTURN_REJUVENATION] = HandleEndTurnRejuvenation,
+    [ENDTURN_CELESTIAL] = HandleEndTurnCelestial,
     [ENDTURN_INGRAIN] = HandleEndTurnIngrain,
     [ENDTURN_LEECH_SEED] = HandleEndTurnLeechSeed,
     [ENDTURN_POISON] = HandleEndTurnPoison,

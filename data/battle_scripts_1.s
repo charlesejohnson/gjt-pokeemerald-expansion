@@ -6584,6 +6584,75 @@ BattleScript_ComboPointsReport::
 	waitmessage B_WAIT_TIME_MED
 	return
 
+BattleScript_EffectCelestialAlignment::
+	attackcanceler
+	callnative BS_CelestialAlignment
+	.4byte BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	printstring STRINGID_GJT_CELESTIAL
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_CelestialFaded::
+	printstring STRINGID_GJT_CELESTIAL_FADED
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_RejuvenationHeal::
+	printstring STRINGID_GJT_REJUV_HEAL
+	goto BattleScript_TurnHeal
+
+BattleScript_EffectRejuvenation::
+	attackcanceler
+	jumpifvolatile BS_TARGET, VOLATILE_HEAL_BLOCK_TIMER, BattleScript_MoveUsedHealBlockPrevents
+	callnative BS_TryRejuvenation
+	.4byte BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	printstring STRINGID_GJT_REJUV
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectSwiftmend::
+	attackcanceler
+	jumpifvolatile BS_ATTACKER, VOLATILE_HEAL_BLOCK_TIMER, BattleScript_MoveUsedHealBlockPrevents
+	jumpifvolatile BS_TARGET, VOLATILE_HEAL_BLOCK_TIMER, BattleScript_MoveUsedHealBlockPrevents
+	callnative BS_TrySwiftmend
+	.4byte BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET, ASSURANCE_DOUBLE
+	printstring STRINGID_PKMNREGAINEDHEALTH
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectWildGrowth::
+	attackcanceler
+	jumpifvolatile BS_ATTACKER, VOLATILE_HEAL_BLOCK_TIMER, BattleScript_MoveUsedHealBlockPrevents
+	callnative BS_TryTeamHeal
+	.4byte BattleScript_AlreadyAtFullHp
+	attackanimation
+	waitanimation
+BattleScript_TeamHealLoop::
+	callnative BS_HealNextAlly
+	.4byte BattleScript_MoveEnd
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET, ASSURANCE_DOUBLE
+	printstring STRINGID_PKMNREGAINEDHEALTH
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_TeamHealLoop
+
+BattleScript_EffectTranquility::
+	attackcanceler
+	jumpifvolatile BS_ATTACKER, VOLATILE_HEAL_BLOCK_TIMER, BattleScript_MoveUsedHealBlockPrevents
+	callnative BS_TryTeamHeal
+	.4byte BattleScript_AlreadyAtFullHp
+	attackanimation
+	waitanimation
+	goto BattleScript_TeamHealLoop
+
 BattleScript_EffectSweepingStrikes::
 	attackcanceler
 	callnative BS_TrySetSweepingStrikes

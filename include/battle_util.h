@@ -328,6 +328,7 @@ void GainWarriorRage(enum BattlerId battler, u32 amount);
 bool32 BattlerUsesRage(enum BattlerId battler);
 u32 GetMoveDruidFormRequirement(enum Move move);
 void GainComboPoints(enum BattlerId battler, u32 amount);
+void BS_RemoveCelestialAlignment(enum BattlerId battler);
 
 #endif // GUARD_BATTLE_UTIL_H
 u32 GetManaBarrierRecoil(u32 battler, u32 move);

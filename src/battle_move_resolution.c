@@ -1834,7 +1834,8 @@ static enum CancelerResult CancelerCharging(struct BattleCalcValues *cv)
 {
     enum CancelerResult result = CANCELER_RESULT_SUCCESS;
 
-    if (!gBattleMoveEffects[cv->moveEffect].twoTurnEffect)
+    if (!gBattleMoveEffects[cv->moveEffect].twoTurnEffect
+     || (cv->move == MOVE_SOLAR_BEAM && gBattleMons[cv->battlerAtk].volatiles.druidForm == 4)) // GJT: no charge in Owlkin Form
     {
         result = CANCELER_RESULT_SUCCESS;
     }

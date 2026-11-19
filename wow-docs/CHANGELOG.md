@@ -2,6 +2,12 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.34
+- Shared Druid moves: Wrath (Grass special, 45, lv6), Moonfire (Fairy special, 40, always burns, lv10). Rake moved to lv18.
+- Boomy: Starfire (Grass special 80, 20% lower Sp. Def, lv26), Starsurge (Fairy special 70, 20% +1 Sp. Atk, lv32), Solar Beam (lv40, no charge turn in Owlkin Form), Celestial Alignment (lv46, Boomy only, 1 PP: +2 Sp. Atk and +1 crit stage for 2 turns, then both removed).
+- Resto: Rejuvenation (lv14, self or ally, no upfront heal, 1/8 max HP at the end of each of 3 turns, stacks with the Efflorescence bloom), Swiftmend (lv30, consumes Rejuvenation, heals 50%, fails without it), Wild Growth (lv38, user and ally 25%), Solar Beam (lv40), Tranquility (lv50, whole team 35%, +1 Sp. Def, 1 PP).
+- Tranquility's and Celestial Alignment's stat changes apply silently (no "rose" message yet).
+
 ## v0.1.33
 - Feral combo points (cap 5, shown after each change). Shred (Normal, 40 power, +1 point, +2 on a crit, always crits the first turn after switching in or shifting form), Rake (Grass, 35 power, always poisons, +1), Ferocious Bite (Normal, 20 power +20 per point, spends all). All need Cat Form.
 - Bear rage: a Druid in Bear Form builds rage exactly like the Warrior (+1 hitting, +1 being hit, cap 10). Maul (Rock, 70, costs 3), Mangle (Rock, 45, +2 rage), Ironfur (+2 Def, costs 4), Thrash (Grass, 50, hits both foes, +2 rage, 35% poison), Frenzied Regen (heals 60%, costs 5). All need Bear Form.

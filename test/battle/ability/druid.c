@@ -220,3 +220,101 @@ SINGLE_BATTLE_TEST("Druid: Frenzied Regeneration heals 60% and costs 5 rage")
         EXPECT_GE(player->hp, 70);
     }
 }
+
+SINGLE_BATTLE_TEST("Druid: Moonfire always burns")
+{
+    GIVEN {
+        PLAYER(SPECIES_DRUID) { Speed(100); }
+        OPPONENT(SPECIES_WOBBUFFET) { Speed(1); HP(10000); MaxHP(10000); }
+    } WHEN {
+        TURN { MOVE(player, MOVE_MOONFIRE); }
+    } THEN {
+        EXPECT(opponent->status1 & STATUS1_BURN);
+    }
+}
+
+SINGLE_BATTLE_TEST("Druid: Celestial Alignment is Boomy only, boosts for 2 turns, then fades")
+{
+    GIVEN {
+        PLAYER(SPECIES_DRUID_BOOMY) { Speed(100); Ability(ABILITY_BALL_FETCH); }
+        OPPONENT(SPECIES_WOBBUFFET) { Speed(1); HP(10000); MaxHP(10000); }
+    } WHEN {
+        TURN { MOVE(player, MOVE_CELESTIAL_ALIGNMENT); }
+        TURN { MOVE(player, MOVE_CELEBRATE); }
+        TURN { MOVE(player, MOVE_CELEBRATE); }
+    } SCENE {
+        MESSAGE("Boomy Druid aligned\nwith the stars!");
+        MESSAGE("Boomy Druid's alignment faded!");
+    } THEN {
+        EXPECT_EQ(player->statStages[STAT_SPATK], DEFAULT_STAT_STAGE);
+        EXPECT_EQ((u32)player->volatiles.bonusCritStages, 0);
+    }
+}
+
+SINGLE_BATTLE_TEST("Druid: Celestial Alignment fails for other specs")
+{
+    GIVEN {
+        PLAYER(SPECIES_DRUID_FERAL) { Speed(100); }
+        OPPONENT(SPECIES_WOBBUFFET) { Speed(1); }
+    } WHEN {
+        TURN { MOVE(player, MOVE_CELESTIAL_ALIGNMENT); }
+    } SCENE {
+        MESSAGE("But it failed!");
+    }
+}
+
+SINGLE_BATTLE_TEST("Druid: Rejuvenation heals over time and Swiftmend consumes it")
+{
+    GIVEN {
+        PLAYER(SPECIES_DRUID) { Speed(100); HP(10); MaxHP(160); Ability(ABILITY_BALL_FETCH); }
+        OPPONENT(SPECIES_WOBBUFFET) { Speed(1); }
+    } WHEN {
+        TURN { MOVE(player, MOVE_REJUVENATION, target: player); }
+        TURN { MOVE(player, MOVE_SWIFTMEND, target: player); }
+    } THEN {
+        EXPECT_EQ(player->hp, 10 + 20 + 80);
+        EXPECT_EQ((u32)player->volatiles.rejuvTimer, 0);
+    }
+}
+
+SINGLE_BATTLE_TEST("Druid: Swiftmend fails without Rejuvenation")
+{
+    GIVEN {
+        PLAYER(SPECIES_DRUID) { Speed(100); HP(10); MaxHP(160); }
+        OPPONENT(SPECIES_WOBBUFFET) { Speed(1); }
+    } WHEN {
+        TURN { MOVE(player, MOVE_SWIFTMEND, target: player); }
+    } SCENE {
+        MESSAGE("But it failed!");
+    }
+}
+
+SINGLE_BATTLE_TEST("Druid: Tranquility heals the whole team and raises Sp. Def")
+{
+    GIVEN {
+        PLAYER(SPECIES_DRUID) { Speed(100); HP(10); MaxHP(100); Ability(ABILITY_BALL_FETCH); }
+        PLAYER(SPECIES_WOBBUFFET) { Speed(5); HP(20); MaxHP(100); }
+        OPPONENT(SPECIES_WOBBUFFET) { Speed(1); }
+    } WHEN {
+        TURN { MOVE(player, MOVE_TRANQUILITY); }
+    } THEN {
+        EXPECT_EQ(player->hp, 45);
+        EXPECT_EQ(GetMonData(&gParties[B_TRAINER_PLAYER][1], MON_DATA_HP), 55);
+        EXPECT_EQ(player->statStages[STAT_SPDEF], DEFAULT_STAT_STAGE + 1);
+    }
+}
+
+DOUBLE_BATTLE_TEST("Druid: Wild Growth heals the user and its ally")
+{
+    GIVEN {
+        PLAYER(SPECIES_DRUID) { Speed(100); HP(10); MaxHP(100); Ability(ABILITY_BALL_FETCH); }
+        PLAYER(SPECIES_WOBBUFFET) { Speed(50); HP(10); MaxHP(100); }
+        OPPONENT(SPECIES_WOBBUFFET) { Speed(1); }
+        OPPONENT(SPECIES_WOBBUFFET) { Speed(2); }
+    } WHEN {
+        TURN { MOVE(playerLeft, MOVE_WILD_GROWTH); MOVE(playerRight, MOVE_CELEBRATE); }
+    } THEN {
+        EXPECT_EQ(playerLeft->hp, 35);
+        EXPECT_EQ(playerRight->hp, 35);
+    }
+}

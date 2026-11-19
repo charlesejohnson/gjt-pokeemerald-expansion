@@ -1882,6 +1882,36 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
         .battleTvScore = 3,
     },
 
+    [EFFECT_CELESTIAL_ALIGNMENT] =
+    {
+        .battleScript = BattleScript_EffectCelestialAlignment,
+        .battleTvScore = 4,
+    },
+
+    [EFFECT_REJUVENATION] =
+    {
+        .battleScript = BattleScript_EffectRejuvenation,
+        .battleTvScore = 3,
+    },
+
+    [EFFECT_SWIFTMEND] =
+    {
+        .battleScript = BattleScript_EffectSwiftmend,
+        .battleTvScore = 3,
+    },
+
+    [EFFECT_WILD_GROWTH] =
+    {
+        .battleScript = BattleScript_EffectWildGrowth,
+        .battleTvScore = 3,
+    },
+
+    [EFFECT_TRANQUILITY] =
+    {
+        .battleScript = BattleScript_EffectTranquility,
+        .battleTvScore = 3,
+    },
+
     [EFFECT_FEROCIOUS_BITE] =
     {
         .battleScript = BattleScript_EffectHit,
