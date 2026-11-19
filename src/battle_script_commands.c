@@ -11781,6 +11781,70 @@ void BS_TryHealFortyPercent(void)
         gBattlescriptCurrInstr = cmd->nextInstr;
 }
 
+static void ApplyDruidFormStages(enum BattlerId battler, u32 form, s32 sign)
+{
+    static const u8 sFormStats[5][2] = {
+        [1] = { STAT_DEF, STAT_SPDEF },
+        [2] = { STAT_ATK, STAT_SPEED },
+        [3] = { STAT_SPDEF, 0 },
+        [4] = { STAT_SPATK, 0 },
+    };
+    for (u32 i = 0; i < 2 && form >= 1 && form <= 4; i++)
+    {
+        u32 stat = sFormStats[form][i];
+        if (stat == 0)
+            continue;
+        s32 v = gBattleMons[battler].statStages[stat] + sign;
+        gBattleMons[battler].statStages[stat] = min(MAX_STAT_STAGE, max(MIN_STAT_STAGE, v));
+    }
+}
+
+void BS_DruidShift(void)
+{
+    NATIVE_ARGS(const u8 *failInstr);
+    enum Species species = gBattleMons[gBattlerAttacker].species;
+    u32 form = 0;
+
+    switch (gCurrentMove)
+    {
+    case MOVE_BEAR_FORM: form = 1; break;
+    case MOVE_CAT_FORM: form = 2; break;
+    case MOVE_TREE_FORM: form = 3; break;
+    case MOVE_OWLKIN_FORM: form = 4; break;
+    }
+
+    if (form == 0 || !IsDruidSpecies(species)
+     || (form == 3 && species != SPECIES_DRUID_RESTORATION)
+     || (form == 4 && species != SPECIES_DRUID_BOOMY)
+     || gBattleMons[gBattlerAttacker].volatiles.druidForm == form)
+    {
+        gBattlescriptCurrInstr = cmd->failInstr;
+        return;
+    }
+
+    ApplyDruidFormStages(gBattlerAttacker, gBattleMons[gBattlerAttacker].volatiles.druidForm, -1);
+    gBattleMons[gBattlerAttacker].volatiles.druidForm = form;
+    ApplyDruidFormStages(gBattlerAttacker, form, +1);
+    gBattleStruct->battlerState[gBattlerAttacker].isFirstTurn = 2; // counts as switching in
+    PREPARE_MOVE_BUFFER(gBattleTextBuff1, gCurrentMove);
+    gBattlescriptCurrInstr = cmd->nextInstr;
+}
+
+void BS_DruidUnshift(void)
+{
+    NATIVE_ARGS();
+    if (gCurrentMove == MOVE_UNSHIFT && gBattleMons[gBattlerAttacker].volatiles.druidForm)
+    {
+        ApplyDruidFormStages(gBattlerAttacker, gBattleMons[gBattlerAttacker].volatiles.druidForm, -1);
+        gBattleMons[gBattlerAttacker].volatiles.druidForm = 0;
+        gBattleStruct->battlerState[gBattlerAttacker].isFirstTurn = 2;
+        BattleScriptPush(cmd->nextInstr);
+        gBattlescriptCurrInstr = BattleScript_DruidUnshiftAnim;
+        return;
+    }
+    gBattlescriptCurrInstr = cmd->nextInstr;
+}
+
 void BS_TryPlantTotem(void)
 {
     NATIVE_ARGS(const u8 *failInstr);

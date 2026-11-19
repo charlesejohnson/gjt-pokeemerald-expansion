@@ -11331,6 +11331,35 @@ bool32 IsAsleepOrComatose(enum BattlerId battler, enum Ability ability)
 }
 
 // GJT: Warrior rage helpers
+bool32 IsDruidSpecies(enum Species species)
+{
+    return species >= SPECIES_DRUID && species <= SPECIES_DRUID_BOOMY;
+}
+
+// GJT: art shown while a Druid is in a form (stage boosts are separate).
+enum Species GetDruidFormSpecies(enum Species base, u32 form)
+{
+    switch (form)
+    {
+    case 1: return base == SPECIES_DRUID_GUARDIAN ? SPECIES_DRUID_FORM_TORTERRA : SPECIES_DRUID_FORM_GROTLE;
+    case 2: return base == SPECIES_DRUID_FERAL ? SPECIES_DRUID_FORM_LIEPARD : SPECIES_DRUID_FORM_PURRLOIN;
+    case 3: return SPECIES_DRUID_FORM_TREE;
+    case 4: return SPECIES_DRUID_FORM_OWLKIN;
+    default: return base;
+    }
+}
+
+// GJT: Tree Form makes the Druid's healing moves 25% stronger.
+s32 ModifyDruidHealAmount(s32 amount)
+{
+    if (amount > 0
+     && IsBattlerAlive(gBattlerAttacker)
+     && gBattleMons[gBattlerAttacker].volatiles.druidForm == 3
+     && IsHealingMove(gCurrentMove))
+        return amount * 5 / 4;
+    return amount;
+}
+
 bool32 IsWarriorSpecies(enum Species species)
 {
     return species >= SPECIES_WARRIOR && species <= SPECIES_WARRIOR_PROTECTION;

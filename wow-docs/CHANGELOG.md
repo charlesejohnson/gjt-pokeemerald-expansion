@@ -2,6 +2,12 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.30
+- Druid forms live. Bear Form (+1 Def/Sp. Def), Cat Form (+1 Atk/Speed), Tree Form (Resto only: +1 Sp. Def, your healing moves 25% stronger), Owlkin Form (Boomy only: +1 Sp. Atk), Unshift (Protect that returns you to base form). Switching forms swaps the old boosts for the new ones and counts as switching in.
+- Forms swap the battle sprite only: Bear = Grotle (Torterra for Guardian), Cat = Purrloin (Liepard for Feral), Tree = Sudowoodo, Owlkin = Noctowl. Evolved Druids are now the green Sunflora in their base form.
+- Learnsets: Unshift 8, Bear Form 10, Cat Form 18 for everyone; Tree/Owlkin Form on evolution.
+- Not yet: Efflorescence and other Druid abilities, combo points, bear rage, the custom Druid attacks/heals.
+
 ## v0.1.29
 - Boomy Druid: Noctowl's brow tufts and eye band recolored blue (beak and talons pick up the blue too).
 

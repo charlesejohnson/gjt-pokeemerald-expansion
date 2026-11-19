@@ -25308,4 +25308,141 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .validApprenticeMove = TRUE,
     },
 
+    [MOVE_BEAR_FORM] =
+    {
+        .name = COMPOUND_STRING("Bear Form"),
+        .description = COMPOUND_STRING(
+            "Shift into a bear: raises\n"
+            "Def and Sp. Def by one."),
+        .effect = EFFECT_DRUID_FORM,
+        .power = 0,
+        .type = TYPE_GRASS,
+        .accuracy = 0,
+        .pp = 5,
+        .target = TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .copycatBanned = TRUE,
+        .assistBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_BEAUTIFUL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Growth,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_CAT_FORM] =
+    {
+        .name = COMPOUND_STRING("Cat Form"),
+        .description = COMPOUND_STRING(
+            "Shift into a cat: raises\n"
+            "Atk and Speed by one."),
+        .effect = EFFECT_DRUID_FORM,
+        .power = 0,
+        .type = TYPE_GRASS,
+        .accuracy = 0,
+        .pp = 5,
+        .target = TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .copycatBanned = TRUE,
+        .assistBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_BEAUTIFUL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Growth,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_TREE_FORM] =
+    {
+        .name = COMPOUND_STRING("Tree Form"),
+        .description = COMPOUND_STRING(
+            "Shift into a tree: Sp. Def up,\n"
+            "heals are 25% stronger."),
+        .effect = EFFECT_DRUID_FORM,
+        .power = 0,
+        .type = TYPE_GRASS,
+        .accuracy = 0,
+        .pp = 5,
+        .target = TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .copycatBanned = TRUE,
+        .assistBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_BEAUTIFUL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Growth,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_OWLKIN_FORM] =
+    {
+        .name = COMPOUND_STRING("Owlkin Form"),
+        .description = COMPOUND_STRING(
+            "Shift into an owlkin:\n"
+            "raises Sp. Atk by one."),
+        .effect = EFFECT_DRUID_FORM,
+        .power = 0,
+        .type = TYPE_GRASS,
+        .accuracy = 0,
+        .pp = 5,
+        .target = TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .copycatBanned = TRUE,
+        .assistBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_BEAUTIFUL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Growth,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_UNSHIFT] =
+    {
+        .name = COMPOUND_STRING("Unshift"),
+        .description = COMPOUND_STRING(
+            "Evades attack and returns the\n"
+            "user to its base form."),
+        .effect = EFFECT_PROTECT,
+        .power = 0,
+        .type = TYPE_GRASS,
+        .accuracy = 0,
+        .pp = 5,
+        .target = TARGET_USER,
+        .priority = 4,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .argument = { .protectMethod = PROTECT_NORMAL },
+        .zMove = { .effect = Z_EFFECT_RESET_STATS },
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .copycatBanned = TRUE,
+        .assistBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_AVOID_STARTLE_ONCE,
+        .contestCategory = CONTEST_CATEGORY_CUTE,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Protect,
+        .validApprenticeMove = TRUE,
+    },
+
 };

@@ -27726,6 +27726,12 @@ const u16 gMonPalette_DruidGuardian[] = INCGFX_U16("graphics/pokemon/torterra/dr
 const u16 gMonShinyPalette_DruidGuardian[] = INCGFX_U16("graphics/pokemon/torterra/druid_guardian_shiny.pal", ".gbapal");
 const u16 gMonPalette_DruidBoomy[] = INCGFX_U16("graphics/pokemon/noctowl/druid_boomy_normal.pal", ".gbapal");
 const u16 gMonShinyPalette_DruidBoomy[] = INCGFX_U16("graphics/pokemon/noctowl/druid_boomy_shiny.pal", ".gbapal");
+const u16 gMonPalette_DruidEvolved[] = INCGFX_U16("graphics/pokemon/sunflora/druid_base_normal.pal", ".gbapal");
+const u16 gMonShinyPalette_DruidEvolved[] = INCGFX_U16("graphics/pokemon/sunflora/druid_base_shiny.pal", ".gbapal");
+const u16 gMonPalette_DruidBear[] = INCGFX_U16("graphics/pokemon/grotle/druid_bear_normal.pal", ".gbapal");
+const u16 gMonShinyPalette_DruidBear[] = INCGFX_U16("graphics/pokemon/grotle/druid_bear_shiny.pal", ".gbapal");
+const u16 gMonPalette_DruidCat[] = INCGFX_U16("graphics/pokemon/purrloin/druid_cat_normal.pal", ".gbapal");
+const u16 gMonShinyPalette_DruidCat[] = INCGFX_U16("graphics/pokemon/purrloin/druid_cat_shiny.pal", ".gbapal");
 const u8 gMonIcon_Deathknight[] = INCGFX_U8("graphics/pokemon/deathknight/icon.png", ".4bpp");
 #if P_FOOTPRINTS
 const u8 gMonFootprint_Deathknight[] = INCGFX_U8("graphics/pokemon/deathknight/footprint.png", ".1bpp");

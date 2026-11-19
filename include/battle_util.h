@@ -319,6 +319,9 @@ bool32 IsBattlerInvolvedInSkyDrop(enum BattlerId battler);
 bool32 IsAsleepOrComatose(enum BattlerId battler, enum Ability ability);
 
 
+enum Species GetDruidFormSpecies(enum Species base, u32 form);
+bool32 IsDruidSpecies(enum Species species);
+s32 ModifyDruidHealAmount(s32 amount);
 bool32 IsWarriorSpecies(enum Species species);
 u32 GetMoveRageCost(enum Move move);
 void GainWarriorRage(enum BattlerId battler, u32 amount);

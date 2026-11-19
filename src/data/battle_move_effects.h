@@ -1852,6 +1852,12 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
         .battleTvScore = 0, // TODO: Assign points
     },
 
+    [EFFECT_DRUID_FORM] =
+    {
+        .battleScript = BattleScript_EffectDruidForm,
+        .battleTvScore = 0,
+    },
+
     [EFFECT_TOTEM] =
     {
         .battleScript = BattleScript_EffectTotem,

@@ -1214,8 +1214,10 @@ static inline void SetPassiveDamageAmount(enum BattlerId battler, s32 value)
     gBattleStruct->passiveHpUpdate[battler] = value;
 }
 
+s32 ModifyDruidHealAmount(s32 amount);
 static inline void SetHealAmount(enum BattlerId battler, s32 value)
 {
+    value = ModifyDruidHealAmount(value);
     if (value == 0)
         value = 1;
     gBattleStruct->passiveHpUpdate[battler] = -1 * value;

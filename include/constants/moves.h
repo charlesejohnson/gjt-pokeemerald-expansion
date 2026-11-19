@@ -964,8 +964,13 @@ enum __attribute__((packed)) Move
     MOVE_GROUNDING_TOTEM = 903,
     MOVE_EARTHBIND_TOTEM = 904,
     MOVE_MAGMA_TOTEM = 905,
+    MOVE_BEAR_FORM = 906,
+    MOVE_CAT_FORM = 907,
+    MOVE_TREE_FORM = 908,
+    MOVE_OWLKIN_FORM = 909,
+    MOVE_UNSHIFT = 910,
 
-    MOVES_COUNT = MOVE_MAGMA_TOTEM + 1, // includes custom moves (was MOVES_COUNT_GEN9)
+    MOVES_COUNT = MOVE_UNSHIFT + 1, // includes custom moves (was MOVES_COUNT_GEN9)
 
     // Z Moves
     FIRST_Z_MOVE = MOVES_COUNT,

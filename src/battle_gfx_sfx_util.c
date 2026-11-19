@@ -927,6 +927,9 @@ void HandleSpeciesGfxDataChange(enum BattlerId battlerAtk, enum BattlerId battle
         else
         {
             targetSpecies = GetMonData(monAtk, MON_DATA_SPECIES);
+            // GJT: Druid forms only swap the art.
+            if (changeType == SPECIES_GFX_CHANGE_FORM_CHANGE && IsDruidSpecies(targetSpecies))
+                targetSpecies = GetDruidFormSpecies(targetSpecies, gBattleMons[battlerAtk].volatiles.druidForm);
         }
         gBattleSpritesDataPtr->battlerData[battlerAtk].transformSpecies = targetSpecies;
 

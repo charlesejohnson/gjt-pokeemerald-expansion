@@ -315,6 +315,8 @@ extern const u8 BattleScript_EffectCommandingShout[];
 extern const u8 BattleScript_VictoryRushHeal[];
 extern const u8 BattleScript_EffectSweepingStrikes[];
 extern const u8 BattleScript_EffectTotem[];
+extern const u8 BattleScript_EffectDruidForm[];
+extern const u8 BattleScript_DruidUnshiftAnim[];
 extern const u8 BattleScript_ChainLightningArc[];
 extern const u8 BattleScript_EffectRiptide[];
 extern const u8 BattleScript_TotemPlanted[];

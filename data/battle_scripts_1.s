@@ -2143,6 +2143,7 @@ BattleScript_EffectProtect::
 BattleScript_EffectEndure::
 	attackcanceler
 	setprotectlike
+	callnative BS_DruidUnshift
 	attackanimation
 	waitanimation
 	printfromtable gProtectLikeUsedStringIds
@@ -6647,3 +6648,20 @@ BattleScript_EffectRiptide::
 	printstring STRINGID_PKMNREGAINEDHEALTH
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
+
+BattleScript_EffectDruidForm::
+	attackcanceler
+	callnative BS_DruidShift
+	.4byte BattleScript_ButItFailed
+	playanimation BS_ATTACKER, B_ANIM_FORM_CHANGE
+	waitanimation
+	printstring STRINGID_GJT_FORM_SHIFT
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_DruidUnshiftAnim::
+	playanimation BS_ATTACKER, B_ANIM_FORM_CHANGE
+	waitanimation
+	printstring STRINGID_GJT_UNSHIFT
+	waitmessage B_WAIT_TIME_LONG
+	return
