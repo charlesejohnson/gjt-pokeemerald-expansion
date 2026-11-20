@@ -1,0 +1,61 @@
+# Friend casting: replacing NPCs with Charlie's friends
+
+Goal: replace Team Aqua/Magma members and other recurring characters with friends, then map where each appears. Counts are text boxes (`\p` page breaks), measured 2026-11-20 on the gjt branch. Only text with a speaker tag ("MAXIE:") is counted for the general list, so untagged NPC chatter is missing. FRLG maps are excluded.
+
+## Process
+1. Charlie lists his friends and the level of appearance each should have (cameo, recurring, boss).
+2. Assign friends to slots below. Combining several NPCs into one friend is allowed, so a friend can show up more often and talk more.
+3. Map the appearances (which map, which tile, which script).
+4. Write the text, then replace the trainer name and sprite.
+
+## Non-gym-leader characters by voice lines
+| Character | Boxes | Notes |
+|---|---|---|
+| Brendan / May | 56 each | gender variants, you meet only one |
+| Scott | 45 | already a friend (Norman cameo, Battle Frontier house) |
+| Steven | 33 | |
+| Wally | 27 | |
+| Mr. Briney | 25 | |
+| Mom | 24 | |
+| Dad (Norman as dad) | 24 | |
+| Archie | 21 | |
+| Khadgar | 21 | all in the lab |
+| Wallace | 20 | |
+| Maxie | 19 | |
+| Capt. Stern | 18 | |
+| Mr. Stone | 15 | |
+| Gabby | 14 | TV interviewer |
+| Prof. Birch | 9 | |
+| Ty | 7 | TV interviewer |
+
+Mauville Old Man (53 boxes) is a minigame script, not real dialogue. TV show text (MC, Fans, Big Sis, Big Bro) is canned.
+
+## Aqua and Magma: named members
+| Member | Lines | Appearances |
+|---|---|---|
+| Archie | 21 | Seafloor Cavern (10), Mt. Chimney, Meteor Falls, Slateport Harbor, Route 128, Mt. Pyre, Sootopolis |
+| Maxie | 19 | Space Center, Magma Hideout, Route 128, Mt. Chimney, Seafloor Cavern, Mt. Pyre, Sootopolis |
+| Tabitha | 11 (battle text only) | Magma Hideout 4F, Mt. Chimney, Mossdeep Space Center (2v2 with Maxie) |
+| Shelly | 12 (battle text only) | Weather Institute 2F, Seafloor Cavern Room 3 |
+| Matt | 6 (battle text only) | Aqua Hideout B2F |
+| Velithe (hack) | about 8 | Petalburg Woods |
+| Polerodeo (hack) | 1 appearance | Rusturf Tunnel |
+| Alms and Divinea (hack) | Alms 2 | Slateport museum pair |
+
+Courtney is not in this game.
+
+## Generic grunt slots (object events)
+- Aqua, about 60: Slateport 18 (city, harbor, museum), Weather Institute 8, Aqua Hideout 12, Seafloor Cavern 10, Lilycove 5, Route 110 5, plus a few on Routes 119/121, Mt. Pyre, Mt. Chimney, Meteor Falls.
+- Magma, about 40: Magma Hideout 14, Mt. Chimney 9, Mossdeep and Space Center 12, Jagged Pass 1, Route 112 2, Meteor Falls 2.
+- Each grunt has one short battle text, so these are the cheapest slots.
+
+## Replacement viability (Claude's judgment)
+1. Maxie / Archie: best for close friends. Most appearances and lines (about 20 to rewrite each). Plot critical.
+2. Tabitha, then Shelly: doable, 2 to 3 battles each.
+3. Matt: one battle, cheap, little screen time.
+4. Grunts: easiest. About 100 slots, one short battle text each. Good for friends with a cameo level of appearance.
+
+## Friend list (Charlie to fill in)
+| Friend | Desired appearance | Assigned slot(s) |
+|---|---|---|
+| | | |

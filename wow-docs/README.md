@@ -99,3 +99,5 @@ Current dev build version lives in `data/text/gjt_version.inc` and is shown at t
 5. **Class implementation (set 2026-11-16):** Warrior first (rage counter, moves, abilities, species), then Shaman. Direction after that is open. Druid and Monk follow in the same pattern.
 6. Still on the docket: rematch teams/text, Thunderfury effect, sprite pass (new Xal'atath sprite, DK/Mage icon palettes), Elite Four / Champion void arc. Also: place the Druid trainer as a real NPC (menu is done, reachable from the test guide), Druid art choice.
 Working method: one boss at a time, back and forth with Charlie, draft in the game, then notes in `design/bosses.md` and `CHANGELOG.md`.
+
+- Friend casting plan (replacing Aqua/Magma and other NPCs with friends): `design/friend-casting.md`
