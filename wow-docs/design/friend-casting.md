@@ -111,6 +111,44 @@ Proposed friend placement (not yet built, waiting on Charlie):
 - Chase: Weather Institute grunt 4 before Shelly; the Shelly fight itself is the main Chase slot.
 - Everything else stays a grunt (optional ones are the place for extra friend cameos or rematches).
 
+## Friend-to-trainer map (anchor for collecting written lines, 2026-11-21)
+Stage: **E** = early (caps 15-19), **M** = middle (caps 24-33), **L** = late (cap 42+ and postgame). "Lines" = what Charlie writes: pre = before the fight, win = after the player wins, post = after-fight talk. Grunt slots need pre + win only. Status: done / planned.
+
+| Friend | Trainer slot | Stage | Location | Lines | Status |
+|---|---|---|---|---|---|
+| Vel | Petalburg Woods fight | E | Petalburg Woods | pre, win | done |
+| Vel | Slateport double with Steve | E | Slateport | pre, win | check |
+| Vel | Magma cameo, Aqua cameo | L | TBD | pre, win each | planned |
+| Div | GRUNT_MUSEUM_1 | E | Slateport museum | pre, win | partly done |
+| Alms | GRUNT_MUSEUM_2 | E | Slateport museum | pre, win | partly done |
+| Div | GRUNT_SEAFLOOR_CAVERN_5 (Room 3) | L | Seafloor Cavern | pre, win | planned |
+| Alms | GRUNT_SEAFLOOR_CAVERN_2 (Room 1) | L | Seafloor Cavern | pre, win | planned |
+| Ed (Archie) | ARCHIE_SLATEPORT | E | Slateport Harbor | pre, win, post | done |
+| Ed (Archie) | ARCHIE_METEOR_FALLS | M | Meteor Falls | pre, win, post | done |
+| Ed (Archie) | ARCHIE | L | Seafloor Cavern Room 9 | pre x2, win, post | planned |
+| Sam (Maxie) | MAXIE_MAGMA_HIDEOUT | M | Magma Hideout 4F | pre, win, post | done (name) |
+| Sam (Maxie) | MAXIE_MT_CHIMNEY | M | Mt. Chimney | pre, win, post | done (name) |
+| Sam (Maxie) | MAXIE_MOSSDEEP | L | Mossdeep Space Center | pre x2, win, post | planned |
+| Sam / Ed | Final showdown (Retribution Paladin / Arms Warrior) | L | Postgame | pre, win, post | later |
+| Flynn (Tabitha) | TABITHA_MT_CHIMNEY | M | Mt. Chimney | pre, win | planned |
+| Flynn (Tabitha) | TABITHA_MAGMA_HIDEOUT | M | Magma Hideout | pre, win | planned |
+| Flynn (Tabitha) | TABITHA_MOSSDEEP | L | Mossdeep Space Center | pre, win | planned |
+| Markus | GRUNT_MAGMA_HIDEOUT_5 | M | Magma Hideout 2F | pre, win | planned |
+| Markus | GRUNT_MT_CHIMNEY_2 | M | Mt. Chimney | pre, win | planned |
+| Tim | GRUNT_MAGMA_HIDEOUT_9 | M | Magma Hideout 3F | pre, win | planned |
+| Meg | GRUNT_MAGMA_HIDEOUT_16 | M | Magma Hideout 3F | pre, win | planned |
+| Tim + Meg | GRUNT_SPACE_CENTER_1 + _3 (doubles) | L | Space Center 1F | pre, win (shared) | planned |
+| Chase (Shelly) | GRUNT_WEATHER_INST_4 | M | Weather Institute | pre, win | planned |
+| Chase (Shelly) | SHELLY_WEATHER_INSTITUTE | M | Weather Institute 2F | pre, win, post | planned |
+| Chase (Shelly) | SHELLY_SEAFLOOR_CAVERN | L | Seafloor Cavern Room 3 | pre, win | planned |
+| Steve (Matt) | MATT | M | Aqua Hideout B2F | pre, win, post | planned |
+| Dray | GRUNT_AQUA_HIDEOUT_6 | M | Aqua Hideout B2F | pre, win | planned |
+| Dray | GRUNT_SEAFLOOR_CAVERN_1 (Room 1) | L | Seafloor Cavern | pre, win | planned |
+| Scott (Norman) | NORMAN_1 | M | Petalburg Gym | existing | done |
+| Scott | Aqua Hideout cameo | M | Aqua Hideout | pre, win | later |
+| Tony (Steven) | STEVEN | L | Meteor Falls Steven's Cave | pre, win, post | planned |
+| Austin, Charlie, Zoey, Malcolm, Adam | Draft-league venue (instead of the Slateport beach challenge room) | L | TBD | pre, win each | later |
+
 ## Decisions (Charlie, 2026-11-21)
 - Slot assignment above is **approved**.
 - Teams for the friends not in the draft table: Claude builds them (class mon plus favorites, rounded out).
