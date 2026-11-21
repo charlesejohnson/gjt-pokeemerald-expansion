@@ -217,7 +217,8 @@ def pair_results(info):
 def dead_end(mid):
     name, j = map_dir[mid]
     nb = {c['map'] for c in j.get('connections') or []} | {w['dest_map'] for w in j.get('warp_events', [])}
-    return len(nb) <= 1
+    n_end = len(j.get('warp_events', [])) + len(j.get('connections') or [])
+    return len(nb) <= 1 and n_end <= 3   # many doors to one neighbour (e.g. Petalburg Woods) is a through-route
 
 def report(mid):
     info = analyse(mid)
