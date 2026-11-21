@@ -2,6 +2,9 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.47
+- **Trainer pass retuned (v0.1.46 was too hard).** Held items are now scarce: none below level 20; level 20-34 only some aces (Sitrus Berry/Leftovers); level 35+ aces get Life Orb/Leftovers, some unevolved mons Eviolite, a few Sitrus Berries. Extra mons now only go to trainers with 2 or fewer mons whose top level is 15+ (so early routes are unchanged).
+
 ## v0.1.46
 - **Trainer difficulty pass.** 692 regular trainers (routes, class trainers, grunts, admins and their rematches) now carry held items and most gained one extra Pokémon (cap 6, only trainers with a mon at level 8+). Skipped: gym leaders, Elite Four, Champion, rivals, frontier heads, and every trainer that already had hand-picked items.
 - Items: Eviolite on unevolved mons (level 10+); Oran/Sitrus Berry below level 20; at 20+ the ace gets Life Orb (strong attackers) or Leftovers (bulky), the lead gets Focus Sash, others Sitrus Berry/Leftovers.
