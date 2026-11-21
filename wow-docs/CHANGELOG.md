@@ -2,6 +2,11 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.41
+- **Paladin class added** (Bisharp art recolored by spec). Species: Paladin (Steel/Fairy, Justified), Prot Paladin (Devotion Aura), Holy Paladin (Concentration Aura), Ret Paladin (Steel/Fire, Retribution Aura). Khadgar and the test guide hand out Paladin.
+- New moves (940-953): Avenger's Shield, Blessing of Kings/Wisdom/Might, Avenging Wrath, Holy Shock, Consecration, Repentance, Holy Strike, Seals of Light/Command/Justice, Judgement, plus a hidden Command Strike.
+- Judgement consumes the active seal (my default, tell me if you'd rather it keep it). Learnsets are drafts. Tests: `paladin.c`.
+
 ## v0.1.40
 - **Monk class added.** Four species on recolored Sawk art (sea-green skin; belt: brown base, white Mistweaver, orange Brewmaster, red Windwalker): Monk (Fairy, Limber), Mist Monk (Fairy), Brew Monk (Fire/Fairy), Wind Monk (Fairy/Fighting). Stats are the approved draft: Brewmaster 115/95/105/65/95/60, Windwalker 85/120/80/60/80/115. Evolve by Moon Stone (Mistweaver), Sun Stone (Brewmaster) or Shiny Stone (Windwalker). Khadgar and the test guide hand out Monk.
 - New moves (ids 928-939): Tiger Palm, Rising Sun Kick (2 PP), Blackout Kick (2 hits, 20% per hit to refund a Rising Sun Kick PP), Spinning Crane Kick (one 60-power spread hit, because the engine can't multi-hit spread moves), Jade Lightning, Whirling Dragon (needs Rising Sun Kick and Blackout Kick used first, then resets both), Keg Smash (-1 accuracy, soaks the foe in liquor), Breath of Fire (35% burn, 100% and consumes the liquor), Purifying Brew, Celestial Brew, Life Cocoon (free Substitute + Aqua Ring, 1 PP), Ring of Peace (protect; physical attackers lose 1 Speed).

@@ -510,6 +510,19 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_GJT_COCOON]                           = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX} is wrapped in\na life cocoon!"),
     [STRINGID_GJT_MIST_ACTIVE]                      = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX} is soothed\nby the mist!"),
     [STRINGID_GJT_MIST_BENCH]                       = COMPOUND_STRING("{B_BUFF1} is soothed\nby the mist!"),
+    [STRINGID_GJT_SEAL_SET]                         = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} is imbued\nwith {B_BUFF1}!"),
+    [STRINGID_GJT_BLESS_KINGS]                      = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX} was blessed with\nkingly power!"),
+    [STRINGID_GJT_BLESS_WISDOM]                     = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s PP was\nrestored by wisdom!"),
+    [STRINGID_GJT_BLESS_MIGHT]                      = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX} was blessed\nwith might!"),
+    [STRINGID_GJT_WINGS]                            = COMPOUND_STRING("Wings of holy light sprout\nfrom {B_ATK_NAME_WITH_PREFIX}!"),
+    [STRINGID_GJT_CONSECRATE]                       = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} consecrated\nthe ground!"),
+    [STRINGID_GJT_CONSECRATION_HURT]                = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} is burned by\nthe consecrated ground!"),
+    [STRINGID_GJT_CONSECRATION_FADED]               = COMPOUND_STRING("The consecration faded!"),
+    [STRINGID_GJT_SEAL_COMMAND]                     = COMPOUND_STRING("The Seal of Command\nstrikes again!"),
+    [STRINGID_GJT_SEAL_JUSTICE]                     = COMPOUND_STRING("The Seal of Justice\nstunned {B_DEF_NAME_WITH_PREFIX}!"),
+    [STRINGID_GJT_SEAL_HEAL]                        = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} was healed\nby its seal!"),
+    [STRINGID_GJT_JUDGEMENT_BLOCK]                  = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX} was judged\nand can't escape!"),
+    [STRINGID_GJT_RETRIBUTION]                      = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} was hurt by\nthe retribution aura!"),
     [STRINGID_GJT_CELESTIAL]                        = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} aligned\nwith the stars!"),
     [STRINGID_GJT_CELESTIAL_FADED]                  = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s alignment faded!"),
     [STRINGID_GJT_BLOOM_FADED]                      = COMPOUND_STRING("The bloom faded!"),
@@ -1226,6 +1239,11 @@ const u16 gTransformUsedStringIds[] =
 {
     [B_MSG_TRANSFORMED]      = STRINGID_PKMNTRANSFORMEDINTO,
     [B_MSG_TRANSFORM_FAILED] = STRINGID_BUTITFAILED
+};
+
+const u16 gGjtBlessingStringIds[] =
+{
+    STRINGID_GJT_BLESS_KINGS, STRINGID_GJT_BLESS_WISDOM, STRINGID_GJT_BLESS_MIGHT, STRINGID_GJT_WINGS
 };
 
 const u16 gSubstituteUsedStringIds[] =

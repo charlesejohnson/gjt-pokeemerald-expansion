@@ -26165,4 +26165,322 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .validApprenticeMove = TRUE,
     },
 
+    [MOVE_AVENGERS_SHIELD] =
+    {
+        .name = COMPOUND_STRING("Avenger's Shield"),
+        .description = COMPOUND_STRING(
+            "Hurls a shield at all foes.\n"
+            "Lowers their Sp. Atk."),
+        .effect = EFFECT_HIT,
+        .power = 60,
+        .type = TYPE_STEEL,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_BOTH,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_STAT_MINUS,
+            .spAtk = 1,
+            .chance = 100,
+        }),
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_MagnetBomb,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_BLESSING_OF_KINGS] =
+    {
+        .name = COMPOUND_STRING("Bless. of Kings"),
+        .description = COMPOUND_STRING(
+            "Raises every stat of the\n"
+            "target by one stage."),
+        .effect = EFFECT_PALADIN_BLESSING,
+        .power = 0,
+        .type = TYPE_FAIRY,
+        .accuracy = 0,
+        .pp = 1,
+        .target = TARGET_USER_OR_ALLY,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_WorkUp,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_HOLY_SHOCK] =
+    {
+        .name = COMPOUND_STRING("Holy Shock"),
+        .description = COMPOUND_STRING(
+            "Hurts a foe or heals an ally.\n"
+            "High critical-hit rate."),
+        .effect = EFFECT_HIT_ENEMY_HEAL_ALLY,
+        .power = 65,
+        .type = TYPE_FAIRY,
+        .accuracy = 100,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .criticalHitStage = 2,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_PollenPuff,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_BLESSING_OF_WISDOM] =
+    {
+        .name = COMPOUND_STRING("Bless. of Wisdom"),
+        .description = COMPOUND_STRING(
+            "Fully restores the target's\n"
+            "moves' PP."),
+        .effect = EFFECT_PALADIN_BLESSING,
+        .power = 0,
+        .type = TYPE_FAIRY,
+        .accuracy = 0,
+        .pp = 1,
+        .target = TARGET_USER_OR_ALLY,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_CalmMind,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_BLESSING_OF_MIGHT] =
+    {
+        .name = COMPOUND_STRING("Bless. of Might"),
+        .description = COMPOUND_STRING(
+            "Raises the target's Attack\n"
+            "by two stages."),
+        .effect = EFFECT_PALADIN_BLESSING,
+        .power = 0,
+        .type = TYPE_FAIRY,
+        .accuracy = 0,
+        .pp = 1,
+        .target = TARGET_USER_OR_ALLY,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Swagger,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_AVENGING_WRATH] =
+    {
+        .name = COMPOUND_STRING("Avenging Wrath"),
+        .description = COMPOUND_STRING(
+            "Wings of holy light: Atk,\n"
+            "Sp. Atk and crit rate rise."),
+        .effect = EFFECT_PALADIN_BLESSING,
+        .power = 0,
+        .type = TYPE_FAIRY,
+        .accuracy = 0,
+        .pp = 1,
+        .target = TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_WorkUp,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_CONSECRATION] =
+    {
+        .name = COMPOUND_STRING("Consecration"),
+        .description = COMPOUND_STRING(
+            "Scorches the foes’ ground\n"
+            "for five turns."),
+        .effect = EFFECT_CONSECRATION,
+        .power = 0,
+        .type = TYPE_FIRE,
+        .accuracy = 0,
+        .pp = 10,
+        .target = TARGET_OPPONENTS_FIELD,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_SacredFire,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_REPENTANCE] =
+    {
+        .name = COMPOUND_STRING("Repentance"),
+        .description = COMPOUND_STRING(
+            "Forces the target to repent\n"
+            "and fall asleep."),
+        .effect = EFFECT_NON_VOLATILE_STATUS,
+        .argument = { .nonVolatileStatus = MOVE_EFFECT_SLEEP },
+        .magicCoatAffected = TRUE,
+        .power = 0,
+        .type = TYPE_FAIRY,
+        .accuracy = 80,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Hypnosis,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_HOLY_STRIKE] =
+    {
+        .name = COMPOUND_STRING("Holy Strike"),
+        .description = COMPOUND_STRING(
+            "A blow imbued with\n"
+            "holy light."),
+        .effect = EFFECT_HIT,
+        .power = 45,
+        .type = TYPE_FAIRY,
+        .accuracy = 100,
+        .pp = 25,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_PlayRough,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_SEAL_OF_LIGHT] =
+    {
+        .name = COMPOUND_STRING("Seal of Light"),
+        .description = COMPOUND_STRING(
+            "Attacks heal the user for\n"
+            "25% of the damage dealt."),
+        .effect = EFFECT_PALADIN_SEAL,
+        .power = 0,
+        .type = TYPE_FAIRY,
+        .accuracy = 0,
+        .pp = 10,
+        .target = TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Wish,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_SEAL_OF_COMMAND] =
+    {
+        .name = COMPOUND_STRING("Seal of Command"),
+        .description = COMPOUND_STRING(
+            "Physical hits may add a\n"
+            "25 power Fairy strike."),
+        .effect = EFFECT_PALADIN_SEAL,
+        .power = 0,
+        .type = TYPE_FAIRY,
+        .accuracy = 0,
+        .pp = 10,
+        .target = TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Wish,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_SEAL_OF_JUSTICE] =
+    {
+        .name = COMPOUND_STRING("Seal of Justice"),
+        .description = COMPOUND_STRING(
+            "Physical hits may put the\n"
+            "target to sleep."),
+        .effect = EFFECT_PALADIN_SEAL,
+        .power = 0,
+        .type = TYPE_FAIRY,
+        .accuracy = 0,
+        .pp = 10,
+        .target = TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Wish,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_JUDGEMENT_PALADIN] =
+    {
+        .name = COMPOUND_STRING("Judgement"),
+        .description = COMPOUND_STRING(
+            "Unleashes the active seal.\n"
+            "Always hits for 75 Fairy."),
+        .effect = EFFECT_PALADIN_JUDGEMENT,
+        .power = 75,
+        .type = TYPE_FAIRY,
+        .accuracy = 0,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Judgment,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_SEAL_COMMAND_STRIKE] =
+    {
+        .name = COMPOUND_STRING("Command Strike"),
+        .description = COMPOUND_STRING(
+            "A bonus strike from the\n"
+            "Seal of Command."),
+        .effect = EFFECT_HIT,
+        .power = 25,
+        .type = TYPE_FAIRY,
+        .accuracy = 100,
+        .pp = 1,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+        .validApprenticeMove = TRUE,
+    },
+
 };

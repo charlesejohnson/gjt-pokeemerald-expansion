@@ -170,13 +170,13 @@ Starting Monk ability: **Limber**. Art: recolors of Sawk, sea green skin, belt c
 - **Spinning Crane Kick:** hits everyone on the field for 3 x 20 power Fairy physical hits.
 - Monks should learn various physical and special Fairy, Electric and Fighting moves as they level, spaced out appropriately.
 
-## Paladin (design draft, from Charlie 2026-11-21, not implemented)
+## Paladin (implemented v0.1.41, learnsets are drafts)
 
 Holy moves generally map to Fairy. Paladins are slow (not as slow as Death Knights), have good stat totals, and are mixed attackers, so totals go less far. Stat blocks: Claude proposes, Charlie approves.
 
 | Form | Types | Ability |
 |---|---|---|
-| Paladin | (to decide) | (to decide) |
+| Paladin | Steel/Fairy | Justified |
 | Protection Paladin | Steel/Fairy | Devotion Aura |
 | Holy Paladin | Steel/Fairy | Concentration Aura |
 | Retribution Paladin | Steel/Fire | Retribution Aura |
@@ -272,3 +272,11 @@ Species: Warrior (Fighting) -> Arms / Fury / Protection (all Fighting/Steel) via
 - Per-form allowed moves (v0.1.37): lists live in `src/gjt_druid.c` (`sBearMoves` etc.), edit there to change what a form can hold.
 
 **Monk implementation notes (v0.1.40):** Stagger damage cut is 25% (`* 3 / 4` in the damage step of `battle_move_resolution.c`), tune there. Volatiles: `staggerLevel`, `staggerHit`, `staggerBoost`, `liquor`, `brewStacks`, `monkShield` (max 1023), `monkRskUsed`, `monkBkUsed`. Stagger end-turn is `ENDTURN_STAGGER`. Spinning Crane Kick is a single 60-power spread hit (the engine's multi-hit counter is shared across targets). Ring of Peace is a Silk Trap variant (`PROTECT_RING_OF_PEACE`) that triggers on any physical move, not just contact.
+
+### Paladin implementation notes (v0.1.41)
+Stats (HP/Atk/Def/SpA/SpD/Spe): Paladin 70/60/80/60/70/45 (385), Protection 105/80/125/60/105/50 (525), Holy 100/65/100/105/110/55 (535), Retribution (Steel/Fire) 95/115/95/95/80/65 (545). Bisharp art, recolored: gold (base), blue (Protection), white/pale gold (Holy), red (Retribution). Evolve by Moon Stone (Holy), Sun Stone (Retribution), Shiny Stone (Protection).
+- Auras (ability on the Paladin, covers its doubles partner): Devotion -25% physical damage; Concentration blocks foe-inflicted stat drops; Retribution hurts contact attackers for 1/6 of their max HP.
+- Seals: status moves setting one active seal (replacing the old one). Light: attacks heal 25% of damage dealt. Command: physical hits 50% chance of an extra 25-power Fairy hit. Justice: physical hits 25% sleep. **Judgement** (75 Fairy special, never misses) consumes the seal: Light heals 25% max HP, Command doubles damage to a sleeping target, Justice blocks escape. (Consuming the seal is my default, flagged for Charlie.)
+- Consecration: 1/16 max HP per turn to non-Fire foes for 5 turns (Magic Guard exempt).
+- Blessings (1 PP each, on self or ally): Kings +1 all stats, Wisdom restores all PP, Might +2 Atk. Avenging Wrath (1 PP, self): +1 Atk, +1 SpA, +1 crit stage.
+- Moves 940-953. Tests: `test/battle/ability/paladin.c`.

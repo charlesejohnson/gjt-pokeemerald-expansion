@@ -395,6 +395,15 @@ static bool32 HandleEndTurnFirstEventBlock(enum BattlerId battler)
                 BattleScriptCall(BattleScript_SearingTotemHurt);
                 effect = TRUE;
             }
+            else if (gSideTimers[foe].consecrationTimer
+             && !IS_BATTLER_OF_TYPE(battler, TYPE_FIRE)
+             && !IsAbilityAndRecord(battler, GetBattlerAbility(battler), ABILITY_MAGIC_GUARD))
+            {
+                gBattlerAttacker = battler;
+                SetPassiveDamageAmount(battler, max(1, GetNonDynamaxMaxHP(battler) / 16));
+                BattleScriptCall(BattleScript_ConsecrationHurt);
+                effect = TRUE;
+            }
             else if (gSideTimers[foe].magmaTimer && gSideTimers[foe].magmaTimer <= 2
              && !IsAbilityAndRecord(battler, GetBattlerAbility(battler), ABILITY_MAGIC_GUARD))
             {
@@ -1293,8 +1302,8 @@ static bool32 HandleEndTurnSecondEventBlock(enum BattlerId battler)
     case SECOND_EVENT_BLOCK_TOTEMS:
     {
         // GJT: count down one totem per pass until all of this side's totems are handled.
-        static const u16 sTotemMoves[] = { MOVE_STONESKIN_TOTEM, MOVE_SEARING_TOTEM, MOVE_WINDFURY_TOTEM, MOVE_HEALING_STREAM_TOTEM, MOVE_EARTHBIND_TOTEM, MOVE_MAGMA_TOTEM, MOVE_NONE };
-        u8 *timers[] = { &gSideTimers[side].stoneskinTimer, &gSideTimers[side].searingTimer, &gSideTimers[side].windfuryTotemTimer, &gSideTimers[side].healingStreamTimer, &gSideTimers[side].earthbindTimer, &gSideTimers[side].magmaTimer, &gSideTimers[side].bloomTimer };
+        static const u16 sTotemMoves[] = { MOVE_STONESKIN_TOTEM, MOVE_SEARING_TOTEM, MOVE_WINDFURY_TOTEM, MOVE_HEALING_STREAM_TOTEM, MOVE_EARTHBIND_TOTEM, MOVE_MAGMA_TOTEM, MOVE_NONE, MOVE_CONSECRATION };
+        u8 *timers[] = { &gSideTimers[side].stoneskinTimer, &gSideTimers[side].searingTimer, &gSideTimers[side].windfuryTotemTimer, &gSideTimers[side].healingStreamTimer, &gSideTimers[side].earthbindTimer, &gSideTimers[side].magmaTimer, &gSideTimers[side].bloomTimer, &gSideTimers[side].consecrationTimer };
         s32 expired = -1;
         for (u32 i = 0; i < ARRAY_COUNT(timers); i++)
         {
@@ -1307,7 +1316,7 @@ static bool32 HandleEndTurnSecondEventBlock(enum BattlerId battler)
         {
             gBattlerAttacker = GetBattlerSideForMessage(side);
             PREPARE_MOVE_BUFFER(gBattleTextBuff1, sTotemMoves[expired]);
-            BattleScriptCall(sTotemMoves[expired] == MOVE_NONE ? BattleScript_BloomFaded : BattleScript_TotemCrumbled);
+            BattleScriptCall(sTotemMoves[expired] == MOVE_NONE ? BattleScript_BloomFaded : (sTotemMoves[expired] == MOVE_CONSECRATION ? BattleScript_ConsecrationFaded : BattleScript_TotemCrumbled));
             effect = TRUE;
         }
         break;

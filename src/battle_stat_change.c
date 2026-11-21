@@ -694,6 +694,21 @@ static bool32 IsAbilityBlocked(struct BattleCalcValues *cv, struct StatChange *s
     if (st->certain)
         return FALSE;
 
+    // GJT: Concentration Aura shields the holder's side from foe-inflicted stat drops.
+    u32 aura = IsAbilityOnSide(cv->battlerDef, ABILITY_CONCENTRATION_AURA);
+    if (aura && cv->battlerAtk != cv->battlerDef && !IsBattlerAlly(cv->battlerAtk, cv->battlerDef))
+    {
+        if (!st->onlyChecking)
+        {
+            MarkStatsAsDone(st, NUM_BATTLE_STATS);
+            st->script = BattleScript_AbilityNoStatLoss;
+            gBattleScripting.battler = aura - 1;
+            gBattlerAbility = aura - 1;
+            gLastUsedAbility = ABILITY_CONCENTRATION_AURA;
+        }
+        return TRUE;
+    }
+
     if (CanAbilityPreventStatLoss(cv->abilities[cv->battlerDef]))
     {
         if (!st->onlyChecking)

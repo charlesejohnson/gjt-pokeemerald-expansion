@@ -179,6 +179,7 @@ struct SideTimer
     u8 magmaTimer;
     u8 magmaCaster;
     u8 bloomTimer;
+    u8 consecrationTimer;
 };
 
 struct FieldTimer

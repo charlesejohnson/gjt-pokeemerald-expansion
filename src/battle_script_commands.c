@@ -11900,6 +11900,89 @@ void BS_TryPlantTotem(void)
     gBattlescriptCurrInstr = cmd->nextInstr;
 }
 
+void BS_PaladinSeal(void)
+{
+    NATIVE_ARGS(const u8 *failInstr);
+    u32 seal = gCurrentMove == MOVE_SEAL_OF_LIGHT ? 1 : (gCurrentMove == MOVE_SEAL_OF_COMMAND ? 2 : 3);
+
+    if (gBattleMons[gBattlerAttacker].volatiles.paladinSeal == seal)
+    {
+        gBattlescriptCurrInstr = cmd->failInstr;
+        return;
+    }
+    gBattleMons[gBattlerAttacker].volatiles.paladinSeal = seal;
+    PREPARE_MOVE_BUFFER(gBattleTextBuff1, gCurrentMove);
+    gBattlescriptCurrInstr = cmd->nextInstr;
+}
+
+void BS_PaladinBlessing(void)
+{
+    NATIVE_ARGS(const u8 *failInstr);
+    enum BattlerId t = gBattlerTarget;
+    struct BattlePokemon *mon;
+    u32 i;
+
+    if (gCurrentMove == MOVE_AVENGING_WRATH)
+        t = gBattlerAttacker;
+    mon = &gBattleMons[t];
+    if (!IsBattlerAlive(t))
+    {
+        gBattlescriptCurrInstr = cmd->failInstr;
+        return;
+    }
+    switch (gCurrentMove)
+    {
+    case MOVE_BLESSING_OF_KINGS:
+        for (i = STAT_ATK; i < NUM_BATTLE_STATS; i++)
+            if (mon->statStages[i] < MAX_STAT_STAGE)
+                mon->statStages[i]++;
+        gBattleCommunication[MULTISTRING_CHOOSER] = 0;
+        break;
+    case MOVE_BLESSING_OF_WISDOM:
+    {
+        u32 data[MAX_MON_MOVES + 1];
+        for (i = 0; i < MAX_MON_MOVES; i++)
+        {
+            mon->pp[i] = CalculatePPWithBonus(mon->moves[i], mon->ppBonuses, i);
+            data[i] = mon->pp[i];
+        }
+        data[i] = mon->ppBonuses;
+        BtlController_EmitSetMonData(t, B_COMM_TO_CONTROLLER, REQUEST_PP_DATA_BATTLE, 0, 5, data);
+        MarkBattlerForControllerExec(t);
+        gBattleCommunication[MULTISTRING_CHOOSER] = 1;
+        break;
+    }
+    case MOVE_BLESSING_OF_MIGHT:
+        mon->statStages[STAT_ATK] = min(MAX_STAT_STAGE, mon->statStages[STAT_ATK] + 2);
+        gBattleCommunication[MULTISTRING_CHOOSER] = 2;
+        break;
+    default: // Avenging Wrath
+        if (mon->statStages[STAT_ATK] < MAX_STAT_STAGE)
+            mon->statStages[STAT_ATK]++;
+        if (mon->statStages[STAT_SPATK] < MAX_STAT_STAGE)
+            mon->statStages[STAT_SPATK]++;
+        if (mon->volatiles.bonusCritStages < 3)
+            mon->volatiles.bonusCritStages++;
+        gBattleCommunication[MULTISTRING_CHOOSER] = 3;
+        break;
+    }
+    gBattlescriptCurrInstr = cmd->nextInstr;
+}
+
+void BS_SetConsecration(void)
+{
+    NATIVE_ARGS(const u8 *failInstr);
+    struct SideTimer *t = &gSideTimers[GetBattlerSide(gBattlerAttacker)];
+
+    if (t->consecrationTimer != 0)
+    {
+        gBattlescriptCurrInstr = cmd->failInstr;
+        return;
+    }
+    t->consecrationTimer = 5;
+    gBattlescriptCurrInstr = cmd->nextInstr;
+}
+
 void BS_TryMagmaBurn(void)
 {
     NATIVE_ARGS(const u8 *skipInstr);

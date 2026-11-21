@@ -6549,6 +6549,10 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct DamageContext *ctx)
         if (gBattleMons[battlerAtk].status1 & (STATUS1_BURN | STATUS1_PSN_ANY | STATUS1_PARALYSIS | STATUS1_FROSTBITE))
             modifier = uq4_12_multiply(modifier, UQ_4_12(2.0));
         break;
+    case EFFECT_PALADIN_JUDGEMENT:
+        if (gBattleMons[battlerAtk].volatiles.paladinSeal == 2 && (gBattleMons[battlerDef].status1 & STATUS1_SLEEP))
+            modifier = uq4_12_multiply(modifier, UQ_4_12(2.0));
+        break;
     case EFFECT_BRINE:
         if (gBattleMons[battlerDef].hp <= (gBattleMons[battlerDef].maxHP / 2))
             modifier = uq4_12_multiply(modifier, UQ_4_12(2.0));

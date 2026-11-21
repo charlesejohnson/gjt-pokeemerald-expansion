@@ -2666,4 +2666,25 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .aiRating = 7,
     },
 
+    [ABILITY_DEVOTION_AURA] =
+    {
+        .name = _("Devotion Aura"),
+        .description = COMPOUND_STRING("Allies take 25% less\nphysical damage."),
+        .aiRating = 7,
+    },
+
+    [ABILITY_CONCENTRATION_AURA] =
+    {
+        .name = _("Concentr. Aura"),
+        .description = COMPOUND_STRING("Allies' stats cannot\nbe lowered."),
+        .aiRating = 7,
+    },
+
+    [ABILITY_RETRIBUTION_AURA] =
+    {
+        .name = _("Retrib. Aura"),
+        .description = COMPOUND_STRING("Allies hurt attackers\nthat make contact."),
+        .aiRating = 7,
+    },
+
 };

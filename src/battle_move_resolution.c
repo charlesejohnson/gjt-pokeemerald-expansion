@@ -2723,6 +2723,8 @@ static enum CancelerResult CancelerDamageCalc(struct BattleCalcValues *cv)
         // GJT: Stagger trims incoming damage; a Celestial Brew shield soaks the rest.
         if (cv->abilities[battlerDef] == ABILITY_STAGGER && gBattleStruct->moveDamage[battlerDef] > 1)
             gBattleStruct->moveDamage[battlerDef] = gBattleStruct->moveDamage[battlerDef] * 3 / 4;
+        if (IsBattleMovePhysical(cv->move) && IsAbilityOnSide(battlerDef, ABILITY_DEVOTION_AURA) && gBattleStruct->moveDamage[battlerDef] > 1)
+            gBattleStruct->moveDamage[battlerDef] = gBattleStruct->moveDamage[battlerDef] * 3 / 4;
         if (gBattleMons[battlerDef].volatiles.monkShield && gBattleStruct->moveDamage[battlerDef] != 0)
         {
             u32 absorbed = min((u32)gBattleMons[battlerDef].volatiles.monkShield, (u32)gBattleStruct->moveDamage[battlerDef]);
@@ -3702,6 +3704,88 @@ static enum MoveEndResult MoveEndChainLightning(struct BattleCalcValues *cv)
                 BattleScriptCall(BattleScript_ChainLightningArc);
                 result = MOVEEND_RESULT_RUN_SCRIPT;
             }
+        }
+    }
+
+    // GJT: Paladin seals, Judgement and Retribution Aura (one script per pass).
+    if (result == MOVEEND_RESULT_CONTINUE
+     && !gBattleStruct->unableToUseMove
+     && cv->battlerAtk != cv->battlerDef
+     && !IsBattlerAlly(cv->battlerAtk, cv->battlerDef)
+     && !IsBattleMoveStatus(cv->move)
+     && IsBattlerTurnDamaged(cv->battlerDef, EXCLUDING_SUBSTITUTES))
+    {
+        struct BattlePokemon *pal = &gBattleMons[cv->battlerAtk];
+        u32 seal = pal->volatiles.paladinSeal;
+
+        if (cv->move == MOVE_JUDGEMENT_PALADIN && seal != 0)
+        {
+            pal->volatiles.paladinSeal = 0;
+            if (seal == 1 && IsBattlerAlive(cv->battlerAtk) && !pal->volatiles.healBlockTimer && !IsBattlerAtMaxHp(cv->battlerAtk))
+            {
+                gBattleScripting.battler = cv->battlerAtk;
+                SetHealAmount(cv->battlerAtk, max(1, GetNonDynamaxMaxHP(cv->battlerAtk) / 4));
+                BattleScriptCall(BattleScript_SealHeal);
+                result = MOVEEND_RESULT_RUN_SCRIPT;
+            }
+            else if (seal == 3 && IsBattlerAlive(cv->battlerDef))
+            {
+                gBattleMons[cv->battlerDef].volatiles.escapePrevention = TRUE;
+                gBattleMons[cv->battlerDef].volatiles.battlerPreventingEscape = cv->battlerAtk;
+                BattleScriptCall(BattleScript_JudgementBlock);
+                result = MOVEEND_RESULT_RUN_SCRIPT;
+            }
+        }
+        else if (seal == 2 && IsBattleMovePhysical(cv->move) && cv->move != MOVE_SEAL_COMMAND_STRIKE
+              && IsBattlerAlive(cv->battlerAtk) && IsBattlerAlive(cv->battlerDef)
+              && RandomPercentage(RNG_SECONDARY_EFFECT, 50))
+        {
+            struct DamageContext ctx = {
+                .battlerAtk = cv->battlerAtk,
+                .battlerDef = cv->battlerDef,
+                .move = MOVE_SEAL_COMMAND_STRIKE,
+                .chosenMove = MOVE_SEAL_COMMAND_STRIKE,
+                .baseMove = MOVE_SEAL_COMMAND_STRIKE,
+                .moveType = TYPE_FAIRY,
+                .weather = GetWeather(),
+                .terrain = gFieldTimers.terrain,
+                .randomFactor = TRUE,
+            };
+            for (enum BattlerId b = B_BATTLER_0; b < gBattlersCount; b++)
+            {
+                ctx.abilities[b] = GetBattlerAbility(b);
+                ctx.holdEffects[b] = GetBattlerHoldEffect(b);
+            }
+            s32 dmg = CalculateMoveDamage(&ctx);
+            if (dmg > 0)
+            {
+                gBattleScripting.battler = cv->battlerDef;
+                SetPassiveDamageAmount(cv->battlerDef, dmg);
+                BattleScriptCall(BattleScript_SealCommandStrike);
+                result = MOVEEND_RESULT_RUN_SCRIPT;
+            }
+        }
+        else if (seal == 3 && IsBattleMovePhysical(cv->move) && IsBattlerAlive(cv->battlerDef)
+              && !gBattleMons[cv->battlerDef].status1
+              && CanBeSlept(cv->battlerAtk, cv->battlerDef, GetBattlerAbility(cv->battlerDef), BLOCKED_BY_SLEEP_CLAUSE)
+              && RandomPercentage(RNG_SECONDARY_EFFECT, 25))
+        {
+            gBattleMons[cv->battlerDef].status1 = RandomUniform(RNG_SLEEP_TURNS, 2, 4);
+            gEffectBattler = cv->battlerDef;
+            gBattleCommunication[MULTISTRING_CHOOSER] = 0;
+            BattleScriptCall(BattleScript_SealJusticeSleep);
+            result = MOVEEND_RESULT_RUN_SCRIPT;
+        }
+
+        if (result == MOVEEND_RESULT_CONTINUE
+         && IsAbilityOnSide(cv->battlerDef, ABILITY_RETRIBUTION_AURA)
+         && IsBattlerAlive(cv->battlerAtk)
+         && IsMoveMakingContact(cv->battlerAtk, cv->battlerDef, cv->abilities[cv->battlerAtk], cv->holdEffects[cv->battlerAtk], cv->move))
+        {
+            gBattleScripting.battler = cv->battlerAtk;
+            SetPassiveDamageAmount(cv->battlerAtk, max(1, GetNonDynamaxMaxHP(cv->battlerAtk) / 6));
+            BattleScriptCall(BattleScript_RetributionAura);
+            result = MOVEEND_RESULT_RUN_SCRIPT;
         }
     }
 
@@ -5167,6 +5251,22 @@ static enum MoveEndResult MoveEndLifeOrbShellBell(struct BattleCalcValues *cv)
             gBattleScripting.moveendState++;
             return MOVEEND_RESULT_RUN_SCRIPT;
         }
+    }
+
+    // GJT: Seal of Light - physical/special hits heal 25% of the damage dealt (Judgement has its own payout).
+    if (gBattleMons[cv->battlerAtk].volatiles.paladinSeal == 1
+     && cv->move != MOVE_JUDGEMENT_PALADIN
+     && gBattleScripting.savedDmg > 0
+     && !gBattleStruct->unableToUseMove
+     && IsBattlerAlive(cv->battlerAtk)
+     && !IsBattlerAtMaxHp(cv->battlerAtk)
+     && !gBattleMons[cv->battlerAtk].volatiles.healBlockTimer)
+    {
+        gBattleScripting.battler = cv->battlerAtk;
+        SetHealAmount(cv->battlerAtk, max(1, gBattleScripting.savedDmg / 4));
+        BattleScriptCall(BattleScript_SealHeal);
+        gBattleScripting.moveendState++;
+        return MOVEEND_RESULT_RUN_SCRIPT;
     }
 
     if (ItemBattleEffects(cv->battlerAtk, 0, cv->holdEffects[cv->battlerAtk], IsLifeOrbShellBellActivation))

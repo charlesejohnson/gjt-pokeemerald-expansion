@@ -6815,3 +6815,77 @@ BattleScript_SoothingMistBench::
 	printstring STRINGID_GJT_MIST_BENCH
 	waitmessage B_WAIT_TIME_LONG
 	return
+
+BattleScript_EffectPaladinSeal::
+	attackcanceler
+	callnative BS_PaladinSeal
+	.4byte BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	printstring STRINGID_GJT_SEAL_SET
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectPaladinBlessing::
+	attackcanceler
+	callnative BS_PaladinBlessing
+	.4byte BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	printfromtable gGjtBlessingStringIds
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectConsecration::
+	attackcanceler
+	callnative BS_SetConsecration
+	.4byte BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	printstring STRINGID_GJT_CONSECRATE
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_ConsecrationHurt::
+	printstring STRINGID_GJT_CONSECRATION_HURT
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_DoTurnDmg
+
+BattleScript_ConsecrationFaded::
+	printstring STRINGID_GJT_CONSECRATION_FADED
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_SealCommandStrike::
+	printstring STRINGID_GJT_SEAL_COMMAND
+	waitmessage B_WAIT_TIME_LONG
+	healthbarupdate BS_SCRIPTING
+	datahpupdate BS_SCRIPTING, ASSURANCE_DOUBLE
+	tryfaintmon BS_SCRIPTING
+	return
+
+BattleScript_SealJusticeSleep::
+	printstring STRINGID_GJT_SEAL_JUSTICE
+	waitmessage B_WAIT_TIME_LONG
+	call BattleScript_MoveEffectSleep
+	return
+
+BattleScript_SealHeal::
+	printstring STRINGID_GJT_SEAL_HEAL
+	waitmessage B_WAIT_TIME_LONG
+	healthbarupdate BS_SCRIPTING
+	datahpupdate BS_SCRIPTING, ASSURANCE_IGNORE
+	return
+
+BattleScript_JudgementBlock::
+	printstring STRINGID_GJT_JUDGEMENT_BLOCK
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_RetributionAura::
+	printstring STRINGID_GJT_RETRIBUTION
+	waitmessage B_WAIT_TIME_LONG
+	healthbarupdate BS_SCRIPTING
+	datahpupdate BS_SCRIPTING, ASSURANCE_DOUBLE
+	tryfaintmon BS_SCRIPTING
+	return

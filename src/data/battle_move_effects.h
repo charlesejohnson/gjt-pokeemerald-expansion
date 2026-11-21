@@ -1930,6 +1930,30 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
         .battleTvScore = 3,
     },
 
+    [EFFECT_PALADIN_SEAL] =
+    {
+        .battleScript = BattleScript_EffectPaladinSeal,
+        .battleTvScore = 3,
+    },
+
+    [EFFECT_PALADIN_BLESSING] =
+    {
+        .battleScript = BattleScript_EffectPaladinBlessing,
+        .battleTvScore = 3,
+    },
+
+    [EFFECT_CONSECRATION] =
+    {
+        .battleScript = BattleScript_EffectConsecration,
+        .battleTvScore = 3,
+    },
+
+    [EFFECT_PALADIN_JUDGEMENT] =
+    {
+        .battleScript = BattleScript_EffectHit,
+        .battleTvScore = 4,
+    },
+
     [EFFECT_FEROCIOUS_BITE] =
     {
         .battleScript = BattleScript_EffectHit,
