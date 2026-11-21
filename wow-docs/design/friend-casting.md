@@ -96,6 +96,21 @@ Other draft league teams in Charlie's table (Charlie, Zoey, Malcolm, Adam) are u
 **Vel:** Velithe appears on both sides (Petalburg Woods now, a Magma and an Aqua cameo later), so the Frost Mage's spec swap tells the story.
 **Final showdown:** Sam gets a Retribution Paladin, Ed an Arms Warrior (needs the Elite Four / Champion arc to exist).
 
+## Mandatory grunt slots (from `wow-tools/mandatory_trainers.py`, 2026-11-21)
+Unavoidable fights found by path search (per map; story-forced rooms like the Space Center, Weather Institute and Mt. Chimney are one-way, so treat their grunts as forced too even though the tool lists them optional):
+- **Magma Hideout:** 2F_1R grunts 5 and 3; 3F_1R grunts 9 and 16; 4F grunts 11, 12 and 13.
+- **Aqua Hideout:** B2F grunts 6 and 8.
+- **Seafloor Cavern:** Room 1 grunts 1 and 2; Room 3 grunt 5.
+- **Forced by story (tool says optional):** Space Center 1F grunts 1-4, Weather Institute grunts 1 and 4, Mt. Chimney grunts 1 and 2.
+
+Proposed friend placement (not yet built, waiting on Charlie):
+- Markus: Magma Hideout 2F_1R grunt 5 (Elemental Shaman), plus Mt. Chimney grunt 2 as a repeat.
+- Tim and Meg: Magma Hideout 3F_1R grunts 9 (Tim) and 16 (Meg) as back-to-back singles; their doubles fight at the Space Center grunt cluster (grunts 1 and 3).
+- Dray: Aqua Hideout B2F grunt 6 (Protection Paladin) and Seafloor Cavern Room 1 grunt 1.
+- Alms and Div: Seafloor Cavern Room 1 grunt 2 (Alms) and Room 3 grunt 5 (Div) as the Aqua rematches.
+- Chase: Weather Institute grunt 4 before Shelly; the Shelly fight itself is the main Chase slot.
+- Everything else stays a grunt (optional ones are the place for extra friend cameos or rematches).
+
 ## Decisions (Charlie, 2026-11-21)
 - Slot assignment above is **approved**.
 - Teams for the friends not in the draft table: Claude builds them (class mon plus favorites, rounded out).
