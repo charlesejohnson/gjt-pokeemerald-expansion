@@ -2,6 +2,12 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.46
+- **Trainer difficulty pass.** 692 regular trainers (routes, class trainers, grunts, admins and their rematches) now carry held items and most gained one extra Pokémon (cap 6, only trainers with a mon at level 8+). Skipped: gym leaders, Elite Four, Champion, rivals, frontier heads, and every trainer that already had hand-picked items.
+- Items: Eviolite on unevolved mons (level 10+); Oran/Sitrus Berry below level 20; at 20+ the ace gets Life Orb (strong attackers) or Leftovers (bulky), the lead gets Focus Sash, others Sitrus Berry/Leftovers.
+- Extra mons are copied from another trainer of the same class at a similar level, at the party's top level. Script used: one-off, results are in `src/data/trainers.party`.
+- Not done: gym leader/E4 retune, level bumps, middle-form usage by trainers.
+
 ## v0.1.45
 - **Three-stage class evolutions.** Base + spec stone now gives a middle form (same name/art/ability as the final spec, BST about 465); middle evolves to the final at level 34. 25 new species (ids 1612-1636) covering DK, Mage, Warrior, Shaman, Druid, Monk, Paladin, Hunter.
 - Druid/Warrior species checks go through `NormalizeClassSpecies` so middle forms behave like finals.
