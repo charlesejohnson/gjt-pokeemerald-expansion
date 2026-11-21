@@ -96,7 +96,8 @@ Other draft league teams in Charlie's table (Charlie, Zoey, Malcolm, Adam) are u
 **Vel:** Velithe appears on both sides (Petalburg Woods now, a Magma and an Aqua cameo later), so the Frost Mage's spec swap tells the story.
 **Final showdown:** Sam gets a Retribution Paladin, Ed an Arms Warrior (needs the Elite Four / Champion arc to exist).
 
-## Open questions for Charlie
-1. Teams for Flynn, Markus, Steve, Dray, Chase, Div and Alms (they are not in the draft table). Default: their class mon plus their favorites, rounded out by Claude.
-2. Austin: assign a slot, or keep him out?
-3. Approve the slot draft above, or reassign.
+## Decisions (Charlie, 2026-11-21)
+- Slot assignment above is **approved**.
+- Teams for the friends not in the draft table: Claude builds them (class mon plus favorites, rounded out).
+- **Postgame area (later):** every friend appears there at their strongest.
+- **Draft league place (later):** Austin and the other unlisted draft league members (Charlie, Zoey, Malcolm, Adam, others) get a slot in an in-game draft league venue. Candidate location: replace the Slateport beach challenge room. Not implemented yet.
