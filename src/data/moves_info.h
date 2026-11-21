@@ -26793,4 +26793,29 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .validApprenticeMove = TRUE,
     },
 
+    [MOVE_TAME_BEAST] =
+    {
+        .name = COMPOUND_STRING("Tame Beast"),
+        .description = COMPOUND_STRING(
+            "Tames a wild Pokémon as\n"
+            "the user's one and only pet."),
+        .effect = EFFECT_TAME_BEAST,
+        .power = 0,
+        .type = TYPE_NORMAL,
+        .accuracy = 0,
+        .pp = 5,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .sleepTalkBanned = TRUE,
+        .instructBanned = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Attract,
+    },
+
 };

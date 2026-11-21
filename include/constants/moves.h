@@ -1025,8 +1025,9 @@ enum __attribute__((packed)) Move
     MOVE_SNIPER_SHOT = 964,
     MOVE_MONGOOSE_BITE = 965,
     MOVE_CHIMAERA_SHOT = 966,
+    MOVE_TAME_BEAST = 967,
 
-    MOVES_COUNT = MOVE_CHIMAERA_SHOT + 1, // includes custom moves (was MOVES_COUNT_GEN9)
+    MOVES_COUNT = MOVE_TAME_BEAST + 1, // includes custom moves (was MOVES_COUNT_GEN9)
 
     // Z Moves
     FIRST_Z_MOVE = MOVES_COUNT,

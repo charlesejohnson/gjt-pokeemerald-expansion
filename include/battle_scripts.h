@@ -337,6 +337,8 @@ extern const u8 BattleScript_EffectPurifyingBrew[];
 extern const u8 BattleScript_EffectPaladinSeal[];
 extern const u8 BattleScript_EffectHunterTrap[];
 extern const u8 BattleScript_EffectKillCommand[];
+extern const u8 BattleScript_EffectTameBeast[];
+extern const u8 BattleScript_TameFailed[];
 extern const u8 BattleScript_DisengageSpeed[];
 extern const u8 BattleScript_TrapTriggered[];
 extern const u8 BattleScript_SnakeTrapDamage[];

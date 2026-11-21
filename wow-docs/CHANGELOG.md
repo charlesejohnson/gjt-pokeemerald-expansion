@@ -2,6 +2,9 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.43
+- **Tame Beast** (move 967, Beast Hunter learns it at 10): catch a wild Pokémon as your one pet. Odds are a Poké Ball's x1.5, no ball needed. The pet fights with +10% Atk/Def/SpA/SpD/Spe and Spirit Bond. Fails on trainers or if you already have a pet.
+
 ## v0.1.42
 - **Hunter class added** (Accelgor art, recolored). Hunter (Bug, Compound Eyes), Beast Hunter (Spirit Bond), Marks Hunter (Trueshot Aura), Surv Hunter (Bug/Fighting, Relentless Hunter). Khadgar and the test guide hand out Hunter.
 - New moves (954-966): Concussive Shot, Arcane Shot, Serpent Sting, Raptor Strike, Steady Shot, Immolation/Snake/Freezing Trap (consumed on first affected switch-in), Disengage, Kill Command, Sniper Shot, Mongoose Bite (needs a missed attack first), Chimaera Shot.

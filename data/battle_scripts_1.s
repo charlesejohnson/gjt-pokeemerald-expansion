@@ -6946,3 +6946,16 @@ BattleScript_SnakeTrapBoth::
 BattleScript_SpiritBondHeal::
 	printstring STRINGID_GJT_SPIRIT_BOND
 	goto BattleScript_TurnHeal
+
+BattleScript_EffectTameBeast::
+	attackcanceler
+	callnative BS_TameBeastCheck
+	.4byte BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	callnative BS_TameBeastRoll
+
+BattleScript_TameFailed::
+	printstring STRINGID_GJT_TAME_FAIL
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd

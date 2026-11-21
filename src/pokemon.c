@@ -3418,6 +3418,20 @@ void PokemonToBattleMon(struct Pokemon *src, struct BattlePokemon *dst)
         dst->statStages[i] = DEFAULT_STAT_STAGE;
 
     memset(&dst->volatiles, 0, sizeof(struct Volatiles));
+
+    // GJT: the Hunter's tamed pet fights with +10% stats (not HP) and Spirit Bond.
+    {
+        u32 petPid = VarGet(VAR_HUNTER_PET_PID_LO) | ((u32)VarGet(VAR_HUNTER_PET_PID_HI) << 16);
+        if (petPid != 0 && dst->personality == petPid)
+        {
+            dst->attack = dst->attack * 110 / 100;
+            dst->defense = dst->defense * 110 / 100;
+            dst->speed = dst->speed * 110 / 100;
+            dst->spAttack = dst->spAttack * 110 / 100;
+            dst->spDefense = dst->spDefense * 110 / 100;
+            dst->ability = ABILITY_SPIRIT_BOND;
+        }
+    }
 }
 
 bool8 ExecuteTableBasedItemEffect(struct Pokemon *mon, enum Item item, u8 partyIndex, u8 moveIndex)

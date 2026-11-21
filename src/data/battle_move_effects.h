@@ -1966,6 +1966,12 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
         .battleTvScore = 3,
     },
 
+    [EFFECT_TAME_BEAST] =
+    {
+        .battleScript = BattleScript_EffectTameBeast,
+        .battleTvScore = 3,
+    },
+
     [EFFECT_FEROCIOUS_BITE] =
     {
         .battleScript = BattleScript_EffectHit,

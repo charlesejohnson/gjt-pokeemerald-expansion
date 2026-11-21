@@ -281,7 +281,7 @@ Stats (HP/Atk/Def/SpA/SpD/Spe): Paladin 70/60/80/60/70/45 (385), Protection 105/
 - Blessings (1 PP each, on self or ally): Kings +1 all stats, Wisdom restores all PP, Might +2 Atk. Avenging Wrath (1 PP, self): +1 Atk, +1 SpA, +1 crit stage.
 - Moves 940-953. Tests: `test/battle/ability/paladin.c`.
 
-## Hunter (implemented v0.1.42 minus Tame Beast, learnsets are drafts)
+## Hunter (implemented v0.1.42, Tame Beast v0.1.43, learnsets are drafts)
 Charlie's notes: base type Bug. Beast Mastery (Bug, Spirit Bond): all-rounder, low attack. Marksmanship (Bug, Trueshot Aura): glass cannon, high attack and speed. Survival (Bug/Fighting, Relentless Hunter): low Sp. Atk brawler.
 
 | Form | Types | Stats (HP/Atk/Def/SpA/SpD/Spe) | BST |
@@ -295,5 +295,6 @@ Accelgor art, recolored (green / brown / blue / orange). Evolve: Moon Stone Beas
 - Abilities: Spirit Bond (doubles: holder and partner each heal 1/8 per turn while both are up; "pet" = partner for now), Trueshot Aura (+25% non-contact physical for the holder's side), Relentless Hunter (+35% vs statused foes).
 - Moves (954-966): Concussive Shot (-2 Spe), Arcane Shot (50 Psychic physical, non-contact), Serpent Sting (never misses, poison), Raptor Strike (60 Fighting), Steady Shot (charge turn, 90 Bug non-contact), Disengage (+4 priority protect from physical moves, +1 Speed), Kill Command (ally: +1 Atk and Helping Hand), Sniper Shot (charge turn, 160 Bug non-contact), Mongoose Bite (110 Fighting, never misses, only if your previous attack missed), Chimaera Shot (40 Bug special, 30% poison/paralysis/sleep).
 - Traps use the entry-hazard queue and are consumed on the first grounded foe that is affected: Immolation (10 PP, burn), Snake Trap (5 PP, 1/8 damage + poison), Freezing Trap (1 PP, freeze).
-- Not built yet: **Tame Beast** (catch a wild Pokémon as the hunter's single pet, +10% stats, ability replaced by Spirit Bond) and the forced-doubles idea. Both need a pet tag; see follow-up.
+- **Tame Beast** (v0.1.43, Beast Hunter lv 10, 5 PP): wild battles only. Catch chance = a Poké Ball's odds x1.5, no ball used (caught in a Poké Ball). Fails if you already have a pet. The pet is tagged by personality value in two save vars (`VAR_HUNTER_PET_PID_LO/HI`). In battle the pet gets +10% Atk/Def/SpA/SpD/Spe (not HP, so party HP stays consistent) and Spirit Bond replaces its ability. One pet per save; there is no release-and-retame yet.
+- Forced doubles dropped. Idea for the docket: a whole-game **doubles mode**, accepting that singles is a bit weaker for healers and Beast Mastery.
 - Tests: `test/battle/ability/hunter.c`.

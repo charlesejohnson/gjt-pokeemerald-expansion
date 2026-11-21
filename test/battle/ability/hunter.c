@@ -1,5 +1,7 @@
 #include "global.h"
 #include "test/battle.h"
+#include "event_data.h"
+#include "constants/vars.h"
 
 SINGLE_BATTLE_TEST("Hunter: Concussive Shot lowers Speed by 2")
 {
@@ -148,5 +150,21 @@ SINGLE_BATTLE_TEST("Hunter: Mongoose Bite works after a miss")
         TURN { MOVE(player, MOVE_MONGOOSE_BITE); }
     } THEN {
         EXPECT_LT(opponent->hp, 10000);
+    }
+}
+
+WILD_BATTLE_TEST("Hunter: Tame Beast catches a weakened wild mon")
+{
+    VarSet(VAR_HUNTER_PET_PID_LO, 0);
+    VarSet(VAR_HUNTER_PET_PID_HI, 0);
+    GIVEN {
+        PLAYER(SPECIES_HUNTER_BEAST_MASTERY) { Speed(100); Moves(MOVE_TAME_BEAST); }
+        OPPONENT(SPECIES_MAGIKARP) { Speed(1); Level(5); HP(1); MaxHP(100); }
+    } WHEN {
+        TURN { MOVE(player, MOVE_TAME_BEAST); }
+    } SCENE {
+        MESSAGE("Beast Hunter used Tame Beast!");
+    } THEN {
+        EXPECT_EQ(gBattleOutcome, 7);
     }
 }

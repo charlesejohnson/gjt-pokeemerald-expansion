@@ -177,6 +177,7 @@
 #define VAR_UNUSED_0x409B                                0x409B // Unused Var
 #define VAR_ELITE_4_STATE                                0x409C
 #define VAR_UNUSED_0x409D                                0x409D // Unused Var
+#define VAR_HUNTER_PET_PID_LO                            0x409D // GJT: Hunter's tamed pet, personality low 16 bits
 #define VAR_MOSSDEEP_SPACE_CENTER_STAIR_GUARD_STATE      0x409E
 #define VAR_MOSSDEEP_SPACE_CENTER_STATE                  0x409F
 #define VAR_SLATEPORT_HARBOR_STATE                       0x40A0
@@ -188,6 +189,7 @@
 #define VAR_TRICK_HOUSE_FOUND_TRICK_MASTER               0x40A6
 #define VAR_TRICK_HOUSE_ENTRANCE_STATE                   0x40A7
 #define VAR_UNUSED_0x40A8                                0x40A8 // Unused Var
+#define VAR_HUNTER_PET_PID_HI                            0x40A8 // GJT: Hunter's tamed pet, personality high 16 bits
 #define VAR_CYCLING_CHALLENGE_STATE                      0x40A9
 #define VAR_SLATEPORT_MUSEUM_1F_STATE                    0x40AA
 #define VAR_TRICK_HOUSE_PUZZLE_1_STATE                   0x40AB

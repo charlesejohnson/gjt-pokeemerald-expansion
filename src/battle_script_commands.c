@@ -11900,6 +11900,47 @@ void BS_TryPlantTotem(void)
     gBattlescriptCurrInstr = cmd->nextInstr;
 }
 
+void BS_TameBeastCheck(void)
+{
+    NATIVE_ARGS(const u8 *failInstr);
+    u32 pid = VarGet(VAR_HUNTER_PET_PID_LO) | ((u32)VarGet(VAR_HUNTER_PET_PID_HI) << 16);
+
+    if ((gBattleTypeFlags & (BATTLE_TYPE_TRAINER | BATTLE_TYPE_GHOST | BATTLE_TYPE_CATCH_TUTORIAL))
+     || GetBattlerSide(gBattlerAttacker) != B_SIDE_PLAYER
+     || GetBattlerSide(gBattlerTarget) == B_SIDE_PLAYER
+     || !IsBattlerAlive(gBattlerTarget)
+     || pid != 0)
+        gBattlescriptCurrInstr = cmd->failInstr;
+    else
+        gBattlescriptCurrInstr = cmd->nextInstr;
+}
+
+void BS_TameBeastRoll(void)
+{
+    NATIVE_ARGS();
+    u32 odds;
+
+    gLastUsedItem = ITEM_POKE_BALL;
+    odds = ComputeCaptureOdds(gBattlerTarget, gBattlerAttacker);
+    if (odds != CAPTURE_GUARANTEED)
+        odds = odds * 3 / 2;
+    if (odds == CAPTURE_GUARANTEED || odds > 254 || RandomUniform(RNG_BALLTHROW_SHAKE, 0, 254) < odds)
+    {
+        u32 pid = gBattleMons[gBattlerTarget].personality;
+
+        VarSet(VAR_HUNTER_PET_PID_LO, pid & 0xFFFF);
+        VarSet(VAR_HUNTER_PET_PID_HI, pid >> 16);
+        gBallToDisplay = gLastThrownBall = ITEM_POKE_BALL;
+        gBattleSpritesDataPtr->animationData->isCriticalCapture = FALSE;
+        gBattleSpritesDataPtr->animationData->criticalCaptureSuccess = FALSE;
+        FinalizeCapture();
+    }
+    else
+    {
+        gBattlescriptCurrInstr = BattleScript_TameFailed;
+    }
+}
+
 void BS_SetHunterTrap(void)
 {
     NATIVE_ARGS(const u8 *failInstr);

@@ -529,6 +529,7 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_GJT_KILL_COMMAND]                     = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} sicced {B_DEF_NAME_WITH_PREFIX2}!\nIt is fired up to attack!"),
     [STRINGID_GJT_DISENGAGE]                        = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} disengaged\nand gained Speed!"),
     [STRINGID_GJT_SPIRIT_BOND]                      = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} was soothed by\nthe spirit bond!"),
+    [STRINGID_GJT_TAME_FAIL]                        = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX} resisted the taming!"),
     [STRINGID_GJT_AIMING]                           = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} is taking aim!"),
     [STRINGID_GJT_CELESTIAL]                        = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} aligned\nwith the stars!"),
     [STRINGID_GJT_CELESTIAL_FADED]                  = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s alignment faded!"),
