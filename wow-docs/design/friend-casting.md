@@ -61,7 +61,7 @@ Courtney is not in this game.
 | Sam | Magma (Maxie) | Blood Death Knight; Retribution Paladin in the final showdown | Loves Dragon types. Draft team: Garchomp, Salamence, Cloyster, Dragalge, Miltank |
 | Ed | Aqua (Archie) | Brewmaster Monk; Arms Warrior in the final showdown | Loves "meta" picks |
 | Vel | Bounces between teams | Frost Mage (switches spec every fight); Enhancement Shaman later | Unown. Already partly done (Velithe). Draft team: Venusaur, Weezing, Sinistcha, Breloom, Swampert |
-| Tony | Magma | Marksmanship Hunter | Draft team: Indeedee, Primarina, Skeledirge, Eevee, Ampharos |
+| Tony | Neutral, replaces Steven (no team) | Marksmanship Hunter | Draft team: Indeedee, Primarina, Skeledirge, Eevee, Ampharos |
 | Scott | Norman (done); joins Aqua later for the hideout | Beast Mastery Hunter + a pet (doubles fight is fine) | Already cast as Norman |
 | Flynn | Magma | Arcane Mage | Gigalith, Swoobat, Leavanny |
 | Div | Aqua (with Alms) | Paladin that later becomes Holy Paladin | Already partly done (Slateport museum pair) |
@@ -77,10 +77,12 @@ Courtney is not in this game.
 Other draft league teams in Charlie's table (Charlie, Zoey, Malcolm, Adam) are unassigned; a fan-club "draft league" corner could host them later.
 
 ## Proposed slot assignment (Claude's draft, for Charlie to approve)
-**Team Magma (6 friends):**
+**Neutral:** Tony replaces Steven (33 lines, the biggest non-team slot after the rival). Marksmanship Hunter. Taken out of the Aqua/Magma split.
+
+**Team Magma (5 friends):**
 - Maxie: Sam (19 lines, plot critical, Dragon-heavy team fits the Hideout/Space Center boss role).
-- Tabitha: Tony (11 battle-text lines; Magma Hideout 4F, Mt. Chimney, Space Center).
-- Magma Hideout / Mt. Chimney grunt slots: Flynn and Markus (a few lines each, can be combined across several grunt objects).
+- Tabitha: Flynn (11 battle-text lines; Magma Hideout 4F, Mt. Chimney, Space Center).
+- Magma Hideout / Mt. Chimney grunt slots: Markus (a few lines, can be combined across several grunt objects).
 - Tim and Meg: a recurring doubles pair, best at the Mossdeep Space Center grunt cluster (12 grunts) and a Magma Hideout double battle. Same pattern as Alms and Div.
 
 **Team Aqua (6 friends):**
