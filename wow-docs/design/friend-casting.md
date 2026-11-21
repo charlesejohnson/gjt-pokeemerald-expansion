@@ -55,7 +55,46 @@ Courtney is not in this game.
 3. Matt: one battle, cheap, little screen time.
 4. Grunts: easiest. About 100 slots, one short battle text each. Good for friends with a cameo level of appearance.
 
-## Friend list (Charlie to fill in)
-| Friend | Desired appearance | Assigned slot(s) |
-|---|---|---|
-| | | |
+## Friend list (Charlie, 2026-11-21), most frequent first
+| Friend | Team | Class mon(s) | Favorites / notes |
+|---|---|---|---|
+| Sam | Magma (Maxie) | Blood Death Knight; Retribution Paladin in the final showdown | Loves Dragon types. Draft team: Garchomp, Salamence, Cloyster, Dragalge, Miltank |
+| Ed | Aqua (Archie) | Brewmaster Monk; Arms Warrior in the final showdown | Loves "meta" picks |
+| Vel | Bounces between teams | Frost Mage (switches spec every fight); Enhancement Shaman later | Unown. Already partly done (Velithe). Draft team: Venusaur, Weezing, Sinistcha, Breloom, Swampert |
+| Tony | Magma | Marksmanship Hunter | Draft team: Indeedee, Primarina, Skeledirge, Eevee, Ampharos |
+| Scott | Norman (done); joins Aqua later for the hideout | Beast Mastery Hunter + a pet (doubles fight is fine) | Already cast as Norman |
+| Flynn | Magma | Arcane Mage | Gigalith, Swoobat, Leavanny |
+| Div | Aqua (with Alms) | Paladin that later becomes Holy Paladin | Already partly done (Slateport museum pair) |
+| Alms | Aqua (with Div) | Hunter that later becomes Beast Mastery | Already partly done |
+| Markus | Magma | Elemental Shaman | Totodile, Treecko |
+| Steve | Either | Retribution Paladin | Unknown |
+| Dray | Either | Protection Paladin | Unknown |
+| Tim | Magma (doubles pair with Meg) | Arcane Mage | Draft team: Tinkaton, Slaking, Ludicolo, Alolan Marowak, Blissey |
+| Meg | Magma (doubles pair with Tim) | Restoration Druid | Draft team: Porygon-Z, Typhlosion, Scrafty, Volbeat, Jynx |
+| Chase | Aqua | Frost Mage | Unknown |
+| Austin | Unknown whether already used | n/a | Draft team: Dusknoir, Weavile, Chandelure, Hatterene, Snorlax |
+
+Other draft league teams in Charlie's table (Charlie, Zoey, Malcolm, Adam) are unassigned; a fan-club "draft league" corner could host them later.
+
+## Proposed slot assignment (Claude's draft, for Charlie to approve)
+**Team Magma (6 friends):**
+- Maxie: Sam (19 lines, plot critical, Dragon-heavy team fits the Hideout/Space Center boss role).
+- Tabitha: Tony (11 battle-text lines; Magma Hideout 4F, Mt. Chimney, Space Center).
+- Magma Hideout / Mt. Chimney grunt slots: Flynn and Markus (a few lines each, can be combined across several grunt objects).
+- Tim and Meg: a recurring doubles pair, best at the Mossdeep Space Center grunt cluster (12 grunts) and a Magma Hideout double battle. Same pattern as Alms and Div.
+
+**Team Aqua (6 friends):**
+- Archie: Ed (21 lines).
+- Shelly: Chase (Weather Institute 2F, Seafloor Cavern Room 3).
+- Matt: Steve (Aqua Hideout B2F, one battle) with an extra grunt cameo or two.
+- Dray: Aqua grunt cluster (Slateport / Aqua Hideout), could also be a rival-style cameo.
+- Div and Alms: keep the Slateport museum pair, add Aqua Hideout and Seafloor Cavern rematches.
+- Scott: Norman now; joins Aqua for the hideout later.
+
+**Vel:** Velithe appears on both sides (Petalburg Woods now, a Magma and an Aqua cameo later), so the Frost Mage's spec swap tells the story.
+**Final showdown:** Sam gets a Retribution Paladin, Ed an Arms Warrior (needs the Elite Four / Champion arc to exist).
+
+## Open questions for Charlie
+1. Teams for Flynn, Markus, Steve, Dray, Chase, Div and Alms (they are not in the draft table). Default: their class mon plus their favorites, rounded out by Claude.
+2. Austin: assign a slot, or keep him out?
+3. Approve the slot draft above, or reassign.
