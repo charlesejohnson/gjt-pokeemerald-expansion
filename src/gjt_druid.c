@@ -321,13 +321,14 @@ void DruidTrainer_Begin(void)
 {
     enum Species species = GetMonData(GetChosenDruid(), MON_DATA_SPECIES);
 
-    gSpecialVar_Result = (species >= SPECIES_DRUID && species <= SPECIES_DRUID_BOOMY);
+    gSpecialVar_Result = IsDruidSpecies(species);
 }
 
 void DruidTrainer_PushForms(void)
 {
     enum Species species = GetMonData(GetChosenDruid(), MON_DATA_SPECIES);
 
+    species = NormalizeClassSpecies(species);
     PushMenuItem(sText_BearForm, 1);
     PushMenuItem(sText_CatForm, 2);
     if (species == SPECIES_DRUID_RESTORATION)

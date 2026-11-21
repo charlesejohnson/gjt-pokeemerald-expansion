@@ -11815,8 +11815,8 @@ void BS_DruidShift(void)
     }
 
     if (form == 0 || !IsDruidSpecies(species)
-     || (form == 3 && species != SPECIES_DRUID_RESTORATION)
-     || (form == 4 && species != SPECIES_DRUID_BOOMY)
+     || (form == 3 && NormalizeClassSpecies(species) != SPECIES_DRUID_RESTORATION)
+     || (form == 4 && NormalizeClassSpecies(species) != SPECIES_DRUID_BOOMY)
      || gBattleMons[gBattlerAttacker].volatiles.druidForm == form)
     {
         gBattlescriptCurrInstr = cmd->failInstr;
@@ -12137,7 +12137,7 @@ void BS_CelestialAlignment(void)
     struct BattlePokemon *mon = &gBattleMons[gBattlerAttacker];
     u32 spatk;
 
-    if (mon->species != SPECIES_DRUID_BOOMY || mon->volatiles.celestialTimer)
+    if (NormalizeClassSpecies(mon->species) != SPECIES_DRUID_BOOMY || mon->volatiles.celestialTimer)
     {
         gBattlescriptCurrInstr = cmd->failInstr;
         return;

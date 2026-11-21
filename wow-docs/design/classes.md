@@ -299,5 +299,10 @@ Accelgor art, recolored (green / brown / blue / orange). Evolve: Moon Stone Beas
 - Forced doubles dropped. Idea for the docket: a whole-game **doubles mode**, accepting that singles is a bit weaker for healers and Beast Mastery.
 - Tests: `test/battle/ability/hunter.c`.
 
-## Proposal: three-stage class evolutions (Charlie, 2026-11-21, not built)
-The jump from base form (BST about 370-385) to the spec form (about 525-545) is too big for fight design. Idea: insert a middle form with the same art and ability as the final spec form but about 20% lower stats (around 420-435 BST). Base, then a spec stone, gives the middle form, then a level gives the final form. Open: middle form names, the level for the last step, and learnset handling. Applies to Death Knight, Mage, Warrior, Shaman, Druid, Monk, Paladin and Hunter.
+## Three-stage class evolutions (Charlie, 2026-11-21, built v0.1.45)
+- Base form + spec stone -> **middle form** (same name, art and ability as the final spec form, BST scaled to about 465) -> level **34** (one past the 6th gym cap of 33) -> final spec form. Names are identical; a "+" suffix doesn't fit the 12-char name limit.
+- Middle forms are `SPECIES_<FINAL>_MID`, ids 1612-1636, in the same order as the finals. Stats are the final's stats scaled to 465 total (each stat rounded, min 1).
+- Middle forms keep the stone respec links to the other middle forms of their class.
+- Code that checks for a spec species uses `NormalizeClassSpecies()` (battle_util.c), which maps a middle form to its final. Druid forms, Tree/Owlkin gating, Warrior rage and the Druid trainer use it.
+- Not yet done: dex entries/learnsets are copied from the final; trainer parties still use final forms; Death Knight keeps its old stone evolutions between finals.
+- Save safety: dex flag area is now a fixed 256 bytes, so adding species no longer changes the save layout. `VAR_GJT_SAVE_VERSION` (0x404E) is stamped on load; add upgrade steps in `src/gjt_save_version.c`.

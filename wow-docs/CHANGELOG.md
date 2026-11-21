@@ -2,6 +2,11 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.45
+- **Three-stage class evolutions.** Base + spec stone now gives a middle form (same name/art/ability as the final spec, BST about 465); middle evolves to the final at level 34. 25 new species (ids 1612-1636) covering DK, Mage, Warrior, Shaman, Druid, Monk, Paladin, Hunter.
+- Druid/Warrior species checks go through `NormalizeClassSpecies` so middle forms behave like finals.
+- **Save safety:** dex flag area fixed at 256 bytes (new species no longer shift the save). Added `VAR_GJT_SAVE_VERSION` stamped on load. NOTE: this changes the save layout once, so saves from v0.1.44 and earlier will not load correctly.
+
 ## v0.1.44
 - **Maxie is now SAM, Archie is now ED** (stand-in sprites; names, speaker tags and mentions in other characters' text changed).
 - Sam fields a sun team (Torkoal with Drought, Dragon line, Miltank, Cloyster, Blood DK). Ed fields a rain team (Pelipper with Drizzle, Kingdra, Barraskewda, Brew Monk, Blastoise).

@@ -11379,15 +11379,54 @@ bool32 IsAsleepOrComatose(enum BattlerId battler, enum Ability ability)
     return (gBattleMons[battler].status1 & STATUS1_SLEEP) || ability == ABILITY_COMATOSE;
 }
 
+// GJT: three-stage class evolutions - map a middle form to its final form so species checks keep working.
+static const u16 sClassMidToFinal[] =
+{
+    SPECIES_DEATHKNIGHT_FROST,
+    SPECIES_DEATHKNIGHT_BLOOD,
+    SPECIES_DEATHKNIGHT_UNHOLY,
+    SPECIES_MAGE_FROST,
+    SPECIES_MAGE_FIRE,
+    SPECIES_MAGE_ARCANE,
+    SPECIES_WARRIOR_ARMS,
+    SPECIES_WARRIOR_FURY,
+    SPECIES_WARRIOR_PROTECTION,
+    SPECIES_SHAMAN_RESTORATION,
+    SPECIES_SHAMAN_ENHANCEMENT,
+    SPECIES_SHAMAN_ELEMENTAL,
+    SPECIES_DRUID_RESTORATION,
+    SPECIES_DRUID_FERAL,
+    SPECIES_DRUID_GUARDIAN,
+    SPECIES_DRUID_BOOMY,
+    SPECIES_MONK_MISTWEAVER,
+    SPECIES_MONK_BREWMASTER,
+    SPECIES_MONK_WINDWALKER,
+    SPECIES_PALADIN_PROTECTION,
+    SPECIES_PALADIN_HOLY,
+    SPECIES_PALADIN_RETRIBUTION,
+    SPECIES_HUNTER_BEAST_MASTERY,
+    SPECIES_HUNTER_MARKSMANSHIP,
+    SPECIES_HUNTER_SURVIVAL,
+};
+
+enum Species NormalizeClassSpecies(enum Species species)
+{
+    if (species >= SPECIES_DEATHKNIGHT_FROST_MID && species <= SPECIES_HUNTER_SURVIVAL_MID)
+        return sClassMidToFinal[species - SPECIES_DEATHKNIGHT_FROST_MID];
+    return species;
+}
+
 // GJT: Warrior rage helpers
 bool32 IsDruidSpecies(enum Species species)
 {
+    species = NormalizeClassSpecies(species);
     return species >= SPECIES_DRUID && species <= SPECIES_DRUID_BOOMY;
 }
 
 // GJT: art shown while a Druid is in a form (stage boosts are separate).
 enum Species GetDruidFormSpecies(enum Species base, u32 form)
 {
+    base = NormalizeClassSpecies(base);
     switch (form)
     {
     case 1: return base == SPECIES_DRUID_GUARDIAN ? SPECIES_DRUID_FORM_TORTERRA : SPECIES_DRUID_FORM_GROTLE;
@@ -11411,6 +11450,7 @@ s32 ModifyDruidHealAmount(s32 amount)
 
 bool32 IsWarriorSpecies(enum Species species)
 {
+    species = NormalizeClassSpecies(species);
     return species >= SPECIES_WARRIOR && species <= SPECIES_WARRIOR_PROTECTION;
 }
 

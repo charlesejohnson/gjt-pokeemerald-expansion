@@ -321,6 +321,7 @@ bool32 IsAsleepOrComatose(enum BattlerId battler, enum Ability ability);
 
 
 enum Species GetDruidFormSpecies(enum Species base, u32 form);
+enum Species NormalizeClassSpecies(enum Species species);
 bool32 IsDruidSpecies(enum Species species);
 s32 ModifyDruidHealAmount(s32 amount);
 bool32 IsWarriorSpecies(enum Species species);

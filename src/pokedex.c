@@ -164,6 +164,8 @@ static void ClearSearchParameterBoxText(void);
 // const rom data
 #include "data/pokemon/pokedex_orders.h"
 
+STATIC_ASSERT(ROUND_BITS_TO_BYTES(POKEMON_SLOTS_NUMBER) <= NUM_DEX_FLAG_BYTES, DexFlagReserveTooSmall);
+
 static const struct OamData sOamData_ScrollBar =
 {
     .y = DISPLAY_HEIGHT,

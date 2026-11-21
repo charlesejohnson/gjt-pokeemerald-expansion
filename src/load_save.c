@@ -1,4 +1,5 @@
 #include "global.h"
+#include "gjt_save_version.h"
 #include "malloc.h"
 #include "berry_powder.h"
 #include "fake_rtc.h"
@@ -178,6 +179,7 @@ void SavePlayerParty(void)
 
 void LoadPlayerParty(void)
 {
+    GjtSaveVersion_OnLoad(); // GJT: stamp/upgrade save-format version
     int i;
 
     gPartiesCount[B_TRAINER_PLAYER] = *GetSavedPlayerPartyCount();
