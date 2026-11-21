@@ -26483,4 +26483,314 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .validApprenticeMove = TRUE,
     },
 
+    [MOVE_CONCUSSIVE_SHOT] =
+    {
+        .name = COMPOUND_STRING("Concussive Shot"),
+        .description = COMPOUND_STRING(
+            "A stunning shot that harshly\n"
+            "lowers the target's Speed."),
+        .effect = EFFECT_STAT_CHANGE,
+        .power = 0,
+        .type = TYPE_BUG,
+        .accuracy = 100,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .magicCoatAffected = TRUE,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = STAT_CHANGE_EFFECT_MINUS,
+            .speed = 2,
+        }),
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Screech,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_ARCANE_SHOT] =
+    {
+        .name = COMPOUND_STRING("Arcane Shot"),
+        .description = COMPOUND_STRING(
+            "A shot of arcane energy.\n"
+            "Does not make contact."),
+        .effect = EFFECT_HIT,
+        .power = 50,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 100,
+        .pp = 20,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Psybeam,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_SERPENT_STING] =
+    {
+        .name = COMPOUND_STRING("Serpent Sting"),
+        .description = COMPOUND_STRING(
+            "A venomous sting that\n"
+            "never misses."),
+        .effect = EFFECT_NON_VOLATILE_STATUS,
+        .power = 0,
+        .type = TYPE_POISON,
+        .accuracy = 0,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .argument = { .nonVolatileStatus = MOVE_EFFECT_POISON },
+        .magicCoatAffected = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_PoisonSting,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_RAPTOR_STRIKE] =
+    {
+        .name = COMPOUND_STRING("Raptor Strike"),
+        .description = COMPOUND_STRING(
+            "A swift melee strike."),
+        .effect = EFFECT_HIT,
+        .power = 60,
+        .type = TYPE_FIGHTING,
+        .accuracy = 100,
+        .pp = 20,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_AerialAce,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_STEADY_SHOT] =
+    {
+        .name = COMPOUND_STRING("Steady Shot"),
+        .description = COMPOUND_STRING(
+            "Takes aim on turn one,\n"
+            "then fires a heavy shot."),
+        .effect = EFFECT_TWO_TURNS_ATTACK,
+        .power = 90,
+        .type = TYPE_BUG,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .sleepTalkBanned = TRUE,
+        .instructBanned = TRUE,
+        .argument.twoTurnAttack = { .stringId = STRINGID_GJT_AIMING },
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_PinMissile,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_IMMOLATION_TRAP] =
+    {
+        .name = COMPOUND_STRING("Immolation Trap"),
+        .description = COMPOUND_STRING(
+            "Lays a trap that burns the\n"
+            "next foe to switch in."),
+        .effect = EFFECT_HUNTER_TRAP,
+        .power = 0,
+        .type = TYPE_FIRE,
+        .accuracy = 0,
+        .pp = 10,
+        .target = TARGET_OPPONENTS_FIELD,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Spikes,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_SNAKE_TRAP] =
+    {
+        .name = COMPOUND_STRING("Snake Trap"),
+        .description = COMPOUND_STRING(
+            "Lays a trap that bites and\n"
+            "poisons the next foe in."),
+        .effect = EFFECT_HUNTER_TRAP,
+        .power = 0,
+        .type = TYPE_POISON,
+        .accuracy = 0,
+        .pp = 5,
+        .target = TARGET_OPPONENTS_FIELD,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_ToxicSpikes,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_FREEZING_TRAP] =
+    {
+        .name = COMPOUND_STRING("Freezing Trap"),
+        .description = COMPOUND_STRING(
+            "Lays a trap that freezes\n"
+            "the next foe to switch in."),
+        .effect = EFFECT_HUNTER_TRAP,
+        .power = 0,
+        .type = TYPE_ICE,
+        .accuracy = 0,
+        .pp = 1,
+        .target = TARGET_OPPONENTS_FIELD,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_IcyWind,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_DISENGAGE] =
+    {
+        .name = COMPOUND_STRING("Disengage"),
+        .description = COMPOUND_STRING(
+            "Evades physical attacks\n"
+            "this turn and raises Speed."),
+        .effect = EFFECT_PROTECT,
+        .power = 0,
+        .type = TYPE_BUG,
+        .accuracy = 0,
+        .pp = 10,
+        .target = TARGET_USER,
+        .priority = 4,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .argument = { .protectMethod = PROTECT_DISENGAGE, },
+        .snatchAffected = TRUE,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Agility,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_KILL_COMMAND] =
+    {
+        .name = COMPOUND_STRING("Kill Command"),
+        .description = COMPOUND_STRING(
+            "Sics the ally: +1 Attack\n"
+            "and a Helping Hand boost."),
+        .effect = EFFECT_KILL_COMMAND,
+        .power = 0,
+        .type = TYPE_NORMAL,
+        .accuracy = 0,
+        .pp = 10,
+        .target = TARGET_ALLY,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Howl,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_SNIPER_SHOT] =
+    {
+        .name = COMPOUND_STRING("Sniper Shot"),
+        .description = COMPOUND_STRING(
+            "Takes aim on turn one,\n"
+            "then fires a huge shot."),
+        .effect = EFFECT_TWO_TURNS_ATTACK,
+        .power = 160,
+        .type = TYPE_BUG,
+        .accuracy = 100,
+        .pp = 5,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .sleepTalkBanned = TRUE,
+        .instructBanned = TRUE,
+        .argument.twoTurnAttack = { .stringId = STRINGID_GJT_AIMING },
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_SnipeShot,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_MONGOOSE_BITE] =
+    {
+        .name = COMPOUND_STRING("Mongoose Bite"),
+        .description = COMPOUND_STRING(
+            "Only after your last attack\n"
+            "missed. A sure, fierce bite."),
+        .effect = EFFECT_HIT,
+        .power = 110,
+        .type = TYPE_FIGHTING,
+        .accuracy = 0,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Bite,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_CHIMAERA_SHOT] =
+    {
+        .name = COMPOUND_STRING("Chimaera Shot"),
+        .description = COMPOUND_STRING(
+            "A triple-headed shot. May\n"
+            "poison, paralyze or sleep."),
+        .effect = EFFECT_HIT,
+        .power = 40,
+        .type = TYPE_BUG,
+        .accuracy = 100,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_RANDOM_FROM_LIST,
+            .chance = 30,
+            .argument.randomMoveEffects = { MOVE_EFFECT_POISON, MOVE_EFFECT_PARALYSIS, MOVE_EFFECT_SLEEP },
+        }),
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_SignalBeam,
+        .validApprenticeMove = TRUE,
+    },
+
 };

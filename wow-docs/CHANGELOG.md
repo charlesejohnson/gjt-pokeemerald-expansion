@@ -2,6 +2,11 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.42
+- **Hunter class added** (Accelgor art, recolored). Hunter (Bug, Compound Eyes), Beast Hunter (Spirit Bond), Marks Hunter (Trueshot Aura), Surv Hunter (Bug/Fighting, Relentless Hunter). Khadgar and the test guide hand out Hunter.
+- New moves (954-966): Concussive Shot, Arcane Shot, Serpent Sting, Raptor Strike, Steady Shot, Immolation/Snake/Freezing Trap (consumed on first affected switch-in), Disengage, Kill Command, Sniper Shot, Mongoose Bite (needs a missed attack first), Chimaera Shot.
+- **Tame Beast and forced doubles are not in yet.** Spirit Bond treats the doubles partner as the pet for now. Learnsets are drafts. Tests: `hunter.c` (11).
+
 ## v0.1.41
 - **Paladin class added** (Bisharp art recolored by spec). Species: Paladin (Steel/Fairy, Justified), Prot Paladin (Devotion Aura), Holy Paladin (Concentration Aura), Ret Paladin (Steel/Fire, Retribution Aura). Khadgar and the test guide hand out Paladin.
 - New moves (940-953): Avenger's Shield, Blessing of Kings/Wisdom/Might, Avenging Wrath, Holy Shock, Consecration, Repentance, Holy Strike, Seals of Light/Command/Justice, Judgement, plus a hidden Command Strike.

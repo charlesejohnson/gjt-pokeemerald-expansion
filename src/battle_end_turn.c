@@ -387,6 +387,17 @@ static bool32 HandleEndTurnFirstEventBlock(enum BattlerId battler)
                 BattleScriptCall(BattleScript_HealingStreamHeal);
                 effect = TRUE;
             }
+            else if (IsDoubleBattle()
+             && IsBattlerAlive(GetPartnerBattler(battler))
+             && (GetBattlerAbility(battler) == ABILITY_SPIRIT_BOND || GetBattlerAbility(GetPartnerBattler(battler)) == ABILITY_SPIRIT_BOND)
+             && !gBattleMons[battler].volatiles.healBlockTimer
+             && !IsBattlerAtMaxHp(battler))
+            {
+                gBattlerAttacker = battler;
+                SetHealAmount(battler, max(1, GetNonDynamaxMaxHP(battler) / 8));
+                BattleScriptCall(BattleScript_SpiritBondHeal);
+                effect = TRUE;
+            }
             else if (gSideTimers[foe].searingTimer
              && !IsAbilityAndRecord(battler, GetBattlerAbility(battler), ABILITY_MAGIC_GUARD))
             {

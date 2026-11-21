@@ -391,6 +391,54 @@ static bool32 TryHazardsOnSwitchIn(enum BattlerId battler, enum Ability ability,
             }
         }
         break;
+    case HAZARDS_IMMOLATION_TRAP:
+    case HAZARDS_SNAKE_TRAP:
+    case HAZARDS_FREEZING_TRAP:
+    {
+        bool32 affected = IsBattlerGrounded(battler, ability, holdEffect) && IsBattlerAffectedByHazards(battler, holdEffect, TRUE);
+        bool32 status = FALSE, dmg = FALSE;
+        u32 trapMove = hazardType == HAZARDS_IMMOLATION_TRAP ? MOVE_IMMOLATION_TRAP : (hazardType == HAZARDS_SNAKE_TRAP ? MOVE_SNAKE_TRAP : MOVE_FREEZING_TRAP);
+
+        if (!affected)
+            break;
+        if (hazardType == HAZARDS_IMMOLATION_TRAP && CanBeBurned(battler, battler, ability))
+        {
+            gBattleMons[battler].status1 |= STATUS1_BURN;
+            status = TRUE;
+        }
+        else if (hazardType == HAZARDS_FREEZING_TRAP && CanBeFrozen(battler, battler, ability))
+        {
+            gBattleMons[battler].status1 |= STATUS1_FREEZE;
+            status = TRUE;
+        }
+        else if (hazardType == HAZARDS_SNAKE_TRAP)
+        {
+            if (CanBePoisoned(battler, battler, ABILITY_NONE, ability))
+            {
+                gBattleMons[battler].status1 |= STATUS1_POISON;
+                status = TRUE;
+            }
+            if (!IsAbilityAndRecord(battler, ability, ABILITY_MAGIC_GUARD))
+            {
+                SetPassiveDamageAmount(battler, max(1, GetNonDynamaxMaxHP(battler) / 8));
+                dmg = TRUE;
+            }
+        }
+        if (!status && !dmg)
+            break;
+        if (status)
+        {
+            BtlController_EmitSetMonData(battler, B_COMM_TO_CONTROLLER, REQUEST_STATUS_BATTLE, 0, sizeof(gBattleMons[battler].status1), &gBattleMons[battler].status1);
+            MarkBattlerForControllerExec(battler);
+        }
+        gBattleScripting.battler = battler;
+        PREPARE_MOVE_BUFFER(gBattleTextBuff1, trapMove);
+        RemoveHazardFromField(side, hazardType);
+        clearedToxicSpikes = TRUE; // trap consumed: the queue shifted, so don't advance the counter
+        BattleScriptCall(status && dmg ? BattleScript_SnakeTrapBoth : (dmg ? BattleScript_SnakeTrapDamage : BattleScript_TrapTriggered));
+        effect = TRUE;
+        break;
+    }
     case HAZARDS_MAX_COUNT:
         break;
     }

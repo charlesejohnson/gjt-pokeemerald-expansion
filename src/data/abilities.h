@@ -2687,4 +2687,25 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .aiRating = 7,
     },
 
+    [ABILITY_SPIRIT_BOND] =
+    {
+        .name = _("Spirit Bond"),
+        .description = COMPOUND_STRING("Heals 1/8 each turn\nbeside its pet."),
+        .aiRating = 7,
+    },
+
+    [ABILITY_TRUESHOT_AURA] =
+    {
+        .name = _("Trueshot Aura"),
+        .description = COMPOUND_STRING("Allies deal +25% with\nnon-contact physical."),
+        .aiRating = 7,
+    },
+
+    [ABILITY_RELENTLESS_HUNTER] =
+    {
+        .name = _("Relentless Hntr"),
+        .description = COMPOUND_STRING("+35% damage to foes\nwith a status."),
+        .aiRating = 7,
+    },
+
 };

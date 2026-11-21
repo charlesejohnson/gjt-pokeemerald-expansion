@@ -2148,6 +2148,7 @@ BattleScript_EffectEndure::
 	waitanimation
 	printfromtable gProtectLikeUsedStringIds
 	waitmessage B_WAIT_TIME_LONG
+	callnative BS_DisengageSpeed
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectSpikes::
@@ -6889,3 +6890,59 @@ BattleScript_RetributionAura::
 	datahpupdate BS_SCRIPTING, ASSURANCE_DOUBLE
 	tryfaintmon BS_SCRIPTING
 	return
+
+BattleScript_EffectHunterTrap::
+	attackcanceler
+	callnative BS_SetHunterTrap
+	.4byte BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	printstring STRINGID_GJT_TRAP_SET
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectKillCommand::
+	attackcanceler
+	callnative BS_KillCommand
+	.4byte BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	printstring STRINGID_GJT_KILL_COMMAND
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_DisengageSpeed::
+	printstring STRINGID_GJT_DISENGAGE
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_TrapTriggered::
+	printstring STRINGID_GJT_TRAP_TRIGGER
+	waitmessage B_WAIT_TIME_LONG
+	statusanimation BS_SCRIPTING
+	updatestatusicon BS_SCRIPTING
+	waitstate
+	return
+
+BattleScript_SnakeTrapDamage::
+	printstring STRINGID_GJT_TRAP_TRIGGER
+	waitmessage B_WAIT_TIME_LONG
+	healthbarupdate BS_SCRIPTING
+	datahpupdate BS_SCRIPTING, ASSURANCE_DOUBLE
+	tryfaintmon BS_SCRIPTING
+	return
+
+BattleScript_SnakeTrapBoth::
+	printstring STRINGID_GJT_TRAP_TRIGGER
+	waitmessage B_WAIT_TIME_LONG
+	statusanimation BS_SCRIPTING
+	updatestatusicon BS_SCRIPTING
+	waitstate
+	healthbarupdate BS_SCRIPTING
+	datahpupdate BS_SCRIPTING, ASSURANCE_DOUBLE
+	tryfaintmon BS_SCRIPTING
+	return
+
+BattleScript_SpiritBondHeal::
+	printstring STRINGID_GJT_SPIRIT_BOND
+	goto BattleScript_TurnHeal

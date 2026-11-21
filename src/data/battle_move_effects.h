@@ -1954,6 +1954,18 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
         .battleTvScore = 4,
     },
 
+    [EFFECT_HUNTER_TRAP] =
+    {
+        .battleScript = BattleScript_EffectHunterTrap,
+        .battleTvScore = 3,
+    },
+
+    [EFFECT_KILL_COMMAND] =
+    {
+        .battleScript = BattleScript_EffectKillCommand,
+        .battleTvScore = 3,
+    },
+
     [EFFECT_FEROCIOUS_BITE] =
     {
         .battleScript = BattleScript_EffectHit,

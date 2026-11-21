@@ -11900,6 +11900,53 @@ void BS_TryPlantTotem(void)
     gBattlescriptCurrInstr = cmd->nextInstr;
 }
 
+void BS_SetHunterTrap(void)
+{
+    NATIVE_ARGS(const u8 *failInstr);
+    enum BattleSide foe = GetBattlerSide(gBattlerAttacker) ^ BIT_SIDE;
+    enum Hazards hazard = gCurrentMove == MOVE_IMMOLATION_TRAP ? HAZARDS_IMMOLATION_TRAP
+                        : (gCurrentMove == MOVE_SNAKE_TRAP ? HAZARDS_SNAKE_TRAP : HAZARDS_FREEZING_TRAP);
+
+    if (IsHazardOnSide(foe, hazard) || gBattleStruct->numHazards[foe] >= HAZARDS_MAX_COUNT - 1)
+    {
+        gBattlescriptCurrInstr = cmd->failInstr;
+        return;
+    }
+    PushHazardTypeToQueue(foe, hazard);
+    PREPARE_MOVE_BUFFER(gBattleTextBuff1, gCurrentMove);
+    gBattlescriptCurrInstr = cmd->nextInstr;
+}
+
+void BS_KillCommand(void)
+{
+    NATIVE_ARGS(const u8 *failInstr);
+    enum BattlerId pet = gBattlerTarget;
+
+    if (pet == gBattlerAttacker || !IsBattlerAlive(pet) || !IsBattlerAlly(gBattlerAttacker, pet))
+    {
+        gBattlescriptCurrInstr = cmd->failInstr;
+        return;
+    }
+    if (gBattleMons[pet].statStages[STAT_ATK] < MAX_STAT_STAGE)
+        gBattleMons[pet].statStages[STAT_ATK]++;
+    gProtectStructs[pet].helpingHand++;
+    gBattlescriptCurrInstr = cmd->nextInstr;
+}
+
+void BS_DisengageSpeed(void)
+{
+    NATIVE_ARGS();
+    if (gCurrentMove != MOVE_DISENGAGE)
+    {
+        gBattlescriptCurrInstr = cmd->nextInstr;
+        return;
+    }
+    if (gBattleMons[gBattlerAttacker].statStages[STAT_SPEED] < MAX_STAT_STAGE)
+        gBattleMons[gBattlerAttacker].statStages[STAT_SPEED]++;
+    BattleScriptPush(cmd->nextInstr);
+    gBattlescriptCurrInstr = BattleScript_DisengageSpeed;
+}
+
 void BS_PaladinSeal(void)
 {
     NATIVE_ARGS(const u8 *failInstr);

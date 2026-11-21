@@ -2555,6 +2555,9 @@ static bool32 SetStartingHazardStatus(enum Hazards hazard, u32 targetSide, u8 la
             effect = TRUE;
         }
         break;
+    case HAZARDS_IMMOLATION_TRAP:
+    case HAZARDS_SNAKE_TRAP:
+    case HAZARDS_FREEZING_TRAP:
     case HAZARDS_NONE:
     case HAZARDS_MAX_COUNT:
         break;
@@ -5925,6 +5928,8 @@ bool32 IsBattlerProtected(struct BattleCalcValues *cv)
         isProtected = TRUE;
     else if (gProtectStructs[cv->battlerDef].protected == PROTECT_RING_OF_PEACE && !IsBattleMoveStatus(cv->move))
         isProtected = TRUE;
+    else if (gProtectStructs[cv->battlerDef].protected == PROTECT_DISENGAGE && IsBattleMovePhysical(cv->move))
+        isProtected = TRUE;
     else if (gProtectStructs[cv->battlerDef].protected == PROTECT_SILK_TRAP && !IsBattleMoveStatus(cv->move))
         isProtected = TRUE;
     else if (gProtectStructs[cv->battlerDef].protected == PROTECT_KINGS_SHIELD && !IsBattleMoveStatus(cv->move))
@@ -5966,6 +5971,7 @@ enum ProtectType GetProtectType(enum ProtectMethod method)
     case PROTECT_OBSTRUCT:
     case PROTECT_SILK_TRAP:
     case PROTECT_RING_OF_PEACE:
+    case PROTECT_DISENGAGE:
     case PROTECT_SPELL_REFLECT:
     case PROTECT_MAX_GUARD:
         return PROTECT_TYPE_SINGLE;
@@ -6621,6 +6627,11 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct DamageContext *ctx)
         if (basePower <= 60)
            modifier = uq4_12_multiply(modifier, UQ_4_12(1.5));
         break;
+    case ABILITY_RELENTLESS_HUNTER:
+        // GJT: +35% damage against statused foes
+        if (gBattleMons[battlerDef].status1 != 0)
+           modifier = uq4_12_multiply(modifier, UQ_4_12(1.35));
+        break;
     case ABILITY_COMBO_STRIKES:
         // GJT: +20% damage while not repeating the previous move
         if (move != gLastResultingMoves[battlerAtk])
@@ -6760,6 +6771,11 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct DamageContext *ctx)
         }
 
     }
+
+    // GJT: Trueshot Aura - +25% for non-contact physical moves from the holder's side
+    if (IsBattleMovePhysical(move) && !MoveMakesContact(move)
+     && (ctx->abilities[battlerAtk] == ABILITY_TRUESHOT_AURA || ctx->abilities[GetPartnerBattler(battlerAtk)] == ABILITY_TRUESHOT_AURA))
+        modifier = uq4_12_multiply(modifier, UQ_4_12(1.25));
 
     // attacker partner's abilities
     switch (ctx->abilities[GetPartnerBattler(battlerAtk)])

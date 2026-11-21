@@ -523,6 +523,13 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_GJT_SEAL_HEAL]                        = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} was healed\nby its seal!"),
     [STRINGID_GJT_JUDGEMENT_BLOCK]                  = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX} was judged\nand can't escape!"),
     [STRINGID_GJT_RETRIBUTION]                      = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} was hurt by\nthe retribution aura!"),
+    [STRINGID_GJT_TRAP_SET]                         = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} laid a\n{B_BUFF1}!"),
+    [STRINGID_GJT_TRAP_TRIGGER]                     = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX} triggered a\n{B_BUFF1}!"),
+    [STRINGID_GJT_TRAP_GONE]                        = COMPOUND_STRING("The hunter's traps were swept away!"),
+    [STRINGID_GJT_KILL_COMMAND]                     = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} sicced {B_DEF_NAME_WITH_PREFIX2}!\nIt is fired up to attack!"),
+    [STRINGID_GJT_DISENGAGE]                        = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} disengaged\nand gained Speed!"),
+    [STRINGID_GJT_SPIRIT_BOND]                      = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} was soothed by\nthe spirit bond!"),
+    [STRINGID_GJT_AIMING]                           = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} is taking aim!"),
     [STRINGID_GJT_CELESTIAL]                        = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} aligned\nwith the stars!"),
     [STRINGID_GJT_CELESTIAL_FADED]                  = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s alignment faded!"),
     [STRINGID_GJT_BLOOM_FADED]                      = COMPOUND_STRING("The bloom faded!"),
@@ -1480,6 +1487,9 @@ const u16 gRemoveHazardsStringIds[] =
     [HAZARDS_TOXIC_SPIKES] = STRINGID_TOXICSPIKESDISAPPEAREDFROMTEAM,
     [HAZARDS_STEALTH_ROCK] = STRINGID_STEALTHROCKDISAPPEAREDFROMTEAM,
     [HAZARDS_STEELSURGE] = STRINGID_SHARPSTEELDISAPPEAREDFROMTEAM,
+    [HAZARDS_IMMOLATION_TRAP] = STRINGID_GJT_TRAP_GONE,
+    [HAZARDS_SNAKE_TRAP] = STRINGID_GJT_TRAP_GONE,
+    [HAZARDS_FREEZING_TRAP] = STRINGID_GJT_TRAP_GONE,
 };
 
 const u16 gZenModeStringIds[] =

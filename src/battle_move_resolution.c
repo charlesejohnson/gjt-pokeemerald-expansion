@@ -1196,6 +1196,10 @@ static enum CancelerResult CancelerMoveFailure(struct BattleCalcValues *cv)
      && GetMoveDruidFormRequirement(cv->move) != gBattleMons[cv->battlerAtk].volatiles.druidForm)
         battleScript = BattleScript_ButItFailed;
 
+    // GJT: Mongoose Bite only works right after one of the user's attacks missed
+    if (cv->move == MOVE_MONGOOSE_BITE && !gBattleMons[cv->battlerAtk].volatiles.hunterMissed)
+        battleScript = BattleScript_ButItFailed;
+
     // GJT: Whirling Dragon Punch needs both Rising Sun Kick and Blackout Kick used first
     if (cv->move == MOVE_WHIRLING_DRAGON_PUNCH
      && !(gBattleMons[cv->battlerAtk].volatiles.monkRskUsed && gBattleMons[cv->battlerAtk].volatiles.monkBkUsed))
@@ -3311,7 +3315,7 @@ static enum MoveEndResult MoveEndProtectLikeEffect(struct BattleCalcValues *cv)
 
     if (gProtectStructs[cv->battlerAtk].chargingTurn
      || !IsBattlerAlive(cv->battlerAtk)
-     || (method != PROTECT_SPELL_REFLECT && method != PROTECT_RING_OF_PEACE && CanBattlerAvoidContactEffects(cv->battlerAtk, cv->battlerDef, cv->abilities[cv->battlerAtk], cv->holdEffects[cv->battlerAtk], cv->move)))
+     || (method != PROTECT_SPELL_REFLECT && method != PROTECT_RING_OF_PEACE && method != PROTECT_DISENGAGE && CanBattlerAvoidContactEffects(cv->battlerAtk, cv->battlerDef, cv->abilities[cv->battlerAtk], cv->holdEffects[cv->battlerAtk], cv->move)))
     {
         gBattleScripting.moveendState++;
         return result;
@@ -3411,6 +3415,8 @@ static enum MoveEndResult MoveEndProtectLikeEffect(struct BattleCalcValues *cv)
             BattleScriptCall(BattleScript_KingsShieldEffect);
             result = MOVEEND_RESULT_RUN_SCRIPT;
         }
+        break;
+    case PROTECT_DISENGAGE:
         break;
     case PROTECT_SILK_TRAP:
         gEffectBattler = gBattlerAttacker;
@@ -3531,6 +3537,10 @@ static enum MoveEndResult MoveEndWarriorRage(struct BattleCalcValues *cv)
 
     if (cv->move == MOVE_WARRIOR_CHARGE && !gBattleStruct->unableToUseMove)
         GainWarriorRage(cv->battlerAtk, 5);
+
+    // GJT: remember whether this attack missed (arms Mongoose Bite)
+    if (!IsBattleMoveStatus(cv->move) && !gBattleStruct->unableToUseMove)
+        gBattleMons[cv->battlerAtk].volatiles.hunterMissed = (gBattleStruct->moveResultFlags[cv->battlerDef] & MOVE_RESULT_MISSED) ? 1 : 0;
 
     // GJT: Monk move trackers (Windwalker combo chain, Blackout Kick refunds Rising Sun Kick PP)
     if (!gBattleStruct->unableToUseMove)

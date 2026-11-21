@@ -236,6 +236,7 @@ enum VolatileFlags
     F(VOLATILE_CELESTIAL_TIMER,             celestialTimer,                (u32, 2)) \
     F(VOLATILE_COMBO_POINTS,                comboPoints,                   (u32, 5)) \
     F(VOLATILE_DRUID_FORM,                  druidForm,                     (u32, 4)) \
+    F(VOLATILE_HUNTER_MISSED,               hunterMissed,                  (u32, 1)) \
     F(VOLATILE_PALADIN_SEAL,                paladinSeal,                   (u32, 3)) \
     F(VOLATILE_MONK_RSK_USED,               monkRskUsed,                   (u32, 1)) \
     F(VOLATILE_MONK_BK_USED,                monkBkUsed,                    (u32, 1)) \
@@ -433,6 +434,9 @@ enum Hazards
     HAZARDS_TOXIC_SPIKES,
     HAZARDS_STEALTH_ROCK,
     HAZARDS_STEELSURGE,
+    HAZARDS_IMMOLATION_TRAP,
+    HAZARDS_SNAKE_TRAP,
+    HAZARDS_FREEZING_TRAP,
     HAZARDS_MAX_COUNT,
 };
 
