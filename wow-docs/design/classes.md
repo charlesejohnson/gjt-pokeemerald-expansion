@@ -170,6 +170,39 @@ Starting Monk ability: **Limber**. Art: recolors of Sawk, sea green skin, belt c
 - **Spinning Crane Kick:** hits everyone on the field for 3 x 20 power Fairy physical hits.
 - Monks should learn various physical and special Fairy, Electric and Fighting moves as they level, spaced out appropriately.
 
+## Paladin (design draft, from Charlie 2026-11-21, not implemented)
+
+Holy moves generally map to Fairy. Paladins are slow (not as slow as Death Knights), have good stat totals, and are mixed attackers, so totals go less far. Stat blocks: Claude proposes, Charlie approves.
+
+| Form | Types | Ability |
+|---|---|---|
+| Paladin | (to decide) | (to decide) |
+| Protection Paladin | Steel/Fairy | Devotion Aura |
+| Holy Paladin | Steel/Fairy | Concentration Aura |
+| Retribution Paladin | Steel/Fire | Retribution Aura |
+
+### Auras (abilities)
+- **Devotion Aura (Protection):** all allies take 25% less physical damage.
+- **Concentration Aura (Holy):** all allies cannot have their stats reduced.
+- **Retribution Aura (Retribution):** all allies deal Rocky Helmet style damage to attackers when hit.
+
+### Spec moves
+- **Avenger's Shield (Protection):** hits all enemies, lowers Sp. Atk by 1, 60 power physical.
+- **Blessing of Kings (Protection):** 1 PP, omniboost (all stats +1) on the target.
+- **Holy Shock (Holy):** high crit rate, 65 power special, heals allies or hurts enemies like Pollen Puff.
+- **Blessing of Wisdom (Holy):** 1 PP, restores all PP of the target.
+- **Blessing of Might (Retribution):** 1 PP, +2 Attack on the target.
+- **Avenging Wrath (Retribution):** 1 PP, message "wings of holy light sprout from the {NAME}!", +1 Atk, +1 Sp. Atk, +1 crit rate on the user.
+
+### General Paladin moves
+- **Consecration:** weak fire damage-over-time field effect (maybe 6.25% per turn).
+- **Repentance:** 80% accurate, sleeps the target.
+- **Holy Strike:** 45 power Fairy physical.
+- **Seal of Light:** the user's attacks heal it for 25% of damage dealt.
+- **Seal of Command:** physical hits have a 50% chance to add a 25 power Fairy hit.
+- **Seal of Justice:** physical hits have a 25% chance to put the target to sleep (the stun analogy).
+- **Judgement:** always a 75 power Fairy special move, plus an effect by active seal: Light heals the user 25% max HP, Command deals double damage to sleeping targets, Justice applies a block effect so the target cannot escape.
+
 ## Warrior (design notes, not implemented)
 
 Specs: Arms, Fury, Protection.
