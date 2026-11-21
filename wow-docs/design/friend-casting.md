@@ -129,7 +129,9 @@ Archie fights only once. Suggested fix: give Ed an earlier battle (Slateport Har
 - Text: the `*_Text_Maxie*` and `*_Text_Archie*` labels in each map's `scripts.inc`/`text.inc`.
 - Pics: the trainer and overworld sprites need art for Sam and Ed (not done; ask Charlie).
 
-### Questions
-1. Ed's meta pick and the rest of his team (the draft table has no row for Ed).
-2. Add an early Archie battle?
-3. Sprites for Sam and Ed: use stand-in sprites for now?
+### Built in v0.1.44 (Charlie approved: favorites + rain/sun spin, stand-in sprites, extra Archie battles)
+Trainer names and speaker tags are now **SAM** and **ED** (other characters' dialogue was swapped too, 58 lines). Sprites are stand-ins (Maxie and Archie art).
+- Sam (sun): Mt. Chimney L24-25 Bagon, Gible, Torkoal (Drought), Miltank. Magma Hideout L37-39 Torkoal (Drought), Gabite, Miltank, Blood DK, Cloyster. Mossdeep multi L42-44 Torkoal (Drought), Blood DK, Dragalge.
+- Ed (rain): Seafloor Cavern L41-44 Pelipper (Drizzle), Kingdra, Barraskewda, Brew Monk, Blastoise (Rain Dish).
+- New Ed battles: Slateport Harbor (`TRAINER_ARCHIE_SLATEPORT`, Pelipper 25, Wartortle 27) and Meteor Falls (`TRAINER_ARCHIE_METEOR_FALLS`, Pelipper 31, Barraskewda 32, Wartortle 34). Trainer flag space has 7 spare ids left.
+- Ed's meta picks (Kingdra, Barraskewda) are my guesses. Swap them if he has real favorites. Arms Warrior and Retribution Paladin are for the final showdown.

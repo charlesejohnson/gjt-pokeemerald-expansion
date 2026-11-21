@@ -298,3 +298,6 @@ Accelgor art, recolored (green / brown / blue / orange). Evolve: Moon Stone Beas
 - **Tame Beast** (v0.1.43, Beast Hunter lv 10, 5 PP): wild battles only. Catch chance = a Poké Ball's odds x1.5, no ball used (caught in a Poké Ball). Fails if you already have a pet. The pet is tagged by personality value in two save vars (`VAR_HUNTER_PET_PID_LO/HI`). In battle the pet gets +10% Atk/Def/SpA/SpD/Spe (not HP, so party HP stays consistent) and Spirit Bond replaces its ability. One pet per save; there is no release-and-retame yet.
 - Forced doubles dropped. Idea for the docket: a whole-game **doubles mode**, accepting that singles is a bit weaker for healers and Beast Mastery.
 - Tests: `test/battle/ability/hunter.c`.
+
+## Proposal: three-stage class evolutions (Charlie, 2026-11-21, not built)
+The jump from base form (BST about 370-385) to the spec form (about 525-545) is too big for fight design. Idea: insert a middle form with the same art and ability as the final spec form but about 20% lower stats (around 420-435 BST). Base, then a spec stone, gives the middle form, then a level gives the final form. Open: middle form names, the level for the last step, and learnset handling. Applies to Death Knight, Mage, Warrior, Shaman, Druid, Monk, Paladin and Hunter.

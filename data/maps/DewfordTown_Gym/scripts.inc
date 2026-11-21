@@ -369,7 +369,7 @@ DewfordTown_Gym_Text_BrendenPostBattle:
 
 DewfordTown_Gym_Text_CristianIntro:
 	.string "I am NAZGRIM!\p"
-	.string "Fist of the WARCHIEF and GENERAL\n"
+	.string "Fist of the WEDF and GENERAL\n"
 	.string "of the HORDE army!\p"
 	.string "If I must die today,\n"
 	.string "I will die with honor in battle\p"
@@ -398,7 +398,7 @@ DewfordTown_Gym_Text_ReceivedKnuckleBadge:
 	.string "from BRAWLY.$"
 
 DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis:
-	.string "The WARCHIEF kneels in silence.\p"
+	.string "The WEDF kneels in silence.\p"
 	.string "There is no evidence of BRAWLY\n"
 	.string "returning to his senses.\p"
 	.string "You pick up a small note and badge\n"

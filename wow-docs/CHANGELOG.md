@@ -2,6 +2,11 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.44
+- **Maxie is now SAM, Archie is now ED** (stand-in sprites; names, speaker tags and mentions in other characters' text changed).
+- Sam fields a sun team (Torkoal with Drought, Dragon line, Miltank, Cloyster, Blood DK). Ed fields a rain team (Pelipper with Drizzle, Kingdra, Barraskewda, Brew Monk, Blastoise).
+- Two new Ed battles: Slateport Harbor and Meteor Falls (new trainers 855 and 856).
+
 ## v0.1.43
 - **Tame Beast** (move 967, Beast Hunter learns it at 10): catch a wild Pokémon as your one pet. Odds are a Poké Ball's x1.5, no ball needed. The pet fights with +10% Atk/Def/SpA/SpD/Spe and Spirit Bond. Fails on trainers or if you already have a pet.
 

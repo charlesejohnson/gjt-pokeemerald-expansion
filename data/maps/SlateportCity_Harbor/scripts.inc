@@ -53,6 +53,8 @@ SlateportCity_Harbor_EventScript_AquaEscapeScene::
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	msgbox SlateportCity_Harbor_Text_ArchieYouAgainHideoutInLilycove, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_ARCHIE_SLATEPORT, SlateportCity_Harbor_Text_ArchieDefeat
+	msgbox SlateportCity_Harbor_Text_ArchieAfterDefeat, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_SLATEPORT_HARBOR_GRUNT, SlateportCity_Harbor_Movement_AquaBoardSub
 	applymovement LOCALID_SLATEPORT_HARBOR_ARCHIE, SlateportCity_Harbor_Movement_AquaBoardSub
@@ -446,7 +448,7 @@ SlateportCity_Harbor_Text_SameThugsTriedToRobAtMuseum:
 	.string "the DEVON GOODS at the MUSEUM.$"
 
 SlateportCity_Harbor_Text_ArchieYouAgainHideoutInLilycove:
-	.string "ARCHIE: Oh?\n"
+	.string "ED: Oh?\n"
 	.string "Not you again…\p"
 	.string "You are tenacious to track us here,\n"
 	.string "that much I will give you.\p"
@@ -538,3 +540,12 @@ SlateportCity_Harbor_Text_HandedScannerToStern:
 SlateportCity_Harbor_Text_ThisWillHelpResearch:
 	.string "CAPT. STERN: Thanks, {PLAYER}{KUN}!\n"
 	.string "This will help our research a lot!$"
+
+SlateportCity_Harbor_Text_ArchieDefeat:
+	.string "ED: Hmph…\n"
+	.string "The tide turned on me, just this once.$"
+
+SlateportCity_Harbor_Text_ArchieAfterDefeat:
+	.string "ED: Fine, then.\p"
+	.string "Follow us if you dare.\n"
+	.string "Our HIDEOUT in LILYCOVE awaits.$"
