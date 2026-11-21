@@ -1196,6 +1196,11 @@ static enum CancelerResult CancelerMoveFailure(struct BattleCalcValues *cv)
      && GetMoveDruidFormRequirement(cv->move) != gBattleMons[cv->battlerAtk].volatiles.druidForm)
         battleScript = BattleScript_ButItFailed;
 
+    // GJT: Whirling Dragon Punch needs both Rising Sun Kick and Blackout Kick used first
+    if (cv->move == MOVE_WHIRLING_DRAGON_PUNCH
+     && !(gBattleMons[cv->battlerAtk].volatiles.monkRskUsed && gBattleMons[cv->battlerAtk].volatiles.monkBkUsed))
+        battleScript = BattleScript_ButItFailed;
+
     switch (cv->moveEffect)
     {
     case EFFECT_FLING:
@@ -2715,6 +2720,16 @@ static enum CancelerResult CancelerDamageCalc(struct BattleCalcValues *cv)
         ctx.battlerDef = battlerDef;
         gBattleStruct->moveDamage[battlerDef] = CalculateMoveDamage(&ctx);
 
+        // GJT: Stagger trims incoming damage; a Celestial Brew shield soaks the rest.
+        if (cv->abilities[battlerDef] == ABILITY_STAGGER && gBattleStruct->moveDamage[battlerDef] > 1)
+            gBattleStruct->moveDamage[battlerDef] = gBattleStruct->moveDamage[battlerDef] * 3 / 4;
+        if (gBattleMons[battlerDef].volatiles.monkShield && gBattleStruct->moveDamage[battlerDef] != 0)
+        {
+            u32 absorbed = min((u32)gBattleMons[battlerDef].volatiles.monkShield, (u32)gBattleStruct->moveDamage[battlerDef]);
+            gBattleMons[battlerDef].volatiles.monkShield -= absorbed;
+            gBattleStruct->moveDamage[battlerDef] -= absorbed;
+        }
+
         // GJT: Shield Specialization has a 20% chance to negate physical damage.
         if (cv->abilities[battlerDef] == ABILITY_SHIELD_SPECIALIZATION
          && IsBattleMovePhysical(cv->move)
@@ -3294,7 +3309,7 @@ static enum MoveEndResult MoveEndProtectLikeEffect(struct BattleCalcValues *cv)
 
     if (gProtectStructs[cv->battlerAtk].chargingTurn
      || !IsBattlerAlive(cv->battlerAtk)
-     || (method != PROTECT_SPELL_REFLECT && CanBattlerAvoidContactEffects(cv->battlerAtk, cv->battlerDef, cv->abilities[cv->battlerAtk], cv->holdEffects[cv->battlerAtk], cv->move)))
+     || (method != PROTECT_SPELL_REFLECT && method != PROTECT_RING_OF_PEACE && CanBattlerAvoidContactEffects(cv->battlerAtk, cv->battlerDef, cv->abilities[cv->battlerAtk], cv->holdEffects[cv->battlerAtk], cv->move)))
     {
         gBattleScripting.moveendState++;
         return result;
@@ -3385,6 +3400,15 @@ static enum MoveEndResult MoveEndProtectLikeEffect(struct BattleCalcValues *cv)
         SetStatChange(gEffectBattler, STAT_DEF, -2);
         BattleScriptCall(BattleScript_KingsShieldEffect);
         result = MOVEEND_RESULT_RUN_SCRIPT;
+        break;
+    case PROTECT_RING_OF_PEACE:
+        if (IsBattleMovePhysical(cv->move))
+        {
+            gEffectBattler = gBattlerAttacker;
+            SetStatChange(gEffectBattler, STAT_SPEED, -1);
+            BattleScriptCall(BattleScript_KingsShieldEffect);
+            result = MOVEEND_RESULT_RUN_SCRIPT;
+        }
         break;
     case PROTECT_SILK_TRAP:
         gEffectBattler = gBattlerAttacker;
@@ -3506,6 +3530,38 @@ static enum MoveEndResult MoveEndWarriorRage(struct BattleCalcValues *cv)
     if (cv->move == MOVE_WARRIOR_CHARGE && !gBattleStruct->unableToUseMove)
         GainWarriorRage(cv->battlerAtk, 5);
 
+    // GJT: Monk move trackers (Windwalker combo chain, Blackout Kick refunds Rising Sun Kick PP)
+    if (!gBattleStruct->unableToUseMove)
+    {
+        struct BattlePokemon *monkAtk = &gBattleMons[cv->battlerAtk];
+
+        if (cv->move == MOVE_RISING_SUN_KICK)
+            monkAtk->volatiles.monkRskUsed = TRUE;
+        else if (cv->move == MOVE_BLACKOUT_KICK)
+            monkAtk->volatiles.monkBkUsed = TRUE;
+        else if (cv->move == MOVE_WHIRLING_DRAGON_PUNCH)
+        {
+            monkAtk->volatiles.monkRskUsed = FALSE;
+            monkAtk->volatiles.monkBkUsed = FALSE;
+        }
+
+        if (cv->move == MOVE_BLACKOUT_KICK
+         && IsBattlerTurnDamaged(cv->battlerDef, EXCLUDING_SUBSTITUTES)
+         && RandomPercentage(RNG_SECONDARY_EFFECT, 20))
+        {
+            u32 i;
+            for (i = 0; i < MAX_MON_MOVES; i++)
+            {
+                if (monkAtk->moves[i] == MOVE_RISING_SUN_KICK
+                 && monkAtk->pp[i] < CalculatePPWithBonus(MOVE_RISING_SUN_KICK, monkAtk->ppBonuses, i))
+                {
+                    monkAtk->pp[i]++;
+                    break;
+                }
+            }
+        }
+    }
+
     // GJT: Bear Form builders (Mangle, Thrash) and Cat Form builders (Shred, Rake)
     if (!gBattleStruct->unableToUseMove && IsBattlerTurnDamaged(cv->battlerDef, EXCLUDING_SUBSTITUTES))
     {
@@ -3538,6 +3594,46 @@ static enum MoveEndResult MoveEndWarriorVictory(struct BattleCalcValues *cv)
      && gBattleMons[cv->battlerAtk].volatiles.bonusCritStages < 3)
     {
         gBattleMons[cv->battlerAtk].volatiles.bonusCritStages++;
+    }
+
+    // GJT: Brewmaster Stagger builds a level whenever the holder is hit.
+    if (cv->abilities[cv->battlerDef] == ABILITY_STAGGER
+     && !IsBattlerAlly(cv->battlerAtk, cv->battlerDef)
+     && !gBattleStruct->unableToUseMove
+     && IsBattlerTurnDamaged(cv->battlerDef, EXCLUDING_SUBSTITUTES))
+    {
+        struct BattlePokemon *stag = &gBattleMons[cv->battlerDef];
+        if (stag->volatiles.staggerLevel < 3)
+            stag->volatiles.staggerLevel++;
+        stag->volatiles.staggerHit = TRUE;
+        StaggerUpdateBoost(cv->battlerDef);
+    }
+
+    // GJT: Keg Smash soaks the foe in liquor; Breath of Fire consumes it for a sure burn.
+    if (result == MOVEEND_RESULT_CONTINUE
+     && !gBattleStruct->unableToUseMove
+     && IsBattlerAlive(cv->battlerDef)
+     && !IsBattlerAlly(cv->battlerAtk, cv->battlerDef))
+    {
+        if (cv->move == MOVE_KEG_SMASH && IsBattlerTurnDamaged(cv->battlerDef, EXCLUDING_SUBSTITUTES))
+        {
+            gBattleMons[cv->battlerDef].volatiles.liquor = TRUE;
+            BattleScriptCall(BattleScript_KegSmashLiquor);
+            result = MOVEEND_RESULT_RUN_SCRIPT;
+        }
+        else if (cv->move == MOVE_BREATH_OF_FIRE && gBattleMons[cv->battlerDef].volatiles.liquor)
+        {
+            gBattleMons[cv->battlerDef].volatiles.liquor = FALSE;
+            if (!gBattleMons[cv->battlerDef].status1
+             && CanBeBurned(cv->battlerAtk, cv->battlerDef, GetBattlerAbility(cv->battlerDef)))
+            {
+                gBattleMons[cv->battlerDef].status1 = STATUS1_BURN;
+                gEffectBattler = cv->battlerDef;
+                gBattleCommunication[MULTISTRING_CHOOSER] = 0;
+                BattleScriptCall(BattleScript_LiquorBurn);
+                result = MOVEEND_RESULT_RUN_SCRIPT;
+            }
+        }
     }
 
     gBattleScripting.moveendState++;
@@ -5011,6 +5107,67 @@ static enum MoveEndResult MoveEndFormChange(struct BattleCalcValues *cv)
 static enum MoveEndResult MoveEndLifeOrbShellBell(struct BattleCalcValues *cv)
 {
     enum MoveEndResult result = MOVEEND_RESULT_CONTINUE;
+
+    // GJT: Soothing Mist is a built-in double Shell Bell that heals the weakest party member.
+    if (cv->abilities[cv->battlerAtk] == ABILITY_SOOTHING_MIST
+     && gBattleScripting.savedDmg > 0
+     && !gBattleStruct->unableToUseMove
+     && gBattleStruct->battlerState[cv->battlerAtk].originalBattlerPartyId == PARTY_SIZE
+     && !gBattleMons[cv->battlerAtk].volatiles.healBlockTimer)
+    {
+        struct Pokemon *party = GetBattlerParty(cv->battlerAtk);
+        u32 heal = gBattleScripting.savedDmg / 4;
+        s32 best = -1, bestPct = 101;
+        u32 i;
+
+        if (heal == 0)
+            heal = 1;
+        for (i = 0; i < PARTY_SIZE; i++)
+        {
+            u32 hp = GetMonData(&party[i], MON_DATA_HP);
+            u32 maxHp = GetMonData(&party[i], MON_DATA_MAX_HP);
+            u32 pct;
+
+            if (GetMonData(&party[i], MON_DATA_SPECIES) == SPECIES_NONE
+             || GetMonData(&party[i], MON_DATA_IS_EGG) || hp == 0 || hp >= maxHp)
+                continue;
+            pct = hp * 100 / maxHp;
+            if ((s32)pct < bestPct)
+            {
+                bestPct = pct;
+                best = i;
+            }
+        }
+        if (best >= 0)
+        {
+            enum BattlerId b, active = MAX_BATTLERS_COUNT;
+
+            for (b = 0; b < gBattlersCount; b++)
+            {
+                if (GetBattlerSide(b) == GetBattlerSide(cv->battlerAtk) && gBattlerPartyIndexes[b] == best)
+                    active = b;
+            }
+            if (active != MAX_BATTLERS_COUNT)
+            {
+                gBattlerTarget = active;
+                SetHealAmount(active, heal);
+                BattleScriptCall(BattleScript_SoothingMistActive);
+            }
+            else
+            {
+                u32 hp = GetMonData(&party[best], MON_DATA_HP) + heal;
+                u32 maxHp = GetMonData(&party[best], MON_DATA_MAX_HP);
+
+                if (hp > maxHp)
+                    hp = maxHp;
+                SetMonData(&party[best], MON_DATA_HP, &hp);
+                PREPARE_MON_NICK_BUFFER(gBattleTextBuff1, cv->battlerAtk, best);
+                BattleScriptCall(BattleScript_SoothingMistBench);
+            }
+            gBattleScripting.moveendState++;
+            return MOVEEND_RESULT_RUN_SCRIPT;
+        }
+    }
 
     if (ItemBattleEffects(cv->battlerAtk, 0, cv->holdEffects[cv->battlerAtk], IsLifeOrbShellBellActivation))
         result = MOVEEND_RESULT_RUN_SCRIPT;

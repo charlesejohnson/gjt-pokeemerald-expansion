@@ -6759,3 +6759,59 @@ BattleScript_SurvivalInstincts::
 	healthbarupdate BS_SCRIPTING
 	datahpupdate BS_SCRIPTING, ASSURANCE_DOUBLE
 	return
+
+BattleScript_EffectPurifyingBrew::
+	attackcanceler
+	callnative BS_PurifyingBrew
+	.4byte BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	printstring STRINGID_GJT_PURIFY
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectCelestialBrew::
+	attackcanceler
+	callnative BS_CelestialBrew
+	.4byte BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	printstring STRINGID_GJT_CELESTIAL_BREW
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_KegSmashLiquor::
+	printstring STRINGID_GJT_LIQUOR
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_LiquorBurn::
+	call BattleScript_MoveEffectBurn
+	return
+
+BattleScript_StaggerTick::
+	printstring STRINGID_GJT_STAGGER_TICK
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_DoTurnDmg
+
+BattleScript_EffectLifeCocoon::
+	attackcanceler
+	callnative BS_LifeCocoon
+	.4byte BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	printstring STRINGID_GJT_COCOON
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_SoothingMistActive::
+	printstring STRINGID_GJT_MIST_ACTIVE
+	waitmessage B_WAIT_TIME_LONG
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET, ASSURANCE_IGNORE
+	return
+
+BattleScript_SoothingMistBench::
+	printstring STRINGID_GJT_MIST_BENCH
+	waitmessage B_WAIT_TIME_LONG
+	return

@@ -1912,6 +1912,24 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
         .battleTvScore = 3,
     },
 
+    [EFFECT_PURIFYING_BREW] =
+    {
+        .battleScript = BattleScript_EffectPurifyingBrew,
+        .battleTvScore = 3,
+    },
+
+    [EFFECT_CELESTIAL_BREW] =
+    {
+        .battleScript = BattleScript_EffectCelestialBrew,
+        .battleTvScore = 3,
+    },
+
+    [EFFECT_LIFE_COCOON] =
+    {
+        .battleScript = BattleScript_EffectLifeCocoon,
+        .battleTvScore = 3,
+    },
+
     [EFFECT_FEROCIOUS_BITE] =
     {
         .battleScript = BattleScript_EffectHit,

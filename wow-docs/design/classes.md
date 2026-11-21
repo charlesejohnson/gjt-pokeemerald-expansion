@@ -133,16 +133,16 @@ Every class has a **base form** that evolves at some point into one of **three W
 - **Move management (decided):** moves stay constant across forms. A spec doesn't have to use its own form, so each spec can carry 3 spec moves plus a form move. A Druid trainer NPC with scroll menus to set loadouts comes later (added to docket).
 - **Moves and levels:** drafting in progress (Moonkin, Bear, Cat Form, Shred done; Ferocious Bite proposed: Normal/Grass physical, 10 PP, ~lv24, spends all combo points, power 20 + 20 per point, Cat Form only (confirmed)).
 
-## Monk (design draft, not implemented)
+## Monk (implemented v0.1.40, learnsets are drafts)
 
-Stats and types are decided (Charlie, 2026-11-21). Only Monk and Mistweaver stat lines are in this repo so far; Brewmaster and Windwalker lines still need to be filled in here.
+Stats and types are decided (Charlie, 2026-11-21). Brewmaster and Windwalker stat lines were proposed and approved; Charlie may tweak all stat blocks once every class is done.
 
 | Form | Types | Stats | BST |
 |---|---|---|---|
 | Monk | Fairy | 75 / 65 / 60 / 45 / 55 / 75 | 375 |
 | Mistweaver Monk | Fairy | 100 / 85 / 90 / 70 / 90 / 90 | 525 |
-| Brewmaster Monk | Fire/Fairy | (to fill in) | |
-| Windwalker Monk | Fairy/Fighting | (to fill in) | |
+| Brewmaster Monk | Fire/Fairy | 115 / 95 / 105 / 65 / 95 / 60 | 535 |
+| Windwalker Monk | Fairy/Fighting | 85 / 120 / 80 / 60 / 80 / 115 | 540 |
 
 Starting Monk ability: **Limber**. Art: recolors of Sawk, sea green skin, belt color per spec.
 
@@ -237,3 +237,5 @@ Species: Warrior (Fighting) -> Arms / Fury / Protection (all Fighting/Steel) via
 
 - Druid trainer (v0.1.36): `data/scripts/gjt_druid_trainer.inc` + `DruidTrainer_*` natives in `src/gjt_druid.c`. Uses dynamic multichoice menus (party mon, form, slot, move). `DRUID_SLOT_CLEARED` (0xFFFF) marks a deliberately empty slot. Reached from the test guide until it gets a real map spot.
 - Per-form allowed moves (v0.1.37): lists live in `src/gjt_druid.c` (`sBearMoves` etc.), edit there to change what a form can hold.
+
+**Monk implementation notes (v0.1.40):** Stagger damage cut is 25% (`* 3 / 4` in the damage step of `battle_move_resolution.c`), tune there. Volatiles: `staggerLevel`, `staggerHit`, `staggerBoost`, `liquor`, `brewStacks`, `monkShield` (max 1023), `monkRskUsed`, `monkBkUsed`. Stagger end-turn is `ENDTURN_STAGGER`. Spinning Crane Kick is a single 60-power spread hit (the engine's multi-hit counter is shared across targets). Ring of Peace is a Silk Trap variant (`PROTECT_RING_OF_PEACE`) that triggers on any physical move, not just contact.

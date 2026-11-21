@@ -533,6 +533,30 @@ static bool32 HandleEndTurnRejuvenation(enum BattlerId battler)
     return effect;
 }
 
+// GJT: Stagger burns off as damage; it eases a level each turn the holder was not hit.
+static bool32 HandleEndTurnStagger(enum BattlerId battler)
+{
+    bool32 effect = FALSE;
+    struct BattlePokemon *mon = &gBattleMons[battler];
+
+    gBattleStruct->eventState.endTurnBattler++;
+
+    if (mon->volatiles.staggerLevel && IsBattlerPresent(battler))
+    {
+        u32 divisor = (mon->volatiles.staggerLevel == 1) ? 16 : (mon->volatiles.staggerLevel == 2) ? 8 : 4;
+
+        SetPassiveDamageAmount(battler, GetNonDynamaxMaxHP(battler) / divisor);
+        if (!mon->volatiles.staggerHit)
+            mon->volatiles.staggerLevel--;
+        StaggerUpdateBoost(battler);
+        BattleScriptCall(BattleScript_StaggerTick);
+        effect = TRUE;
+    }
+    mon->volatiles.staggerHit = FALSE;
+
+    return effect;
+}
+
 static bool32 HandleEndTurnCelestial(enum BattlerId battler)
 {
     bool32 effect = FALSE;
@@ -1710,6 +1734,7 @@ static bool32 (*const sEndTurnEffectHandlers[])(enum BattlerId battler) =
     [ENDTURN_RIPTIDE] = HandleEndTurnRiptide,
     [ENDTURN_REJUVENATION] = HandleEndTurnRejuvenation,
     [ENDTURN_CELESTIAL] = HandleEndTurnCelestial,
+    [ENDTURN_STAGGER] = HandleEndTurnStagger,
     [ENDTURN_INGRAIN] = HandleEndTurnIngrain,
     [ENDTURN_LEECH_SEED] = HandleEndTurnLeechSeed,
     [ENDTURN_POISON] = HandleEndTurnPoison,

@@ -12706,3 +12706,62 @@ void BS_TryDoMoveEffectsBeforeMoves(void)
 
     gBattlescriptCurrInstr = cmd->nextInstr;
 }
+
+
+// GJT: Purifying Brew clears all stagger and banks it for Celestial Brew.
+void BS_PurifyingBrew(void)
+{
+    NATIVE_ARGS(const u8 *failInstr);
+    struct BattlePokemon *mon = &gBattleMons[gBattlerAttacker];
+    u32 stacks;
+
+    if (mon->volatiles.staggerLevel == 0)
+    {
+        gBattlescriptCurrInstr = cmd->failInstr;
+        return;
+    }
+    stacks = mon->volatiles.brewStacks + mon->volatiles.staggerLevel;
+    mon->volatiles.brewStacks = (stacks > 3) ? 3 : stacks;
+    mon->volatiles.staggerLevel = 0;
+    mon->volatiles.staggerHit = FALSE;
+    StaggerUpdateBoost(gBattlerAttacker);
+    gBattlescriptCurrInstr = cmd->nextInstr;
+}
+
+// GJT: Celestial Brew wraps the user in a shield worth 25/50/100% max HP by banked stacks.
+void BS_CelestialBrew(void)
+{
+    NATIVE_ARGS(const u8 *failInstr);
+    struct BattlePokemon *mon = &gBattleMons[gBattlerAttacker];
+    u32 pct, shield;
+
+    if (mon->volatiles.brewStacks == 0)
+    {
+        gBattlescriptCurrInstr = cmd->failInstr;
+        return;
+    }
+    pct = (mon->volatiles.brewStacks == 1) ? 25 : (mon->volatiles.brewStacks == 2) ? 50 : 100;
+    shield = GetNonDynamaxMaxHP(gBattlerAttacker) * pct / 100;
+    mon->volatiles.monkShield = (shield > 1023) ? 1023 : shield;
+    mon->volatiles.brewStacks = 0;
+    gBattlescriptCurrInstr = cmd->nextInstr;
+}
+
+// GJT: Life Cocoon gives the target a free Substitute and Aqua Ring.
+void BS_LifeCocoon(void)
+{
+    NATIVE_ARGS(const u8 *failInstr);
+    struct BattlePokemon *mon = &gBattleMons[gBattlerTarget];
+    u32 hp;
+
+    if (!IsBattlerAlive(gBattlerTarget) || mon->volatiles.substitute)
+    {
+        gBattlescriptCurrInstr = cmd->failInstr;
+        return;
+    }
+    hp = GetNonDynamaxMaxHP(gBattlerTarget) / 4;
+    mon->volatiles.substitute = TRUE;
+    mon->volatiles.substituteHP = (hp > UINT8_MAX) ? UINT8_MAX : (hp ? hp : 1);
+    mon->volatiles.aquaRing = TRUE;
+    gBattlescriptCurrInstr = cmd->nextInstr;
+}

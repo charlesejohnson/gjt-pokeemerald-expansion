@@ -1129,6 +1129,7 @@ static const struct MenuAction MultichoiceList_ClassSelect[] =
     {COMPOUND_STRING("WARRIOR")},
     {COMPOUND_STRING("SHAMAN")},
     {COMPOUND_STRING("DRUID")},
+    {COMPOUND_STRING("MONK")},
     {gText_Exit},
 };
 

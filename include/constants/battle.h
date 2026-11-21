@@ -236,6 +236,14 @@ enum VolatileFlags
     F(VOLATILE_CELESTIAL_TIMER,             celestialTimer,                (u32, 2)) \
     F(VOLATILE_COMBO_POINTS,                comboPoints,                   (u32, 5)) \
     F(VOLATILE_DRUID_FORM,                  druidForm,                     (u32, 4)) \
+    F(VOLATILE_MONK_RSK_USED,               monkRskUsed,                   (u32, 1)) \
+    F(VOLATILE_MONK_BK_USED,                monkBkUsed,                    (u32, 1)) \
+    F(VOLATILE_STAGGER_LEVEL,               staggerLevel,                  (u32, 3)) \
+    F(VOLATILE_STAGGER_HIT,                 staggerHit,                    (u32, 1)) \
+    F(VOLATILE_STAGGER_BOOST,               staggerBoost,                  (u32, 1)) \
+    F(VOLATILE_LIQUOR,                      liquor,                        (u32, 1)) \
+    F(VOLATILE_BREW_STACKS,                 brewStacks,                    (u32, 3)) \
+    F(VOLATILE_MONK_SHIELD,                 monkShield,                    (u32, 1023)) \
     F(VOLATILE_PREDATORY_SWIFTNESS,         predatorySwiftness,            (u32, 1)) \
     F(VOLATILE_SURVIVAL_INSTINCTS_USED,     survivalInstinctsUsed,         (u32, 1)) \
     F(VOLATILE_SEMI_INVULNERABLE,           semiInvulnerable,              (enum SemiInvulnerableState, SEMI_INVULNERABLE_COUNT)) \

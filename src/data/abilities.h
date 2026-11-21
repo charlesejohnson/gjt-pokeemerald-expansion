@@ -2645,4 +2645,25 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .aiRating = 7,
     },
 
+    [ABILITY_STAGGER] =
+    {
+        .name = _("Stagger"),
+        .description = COMPOUND_STRING("Hits build up and then\nburn off as damage."),
+        .aiRating = 7,
+    },
+
+    [ABILITY_SOOTHING_MIST] =
+    {
+        .name = _("Soothing Mist"),
+        .description = COMPOUND_STRING("Damage dealt heals the\nweakest ally."),
+        .aiRating = 7,
+    },
+
+    [ABILITY_COMBO_STRIKES] =
+    {
+        .name = _("Combo Strikes"),
+        .description = COMPOUND_STRING("Never repeating a move\nboosts damage 20%."),
+        .aiRating = 7,
+    },
+
 };

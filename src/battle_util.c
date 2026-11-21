@@ -5923,6 +5923,8 @@ bool32 IsBattlerProtected(struct BattleCalcValues *cv)
         isProtected = TRUE;
     else if (gProtectStructs[cv->battlerDef].protected == PROTECT_OBSTRUCT && !IsBattleMoveStatus(cv->move))
         isProtected = TRUE;
+    else if (gProtectStructs[cv->battlerDef].protected == PROTECT_RING_OF_PEACE && !IsBattleMoveStatus(cv->move))
+        isProtected = TRUE;
     else if (gProtectStructs[cv->battlerDef].protected == PROTECT_SILK_TRAP && !IsBattleMoveStatus(cv->move))
         isProtected = TRUE;
     else if (gProtectStructs[cv->battlerDef].protected == PROTECT_KINGS_SHIELD && !IsBattleMoveStatus(cv->move))
@@ -5963,6 +5965,7 @@ enum ProtectType GetProtectType(enum ProtectMethod method)
     case PROTECT_BURNING_BULWARK:
     case PROTECT_OBSTRUCT:
     case PROTECT_SILK_TRAP:
+    case PROTECT_RING_OF_PEACE:
     case PROTECT_SPELL_REFLECT:
     case PROTECT_MAX_GUARD:
         return PROTECT_TYPE_SINGLE;
@@ -6613,6 +6616,11 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct DamageContext *ctx)
     case ABILITY_TECHNICIAN:
         if (basePower <= 60)
            modifier = uq4_12_multiply(modifier, UQ_4_12(1.5));
+        break;
+    case ABILITY_COMBO_STRIKES:
+        // GJT: +20% damage while not repeating the previous move
+        if (move != gLastResultingMoves[battlerAtk])
+           modifier = uq4_12_multiply(modifier, UQ_4_12(1.2));
         break;
     case ABILITY_ECLIPSE:
         // GJT: Grass moves are boosted on even turns, Fairy moves on odd turns.
@@ -11443,4 +11451,28 @@ void GainWarriorRage(enum BattlerId battler, u32 amount)
         return;
     rage = gBattleMons[battler].volatiles.warriorRage + amount;
     gBattleMons[battler].volatiles.warriorRage = (rage > 10) ? 10 : rage;
+}
+
+
+// GJT: Brewmaster Stagger at level 3 grants +1 Atk and +1 Speed while it lasts.
+void StaggerUpdateBoost(enum BattlerId battler)
+{
+    struct BattlePokemon *mon = &gBattleMons[battler];
+
+    if (mon->volatiles.staggerLevel >= 3 && !mon->volatiles.staggerBoost)
+    {
+        mon->volatiles.staggerBoost = TRUE;
+        if (mon->statStages[STAT_ATK] < MAX_STAT_STAGE)
+            mon->statStages[STAT_ATK]++;
+        if (mon->statStages[STAT_SPEED] < MAX_STAT_STAGE)
+            mon->statStages[STAT_SPEED]++;
+    }
+    else if (mon->volatiles.staggerLevel < 3 && mon->volatiles.staggerBoost)
+    {
+        mon->volatiles.staggerBoost = FALSE;
+        if (mon->statStages[STAT_ATK] > MIN_STAT_STAGE)
+            mon->statStages[STAT_ATK]--;
+        if (mon->statStages[STAT_SPEED] > MIN_STAT_STAGE)
+            mon->statStages[STAT_SPEED]--;
+    }
 }

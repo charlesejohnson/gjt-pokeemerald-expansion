@@ -25873,4 +25873,296 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .validApprenticeMove = TRUE,
     },
 
+    [MOVE_TIGER_PALM] =
+    {
+        .name = COMPOUND_STRING("Tiger Palm"),
+        .description = COMPOUND_STRING(
+            "A quick palm strike.\n"
+            "May paralyze."),
+        .effect = EFFECT_HIT,
+        .power = 35,
+        .type = TYPE_FAIRY,
+        .accuracy = 100,
+        .pp = 25,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_PARALYSIS,
+            .chance = 30,
+        }),
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_ForcePalm,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_RISING_SUN_KICK] =
+    {
+        .name = COMPOUND_STRING("Rising Sun Kick"),
+        .description = COMPOUND_STRING(
+            "A soaring heavy kick.\n"
+            "Few uses; Blackout Kick helps."),
+        .effect = EFFECT_HIT,
+        .power = 90,
+        .type = TYPE_FAIRY,
+        .accuracy = 100,
+        .pp = 2,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_HighJumpKick,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_BLACKOUT_KICK] =
+    {
+        .name = COMPOUND_STRING("Blackout Kick"),
+        .description = COMPOUND_STRING(
+            "Kicks twice. Each hit may\n"
+            "refill Rising Sun Kick PP."),
+        .effect = EFFECT_HIT,
+        .power = 25,
+        .type = TYPE_FIGHTING,
+        .accuracy = 100,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .strikeCount = 2,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_DoubleKick,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_SPINNING_CRANE_KICK] =
+    {
+        .name = COMPOUND_STRING("Spin. Crane Kick"),
+        .description = COMPOUND_STRING(
+            "A whirling kick that hits\n"
+            "everyone else on the field."),
+        .effect = EFFECT_HIT,
+        .power = 60,
+        .type = TYPE_FAIRY,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_FOES_AND_ALLY,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_RollingKick,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_JADE_LIGHTNING] =
+    {
+        .name = COMPOUND_STRING("Jade Lightning"),
+        .description = COMPOUND_STRING(
+            "Lightning laced with jade.\n"
+            "May paralyze."),
+        .effect = EFFECT_HIT,
+        .power = 80,
+        .type = TYPE_ELECTRIC,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_PARALYSIS,
+            .chance = 30,
+        }),
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_ThunderShock,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_WHIRLING_DRAGON_PUNCH] =
+    {
+        .name = COMPOUND_STRING("Whirling Dragon"),
+        .description = COMPOUND_STRING(
+            "Needs Rising Sun Kick and\n"
+            "Blackout Kick used first."),
+        .effect = EFFECT_HIT,
+        .power = 110,
+        .type = TYPE_FIGHTING,
+        .accuracy = 100,
+        .pp = 5,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_DynamicPunch,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_KEG_SMASH] =
+    {
+        .name = COMPOUND_STRING("Keg Smash"),
+        .description = COMPOUND_STRING(
+            "Smashes a keg over the foe.\n"
+            "Lowers accuracy; soaks it."),
+        .effect = EFFECT_HIT,
+        .power = 60,
+        .type = TYPE_FIRE,
+        .accuracy = 100,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_STAT_MINUS,
+            .accuracy = 1,
+            .chance = 100,
+        }),
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Slam,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_BREATH_OF_FIRE] =
+    {
+        .name = COMPOUND_STRING("Breath of Fire"),
+        .description = COMPOUND_STRING(
+            "Exhales flame. May burn,\n"
+            "always if soaked in liquor."),
+        .effect = EFFECT_HIT,
+        .power = 40,
+        .type = TYPE_FIRE,
+        .accuracy = 100,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_BURN,
+            .chance = 35,
+        }),
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Flamethrower,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_PURIFYING_BREW] =
+    {
+        .name = COMPOUND_STRING("Purifying Brew"),
+        .description = COMPOUND_STRING(
+            "Clears all stagger and\n"
+            "banks it for Celestial Brew."),
+        .effect = EFFECT_PURIFYING_BREW,
+        .power = 0,
+        .type = TYPE_FAIRY,
+        .accuracy = 0,
+        .pp = 10,
+        .target = TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Detect,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_CELESTIAL_BREW] =
+    {
+        .name = COMPOUND_STRING("Celestial Brew"),
+        .description = COMPOUND_STRING(
+            "Shields the user based on\n"
+            "stagger purged. Lasts a fight."),
+        .effect = EFFECT_CELESTIAL_BREW,
+        .power = 0,
+        .type = TYPE_FAIRY,
+        .accuracy = 0,
+        .pp = 10,
+        .target = TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Aromatherapy,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_LIFE_COCOON] =
+    {
+        .name = COMPOUND_STRING("Life Cocoon"),
+        .description = COMPOUND_STRING(
+            "Wraps a Pokémon in a cocoon:\n"
+            "Substitute and Aqua Ring."),
+        .effect = EFFECT_LIFE_COCOON,
+        .power = 0,
+        .type = TYPE_FAIRY,
+        .accuracy = 0,
+        .pp = 1,
+        .target = TARGET_USER_OR_ALLY,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .ignoresProtect = TRUE,
+        .metronomeBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_BEAUTIFUL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Substitute,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_RING_OF_PEACE] =
+    {
+        .name = COMPOUND_STRING("Ring of Peace"),
+        .description = COMPOUND_STRING(
+            "Protects. Physical attackers\n"
+            "lose 1 Speed."),
+        .effect = EFFECT_PROTECT,
+        .power = 0,
+        .type = TYPE_FAIRY,
+        .accuracy = 0,
+        .pp = 10,
+        .target = TARGET_USER,
+        .priority = 4,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .argument = { .protectMethod = PROTECT_RING_OF_PEACE },
+        .metronomeBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Protect,
+        .validApprenticeMove = TRUE,
+    },
+
 };

@@ -141,6 +141,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_AgreeToSeeRival::
 	case 2, LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveWARRIOR
 	case 3, LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveSHAMAN
 	case 4, LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveDRUID
+	case 5, LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveMONK
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_GoMeetKid, MSGBOX_DEFAULT
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_ClassExplanation, MSGBOX_DEFAULT
 
@@ -1173,6 +1174,52 @@ LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedDRUIDFanfare::
 	return
 
 LittlerootTown_ProfessorBirchsLab_EventScript_FinishReceivingDRUID::
+	setvar VAR_FOSSIL_RESURRECTION_STATE, 0
+	setflag FLAG_RECEIVED_REVIVED_FOSSIL_MON
+	release
+	end
+
+
+LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveMONK::
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_MONK
+	givemon SPECIES_MONK, 5
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveMONKParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveMONKPC
+	goto Common_EventScript_NoMoreRoomForPokemon
+	end
+LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveMONKParty::
+	call LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedMONKFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_FinishReceivingMONK
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_FinishReceivingMONK
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveMONKPC::
+	call LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedMONKFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_TransferMONKToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_TransferMONKToPC
+	end
+
+
+LittlerootTown_ProfessorBirchsLab_EventScript_TransferMONKToPC::
+	call Common_EventScript_TransferredToPC
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_FinishReceivingMONK
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedMONKFanfare::
+	bufferspeciesname STR_VAR_2, SPECIES_MONK
+	playfanfare MUS_OBTAIN_ITEM
+	message LittlerootTown_ProfessorBirchsLab_Text_ReceivedMonFromResearcher
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_MONK
+	return
+
+LittlerootTown_ProfessorBirchsLab_EventScript_FinishReceivingMONK::
 	setvar VAR_FOSSIL_RESURRECTION_STATE, 0
 	setflag FLAG_RECEIVED_REVIVED_FOSSIL_MON
 	release

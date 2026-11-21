@@ -119,6 +119,8 @@ GJT_TestWarp_EventScript_WowMons::
 	goto_if_eq VAR_RESULT, MON_CANT_GIVE, Common_EventScript_NoMoreRoomForPokemon
 	givemon SPECIES_DRUID, 5
 	goto_if_eq VAR_RESULT, MON_CANT_GIVE, Common_EventScript_NoMoreRoomForPokemon
+	givemon SPECIES_MONK, 5
+	goto_if_eq VAR_RESULT, MON_CANT_GIVE, Common_EventScript_NoMoreRoomForPokemon
 	playfanfare MUS_OBTAIN_ITEM
 	msgbox GJT_TestWarp_Text_GaveMons, MSGBOX_DEFAULT
 	waitfanfare
