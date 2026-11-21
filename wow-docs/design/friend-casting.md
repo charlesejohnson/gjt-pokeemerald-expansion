@@ -101,3 +101,35 @@ Other draft league teams in Charlie's table (Charlie, Zoey, Malcolm, Adam) are u
 - Teams for the friends not in the draft table: Claude builds them (class mon plus favorites, rounded out).
 - **Postgame area (later):** every friend appears there at their strongest.
 - **Draft league place (later):** Austin and the other unlisted draft league members (Charlie, Zoey, Malcolm, Adam, others) get a slot in an in-game draft league venue. Candidate location: replace the Slateport beach challenge room. Not implemented yet.
+
+## Mapping: Maxie (Sam) and Archie (Ed)
+Ed also loves the **Blastoise line**, so Archie's ace is Blastoise. Levels below keep each fight's current level curve. Species names follow the repo (`SPECIES_DEATHKNIGHT_BLOOD`, `SPECIES_MONK_BREWMASTER`, ...). Teams are Claude's draft.
+
+### Maxie → Sam (3 battles, 7 map appearances, about 19 lines)
+| Order | Map | Script / trainer | Now | Draft team |
+|---|---|---|---|---|
+| 1 | Magma Hideout 4F | `MagmaHideout_4F_EventScript_Maxie`, `TRAINER_MAXIE_MAGMA_HIDEOUT` (5 text boxes) | Mightyena 37, Crobat 38, Camerupt 39 | Gabite 37, Blood Death Knight 38, Cloyster 39 |
+| 2 | Mt. Chimney | `MtChimney_EventScript_Maxie`, `TRAINER_MAXIE_MT_CHIMNEY` (Archie cameo in the same map) | Mightyena 24, Zubat 24, Camerupt 25 | Bagon 24, Gible 24, Miltank 25 |
+| 3 | Mossdeep Space Center 2F | `MossdeepCity_SpaceCenter_2F_EventScript_Maxie`, `TRAINER_MAXIE_MOSSDEEP` (2v2 with Tabitha, so Sam + Flynn) | Mightyena 42, Crobat 43, Camerupt 44 | Shelgon 42, Blood Death Knight 43, Dragalge 44 |
+| cutscene | Mt. Pyre Summit, Route 128, Sootopolis City (also Seafloor Cavern, Meteor Falls cameos) | `MtPyre_Summit_*`, `Route128_*`, `SootopolisCity_EventScript_Maxie*` | no battle | text only |
+
+Note: the Mt. Chimney fight comes first in the game's order (Mt. Chimney before the Hideout is how the story runs), so the L24 team is the earliest Sam sees; Salamence/Garchomp themselves wait for the postgame full team plus the Retribution Paladin.
+
+### Archie → Ed (1 battle, 7 map appearances, about 21 lines)
+| Order | Map | Script / trainer | Now | Draft team |
+|---|---|---|---|---|
+| cameo | Slateport Harbor | `SlateportCity_Harbor_EventScript_*Archie*` | text only | text only |
+| cameo | Mt. Chimney, Meteor Falls 1F, Mt. Pyre Summit, Route 128, Sootopolis | various | text only | text only |
+| 1 (only battle) | Seafloor Cavern Room 9 (14 labels, the longest chunk) | `SeafloorCavern_Room9_EventScript_ArchieAwakenKyogre`, `TRAINER_ARCHIE` | Mightyena 41, Crobat 41, Sharpedo 43 | Brewmaster Monk 41, a meta pick 41, Blastoise 43 |
+
+Archie fights only once. Suggested fix: give Ed an earlier battle (Slateport Harbor or Meteor Falls, a Wartortle) so he is not just cutscenes until the cavern.
+
+### What the swap changes in code and text
+- Trainer rows: `src/data/trainers.party` (`Name:`, `Pic:`, party), then regenerate `trainers.h`.
+- Text: the `*_Text_Maxie*` and `*_Text_Archie*` labels in each map's `scripts.inc`/`text.inc`.
+- Pics: the trainer and overworld sprites need art for Sam and Ed (not done; ask Charlie).
+
+### Questions
+1. Ed's meta pick and the rest of his team (the draft table has no row for Ed).
+2. Add an early Archie battle?
+3. Sprites for Sam and Ed: use stand-in sprites for now?
