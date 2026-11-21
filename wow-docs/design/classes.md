@@ -135,12 +135,40 @@ Every class has a **base form** that evolves at some point into one of **three W
 
 ## Monk (design draft, not implemented)
 
+Stats and types are decided (Charlie, 2026-11-21). Only Monk and Mistweaver stat lines are in this repo so far; Brewmaster and Windwalker lines still need to be filled in here.
+
 | Form | Types | Stats | BST |
 |---|---|---|---|
 | Monk | Fairy | 75 / 65 / 60 / 45 / 55 / 75 | 375 |
 | Mistweaver Monk | Fairy | 100 / 85 / 90 / 70 / 90 / 90 | 525 |
-| Brewmaster Monk | Fairy/Fire | not filled in | |
-| Windwalker Monk | Fairy/Fighting | not filled in | |
+| Brewmaster Monk | Fire/Fairy | (to fill in) | |
+| Windwalker Monk | Fairy/Fighting | (to fill in) | |
+
+Starting Monk ability: **Limber**. Art: recolors of Sawk, sea green skin, belt color per spec.
+
+### Brewmaster (Fire/Fairy)
+- **Ability, Stagger:** 50% of damage taken is applied as a DoT. Charlie's simpler alternative: flat damage reduction, and each hit adds a stagger level (max 3), each level raising the DoT per turn (1/16, 1/8, 1/4 max HP). At max stagger the user gets +1 Atk and +1 Speed while it lasts. Pick whichever is easier to build.
+- **Keg Smash:** 60 power, physical, lowers foe accuracy by 1.
+- **Breath of Fire:** 40 power, special, 35% burn, 100% if the target is staggered (WoW: if the target has Keg Smash applied; ask).
+- **Purifying Brew:** clears all stagger to 0. Each level cleared is tracked for Celestial Brew.
+- **Celestial Brew:** heals by stacks cleared (25% / 50% / 100%), then resets the tracker. Question: can it go above max HP? In WoW it is a shield. If heal-above-cap is hard, a shield volatile or a plain heal is fine.
+
+### Mistweaver (Fairy)
+- **Ability:** built-in Shell Bell that heals the lowest-health ally (may be too hard; fall back to self). Perhaps 2x Shell Bell since Monk damage is low.
+- **Life Cocoon:** applies Substitute and Aqua Ring to the target, 1 PP.
+- **Jade Lightning:** special, 80 power, Electric, 30% paralysis.
+
+### Windwalker (Fairy/Fighting)
+- **Ability:** deals 20% more damage as long as the user does not use the same move twice in a row.
+- **Whirling Dragon Punch:** 110 power, Fighting, single target. Only usable once Blackout Kick and Rising Sun Kick have both been used (like Last Resort). On use, resets the usage trackers of Blackout Kick and Rising Sun Kick.
+
+### General Monk moves
+- **Tiger Palm:** Fairy, 35 power, physical, 30% paralysis.
+- **Rising Sun Kick:** Fairy, 90 power, physical, 1 or 2 PP.
+- **Blackout Kick:** Fighting, 25 power, hits twice, each hit has a 20% chance to restore 1 PP of Rising Sun Kick.
+- **Ring of Peace:** protects; if hit by a physical move during it, the attacker loses 1 Speed (like Baneful Bunker or Burning Bulwark).
+- **Spinning Crane Kick:** hits everyone on the field for 3 x 20 power Fairy physical hits.
+- Monks should learn various physical and special Fairy, Electric and Fighting moves as they level, spaced out appropriately.
 
 ## Warrior (design notes, not implemented)
 
