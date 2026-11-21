@@ -2,6 +2,9 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## Tooling (no ROM): mandatory-trainer finder
+- `wow-tools/mandatory_trainers.py` finds which trainers are unavoidable between a map's entrances/exits (path search that avoids sight lines). `MAP_X` for one map, `--all` writes `wow-docs/design/mandatory-trainers.md` (scan of every map). Limits: per-map only (multi-floor dungeons need manual chaining), ledges one-way, water/NPCs block, elevation and bridges ignored.
+
 ## v0.1.47
 - **Trainer pass retuned (v0.1.46 was too hard).** Held items are now scarce: none below level 20; level 20-34 only some aces (Sitrus Berry/Leftovers); level 35+ aces get Life Orb/Leftovers, some unevolved mons Eviolite, a few Sitrus Berries. Extra mons now only go to trainers with 2 or fewer mons whose top level is 15+ (so early routes are unchanged).
 
