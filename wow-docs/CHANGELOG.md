@@ -2,6 +2,11 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.48
+- **Encounter tables rebuilt** from the new species/stage/rarity list (`wow-docs/data/pokemon-stages.csv`). Early routes keep their Day tables; mid and late routes, caves, Safari Zone and sea routes are rebuilt by theme. Rarity decides the slot (common on top, rare in the 4% slots, extremely rare only in hand-placed 1% slots: Mew, Jirachi, Landorus, Tornadus, Thundurus, Chi-Yu).
+- **Day/night encounters on.** 70 maps got a `_Night` land table (more Dark/Ghost/Poison/Psychic). Morning and evening use the Day table. Needs a clock: if your emulator has no RTC, you'll only see one of the two tables.
+- Details and per-map lists: `wow-docs/design/encounter-tables.md`; tool: `wow-tools/rebuild_encounters.py`.
+
 ## Tooling (no ROM): mandatory-trainer finder
 - `wow-tools/mandatory_trainers.py` finds which trainers are unavoidable between a map's entrances/exits (path search that avoids sight lines). `MAP_X` for one map, `--all` writes `wow-docs/design/mandatory-trainers.md` (scan of every map). Limits: per-map only (multi-floor dungeons need manual chaining), ledges one-way, water/NPCs block, elevation and bridges ignored.
 
