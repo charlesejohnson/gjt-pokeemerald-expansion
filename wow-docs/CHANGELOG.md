@@ -2,6 +2,9 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.56
+- **New trainer pics**: Drake (Xal'atath) is now an original elven void-sorceress sprite and the Champion (Dimensius) is an original horned void colossus over a consumed globe. Both are placeholder art generated procedurally (scripts in `wow-tools/sprites/`), 64x64, 16 colors, replacing `elite_four_drake.png` and `champion_wallace.png`. Drake/Champion names and intro text are unchanged.
+
 ## v0.1.55
 - **All five Elite Four / Champion teams finalized** with a control-leaning moveset pass (about three attacks plus one utility: Taunt, Thunder Wave, Will-O-Wisp, Encore, Toxic, Protect). Sidney's Palkia is Origin Palkia (Lustrous Globe) and he has Protect on Dhelmise/Palkia. Phoebe: Focus Sash Kleavor, Mesprit Calm Mind. Glacia: Razor Claw Weavile, Swords Dance only on Mimikyu. Drake: Taunt/Foul Play on the whisperers, Night Slash Kartana. Champion Wallace (Dimensius): Dusknoir (Trick Room), Deoxys, Dialga, Lunala, Necrozma, Eternatus. Eternamax not used. Untested.
 
