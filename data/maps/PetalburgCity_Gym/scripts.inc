@@ -405,12 +405,12 @@ PetalburgCity_Gym_EventScript_NormanBattle::
 PetalburgCity_Gym_EventScript_GiveScottVitamins::
 	goto_if_set FLAG_RECEIVED_SCOTT_VITAMINS, PetalburgCity_Gym_EventScript_ScottVitaminsGiven
 	msgbox PetalburgCity_Gym_Text_ScottVitamins, MSGBOX_DEFAULT
-	giveitem ITEM_PROTEIN, 5
-	giveitem ITEM_CALCIUM, 5
-	giveitem ITEM_HP_UP, 5
-	giveitem ITEM_ZINC, 5
-	giveitem ITEM_IRON, 5
-	giveitem ITEM_CARBOS, 5
+	giveitem ITEM_HP_UP, 3
+	giveitem ITEM_PROTEIN, 3
+	giveitem ITEM_IRON, 3
+	giveitem ITEM_CALCIUM, 4
+	giveitem ITEM_ZINC, 4
+	giveitem ITEM_CARBOS, 3
 	setflag FLAG_RECEIVED_SCOTT_VITAMINS
 PetalburgCity_Gym_EventScript_ScottVitaminsGiven::
 	return

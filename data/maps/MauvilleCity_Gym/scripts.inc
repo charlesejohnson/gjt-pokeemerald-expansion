@@ -231,12 +231,12 @@ MauvilleCity_Gym_EventScript_GymGuide::
 
 MauvilleCity_Gym_EventScript_GymGuidePostVictory::
 	goto_if_set FLAG_RECEIVED_MAUVILLE_GUIDE_LOOT, MauvilleCity_Gym_EventScript_GymGuideLootGiven
-	giveitem ITEM_PROTEIN 5
-	giveitem ITEM_CALCIUM 5
-	giveitem ITEM_HP_UP 5
-	giveitem ITEM_ZINC 5
-	giveitem ITEM_IRON 5
-	giveitem ITEM_CARBOS 5
+	giveitem ITEM_HP_UP 1
+	giveitem ITEM_PROTEIN 1
+	giveitem ITEM_IRON 2
+	giveitem ITEM_CALCIUM 2
+	giveitem ITEM_ZINC 2
+	giveitem ITEM_CARBOS 2
 	setflag FLAG_RECEIVED_MAUVILLE_GUIDE_LOOT
 MauvilleCity_Gym_EventScript_GymGuideLootGiven::
 	msgbox MauvilleCity_Gym_Text_GymGuidePostVictory, MSGBOX_DEFAULT

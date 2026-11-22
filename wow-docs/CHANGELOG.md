@@ -2,6 +2,10 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.59
+- **Vitamin reward schedule**: gyms now give 10, 10, 10, 15, 20, 25, 30, 30 vitamins (150 total, 25 of each type) with an even spread of all six types, replacing the old 30-each at gyms 1, 3, 5 and 8 only. Gyms 2, 4, 6 and 7 gained rewards (leader defeat scripts via `data/scripts/gjt_gym_vitamins.inc`).
+- **Lilycove Department Store 3F** now sells mints (all 21) instead of vitamins. Design: `wow-docs/design/vitamins-and-rewards.md`.
+
 ## v0.1.58
 - **Dimensius hazard changed to Singularity**: no more trap. Any of your Pokemon that stays on the field two turns in a row takes 1/8 max HP at end of turn; switching resets the count. Replaces the Black Hole (Magma Storm style) from v0.1.52.
 - **Boss EVs made legal**: Elite Four and Champion mons now have 85 EVs in each stat (510 total, 0 Speed on Sidney's slow Trick Room mons), replacing the 170-each placeholder.
