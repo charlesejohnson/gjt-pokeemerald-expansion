@@ -21,9 +21,28 @@ EverGrandeCity_PokemonCenter_1F_EventScript_Nurse::
 	release
 	end
 
-EverGrandeCity_PokemonCenter_1F_EventScript_Woman::
-	msgbox EverGrandeCity_PokemonCenter_1F_Text_LeagueAfterVictoryRoad, MSGBOX_NPC
+EverGrandeCity_PokemonCenter_1F_EventScript_VitaminClerk::
+	lock
+	faceplayer
+	msgbox EverGrandeCity_PokemonCenter_1F_Text_VitaminClerk, MSGBOX_DEFAULT
+	pokemart EverGrandeCity_PokemonCenter_1F_Pokemart_Vitamins
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
 	end
+
+	.align 2
+EverGrandeCity_PokemonCenter_1F_Pokemart_Vitamins:
+	.2byte ITEM_HP_UP
+	.2byte ITEM_PROTEIN
+	.2byte ITEM_IRON
+	.2byte ITEM_CALCIUM
+	.2byte ITEM_ZINC
+	.2byte ITEM_CARBOS
+	pokemartlistend
+
+EverGrandeCity_PokemonCenter_1F_Text_VitaminClerk:
+	.string "Last stop before the League!\n"
+	.string "Polish your team with some vitamins.$"
 
 EverGrandeCity_PokemonCenter_1F_EventScript_ExpertM::
 	msgbox EverGrandeCity_PokemonCenter_1F_Text_BelieveInYourPokemon, MSGBOX_NPC

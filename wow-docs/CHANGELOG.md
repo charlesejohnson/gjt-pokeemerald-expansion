@@ -2,6 +2,9 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.60
+- **Vitamin scarcity pass**: the Slateport market stall no longer sells vitamins (now Energy Powder, Energy Root, Heal Powder, Revival Herb). Ever Grande Pokemon Center has a vitamin clerk (the old woman NPC, default vitamin price) so players can catch a new team member up right before the League. All 21 mints now cost 5,000 (Lilycove 3F).
+
 ## v0.1.59
 - **Vitamin reward schedule**: gyms now give 10, 10, 10, 15, 20, 25, 30, 30 vitamins (150 total, 25 of each type) with an even spread of all six types, replacing the old 30-each at gyms 1, 3, 5 and 8 only. Gyms 2, 4, 6 and 7 gained rewards (leader defeat scripts via `data/scripts/gjt_gym_vitamins.inc`).
 - **Lilycove Department Store 3F** now sells mints (all 21) instead of vitamins. Design: `wow-docs/design/vitamins-and-rewards.md`.

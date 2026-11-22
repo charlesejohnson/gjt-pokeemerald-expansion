@@ -19,9 +19,9 @@ Even spread over all six vitamin types, totals rise through the game. Extras rot
 Previously every gym with vitamins gave 30 (5 of each) at gyms 1, 3, 5 and 8 only.
 
 ## Shops
-- **Lilycove Department Store (3F)**: vitamins removed, now sells all 21 mints (stock price is the engine default, 20,000 each: check it feels right).
-- **Ever Grande City**: planned vitamin shop (steep price), right before the Elite Four, so players can catch a new team member up. NOT built yet (needs a clerk/mart location).
-- **Still selling vitamins (not yet changed):** Slateport market stall. Must be removed or limited so the scarcity design holds.
+- **Lilycove Department Store (3F)**: vitamins removed, now sells all 21 mints (5,000 each).
+- **Ever Grande Pokemon Center**: vitamin clerk (replaces the old woman NPC), engine default vitamin price, right before the Elite Four so a new team member can catch up.
+- **Slateport market stall**: vitamins removed (sells Energy Powder, Energy Root, Heal Powder, Revival Herb).
 
 ## Targets (see power-scaling.md)
 Gym rewards alone: about 150 vitamins. Spread evenly over 6 stats it rates near parity with Glacia and Sidney and below Drake, Phoebe and the Champion. Focused on two stats per mon it is closer to the middle bosses. The Ever Grande shop is the catch-up lever.
