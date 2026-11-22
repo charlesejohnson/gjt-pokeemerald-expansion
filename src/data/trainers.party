@@ -6077,15 +6077,16 @@ Pic: Elite Four Sidney
 Gender: Male
 Music: Elite Four
 Items: Full Restore / Full Restore
-Double Battle: No
+Double Battle: Yes
 AI: Basic Trainer / Ace Pokemon / Smart Mon Choices
 Mugshot: Purple
 
 Malamar @ Leftovers
 Level: 58
 Ability: Contrary
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Topsy-Turvy
+Nature: Brave
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+- Trick Room
 - Knock Off
 - Psycho Cut
 - Superpower
@@ -6093,29 +6094,32 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Tentacruel @ Black Sludge
 Level: 58
 Ability: Liquid Ooze
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Toxic Spikes
+Nature: Quiet
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
 - Surf
 - Sludge Bomb
 - Knock Off
+- Protect
 
 Octillery @ Choice Specs
 Level: 59
 Ability: Sniper
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Nature: Quiet
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
 - Octazooka
 - Ice Beam
 - Flamethrower
-- Gunk Shot
+- Surf
 
-Absol @ Sitrus Berry
+Dhelmise @ Life Orb
 Level: 59
-Ability: Super Luck
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Sucker Punch
-- Knock Off
+Ability: Steelworker
+Nature: Brave
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+- Anchor Shot
+- Power Whip
+- Shadow Claw
 - Swords Dance
-- Psycho Cut
 
 Darkrai @ Life Orb
 Level: 60
@@ -6150,7 +6154,7 @@ Mesprit @ Sitrus Berry
 Level: 58
 Ability: Levitate
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Trick Room
+- Calm Mind
 - Psychic
 - Thunderbolt
 - Dazzling Gleam

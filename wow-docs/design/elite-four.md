@@ -15,8 +15,8 @@ Echo details: damaging echo = 1/8 of the damage dealt (ignored if under 8); stat
 Open choices: lead counts as the first switch-in (confusion); Own Tempo/Safeguard still block N'Zoth's confusion; Sha effects ignore abilities.
 
 ## Teams (level 58-60, ace last)
-- Sidney: Malamar, Tentacruel, Octillery, Absol, Darkrai, Palkia
-- Phoebe: Mesprit (leads, Trick Room), Kleavor (Stone Axe), Scizor, Genesect, Hydreigon, Yveltal
+- Sidney (DOUBLES, Trick Room): Malamar (sets room), Tentacruel, Octillery, Dhelmise (all slow: 0 Spe IV, Brave/Quiet), Darkrai, Palkia (fast closers)
+- Phoebe: Mesprit (leads, Calm Mind), Kleavor (Stone Axe), Scizor, Genesect, Hydreigon, Yveltal
 - Glacia: Froslass (Froslassite, Snow Warning), Zoroark-Hisui, Mimikyu, Weavile, Kyurem, Guzzlord
 - Drake: Gothitelle (Shadow Tag), Sableye, Kartana, Tyranitar, Mewtwo (Mewtwonite Y), Giratina
 - Wallace/Dimensius: TBD
