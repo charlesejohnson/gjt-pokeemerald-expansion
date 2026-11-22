@@ -108,12 +108,22 @@ THEMES = {
  'SKY_PILLAR_1F': (L, T('Flying Psychic Dragon Steel'), T('Ghost Dark Psychic'), 2),
  'SKY_PILLAR_3F': (L, T('Flying Psychic Dragon Steel'), T('Ghost Dark Psychic'), 2),
  'SKY_PILLAR_5F': (L, T('Flying Psychic Dragon Steel'), T('Ghost Dark Psychic'), 2),
+ 'SEAFLOOR_CAVERN_ROOM1': (L, T('Water Poison Rock Ice'), T('Dark Ghost Poison'), 2),
+ 'SEAFLOOR_CAVERN_ROOM2': (L, T('Water Poison Rock Ice'), T('Dark Ghost Poison'), 2),
+ 'SEAFLOOR_CAVERN_ROOM3': (L, T('Water Poison Rock Ice'), T('Dark Ghost Poison'), 2),
+ 'SEAFLOOR_CAVERN_ROOM4': (L, T('Water Poison Rock Ice'), T('Dark Ghost Poison'), 2),
+ 'SEAFLOOR_CAVERN_ROOM5': (L, T('Water Poison Rock Ice'), T('Dark Ghost Poison'), 2),
+ 'SEAFLOOR_CAVERN_ROOM6': (L, T('Water Poison Rock Ice'), T('Dark Ghost Poison'), 2),
+ 'SEAFLOOR_CAVERN_ROOM7': (L, T('Water Poison Rock Ice'), T('Dark Ghost Poison'), 2),
+ 'SEAFLOOR_CAVERN_ROOM8': (L, T('Water Poison Rock Ice'), T('Dark Ghost Poison'), 2),
+ 'CAVE_OF_ORIGIN_ENTRANCE': (L, T('Rock Psychic Dragon Ghost'), T('Ghost Dark Psychic'), 2),
+ 'CAVE_OF_ORIGIN_1F': (L, T('Rock Psychic Dragon Ghost'), T('Ghost Dark Psychic'), 2),
  'DESERT_UNDERPASS': (L, T('Ground Normal Rock'), T('Dark Ghost Psychic'), 2),
 }
 # hand-placed extremely rare species (map, time, species name)
 SPECIAL = {
  ('PETALBURG_WOODS', N): 'Mew', ('METEOR_FALLS_B1F_2R', N): 'Jirachi', ('ROUTE111', D): 'Landorus',
- ('ROUTE118', N): 'Thundurus', ('ROUTE113', D): 'Tornadus', ('FIERY_PATH', N): 'Chi-Yu',
+ ('ROUTE118', N): 'Thundurus', ('MAGMA_HIDEOUT_4F', N): 'Charmeleon', ('ROUTE113', D): 'Tornadus', ('FIERY_PATH', N): 'Chi-Yu',
 }
 # sea routes: water/fishing refresh (stage by position along the coast)
 SEA = {m: (M if int(m[5:]) <= 124 else L) for m in [f'ROUTE{n}' for n in range(105, 135)]
@@ -127,7 +137,13 @@ USE = collections.Counter()
 ALL_TYPES = set('Normal Fire Water Electric Grass Ice Fighting Poison Ground Flying Psychic Bug Rock Ghost Dragon Dark Steel Fairy'.split())
 CUR = ['']
 LAND_RATES = [20, 20, 10, 10, 10, 10, 5, 5, 4, 4, 1, 1]
-LAND_CLASS = [0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2]          # rarity class wanted per slot
+LAND_CLASS = [0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2]
+# land tables use 9 distinct species stacked over the 12 slots (top species about 25%), like the hand-made ones
+LAND_PATTERN = [0, 1, 2, 3, 4, 2, 5, 0, 6, 7, 7, 8]
+UNIQUE_CLASS = [0, 0, 0, 0, 1, 1, 2, 2, 2]
+def land_slots(stage, types, existing, keep):
+    u = fill(9, UNIQUE_CLASS, stage, types, existing, keep, 'land')
+    return [u[i] for i in LAND_PATTERN]          # rarity class wanted per slot
 WATER_CLASS = [0, 0, 1, 2, 2]
 FISH_CLASS = [0, 0, 0, 1, 1, 1, 1, 2, 2, 2]
 
@@ -204,7 +220,7 @@ for x in enc:
         mons = ent['land_mons']['mons']
         lv = modal_levels(mons)
         if keep < 99:      # rebuild day
-            sp = fill(12, LAND_CLASS, stage, dt, mons, keep, 'land')
+            sp = land_slots(stage, dt, mons, keep)
             sd = SPECIAL.get((mp, D))
             if sd: sp[11] = const_for(sd)
             ent['land_mons']['mons'] = [{'min_level': lv[0], 'max_level': lv[1], 'species': s} for s in sp]
@@ -212,7 +228,7 @@ for x in enc:
         night = json.loads(json.dumps(ent)); night['base_label'] = label + '_Night'
         dayspecies = [m['species'] for m in ent['land_mons']['mons']]
         nk = 1
-        nsp = fill(12, LAND_CLASS, stage, nt, [{'species': s} for s in dayspecies[:1]], nk, 'land')
+        nsp = land_slots(stage, nt, [{'species': s} for s in dayspecies[:1]], nk)
         sn = SPECIAL.get((mp, N))
         if sn: nsp[11] = const_for(sn)
         night['land_mons'] = {'encounter_rate': ent['land_mons']['encounter_rate'] if mp not in ('ROUTE101',) else ent['land_mons']['encounter_rate'],

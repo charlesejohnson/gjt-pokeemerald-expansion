@@ -2,6 +2,9 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.50
+- Encounter tables now stack about 9 distinct species over the 12 land slots (top species about 25%), closer to the hand-made early tables. Every species in the list still appears somewhere. Seafloor Cavern and Cave of Origin are rebuilt (no more Zubat-only), and Charmeleon is a rare Magma Hideout 4F night encounter. Tables regenerated, so slots shift again.
+
 ## v0.1.49
 - Type balance: added Fairy (Snubbull, Spritzee), Electric (Plusle, Pachirisu) and Ice (Snorunt, Cubchoo) to the encounter list and worked them into routes 112-114 and 119-123, Jagged Pass and the Mauville/Shoal areas. Encounter tables were regenerated, so individual slots differ from v0.1.48.
 
