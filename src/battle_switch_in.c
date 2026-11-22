@@ -5,6 +5,7 @@
 #include "battle_util.h"
 #include "battle_scripts.h"
 #include "battle_switch_in.h"
+#include "gjt_elite_four.h"
 #include "battle_controllers.h"
 #include "config_changes.h"
 #include "constants/battle.h"
@@ -271,6 +272,12 @@ static bool32 FirstEventBlockEvents(struct BattleCalcValues *calcValues)
                 effect = TryHazardsOnSwitchIn(battler, calcValues->abilities[battler], calcValues->holdEffects[battler], hazard);
             }
         }
+        break;
+    case FIRST_EVENT_BLOCK_GJT_RUMORS:
+        if (gBattleStruct->battlerState[battler].switchIn && IsBattlerAlive(battler)
+         && GjtTryRumorsOfTheDeep(battler))
+            effect = TRUE;
+        gBattleStruct->eventState.battlerSwitchIn++;
         break;
     case FIRST_EVENT_BLOCK_GENERAL_ABILITIES:
         if (TryPrimalReversion(battler)

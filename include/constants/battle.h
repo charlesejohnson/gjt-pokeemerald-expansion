@@ -237,6 +237,7 @@ enum VolatileFlags
     F(VOLATILE_COMBO_POINTS,                comboPoints,                   (u32, 5)) \
     F(VOLATILE_DRUID_FORM,                  druidForm,                     (u32, 4)) \
     F(VOLATILE_HUNTER_MISSED,               hunterMissed,                  (u32, 1)) \
+    F(VOLATILE_SHA_CRIT_PENALTY,            shaCritPenalty,                (u32, 3)) \
     F(VOLATILE_PALADIN_SEAL,                paladinSeal,                   (u32, 3)) \
     F(VOLATILE_MONK_RSK_USED,               monkRskUsed,                   (u32, 1)) \
     F(VOLATILE_MONK_BK_USED,                monkBkUsed,                    (u32, 1)) \

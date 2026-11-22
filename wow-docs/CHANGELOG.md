@@ -2,6 +2,9 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.51
+- **Elite Four hazards, part 1** (`src/gjt_elite_four.c`, keyed to trainer id). Sidney / N'Zoth, "Rumors of the Deep": your Pokemon alternate on switch-in (lead included), first confusion, then a Whirlpool bind credited to N'Zoth's active mon. Phoebe / Y'shaarj, "The Sha": after your Pokemon uses a move, physical = Sha of Anger (you are Taunted), status = Sha of Pride (1/8 max HP), special = Sha of Violence (-1 crit stage, stacks, clears on switch). Untested on emulator. Design in `wow-docs/design/elite-four.md`.
+
 ## v0.1.50
 - Encounter tables now stack about 9 distinct species over the 12 land slots (top species about 25%), closer to the hand-made early tables. Every species in the list still appears somewhere. Seafloor Cavern and Cave of Origin are rebuilt (no more Zubat-only), and Charmeleon is a rare Magma Hideout 4F night encounter. Tables regenerated, so slots shift again.
 

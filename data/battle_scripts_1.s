@@ -6911,6 +6911,34 @@ BattleScript_EffectKillCommand::
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
+BattleScript_GjtRumorConfuse::
+	printstring STRINGID_GJT_RUMOR_CONFUSE
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_GjtRumorWhirlpool::
+	printstring STRINGID_GJT_RUMOR_WHIRLPOOL
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_GjtShaAnger::
+	printstring STRINGID_GJT_SHA_ANGER
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_GjtShaPride::
+	printstring STRINGID_GJT_SHA_PRIDE
+	waitmessage B_WAIT_TIME_LONG
+	healthbarupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER, ASSURANCE_IGNORE
+	tryfaintmon BS_ATTACKER
+	return
+
+BattleScript_GjtShaViolence::
+	printstring STRINGID_GJT_SHA_VIOLENCE
+	waitmessage B_WAIT_TIME_LONG
+	return
+
 BattleScript_DisengageSpeed::
 	printstring STRINGID_GJT_DISENGAGE
 	waitmessage B_WAIT_TIME_LONG

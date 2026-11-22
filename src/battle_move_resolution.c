@@ -1,4 +1,5 @@
 #include "global.h"
+#include "gjt_elite_four.h"
 #include "gjt_druid.h"
 #include "battle.h"
 #include "battle_arena.h"
@@ -3859,6 +3860,20 @@ static enum MoveEndResult MoveEndWarriorRageReport(struct BattleCalcValues *cv)
     return MOVEEND_RESULT_CONTINUE;
 }
 
+static enum MoveEndResult MoveEndGjtSha(struct BattleCalcValues *cv)
+{
+    enum MoveEndResult result = MOVEEND_RESULT_CONTINUE;
+    const u8 *script = GjtTryShaTrigger(cv->battlerAtk, cv->move, gBattleStruct->unableToUseMove);
+
+    gBattleScripting.moveendState++;
+    if (script != NULL)
+    {
+        BattleScriptCall(script);
+        result = MOVEEND_RESULT_RUN_SCRIPT;
+    }
+    return result;
+}
+
 static enum MoveEndResult MoveEndBeakBlast(struct BattleCalcValues *cv)
 {
     enum MoveEndResult result = MOVEEND_RESULT_CONTINUE;
@@ -5915,6 +5930,7 @@ static enum MoveEndResult (*const sMoveEndHandlers[])(struct BattleCalcValues *c
     [MOVEEND_DEFROST] = MoveEndDefrost,
     [MOVEEND_MOVE_BLOCK_RECOIL] = MoveEndMoveBlockRecoil,
     [MOVEEND_WARRIOR_RAGE_REPORT] = MoveEndWarriorRageReport,
+    [MOVEEND_GJT_SHA] = MoveEndGjtSha,
     [MOVEEND_SHEER_FORCE] = MoveEndSheerForce,
     [MOVEEND_MOVE_BLOCK] = MoveEndMoveBlock,
     [MOVEEND_ITEM_EFFECTS_ATTACKER_2] = MoveEndItemEffectsAttacker2,

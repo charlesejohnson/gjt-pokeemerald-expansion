@@ -8064,7 +8064,11 @@ s32 CalcCritChanceStage(struct DamageContext *ctx)
                     + GetHoldEffectCritChanceIncrease(ctx->battlerAtk, ctx->holdEffects[ctx->battlerAtk])
                     + ((B_AFFECTION_MECHANICS == TRUE && GetBattlerAffectionHearts(ctx->battlerAtk) == AFFECTION_FIVE_HEARTS) ? 2 : 0)
                     + (ctx->abilities[ctx->battlerAtk] == ABILITY_SUPER_LUCK ? 1 : 0)
-                    + gBattleMons[ctx->battlerAtk].volatiles.bonusCritStages;
+                    + gBattleMons[ctx->battlerAtk].volatiles.bonusCritStages
+                    - gBattleMons[ctx->battlerAtk].volatiles.shaCritPenalty;
+
+        if (critChance < 0)
+            critChance = 0;
 
         if (critChance >= ARRAY_COUNT(sCriticalHitOdds))
             critChance = ARRAY_COUNT(sCriticalHitOdds) - 1;
