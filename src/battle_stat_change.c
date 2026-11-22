@@ -3,6 +3,7 @@
 #include "battle_scripts.h"
 #include "battle_util.h"
 #include "battle_stat_change.h"
+#include "gjt_elite_four.h"
 #include "battle_ai_record.h"
 #include "battle_anim.h"
 #include "battle_controllers.h"
@@ -448,6 +449,7 @@ static void StatChanged(struct BattleCalcValues *cv, struct StatChange *st, bool
     gBattleStruct->moveResultFlags[cv->battlerDef] |= MOVE_RESULT_STAT_CHANGED;
     gBattleScripting.battler = cv->battlerDef;
     gBattleMons[cv->battlerDef].statStages[st->stat] += st->stage;
+    GjtMasterPlanMirror(cv->battlerDef, st->stat, st->stage);
 
     if (st->stage > 0)
     {

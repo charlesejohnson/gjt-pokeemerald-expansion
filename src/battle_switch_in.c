@@ -275,7 +275,7 @@ static bool32 FirstEventBlockEvents(struct BattleCalcValues *calcValues)
         break;
     case FIRST_EVENT_BLOCK_GJT_RUMORS:
         if (gBattleStruct->battlerState[battler].switchIn && IsBattlerAlive(battler)
-         && GjtTryRumorsOfTheDeep(battler))
+         && GjtTryEliteSwitchIn(battler))
             effect = TRUE;
         gBattleStruct->eventState.battlerSwitchIn++;
         break;

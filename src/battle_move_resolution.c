@@ -3863,7 +3863,7 @@ static enum MoveEndResult MoveEndWarriorRageReport(struct BattleCalcValues *cv)
 static enum MoveEndResult MoveEndGjtSha(struct BattleCalcValues *cv)
 {
     enum MoveEndResult result = MOVEEND_RESULT_CONTINUE;
-    const u8 *script = GjtTryShaTrigger(cv->battlerAtk, cv->move, gBattleStruct->unableToUseMove);
+    const u8 *script = GjtTryEliteMoveEnd(cv->battlerAtk, cv->battlerDef, cv->move, gBattleStruct->unableToUseMove);
 
     gBattleScripting.moveendState++;
     if (script != NULL)

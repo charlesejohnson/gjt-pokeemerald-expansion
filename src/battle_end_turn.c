@@ -8,6 +8,7 @@
 #include "battle_stat_change.h"
 #include "battle_gimmick.h"
 #include "battle_scripts.h"
+#include "gjt_elite_four.h"
 #include "constants/battle.h"
 #include "constants/battle_string_ids.h"
 #include "constants/abilities.h"
@@ -827,12 +828,15 @@ static bool32 HandleEndTurnWrap(enum BattlerId battler)
 
     gBattleStruct->eventState.endTurnBattler++;
 
+    GjtBlackHoleKeep(battler); // GJT: Dimensius' black hole never lets go
+
     if (gBattleMons[battler].volatiles.wrapped
      && IsBattlerPresent(battler))
     {
         if (gBattleMons[battler].volatiles.wrapTurns != 0)
         {
             gBattleMons[battler].volatiles.wrapTurns--;
+            GjtBlackHoleKeep(battler);
             if (IsAbilityAndRecord(battler, GetBattlerAbility(battler), ABILITY_MAGIC_GUARD))
                 return effect;
 
@@ -857,6 +861,12 @@ static bool32 HandleEndTurnWrap(enum BattlerId battler)
     }
 
     return effect;
+}
+
+static bool32 HandleEndTurnGjtEcho(enum BattlerId battler)
+{
+    gBattleStruct->eventState.endTurnBattler++;
+    return GjtTryEchoEndTurn(battler);
 }
 
 static bool32 HandleEndTurnSaltCure(enum BattlerId battler)
@@ -1763,6 +1773,7 @@ static bool32 (*const sEndTurnEffectHandlers[])(enum BattlerId battler) =
     [ENDTURN_NIGHTMARE] = HandleEndTurnNightmare,
     [ENDTURN_CURSE] = HandleEndTurnCurse,
     [ENDTURN_WRAP] = HandleEndTurnWrap,
+    [ENDTURN_GJT_ECHO] = HandleEndTurnGjtEcho,
     [ENDTURN_SALT_CURE] = HandleEndTurnSaltCure,
     [ENDTURN_OCTOLOCK] = HandleEndTurnOctolock,
     [ENDTURN_SYRUP_BOMB] = HandleEndTurnSyrupBomb,

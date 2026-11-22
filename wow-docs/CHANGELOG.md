@@ -2,6 +2,9 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.52
+- **Elite Four hazards, part 2.** Glacia / Yogg-Saron "Memories of Betrayal": at end of turn an echo of your last move hits you for 1/8 of the damage it dealt; a status move echoes for 1/8 max HP but fizzles 50% of the time. Drake / Xal'atath "Her Master Plan": whenever your stats are raised, her active mon gets the same raises. Champion Wallace / Dimensius "Black Hole": a Magma Storm that never expires (1/8 HP per turn, traps your Pokemon, reapplies if broken). Untested on emulator.
+
 ## v0.1.51
 - **Elite Four hazards, part 1** (`src/gjt_elite_four.c`, keyed to trainer id). Sidney / N'Zoth, "Rumors of the Deep": your Pokemon alternate on switch-in (lead included), first confusion, then a Whirlpool bind credited to N'Zoth's active mon. Phoebe / Y'shaarj, "The Sha": after your Pokemon uses a move, physical = Sha of Anger (you are Taunted), status = Sha of Pride (1/8 max HP), special = Sha of Violence (-1 crit stage, stacks, clears on switch). Untested on emulator. Design in `wow-docs/design/elite-four.md`.
 

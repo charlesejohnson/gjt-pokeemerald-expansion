@@ -735,6 +735,8 @@ struct BattleStruct
     u8 numHazards[NUM_BATTLE_SIDES];
     u8 hazardsCounter:4; // Counter for applying hazard on switch in
     u8 gjtRumorCounter; // GJT: N'Zoth's rumors, player switch-ins so far
+    u8 gjtMasterPlanFoe; // GJT: Xal'atath copied a boost (battler + 1), report pending
+    u16 gjtEchoDamage[MAX_BATTLERS_COUNT]; // GJT: Yogg-Saron echo (0x8000 = status move)
     enum SubmoveState submoveAnnouncement:2;
     enum VictoryCatch victoryCatchState:2;
     u32 incrementEchoedVoice:1;

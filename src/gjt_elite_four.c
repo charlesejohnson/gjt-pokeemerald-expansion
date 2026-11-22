@@ -22,18 +22,106 @@ enum GjtEliteHazard GjtGetEliteHazard(void)
         return GJT_HAZARD_NZOTH;
     case TRAINER_PHOEBE:
         return GJT_HAZARD_YSHAARJ;
+    case TRAINER_GLACIA:
+        return GJT_HAZARD_YOGG;
+    case TRAINER_DRAKE:
+        return GJT_HAZARD_XALATATH;
+    case TRAINER_WALLACE:
+        return GJT_HAZARD_DIMENSIUS;
     default:
         return GJT_HAZARD_NONE;
     }
 }
 
-// N'Zoth: player switch-ins alternate confusion (first), then a whirlpool "used" by the foe.
-bool32 GjtTryRumorsOfTheDeep(enum BattlerId battler)
+static enum BattlerId GetEliteFoe(void)
+{
+    enum BattlerId foe = GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT);
+    if (!IsBattlerAlive(foe))
+        foe = GetBattlerAtPosition(B_POSITION_OPPONENT_RIGHT);
+    return foe;
+}
+
+// Dimensius: Magma Storm that never expires. Silent re-apply if something breaks it.
+static bool32 ApplyBlackHole(enum BattlerId battler)
+{
+    if (gBattleMons[battler].volatiles.wrapped)
+        return FALSE;
+    gBattleMons[battler].volatiles.wrapTurns = 7;
+    gBattleMons[battler].volatiles.wrappedBindingBand = FALSE;
+    gBattleMons[battler].volatiles.wrapped = TRUE;
+    gBattleMons[battler].volatiles.wrappedMove = MOVE_MAGMA_STORM;
+    gBattleMons[battler].volatiles.wrappedBy = GetEliteFoe();
+    return TRUE;
+}
+
+void GjtBlackHoleKeep(enum BattlerId battler)
+{
+    if (GjtGetEliteHazard() != GJT_HAZARD_DIMENSIUS
+     || GetBattlerSide(battler) != B_SIDE_PLAYER
+     || !IsBattlerPresent(battler))
+        return;
+    if (!ApplyBlackHole(battler) && gBattleMons[battler].volatiles.wrappedMove == MOVE_MAGMA_STORM)
+        gBattleMons[battler].volatiles.wrapTurns = 7;
+}
+
+// Xal'atath: boosts to the player's Pokemon are copied onto her active Pokemon.
+void GjtMasterPlanMirror(enum BattlerId battler, enum Stat stat, s32 stage)
+{
+    enum BattlerId foe;
+
+    if (stage <= 0
+     || GjtGetEliteHazard() != GJT_HAZARD_XALATATH
+     || GetBattlerSide(battler) != B_SIDE_PLAYER)
+        return;
+    foe = GetEliteFoe();
+    if (!IsBattlerAlive(foe))
+        return;
+    gBattleMons[foe].statStages[stat] += stage;
+    if (gBattleMons[foe].statStages[stat] > MAX_STAT_STAGE)
+        gBattleMons[foe].statStages[stat] = MAX_STAT_STAGE;
+    gBattleStruct->gjtMasterPlanFoe = foe + 1;
+}
+
+// Yogg-Saron: at end of turn, an echo of the move you used strikes back.
+bool32 GjtTryEchoEndTurn(enum BattlerId battler)
+{
+    u32 echo = gBattleStruct->gjtEchoDamage[battler];
+
+    if (echo == 0)
+        return FALSE;
+    gBattleStruct->gjtEchoDamage[battler] = 0;
+    if (!IsBattlerPresent(battler) || !IsBattlerAlive(battler))
+        return FALSE;
+
+    gBattlerAttacker = battler;
+    gBattleScripting.battler = battler;
+    if ((echo & 0x8000) && !RandomPercentage(RNG_NONE, 50))
+    {
+        BattleScriptCall(BattleScript_GjtEchoFizzle);
+        return TRUE;
+    }
+    SetPassiveDamageAmount(battler, echo & 0x7FFF);
+    BattleScriptCall(BattleScript_GjtEcho);
+    return TRUE;
+}
+
+// Elite Four switch-in hazards (N'Zoth rumors, Dimensius black hole).
+bool32 GjtTryEliteSwitchIn(enum BattlerId battler)
 {
     enum BattlerId foe;
     u32 n;
 
-    if (GjtGetEliteHazard() != GJT_HAZARD_NZOTH || GetBattlerSide(battler) != B_SIDE_PLAYER)
+    if (GetBattlerSide(battler) != B_SIDE_PLAYER)
+        return FALSE;
+    if (GjtGetEliteHazard() == GJT_HAZARD_DIMENSIUS)
+    {
+        if (!ApplyBlackHole(battler))
+            return FALSE;
+        gEffectBattler = battler;
+        BattleScriptCall(BattleScript_GjtBlackHole);
+        return TRUE;
+    }
+    if (GjtGetEliteHazard() != GJT_HAZARD_NZOTH)
         return FALSE;
 
     n = gBattleStruct->gjtRumorCounter++;
@@ -62,9 +150,32 @@ bool32 GjtTryRumorsOfTheDeep(enum BattlerId battler)
 }
 
 // Y'shaarj: after the player's Pokemon uses a move, the matching Sha strikes it.
-const u8 *GjtTryShaTrigger(enum BattlerId battler, enum Move move, bool32 unableToUse)
+const u8 *GjtTryEliteMoveEnd(enum BattlerId battler, enum BattlerId defender, enum Move move, bool32 unableToUse)
 {
-    if (GjtGetEliteHazard() != GJT_HAZARD_YSHAARJ
+    enum GjtEliteHazard hazard = GjtGetEliteHazard();
+
+    if (hazard == GJT_HAZARD_XALATATH && gBattleStruct->gjtMasterPlanFoe != 0)
+    {
+        gEffectBattler = gBattleStruct->gjtMasterPlanFoe - 1;
+        gBattleStruct->gjtMasterPlanFoe = 0;
+        return BattleScript_GjtMasterPlan;
+    }
+
+    if (hazard == GJT_HAZARD_YOGG
+     && GetBattlerSide(battler) == B_SIDE_PLAYER
+     && !unableToUse
+     && move != MOVE_NONE)
+    {
+        if (IsBattleMoveStatus(move))
+            gBattleStruct->gjtEchoDamage[battler] = 0x8000 | (GetNonDynamaxMaxHP(battler) / 8);
+        else if (defender != battler && gBattleStruct->moveDamage[defender] >= 8)
+            gBattleStruct->gjtEchoDamage[battler] = gBattleStruct->moveDamage[defender] / 8;
+        else
+            gBattleStruct->gjtEchoDamage[battler] = 0;
+        return NULL;
+    }
+
+    if (hazard != GJT_HAZARD_YSHAARJ
      || GetBattlerSide(battler) != B_SIDE_PLAYER
      || unableToUse
      || !IsBattlerAlive(battler)

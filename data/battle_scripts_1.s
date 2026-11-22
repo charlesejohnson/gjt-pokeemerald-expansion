@@ -6934,6 +6934,26 @@ BattleScript_GjtShaPride::
 	tryfaintmon BS_ATTACKER
 	return
 
+BattleScript_GjtEcho::
+	printstring STRINGID_GJT_ECHO
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_DoTurnDmg
+
+BattleScript_GjtEchoFizzle::
+	printstring STRINGID_GJT_ECHO_FIZZLE
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_GjtMasterPlan::
+	printstring STRINGID_GJT_MASTER_PLAN
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_GjtBlackHole::
+	printstring STRINGID_GJT_BLACK_HOLE
+	waitmessage B_WAIT_TIME_LONG
+	return
+
 BattleScript_GjtShaViolence::
 	printstring STRINGID_GJT_SHA_VIOLENCE
 	waitmessage B_WAIT_TIME_LONG
