@@ -41,29 +41,6 @@ static enum BattlerId GetEliteFoe(void)
     return foe;
 }
 
-// Dimensius: Magma Storm that never expires. Silent re-apply if something breaks it.
-static bool32 ApplyBlackHole(enum BattlerId battler)
-{
-    if (gBattleMons[battler].volatiles.wrapped)
-        return FALSE;
-    gBattleMons[battler].volatiles.wrapTurns = 7;
-    gBattleMons[battler].volatiles.wrappedBindingBand = FALSE;
-    gBattleMons[battler].volatiles.wrapped = TRUE;
-    gBattleMons[battler].volatiles.wrappedMove = MOVE_MAGMA_STORM;
-    gBattleMons[battler].volatiles.wrappedBy = GetEliteFoe();
-    return TRUE;
-}
-
-void GjtBlackHoleKeep(enum BattlerId battler)
-{
-    if (GjtGetEliteHazard() != GJT_HAZARD_DIMENSIUS
-     || GetBattlerSide(battler) != B_SIDE_PLAYER
-     || !IsBattlerPresent(battler))
-        return;
-    if (!ApplyBlackHole(battler) && gBattleMons[battler].volatiles.wrappedMove == MOVE_MAGMA_STORM)
-        gBattleMons[battler].volatiles.wrapTurns = 7;
-}
-
 // Xal'atath: boosts to the player's Pokemon are copied onto her active Pokemon.
 void GjtMasterPlanMirror(enum BattlerId battler, enum Stat stat, s32 stage)
 {
@@ -85,7 +62,27 @@ void GjtMasterPlanMirror(enum BattlerId battler, enum Stat stat, s32 stage)
 // Yogg-Saron: at end of turn, an echo of the move you used strikes back.
 bool32 GjtTryEchoEndTurn(enum BattlerId battler)
 {
-    u32 echo = gBattleStruct->gjtEchoDamage[battler];
+    u32 echo;
+
+    // Dimensius: Singularity. Staying in two turns running costs 1/8 max HP; switching resets it.
+    if (GjtGetEliteHazard() == GJT_HAZARD_DIMENSIUS
+     && GetBattlerSide(battler) == B_SIDE_PLAYER
+     && IsBattlerPresent(battler) && IsBattlerAlive(battler))
+    {
+        if (gBattleStruct->gjtStayTurns[battler] < 255)
+            gBattleStruct->gjtStayTurns[battler]++;
+        if (gBattleStruct->gjtStayTurns[battler] >= 2)
+        {
+            gBattlerAttacker = battler;
+            gBattleScripting.battler = battler;
+            SetPassiveDamageAmount(battler, GetNonDynamaxMaxHP(battler) / 8);
+            BattleScriptCall(BattleScript_GjtSingularity);
+            return TRUE;
+        }
+        return FALSE;
+    }
+
+    echo = gBattleStruct->gjtEchoDamage[battler];
 
     if (echo == 0)
         return FALSE;
@@ -115,11 +112,8 @@ bool32 GjtTryEliteSwitchIn(enum BattlerId battler)
         return FALSE;
     if (GjtGetEliteHazard() == GJT_HAZARD_DIMENSIUS)
     {
-        if (!ApplyBlackHole(battler))
-            return FALSE;
-        gEffectBattler = battler;
-        BattleScriptCall(BattleScript_GjtBlackHole);
-        return TRUE;
+        gBattleStruct->gjtStayTurns[battler] = 0; // fresh mon, Singularity starts counting
+        return FALSE;
     }
     if (GjtGetEliteHazard() != GJT_HAZARD_NZOTH)
         return FALSE;

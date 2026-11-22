@@ -348,7 +348,7 @@ extern const u8 BattleScript_GjtShaViolence[];
 extern const u8 BattleScript_GjtEcho[];
 extern const u8 BattleScript_GjtEchoFizzle[];
 extern const u8 BattleScript_GjtMasterPlan[];
-extern const u8 BattleScript_GjtBlackHole[];
+extern const u8 BattleScript_GjtSingularity[];
 extern const u8 BattleScript_TrapTriggered[];
 extern const u8 BattleScript_SnakeTrapDamage[];
 extern const u8 BattleScript_SnakeTrapBoth[];

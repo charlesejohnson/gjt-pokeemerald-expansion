@@ -2,6 +2,10 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.58
+- **Dimensius hazard changed to Singularity**: no more trap. Any of your Pokemon that stays on the field two turns in a row takes 1/8 max HP at end of turn; switching resets the count. Replaces the Black Hole (Magma Storm style) from v0.1.52.
+- **Boss EVs made legal**: Elite Four and Champion mons now have 85 EVs in each stat (510 total, 0 Speed on Sidney's slow Trick Room mons), replacing the 170-each placeholder.
+
 ## v0.1.57
 - **Boss EVs**: every Elite Four and Champion mon now has 170 EVs in each stat (0 Speed EVs on Sidney's slow Trick Room mons). Per `wow-docs/design/power-scaling.md`, this should make the E4 an even fight for an EV-trained player while casual players stay behind. Test and tune.
 

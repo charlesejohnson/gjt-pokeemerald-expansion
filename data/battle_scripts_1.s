@@ -6949,10 +6949,10 @@ BattleScript_GjtMasterPlan::
 	waitmessage B_WAIT_TIME_LONG
 	return
 
-BattleScript_GjtBlackHole::
-	printstring STRINGID_GJT_BLACK_HOLE
+BattleScript_GjtSingularity::
+	printstring STRINGID_GJT_SINGULARITY
 	waitmessage B_WAIT_TIME_LONG
-	return
+	goto BattleScript_DoTurnDmg
 
 BattleScript_GjtShaViolence::
 	printstring STRINGID_GJT_SHA_VIOLENCE

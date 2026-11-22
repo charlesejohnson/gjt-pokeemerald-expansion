@@ -828,15 +828,12 @@ static bool32 HandleEndTurnWrap(enum BattlerId battler)
 
     gBattleStruct->eventState.endTurnBattler++;
 
-    GjtBlackHoleKeep(battler); // GJT: Dimensius' black hole never lets go
-
     if (gBattleMons[battler].volatiles.wrapped
      && IsBattlerPresent(battler))
     {
         if (gBattleMons[battler].volatiles.wrapTurns != 0)
         {
             gBattleMons[battler].volatiles.wrapTurns--;
-            GjtBlackHoleKeep(battler);
             if (IsAbilityAndRecord(battler, GetBattlerAbility(battler), ABILITY_MAGIC_GUARD))
                 return effect;
 
