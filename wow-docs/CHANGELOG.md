@@ -2,6 +2,9 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.53
+- **Elite Four teams (first four)**, level 58-60, themed on their old gods. Sidney/N'Zoth: Malamar, Tentacruel, Octillery, Absol, Darkrai, Palkia. Phoebe/Y'shaarj: Mesprit (Trick Room), Kleavor (Stone Axe), Scizor, Genesect, Hydreigon, Yveltal. Glacia/Yogg-Saron: Mega Froslass lead, Hisuian Zoroark, Mimikyu, Weavile, Kyurem, Guzzlord. Drake/Xal'atath: Gothitelle, Sableye, Kartana, Tyranitar, Mega Mewtwo Y, Giratina. Champion still vanilla. Untested on emulator (Mega use by trainers unverified).
+
 ## v0.1.52
 - **Elite Four hazards, part 2.** Glacia / Yogg-Saron "Memories of Betrayal": at end of turn an echo of your last move hits you for 1/8 of the damage it dealt; a status move echoes for 1/8 max HP but fizzles 50% of the time. Drake / Xal'atath "Her Master Plan": whenever your stats are raised, her active mon gets the same raises. Champion Wallace / Dimensius "Black Hole": a Magma Storm that never expires (1/8 HP per turn, traps your Pokemon, reapplies if broken). Untested on emulator.
 

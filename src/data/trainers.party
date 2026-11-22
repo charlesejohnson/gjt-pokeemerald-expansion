@@ -6078,48 +6078,62 @@ Gender: Male
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer / Force Setup First Turn
+AI: Basic Trainer / Ace Pokemon / Smart Mon Choices
 Mugshot: Purple
 
-Mightyena
-Level: 46
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Roar
-- Double Edge
-- Sand Attack
-- Crunch
+Malamar @ Leftovers
+Level: 58
+Ability: Contrary
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Topsy-Turvy
+- Knock Off
+- Psycho Cut
+- Superpower
 
-Shiftry
-Level: 48
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Torment
-- Double Team
-- Swagger
-- Extrasensory
-
-Cacturne
-Level: 46
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Leech Seed
-- Feint Attack
-- Needle Arm
-- Cotton Spore
-
-Crawdaunt
-Level: 48
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+Tentacruel @ Black Sludge
+Level: 58
+Ability: Liquid Ooze
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Toxic Spikes
 - Surf
-- Swords Dance
-- Strength
-- Facade
+- Sludge Bomb
+- Knock Off
+
+Octillery @ Choice Specs
+Level: 59
+Ability: Sniper
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Octazooka
+- Ice Beam
+- Flamethrower
+- Gunk Shot
 
 Absol @ Sitrus Berry
-Level: 49
+Level: 59
+Ability: Super Luck
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Aerial Ace
-- Rock Slide
+- Sucker Punch
+- Knock Off
 - Swords Dance
-- Slash
+- Psycho Cut
+
+Darkrai @ Life Orb
+Level: 60
+Ability: Bad Dreams
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Dark Void
+- Nasty Plot
+- Dark Pulse
+- Sludge Bomb
+
+Palkia @ Lustrous Orb
+Level: 60
+Ability: Pressure
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Spacial Rend
+- Hydro Pump
+- Thunder
+- Fire Blast
 
 === TRAINER_PHOEBE ===
 Name: PHOEBE
@@ -6129,48 +6143,62 @@ Gender: Female
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Ace Pokemon / Smart Mon Choices / Force Setup First Turn
 Mugshot: Green
 
-Dusclops
-Level: 48
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Shadow Punch
-- Confuse Ray
-- Curse
-- Protect
-
-Banette
-Level: 49
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Shadow Ball
-- Grudge
-- Will O Wisp
-- Feint Attack
-
-Sableye
-Level: 50
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Shadow Ball
-- Double Team
-- Night Shade
-- Feint Attack
-
-Banette
-Level: 49
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Shadow Ball
+Mesprit @ Sitrus Berry
+Level: 58
+Ability: Levitate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Trick Room
 - Psychic
 - Thunderbolt
-- Facade
+- Dazzling Gleam
 
-Dusclops @ Sitrus Berry
-Level: 51
+Kleavor @ Leftovers
+Level: 58
+Ability: Sharpness
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Shadow Ball
+- Stone Axe
+- X-Scissor
+- Close Combat
+- Swords Dance
+
+Scizor @ Choice Band
+Level: 59
+Ability: Technician
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Bullet Punch
+- U-turn
+- Knock Off
+- Swords Dance
+
+Genesect @ Life Orb
+Level: 59
+Ability: Download
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- U-turn
+- Iron Head
+- Flamethrower
 - Ice Beam
-- Rock Slide
-- Earthquake
+
+Hydreigon @ Choice Specs
+Level: 60
+Ability: Levitate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Dark Pulse
+- Draco Meteor
+- Flamethrower
+- Earth Power
+
+Yveltal @ Black Glasses
+Level: 60
+Ability: Dark Aura
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Oblivion Wing
+- Dark Pulse
+- Focus Blast
+- Roost
 
 === TRAINER_GLACIA ===
 Name: GLACIA
@@ -6180,48 +6208,62 @@ Gender: Female
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Ace Pokemon / Smart Mon Choices
 Mugshot: Pink
 
-Sealeo
-Level: 50
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Encore
-- Body Slam
-- Hail
-- Ice Ball
-
-Glalie
-Level: 50
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Light Screen
-- Crunch
-- Icy Wind
-- Ice Beam
-
-Sealeo
-Level: 52
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Attract
-- Double Edge
-- Hail
-- Blizzard
-
-Glalie
-Level: 52
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Shadow Ball
-- Explosion
-- Hail
-- Ice Beam
-
-Walrein @ Sitrus Berry
-Level: 53
+Froslass @ Froslassite
+Level: 58
+Ability: Snow Cloak
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Surf
-- Body Slam
+- Aurora Veil
+- Blizzard
+- Shadow Ball
+- Spikes
+
+Zoroark Hisui @ Life Orb
+Level: 58
+Ability: Illusion
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Shadow Ball
+- Flamethrower
+- Hyper Voice
+- Nasty Plot
+
+Mimikyu @ Leftovers
+Level: 59
+Ability: Disguise
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Play Rough
+- Shadow Sneak
+- Swords Dance
+- Shadow Claw
+
+Weavile @ Focus Sash
+Level: 59
+Ability: Pressure
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Triple Axel
+- Knock Off
+- Ice Shard
+- Swords Dance
+
+Kyurem @ Leftovers
+Level: 60
+Ability: Pressure
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Ice Beam
-- Sheer Cold
+- Draco Meteor
+- Earth Power
+- Focus Blast
+
+Guzzlord @ Assault Vest
+Level: 60
+Ability: Beast Boost
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Dark Pulse
+- Draco Meteor
+- Fire Blast
+- Gunk Shot
 
 === TRAINER_DRAKE ===
 Name: DRAKE
@@ -6231,48 +6273,62 @@ Gender: Male
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Ace Pokemon / Smart Mon Choices
 Mugshot: Blue
 
-Shelgon
-Level: 52
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Rock Tomb
-- Dragon Claw
-- Protect
-- Double Edge
-
-Altaria
-Level: 54
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Double Edge
-- Dragon Breath
-- Dragon Dance
-- Aerial Ace
-
-Kingdra
-Level: 53
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Smokescreen
-- Dragon Dance
-- Surf
-- Body Slam
-
-Flygon
-Level: 53
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Flamethrower
-- Crunch
-- Dragon Breath
-- Earthquake
-
-Salamence @ Sitrus Berry
-Level: 55
+Gothitelle @ Leftovers
+Level: 58
+Ability: Shadow Tag
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Flamethrower
-- Dragon Claw
-- Rock Slide
+- Psychic
+- Thunderbolt
+- Shadow Ball
+- Calm Mind
+
+Sableye @ Sitrus Berry
+Level: 58
+Ability: Prankster
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Will O Wisp
+- Knock Off
+- Recover
+- Taunt
+
+Kartana @ Life Orb
+Level: 59
+Ability: Beast Boost
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Leaf Blade
+- Sacred Sword
+- Smart Strike
+- Swords Dance
+
+Tyranitar @ Chople Berry
+Level: 59
+Ability: Sand Stream
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Stone Edge
 - Crunch
+- Earthquake
+- Dragon Dance
+
+Mewtwo @ Mewtwonite Y
+Level: 60
+Ability: Pressure
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Psychic
+- Shadow Ball
+- Fire Blast
+- Aura Sphere
+
+Giratina @ Lum Berry
+Level: 60
+Ability: Pressure
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Shadow Ball
+- Dragon Claw
+- Will O Wisp
+- Shadow Sneak
 
 === TRAINER_ROXANNE_1 ===
 Name: C'THUN
