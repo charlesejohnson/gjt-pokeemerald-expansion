@@ -2,6 +2,9 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.57
+- **Boss EVs**: every Elite Four and Champion mon now has 170 EVs in each stat (0 Speed EVs on Sidney's slow Trick Room mons). Per `wow-docs/design/power-scaling.md`, this should make the E4 an even fight for an EV-trained player while casual players stay behind. Test and tune.
+
 ## v0.1.56
 - **New trainer pics**: Drake (Xal'atath) is now an original elven void-sorceress sprite and the Champion (Dimensius) is an original horned void colossus over a consumed globe. Both are placeholder art generated procedurally (scripts in `wow-tools/sprites/`), 64x64, 16 colors, replacing `elite_four_drake.png` and `champion_wallace.png`. Drake/Champion names and intro text are unchanged.
 

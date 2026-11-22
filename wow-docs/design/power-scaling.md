@@ -36,3 +36,6 @@ Player team rating at L60: casual 351, informed 499, optimized 539. A ratio abov
 
 ## Caveats
 Not modeled: type matchups, move choice and AI mistakes, player switching and healing items, the five-fight Elite Four gauntlet (attrition), real hazard impact, rival fights and player team availability by stage. The hazard multipliers are guesses and are the least trustworthy numbers. Playtest results should replace them.
+
+## Status
+- v0.1.57: boss EVs applied (170 each stat). Rerun the model and playtest to confirm the ratios.

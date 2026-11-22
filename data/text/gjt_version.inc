@@ -1,4 +1,4 @@
 @ GJT build version line. Included (no label, no terminator) by the Birch intro and the test NPC.
 @ Bump this and the ROM filename together (see wow-docs/CHANGELOG.md).
 	.string "GJT: WORLD OF POKéMON\n"
-	.string "Build v0.1.56 (2026-11-22)"
+	.string "Build v0.1.57 (2026-11-22)"

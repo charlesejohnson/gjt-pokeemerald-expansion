@@ -6086,6 +6086,7 @@ Level: 58
 Ability: Contrary
 Nature: Brave
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 170 HP / 170 Atk / 170 Def / 170 SpA / 170 SpD / 0 Spe
 - Trick Room
 - Knock Off
 - Psycho Cut
@@ -6096,6 +6097,7 @@ Level: 58
 Ability: Liquid Ooze
 Nature: Quiet
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 170 HP / 170 Atk / 170 Def / 170 SpA / 170 SpD / 0 Spe
 - Surf
 - Sludge Bomb
 - Knock Off
@@ -6106,6 +6108,7 @@ Level: 59
 Ability: Sniper
 Nature: Quiet
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 170 HP / 170 Atk / 170 Def / 170 SpA / 170 SpD / 0 Spe
 - Octazooka
 - Ice Beam
 - Flamethrower
@@ -6116,6 +6119,7 @@ Level: 59
 Ability: Steelworker
 Nature: Brave
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 170 HP / 170 Atk / 170 Def / 170 SpA / 170 SpD / 0 Spe
 - Anchor Shot
 - Power Whip
 - Shadow Claw
@@ -6125,6 +6129,7 @@ Darkrai @ Life Orb
 Level: 60
 Ability: Bad Dreams
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 170 HP / 170 Atk / 170 Def / 170 SpA / 170 SpD / 170 Spe
 - Dark Void
 - Nasty Plot
 - Dark Pulse
@@ -6134,6 +6139,7 @@ Palkia Origin @ Lustrous Globe
 Level: 60
 Ability: Pressure
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 170 HP / 170 Atk / 170 Def / 170 SpA / 170 SpD / 170 Spe
 - Spacial Rend
 - Hydro Pump
 - Thunder
@@ -6154,6 +6160,7 @@ Mesprit @ Sitrus Berry
 Level: 58
 Ability: Levitate
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 170 HP / 170 Atk / 170 Def / 170 SpA / 170 SpD / 170 Spe
 - Psychic
 - Thunderbolt
 - Dazzling Gleam
@@ -6163,6 +6170,7 @@ Kleavor @ Focus Sash
 Level: 58
 Ability: Sharpness
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 170 HP / 170 Atk / 170 Def / 170 SpA / 170 SpD / 170 Spe
 - Stone Axe
 - X-Scissor
 - Close Combat
@@ -6172,6 +6180,7 @@ Scizor @ Choice Band
 Level: 59
 Ability: Technician
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 170 HP / 170 Atk / 170 Def / 170 SpA / 170 SpD / 170 Spe
 - Bullet Punch
 - U-turn
 - Knock Off
@@ -6181,6 +6190,7 @@ Genesect @ Life Orb
 Level: 59
 Ability: Download
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 170 HP / 170 Atk / 170 Def / 170 SpA / 170 SpD / 170 Spe
 - U-turn
 - Iron Head
 - Ice Beam
@@ -6190,6 +6200,7 @@ Hydreigon @ Life Orb
 Level: 60
 Ability: Levitate
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 170 HP / 170 Atk / 170 Def / 170 SpA / 170 SpD / 170 Spe
 - Dark Pulse
 - Draco Meteor
 - Earth Power
@@ -6199,6 +6210,7 @@ Yveltal @ Black Glasses
 Level: 60
 Ability: Dark Aura
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 170 HP / 170 Atk / 170 Def / 170 SpA / 170 SpD / 170 Spe
 - Oblivion Wing
 - Dark Pulse
 - Foul Play
@@ -6219,6 +6231,7 @@ Froslass @ Froslassite
 Level: 58
 Ability: Snow Cloak
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 170 HP / 170 Atk / 170 Def / 170 SpA / 170 SpD / 170 Spe
 - Aurora Veil
 - Blizzard
 - Shadow Ball
@@ -6228,6 +6241,7 @@ Zoroark Hisui @ Life Orb
 Level: 58
 Ability: Illusion
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 170 HP / 170 Atk / 170 Def / 170 SpA / 170 SpD / 170 Spe
 - Shadow Ball
 - Flamethrower
 - Hyper Voice
@@ -6237,6 +6251,7 @@ Mimikyu @ Leftovers
 Level: 59
 Ability: Disguise
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 170 HP / 170 Atk / 170 Def / 170 SpA / 170 SpD / 170 Spe
 - Play Rough
 - Shadow Sneak
 - Shadow Claw
@@ -6246,6 +6261,7 @@ Weavile @ Razor Claw
 Level: 59
 Ability: Pressure
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 170 HP / 170 Atk / 170 Def / 170 SpA / 170 SpD / 170 Spe
 - Triple Axel
 - Knock Off
 - Ice Shard
@@ -6255,6 +6271,7 @@ Kyurem @ Leftovers
 Level: 60
 Ability: Pressure
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 170 HP / 170 Atk / 170 Def / 170 SpA / 170 SpD / 170 Spe
 - Ice Beam
 - Draco Meteor
 - Earth Power
@@ -6264,6 +6281,7 @@ Guzzlord @ Assault Vest
 Level: 60
 Ability: Beast Boost
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 170 HP / 170 Atk / 170 Def / 170 SpA / 170 SpD / 170 Spe
 - Dark Pulse
 - Draco Meteor
 - Fire Blast
@@ -6284,6 +6302,7 @@ Gothitelle @ Leftovers
 Level: 58
 Ability: Shadow Tag
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 170 HP / 170 Atk / 170 Def / 170 SpA / 170 SpD / 170 Spe
 - Psychic
 - Thunderbolt
 - Shadow Ball
@@ -6293,6 +6312,7 @@ Sableye @ Sitrus Berry
 Level: 58
 Ability: Prankster
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 170 HP / 170 Atk / 170 Def / 170 SpA / 170 SpD / 170 Spe
 - Will O Wisp
 - Knock Off
 - Foul Play
@@ -6302,6 +6322,7 @@ Kartana @ Life Orb
 Level: 59
 Ability: Beast Boost
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 170 HP / 170 Atk / 170 Def / 170 SpA / 170 SpD / 170 Spe
 - Leaf Blade
 - Sacred Sword
 - Smart Strike
@@ -6311,6 +6332,7 @@ Tyranitar @ Chople Berry
 Level: 59
 Ability: Sand Stream
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 170 HP / 170 Atk / 170 Def / 170 SpA / 170 SpD / 170 Spe
 - Stone Edge
 - Crunch
 - Earthquake
@@ -6320,6 +6342,7 @@ Mewtwo @ Mewtwonite Y
 Level: 60
 Ability: Pressure
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 170 HP / 170 Atk / 170 Def / 170 SpA / 170 SpD / 170 Spe
 - Psychic
 - Shadow Ball
 - Fire Blast
@@ -6329,6 +6352,7 @@ Giratina @ Lum Berry
 Level: 60
 Ability: Pressure
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 170 HP / 170 Atk / 170 Def / 170 SpA / 170 SpD / 170 Spe
 - Shadow Ball
 - Dragon Claw
 - Will O Wisp
@@ -8147,6 +8171,7 @@ Dusknoir @ Leftovers
 Level: 58
 Ability: Pressure
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 170 HP / 170 Atk / 170 Def / 170 SpA / 170 SpD / 170 Spe
 - Shadow Sneak
 - Poltergeist
 - Will O Wisp
@@ -8156,6 +8181,7 @@ Deoxys @ Life Orb
 Level: 58
 Ability: Pressure
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 170 HP / 170 Atk / 170 Def / 170 SpA / 170 SpD / 170 Spe
 - Psycho Boost
 - Superpower
 - Ice Beam
@@ -8165,6 +8191,7 @@ Dialga @ Lustrous Orb
 Level: 59
 Ability: Pressure
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 170 HP / 170 Atk / 170 Def / 170 SpA / 170 SpD / 170 Spe
 - Draco Meteor
 - Flash Cannon
 - Thunder
@@ -8174,6 +8201,7 @@ Lunala @ Spell Tag
 Level: 59
 Ability: Shadow Shield
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 170 HP / 170 Atk / 170 Def / 170 SpA / 170 SpD / 170 Spe
 - Moongeist Beam
 - Psyshock
 - Moonblast
@@ -8183,6 +8211,7 @@ Necrozma @ Weakness Policy
 Level: 60
 Ability: Prism Armor
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 170 HP / 170 Atk / 170 Def / 170 SpA / 170 SpD / 170 Spe
 - Photon Geyser
 - Prismatic Laser
 - Earthquake
@@ -8192,6 +8221,7 @@ Eternatus @ Life Orb
 Level: 60
 Ability: Pressure
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 170 HP / 170 Atk / 170 Def / 170 SpA / 170 SpD / 170 Spe
 - Dynamax Cannon
 - Sludge Bomb
 - Flamethrower
