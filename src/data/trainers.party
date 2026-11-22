@@ -6119,7 +6119,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
 - Anchor Shot
 - Power Whip
 - Shadow Claw
-- Swords Dance
+- Protect
 
 Darkrai @ Life Orb
 Level: 60
@@ -6130,14 +6130,14 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Dark Pulse
 - Sludge Bomb
 
-Palkia @ Lustrous Orb
+Palkia Origin @ Lustrous Globe
 Level: 60
 Ability: Pressure
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Spacial Rend
 - Hydro Pump
 - Thunder
-- Fire Blast
+- Protect
 
 === TRAINER_PHOEBE ===
 Name: PHOEBE
@@ -6154,12 +6154,12 @@ Mesprit @ Sitrus Berry
 Level: 58
 Ability: Levitate
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Calm Mind
 - Psychic
 - Thunderbolt
 - Dazzling Gleam
+- Calm Mind
 
-Kleavor @ Leftovers
+Kleavor @ Focus Sash
 Level: 58
 Ability: Sharpness
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -6175,7 +6175,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Bullet Punch
 - U-turn
 - Knock Off
-- Swords Dance
+- Superpower
 
 Genesect @ Life Orb
 Level: 59
@@ -6183,17 +6183,17 @@ Ability: Download
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - U-turn
 - Iron Head
-- Flamethrower
 - Ice Beam
+- Thunder Wave
 
-Hydreigon @ Choice Specs
+Hydreigon @ Life Orb
 Level: 60
 Ability: Levitate
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Dark Pulse
 - Draco Meteor
-- Flamethrower
 - Earth Power
+- Taunt
 
 Yveltal @ Black Glasses
 Level: 60
@@ -6201,8 +6201,8 @@ Ability: Dark Aura
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Oblivion Wing
 - Dark Pulse
-- Focus Blast
-- Roost
+- Foul Play
+- Will O Wisp
 
 === TRAINER_GLACIA ===
 Name: GLACIA
@@ -6222,7 +6222,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Aurora Veil
 - Blizzard
 - Shadow Ball
-- Spikes
+- Taunt
 
 Zoroark Hisui @ Life Orb
 Level: 58
@@ -6231,7 +6231,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Shadow Ball
 - Flamethrower
 - Hyper Voice
-- Nasty Plot
+- Encore
 
 Mimikyu @ Leftovers
 Level: 59
@@ -6239,17 +6239,17 @@ Ability: Disguise
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Play Rough
 - Shadow Sneak
-- Swords Dance
 - Shadow Claw
+- Swords Dance
 
-Weavile @ Focus Sash
+Weavile @ Razor Claw
 Level: 59
 Ability: Pressure
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Triple Axel
 - Knock Off
 - Ice Shard
-- Swords Dance
+- Low Kick
 
 Kyurem @ Leftovers
 Level: 60
@@ -6258,7 +6258,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Ice Beam
 - Draco Meteor
 - Earth Power
-- Focus Blast
+- Toxic
 
 Guzzlord @ Assault Vest
 Level: 60
@@ -6287,7 +6287,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Psychic
 - Thunderbolt
 - Shadow Ball
-- Calm Mind
+- Taunt
 
 Sableye @ Sitrus Berry
 Level: 58
@@ -6295,7 +6295,7 @@ Ability: Prankster
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Will O Wisp
 - Knock Off
-- Recover
+- Foul Play
 - Taunt
 
 Kartana @ Life Orb
@@ -6305,7 +6305,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Leaf Blade
 - Sacred Sword
 - Smart Strike
-- Swords Dance
+- Night Slash
 
 Tyranitar @ Chople Berry
 Level: 59
@@ -8140,55 +8140,61 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Ace Pokemon / Smart Mon Choices
 Mugshot: Yellow
 
-Wailord
-Level: 57
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rain Dance
-- Water Spout
-- Double Edge
-- Blizzard
-
-Tentacruel
-Level: 55
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Toxic
-- Hydro Pump
-- Sludge Bomb
-- Ice Beam
-
-Ludicolo
-Level: 56
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Giga Drain
-- Surf
-- Leech Seed
-- Double Team
-
-Whiscash
-Level: 56
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Earthquake
-- Surf
-- Amnesia
-- Hyper Beam
-
-Gyarados
-Level: 56
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Dragon Dance
-- Earthquake
-- Hyper Beam
-- Surf
-
-Milotic @ Sitrus Berry
+Dusknoir @ Leftovers
 Level: 58
+Ability: Pressure
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Recover
-- Surf
+- Shadow Sneak
+- Poltergeist
+- Will O Wisp
+- Trick Room
+
+Deoxys @ Life Orb
+Level: 58
+Ability: Pressure
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Psycho Boost
+- Superpower
 - Ice Beam
+- Thunder Wave
+
+Dialga @ Lustrous Orb
+Level: 59
+Ability: Pressure
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Draco Meteor
+- Flash Cannon
+- Thunder
+- Roar of Time
+
+Lunala @ Spell Tag
+Level: 59
+Ability: Shadow Shield
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Moongeist Beam
+- Psyshock
+- Moonblast
+- Calm Mind
+
+Necrozma @ Weakness Policy
+Level: 60
+Ability: Prism Armor
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Photon Geyser
+- Prismatic Laser
+- Earthquake
+- Thunder Wave
+
+Eternatus @ Life Orb
+Level: 60
+Ability: Pressure
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Dynamax Cannon
+- Sludge Bomb
+- Flamethrower
 - Toxic
 
 === TRAINER_ANDREW ===

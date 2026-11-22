@@ -2,6 +2,9 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.55
+- **All five Elite Four / Champion teams finalized** with a control-leaning moveset pass (about three attacks plus one utility: Taunt, Thunder Wave, Will-O-Wisp, Encore, Toxic, Protect). Sidney's Palkia is Origin Palkia (Lustrous Globe) and he has Protect on Dhelmise/Palkia. Phoebe: Focus Sash Kleavor, Mesprit Calm Mind. Glacia: Razor Claw Weavile, Swords Dance only on Mimikyu. Drake: Taunt/Foul Play on the whisperers, Night Slash Kartana. Champion Wallace (Dimensius): Dusknoir (Trick Room), Deoxys, Dialga, Lunala, Necrozma, Eternatus. Eternamax not used. Untested.
+
 ## v0.1.54
 - **Sidney is now a double battle with a Trick Room team**: Malamar (sets the room), slow Tentacruel, Octillery, Dhelmise (0 Speed IVs, Speed-lowering natures), then fast closers Darkrai and Palkia. Toxic Spikes and Absol/Toxapex dropped. Phoebe's Mesprit now has Calm Mind instead of Trick Room.
 

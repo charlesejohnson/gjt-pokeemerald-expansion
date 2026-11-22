@@ -19,4 +19,6 @@ Open choices: lead counts as the first switch-in (confusion); Own Tempo/Safeguar
 - Phoebe: Mesprit (leads, Calm Mind), Kleavor (Stone Axe), Scizor, Genesect, Hydreigon, Yveltal
 - Glacia: Froslass (Froslassite, Snow Warning), Zoroark-Hisui, Mimikyu, Weavile, Kyurem, Guzzlord
 - Drake: Gothitelle (Shadow Tag), Sableye, Kartana, Tyranitar, Mewtwo (Mewtwonite Y), Giratina
-- Wallace/Dimensius: TBD
+- Wallace/Dimensius: Dusknoir (Trick Room lead), Deoxys, Dialga, Lunala, Necrozma, Eternatus (ace)
+
+Movesets and items live in `src/data/trainers.party` (control-leaning pass: ~3 attacks + 1 utility).
