@@ -342,7 +342,11 @@ PetalburgCity_Gym_EventScript_GiveFacade2::
 
 PetalburgCity_Gym_EventScript_NormanRematch::
 	trainerbattle_rematch_double TRAINER_NORMAN_1, PetalburgCity_Gym_Text_NormanPreRematch, PetalburgCity_Gym_Text_NormanRematchDefeat, PetalburgCity_Gym_Text_NormanRematchNeedTwoMons
-	msgbox PetalburgCity_Gym_Text_NormanPostRematch, MSGBOX_AUTOCLOSE
+	msgbox PetalburgCity_Gym_Text_NormanPostRematch, MSGBOX_DEFAULT
+	goto_if_set FLAG_RECEIVED_NORMAN_MEGA, PetalburgCity_Gym_EventScript_NormanRematchDone
+	setflag FLAG_RECEIVED_NORMAN_MEGA
+PetalburgCity_Gym_EventScript_NormanRematchDone::
+	release
 	end
 
 PetalburgCity_Gym_EventScript_ShouldGiveEnigmaBerry::
@@ -384,6 +388,7 @@ PetalburgCity_Gym_EventScript_NormanBattle::
 	special ResetHealLocationFromDewford
 	call EventScript_HideMrBriney
 	setflag FLAG_HIDE_MAUVILLE_GYM_WATTSON
+	clearflag FLAG_GJT_HIDE_LAVARIDGE_FLANNERY
 	clearflag FLAG_HIDE_MAUVILLE_CITY_WATTSON
 	setvar VAR_0x8008, 5
 	call Common_EventScript_SetGymTrainers

@@ -37,7 +37,7 @@ RustboroCity_Gym_EventScript_RoxanneRematch::
 	trainerbattle_rematch_double TRAINER_ROXANNE_1, RustboroCity_Gym_Text_RoxannePreRematch, RustboroCity_Gym_Text_RoxanneRematchDefeat, RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons
 	msgbox RustboroCity_Gym_Text_RoxannePostRematch, MSGBOX_DEFAULT
 	goto_if_set FLAG_RECEIVED_ROXANNE_MEGA, RustboroCity_Gym_EventScript_RoxanneRematchDone
-	setvar VAR_0x800A, ITEM_EXCADRITE
+	setvar VAR_0x800A, ITEM_STEELIXITE
 	call GJT_EventScript_MegaGymGive
 	setflag FLAG_RECEIVED_ROXANNE_MEGA
 RustboroCity_Gym_EventScript_RoxanneRematchDone::

@@ -25,8 +25,6 @@ SootopolisCity_Gym_B1F_EventScript_DaelinDefeated::
 	giveitem ITEM_ZINC, 5
 	giveitem ITEM_IRON, 5
 	giveitem ITEM_CARBOS, 5
-	setvar VAR_0x800A, ITEM_GYARADOSITE
-	call GJT_EventScript_MegaGymGive
 	setflag FLAG_RECEIVED_DAELIN_VITAMINS
 SootopolisCity_Gym_B1F_EventScript_DaelinVitaminsGiven::
 	release

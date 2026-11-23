@@ -2,6 +2,13 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.65
+- **Leader rematch pack.** All eight gym leaders now give their Mega Stone on their first rematch, and their rematch teams (`TRAINER_<LEADER>_2` to `_5`, 4 to 6 mons, same level ranges as before, IV 31) are rebuilt around that Mega: Roxanne/C'Thun Steelix, Brawly/Garrosh Falinks, Wattson/Lei Shen Manectric, Flannery/Ragnaros Camerupt, Norman/Scott Kangaskhan, Winona/Thunderaan Altaria, Tate and Liza/Windrunner Sableye, Juan/Jaina Slowbro. Leader names in the rematch teams now match the WoW names.
+- **PokeNav calls** rewritten for all eight (they thank you for freeing them, say they are not ready yet, then offer the rematch). Placeholder-quality; edit freely in `data/text/match_call.inc`.
+- **Badge-time stones removed** (gyms 5 to 8). Freed stones re-homed: Excadrite to the Meteor Falls ball, Gardevoirite to the New Mauville ball, Galladite to a Route 120 ball, Gyaradosite into the Aqua group (replacing Slowbronite), Cameruptite out of the Magma group (now Houndoominite, Charizardite X and Y).
+- **Flannery returns to the Lavaridge gym** after the Petalburg badge so her rematch is reachable.
+- New flags: `FLAG_RECEIVED_FLANNERY_MEGA`, `_NORMAN_`, `_WINONA_`, `_TATELIZA_`, `_JUAN_`.
+
 ## v0.1.64
 - **Power TMs**: gym TMs upgraded (flags unchanged, texts updated): Rustboro Iron Tail (was Rock Tomb), Dewford Brick Break (was Bulk Up), Mauville Thunderbolt (was Shock Wave), Lavaridge Overheat (kept), Petalburg Facade (kept, Scott's gag), Fortree Earthquake (was Aerial Ace), Mossdeep Shadow Ball (was Calm Mind), Sootopolis Blizzard (was Water Pulse). Table in `wow-docs/design/vitamins-and-rewards.md`.
 - **Mega Stones on rematches**: Roxanne's first rematch gives Excadrite, Brawly's gives Falinksite (flags `FLAG_RECEIVED_ROXANNE_MEGA`, `FLAG_RECEIVED_BRAWLY_MEGA`), joining Wattson's Manectite.

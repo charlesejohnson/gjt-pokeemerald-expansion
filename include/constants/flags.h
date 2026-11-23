@@ -61,11 +61,11 @@
 #define FLAG_RECEIVED_WATTSON_MEGA 0x27 // GJT: Manectite from Wattson's first rematch
 #define FLAG_RECEIVED_ROXANNE_MEGA 0x28 // GJT: Excadrite from Roxanne's first rematch
 #define FLAG_RECEIVED_BRAWLY_MEGA 0x29 // GJT: Falinksite from Brawly's first rematch
-#define FLAG_UNUSED_0x02A    0x2A // Unused Flag
-#define FLAG_UNUSED_0x02B    0x2B // Unused Flag
-#define FLAG_UNUSED_0x02C    0x2C // Unused Flag
-#define FLAG_UNUSED_0x02D    0x2D // Unused Flag
-#define FLAG_UNUSED_0x02E    0x2E // Unused Flag
+#define FLAG_RECEIVED_FLANNERY_MEGA 0x2A // GJT: Cameruptite from Flannery, first rematch
+#define FLAG_RECEIVED_NORMAN_MEGA 0x2B // GJT: Kangaskhanite from Norman, first rematch
+#define FLAG_RECEIVED_WINONA_MEGA 0x2C // GJT: Altarianite from Winona, first rematch
+#define FLAG_RECEIVED_TATELIZA_MEGA 0x2D // GJT: Sablenite from Tate and Liza, first rematch
+#define FLAG_RECEIVED_JUAN_MEGA 0x2E // GJT: Slowbronite from Juan/Jaina, first rematch
 #define FLAG_UNUSED_0x02F    0x2F // Unused Flag
 #define FLAG_UNUSED_0x030    0x30 // Unused Flag
 #define FLAG_UNUSED_0x031    0x31 // Unused Flag

@@ -17817,7 +17817,7 @@ Level: 15
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_ROXANNE_2 ===
-Name: ROXANNE
+Name: C'THUN
 Class: Leader
 Pic: Leader Roxanne
 Gender: Female
@@ -17826,40 +17826,40 @@ Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
 
-Golem
-Level: 32
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Protect
-- Rollout
-- Magnitude
-- Explosion
-
-Kabuto @ Sitrus Berry
-Level: 35
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Swords Dance
-- Ice Beam
-- Surf
-- Rock Slide
-
-Onix
-Level: 35
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Iron Tail
-- Explosion
-- Roar
-- Rock Slide
-
-Nosepass @ Sitrus Berry
+Steelix @ Steelixite
 Level: 37
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Double Team
-- Explosion
+- Stealth Rock
+- Earthquake
+- Heavy Slam
+- Rock Slide
+
+Probopass @ Leftovers
+Level: 35
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Power Gem
+- Flash Cannon
+- Thunder Wave
 - Protect
+
+Carbink @ Sitrus Berry
+Level: 34
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Moonblast
+- Power Gem
+- Reflect
+- Light Screen
+
+Minior @ Focus Sash
+Level: 32
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Shell Smash
+- Acrobatics
+- Earthquake
 - Rock Slide
 
 === TRAINER_ROXANNE_3 ===
-Name: ROXANNE
+Name: C'THUN
 Class: Leader
 Pic: Leader Roxanne
 Gender: Female
@@ -17868,48 +17868,48 @@ Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
 
-Omanyte
-Level: 37
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Protect
-- Ice Beam
-- Rock Slide
-- Surf
-
-Golem
-Level: 37
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Protect
-- Rollout
-- Magnitude
-- Explosion
-
-Kabutops @ Sitrus Berry
-Level: 40
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Swords Dance
-- Ice Beam
-- Surf
-- Rock Slide
-
-Onix
-Level: 40
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Iron Tail
-- Explosion
-- Roar
-- Rock Slide
-
-Nosepass @ Sitrus Berry
+Steelix @ Steelixite
 Level: 42
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Double Team
-- Explosion
-- Protect
+- Stealth Rock
+- Earthquake
+- Heavy Slam
 - Rock Slide
+
+Probopass @ Leftovers
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Power Gem
+- Flash Cannon
+- Thunder Wave
+- Protect
+
+Carbink @ Sitrus Berry
+Level: 40
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Moonblast
+- Power Gem
+- Reflect
+- Light Screen
+
+Minior @ Focus Sash
+Level: 38
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Shell Smash
+- Acrobatics
+- Earthquake
+- Rock Slide
+
+Gigalith @ Rocky Helmet
+Level: 37
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Stone Edge
+- Earthquake
+- Wide Guard
+- Heavy Slam
 
 === TRAINER_ROXANNE_4 ===
-Name: ROXANNE
+Name: C'THUN
 Class: Leader
 Pic: Leader Roxanne
 Gender: Female
@@ -17918,48 +17918,48 @@ Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
 
-Omastar
-Level: 42
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Protect
-- Ice Beam
-- Rock Slide
-- Surf
-
-Golem
-Level: 42
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Protect
-- Rollout
-- Earthquake
-- Explosion
-
-Kabutops @ Sitrus Berry
-Level: 45
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Swords Dance
-- Ice Beam
-- Surf
-- Rock Slide
-
-Onix
-Level: 45
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Iron Tail
-- Explosion
-- Roar
-- Rock Slide
-
-Nosepass @ Sitrus Berry
+Steelix @ Steelixite
 Level: 47
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Double Team
-- Explosion
-- Protect
+- Stealth Rock
+- Earthquake
+- Heavy Slam
 - Rock Slide
+
+Probopass @ Leftovers
+Level: 46
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Power Gem
+- Flash Cannon
+- Thunder Wave
+- Protect
+
+Carbink @ Sitrus Berry
+Level: 44
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Moonblast
+- Power Gem
+- Reflect
+- Light Screen
+
+Minior @ Focus Sash
+Level: 43
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Shell Smash
+- Acrobatics
+- Earthquake
+- Rock Slide
+
+Gigalith @ Rocky Helmet
+Level: 42
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Stone Edge
+- Earthquake
+- Wide Guard
+- Heavy Slam
 
 === TRAINER_ROXANNE_5 ===
-Name: ROXANNE
+Name: C'THUN
 Class: Leader
 Pic: Leader Roxanne
 Gender: Female
@@ -17968,56 +17968,56 @@ Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
 
-Aerodactyl
-Level: 47
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rock Slide
-- Hyper Beam
-- Supersonic
-- Protect
-
-Golem
-Level: 47
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Focus Punch
-- Rollout
-- Earthquake
-- Explosion
-
-Omastar
-Level: 47
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Protect
-- Ice Beam
-- Rock Slide
-- Surf
-
-Kabutops @ Sitrus Berry
-Level: 50
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Swords Dance
-- Ice Beam
-- Surf
-- Rock Slide
-
-Steelix
-Level: 50
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Iron Tail
-- Explosion
-- Roar
-- Rock Slide
-
-Nosepass @ Sitrus Berry
+Steelix @ Steelixite
 Level: 52
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Double Team
-- Explosion
-- Protect
+- Stealth Rock
+- Earthquake
+- Heavy Slam
 - Rock Slide
+
+Probopass @ Leftovers
+Level: 51
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Power Gem
+- Flash Cannon
+- Thunder Wave
+- Protect
+
+Carbink @ Sitrus Berry
+Level: 50
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Moonblast
+- Power Gem
+- Reflect
+- Light Screen
+
+Minior @ Focus Sash
+Level: 49
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Shell Smash
+- Acrobatics
+- Earthquake
+- Rock Slide
+
+Gigalith @ Rocky Helmet
+Level: 48
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Stone Edge
+- Earthquake
+- Wide Guard
+- Heavy Slam
+
+Regirock @ Leftovers
+Level: 47
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Rock Slide
+- Curse
+- Rest
+- Body Press
 
 === TRAINER_BRAWLY_2 ===
-Name: BRAWLY
+Name: GARROSH
 Class: Leader
 Pic: Leader Brawly
 Gender: Male
@@ -18025,40 +18025,40 @@ Music: Male
 Double Battle: Yes
 AI: Basic Trainer
 
-Machamp @ Sitrus Berry
-Level: 33
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Karate Chop
-- Rock Slide
-- Focus Punch
-- Bulk Up
-
-Meditite
-Level: 33
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Psychic
-- Light Screen
-- Reflect
-- Focus Punch
-
-Hitmontop
-Level: 35
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Pursuit
-- Counter
-- Protect
-- Triple Kick
-
-Hariyama @ Sitrus Berry
+Falinks @ Falinksite
 Level: 37
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Fake Out
-- Focus Punch
-- Belly Drum
-- Earthquake
+- Close Combat
+- No Retreat
+- Iron Head
+- Knock Off
+
+Conkeldurr @ Flame Orb
+Level: 36
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Drain Punch
+- Mach Punch
+- Knock Off
+- Protect
+
+Hawlucha @ Sitrus Berry
+Level: 34
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Close Combat
+- Flying Press
+- Swords Dance
+- Protect
+
+Machamp @ Leftovers
+Level: 33
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Dynamic Punch
+- Bullet Punch
+- Ice Punch
+- Protect
 
 === TRAINER_BRAWLY_3 ===
-Name: BRAWLY
+Name: GARROSH
 Class: Leader
 Pic: Leader Brawly
 Gender: Male
@@ -18067,40 +18067,40 @@ Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
 
-Machamp @ Sitrus Berry
-Level: 38
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Karate Chop
-- Rock Slide
-- Focus Punch
-- Bulk Up
-
-Medicham
-Level: 38
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Psychic
-- Light Screen
-- Reflect
-- Focus Punch
-
-Hitmontop
-Level: 40
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Pursuit
-- Counter
-- Protect
-- Triple Kick
-
-Hariyama @ Sitrus Berry
+Falinks @ Falinksite
 Level: 42
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Fake Out
-- Focus Punch
-- Belly Drum
-- Earthquake
+- Close Combat
+- No Retreat
+- Iron Head
+- Knock Off
+
+Conkeldurr @ Flame Orb
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Drain Punch
+- Mach Punch
+- Knock Off
+- Protect
+
+Hawlucha @ Sitrus Berry
+Level: 39
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Close Combat
+- Flying Press
+- Swords Dance
+- Protect
+
+Machamp @ Leftovers
+Level: 38
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Dynamic Punch
+- Bullet Punch
+- Ice Punch
+- Protect
 
 === TRAINER_BRAWLY_4 ===
-Name: BRAWLY
+Name: GARROSH
 Class: Leader
 Pic: Leader Brawly
 Gender: Male
@@ -18109,48 +18109,48 @@ Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
 
-Hitmonchan
-Level: 40
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Sky Uppercut
-- Protect
-- Fire Punch
-- Ice Punch
-
-Machamp @ Sitrus Berry
-Level: 43
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Karate Chop
-- Rock Slide
-- Focus Punch
-- Bulk Up
-
-Medicham
-Level: 43
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Focus Punch
-- Light Screen
-- Reflect
-- Psychic
-
-Hitmontop
-Level: 45
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Pursuit
-- Counter
-- Protect
-- Triple Kick
-
-Hariyama @ Sitrus Berry
+Falinks @ Falinksite
 Level: 47
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Fake Out
-- Focus Punch
-- Belly Drum
-- Earthquake
+- Close Combat
+- No Retreat
+- Iron Head
+- Knock Off
+
+Conkeldurr @ Flame Orb
+Level: 45
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Drain Punch
+- Mach Punch
+- Knock Off
+- Protect
+
+Hawlucha @ Sitrus Berry
+Level: 44
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Close Combat
+- Flying Press
+- Swords Dance
+- Protect
+
+Machamp @ Leftovers
+Level: 42
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Dynamic Punch
+- Bullet Punch
+- Ice Punch
+- Protect
+
+Granbull @ Life Orb
+Level: 40
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Play Rough
+- Crunch
+- Thunder Fang
+- Roar
 
 === TRAINER_BRAWLY_5 ===
-Name: BRAWLY
+Name: GARROSH
 Class: Leader
 Pic: Leader Brawly
 Gender: Male
@@ -18159,56 +18159,56 @@ Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
 
-Hitmonlee
-Level: 46
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Mega Kick
-- Focus Punch
-- Earthquake
-- Bulk Up
-
-Hitmonchan
-Level: 46
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Sky Uppercut
-- Protect
-- Fire Punch
-- Ice Punch
-
-Machamp @ Sitrus Berry
-Level: 48
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Cross Chop
-- Rock Slide
-- Focus Punch
-- Bulk Up
-
-Medicham
-Level: 48
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Focus Punch
-- Light Screen
-- Reflect
-- Psychic
-
-Hitmontop
-Level: 50
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Pursuit
-- Counter
-- Protect
-- Triple Kick
-
-Hariyama @ Sitrus Berry
+Falinks @ Falinksite
 Level: 52
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Fake Out
-- Focus Punch
-- Belly Drum
-- Earthquake
+- Close Combat
+- No Retreat
+- Iron Head
+- Knock Off
+
+Conkeldurr @ Flame Orb
+Level: 51
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Drain Punch
+- Mach Punch
+- Knock Off
+- Protect
+
+Hawlucha @ Sitrus Berry
+Level: 50
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Close Combat
+- Flying Press
+- Swords Dance
+- Protect
+
+Machamp @ Leftovers
+Level: 48
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Dynamic Punch
+- Bullet Punch
+- Ice Punch
+- Protect
+
+Granbull @ Life Orb
+Level: 47
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Play Rough
+- Crunch
+- Thunder Fang
+- Roar
+
+Emboar @ Salac Berry
+Level: 46
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Flare Blitz
+- Hammer Arm
+- Wild Charge
+- Protect
 
 === TRAINER_WATTSON_2 ===
-Name: WATTSON
+Name: LEI SHEN
 Class: Leader
 Pic: Leader Wattson
 Gender: Male
@@ -18217,40 +18217,40 @@ Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
 
-Mareep
-Level: 36
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Thunder
-- Protect
-- Thunder Wave
-- Light Screen
-
-Electrode
-Level: 36
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rollout
-- Thunder
-- Explosion
-- Rain Dance
-
-Magneton @ Sitrus Berry
-Level: 38
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Supersonic
-- Protect
-- Thunder
-- Rain Dance
-
-Manectric @ Sitrus Berry
+Manectric @ Manectite
 Level: 40
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Bite
-- Thunder Wave
-- Thunder
+- Thunderbolt
+- Volt Switch
+- Flamethrower
+- Protect
+
+Raichu @ Focus Sash
+Level: 39
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Follow Me
+- Discharge
+- Volt Switch
+- Endure
+
+Magnezone @ Choice Specs
+Level: 37
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunderbolt
+- Flash Cannon
+- Volt Switch
+- Tri Attack
+
+Raikou @ Life Orb
+Level: 36
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunderbolt
+- Snarl
+- Shadow Ball
 - Protect
 
 === TRAINER_WATTSON_3 ===
-Name: WATTSON
+Name: LEI SHEN
 Class: Leader
 Pic: Leader Wattson
 Gender: Male
@@ -18259,98 +18259,48 @@ Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
 
-Pikachu
-Level: 39
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Thunder
-- Slam
-- Rain Dance
-- Shock Wave
-
-Flaaffy
-Level: 41
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Thunder
-- Protect
-- Thunder Wave
-- Light Screen
-
-Electrode
-Level: 41
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rollout
-- Thunder
-- Explosion
-- Rain Dance
-
-Magneton @ Sitrus Berry
-Level: 43
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Supersonic
-- Protect
-- Thunder
-- Rain Dance
-
-Manectric @ Sitrus Berry
+Manectric @ Manectite
 Level: 45
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Bite
-- Thunder Wave
-- Thunder
+- Thunderbolt
+- Volt Switch
+- Flamethrower
 - Protect
 
-=== TRAINER_WATTSON_4 ===
-Name: WATTSON
-Class: Leader
-Pic: Leader Wattson
-Gender: Male
-Music: Male
-Items: Full Restore / Full Restore / Full Restore
-Double Battle: Yes
-AI: Basic Trainer
-
-Raichu
+Raichu @ Focus Sash
 Level: 44
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Thunder
-- Slam
-- Rain Dance
+- Follow Me
+- Discharge
+- Volt Switch
+- Endure
+
+Magnezone @ Choice Specs
+Level: 42
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunderbolt
+- Flash Cannon
+- Volt Switch
+- Tri Attack
+
+Raikou @ Life Orb
+Level: 40
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunderbolt
+- Snarl
+- Shadow Ball
 - Protect
 
-Ampharos
-Level: 46
+Electivire @ Expert Belt
+Level: 39
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Thunder
-- Protect
-- Thunder Wave
-- Light Screen
+- Wild Charge
+- Cross Chop
+- Ice Punch
+- Flamethrower
 
-Electrode
-Level: 46
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rollout
-- Thunder
-- Explosion
-- Rain Dance
-
-Magneton @ Sitrus Berry
-Level: 48
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Supersonic
-- Protect
-- Thunder
-- Rain Dance
-
-Manectric @ Sitrus Berry
-Level: 50
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Bite
-- Thunder Wave
-- Thunder
-- Protect
-
-=== TRAINER_WATTSON_5 ===
-Name: WATTSON
+=== TRAINER_WATTSON_4 ===
+Name: LEI SHEN
 Class: Leader
 Pic: Leader Wattson
 Gender: Male
@@ -18359,56 +18309,106 @@ Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
 
-Electabuzz
+Manectric @ Manectite
 Level: 50
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Swift
-- Focus Punch
-- Thunder Punch
-- Light Screen
-
-Raichu
-Level: 51
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Thunder
-- Slam
-- Rain Dance
+- Thunderbolt
+- Volt Switch
+- Flamethrower
 - Protect
 
-Ampharos
-Level: 51
+Raichu @ Focus Sash
+Level: 48
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Thunder
+- Follow Me
+- Discharge
+- Volt Switch
+- Endure
+
+Magnezone @ Choice Specs
+Level: 47
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunderbolt
+- Flash Cannon
+- Volt Switch
+- Tri Attack
+
+Raikou @ Life Orb
+Level: 46
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunderbolt
+- Snarl
+- Shadow Ball
 - Protect
-- Thunder Wave
-- Light Screen
 
-Electrode
-Level: 53
+Electivire @ Expert Belt
+Level: 44
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rollout
-- Thunder
-- Explosion
-- Rain Dance
+- Wild Charge
+- Cross Chop
+- Ice Punch
+- Flamethrower
 
-Magneton @ Sitrus Berry
-Level: 53
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Supersonic
-- Protect
-- Thunder
-- Rain Dance
+=== TRAINER_WATTSON_5 ===
+Name: LEI SHEN
+Class: Leader
+Pic: Leader Wattson
+Gender: Male
+Music: Male
+Items: Full Restore / Full Restore / Full Restore
+Double Battle: Yes
+AI: Basic Trainer
 
-Manectric @ Sitrus Berry
+Manectric @ Manectite
 Level: 55
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Bite
-- Thunder Wave
-- Thunder
+- Thunderbolt
+- Volt Switch
+- Flamethrower
+- Protect
+
+Raichu @ Focus Sash
+Level: 54
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Follow Me
+- Discharge
+- Volt Switch
+- Endure
+
+Magnezone @ Choice Specs
+Level: 53
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunderbolt
+- Flash Cannon
+- Volt Switch
+- Tri Attack
+
+Raikou @ Life Orb
+Level: 52
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunderbolt
+- Snarl
+- Shadow Ball
+- Protect
+
+Electivire @ Expert Belt
+Level: 51
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Wild Charge
+- Cross Chop
+- Ice Punch
+- Flamethrower
+
+Sandy Shocks @ Leftovers
+Level: 50
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunderbolt
+- Earth Power
+- Electric Terrain
 - Protect
 
 === TRAINER_FLANNERY_2 ===
-Name: FLANNERY
+Name: RAGNAROS
 Class: Leader
 Pic: Leader Flannery
 Gender: Female
@@ -18417,40 +18417,40 @@ Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
 
-Magcargo @ White Herb
-Level: 38
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Overheat
-- Attract
-- Light Screen
-- Rock Slide
-
-Ponyta
-Level: 36
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Flamethrower
-- Attract
-- Solar Beam
-- Bounce
-
-Camerupt @ White Herb
-Level: 38
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Overheat
-- Sunny Day
-- Earthquake
-- Attract
-
-Torkoal @ White Herb
+Camerupt @ Cameruptite
 Level: 40
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Overheat
-- Sunny Day
-- Explosion
-- Attract
+- Eruption
+- Earth Power
+- Flamethrower
+- Protect
+
+Magmortar @ Expert Belt
+Level: 39
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Flamethrower
+- Thunderbolt
+- Focus Blast
+- Will-O-Wisp
+
+Heatmor @ Sitrus Berry
+Level: 39
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Flare Blitz
+- Thief
+- Rock Slide
+- Protect
+
+Typhlosion @ Charcoal
+Level: 38
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Eruption
+- Flamethrower
+- Focus Blast
+- Earth Power
 
 === TRAINER_FLANNERY_3 ===
-Name: FLANNERY
+Name: RAGNAROS
 Class: Leader
 Pic: Leader Flannery
 Gender: Female
@@ -18459,48 +18459,48 @@ Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
 
-Growlithe
-Level: 41
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Helping Hand
-- Flamethrower
-- Roar
-- Sunny Day
-
-Magcargo @ White Herb
-Level: 43
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Overheat
-- Attract
-- Light Screen
-- Rock Slide
-
-Ponyta
-Level: 41
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Flamethrower
-- Attract
-- Solar Beam
-- Bounce
-
-Camerupt @ White Herb
-Level: 43
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Overheat
-- Sunny Day
-- Earthquake
-- Attract
-
-Torkoal @ White Herb
+Camerupt @ Cameruptite
 Level: 45
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Overheat
-- Sunny Day
-- Explosion
-- Attract
+- Eruption
+- Earth Power
+- Flamethrower
+- Protect
+
+Magmortar @ Expert Belt
+Level: 44
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Flamethrower
+- Thunderbolt
+- Focus Blast
+- Will-O-Wisp
+
+Heatmor @ Sitrus Berry
+Level: 43
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Flare Blitz
+- Thief
+- Rock Slide
+- Protect
+
+Typhlosion @ Charcoal
+Level: 42
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Eruption
+- Flamethrower
+- Focus Blast
+- Earth Power
+
+Torkoal @ Heat Rock
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Lava Plume
+- Earth Power
+- Stealth Rock
+- Yawn
 
 === TRAINER_FLANNERY_4 ===
-Name: FLANNERY
+Name: RAGNAROS
 Class: Leader
 Pic: Leader Flannery
 Gender: Female
@@ -18509,56 +18509,56 @@ Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
 
-Houndour
-Level: 46
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Roar
-- Solar Beam
-- Taunt
-- Sunny Day
-
-Growlithe
-Level: 46
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Helping Hand
-- Flamethrower
-- Sunny Day
-- Roar
-
-Magcargo @ White Herb
-Level: 48
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Overheat
-- Attract
-- Light Screen
-- Rock Slide
-
-Rapidash
-Level: 46
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Flamethrower
-- Attract
-- Solar Beam
-- Bounce
-
-Camerupt @ White Herb
-Level: 48
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Overheat
-- Sunny Day
-- Earthquake
-- Attract
-
-Torkoal @ White Herb
+Camerupt @ Cameruptite
 Level: 50
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Overheat
-- Sunny Day
-- Explosion
-- Attract
+- Eruption
+- Earth Power
+- Flamethrower
+- Protect
+
+Magmortar @ Expert Belt
+Level: 49
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Flamethrower
+- Thunderbolt
+- Focus Blast
+- Will-O-Wisp
+
+Heatmor @ Sitrus Berry
+Level: 48
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Flare Blitz
+- Thief
+- Rock Slide
+- Protect
+
+Typhlosion @ Charcoal
+Level: 48
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Eruption
+- Flamethrower
+- Focus Blast
+- Earth Power
+
+Torkoal @ Heat Rock
+Level: 47
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Lava Plume
+- Earth Power
+- Stealth Rock
+- Yawn
+
+Volcarona @ Leftovers
+Level: 46
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Quiver Dance
+- Fire Blast
+- Bug Buzz
+- Giga Drain
 
 === TRAINER_FLANNERY_5 ===
-Name: FLANNERY
+Name: RAGNAROS
 Class: Leader
 Pic: Leader Flannery
 Gender: Female
@@ -18567,56 +18567,56 @@ Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
 
-Arcanine
-Level: 51
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Helping Hand
-- Flamethrower
-- Sunny Day
-- Roar
-
-Magcargo @ White Herb
-Level: 53
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Overheat
-- Attract
-- Light Screen
-- Rock Slide
-
-Houndoom
-Level: 51
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Roar
-- Solar Beam
-- Taunt
-- Sunny Day
-
-Rapidash
-Level: 51
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Flamethrower
-- Attract
-- Solar Beam
-- Bounce
-
-Camerupt @ White Herb
-Level: 53
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Overheat
-- Sunny Day
-- Earthquake
-- Attract
-
-Torkoal @ White Herb
+Camerupt @ Cameruptite
 Level: 55
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Overheat
-- Sunny Day
-- Explosion
-- Attract
+- Eruption
+- Earth Power
+- Flamethrower
+- Protect
+
+Magmortar @ Expert Belt
+Level: 54
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Flamethrower
+- Thunderbolt
+- Focus Blast
+- Will-O-Wisp
+
+Heatmor @ Sitrus Berry
+Level: 53
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Flare Blitz
+- Thief
+- Rock Slide
+- Protect
+
+Typhlosion @ Charcoal
+Level: 53
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Eruption
+- Flamethrower
+- Focus Blast
+- Earth Power
+
+Torkoal @ Heat Rock
+Level: 52
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Lava Plume
+- Earth Power
+- Stealth Rock
+- Yawn
+
+Volcarona @ Leftovers
+Level: 51
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Quiver Dance
+- Fire Blast
+- Bug Buzz
+- Giga Drain
 
 === TRAINER_NORMAN_2 ===
-Name: NORMAN
+Name: SCOTT
 Class: Leader
 Pic: Leader Norman
 Gender: Male
@@ -18625,40 +18625,40 @@ Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
 
-Chansey
-Level: 42
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Light Screen
-- Sing
-- Skill Swap
-- Focus Punch
-
-Slaking @ Sitrus Berry
-Level: 42
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Blizzard
-- Shadow Ball
-- Double Edge
-- Fire Blast
-
-Spinda
-Level: 43
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Teeter Dance
-- Skill Swap
-- Facade
-- Hypnosis
-
-Slaking @ Sitrus Berry
+Kangaskhan @ Kangaskhanite
 Level: 45
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Fake Out
+- Double-Edge
+- Sucker Punch
+- Drain Punch
+
+Slaking @ Sitrus Berry
+Level: 44
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Facade
+- Earthquake
 - Hyper Beam
-- Flamethrower
-- Thunderbolt
-- Shadow Ball
+- Slack Off
+
+Ursaring @ Flame Orb
+Level: 43
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Facade
+- Swords Dance
+- Crunch
+- Earthquake
+
+Spinda @ Focus Sash
+Level: 42
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Encore
+- Teeter Dance
+- Psybeam
+- Facade
 
 === TRAINER_NORMAN_3 ===
-Name: NORMAN
+Name: SCOTT
 Class: Leader
 Pic: Leader Norman
 Gender: Male
@@ -18667,48 +18667,48 @@ Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
 
-Slaking @ Sitrus Berry
-Level: 47
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Blizzard
-- Shadow Ball
-- Double Edge
-- Fire Blast
-
-Chansey
-Level: 47
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Light Screen
-- Sing
-- Skill Swap
-- Focus Punch
-
-Kangaskhan
-Level: 45
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Fake Out
-- Dizzy Punch
-- Endure
-- Reversal
-
-Spinda
-Level: 48
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Teeter Dance
-- Skill Swap
-- Facade
-- Hypnosis
-
-Slaking @ Sitrus Berry
+Kangaskhan @ Kangaskhanite
 Level: 50
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Fake Out
+- Double-Edge
+- Sucker Punch
+- Drain Punch
+
+Slaking @ Sitrus Berry
+Level: 49
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Facade
+- Earthquake
 - Hyper Beam
-- Flamethrower
-- Thunderbolt
-- Shadow Ball
+- Slack Off
+
+Ursaring @ Flame Orb
+Level: 48
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Facade
+- Swords Dance
+- Crunch
+- Earthquake
+
+Spinda @ Focus Sash
+Level: 48
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Encore
+- Teeter Dance
+- Psybeam
+- Facade
+
+Blissey @ Leftovers
+Level: 47
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Soft-Boiled
+- Seismic Toss
+- Heal Pulse
+- Protect
 
 === TRAINER_NORMAN_4 ===
-Name: NORMAN
+Name: SCOTT
 Class: Leader
 Pic: Leader Norman
 Gender: Male
@@ -18717,48 +18717,48 @@ Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
 
-Slaking @ Sitrus Berry
-Level: 52
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Blizzard
-- Shadow Ball
-- Double Edge
-- Fire Blast
-
-Blissey
-Level: 52
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Light Screen
-- Sing
-- Skill Swap
-- Focus Punch
-
-Kangaskhan
-Level: 50
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Fake Out
-- Dizzy Punch
-- Endure
-- Reversal
-
-Spinda
-Level: 53
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Teeter Dance
-- Skill Swap
-- Facade
-- Hypnosis
-
-Slaking @ Sitrus Berry
+Kangaskhan @ Kangaskhanite
 Level: 55
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Fake Out
+- Double-Edge
+- Sucker Punch
+- Drain Punch
+
+Slaking @ Sitrus Berry
+Level: 54
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Facade
+- Earthquake
 - Hyper Beam
-- Flamethrower
-- Thunderbolt
-- Shadow Ball
+- Slack Off
+
+Ursaring @ Flame Orb
+Level: 54
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Facade
+- Swords Dance
+- Crunch
+- Earthquake
+
+Spinda @ Focus Sash
+Level: 53
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Encore
+- Teeter Dance
+- Psybeam
+- Facade
+
+Blissey @ Leftovers
+Level: 52
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Soft-Boiled
+- Seismic Toss
+- Heal Pulse
+- Protect
 
 === TRAINER_NORMAN_5 ===
-Name: NORMAN
+Name: SCOTT
 Class: Leader
 Pic: Leader Norman
 Gender: Male
@@ -18767,56 +18767,56 @@ Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
 
-Slaking @ Sitrus Berry
-Level: 57
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Blizzard
-- Shadow Ball
-- Double Edge
-- Fire Blast
-
-Blissey
-Level: 57
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Protect
-- Sing
-- Skill Swap
-- Focus Punch
-
-Kangaskhan
-Level: 55
+Kangaskhan @ Kangaskhanite
+Level: 60
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Fake Out
-- Dizzy Punch
-- Endure
-- Reversal
-
-Tauros
-Level: 57
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Take Down
-- Protect
-- Fire Blast
-- Earthquake
-
-Spinda
-Level: 58
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Teeter Dance
-- Skill Swap
-- Facade
-- Hypnosis
+- Double-Edge
+- Sucker Punch
+- Drain Punch
 
 Slaking @ Sitrus Berry
-Level: 60
+Level: 59
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Facade
+- Earthquake
 - Hyper Beam
-- Flamethrower
-- Thunderbolt
-- Shadow Ball
+- Slack Off
+
+Ursaring @ Flame Orb
+Level: 59
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Facade
+- Swords Dance
+- Crunch
+- Earthquake
+
+Spinda @ Focus Sash
+Level: 58
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Encore
+- Teeter Dance
+- Psybeam
+- Facade
+
+Blissey @ Leftovers
+Level: 58
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Soft-Boiled
+- Seismic Toss
+- Heal Pulse
+- Protect
+
+Snorlax @ Chesto Berry
+Level: 57
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Body Slam
+- Curse
+- Rest
+- Crunch
 
 === TRAINER_WINONA_2 ===
-Name: WINONA
+Name: THUNDERAAN
 Class: Leader
 Pic: Leader Winona
 Gender: Female
@@ -18825,48 +18825,48 @@ Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer / Risky
 
-Dratini @ Sitrus Berry
-Level: 40
+Altaria @ Altarianite
+Level: 45
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Thunder Wave
-- Thunderbolt
-- Protect
-- Ice Beam
-
-Tropius
-Level: 38
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Sunny Day
-- Aerial Ace
-- Solar Beam
+- Dragon Dance
+- Hyper Voice
+- Roost
 - Earthquake
 
-Pelipper
+Skarmory @ Leftovers
+Level: 44
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Spikes
+- Roost
+- Steel Wing
+- Iron Head
+
+Manectric @ Sitrus Berry
+Level: 42
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunder
+- Thunder Wave
+- Quick Attack
+- Flamethrower
+
+Pidgeot @ Life Orb
 Level: 41
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Surf
-- Supersonic
-- Protect
-- Aerial Ace
+- Hurricane
+- Heat Wave
+- Hyper Voice
+- Quick Attack
 
-Skarmory
-Level: 43
+Tornadus @ Leftovers
+Level: 40
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Whirlwind
-- Spikes
-- Steel Wing
-- Aerial Ace
-
-Altaria @ Chesto Berry
-Level: 45
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Aerial Ace
-- Rest
-- Dragon Dance
-- Earthquake
+- Rain Dance
+- Hurricane
+- Thunder
+- Taunt
 
 === TRAINER_WINONA_3 ===
-Name: WINONA
+Name: THUNDERAAN
 Class: Leader
 Pic: Leader Winona
 Gender: Female
@@ -18875,56 +18875,56 @@ Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer / Risky
 
-Hoothoot
-Level: 43
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hypnosis
-- Psychic
-- Reflect
-- Dream Eater
-
-Tropius
-Level: 43
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Sunny Day
-- Aerial Ace
-- Solar Beam
-- Earthquake
-
-Dragonair @ Sitrus Berry
-Level: 45
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Thunder Wave
-- Thunderbolt
-- Protect
-- Ice Beam
-
-Pelipper
-Level: 46
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Surf
-- Supersonic
-- Protect
-- Aerial Ace
-
-Skarmory
-Level: 48
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Whirlwind
-- Spikes
-- Steel Wing
-- Aerial Ace
-
-Altaria @ Chesto Berry
+Altaria @ Altarianite
 Level: 50
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Aerial Ace
-- Rest
 - Dragon Dance
+- Hyper Voice
+- Roost
 - Earthquake
+
+Skarmory @ Leftovers
+Level: 49
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Spikes
+- Roost
+- Steel Wing
+- Iron Head
+
+Manectric @ Sitrus Berry
+Level: 47
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunder
+- Thunder Wave
+- Quick Attack
+- Flamethrower
+
+Pidgeot @ Life Orb
+Level: 46
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Hurricane
+- Heat Wave
+- Hyper Voice
+- Quick Attack
+
+Tornadus @ Leftovers
+Level: 44
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Rain Dance
+- Hurricane
+- Thunder
+- Taunt
+
+Thundurus @ Life Orb
+Level: 43
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunder
+- Nasty Plot
+- Focus Blast
+- Taunt
 
 === TRAINER_WINONA_4 ===
-Name: WINONA
+Name: THUNDERAAN
 Class: Leader
 Pic: Leader Winona
 Gender: Female
@@ -18933,56 +18933,56 @@ Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer / Risky
 
-Noctowl
-Level: 48
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hypnosis
-- Psychic
-- Reflect
-- Dream Eater
-
-Tropius
-Level: 49
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Sunny Day
-- Aerial Ace
-- Solar Beam
-- Earthquake
-
-Dragonair @ Sitrus Berry
-Level: 50
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Thunder Wave
-- Thunderbolt
-- Protect
-- Ice Beam
-
-Pelipper
-Level: 51
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Surf
-- Supersonic
-- Protect
-- Aerial Ace
-
-Skarmory
-Level: 53
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Whirlwind
-- Spikes
-- Steel Wing
-- Aerial Ace
-
-Altaria @ Chesto Berry
+Altaria @ Altarianite
 Level: 55
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Aerial Ace
-- Rest
 - Dragon Dance
+- Hyper Voice
+- Roost
 - Earthquake
+
+Skarmory @ Leftovers
+Level: 54
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Spikes
+- Roost
+- Steel Wing
+- Iron Head
+
+Manectric @ Sitrus Berry
+Level: 52
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunder
+- Thunder Wave
+- Quick Attack
+- Flamethrower
+
+Pidgeot @ Life Orb
+Level: 51
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Hurricane
+- Heat Wave
+- Hyper Voice
+- Quick Attack
+
+Tornadus @ Leftovers
+Level: 49
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Rain Dance
+- Hurricane
+- Thunder
+- Taunt
+
+Thundurus @ Life Orb
+Level: 48
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunder
+- Nasty Plot
+- Focus Blast
+- Taunt
 
 === TRAINER_WINONA_5 ===
-Name: WINONA
+Name: THUNDERAAN
 Class: Leader
 Pic: Leader Winona
 Gender: Female
@@ -18991,56 +18991,56 @@ Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer / Risky
 
-Noctowl
-Level: 53
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hypnosis
-- Psychic
-- Reflect
-- Dream Eater
-
-Tropius
-Level: 54
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Sunny Day
-- Aerial Ace
-- Solar Beam
-- Earthquake
-
-Pelipper
-Level: 55
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Surf
-- Supersonic
-- Protect
-- Aerial Ace
-
-Dragonite @ Sitrus Berry
-Level: 55
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hyper Beam
-- Thunderbolt
-- Earthquake
-- Ice Beam
-
-Skarmory
-Level: 58
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Whirlwind
-- Spikes
-- Steel Wing
-- Aerial Ace
-
-Altaria @ Chesto Berry
+Altaria @ Altarianite
 Level: 60
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Sky Attack
-- Rest
 - Dragon Dance
+- Hyper Voice
+- Roost
 - Earthquake
+
+Skarmory @ Leftovers
+Level: 59
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Spikes
+- Roost
+- Steel Wing
+- Iron Head
+
+Manectric @ Sitrus Berry
+Level: 57
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunder
+- Thunder Wave
+- Quick Attack
+- Flamethrower
+
+Pidgeot @ Life Orb
+Level: 56
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Hurricane
+- Heat Wave
+- Hyper Voice
+- Quick Attack
+
+Tornadus @ Leftovers
+Level: 54
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Rain Dance
+- Hurricane
+- Thunder
+- Taunt
+
+Thundurus @ Life Orb
+Level: 53
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunder
+- Nasty Plot
+- Focus Blast
+- Taunt
 
 === TRAINER_TATE_AND_LIZA_2 ===
-Name: TATE&LIZA
+Name: WINDRUNNER
 Class: Leader
 Pic: Leader Tate And Liza
 Gender: Male
@@ -19049,48 +19049,48 @@ Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
 
-Slowpoke
+Sableye @ Sablenite
+Level: 50
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Will-O-Wisp
+- Knock Off
+- Recover
+- Foul Play
+
+Mismagius @ Focus Sash
+Level: 50
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Perish Song
+- Shadow Ball
+- Mystical Fire
+- Taunt
+
+Decidueye @ Life Orb
+Level: 49
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Spirit Shackle
+- Leaf Blade
+- Sucker Punch
+- Swords Dance
+
+Klefki @ Light Clay
 Level: 48
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Yawn
-- Psychic
-- Calm Mind
-- Protect
-
-Claydol
-Level: 49
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Earthquake
-- Ancient Power
-- Psychic
 - Light Screen
+- Reflect
+- Play Rough
+- Thunder Wave
 
-Xatu @ Chesto Berry
-Level: 49
+Gengar @ Spell Tag
+Level: 48
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Psychic
-- Rest
-- Confuse Ray
-- Calm Mind
-
-Lunatone @ Chesto Berry
-Level: 50
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Earthquake
-- Psychic
-- Rest
-- Calm Mind
-
-Solrock @ Sitrus Berry
-Level: 50
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Sunny Day
-- Solar Beam
-- Psychic
-- Flamethrower
+- Shadow Ball
+- Sludge Wave
+- Will-O-Wisp
+- Thunderbolt
 
 === TRAINER_TATE_AND_LIZA_3 ===
-Name: TATE&LIZA
+Name: WINDRUNNER
 Class: Leader
 Pic: Leader Tate And Liza
 Gender: Male
@@ -19099,56 +19099,56 @@ Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
 
-Drowzee
-Level: 53
+Sableye @ Sablenite
+Level: 55
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hypnosis
-- Dream Eater
-- Headbutt
-- Protect
+- Will-O-Wisp
+- Knock Off
+- Recover
+- Foul Play
 
-Slowpoke
-Level: 53
+Mismagius @ Focus Sash
+Level: 55
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Yawn
-- Psychic
-- Calm Mind
-- Protect
+- Perish Song
+- Shadow Ball
+- Mystical Fire
+- Taunt
 
-Claydol
+Decidueye @ Life Orb
 Level: 54
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Earthquake
-- Explosion
-- Psychic
+- Spirit Shackle
+- Leaf Blade
+- Sucker Punch
+- Swords Dance
+
+Klefki @ Light Clay
+Level: 54
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Light Screen
+- Reflect
+- Play Rough
+- Thunder Wave
 
-Xatu @ Chesto Berry
-Level: 54
+Gengar @ Spell Tag
+Level: 53
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Psychic
-- Rest
-- Confuse Ray
-- Calm Mind
+- Shadow Ball
+- Sludge Wave
+- Will-O-Wisp
+- Thunderbolt
 
-Lunatone @ Chesto Berry
-Level: 55
+Darkrai @ Sitrus Berry
+Level: 53
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Earthquake
-- Psychic
-- Rest
-- Calm Mind
-
-Solrock @ Sitrus Berry
-Level: 55
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Sunny Day
-- Solar Beam
-- Psychic
-- Flamethrower
+- Dark Void
+- Dark Pulse
+- Nasty Plot
+- Sludge Bomb
 
 === TRAINER_TATE_AND_LIZA_4 ===
-Name: TATE&LIZA
+Name: WINDRUNNER
 Class: Leader
 Pic: Leader Tate And Liza
 Gender: Male
@@ -19157,56 +19157,56 @@ Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
 
-Hypno
-Level: 58
+Sableye @ Sablenite
+Level: 60
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hypnosis
-- Dream Eater
-- Headbutt
-- Protect
+- Will-O-Wisp
+- Knock Off
+- Recover
+- Foul Play
 
-Claydol
+Mismagius @ Focus Sash
+Level: 60
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Perish Song
+- Shadow Ball
+- Mystical Fire
+- Taunt
+
+Decidueye @ Life Orb
 Level: 59
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Earthquake
-- Explosion
-- Psychic
+- Spirit Shackle
+- Leaf Blade
+- Sucker Punch
+- Swords Dance
+
+Klefki @ Light Clay
+Level: 59
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Light Screen
+- Reflect
+- Play Rough
+- Thunder Wave
 
-Slowpoke
+Gengar @ Spell Tag
 Level: 58
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Yawn
-- Psychic
-- Calm Mind
-- Protect
+- Shadow Ball
+- Sludge Wave
+- Will-O-Wisp
+- Thunderbolt
 
-Xatu @ Chesto Berry
-Level: 59
+Darkrai @ Sitrus Berry
+Level: 58
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Psychic
-- Rest
-- Confuse Ray
-- Calm Mind
-
-Lunatone @ Chesto Berry
-Level: 60
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Earthquake
-- Psychic
-- Rest
-- Calm Mind
-
-Solrock @ Sitrus Berry
-Level: 60
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Sunny Day
-- Solar Beam
-- Psychic
-- Flamethrower
+- Dark Void
+- Dark Pulse
+- Nasty Plot
+- Sludge Bomb
 
 === TRAINER_TATE_AND_LIZA_5 ===
-Name: TATE&LIZA
+Name: WINDRUNNER
 Class: Leader
 Pic: Leader Tate And Liza
 Gender: Male
@@ -19215,56 +19215,56 @@ Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
 
-Hypno
-Level: 63
+Sableye @ Sablenite
+Level: 65
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hypnosis
-- Dream Eater
-- Headbutt
-- Protect
+- Will-O-Wisp
+- Knock Off
+- Recover
+- Foul Play
 
-Claydol
+Mismagius @ Focus Sash
+Level: 65
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Perish Song
+- Shadow Ball
+- Mystical Fire
+- Taunt
+
+Decidueye @ Life Orb
 Level: 64
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Earthquake
-- Explosion
-- Psychic
+- Spirit Shackle
+- Leaf Blade
+- Sucker Punch
+- Swords Dance
+
+Klefki @ Light Clay
+Level: 64
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Light Screen
+- Reflect
+- Play Rough
+- Thunder Wave
 
-Slowking
+Gengar @ Spell Tag
 Level: 63
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Yawn
-- Psychic
-- Calm Mind
-- Protect
+- Shadow Ball
+- Sludge Wave
+- Will-O-Wisp
+- Thunderbolt
 
-Xatu @ Chesto Berry
-Level: 64
+Darkrai @ Sitrus Berry
+Level: 63
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Psychic
-- Rest
-- Confuse Ray
-- Calm Mind
-
-Lunatone @ Chesto Berry
-Level: 65
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Earthquake
-- Psychic
-- Rest
-- Calm Mind
-
-Solrock @ Sitrus Berry
-Level: 65
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Sunny Day
-- Solar Beam
-- Psychic
-- Flamethrower
+- Dark Void
+- Dark Pulse
+- Nasty Plot
+- Sludge Bomb
 
 === TRAINER_JUAN_2 ===
-Name: JUAN
+Name: JAINA
 Class: Leader
 Pic: Leader Juan
 Gender: Male
@@ -19273,98 +19273,98 @@ Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
 
-Poliwag
-Level: 46
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hypnosis
-- Rain Dance
-- Protect
-- Hydro Pump
-
-Whiscash
-Level: 46
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rain Dance
-- Water Pulse
-- Double Team
-- Fissure
-
-Walrein
-Level: 48
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Water Pulse
-- Body Slam
-- Protect
-- Ice Beam
-
-Crawdaunt @ Chesto Berry
-Level: 48
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rest
-- Crabhammer
-- Taunt
-- Double Team
-
-Kingdra @ Chesto Berry
+Slowbro @ Slowbronite
 Level: 51
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Water Pulse
-- Double Team
-- Ice Beam
-- Rest
+- Scald
+- Psychic
+- Slack Off
+- Thunder Wave
 
-=== TRAINER_JUAN_3 ===
-Name: JUAN
-Class: Leader
-Pic: Leader Juan
-Gender: Male
-Music: Male
-Items: Full Restore / Full Restore / Full Restore
-Double Battle: Yes
-AI: Basic Trainer
-
-Poliwhirl
+Starmie @ Expert Belt
 Level: 50
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hypnosis
-- Rain Dance
-- Protect
-- Hydro Pump
-
-Whiscash
-Level: 51
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rain Dance
-- Water Pulse
-- Double Team
-- Fissure
-
-Walrein
-Level: 53
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Water Pulse
-- Body Slam
-- Protect
+- Surf
+- Psychic
 - Ice Beam
+- Rapid Spin
 
-Crawdaunt @ Chesto Berry
-Level: 53
+Vaporeon @ Leftovers
+Level: 48
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rest
-- Guillotine
-- Taunt
-- Double Team
+- Rain Dance
+- Scald
+- Ice Beam
+- Wish
 
-Kingdra @ Chesto Berry
+Articuno @ Never-Melt Ice
+Level: 47
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Hail
+- Aurora Veil
+- Blizzard
+- Freeze-Dry
+
+Lapras @ Sitrus Berry
+Level: 46
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Hydro Pump
+- Freeze-Dry
+- Thunderbolt
+- Ice Shard
+
+=== TRAINER_JUAN_3 ===
+Name: JAINA
+Class: Leader
+Pic: Leader Juan
+Gender: Male
+Music: Male
+Items: Full Restore / Full Restore / Full Restore
+Double Battle: Yes
+AI: Basic Trainer
+
+Slowbro @ Slowbronite
 Level: 56
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Water Pulse
-- Double Team
+- Scald
+- Psychic
+- Slack Off
+- Thunder Wave
+
+Starmie @ Expert Belt
+Level: 54
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Surf
+- Psychic
 - Ice Beam
-- Rest
+- Rapid Spin
+
+Vaporeon @ Leftovers
+Level: 53
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Rain Dance
+- Scald
+- Ice Beam
+- Wish
+
+Articuno @ Never-Melt Ice
+Level: 52
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Hail
+- Aurora Veil
+- Blizzard
+- Freeze-Dry
+
+Lapras @ Sitrus Berry
+Level: 50
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Hydro Pump
+- Freeze-Dry
+- Thunderbolt
+- Ice Shard
 
 === TRAINER_JUAN_4 ===
-Name: JUAN
+Name: JAINA
 Class: Leader
 Pic: Leader Juan
 Gender: Male
@@ -19373,56 +19373,56 @@ Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
 
-Lapras
-Level: 56
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hydro Pump
-- Perish Song
-- Ice Beam
-- Confuse Ray
-
-Whiscash
-Level: 58
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rain Dance
-- Water Pulse
-- Double Team
-- Fissure
-
-Poliwhirl
-Level: 56
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hypnosis
-- Rain Dance
-- Protect
-- Hydro Pump
-
-Walrein
-Level: 58
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Water Pulse
-- Body Slam
-- Protect
-- Ice Beam
-
-Crawdaunt @ Chesto Berry
-Level: 58
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rest
-- Guillotine
-- Taunt
-- Double Team
-
-Kingdra @ Chesto Berry
+Slowbro @ Slowbronite
 Level: 61
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Water Pulse
-- Double Team
+- Scald
+- Psychic
+- Slack Off
+- Thunder Wave
+
+Starmie @ Expert Belt
+Level: 60
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Surf
+- Psychic
 - Ice Beam
-- Rest
+- Rapid Spin
+
+Vaporeon @ Leftovers
+Level: 59
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Rain Dance
+- Scald
+- Ice Beam
+- Wish
+
+Articuno @ Never-Melt Ice
+Level: 58
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Hail
+- Aurora Veil
+- Blizzard
+- Freeze-Dry
+
+Lapras @ Sitrus Berry
+Level: 57
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Hydro Pump
+- Freeze-Dry
+- Thunderbolt
+- Ice Shard
+
+Kyurem @ Never-Melt Ice
+Level: 56
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Ice Beam
+- Earth Power
+- Dragon Pulse
+- Protect
 
 === TRAINER_JUAN_5 ===
-Name: JUAN
+Name: JAINA
 Class: Leader
 Pic: Leader Juan
 Gender: Male
@@ -19431,53 +19431,53 @@ Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
 
-Lapras
-Level: 61
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hydro Pump
-- Perish Song
-- Ice Beam
-- Confuse Ray
-
-Whiscash
-Level: 63
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rain Dance
-- Water Pulse
-- Double Team
-- Fissure
-
-Politoed
-Level: 61
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hypnosis
-- Rain Dance
-- Hydro Pump
-- Perish Song
-
-Walrein
-Level: 63
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Water Pulse
-- Body Slam
-- Protect
-- Sheer Cold
-
-Crawdaunt @ Chesto Berry
-Level: 63
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rest
-- Guillotine
-- Taunt
-- Double Team
-
-Kingdra @ Chesto Berry
+Slowbro @ Slowbronite
 Level: 66
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Water Pulse
-- Double Team
+- Scald
+- Psychic
+- Slack Off
+- Thunder Wave
+
+Starmie @ Expert Belt
+Level: 65
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Surf
+- Psychic
 - Ice Beam
-- Rest
+- Rapid Spin
+
+Vaporeon @ Leftovers
+Level: 64
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Rain Dance
+- Scald
+- Ice Beam
+- Wish
+
+Articuno @ Never-Melt Ice
+Level: 63
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Hail
+- Aurora Veil
+- Blizzard
+- Freeze-Dry
+
+Lapras @ Sitrus Berry
+Level: 62
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Hydro Pump
+- Freeze-Dry
+- Thunderbolt
+- Ice Shard
+
+Kyurem @ Never-Melt Ice
+Level: 61
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Ice Beam
+- Earth Power
+- Dragon Pulse
+- Protect
 
 === TRAINER_ANGELO ===
 Name: TORTOS

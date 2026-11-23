@@ -70,10 +70,6 @@ MossdeepCity_Gym_EventScript_TateAndLizaDefeated::
 	setflag FLAG_DEFEATED_MOSSDEEP_GYM
 	setflag FLAG_BADGE07_GET
 	call GJT_EventScript_GymVitamins7
-	setvar VAR_0x800A, ITEM_GARDEVOIRITE
-	call GJT_EventScript_MegaGymGive
-	setvar VAR_0x800A, ITEM_GALLADITE
-	call GJT_EventScript_MegaGymGive
 	setflag FLAG_HIDE_AQUA_HIDEOUT_GRUNTS
 	clearflag FLAG_HIDE_SLATEPORT_CITY_STERNS_SHIPYARD_MR_BRINEY
 	clearflag FLAG_UNKNOWN_0x393
@@ -116,7 +112,13 @@ MossdeepCity_Gym_EventScript_GiveCalmMind::
 
 MossdeepCity_Gym_EventScript_TateAndLizaRematch::
 	trainerbattle_rematch_double TRAINER_TATE_AND_LIZA_1, MossdeepCity_Gym_Text_TateAndLizaPreRematch, MossdeepCity_Gym_Text_TateAndLizaRematchDefeat, MossdeepCity_Gym_Text_TateAndLizaRematchNeedTwoMons
-	msgbox MossdeepCity_Gym_Text_TateAndLizaPostRematch, MSGBOX_AUTOCLOSE
+	msgbox MossdeepCity_Gym_Text_TateAndLizaPostRematch, MSGBOX_DEFAULT
+	goto_if_set FLAG_RECEIVED_TATELIZA_MEGA, MossdeepCity_Gym_EventScript_TateAndLizaRematchDone
+	setvar VAR_0x800A, ITEM_SABLENITE
+	call GJT_EventScript_MegaGymGive
+	setflag FLAG_RECEIVED_TATELIZA_MEGA
+MossdeepCity_Gym_EventScript_TateAndLizaRematchDone::
+	release
 	end
 
 @ All the below switch scripts are leftover from RS and are functionally unused

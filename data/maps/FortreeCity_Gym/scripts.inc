@@ -39,8 +39,6 @@ FortreeCity_Gym_EventScript_WinonaDefeated::
 	setflag FLAG_DEFEATED_FORTREE_GYM
 	setflag FLAG_BADGE06_GET
 	call GJT_EventScript_GymVitamins6
-	setvar VAR_0x800A, ITEM_ALTARIANITE
-	call GJT_EventScript_MegaGymGive
 	setvar VAR_0x8008, 6
 	call Common_EventScript_SetGymTrainers
 	call FortreeCity_Gym_EventScript_GiveAerialAce
@@ -83,7 +81,13 @@ FortreeCity_Gym_EventScript_GiveAerialAce::
 
 FortreeCity_Gym_EventScript_WinonaRematch::
 	trainerbattle_rematch_double TRAINER_WINONA_1, FortreeCity_Gym_Text_WinonaPreRematch, FortreeCity_Gym_Text_WinonaRematchDefeat, FortreeCity_Gym_Text_WinonaRematchNeedTwoMons
-	msgbox FortreeCity_Gym_Text_WinonaPostRematch, MSGBOX_AUTOCLOSE
+	msgbox FortreeCity_Gym_Text_WinonaPostRematch, MSGBOX_DEFAULT
+	goto_if_set FLAG_RECEIVED_WINONA_MEGA, FortreeCity_Gym_EventScript_WinonaRematchDone
+	setvar VAR_0x800A, ITEM_ALTARIANITE
+	call GJT_EventScript_MegaGymGive
+	setflag FLAG_RECEIVED_WINONA_MEGA
+FortreeCity_Gym_EventScript_WinonaRematchDone::
+	release
 	end
 
 FortreeCity_Gym_EventScript_Jared::

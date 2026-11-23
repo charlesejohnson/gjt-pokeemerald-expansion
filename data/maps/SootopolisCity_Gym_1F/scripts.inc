@@ -137,7 +137,13 @@ SootopolisCity_Gym_1F_EventScript_GoGetFortreeBadge::
 
 SootopolisCity_Gym_1F_EventScript_JuanRematch::
 	trainerbattle_rematch_double TRAINER_JUAN_1, SootopolisCity_Gym_1F_Text_JuanPreRematch, SootopolisCity_Gym_1F_Text_JuanRematchDefeat, SootopolisCity_Gym_1F_Text_JuanRematchNeedTwoMons
-	msgbox SootopolisCity_Gym_1F_Text_JuanPostRematch, MSGBOX_AUTOCLOSE
+	msgbox SootopolisCity_Gym_1F_Text_JuanPostRematch, MSGBOX_DEFAULT
+	goto_if_set FLAG_RECEIVED_JUAN_MEGA, SootopolisCity_Gym_1F_EventScript_JuanRematchDone
+	setvar VAR_0x800A, ITEM_SLOWBRONITE
+	call GJT_EventScript_MegaGymGive
+	setflag FLAG_RECEIVED_JUAN_MEGA
+SootopolisCity_Gym_1F_EventScript_JuanRematchDone::
+	release
 	end
 
 SootopolisCity_Gym_1F_EventScript_GymGuide::

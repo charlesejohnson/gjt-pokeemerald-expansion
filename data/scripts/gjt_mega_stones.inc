@@ -29,7 +29,6 @@ GJT_EventScript_MegaNpcGive::
 
 GJT_EventScript_MegaMagmaGroup::
 	msgbox GJT_Text_MegaMagma, MSGBOX_DEFAULT
-	giveitem ITEM_CAMERUPTITE
 	giveitem ITEM_HOUNDOOMINITE
 	giveitem ITEM_CHARIZARDITE_X
 	giveitem ITEM_CHARIZARDITE_Y
@@ -38,7 +37,7 @@ GJT_EventScript_MegaMagmaGroup::
 GJT_EventScript_MegaAquaGroup::
 	msgbox GJT_Text_MegaAqua, MSGBOX_DEFAULT
 	giveitem ITEM_SHARPEDONITE
-	giveitem ITEM_SLOWBRONITE
+	giveitem ITEM_GYARADOSITE
 	giveitem ITEM_STARMINITE
 	return
 
