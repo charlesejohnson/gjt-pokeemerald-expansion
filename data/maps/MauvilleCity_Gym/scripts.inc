@@ -92,8 +92,6 @@ MauvilleCity_Gym_EventScript_WattsonDefeated::
 	clearflag FLAG_HIDE_VERDANTURF_TOWN_SCOTT
 	setflag FLAG_DEFEATED_MAUVILLE_GYM
 	setflag FLAG_BADGE03_GET
-	setvar VAR_0x800A, ITEM_MANECTITE
-	call GJT_EventScript_MegaGymGive
 	addvar VAR_PETALBURG_GYM_STATE, 1
 	call_if_eq VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle
 	setvar VAR_0x8008, 3
@@ -135,7 +133,13 @@ MauvilleCity_Gym_EventScript_CompletedNewMauville::
 
 MauvilleCity_Gym_EventScript_WattsonRematch::
 	trainerbattle_rematch_double TRAINER_WATTSON_1, MauvilleCity_Gym_Text_WattsonPreRematch, MauvilleCity_Gym_Text_WattsonRematchDefeat, MauvilleCity_Gym_Text_WattsonRematchNeedTwoMons
-	msgbox MauvilleCity_Gym_Text_WattsonPostRematch, MSGBOX_AUTOCLOSE
+	msgbox MauvilleCity_Gym_Text_WattsonPostRematch, MSGBOX_DEFAULT
+	goto_if_set FLAG_RECEIVED_WATTSON_MEGA, MauvilleCity_Gym_EventScript_WattsonRematchDone
+	setvar VAR_0x800A, ITEM_MANECTITE
+	call GJT_EventScript_MegaGymGive
+	setflag FLAG_RECEIVED_WATTSON_MEGA
+MauvilleCity_Gym_EventScript_WattsonRematchDone::
+	release
 	end
 
 MauvilleCity_Gym_EventScript_Switch1::

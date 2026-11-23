@@ -41,8 +41,6 @@ LavaridgeTown_PokemonCenter_1F_EventScript_FlannerySaved::
 	setflag FLAG_BADGE04_GET
 	call GJT_EventScript_GymVitamins4
 	call GJT_EventScript_GiveSpecStone2
-	setvar VAR_0x800A, ITEM_CHARIZARDITE_X
-	call GJT_EventScript_MegaGymGive
 	addvar VAR_PETALBURG_GYM_STATE, 1
 	call_if_eq VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle
 	setvar VAR_0x8008, 4

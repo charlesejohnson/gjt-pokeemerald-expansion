@@ -31,6 +31,7 @@ GJT_EventScript_MegaMagmaGroup::
 	msgbox GJT_Text_MegaMagma, MSGBOX_DEFAULT
 	giveitem ITEM_CAMERUPTITE
 	giveitem ITEM_HOUNDOOMINITE
+	giveitem ITEM_CHARIZARDITE_X
 	giveitem ITEM_CHARIZARDITE_Y
 	return
 

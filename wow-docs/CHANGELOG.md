@@ -2,6 +2,9 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.63
+- **Mega Stones before the Mega Bracelet moved**: Manectite is now Wattson's first rematch reward (flag `FLAG_RECEIVED_WATTSON_MEGA`), Flannery gives none, and Charizardite X joins Y in the Magma Hideout group. Nothing is given before gym 5 now.
+
 ## v0.1.62
 - **27 Mega Stones placed** (list in `wow-docs/design/mega-stones.md`): gyms 3 to 8 (Tate and Liza give two), a group of three after the Magma Hideout (Maxie) and another after the Aqua Hideout (Matt), five NPC bonus gifts, and nine replacing ordinary items on the ground or hidden. Scripts in `data/scripts/gjt_mega_stones.inc`. Untested in game.
 - **Mega Bracelet**: the Mega Ring key item is renamed Mega Bracelet and Norman (gym 5) gives it. Mega Evolution needs it.

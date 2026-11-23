@@ -2,18 +2,17 @@
 
 27 stones, picked from Pokemon in (or evolving from) the wild encounter tables. Held by the player only; Elite Four keeps Froslassite and Mewtwonite Y. Pseudo-legends (Salamence, Garchomp, Metagross, Tyranitar, Dragonite) are deliberately left out.
 
-**Mega Bracelet** (the Mega Ring item, renamed): given by Norman at gym 5. Mega Evolution is locked until then, so stones from gyms 3 and 4 wait in the bag.
+**Mega Bracelet** (the Mega Ring item, renamed): given by Norman at gym 5. Mega Evolution is locked until then, so no stones are given before gym 5. Gym 3 and 4 stones moved: Manectite to Wattson's first rematch, Charizardite X to the Magma group (Flannery's rematch is unreachable). Other gyms may follow the same rematch idea later.
 
 ## Story beats
 | Beat | Stone(s) |
 |---|---|
-| Gym 3 Wattson | Manectite |
-| Gym 4 Flannery (Lavaridge Pokemon Center) | Charizardite X |
+| Wattson, first rematch (Mauville gym) | Manectite |
 | Gym 5 Norman | Kangaskhanite |
 | Gym 6 Winona (Fortree) | Altarianite |
 | Gym 7 Tate and Liza | Gardevoirite, Galladite |
 | Gym 8 Juan (Daelin) | Gyaradosite |
-| Magma Hideout, after Maxie | Cameruptite, Houndoominite, Charizardite Y |
+| Magma Hideout, after Maxie | Cameruptite, Houndoominite, Charizardite X, Charizardite Y |
 | Aqua Hideout, after Matt | Sharpedonite, Slowbronite, Starminite |
 
 ## NPC bonus gifts (given with their normal gift)
