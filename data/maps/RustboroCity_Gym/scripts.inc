@@ -26,7 +26,7 @@ RustboroCity_Gym_EventScript_RoxanneDefeated::
 	end
 
 RustboroCity_Gym_EventScript_GiveRockTomb::
-	giveitem ITEM_TM_ROCK_TOMB
+	giveitem ITEM_TM_IRON_TAIL
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_TM_ROCK_TOMB
 	msgbox RustboroCity_Gym_Text_ExplainRockTomb, MSGBOX_DEFAULT
@@ -35,7 +35,13 @@ RustboroCity_Gym_EventScript_GiveRockTomb::
 
 RustboroCity_Gym_EventScript_RoxanneRematch::
 	trainerbattle_rematch_double TRAINER_ROXANNE_1, RustboroCity_Gym_Text_RoxannePreRematch, RustboroCity_Gym_Text_RoxanneRematchDefeat, RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons
-	msgbox RustboroCity_Gym_Text_RoxannePostRematch, MSGBOX_AUTOCLOSE
+	msgbox RustboroCity_Gym_Text_RoxannePostRematch, MSGBOX_DEFAULT
+	goto_if_set FLAG_RECEIVED_ROXANNE_MEGA, RustboroCity_Gym_EventScript_RoxanneRematchDone
+	setvar VAR_0x800A, ITEM_EXCADRITE
+	call GJT_EventScript_MegaGymGive
+	setflag FLAG_RECEIVED_ROXANNE_MEGA
+RustboroCity_Gym_EventScript_RoxanneRematchDone::
+	release
 	end
 
 RustboroCity_Gym_EventScript_Josh::
@@ -209,8 +215,8 @@ RustboroCity_Gym_Text_StoneBadgeInfoTakeThis:
 	.string "Please take this with you, too.$"
 
 RustboroCity_Gym_Text_ExplainRockTomb:
-	.string "That TECHNICAL MACHINE, TM39,\n"
-	.string "contains ROCK TOMB.\p"
+	.string "That TECHNICAL MACHINE contains\n"
+	.string "IRON TAIL. It hits like a falling gate.\p"
 	.string "I do not know what is going on,\n"
 	.string "but please use this to help any others.$"
 

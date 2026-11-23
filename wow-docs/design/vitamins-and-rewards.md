@@ -26,6 +26,9 @@ Previously every gym with vitamins gave 30 (5 of each) at gyms 1, 3, 5 and 8 onl
 ## Specialization Stone (v0.1.61)
 One universal item, "Spec Stone", for every class (Druid has four specs). Use on a class mon, choose the spec, it evolves. Base and middle forms go to the chosen middle form; final forms switch final form. Respec is only priced (no use limit): Lilycove 3F sells it at 5,000. Story copies: Dewford gym guide (replaces the Fire/Water/Leaf gift) and Lavaridge Pokemon Center after the Heat Badge. Class evolution tables now key on this item, so normal stones do not evolve class mons.
 
+## Gym TMs (v0.1.64)
+Only moves already in the TM list can be used without engine work. Rustboro Iron Tail, Dewford Brick Break, Mauville Thunderbolt, Lavaridge Overheat, Petalburg Facade, Fortree Earthquake, Mossdeep Shadow Ball, Sootopolis Blizzard. Power rises through the run. Moves like Stone Edge or Close Combat would need adding to `include/constants/tms_hms.h`, which renumbers TMs and is not save-safe, so they are left out.
+
 ## Targets (see power-scaling.md)
 Gym rewards alone: about 150 vitamins. Spread evenly over 6 stats it rates near parity with Glacia and Sidney and below Drake, Phoebe and the Champion. Focused on two stats per mon it is closer to the middle bosses. The Ever Grande shop is the catch-up lever.
 

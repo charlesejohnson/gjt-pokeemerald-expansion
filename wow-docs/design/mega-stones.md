@@ -7,6 +7,8 @@
 ## Story beats
 | Beat | Stone(s) |
 |---|---|
+| Roxanne, first rematch (Rustboro gym) | Excadrite |
+| Brawly, first rematch (Dewford gym) | Falinksite |
 | Wattson, first rematch (Mauville gym) | Manectite |
 | Gym 5 Norman | Kangaskhanite |
 | Gym 6 Winona (Fortree) | Altarianite |

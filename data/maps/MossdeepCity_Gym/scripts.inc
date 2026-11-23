@@ -100,7 +100,7 @@ MossdeepCity_Gym_EventScript_TateAndLizaDefeated::
 	end
 
 MossdeepCity_Gym_EventScript_GiveCalmMind2::
-	giveitem ITEM_TM_CALM_MIND
+	giveitem ITEM_TM_SHADOW_BALL
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	msgbox MossdeepCity_Gym_Text_ExplainCalmMind, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_TM_CALM_MIND
@@ -108,7 +108,7 @@ MossdeepCity_Gym_EventScript_GiveCalmMind2::
 	end
 
 MossdeepCity_Gym_EventScript_GiveCalmMind::
-	giveitem ITEM_TM_CALM_MIND
+	giveitem ITEM_TM_SHADOW_BALL
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
 	msgbox MossdeepCity_Gym_Text_ExplainCalmMind, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_TM_CALM_MIND
@@ -605,9 +605,9 @@ MossdeepCity_Gym_Text_ExplainMindBadgeTakeThis:
 	.string "not a gift.$"
 
 MossdeepCity_Gym_Text_ExplainCalmMind:
-	.string "ALLERIA: That's TM04. CALM MIND.\p"
-	.string "SYLVANAS: Learn calm. You will need\n"
-	.string "it where we're going.\p"
+	.string "ALLERIA: That's SHADOW BALL.\p"
+	.string "SYLVANAS: Let the dark do the\n"
+	.string "work. You will need it where we're going.\p"
 	.string "ALLERIA: ...She means good luck.$"
 
 MossdeepCity_Gym_Text_RegisteredTateAndLiza:

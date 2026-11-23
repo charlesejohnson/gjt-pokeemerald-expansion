@@ -59,8 +59,8 @@
 #define FLAG_RECEIVED_SCOTT_VITAMINS 0x25 // GJT: one-time vitamins from Scott after the Petalburg gym
 #define FLAG_RECEIVED_DAELIN_VITAMINS 0x26 // GJT: one-time vitamins from Daelin (Sootopolis secret boss)
 #define FLAG_RECEIVED_WATTSON_MEGA 0x27 // GJT: Manectite from Wattson's first rematch
-#define FLAG_UNUSED_0x028    0x28 // Unused Flag
-#define FLAG_UNUSED_0x029    0x29 // Unused Flag
+#define FLAG_RECEIVED_ROXANNE_MEGA 0x28 // GJT: Excadrite from Roxanne's first rematch
+#define FLAG_RECEIVED_BRAWLY_MEGA 0x29 // GJT: Falinksite from Brawly's first rematch
 #define FLAG_UNUSED_0x02A    0x2A // Unused Flag
 #define FLAG_UNUSED_0x02B    0x2B // Unused Flag
 #define FLAG_UNUSED_0x02C    0x2C // Unused Flag

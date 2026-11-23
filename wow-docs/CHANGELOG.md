@@ -2,6 +2,10 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.64
+- **Power TMs**: gym TMs upgraded (flags unchanged, texts updated): Rustboro Iron Tail (was Rock Tomb), Dewford Brick Break (was Bulk Up), Mauville Thunderbolt (was Shock Wave), Lavaridge Overheat (kept), Petalburg Facade (kept, Scott's gag), Fortree Earthquake (was Aerial Ace), Mossdeep Shadow Ball (was Calm Mind), Sootopolis Blizzard (was Water Pulse). Table in `wow-docs/design/vitamins-and-rewards.md`.
+- **Mega Stones on rematches**: Roxanne's first rematch gives Excadrite, Brawly's gives Falinksite (flags `FLAG_RECEIVED_ROXANNE_MEGA`, `FLAG_RECEIVED_BRAWLY_MEGA`), joining Wattson's Manectite.
+
 ## v0.1.63
 - **Mega Stones before the Mega Bracelet moved**: Manectite is now Wattson's first rematch reward (flag `FLAG_RECEIVED_WATTSON_MEGA`), Flannery gives none, and Charizardite X joins Y in the Magma Hideout group. Nothing is given before gym 5 now.
 
