@@ -39,6 +39,8 @@ FortreeCity_Gym_EventScript_WinonaDefeated::
 	setflag FLAG_DEFEATED_FORTREE_GYM
 	setflag FLAG_BADGE06_GET
 	call GJT_EventScript_GymVitamins6
+	setvar VAR_0x800A, ITEM_ALTARIANITE
+	call GJT_EventScript_MegaGymGive
 	setvar VAR_0x8008, 6
 	call Common_EventScript_SetGymTrainers
 	call FortreeCity_Gym_EventScript_GiveAerialAce

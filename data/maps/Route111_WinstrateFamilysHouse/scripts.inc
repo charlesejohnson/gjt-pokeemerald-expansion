@@ -18,6 +18,8 @@ Route111_WinstrateFamilysHouse_EventScript_Victoria::
 	giveitem ITEM_MACHO_BRACE
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_MACHO_BRACE
+	setvar VAR_0x800A, ITEM_MEDICHAMITE
+	call GJT_EventScript_MegaNpcGive
 	goto Route111_WinstrateFamilysHouse_EventScript_FaceOriginalDirection
 	end
 

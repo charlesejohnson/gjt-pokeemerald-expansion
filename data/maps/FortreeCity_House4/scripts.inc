@@ -34,6 +34,8 @@ FortreeCity_House4_EventScript_WingullReturned::
 	giveitem ITEM_MENTAL_HERB
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_MENTAL_HERB
+	setvar VAR_0x800A, ITEM_PIDGEOTITE
+	call GJT_EventScript_MegaNpcGive
 	releaseall
 	end
 

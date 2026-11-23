@@ -87,6 +87,8 @@ RustboroCity_PokemonSchool_EventScript_Teacher::
 	applymovement VAR_LAST_TALKED, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	setflag FLAG_RECEIVED_QUICK_CLAW
+	setvar VAR_0x800A, ITEM_ALAKAZITE
+	call GJT_EventScript_MegaNpcGive
 	release
 	end
 

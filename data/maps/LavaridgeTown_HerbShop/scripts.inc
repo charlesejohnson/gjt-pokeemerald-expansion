@@ -31,6 +31,8 @@ LavaridgeTown_HerbShop_EventScript_OldMan::
 	giveitem ITEM_CHARCOAL
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_CHARCOAL
+	setvar VAR_0x800A, ITEM_VICTREEBELITE
+	call GJT_EventScript_MegaNpcGive
 	release
 	end
 

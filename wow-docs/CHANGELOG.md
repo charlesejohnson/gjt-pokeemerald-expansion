@@ -2,6 +2,10 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.62
+- **27 Mega Stones placed** (list in `wow-docs/design/mega-stones.md`): gyms 3 to 8 (Tate and Liza give two), a group of three after the Magma Hideout (Maxie) and another after the Aqua Hideout (Matt), five NPC bonus gifts, and nine replacing ordinary items on the ground or hidden. Scripts in `data/scripts/gjt_mega_stones.inc`. Untested in game.
+- **Mega Bracelet**: the Mega Ring key item is renamed Mega Bracelet and Norman (gym 5) gives it. Mega Evolution needs it.
+
 ## v0.1.61
 - **Specialization Stone** (new item "Spec Stone", 5,000): use it from the bag on a class Pokemon, pick the Pokemon, then pick a specialization from a menu (Druid shows four). Base and middle forms evolve into the chosen spec's middle form; final forms switch to the chosen final form. Same item for first spec and respec. Code: `src/gjt_spec_stone.c`, scripts: `data/scripts/gjt_spec_stone.inc`.
 - **Where to get it**: Dewford gym guide (replaces the Fire/Water/Leaf stone gift), Lavaridge Pokemon Center after the Flannery badge (a second one, for flexibility), and Lilycove Department Store 3F (5,000, first on the list).

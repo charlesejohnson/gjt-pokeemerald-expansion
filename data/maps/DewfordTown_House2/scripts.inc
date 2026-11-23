@@ -9,6 +9,8 @@ DewfordTown_House2_EventScript_Man::
 	giveitem ITEM_SILK_SCARF
 	goto_if_eq VAR_RESULT, FALSE, DewfordTown_House2_EventScript_NoRoomForScarf
 	setflag FLAG_RECEIVED_SILK_SCARF
+	setvar VAR_0x800A, ITEM_CLEFABLITE
+	call GJT_EventScript_MegaNpcGive
 	release
 	end
 

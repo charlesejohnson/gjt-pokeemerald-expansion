@@ -1742,3 +1742,4 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/scripts/wild_encounter.inc"
 	.include "data/scripts/gjt_gym_vitamins.inc"
 	.include "data/scripts/gjt_spec_stone.inc"
+	.include "data/scripts/gjt_mega_stones.inc"
