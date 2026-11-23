@@ -845,6 +845,21 @@ static void ItemUseOnFieldCB_WailmerPailSudowoodo(u8 taskId)
     DestroyTask(taskId);
 }
 
+// GJT: Specialization Stone - party pick and spec menu run as a script.
+extern const u8 GJT_EventScript_UseSpecStone[];
+static void ItemUseOnFieldCB_SpecStone(u8 taskId)
+{
+    LockPlayerFieldControls();
+    ScriptContext_SetupScript(GJT_EventScript_UseSpecStone);
+    DestroyTask(taskId);
+}
+
+void ItemUseOutOfBattle_SpecStone(u8 taskId)
+{
+    sItemUseOnFieldCB = ItemUseOnFieldCB_SpecStone;
+    SetUpItemUseOnFieldCallback(taskId);
+}
+
 void ItemUseOutOfBattle_Medicine(u8 taskId)
 {
     gItemUseCB = ItemUseCB_Medicine;

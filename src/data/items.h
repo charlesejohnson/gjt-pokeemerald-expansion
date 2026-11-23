@@ -4279,6 +4279,23 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_DawnStone,
     },
 
+    [ITEM_SPECIALIZATION_STONE] =
+    {
+        .name = ITEM_NAME("Spec Stone"),
+        .price = 5000,
+        .description = COMPOUND_STRING(
+            "Lets a class\n"
+            "Pokémon choose or\n"
+            "change its spec."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_EVOLUTION_STONE,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_SpecStone,
+        .flingPower = 80,
+        .iconPic = gItemIcon_ShinyStone,
+        .iconPalette = gItemIconPalette_ShinyStone,
+    },
+
     [ITEM_SWEET_APPLE] =
     {
         .name = ITEM_NAME("Sweet Apple"),

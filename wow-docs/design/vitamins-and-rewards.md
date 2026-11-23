@@ -23,6 +23,9 @@ Previously every gym with vitamins gave 30 (5 of each) at gyms 1, 3, 5 and 8 onl
 - **Ever Grande Pokemon Center**: vitamin clerk (replaces the old woman NPC), engine default vitamin price, right before the Elite Four so a new team member can catch up.
 - **Slateport market stall**: vitamins removed (sells Energy Powder, Energy Root, Heal Powder, Revival Herb).
 
+## Specialization Stone (v0.1.61)
+One universal item, "Spec Stone", for every class (Druid has four specs). Use on a class mon, choose the spec, it evolves. Base and middle forms go to the chosen middle form; final forms switch final form. Respec is only priced (no use limit): Lilycove 3F sells it at 5,000. Story copies: Dewford gym guide (replaces the Fire/Water/Leaf gift) and Lavaridge Pokemon Center after the Heat Badge. Class evolution tables now key on this item, so normal stones do not evolve class mons.
+
 ## Targets (see power-scaling.md)
 Gym rewards alone: about 150 vitamins. Spread evenly over 6 stats it rates near parity with Glacia and Sidney and below Drake, Phoebe and the Champion. Focused on two stats per mon it is closer to the middle bosses. The Ever Grande shop is the catch-up lever.
 

@@ -227,9 +227,9 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .shinyPalette = gMonShinyPalette_Deathknight,
                 .iconSprite = gMonIcon_Deathknight,
                 .iconPalIndex = 2,
-        .evolutions = EVOLUTION({EVO_ITEM, ITEM_LEAF_STONE, SPECIES_DEATHKNIGHT_BLOOD_MID},
-            {EVO_ITEM, ITEM_FIRE_STONE, SPECIES_DEATHKNIGHT_FROST_MID},
-            {EVO_ITEM, ITEM_WATER_STONE, SPECIES_DEATHKNIGHT_UNHOLY_MID}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_DEATHKNIGHT_BLOOD_MID},
+            {EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_DEATHKNIGHT_FROST_MID},
+            {EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_DEATHKNIGHT_UNHOLY_MID}),
         FOOTPRINT(Deathknight)
 
     },
@@ -286,8 +286,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .shinyPalette = gMonShinyPalette_DeathknightFrost,
                 .iconSprite = gMonIcon_Bisharp,
                 .iconPalIndex = 2,
-        .evolutions = EVOLUTION({EVO_ITEM, ITEM_LEAF_STONE, SPECIES_DEATHKNIGHT_BLOOD},
-            {EVO_ITEM, ITEM_WATER_STONE, SPECIES_DEATHKNIGHT_UNHOLY}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_DEATHKNIGHT_BLOOD},
+            {EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_DEATHKNIGHT_UNHOLY}),
         FOOTPRINT(Deathknight)
         
 
@@ -347,8 +347,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
                 .iconSprite = gMonIcon_Bisharp,
                 .iconPalIndex = 2,
         .evolutions = EVOLUTION(
-            {EVO_ITEM, ITEM_FIRE_STONE, SPECIES_DEATHKNIGHT_FROST},
-            {EVO_ITEM, ITEM_WATER_STONE, SPECIES_DEATHKNIGHT_UNHOLY}),
+            {EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_DEATHKNIGHT_FROST},
+            {EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_DEATHKNIGHT_UNHOLY}),
         FOOTPRINT(Deathknight)
     
 
@@ -406,8 +406,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .shinyPalette = gMonShinyPalette_DeathknightUnholy,
                 .iconSprite = gMonIcon_Bisharp,
                 .iconPalIndex = 2,
-        .evolutions = EVOLUTION({EVO_ITEM, ITEM_LEAF_STONE, SPECIES_DEATHKNIGHT_BLOOD},
-            {EVO_ITEM, ITEM_FIRE_STONE, SPECIES_DEATHKNIGHT_FROST}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_DEATHKNIGHT_BLOOD},
+            {EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_DEATHKNIGHT_FROST}),
         FOOTPRINT(Deathknight)
 
     },
@@ -464,9 +464,9 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .shinyPalette = gMonShinyPalette_Ralts,
                 .iconSprite = gMonIcon_Ralts,
                 .iconPalIndex = 2,
-        .evolutions = EVOLUTION({EVO_ITEM, ITEM_LEAF_STONE, SPECIES_MAGE_ARCANE_MID},
-            {EVO_ITEM, ITEM_FIRE_STONE, SPECIES_MAGE_FIRE_MID},
-            {EVO_ITEM, ITEM_WATER_STONE, SPECIES_MAGE_FROST_MID}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_MAGE_ARCANE_MID},
+            {EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_MAGE_FIRE_MID},
+            {EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_MAGE_FROST_MID}),
         FOOTPRINT(Ralts)
 
     },
@@ -523,9 +523,9 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .shinyPalette = gMonShinyPalette_MageFrost,
                 .iconSprite = gMonIcon_Gardevoir,
                 .iconPalIndex = 1,
-        .evolutions = EVOLUTION({EVO_ITEM, ITEM_LEAF_STONE, SPECIES_MAGE_ARCANE},
-            {EVO_ITEM, ITEM_FIRE_STONE, SPECIES_MAGE_FIRE},
-            {EVO_ITEM, ITEM_WATER_STONE, SPECIES_MAGE_FROST}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_MAGE_ARCANE},
+            {EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_MAGE_FIRE},
+            {EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_MAGE_FROST}),
         FOOTPRINT(Froslass)
 
     },
@@ -582,9 +582,9 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .shinyPalette = gMonShinyPalette_MageFire,
                 .iconSprite = gMonIcon_Gardevoir,
                 .iconPalIndex = 1,
-        .evolutions = EVOLUTION({EVO_ITEM, ITEM_LEAF_STONE, SPECIES_MAGE_ARCANE},
-            {EVO_ITEM, ITEM_FIRE_STONE, SPECIES_MAGE_FIRE},
-            {EVO_ITEM, ITEM_WATER_STONE, SPECIES_MAGE_FROST}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_MAGE_ARCANE},
+            {EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_MAGE_FIRE},
+            {EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_MAGE_FROST}),
         FOOTPRINT(Delphox)
 
     },
@@ -641,9 +641,9 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .shinyPalette = gMonShinyPalette_MageArcane,
                 .iconSprite = gMonIcon_Gardevoir,
                 .iconPalIndex = 1,
-        .evolutions = EVOLUTION({EVO_ITEM, ITEM_LEAF_STONE, SPECIES_MAGE_ARCANE},
-            {EVO_ITEM, ITEM_FIRE_STONE, SPECIES_MAGE_FIRE},
-            {EVO_ITEM, ITEM_WATER_STONE, SPECIES_MAGE_FROST}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_MAGE_ARCANE},
+            {EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_MAGE_FIRE},
+            {EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_MAGE_FROST}),
         FOOTPRINT(Nihilego)
 
     },
@@ -701,9 +701,9 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconSprite = gMonIcon_Timburr,
         .iconPalIndex = 1,
         FOOTPRINT(Timburr)
-        .evolutions = EVOLUTION({EVO_ITEM, ITEM_MOON_STONE, SPECIES_WARRIOR_ARMS_MID},
-            {EVO_ITEM, ITEM_SUN_STONE, SPECIES_WARRIOR_FURY_MID},
-            {EVO_ITEM, ITEM_SHINY_STONE, SPECIES_WARRIOR_PROTECTION_MID}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_WARRIOR_ARMS_MID},
+            {EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_WARRIOR_FURY_MID},
+            {EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_WARRIOR_PROTECTION_MID}),
     },
     [SPECIES_WARRIOR_ARMS] =
     {
@@ -935,9 +935,9 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconSprite = gMonIcon_Timburr,
         .iconPalIndex = 1,
         FOOTPRINT(Timburr)
-        .evolutions = EVOLUTION({EVO_ITEM, ITEM_MOON_STONE, SPECIES_SHAMAN_RESTORATION_MID},
-            {EVO_ITEM, ITEM_SUN_STONE, SPECIES_SHAMAN_ELEMENTAL_MID},
-            {EVO_ITEM, ITEM_SHINY_STONE, SPECIES_SHAMAN_ENHANCEMENT_MID}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_SHAMAN_RESTORATION_MID},
+            {EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_SHAMAN_ELEMENTAL_MID},
+            {EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_SHAMAN_ENHANCEMENT_MID}),
     },
     [SPECIES_SHAMAN_RESTORATION] =
     {
@@ -1161,10 +1161,10 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconSprite = gMonIcon_Sunkern,
         .iconPalIndex = 1,
         FOOTPRINT(Sunkern)
-        .evolutions = EVOLUTION({EVO_ITEM, ITEM_MOON_STONE, SPECIES_DRUID_RESTORATION_MID},
-            {EVO_ITEM, ITEM_SHINY_STONE, SPECIES_DRUID_FERAL_MID},
-            {EVO_ITEM, ITEM_DAWN_STONE, SPECIES_DRUID_GUARDIAN_MID},
-            {EVO_ITEM, ITEM_SUN_STONE, SPECIES_DRUID_BOOMY_MID}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_DRUID_RESTORATION_MID},
+            {EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_DRUID_FERAL_MID},
+            {EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_DRUID_GUARDIAN_MID},
+            {EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_DRUID_BOOMY_MID}),
     },
     [SPECIES_DRUID_RESTORATION] =
     {
@@ -1763,9 +1763,9 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconSprite = gMonIcon_Sawk,
         .iconPalIndex = 0,
         FOOTPRINT(Sawk)
-        .evolutions = EVOLUTION({EVO_ITEM, ITEM_MOON_STONE, SPECIES_MONK_MISTWEAVER_MID},
-            {EVO_ITEM, ITEM_SUN_STONE, SPECIES_MONK_BREWMASTER_MID},
-            {EVO_ITEM, ITEM_SHINY_STONE, SPECIES_MONK_WINDWALKER_MID}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_MONK_MISTWEAVER_MID},
+            {EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_MONK_BREWMASTER_MID},
+            {EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_MONK_WINDWALKER_MID}),
     },
     [SPECIES_MONK_MISTWEAVER] =
     {
@@ -1986,9 +1986,9 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconSprite = gMonIcon_Bisharp,
         .iconPalIndex = 0,
         FOOTPRINT(Bisharp)
-        .evolutions = EVOLUTION({EVO_ITEM, ITEM_MOON_STONE, SPECIES_PALADIN_HOLY_MID},
-            {EVO_ITEM, ITEM_SUN_STONE, SPECIES_PALADIN_RETRIBUTION_MID},
-            {EVO_ITEM, ITEM_SHINY_STONE, SPECIES_PALADIN_PROTECTION_MID}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_PALADIN_HOLY_MID},
+            {EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_PALADIN_RETRIBUTION_MID},
+            {EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_PALADIN_PROTECTION_MID}),
     },
     [SPECIES_PALADIN_PROTECTION] =
     {
@@ -2206,9 +2206,9 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconSprite = gMonIcon_Accelgor,
         .iconPalIndex = 1,
         FOOTPRINT(Accelgor)
-        .evolutions = EVOLUTION({EVO_ITEM, ITEM_MOON_STONE, SPECIES_HUNTER_BEAST_MASTERY_MID},
-            {EVO_ITEM, ITEM_SHINY_STONE, SPECIES_HUNTER_MARKSMANSHIP_MID},
-            {EVO_ITEM, ITEM_SUN_STONE, SPECIES_HUNTER_SURVIVAL_MID}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_HUNTER_BEAST_MASTERY_MID},
+            {EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_HUNTER_MARKSMANSHIP_MID},
+            {EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_HUNTER_SURVIVAL_MID}),
     },
     [SPECIES_HUNTER_BEAST_MASTERY] =
     {
@@ -2426,7 +2426,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .shinyPalette = gMonShinyPalette_DeathknightFrost,
                 .iconSprite = gMonIcon_Bisharp,
                 .iconPalIndex = 2,
-                .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_DEATHKNIGHT_FROST},{EVO_ITEM, ITEM_LEAF_STONE, SPECIES_DEATHKNIGHT_BLOOD_MID},{EVO_ITEM, ITEM_WATER_STONE, SPECIES_DEATHKNIGHT_UNHOLY_MID}),
+                .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_DEATHKNIGHT_FROST},{EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_DEATHKNIGHT_BLOOD_MID},{EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_DEATHKNIGHT_UNHOLY_MID}),
         FOOTPRINT(Deathknight)
         
 
@@ -2485,7 +2485,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .shinyPalette = gMonShinyPalette_Bisharp,
                 .iconSprite = gMonIcon_Bisharp,
                 .iconPalIndex = 2,
-                .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_DEATHKNIGHT_BLOOD},{EVO_ITEM, ITEM_FIRE_STONE, SPECIES_DEATHKNIGHT_FROST_MID},{EVO_ITEM, ITEM_WATER_STONE, SPECIES_DEATHKNIGHT_UNHOLY_MID}),
+                .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_DEATHKNIGHT_BLOOD},{EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_DEATHKNIGHT_FROST_MID},{EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_DEATHKNIGHT_UNHOLY_MID}),
         FOOTPRINT(Deathknight)
     
 
@@ -2544,7 +2544,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .shinyPalette = gMonShinyPalette_DeathknightUnholy,
                 .iconSprite = gMonIcon_Bisharp,
                 .iconPalIndex = 2,
-                .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_DEATHKNIGHT_UNHOLY},{EVO_ITEM, ITEM_LEAF_STONE, SPECIES_DEATHKNIGHT_BLOOD_MID},{EVO_ITEM, ITEM_FIRE_STONE, SPECIES_DEATHKNIGHT_FROST_MID}),
+                .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_DEATHKNIGHT_UNHOLY},{EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_DEATHKNIGHT_BLOOD_MID},{EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_DEATHKNIGHT_FROST_MID}),
         FOOTPRINT(Deathknight)
 
     },
@@ -2602,7 +2602,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .shinyPalette = gMonShinyPalette_MageFrost,
                 .iconSprite = gMonIcon_Gardevoir,
                 .iconPalIndex = 1,
-                .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_MAGE_FROST},{EVO_ITEM, ITEM_LEAF_STONE, SPECIES_MAGE_ARCANE_MID},{EVO_ITEM, ITEM_FIRE_STONE, SPECIES_MAGE_FIRE_MID},{EVO_ITEM, ITEM_WATER_STONE, SPECIES_MAGE_FROST_MID}),
+                .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_MAGE_FROST},{EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_MAGE_ARCANE_MID},{EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_MAGE_FIRE_MID},{EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_MAGE_FROST_MID}),
         FOOTPRINT(Froslass)
 
     },
@@ -2660,7 +2660,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .shinyPalette = gMonShinyPalette_MageFire,
                 .iconSprite = gMonIcon_Gardevoir,
                 .iconPalIndex = 1,
-                .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_MAGE_FIRE},{EVO_ITEM, ITEM_LEAF_STONE, SPECIES_MAGE_ARCANE_MID},{EVO_ITEM, ITEM_FIRE_STONE, SPECIES_MAGE_FIRE_MID},{EVO_ITEM, ITEM_WATER_STONE, SPECIES_MAGE_FROST_MID}),
+                .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_MAGE_FIRE},{EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_MAGE_ARCANE_MID},{EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_MAGE_FIRE_MID},{EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_MAGE_FROST_MID}),
         FOOTPRINT(Delphox)
 
     },
@@ -2718,7 +2718,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .shinyPalette = gMonShinyPalette_MageArcane,
                 .iconSprite = gMonIcon_Gardevoir,
                 .iconPalIndex = 1,
-                .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_MAGE_ARCANE},{EVO_ITEM, ITEM_LEAF_STONE, SPECIES_MAGE_ARCANE_MID},{EVO_ITEM, ITEM_FIRE_STONE, SPECIES_MAGE_FIRE_MID},{EVO_ITEM, ITEM_WATER_STONE, SPECIES_MAGE_FROST_MID}),
+                .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_MAGE_ARCANE},{EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_MAGE_ARCANE_MID},{EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_MAGE_FIRE_MID},{EVO_ITEM, ITEM_SPECIALIZATION_STONE, SPECIES_MAGE_FROST_MID}),
         FOOTPRINT(Nihilego)
 
     },

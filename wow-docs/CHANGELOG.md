@@ -2,6 +2,11 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.61
+- **Specialization Stone** (new item "Spec Stone", 5,000): use it from the bag on a class Pokemon, pick the Pokemon, then pick a specialization from a menu (Druid shows four). Base and middle forms evolve into the chosen spec's middle form; final forms switch to the chosen final form. Same item for first spec and respec. Code: `src/gjt_spec_stone.c`, scripts: `data/scripts/gjt_spec_stone.inc`.
+- **Where to get it**: Dewford gym guide (replaces the Fire/Water/Leaf stone gift), Lavaridge Pokemon Center after the Flannery badge (a second one, for flexibility), and Lilycove Department Store 3F (5,000, first on the list).
+- All class evolution table entries that used Fire/Water/Leaf/Sun/Shiny/Moon/Dawn stones now point at the Spec Stone, so ordinary stones (Mauville mart, etc.) no longer evolve class Pokemon. Non-class Pokemon are unchanged. Untested in game.
+
 ## v0.1.60
 - **Vitamin scarcity pass**: the Slateport market stall no longer sells vitamins (now Energy Powder, Energy Root, Heal Powder, Revival Herb). Ever Grande Pokemon Center has a vitamin clerk (the old woman NPC, default vitamin price) so players can catch a new team member up right before the League. All 21 mints now cost 5,000 (Lilycove 3F).
 
