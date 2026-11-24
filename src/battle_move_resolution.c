@@ -2200,6 +2200,17 @@ static enum CancelerResult CancelerTargetFailure(struct BattleCalcValues *cv)
             if (ShouldSkipFailureCheckOnBattler(cv->battlerAtk, cv->battlerDef))
                 continue;
 
+            if (!IsBattleMoveStatus(cv->move)
+             && !IsBattlerAlly(cv->battlerAtk, cv->battlerDef)
+             && GetBattlerHoldEffect(cv->battlerDef) == HOLD_EFFECT_GJT_THUNDERFURY
+             && RandomPercentage(RNG_NONE, 10))
+            {
+                // GJT: Thunderfury parry
+                gBattleStruct->moveResultFlags[cv->battlerDef] |= MOVE_RESULT_PROTECTED;
+                BattleScriptCall(BattleScript_GjtParry);
+                return TargetAvoidedAttack(cv->battlerAtk, cv->battlerDef);
+            }
+
             if (IsBattlerProtected(cv))
             {
                 SetOrClearRageVolatile();

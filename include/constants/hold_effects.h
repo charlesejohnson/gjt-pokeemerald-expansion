@@ -136,6 +136,7 @@ enum HoldEffect
     HOLD_EFFECT_OGERPON_MASK,
     // Gen2 hold effect
     HOLD_EFFECT_BERSERK_GENE,
+    HOLD_EFFECT_GJT_THUNDERFURY, // GJT: +10% damage dealt, 10% chance to parry
     HOLD_EFFECT_COUNT
 };
 

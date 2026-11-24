@@ -15832,13 +15832,15 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Thunderfury"),
         .price = 0,
         .importance = 1,
+        .holdEffect = HOLD_EFFECT_GJT_THUNDERFURY,
         .description = COMPOUND_STRING(
-            "Blessed Blade of the\n"
-            "Windseeker. Effects\n"
-            "to be added."),
-        .pocket = POCKET_KEY_ITEMS,
+            "Hold: +10% damage.\n"
+            "10% to parry an\n"
+            "incoming attack."),
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 100,
         .iconPic = gItemIcon_GlimmeringCharm,
         .iconPalette = gItemIconPalette_GlimmeringCharm,
     },

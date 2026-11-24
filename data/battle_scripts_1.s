@@ -6949,6 +6949,14 @@ BattleScript_GjtMasterPlan::
 	waitmessage B_WAIT_TIME_LONG
 	return
 
+BattleScript_GjtParry::
+	pause B_WAIT_TIME_SHORT
+	playanimation BS_TARGET, B_ANIM_PROTECTED_ITSELF
+	waitanimation
+	printstring STRINGID_GJT_PARRY
+	waitmessage B_WAIT_TIME_LONG
+	return
+
 BattleScript_GjtSingularity::
 	printstring STRINGID_GJT_SINGULARITY
 	waitmessage B_WAIT_TIME_LONG

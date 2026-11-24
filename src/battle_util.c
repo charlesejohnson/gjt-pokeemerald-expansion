@@ -7702,6 +7702,9 @@ static inline uq4_12_t GetAttackerItemsModifier(enum BattlerId battlerAtk, uq4_1
     case HOLD_EFFECT_LIFE_ORB:
         return UQ_4_12_FLOORED(1.3);
         break;
+    case HOLD_EFFECT_GJT_THUNDERFURY:
+        return UQ_4_12_FLOORED(1.1);
+        break;
     default:
         break;
     }

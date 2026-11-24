@@ -2,6 +2,9 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.66
+- **Thunderfury is now a real held item** (still `ITEM_GLIMMERING_CHARM`, moved from Key Items to Items, cannot be sold or tossed): the holder deals 10% more damage (`HOLD_EFFECT_GJT_THUNDERFURY` in `GetAttackerItemsModifier`) and each damaging attack from an opponent has a 10% chance to be parried ("X parried the attack with THUNDERFURY!"), handled just before the Protect check in `battle_move_resolution.c`. Untested in game.
+
 ## v0.1.65
 - **Leader rematch pack.** All eight gym leaders now give their Mega Stone on their first rematch, and their rematch teams (`TRAINER_<LEADER>_2` to `_5`, 4 to 6 mons, same level ranges as before, IV 31) are rebuilt around that Mega: Roxanne/C'Thun Steelix, Brawly/Garrosh Falinks, Wattson/Lei Shen Manectric, Flannery/Ragnaros Camerupt, Norman/Scott Kangaskhan, Winona/Thunderaan Altaria, Tate and Liza/Windrunner Sableye, Juan/Jaina Slowbro. Leader names in the rematch teams now match the WoW names.
 - **PokeNav calls** rewritten for all eight (they thank you for freeing them, say they are not ready yet, then offer the rematch). Placeholder-quality; edit freely in `data/text/match_call.inc`.

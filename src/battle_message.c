@@ -537,6 +537,7 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_GJT_ECHO]                             = COMPOUND_STRING("Memories of betrayal! {B_ATK_NAME_WITH_PREFIX}\nwas struck by its own echo!"),
     [STRINGID_GJT_ECHO_FIZZLE]                      = COMPOUND_STRING("The echo of {B_ATK_NAME_WITH_PREFIX}'s move\nfizzled out."),
     [STRINGID_GJT_MASTER_PLAN]                      = COMPOUND_STRING("Her master plan! {B_EFF_NAME_WITH_PREFIX}\ncopied the boosts!"),
+    [STRINGID_GJT_PARRY]                            = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX} parried the attack\nwith THUNDERFURY!"),
     [STRINGID_GJT_SINGULARITY]                      = COMPOUND_STRING("The singularity crushes\n{B_ATK_NAME_WITH_PREFIX}! Switch out to escape!"),
     [STRINGID_GJT_SHA_VIOLENCE]                     = COMPOUND_STRING("The Sha of Violence\ndulled {B_ATK_NAME_WITH_PREFIX}'s crits!"),
     [STRINGID_GJT_AIMING]                           = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} is taking aim!"),

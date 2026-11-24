@@ -175,7 +175,7 @@ All gym trainers have IV 16 and two mons. Rematch lines and the Wally tutorial s
 
 ## Fortree Gym (level cap 33) - DRAFT v0.1.5
 
-Boss changed to **Prince Thunderaan** (Winona taken over, fine after). Al'Akir moves to Rayquaza, Neptulon to Kyogre, Therazane to Groudon. Ending: the Windseeker Binding (key item from the Ragnaros scene) seals Thunderaan and yields **Thunderfury** (placeholder key item, repurposed `ITEM_GLIMMERING_CHARM`; planned effect: held item, +10% damage dealt, 10% chance to parry a damaging attack with a short message; not implemented yet).
+Boss changed to **Prince Thunderaan** (Winona taken over, fine after). Al'Akir moves to Rayquaza, Neptulon to Kyogre, Therazane to Groudon. Ending: the Windseeker Binding (key item from the Ragnaros scene) seals Thunderaan and yields **Thunderfury** (placeholder key item, repurposed `ITEM_GLIMMERING_CHARM`; planned effect: held item, +10% damage dealt, 10% chance to parry a damaging attack with a short message; implemented in v0.1.66 as a normal held item).
 
 Flint and Darius removed. The four remaining trainers keep their positions (entrance to boss): Humberto, Ashley, Jared, Edwardo.
 
