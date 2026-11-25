@@ -2,6 +2,9 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.70
+- **Gym leader first-fight EVs.** Leader mons (`TRAINER_<LEADER>_1`) now carry EVs that rise with the gym, matching the vitamins a player has by then: Roxanne 0, Brawly 12, Wattson 24, Flannery 36, Norman 48, Winona 60, Tate and Liza 72, Juan 80 on every stat (total 72 to 480, legal; Elite Four use 85 each). Rematch tiers _2 to _5 are unchanged. This is a difficulty bump from gym 2 on, so watch it in playtest and lower a row if a gym spikes.
+
 ## v0.1.69
 - Docs and housekeeping only. Counted the vitamins lying on Hoenn routes (34 stat vitamins, 340 EVs, about 23% on top of the gym schedule; see `design/vitamins-and-rewards.md`). Reserved spare flags 0x2F to 0x4F and three vars for the Void arc (`design/reserved-flags.md`). No game logic changed.
 
