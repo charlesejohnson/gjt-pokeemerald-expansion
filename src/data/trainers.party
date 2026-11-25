@@ -17866,11 +17866,12 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Smart Mon Choices
 
 Steelix @ Steelixite
 Level: 42
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 HP / 84 Def
 - Stealth Rock
 - Earthquake
 - Heavy Slam
@@ -17879,6 +17880,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Probopass @ Leftovers
 Level: 41
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 HP / 84 SpD
 - Power Gem
 - Flash Cannon
 - Thunder Wave
@@ -17887,6 +17889,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Carbink @ Sitrus Berry
 Level: 40
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 HP / 84 Def
 - Moonblast
 - Power Gem
 - Reflect
@@ -17895,6 +17898,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Minior @ Focus Sash
 Level: 38
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 Atk / 84 Spe
 - Shell Smash
 - Acrobatics
 - Earthquake
@@ -17903,6 +17907,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Gigalith @ Rocky Helmet
 Level: 37
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 HP / 84 Atk
 - Stone Edge
 - Earthquake
 - Wide Guard
@@ -17916,46 +17921,51 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Omniscient / Smart Mon Choices
 
 Steelix @ Steelixite
 Level: 47
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 HP / 168 Def
 - Stealth Rock
 - Earthquake
 - Heavy Slam
-- Rock Slide
+- Dragon Tail
 
 Probopass @ Leftovers
 Level: 46
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 HP / 168 SpD
 - Power Gem
 - Flash Cannon
 - Thunder Wave
-- Protect
+- Volt Switch
 
 Carbink @ Sitrus Berry
 Level: 44
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 HP / 168 Def
 - Moonblast
 - Power Gem
-- Reflect
+- Stealth Rock
 - Light Screen
 
 Minior @ Focus Sash
 Level: 43
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 Atk / 168 Spe
 - Shell Smash
 - Acrobatics
 - Earthquake
-- Rock Slide
+- Stone Edge
 
 Gigalith @ Rocky Helmet
 Level: 42
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 HP / 168 Atk
 - Stone Edge
 - Earthquake
-- Wide Guard
+- Sandstorm
 - Heavy Slam
 
 === TRAINER_ROXANNE_5 ===
@@ -17966,55 +17976,61 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Ace Pokemon / Omniscient / Smart Mon Choices
 
 Steelix @ Steelixite
 Level: 52
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Stealth Rock
+EVs: 252 HP / 252 Def
+- Toxic
 - Earthquake
 - Heavy Slam
-- Rock Slide
+- Dragon Tail
 
 Probopass @ Leftovers
 Level: 51
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpD
 - Power Gem
 - Flash Cannon
-- Thunder Wave
-- Protect
+- Earth Power
+- Volt Switch
 
 Carbink @ Sitrus Berry
 Level: 50
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def
 - Moonblast
 - Power Gem
-- Reflect
-- Light Screen
+- Stealth Rock
+- Calm Mind
 
 Minior @ Focus Sash
 Level: 49
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
 - Shell Smash
 - Acrobatics
-- Earthquake
-- Rock Slide
+- Explosion
+- Stone Edge
 
 Gigalith @ Rocky Helmet
 Level: 48
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk
 - Stone Edge
 - Earthquake
-- Wide Guard
-- Heavy Slam
+- Sandstorm
+- Stealth Rock
 
 Regirock @ Leftovers
 Level: 47
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def
 - Rock Slide
 - Curse
-- Rest
-- Body Press
+- Thunder Wave
+- Earthquake
 
 === TRAINER_BRAWLY_2 ===
 Name: GARROSH
@@ -18065,11 +18081,12 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Smart Mon Choices
 
 Falinks @ Falinksite
 Level: 42
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 Atk / 84 Spe
 - Close Combat
 - No Retreat
 - Iron Head
@@ -18078,6 +18095,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Conkeldurr @ Flame Orb
 Level: 41
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 HP / 84 Atk
 - Drain Punch
 - Mach Punch
 - Knock Off
@@ -18086,6 +18104,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Hawlucha @ Sitrus Berry
 Level: 39
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 Atk / 84 Spe
 - Close Combat
 - Flying Press
 - Swords Dance
@@ -18094,6 +18113,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Machamp @ Leftovers
 Level: 38
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 Atk / 84 Spe
 - Dynamic Punch
 - Bullet Punch
 - Ice Punch
@@ -18107,47 +18127,52 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Omniscient / Smart Mon Choices
 
 Falinks @ Falinksite
 Level: 47
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 Atk / 168 Spe
 - Close Combat
 - No Retreat
-- Iron Head
+- Superpower
 - Knock Off
 
 Conkeldurr @ Flame Orb
 Level: 45
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 HP / 168 Atk
 - Drain Punch
-- Mach Punch
+- Stone Edge
 - Knock Off
 - Protect
 
 Hawlucha @ Sitrus Berry
 Level: 44
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 Atk / 168 Spe
 - Close Combat
 - Flying Press
 - Swords Dance
-- Protect
+- Acrobatics
 
 Machamp @ Leftovers
 Level: 42
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 Atk / 168 Spe
 - Dynamic Punch
 - Bullet Punch
-- Ice Punch
+- Stone Edge
 - Protect
 
 Granbull @ Life Orb
 Level: 40
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 HP / 168 Atk
 - Play Rough
 - Crunch
 - Thunder Fang
-- Roar
+- Close Combat
 
 === TRAINER_BRAWLY_5 ===
 Name: GARROSH
@@ -18157,55 +18182,61 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Ace Pokemon / Omniscient / Smart Mon Choices
 
 Falinks @ Falinksite
 Level: 52
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
 - Close Combat
 - No Retreat
-- Iron Head
-- Knock Off
+- Superpower
+- Rock Slide
 
 Conkeldurr @ Flame Orb
 Level: 51
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk
 - Drain Punch
-- Mach Punch
+- Stone Edge
 - Knock Off
-- Protect
+- Ice Punch
 
 Hawlucha @ Sitrus Berry
 Level: 50
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
 - Close Combat
 - Flying Press
-- Swords Dance
-- Protect
+- Roost
+- Acrobatics
 
 Machamp @ Leftovers
 Level: 48
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
 - Dynamic Punch
 - Bullet Punch
-- Ice Punch
-- Protect
+- Stone Edge
+- Knock Off
 
 Granbull @ Life Orb
 Level: 47
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk
 - Play Rough
 - Crunch
-- Thunder Fang
-- Roar
+- Fire Fang
+- Close Combat
 
 Emboar @ Salac Berry
 Level: 46
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
 - Flare Blitz
 - Hammer Arm
-- Wild Charge
-- Protect
+- Sucker Punch
+- Earthquake
 
 === TRAINER_WATTSON_2 ===
 Name: LEI SHEN
@@ -18257,11 +18288,12 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Smart Mon Choices
 
 Manectric @ Manectite
 Level: 45
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 SpA / 84 Spe
 - Thunderbolt
 - Volt Switch
 - Flamethrower
@@ -18270,6 +18302,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Raichu @ Focus Sash
 Level: 44
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 SpA / 84 Spe
 - Follow Me
 - Discharge
 - Volt Switch
@@ -18278,6 +18311,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Magnezone @ Choice Specs
 Level: 42
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 HP / 84 SpA
 - Thunderbolt
 - Flash Cannon
 - Volt Switch
@@ -18286,6 +18320,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Raikou @ Life Orb
 Level: 40
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 SpA / 84 Spe
 - Thunderbolt
 - Snarl
 - Shadow Ball
@@ -18294,6 +18329,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Electivire @ Expert Belt
 Level: 39
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 Atk / 84 Spe
 - Wild Charge
 - Cross Chop
 - Ice Punch
@@ -18307,46 +18343,51 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Omniscient / Smart Mon Choices
 
 Manectric @ Manectite
 Level: 50
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 SpA / 168 Spe
 - Thunderbolt
 - Volt Switch
 - Flamethrower
-- Protect
+- Snarl
 
 Raichu @ Focus Sash
 Level: 48
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 SpA / 168 Spe
 - Follow Me
 - Discharge
 - Volt Switch
-- Endure
+- Nasty Plot
 
 Magnezone @ Choice Specs
 Level: 47
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 HP / 168 SpA
 - Thunderbolt
 - Flash Cannon
 - Volt Switch
-- Tri Attack
+- Thunder
 
 Raikou @ Life Orb
 Level: 46
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 SpA / 168 Spe
 - Thunderbolt
 - Snarl
 - Shadow Ball
-- Protect
+- Extrasensory
 
 Electivire @ Expert Belt
 Level: 44
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 Atk / 168 Spe
 - Wild Charge
 - Cross Chop
-- Ice Punch
+- Earthquake
 - Flamethrower
 
 === TRAINER_WATTSON_5 ===
@@ -18357,55 +18398,61 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Ace Pokemon / Omniscient / Smart Mon Choices
 
 Manectric @ Manectite
 Level: 55
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 252 Spe
 - Thunderbolt
 - Volt Switch
-- Flamethrower
-- Protect
+- Overheat
+- Snarl
 
 Raichu @ Focus Sash
 Level: 54
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Follow Me
+EVs: 252 SpA / 252 Spe
+- Grass Knot
 - Discharge
 - Volt Switch
-- Endure
+- Nasty Plot
 
 Magnezone @ Choice Specs
 Level: 53
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA
 - Thunderbolt
-- Flash Cannon
+- Steel Beam
 - Volt Switch
-- Tri Attack
+- Thunder
 
 Raikou @ Life Orb
 Level: 52
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 252 Spe
 - Thunderbolt
-- Snarl
+- Aura Sphere
 - Shadow Ball
-- Protect
+- Extrasensory
 
 Electivire @ Expert Belt
 Level: 51
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
 - Wild Charge
 - Cross Chop
-- Ice Punch
-- Flamethrower
+- Earthquake
+- Fire Punch
 
 Sandy Shocks @ Leftovers
 Level: 50
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 252 Spe
 - Thunderbolt
 - Earth Power
-- Electric Terrain
-- Protect
+- Flash Cannon
+- Stealth Rock
 
 === TRAINER_FLANNERY_2 ===
 Name: RAGNAROS
@@ -18457,11 +18504,12 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Smart Mon Choices
 
 Camerupt @ Cameruptite
 Level: 45
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 HP / 84 SpA
 - Eruption
 - Earth Power
 - Flamethrower
@@ -18470,6 +18518,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Magmortar @ Expert Belt
 Level: 44
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 SpA / 84 Spe
 - Flamethrower
 - Thunderbolt
 - Focus Blast
@@ -18478,6 +18527,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Heatmor @ Sitrus Berry
 Level: 43
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 Atk / 84 Spe
 - Flare Blitz
 - Thief
 - Rock Slide
@@ -18486,6 +18536,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Typhlosion @ Charcoal
 Level: 42
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 SpA / 84 Spe
 - Eruption
 - Flamethrower
 - Focus Blast
@@ -18494,6 +18545,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Torkoal @ Heat Rock
 Level: 41
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 HP / 84 SpA
 - Lava Plume
 - Earth Power
 - Stealth Rock
@@ -18507,55 +18559,61 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Omniscient / Smart Mon Choices
 
 Camerupt @ Cameruptite
 Level: 50
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 HP / 168 SpA
 - Eruption
 - Earth Power
 - Flamethrower
-- Protect
+- Stealth Rock
 
 Magmortar @ Expert Belt
 Level: 49
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 SpA / 168 Spe
 - Flamethrower
 - Thunderbolt
 - Focus Blast
-- Will-O-Wisp
+- Psychic
 
 Heatmor @ Sitrus Berry
 Level: 48
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 Atk / 168 Spe
 - Flare Blitz
 - Thief
 - Rock Slide
-- Protect
+- Close Combat
 
 Typhlosion @ Charcoal
 Level: 48
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 SpA / 168 Spe
 - Eruption
 - Flamethrower
-- Focus Blast
+- Shadow Ball
 - Earth Power
 
 Torkoal @ Heat Rock
 Level: 47
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 HP / 168 SpA
 - Lava Plume
 - Earth Power
 - Stealth Rock
-- Yawn
+- Rapid Spin
 
 Volcarona @ Leftovers
 Level: 46
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 SpA / 168 Spe
 - Quiver Dance
 - Fire Blast
 - Bug Buzz
-- Giga Drain
+- Psychic
 
 === TRAINER_FLANNERY_5 ===
 Name: RAGNAROS
@@ -18565,55 +18623,61 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Ace Pokemon / Omniscient / Smart Mon Choices
 
 Camerupt @ Cameruptite
 Level: 55
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA
 - Eruption
 - Earth Power
-- Flamethrower
-- Protect
+- Fire Blast
+- Stealth Rock
 
 Magmortar @ Expert Belt
 Level: 54
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 252 Spe
 - Flamethrower
 - Thunderbolt
-- Focus Blast
-- Will-O-Wisp
+- Earthquake
+- Psychic
 
 Heatmor @ Sitrus Berry
 Level: 53
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
 - Flare Blitz
 - Thief
-- Rock Slide
-- Protect
+- Sucker Punch
+- Close Combat
 
 Typhlosion @ Charcoal
 Level: 53
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 252 Spe
 - Eruption
 - Flamethrower
-- Focus Blast
-- Earth Power
+- Shadow Ball
+- Extrasensory
 
 Torkoal @ Heat Rock
 Level: 52
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA
 - Lava Plume
 - Earth Power
-- Stealth Rock
-- Yawn
+- Solar Beam
+- Rapid Spin
 
 Volcarona @ Leftovers
 Level: 51
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 252 Spe
 - Quiver Dance
-- Fire Blast
+- Heat Wave
 - Bug Buzz
-- Giga Drain
+- Psychic
 
 === TRAINER_NORMAN_2 ===
 Name: SCOTT
@@ -18665,11 +18729,12 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Smart Mon Choices
 
 Kangaskhan @ Kangaskhanite
 Level: 50
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 Atk / 84 Spe
 - Fake Out
 - Double-Edge
 - Sucker Punch
@@ -18678,6 +18743,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Slaking @ Sitrus Berry
 Level: 49
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 HP / 84 Atk
 - Facade
 - Earthquake
 - Hyper Beam
@@ -18686,6 +18752,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Ursaring @ Flame Orb
 Level: 48
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 Atk / 84 Spe
 - Facade
 - Swords Dance
 - Crunch
@@ -18694,6 +18761,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Spinda @ Focus Sash
 Level: 48
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 HP / 84 SpA
 - Encore
 - Teeter Dance
 - Psybeam
@@ -18702,6 +18770,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Blissey @ Leftovers
 Level: 47
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 HP / 84 Def
 - Soft-Boiled
 - Seismic Toss
 - Heal Pulse
@@ -18715,47 +18784,52 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Omniscient / Smart Mon Choices
 
 Kangaskhan @ Kangaskhanite
 Level: 55
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 Atk / 168 Spe
 - Fake Out
 - Double-Edge
-- Sucker Punch
+- Earthquake
 - Drain Punch
 
 Slaking @ Sitrus Berry
 Level: 54
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 HP / 168 Atk
 - Facade
 - Earthquake
 - Hyper Beam
-- Slack Off
+- Giga Impact
 
 Ursaring @ Flame Orb
 Level: 54
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 Atk / 168 Spe
 - Facade
 - Swords Dance
-- Crunch
+- Close Combat
 - Earthquake
 
 Spinda @ Focus Sash
 Level: 53
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 HP / 168 SpA
 - Encore
-- Teeter Dance
+- Parting Shot
 - Psybeam
 - Facade
 
 Blissey @ Leftovers
 Level: 52
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 HP / 168 Def
 - Soft-Boiled
 - Seismic Toss
 - Heal Pulse
-- Protect
+- Toxic
 
 === TRAINER_NORMAN_5 ===
 Name: SCOTT
@@ -18765,55 +18839,61 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Ace Pokemon / Omniscient / Smart Mon Choices
 
 Kangaskhan @ Kangaskhanite
 Level: 60
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
 - Fake Out
 - Double-Edge
-- Sucker Punch
-- Drain Punch
+- Earthquake
+- Power-Up Punch
 
 Slaking @ Sitrus Berry
 Level: 59
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk
 - Facade
 - Earthquake
-- Hyper Beam
-- Slack Off
+- Shadow Claw
+- Giga Impact
 
 Ursaring @ Flame Orb
 Level: 59
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
 - Facade
-- Swords Dance
-- Crunch
+- Protect
+- Close Combat
 - Earthquake
 
 Spinda @ Focus Sash
 Level: 58
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA
 - Encore
-- Teeter Dance
-- Psybeam
+- Parting Shot
+- Psychic
 - Facade
 
 Blissey @ Leftovers
 Level: 58
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def
 - Soft-Boiled
 - Seismic Toss
-- Heal Pulse
-- Protect
+- Flamethrower
+- Toxic
 
 Snorlax @ Chesto Berry
 Level: 57
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Body Slam
+EVs: 252 HP / 252 Atk
+- Heavy Slam
 - Curse
 - Rest
-- Crunch
+- Earthquake
 
 === TRAINER_WINONA_2 ===
 Name: THUNDERAAN
@@ -18873,11 +18953,12 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer / Risky
+AI: Basic Trainer / Risky / Smart Mon Choices
 
 Altaria @ Altarianite
 Level: 50
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 HP / 84 SpA
 - Dragon Dance
 - Hyper Voice
 - Roost
@@ -18886,6 +18967,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Skarmory @ Leftovers
 Level: 49
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 HP / 84 Def
 - Spikes
 - Roost
 - Steel Wing
@@ -18894,6 +18976,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Manectric @ Sitrus Berry
 Level: 47
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 SpA / 84 Spe
 - Thunder
 - Thunder Wave
 - Quick Attack
@@ -18902,6 +18985,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Pidgeot @ Life Orb
 Level: 46
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 SpA / 84 Spe
 - Hurricane
 - Heat Wave
 - Hyper Voice
@@ -18910,6 +18994,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Tornadus @ Leftovers
 Level: 44
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 SpA / 84 Spe
 - Rain Dance
 - Hurricane
 - Thunder
@@ -18918,6 +19003,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Thundurus @ Life Orb
 Level: 43
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 SpA / 84 Spe
 - Thunder
 - Nasty Plot
 - Focus Blast
@@ -18931,55 +19017,61 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer / Risky
+AI: Basic Trainer / Risky / Omniscient / Smart Mon Choices
 
 Altaria @ Altarianite
 Level: 55
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 HP / 168 SpA
 - Dragon Dance
 - Hyper Voice
 - Roost
-- Earthquake
+- Fire Blast
 
 Skarmory @ Leftovers
 Level: 54
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 HP / 168 Def
 - Spikes
 - Roost
-- Steel Wing
+- Brave Bird
 - Iron Head
 
 Manectric @ Sitrus Berry
 Level: 52
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 SpA / 168 Spe
 - Thunder
 - Thunder Wave
-- Quick Attack
+- Volt Switch
 - Flamethrower
 
 Pidgeot @ Life Orb
 Level: 51
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 SpA / 168 Spe
 - Hurricane
 - Heat Wave
 - Hyper Voice
-- Quick Attack
+- Roost
 
 Tornadus @ Leftovers
 Level: 49
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 SpA / 168 Spe
 - Rain Dance
 - Hurricane
 - Thunder
-- Taunt
+- Heat Wave
 
 Thundurus @ Life Orb
 Level: 48
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 SpA / 168 Spe
 - Thunder
 - Nasty Plot
 - Focus Blast
-- Taunt
+- Grass Knot
 
 === TRAINER_WINONA_5 ===
 Name: THUNDERAAN
@@ -18989,55 +19081,61 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer / Risky
+AI: Basic Trainer / Risky / Ace Pokemon / Omniscient / Smart Mon Choices
 
 Altaria @ Altarianite
 Level: 60
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA
 - Dragon Dance
-- Hyper Voice
+- Moonblast
 - Roost
-- Earthquake
+- Fire Blast
 
 Skarmory @ Leftovers
 Level: 59
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Spikes
+EVs: 252 HP / 252 Def
+- Whirlwind
 - Roost
-- Steel Wing
+- Brave Bird
 - Iron Head
 
 Manectric @ Sitrus Berry
 Level: 57
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 252 Spe
 - Thunder
-- Thunder Wave
-- Quick Attack
+- Snarl
+- Volt Switch
 - Flamethrower
 
 Pidgeot @ Life Orb
 Level: 56
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 252 Spe
 - Hurricane
-- Heat Wave
+- U-turn
 - Hyper Voice
-- Quick Attack
+- Roost
 
 Tornadus @ Leftovers
 Level: 54
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rain Dance
+EVs: 252 SpA / 252 Spe
+- Knock Off
 - Hurricane
 - Thunder
-- Taunt
+- Heat Wave
 
 Thundurus @ Life Orb
 Level: 53
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 252 Spe
 - Thunder
 - Nasty Plot
-- Focus Blast
-- Taunt
+- Sludge Wave
+- Grass Knot
 
 === TRAINER_TATE_AND_LIZA_2 ===
 Name: WINDRUNNER
@@ -19097,11 +19195,12 @@ Gender: Male
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Smart Mon Choices
 
 Sableye @ Sablenite
 Level: 55
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 HP / 84 Def
 - Will-O-Wisp
 - Knock Off
 - Recover
@@ -19110,6 +19209,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Mismagius @ Focus Sash
 Level: 55
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 SpA / 84 Spe
 - Perish Song
 - Shadow Ball
 - Mystical Fire
@@ -19118,6 +19218,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Decidueye @ Life Orb
 Level: 54
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 Atk / 84 Spe
 - Spirit Shackle
 - Leaf Blade
 - Sucker Punch
@@ -19126,6 +19227,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Klefki @ Light Clay
 Level: 54
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 HP / 84 SpD
 - Light Screen
 - Reflect
 - Play Rough
@@ -19134,6 +19236,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Gengar @ Spell Tag
 Level: 53
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 SpA / 84 Spe
 - Shadow Ball
 - Sludge Wave
 - Will-O-Wisp
@@ -19142,6 +19245,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Darkrai @ Sitrus Berry
 Level: 53
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 SpA / 84 Spe
 - Dark Void
 - Dark Pulse
 - Nasty Plot
@@ -19155,12 +19259,13 @@ Gender: Male
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Omniscient / Smart Mon Choices
 
 Sableye @ Sablenite
 Level: 60
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Will-O-Wisp
+EVs: 168 HP / 168 Def
+- Toxic
 - Knock Off
 - Recover
 - Foul Play
@@ -19168,42 +19273,47 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Mismagius @ Focus Sash
 Level: 60
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 SpA / 168 Spe
 - Perish Song
 - Shadow Ball
 - Mystical Fire
-- Taunt
+- Thunderbolt
 
 Decidueye @ Life Orb
 Level: 59
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 Atk / 168 Spe
 - Spirit Shackle
 - Leaf Blade
-- Sucker Punch
+- Brave Bird
 - Swords Dance
 
 Klefki @ Light Clay
 Level: 59
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 HP / 168 SpD
 - Light Screen
-- Reflect
+- Foul Play
 - Play Rough
 - Thunder Wave
 
 Gengar @ Spell Tag
 Level: 58
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 SpA / 168 Spe
 - Shadow Ball
 - Sludge Wave
 - Will-O-Wisp
-- Thunderbolt
+- Focus Blast
 
 Darkrai @ Sitrus Berry
 Level: 58
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 SpA / 168 Spe
 - Dark Void
 - Dark Pulse
 - Nasty Plot
-- Sludge Bomb
+- Focus Blast
 
 === TRAINER_TATE_AND_LIZA_5 ===
 Name: WINDRUNNER
@@ -19213,55 +19323,61 @@ Gender: Male
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Ace Pokemon / Omniscient / Smart Mon Choices
 
 Sableye @ Sablenite
 Level: 65
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Will-O-Wisp
+EVs: 252 HP / 252 Def
+- Toxic
 - Knock Off
 - Recover
-- Foul Play
+- Moonblast
 
 Mismagius @ Focus Sash
 Level: 65
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 252 Spe
 - Perish Song
 - Shadow Ball
-- Mystical Fire
-- Taunt
+- Dazzling Gleam
+- Thunderbolt
 
 Decidueye @ Life Orb
 Level: 64
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
 - Spirit Shackle
-- Leaf Blade
-- Sucker Punch
+- Shadow Sneak
+- Brave Bird
 - Swords Dance
 
 Klefki @ Light Clay
 Level: 64
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpD
 - Light Screen
-- Reflect
+- Foul Play
 - Play Rough
-- Thunder Wave
+- Spikes
 
 Gengar @ Spell Tag
 Level: 63
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 252 Spe
 - Shadow Ball
 - Sludge Wave
-- Will-O-Wisp
-- Thunderbolt
+- Taunt
+- Focus Blast
 
 Darkrai @ Sitrus Berry
 Level: 63
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 252 Spe
 - Dark Void
 - Dark Pulse
-- Nasty Plot
-- Sludge Bomb
+- Psychic
+- Focus Blast
 
 === TRAINER_JUAN_2 ===
 Name: JAINA
@@ -19321,11 +19437,12 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Smart Mon Choices
 
 Slowbro @ Slowbronite
 Level: 56
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 HP / 84 Def
 - Scald
 - Psychic
 - Slack Off
@@ -19334,6 +19451,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Starmie @ Expert Belt
 Level: 54
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 SpA / 84 Spe
 - Surf
 - Psychic
 - Ice Beam
@@ -19342,6 +19460,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Vaporeon @ Leftovers
 Level: 53
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 HP / 84 SpA
 - Rain Dance
 - Scald
 - Ice Beam
@@ -19350,6 +19469,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Articuno @ Never-Melt Ice
 Level: 52
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 SpA / 84 Spe
 - Hail
 - Aurora Veil
 - Blizzard
@@ -19358,6 +19478,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Lapras @ Sitrus Berry
 Level: 50
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 84 HP / 84 SpA
 - Hydro Pump
 - Freeze-Dry
 - Thunderbolt
@@ -19371,36 +19492,40 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Omniscient / Smart Mon Choices
 
 Slowbro @ Slowbronite
 Level: 61
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 HP / 168 Def
 - Scald
 - Psychic
 - Slack Off
-- Thunder Wave
+- Ice Beam
 
 Starmie @ Expert Belt
 Level: 60
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 SpA / 168 Spe
 - Surf
 - Psychic
 - Ice Beam
-- Rapid Spin
+- Thunderbolt
 
 Vaporeon @ Leftovers
 Level: 59
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 HP / 168 SpA
 - Rain Dance
 - Scald
 - Ice Beam
-- Wish
+- Shadow Ball
 
 Articuno @ Never-Melt Ice
 Level: 58
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hail
+EVs: 168 SpA / 168 Spe
+- Roost
 - Aurora Veil
 - Blizzard
 - Freeze-Dry
@@ -19408,18 +19533,20 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Lapras @ Sitrus Berry
 Level: 57
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 HP / 168 SpA
 - Hydro Pump
 - Freeze-Dry
 - Thunderbolt
-- Ice Shard
+- Dragon Pulse
 
 Kyurem @ Never-Melt Ice
 Level: 56
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 168 SpA / 168 Spe
 - Ice Beam
 - Earth Power
 - Dragon Pulse
-- Protect
+- Outrage
 
 === TRAINER_JUAN_5 ===
 Name: JAINA
@@ -19429,55 +19556,61 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Ace Pokemon / Omniscient / Smart Mon Choices
 
 Slowbro @ Slowbronite
 Level: 66
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def
 - Scald
-- Psychic
+- Fire Blast
 - Slack Off
-- Thunder Wave
+- Ice Beam
 
 Starmie @ Expert Belt
 Level: 65
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Surf
+EVs: 252 SpA / 252 Spe
+- Hydro Pump
 - Psychic
 - Ice Beam
-- Rapid Spin
+- Thunderbolt
 
 Vaporeon @ Leftovers
 Level: 64
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA
 - Rain Dance
 - Scald
-- Ice Beam
-- Wish
+- Protect
+- Shadow Ball
 
 Articuno @ Never-Melt Ice
 Level: 63
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hail
+EVs: 252 SpA / 252 Spe
+- Roost
 - Aurora Veil
-- Blizzard
+- Hurricane
 - Freeze-Dry
 
 Lapras @ Sitrus Berry
 Level: 62
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA
 - Hydro Pump
 - Freeze-Dry
-- Thunderbolt
-- Ice Shard
+- Psychic
+- Dragon Pulse
 
 Kyurem @ Never-Melt Ice
 Level: 61
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 252 Spe
 - Ice Beam
 - Earth Power
-- Dragon Pulse
-- Protect
+- Draco Meteor
+- Outrage
 
 === TRAINER_ANGELO ===
 Name: TORTOS

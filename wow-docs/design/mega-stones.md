@@ -23,4 +23,4 @@ Dewford house man: Clefablite. Rustboro Pokemon School teacher: Alakazite. Winst
 ## Hidden in the world
 Granite Cave B2F ball: Aggronite. Mt Pyre 2F ball: Banettite. Meteor Falls 1F ball: Excadrite. Petalburg Woods hidden: Heracronite. Shoal Cave entrance ball: Glalitite. Route 119 ball: Pinsirite. Rusturf Tunnel ball: Mawilite. Jagged Pass hidden: Skarmorite. New Mauville ball: Gardevoirite. Route 120 ball: Galladite.
 
-Notes: the Elite Four keeps Froslassite and Mewtwonite Y. Pseudo-legends (Salamence, Garchomp, Metagross, Tyranitar, Dragonite) are left out. Rematch teams _3 to _5 reuse the same roster at higher levels; unique moves per tier are still to do. Rematch EVs are not set yet.
+Notes: the Elite Four keeps Froslassite and Mewtwonite Y. Pseudo-legends (Salamence, Garchomp, Metagross, Tyranitar, Dragonite) are left out. Rematch teams _3 to _5 reuse the same roster at higher levels;  Rematch tiers: _2 has no EVs; _3 84/84, _4 168/168, _5 252/252 in the leader's two main stats; AI adds Smart Mon Choices (_3), Omniscient (_4), Ace Pokemon (_5); _4 swaps one move per mon and _5 swaps a second.

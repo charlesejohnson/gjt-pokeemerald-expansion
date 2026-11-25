@@ -2,6 +2,9 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.67
+- **Rematch tiers 2 to 5 differentiated** for all eight leaders. EVs: tier 2 none, tier 3 84/84, tier 4 168/168, tier 5 252/252 in each mon's two main stats (504 total, legal). AI: tier 3 adds Smart Mon Choices, tier 4 adds Omniscient, tier 5 adds Ace Pokemon. Moves: tier 4 swaps one move per mon, tier 5 swaps a second (tier 5 keeps the tier 4 swap). Tier 2 is unchanged. Untested in play.
+
 ## v0.1.66
 - **Thunderfury is now a real held item** (still `ITEM_GLIMMERING_CHARM`, moved from Key Items to Items, cannot be sold or tossed): the holder deals 10% more damage (`HOLD_EFFECT_GJT_THUNDERFURY` in `GetAttackerItemsModifier`) and each damaging attack from an opponent has a 10% chance to be parried ("X parried the attack with THUNDERFURY!"), handled just before the Protect check in `battle_move_resolution.c`. Untested in game.
 
