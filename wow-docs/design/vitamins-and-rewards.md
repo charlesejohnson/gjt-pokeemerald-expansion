@@ -32,5 +32,21 @@ Only moves already in the TM list can be used without engine work. Rustboro Iron
 ## Targets (see power-scaling.md)
 Gym rewards alone: about 150 vitamins. Spread evenly over 6 stats it rates near parity with Glacia and Sidney and below Drake, Phoebe and the Champion. Focused on two stats per mon it is closer to the middle bosses. The Ever Grande shop is the catch-up lever.
 
+## Ground vitamins on routes (counted v0.1.69)
+Hoenn item balls and hidden items already in the world (FRLG maps ignored, they are not reachable):
+| Item | Count |
+|---|---|
+| HP Up | 5 |
+| Protein | 6 |
+| Iron | 5 |
+| Calcium | 5 |
+| Zinc | 7 |
+| Carbos | 6 |
+| **Stat vitamins total** | **34** (340 EVs) |
+| Rare Candy | 16 |
+| PP Up / PP Max | 10 / 1 |
+
+Several sit behind Dive (Underwater routes 124/126/127/128), Artisan Cave (five) or Safari Zone, so they land late. They add about 23% on top of the 150 gym vitamins. No stat is bare: each vitamin type gets 5 to 7, so no single stat is favoured. These are kept as a bonus on top of the schedule, not counted in it. If balance feels high in playtest, trade some for PP Ups.
+
 ## Other rewards to schedule (not done)
 Power TMs, held items (Thunderfury), Mega Stones and a universal Specialization item are to be placed alongside vitamins; see the questions in the chat.

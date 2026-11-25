@@ -2,6 +2,9 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.69
+- Docs and housekeeping only. Counted the vitamins lying on Hoenn routes (34 stat vitamins, 340 EVs, about 23% on top of the gym schedule; see `design/vitamins-and-rewards.md`). Reserved spare flags 0x2F to 0x4F and three vars for the Void arc (`design/reserved-flags.md`). No game logic changed.
+
 ## v0.1.68
 - **Evolution-stage pass on ordinary trainers.** Audit script compared every party mon's level with the level its evolution chain naturally needs. 100 mons were ahead of their stage; 29 non-boss ones that were 3 or more levels ahead were stepped down to the right stage (e.g. Machoke 22 to Machop, Tentacruel 27 to Tentacool, Aggron 29 to Aron). Left alone on purpose: leaders, Elite Four, Champion, Magma/Aqua leaders and any boss-AI trainers (they keep final forms), mons only 1 to 2 levels early, and parties that deliberately field a whole evolution line (e.g. Tentacool plus Tentacruel). Mons have no explicit movesets, so they use their natural learnset.
 
