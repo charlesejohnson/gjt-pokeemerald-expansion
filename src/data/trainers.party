@@ -550,7 +550,7 @@ Music: Aqua
 Double Battle: No
 AI: Basic Trainer
 
-Machoke @ Toxic Orb
+Machop @ Toxic Orb
 Ability: Guts
 Nature: Adamant
 Level: 22
@@ -1701,7 +1701,7 @@ IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
 - Agility
 - Pursuit
 
-Tentacruel @ Sitrus Berry
+Tentacool @ Sitrus Berry
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -3475,7 +3475,7 @@ Music: Suspicious
 Double Battle: No
 AI: Check Bad Move
 
-Lairon
+Aron
 Level: 27
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
@@ -3492,7 +3492,7 @@ Music: Suspicious
 Double Battle: No
 AI: Check Bad Move
 
-Lairon
+Aron
 Level: 29
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
@@ -3500,7 +3500,7 @@ Rhyhorn
 Level: 29
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
-Aggron
+Aron
 Level: 29
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
@@ -3534,7 +3534,7 @@ Music: Suspicious
 Double Battle: No
 AI: Check Bad Move
 
-Aggron @ Sitrus Berry
+Lairon @ Sitrus Berry
 Level: 35
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
@@ -3654,7 +3654,7 @@ Music: Swimmer
 Double Battle: No
 AI: Check Bad Move
 
-Tentacruel
+Tentacool
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -4372,7 +4372,7 @@ IVs: 12 HP / 24 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Brick Break
 - U-turn
 
-Lanturn
+Chinchou
 Level: 22
 Nature: Docile
 Ability: Water Absorb
@@ -4437,7 +4437,7 @@ Music: Intense
 Double Battle: No
 AI: Basic Trainer
 
-Magneton
+Magnemite
 Level: 21
 Nature: Docile
 Ability: Sturdy
@@ -4577,7 +4577,7 @@ Magneton
 Level: 34
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
-Exploud
+Loudred
 Level: 34
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
@@ -4767,7 +4767,7 @@ Wingull
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Ariados
+Spinarak
 Level: 18
 Ability: Sniper
 Nature: Impish
@@ -6898,7 +6898,7 @@ Kirlia
 Level: 32
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
-Medicham
+Meditite
 Level: 32
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
@@ -6919,11 +6919,11 @@ Kirlia
 Level: 34
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-Banette
+Shuppet
 Level: 34
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-Medicham @ Leftovers
+Meditite @ Leftovers
 Level: 34
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
@@ -7037,7 +7037,7 @@ Breloom @ Sitrus Berry
 Level: 35
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-Exploud
+Loudred
 Level: 35
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
@@ -7062,7 +7062,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Dizzy Punch
 - Teeter Dance
 
-Slaking
+Vigoroth
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Focus Punch
@@ -7698,7 +7698,7 @@ Music: Intense
 Double Battle: No
 AI: Basic Trainer
 
-Medicham
+Meditite
 Level: 33
 IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
 
@@ -8417,7 +8417,7 @@ Wailmer
 Level: 25
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
-Tentacruel
+Tentacool
 Level: 25
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
@@ -13033,7 +13033,7 @@ Breloom
 Level: 39
 IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
-Metagross @ Life Orb
+Metang @ Life Orb
 Level: 39
 Ability: Clear Body
 Nature: Adamant
@@ -14654,7 +14654,7 @@ Machop
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Naclstack 
+Nacli 
 Nature: Sassy
 Level: 18
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
@@ -14773,7 +14773,7 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Pelipper
+Wingull
 Level: 10
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Gust
@@ -15117,7 +15117,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Confusion
 - Meditate
 
-Vespiquen
+Combee
 Level: 17
 IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 20 Spe
 Nature: Docile
@@ -15968,7 +15968,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Mega Drain
 - Leech Seed
 
-Graveler
+Geodude
 Level: 20
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Defense Curl
@@ -16627,7 +16627,7 @@ Aron
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Rhydon
+Rhyhorn
 Level: 18
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
@@ -17094,7 +17094,7 @@ Marill
 Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Lanturn
+Chinchou
 Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -17336,7 +17336,7 @@ Roselia
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Gloom
+Oddish
 Level: 18
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
@@ -17534,7 +17534,7 @@ Meditite
 Level: 17
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Zweilous
+Deino
 Level: 17
 Nature: Docile
 Ability: Hustle
@@ -17557,7 +17557,7 @@ Roselia
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Medicham
+Meditite
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -17604,7 +17604,7 @@ Numel
 Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Galvantula
+Joltik
 Level: 25
 Ability: Compound Eyes
 Nature: Timid

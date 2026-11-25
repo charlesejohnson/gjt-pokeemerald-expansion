@@ -2,6 +2,9 @@
 
 The build version is shown at the very start of a new game (Khadgar's intro) and when you talk to the test NPC in the player's bedroom. Source: `data/text/gjt_version.inc`. ROM files are sent as `GJT-WoW-vX.Y.Z.gba` so a phone cannot reuse an older download with the same name. Bump the patch number for every ROM sent.
 
+## v0.1.68
+- **Evolution-stage pass on ordinary trainers.** Audit script compared every party mon's level with the level its evolution chain naturally needs. 100 mons were ahead of their stage; 29 non-boss ones that were 3 or more levels ahead were stepped down to the right stage (e.g. Machoke 22 to Machop, Tentacruel 27 to Tentacool, Aggron 29 to Aron). Left alone on purpose: leaders, Elite Four, Champion, Magma/Aqua leaders and any boss-AI trainers (they keep final forms), mons only 1 to 2 levels early, and parties that deliberately field a whole evolution line (e.g. Tentacool plus Tentacruel). Mons have no explicit movesets, so they use their natural learnset.
+
 ## v0.1.67
 - **Rematch tiers 2 to 5 differentiated** for all eight leaders. EVs: tier 2 none, tier 3 84/84, tier 4 168/168, tier 5 252/252 in each mon's two main stats (504 total, legal). AI: tier 3 adds Smart Mon Choices, tier 4 adds Omniscient, tier 5 adds Ace Pokemon. Moves: tier 4 swaps one move per mon, tier 5 swaps a second (tier 5 keeps the tier 4 swap). Tier 2 is unchanged. Untested in play.
 
