@@ -6421,7 +6421,6 @@ Level: 18
 Ability: Guts
 Nature: Adamant
 IVs: 31 HP / 12 Atk / 31 Def / 12 SpA / 31 SpD / 12 Spe
-EVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Fake Out
 - Force Palm
 - Knock Off
@@ -6431,7 +6430,6 @@ Level: 17
 Ability: No Guard
 Nature: Jolly
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-EVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Dynamic Punch
 - Low Sweep
 - Low Kick
@@ -6442,7 +6440,6 @@ Level: 18
 Ability: Blaze
 Nature: Adamant
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-EVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Ember
 - Endure
 - Flame Wheel
@@ -6452,7 +6449,6 @@ Level: 19
 Ability: Intimidate
 Nature: Jolly
 IVs: 12 HP / 0 Atk / 12 Def / 0 SpA / 12 SpD / 12 Spe
-EVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Thunder Fang
 - Roar
 - Tackle
@@ -6472,7 +6468,6 @@ Level: 21
 Nature: Bold
 Ability: Electric Surge
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-EVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Spark
 - Charge
 - Peck
@@ -6483,7 +6478,6 @@ Level: 23
 Nature: Bold
 Ability: Protosynthesis
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-EVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Charge Beam
 - Tri-Attack
 - Electric Terrain
@@ -6493,7 +6487,6 @@ Level: 22
 Nature: Modest
 Ability: Electric Surge
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-EVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Follow Me
 - Secret Power
 - Discharge
@@ -6504,7 +6497,6 @@ Level: 24
 Nature: Docile
 Ability: Volt Absorb
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 12 Spe
-EVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Snarl
 - Shock Wave
 - Protect
@@ -6525,7 +6517,7 @@ Level: 26
 Ability: Flame Body
 Nature: Naive
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-EVs: 36 HP / 36 Atk / 36 Def / 36 SpA / 36 SpD / 36 Spe
+EVs: 108 Atk / 108 Spe
 - Fire Punch
 - Thunder Punch
 - Will-O-Wisp
@@ -6536,7 +6528,7 @@ Level: 27
 Ability: Flash Fire
 Nature: Adamant
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-EVs: 36 HP / 36 Atk / 36 Def / 36 SpA / 36 SpD / 36 Spe
+EVs: 108 Atk / 108 Spe
 - Fire Lash
 - Flame Charge
 - Thief
@@ -6547,7 +6539,7 @@ Level: 28
 Ability: Solid Rock
 Nature: Quiet
 IVs: 28 HP / 28 Atk / 28 Def / 28 SpA / 28 SpD / 28 Spe
-EVs: 36 HP / 36 Atk / 36 Def / 36 SpA / 36 SpD / 36 Spe
+EVs: 108 HP / 108 SpA
 - Eruption
 - Earth Power
 - Rock Slide
@@ -6558,7 +6550,7 @@ Level: 29
 Ability: Blaze
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 36 HP / 36 Atk / 36 Def / 36 SpA / 36 SpD / 36 Spe
+EVs: 108 SpA / 108 Spe
 - Eruption
 - Flamethrower
 - Focus Blast
@@ -6579,7 +6571,7 @@ Level: 28
 Ability: Quick Feet
 Nature: Adamant
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-EVs: 48 HP / 48 Atk / 48 Def / 48 SpA / 48 SpD / 48 Spe
+EVs: 144 Atk / 144 HP
 - Facade
 - Swords Dance
 - Crunch
@@ -6590,7 +6582,7 @@ Level: 28
 Ability: Early Bird
 Nature: Jolly
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-EVs: 48 HP / 48 Atk / 48 Def / 48 SpA / 48 SpD / 48 Spe
+EVs: 144 Atk / 144 Spe
 - Return
 - Fake Out
 - Sucker Punch
@@ -6601,7 +6593,7 @@ Level: 27
 Ability: Own Tempo
 Nature: Calm
 IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
-EVs: 48 HP / 48 Atk / 48 Def / 48 SpA / 48 SpD / 48 Spe
+EVs: 144 HP / 144 SpD
 - Encore
 - Teeter Dance
 - Psybeam
@@ -6612,7 +6604,7 @@ Level: 30
 Ability: Truant
 Nature: Adamant
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-EVs: 48 HP / 48 Atk / 48 Def / 48 SpA / 48 SpD / 48 Spe
+EVs: 144 HP / 144 Atk
 - Facade
 - Earthquake
 - Hyper Beam
@@ -6633,7 +6625,7 @@ Level: 31
 Ability: Lightning Rod
 Nature: Timid
 IVs: 28 HP / 28 Atk / 28 Def / 28 SpA / 28 SpD / 28 Spe
-EVs: 60 HP / 60 Atk / 60 Def / 60 SpA / 60 SpD / 60 Spe
+EVs: 180 SpA / 180 Spe
 - Thunder
 - Thunder Wave
 - Quick Attack
@@ -6644,7 +6636,7 @@ Level: 32
 Ability: Sturdy
 Nature: Impish
 IVs: 28 HP / 28 Atk / 28 Def / 28 SpA / 28 SpD / 28 Spe
-EVs: 60 HP / 60 Atk / 60 Def / 60 SpA / 60 SpD / 60 Spe
+EVs: 180 HP / 180 Def
 - Spikes
 - Roost
 - Steel Wing
@@ -6655,7 +6647,7 @@ Level: 32
 Ability: Natural Cure
 Nature: Adamant
 IVs: 28 HP / 28 Atk / 28 Def / 28 SpA / 28 SpD / 28 Spe
-EVs: 60 HP / 60 Atk / 60 Def / 60 SpA / 60 SpD / 60 Spe
+EVs: 180 Atk / 180 Spe
 - Dragon Dance
 - Dragon Claw
 - Aerial Ace
@@ -6666,7 +6658,7 @@ Level: 32
 Ability: Keen Eye
 Nature: Timid
 IVs: 28 HP / 28 Atk / 28 Def / 28 SpA / 28 SpD / 28 Spe
-EVs: 60 HP / 60 Atk / 60 Def / 60 SpA / 60 SpD / 60 Spe
+EVs: 180 SpA / 180 Spe
 - Hurricane
 - Heat Wave
 - Hyper Voice
@@ -6677,7 +6669,7 @@ Level: 33
 Ability: Prankster
 Nature: Timid
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 60 HP / 60 Atk / 60 Def / 60 SpA / 60 SpD / 60 Spe
+EVs: 180 SpA / 180 Spe
 - Rain Dance
 - Hurricane
 - Thunder
@@ -6698,7 +6690,7 @@ Level: 41
 Ability: Levitate
 Nature: Timid
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 72 HP / 72 Atk / 72 Def / 72 SpA / 72 SpD / 72 Spe
+EVs: 216 SpA / 216 Spe
 - Perish Song
 - Shadow Ball
 - Mystical Fire
@@ -6709,7 +6701,7 @@ Level: 40
 Ability: Prankster
 Nature: Careful
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 72 HP / 72 Atk / 72 Def / 72 SpA / 72 SpD / 72 Spe
+EVs: 216 HP / 216 SpD
 - Will-O-Wisp
 - Knock Off
 - Recover
@@ -6720,7 +6712,7 @@ Level: 41
 Ability: Overgrow
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 72 HP / 72 Atk / 72 Def / 72 SpA / 72 SpD / 72 Spe
+EVs: 216 Atk / 216 Spe
 - Spirit Shackle
 - Leaf Blade
 - Sucker Punch
@@ -6731,7 +6723,7 @@ Level: 41
 Ability: Prankster
 Nature: Bold
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 72 HP / 72 Atk / 72 Def / 72 SpA / 72 SpD / 72 Spe
+EVs: 216 HP / 216 Def
 - Light Screen
 - Reflect
 - Play Rough
@@ -6742,7 +6734,7 @@ Level: 41
 Ability: Cursed Body
 Nature: Timid
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 72 HP / 72 Atk / 72 Def / 72 SpA / 72 SpD / 72 Spe
+EVs: 216 SpA / 216 Spe
 - Shadow Ball
 - Sludge Wave
 - Will-O-Wisp
@@ -6753,7 +6745,7 @@ Level: 42
 Ability: Bad Dreams
 Nature: Timid
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 72 HP / 72 Atk / 72 Def / 72 SpA / 72 SpD / 72 Spe
+EVs: 216 SpA / 216 Spe
 - Dark Void
 - Dark Pulse
 - Nasty Plot
@@ -6774,7 +6766,7 @@ Level: 44
 Ability: Regenerator
 Nature: Bold
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 80 HP / 80 Atk / 80 Def / 80 SpA / 80 SpD / 80 Spe
+EVs: 240 HP / 240 Def
 - Scald
 - Psychic
 - Slack Off
@@ -6785,7 +6777,7 @@ Level: 45
 Ability: Analytic
 Nature: Timid
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 80 HP / 80 Atk / 80 Def / 80 SpA / 80 SpD / 80 Spe
+EVs: 240 SpA / 240 Spe
 - Surf
 - Psychic
 - Ice Beam
@@ -6796,7 +6788,7 @@ Level: 45
 Ability: Hydration
 Nature: Bold
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 80 HP / 80 Atk / 80 Def / 80 SpA / 80 SpD / 80 Spe
+EVs: 240 HP / 240 Def
 - Rain Dance
 - Scald
 - Ice Beam
@@ -6807,7 +6799,7 @@ Level: 45
 Ability: Snow Warning
 Nature: Calm
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 80 HP / 80 Atk / 80 Def / 80 SpA / 80 SpD / 80 Spe
+EVs: 240 HP / 240 SpD
 - Hail
 - Aurora Veil
 - Blizzard
@@ -6818,7 +6810,7 @@ Level: 46
 Ability: Water Absorb
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 80 HP / 80 Atk / 80 Def / 80 SpA / 80 SpD / 80 Spe
+EVs: 240 HP / 240 SpA
 - Hydro Pump
 - Freeze-Dry
 - Thunderbolt
